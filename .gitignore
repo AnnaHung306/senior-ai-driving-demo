@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+artifacts/downloads/
+artifacts/carla/
+artifacts/runs/
+artifacts/reports/*
+!artifacts/reports/.gitkeep
+data/
+weights/
+.pytest_cache/

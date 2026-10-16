@@ -1,0 +1,11 @@
+test_invalid_numbers_cannot_enter_report (test_phase0.AcceptanceTests.test_invalid_numbers_cannot_enter_report) ... ok
+test_known_projection (test_phase0.AcceptanceTests.test_known_projection) ... ok
+test_nominal_acceptance_and_failures (test_phase0.AcceptanceTests.test_nominal_acceptance_and_failures) ... ok
+test_future_frame_fails_instead_of_silent_misalignment (test_phase0.FrameSynchronizationTests.test_future_frame_fails_instead_of_silent_misalignment) ... ok
+test_missing_camera_times_out (test_phase0.FrameSynchronizationTests.test_missing_camera_times_out) ... ok
+test_stale_frames_are_not_used (test_phase0.FrameSynchronizationTests.test_stale_frames_are_not_used) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.019s
+
+OK

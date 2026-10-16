@@ -1,0 +1,11 @@
+--- a/Unreal/CarlaUE4/Plugins/Carla/Source/Carla/Sensor/PixelReader.cpp
++++ b/Unreal/CarlaUE4/Plugins/Carla/Source/Carla/Sensor/PixelReader.cpp
+@@ -55,7 +55,7 @@
+     RHICmdList.GetRenderQueryResult(Query, OldAbsTime, true);
+   }
+ 
+-  AsyncTask(ENamedThreads::HighTaskPriority, [=, Readback=std::move(BackBufferReadback)]() mutable {
++  AsyncTask(ENamedThreads::AnyNormalThreadHiPriTask, [=, Readback=std::move(BackBufferReadback)]() mutable {
+     {
+       TRACE_CPUPROFILER_EVENT_SCOPE_STR("Wait GPU transfer");
+       while (!Readback->IsReady())

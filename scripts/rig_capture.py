@@ -49,10 +49,13 @@ def main():
               'rig_sha256': hashlib.sha256(args.rig.read_bytes()).hexdigest(),
               'criteria_sha256': hashlib.sha256(args.criteria.read_bytes()).hexdigest(),
               'scope': criteria['scope']}
+    report['server_binary_sha256'] = hashlib.sha256((ROOT / 'artifacts/carla/CarlaUE4/Binaries/Win64/CarlaUE4-Win64-Shipping.exe').read_bytes()).hexdigest()
+    report['git_revision'] = subprocess.run(['git', 'rev-parse', 'HEAD'], capture_output=True, text=True, check=True, timeout=5).stdout.strip()
     actors, cameras, original, world = [], [], None, None
     queues, bundles, latencies, gpu_samples = {}, [], [], []
     saved, max_error, cleanup_ok = 0, 0.0, True
     capture_started = None
+    client = None
     try:
         import carla
         client = carla.Client('127.0.0.1', 2000)
@@ -60,6 +63,8 @@ def main():
         if client.get_server_version() != '0.9.16' or client.get_client_version() != '0.9.16':
             raise RuntimeError('Rig requires matching CARLA 0.9.16')
         world = client.get_world()
+        report['stage'] = 'world_setup'
+        write_json(args.output / 'report.json', report)
         if world.get_map().name.split('/')[-1] != 'Town01':
             raise RuntimeError('Use the already loaded Town01; no redundant map reload permitted')
         original = world.get_settings()
@@ -93,11 +98,14 @@ def main():
                                  'camera_local_to_ego': transform.get_matrix()})
         write_json(args.output / 'calibration.json', {'schema_version': 1, 'coordinate_system': rig['coordinate_system'],
                     'optical_from_carla_camera': [[0, 1, 0], [0, 0, -1], [1, 0, 0]], 'cameras': calibrations})
+        report['stage'] = 'sensor_warmup'
+        write_json(args.output / 'report.json', report)
         for _ in range(5):
             vehicle.apply_control(carla.VehicleControl(brake=1.0))
             world.tick(15)
-        report['server_binary_sha256'] = hashlib.sha256((ROOT / 'artifacts/carla/CarlaUE4/Binaries/Win64/CarlaUE4-Win64-Shipping.exe').read_bytes()).hexdigest()
         capture_started = time.monotonic()
+        report['stage'] = 'capture'
+        write_json(args.output / 'report.json', report)
         pending = None
         with ThreadPoolExecutor(max_workers=4) as encoder, (args.output / 'manifest.jsonl').open('w', encoding='utf-8') as manifest:
             def consume(item, observed_frame):
@@ -152,6 +160,9 @@ def main():
     except Exception as exc:
         report['errors'].append(f'{type(exc).__name__}: {exc}')
     finally:
+        if client is not None:
+            client.set_timeout(2)
+        write_json(args.output / 'report.json', report)
         capture_wall = time.monotonic() - capture_started if capture_started else None
         for camera in reversed(cameras):
             try:

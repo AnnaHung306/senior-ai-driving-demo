@@ -31,7 +31,16 @@
 | 初始環境 doctor | 未通過；server 未啟動 | `artifacts/reports/environment-initial.json`；其餘 5 項檢查通過 |
 | 6 項單元測試 | 通過 | 同步舊幀丟棄、future frame 拒絕、timeout、門檻失敗案例、投影、NaN 拒絕 |
 | 無 server 的故障路徑 | 預期失敗，成功保存報告 | `artifacts/runs/phase0-unavailable-server/report.json`；port 29999，timeout 1s |
-| 真正 CARLA 車輛 / 影像驗收 | 尚待執行 | 不以單元測試替代 |
+| 安裝 / ZIP CRC | 通過 | `evidence/phase0/installation.json` |
+| 啟動後 doctor | 曾全部通過 | `evidence/phase0/environment-rpc-ready.json`；這是崩潰前的時間點，不代表 server 現在仍運行 |
+| 真正 CARLA 車輛 / 影像驗收，D3D12 | 失敗；第一張影像前 server 崩潰 | `evidence/phase0/simulation-attempt-001.json` |
+| 真正 CARLA 車輛 / 影像驗收，D3D11 | 失敗；第一張影像前 server 崩潰 | `evidence/phase0/simulation-attempt-002.json` |
+| Tesla 無攝影機物理 probe | 失敗；第一個 tick 後 server 不再回應 | `evidence/phase0/isolation-tesla.json` |
+| Lincoln 無攝影機物理 probe | 失敗；第一個 tick 後 server 不再回應 | `evidence/phase0/isolation-lincoln.json` |
+
+結論：Phase 0 **未通過**。無有效 RGB 存檔或加速 / 煞停指標，不能進入 Phase 1 或訓練。
+兩個完整 smoke 都維持相同門檻 SHA256；沒有事後降低標準。Probe 僅供隔離故障，不能替代正式 smoke。
+目前 server 已退出；doctor 若再執行應回報 server 未就緒。
 
 感知 mAP / mIoU、3D 誤差、導航成功率與真實影像 FPS：**未測試，沒有數據**。
 目前無模型、無資料集、無 AI 辨識畫面；模擬器自車遙測清楚標記為 GT。

@@ -7,7 +7,7 @@
 
 | 模組 | 輸入 → 輸出 | 目前狀態 |
 |---|---|---|
-| A Simulation | scenario / seed → CARLA world、tick | Phase 0 驗收程式可建立固定晴天場景；未驗收 |
+| A Simulation | scenario / seed → CARLA world、tick | 已安裝 / 連線；Phase 0 車輛 tick 實測失敗，見 D004 |
 | B Sensor | camera rig / tick → RGB、frame、timestamp、K、T | 單鏡頭已實作；八鏡頭未實作 |
 | C Perception | RGB / calibration → 2D detections、semantic logits | 未實作、未訓練 |
 | D Spatial Fusion | 多鏡頭特徵 / calibration / ego motion → BEV features | 未實作 |

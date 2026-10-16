@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "source": "https://downloads.carlasim.com/Windows/CARLA_0.9.16.zip",
+  "archive": "C:\\code\\senior_AI\\artifacts\\downloads\\CARLA_0.9.16.zip",
+  "errors": [],
+  "publisher_checksum_verified": false,
+  "started_utc": "2026-10-16T03:18:23.941432+00:00",
+  "bytes": 7812252810,
+  "sha256": "0972f26fa3f1c741fbfcb4602b4ccf520415b8f8cf3d06cb83c9502fe8118bd2",
+  "carla_root": "C:\\code\\senior_AI\\artifacts\\carla",
+  "zip_crc_verified": true
+}

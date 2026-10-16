@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "task": "phase0-carla-control-camera",
+  "status": "failed",
+  "started_utc": "2026-10-16T03:45:29.878894+00:00",
+  "criteria_sha256": "db9649f3e6cf5c5b9d3c09e2ddc6a43f83810ed94e1cfbe6cc49ff7084ea8def",
+  "provenance": {
+    "images": "carla_rgb_sensor",
+    "ego_state": "simulator_ground_truth",
+    "control": "open_loop_test_protocol",
+    "ai_model": null
+  },
+  "errors": [
+    "TimeoutError: Camera timeout at frame 23",
+    "Actor cleanup: Actor 372 could not be destroyed",
+    "Actor cleanup: Actor 371 could not be destroyed",
+    "Actor cleanup: Actor 370 could not be destroyed",
+    "World settings restore: time-out of 30000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000"
+  ],
+  "checks": {},
+  "metrics": {},
+  "git_revision": "d9abcdd85df8fead8c6963eeae333ac225aaade7",
+  "client_version": "0.9.16",
+  "server_version": "0.9.16",
+  "spawn_index": 0,
+  "wall_time_s": 159.657,
+  "finished_utc": "2026-10-16T03:48:09.563309+00:00"
+}

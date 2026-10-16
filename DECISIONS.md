@@ -38,3 +38,17 @@ BEVFormer 與 BEVDet 有官方開源實作。BEVFormer tiny config 標示至少�
 - [指定影片](https://www.youtube.com/watch?v=--cGYatMESY)：已嘗試存取但工具無法讀取內容；未據此捏造影片分析，僅採用需求書列出的公開概念。
 
 官方 Windows archive 約 7.3GiB，需另留解壓空間；下載 checksum 僅記錄本地 SHA256，不宣稱已比對發布者 checksum。
+
+## D004 — 2026-10-16：車輛物理 tick 崩潰，停止重複修正
+
+**證據**：官方 0.9.16 archive CRC 通過、API / RPC 0.9.16 成功。完整 smoke 的 D3D12 / D3D11 均失敗，沒有有效影像。Tesla 與 Lincoln 的無攝影機隔離 probe 也在第一個 tick 後失去 server。CrashContext 為 TaskGraphThreadNP 存取違例，bIsOOM=0。切換後端沒有解決，不能宣稱顯存不足、攝影機或特定車型就是根因。
+
+此為 Phase 0 重大阻礙；依規格第 7F 與第 11 節，不再反覆啟動相同失敗條件，不開始模型訓練或視覺化。所有本次 server 已退出，無背景工作正在進行。
+
+| 路線 | 成本 / 限制 | 決策 |
+|---|---|---|
+| 獨立 CARLA 0.9.15 Windows + matching client | 再下載大檔、先核實 wheel 相容性；仍可能有相同故障 | 選為下一個最小研究任務，尚未執行 |
+| 可用 Linux / 遠端 CARLA server | 需取得實際可存取的主機與 GPU；目前無主機資訊 | 備選，不假設已可用 |
+| 小型 CPU 模擬器替代實驗 | 可縮小控制 / 感測試驗，但道路 / 標註 / 感知域需要重新驗證，不能冒充 CARLA 成果 | 僅作後備研究方案 |
+
+下一個實驗先重現短物理 / RGB probe，通過才跑完整 smoke；保留原版失敗紀錄，固定新版本、輸入與門檻後再測試。此決策沒有刪除八鏡頭、AI 訓練、BEV、3D 或完整自主駕駛的長期目標。

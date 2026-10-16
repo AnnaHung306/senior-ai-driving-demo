@@ -47,3 +47,11 @@
 - 證據 `evidence/phase0/crash-attempt-001.json` 與 `simulation-attempt-001.json`。
 - 下一個有限對照實驗僅改渲染後端為 `-dx11`；保持同一地圖、攝影機、控制 protocol 與驗收標準。
 - 此為相容性假說，並非已證實的根因或修復。
+
+## SIM-002 / PROBE-001 / PROBE-002 — 2026-10-16，有限對照與停止決策
+
+- D3D11 完整 smoke 仍在第一張影像前 crash，沒有有效指標；渲染後端切換未解決問題。原始報告保存在 evidence。
+- Probe 先載入相同 Town01 / 同步設定、建立車輛、tick，再準備加入 camera。Tesla 與 Lincoln 均在沒有 camera 時僅完成一個 tick 後 server 崩潰；因此 camera 不是必要觸發條件，仍不能精確宣稱物理引擎根因。
+- 官方 PDB 的本地解析嘗試回報 error 126，未取得符號，沒有根據未解碼位址臆測函式。
+- 依避免無限修正規則停止重跑 0.9.16 本設定；提出 D004 決策報告，下一個任務選為隔離版本對照，未執行新版本下載。
+- verifier 增加 300 秒子程序期限，將重複 streaming 原始 log 留在檔案，只回傳精簡狀態，避免 LLM 可見輸出膨脹。

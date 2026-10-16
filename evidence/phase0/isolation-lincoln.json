@@ -1,0 +1,16 @@
+{
+  "status": "failed",
+  "stage": "vehicle_physics_without_camera",
+  "events": [
+    {
+      "stage": "vehicle_physics_without_camera",
+      "frame": 24
+    }
+  ],
+  "errors": [
+    "RuntimeError: time-out of 5000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000",
+    "restore: time-out of 2000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000"
+  ],
+  "purpose": "diagnostic_only_not_acceptance",
+  "vehicle": "vehicle.lincoln.mkz_2020"
+}

@@ -4,7 +4,7 @@
 
 | 階段 | 最小任務與前置依賴 | 驗收依據 | 狀態 |
 |---|---|---|---|
-| 0 | 硬體 / 相容 Python / CARLA server / 單車與單鏡頭 | 環境報告 + 固定加速煞車 protocol | 進行中，尚未通過 |
+| 0 | 硬體 / 相容 Python / CARLA server / 單車與單鏡頭 | 環境報告 + 固定加速煞車 protocol | 相容性阻礙：server 在車輛物理 tick 崩潰，未通過 |
 | 1 | Phase 0 通過後，固定 Town01 起終點、規則 Baseline、事件記錄 | 5 個預先固定 scenario；抵達 / 碰撞 / 偏離 / 違規 / 時間 | 未開始 |
 | 2 | 8 RGB / calibration / 同幀 queue / 標籤隔離與場景切分 | 固定場景 100% 完整同步；零 split 場景重疊 | 未開始 |
 | 3 | 先小規模 2D 偵測 / 分割與 CUDA 試跑，再自訓或微調 | 保留測試集逐類 AP / precision / recall / IoU + 錯誤樣本 | 未開始 |

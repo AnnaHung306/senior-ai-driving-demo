@@ -1,0 +1,16 @@
+{
+  "Error": "Unhandled Exception: EXCEPTION_ACCESS_VIOLATION reading address 0xffffffffffffffff",
+  "ProcessId": "14436",
+  "CrashedThread": "TaskGraphThreadNP 0",
+  "RHI": "D3D11",
+  "Adapter": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "OutOfMemory": "0",
+  "Stack": [
+    "",
+    "CarlaUE4-Win64-Shipping  0x00007ff733a00000 + 2331d26         ",
+    "CarlaUE4-Win64-Shipping  0x00007ff733a00000 + 233c69c         ",
+    "CarlaUE4-Win64-Shipping  0x00007ff733a00000 + 1071353         ",
+    "CarlaUE4-Win64-Shipping  0x00007ff733a00000 + 1072028         ",
+    "CarlaUE4-Win64-Shipping  0x00007ff733a00000 + 107501c         "
+  ]
+}

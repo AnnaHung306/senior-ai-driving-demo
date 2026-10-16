@@ -13,6 +13,7 @@ class RgbFrame:
     width: int
     height: int
     raw_data: bytes
+    world_from_camera: tuple | None = None
 
     def __post_init__(self):
         if self.frame < 0 or not math.isfinite(self.timestamp) or self.width <= 0 or self.height <= 0:
@@ -20,10 +21,16 @@ class RgbFrame:
         object.__setattr__(self, 'raw_data', bytes(self.raw_data))
         if len(self.raw_data) != self.width * self.height * 4:
             raise ValueError('RGB sensor payload must contain width*height BGRA pixels')
+        if self.world_from_camera is not None:
+            matrix = tuple(tuple(float(x) for x in row) for row in self.world_from_camera)
+            if len(matrix) != 4 or any(len(row) != 4 for row in matrix) or not all(math.isfinite(x) for row in matrix for x in row):
+                raise ValueError('Invalid captured camera transform')
+            object.__setattr__(self, 'world_from_camera', matrix)
 
     @classmethod
     def from_carla(cls, image):
-        return cls(image.frame, image.timestamp, image.width, image.height, bytes(image.raw_data))
+        matrix = image.transform.get_matrix() if hasattr(image, 'transform') else None
+        return cls(image.frame, image.timestamp, image.width, image.height, bytes(image.raw_data), matrix)
 
     def save_to_disk(self, path):
         """Lossless PNG serialization of the real BGRA sensor data; no synthetic pixels."""

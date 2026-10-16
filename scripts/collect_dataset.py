@@ -1,4 +1,4 @@
-"""Bounded eight-position RGB/semantic/depth pilot; simulator GT is labels only."""
+"""Bounded surround RGB/GT collection; optional instance modality stays labels only."""
 import argparse
 from collections import Counter
 import faulthandler
@@ -158,6 +158,8 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
                 sink = queue.Queue()
                 queues[(name, modality)] = sink
                 sensor.listen(lambda image, target=sink: target.put(RgbFrame.from_carla(image)))
+                if 'instance_segmentation' in criteria['modalities']:
+                    calibration[-1].setdefault('sensor_attributes', {})[modality] = dict(sensor.attributes)
         cal_relative = f'calibration/{scene["id"]}.json'
         write_json(root / cal_relative, {'schema_version': 1, 'coordinate_system': rig['coordinate_system'],
                    'optical_from_carla_camera': [[0, 1, 0], [0, 0, -1], [1, 0, 0]], 'cameras': calibration})
@@ -218,6 +220,10 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
                         feature['cameras'][name] = entry
                     else:
                         labels[modality][name] = entry
+                    if 'instance_segmentation' in criteria['modalities']:
+                        if image.world_from_camera is None:
+                            raise ValueError('Missing actual capture-time camera pose')
+                        labels['capture_world_from_camera'].setdefault(name, {})[modality] = image.world_from_camera
                     if modality == 'semantic_segmentation':
                         tags = semantic_ids_bgra(image.raw_data, image.width, image.height)
                         hist = np.bincount(tags.reshape(-1), minlength=29)
@@ -282,6 +288,9 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
                           'ego_world_pose': pose(ego.get_transform()), 'ego_velocity_mps': xyz(ego.get_velocity()),
                           'objects_3d': [], 'semantic_segmentation': {}, 'depth': {},
                           'roads': f'labels/roads/{scene["id"]}.json'}
+                if 'instance_segmentation' in criteria['modalities']:
+                    labels['instance_segmentation'] = {}
+                    labels['capture_world_from_camera'] = {}
                 if moving:
                     labels['episode_tick'] = step
                     labels['ego_control'] = {'throttle': control.throttle, 'brake': control.brake, 'steer': control.steer,
@@ -308,7 +317,7 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
             if pending is not None:
                 consume(pending, world.tick(15))
         result['checks'] = {'complete_bundles': result['bundles'] == count,
-                            'complete_images': result['images'] == count * 24,
+                            'complete_images': result['images'] == count * len(rig['cameras']) * len(criteria['modalities']),
                             'traffic_density': result['spawned_npcs'] == scene['requested_npcs'],
                             'semantic_signal': 1 in classes and len(classes) >= 3,
                             'valid_depth_range': 0 <= depth_min < depth_max <= 1000}
@@ -418,6 +427,9 @@ def main():
               'git_revision': subprocess.run(['git', 'rev-parse', 'HEAD'], capture_output=True, text=True, check=True).stdout.strip(),
               'server_launch': json.loads((ROOT / 'artifacts/reports/server-launch.json').read_text(encoding='utf-8-sig'))}
     report['controller_source'] = 'carla_basic_agent_rules_with_simulator_gt' if 'ego_route_m' in plan['scenes'][0] else 'stationary_brake'
+    report['collector_sha256'] = sha(Path(__file__))
+    report['frame_copy_sha256'] = sha(ROOT / 'src/senior_ai/frames.py')
+    report['training_approved'] = False if args.mode == 'probe' else None
     if report['controller_source'] != 'stationary_brake':
         report['agent_sha256'] = sha(ROOT / 'artifacts/carla/PythonAPI/carla/agents/navigation/basic_agent.py')
     all_indexes = []

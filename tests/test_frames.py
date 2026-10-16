@@ -40,3 +40,14 @@ class OwnedFrameTests(unittest.TestCase):
                        (0, 0.0, 0, 1, b'')]:
             with self.subTest(values=values), self.assertRaises(ValueError):
                 RgbFrame(*values)
+
+    def test_capture_pose_is_owned_and_validated_with_pixels(self):
+        matrix = [[float(i == j) for j in range(4)] for i in range(4)]
+        native = SimpleNamespace(frame=1, timestamp=.05, width=1, height=1, raw_data=bytes(4),
+                                 transform=SimpleNamespace(get_matrix=lambda: matrix))
+        owned = RgbFrame.from_carla(native)
+        matrix[0][3] = 100
+        self.assertEqual(owned.world_from_camera[0][3], 0)
+        matrix[1][1] = float('nan')
+        with self.assertRaises(ValueError):
+            RgbFrame.from_carla(native)

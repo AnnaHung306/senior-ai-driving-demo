@@ -2,9 +2,12 @@
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import sys
 import time
+
+os.environ.setdefault('CUBLAS_WORKSPACE_CONFIG',':4096:8')
 
 import numpy as np
 from PIL import Image,ImageDraw
@@ -26,7 +29,11 @@ PALETTE=np.array([(70,70,70),(128,64,128),(244,35,232),(220,20,60),(255,0,0),(0,
 
 
 def load_model(checkpoint,device):
+    if str(device).startswith('cuda'):
+        from senior_ai.segmentation_training import configure_cuda
+        configure_cuda()
     saved=torch.load(checkpoint,map_location='cpu',weights_only=False); task=saved['task']
+    if task not in ['detection','segmentation']:raise ValueError('Expected detector or segmentation checkpoint')
     model=make_detector() if task=='detection' else TinyUNet(width=saved['config']['segmentation']['width'],classes=len(SEGMENTATION_NAMES))
     model.load_state_dict(saved['model']);model.to(device).eval()
     return model,task,saved

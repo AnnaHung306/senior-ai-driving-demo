@@ -5,6 +5,7 @@ from pathlib import Path
 import sys
 import numpy as np
 import torch
+from PIL import Image,ImageDraw
 from train_light_state import ROOT,LightCrops,LightStateNet,evaluate,quality
 from train_sunny import require_idle_gpu,configure_cuda
 from senior_ai.core import write_json
@@ -65,6 +66,28 @@ def supplement_detector(checkpoint,root):
     return frames
 
 
+def error_gallery(root,supplement_root,crop_frames,joint_frames,output):
+    """Real wrong/missed examples, stratified by true class and original route."""
+    selected=[];seen=set()
+    candidates=[{**r,'error_kind':'crop_misclassification'} for r in crop_frames if r['target']!=r['prediction']]
+    candidates.extend({**r,'error_kind':'missed_detection' if r['prediction'] is None else 'joint_misclassification'} for r in joint_frames if 'target' in r and r['target']!=r['prediction'])
+    for r in candidates:
+        key=(r['error_kind'],r['scene_id'],r['target'],r['prediction'])
+        if key not in seen:seen.add(key);selected.append(r)
+    selected=sorted(selected,key=lambda r:(r['target'],r['scene_id'],r['error_kind']))[:32]
+    output.mkdir(exist_ok=False);catalog=[]
+    for i,r in enumerate(selected):
+        data_root=Path(r['data_root']) if 'data_root' in r else supplement_root if r.get('controlled_supplement') else root
+        rgb=Image.open(safe_path(data_root,r['rgb'])).convert('RGB');context=rgb.copy();b=r['box'];ImageDraw.Draw(context).rectangle(b,outline='yellow',width=2)
+        context=context.resize((320,180));crop=rgb.crop(tuple(b));crop.thumbnail((144,180));scale=min(144/crop.width,180/crop.height);crop=crop.resize((max(1,int(crop.width*scale)),max(1,int(crop.height*scale))),Image.Resampling.NEAREST)
+        panel=Image.new('RGB',(480,220));panel.paste(context,(0,40));panel.paste(crop,(328,40));d=ImageDraw.Draw(panel)
+        prediction='missed' if r['prediction'] is None else LIGHT_STATES[r['prediction']]
+        d.text((4,2),f'GT {LIGHT_STATES[r["target"]]} / predicted {prediction}',fill='white');d.text((4,18),r['error_kind']+' '+r['scene_id'],fill='white')
+        path=output/f'{i:02}.png';panel.save(path);catalog.append({**r,'image':path.name,'image_sha256':sha(path)})
+    write_json(output/'catalog.json',{'total_crop_errors':sum(r['target']!=r['prediction'] for r in crop_frames),'selected':catalog,
+        'selection':'First per error kind, source route, true and predicted phase; sorted by phase/route, max32. This is a gallery, not an independent dataset.'})
+
+
 def main(args):
     state=json.loads((args.run/'state.json').read_text(encoding='utf-8'))
     if state['status']!='completed' or not state['validation_quality']['passed']: raise ValueError('Validation-qualified phase checkpoint required')
@@ -110,6 +133,7 @@ def main(args):
             joint_frames.extend({**r,'controlled_supplement':True} for r in extra_frames)
         write_json(args.run/(split+'_joint.json'),combined)
         (args.run/(split+'_joint_frames.jsonl')).write_text(''.join(json.dumps(r)+'\n' for r in joint_frames),encoding='utf-8')
+        error_gallery(args.root,args.supplement_root,crop_frames,joint_frames,args.run/(split+'_phase_errors'))
         result[split]={'crop_quality':quality(cropped,config),'joint_quality':(combined['macro_correct_state_recall'] or 0)>=config['minimum_joint_macro_correct_state_recall']}
     final={'status':'passed' if result['lockbox']['crop_quality']['passed'] and result['lockbox']['joint_quality'] else 'quality_failed',
            'quality':result,'checkpoint_sha256':state['best_sha256'],'supplement':supplement_signature,

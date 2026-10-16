@@ -1,0 +1,10 @@
+{
+  "version": "rig-smoke-v1",
+  "expected_cameras": 8,
+  "expected_bundles": 20,
+  "expected_saved_images": 160,
+  "max_timestamp_error_s": 0.0001,
+  "fixed_delta_s": 0.05,
+  "readback_lag_ticks": 1,
+  "scope": "Single stationary ClearNoon scene. Synchronization/calibration/data ownership only; no labels, dataset split, object inference, BEV or 3D reconstruction. This is not full Phase 2 acceptance."
+}

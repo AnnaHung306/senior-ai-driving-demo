@@ -207,12 +207,38 @@ def main():
     parser.add_argument('--scenarios', type=Path, default=ROOT / 'configs/phase1_scenarios_v1.json')
     parser.add_argument('--output', type=Path)
     args = parser.parse_args()
+    try:
+        return execute(args)
+    except Exception as exc:
+        failure = {'task': 'phase1-rules-baseline', 'status': 'failed', 'stage': 'preflight_or_orchestration',
+                   'errors': [f'{type(exc).__name__}: {exc}'], 'ai_model': None}
+        if args.mode == 'run' and args.output is not None and args.output.resolve().is_relative_to(ROOT):
+            report_path = args.output / 'report.json'
+            if report_path.exists():
+                failure = json.loads(report_path.read_text())
+                failure['status'] = 'failed'
+                failure.setdefault('errors', []).append(f'{type(exc).__name__}: {exc}')
+            write_json(report_path, failure)
+        print(json.dumps(failure), flush=True)
+        return 1
+
+
+def execute(args):
     import carla
     criteria = json.loads(args.criteria.read_text())
-    client = carla.Client('127.0.0.1', 2000)
+    deadline = time.monotonic() + 180
+    while time.monotonic() < deadline:
+        try:
+            client = carla.Client('127.0.0.1', 2000)
+            client.set_timeout(2)
+            if client.get_server_version() != '0.9.16':
+                raise ValueError('Baseline requires CARLA 0.9.16')
+            break
+        except RuntimeError:
+            time.sleep(1)
+    else:
+        raise TimeoutError('Baseline server readiness deadline')
     client.set_timeout(30)
-    if client.get_server_version() != '0.9.16':
-        raise RuntimeError('Baseline requires CARLA 0.9.16')
     if args.mode == 'prepare':
         return prepare(args, criteria, client)
     if args.output is None:
@@ -221,7 +247,9 @@ def main():
     frozen = json.loads(args.scenarios.read_text())
     if frozen['criteria_sha256'] != digest(args.criteria):
         raise ValueError('Criteria changed after scenarios were frozen')
-    world = client.load_world(criteria['map'])
+    world = client.get_world()
+    if world.get_map().name.split('/')[-1] != criteria['map']:
+        world = client.load_world(criteria['map'])
     road_map = world.get_map()
     if hashlib.sha256(road_map.to_opendrive().encode()).hexdigest() != frozen['opendrive_sha256']:
         raise ValueError('Map differs from frozen scenario geometry')

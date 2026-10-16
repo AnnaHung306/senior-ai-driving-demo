@@ -13,4 +13,3 @@ C:\Users\jenkins\unreal-engine\Engine\Source\Runtime\Core\Private\Async\TaskGrap
 
 UTexture2D::GetNumResidentMips(void) const
 C:\Users\jenkins\unreal-engine\Engine\Source\Runtime\Engine\Private\Texture2D.cpp:213:0
-

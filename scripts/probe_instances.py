@@ -71,7 +71,8 @@ def collect(output, config_path, rig_path, baseline):
         settings = world.get_settings()
         settings.synchronous_mode, settings.fixed_delta_seconds, settings.no_rendering_mode = True, config['fixed_delta_s'], False
         world.apply_settings(settings)
-        world.set_weather(carla.WeatherParameters.ClearNoon)
+        world.set_weather(getattr(carla.WeatherParameters, config.get('weather', 'ClearNoon')))
+        report['weather'] = config.get('weather', 'ClearNoon')
         for _ in range(10):
             world.tick(config['sensor_timeout_s'])
         scene = next(s for s in json.loads((ROOT / 'configs/dataset_motion_scenes_v2.json').read_text())['scenes']

@@ -1,0 +1,9 @@
+{
+  "version": "render-quality-probe-v1",
+  "hypothesis": "Observed black sky and grain in the Low DX12 rain sample may be related to quality-dependent rendering, not PNG corruption. This is an exploratory image-quality comparison, not model evaluation.",
+  "reference_dataset": "data/town01-pilot-v1b",
+  "reference_scene": "scene-02",
+  "candidate": {"graphics_api": "dx12", "quality": "Epic", "native_pool": "background"},
+  "protocol": "Fresh owned server; unchanged single-camera Phase 0 gates first, then collect_dataset probe --probe-scene 2 (five bundles, 24 sensors, six NPCs). Same frozen scene/rig/seed/weather. No TDR or global driver modification.",
+  "decision": "Keep Low pilot integrity pass distinct from visual suitability. Record failures, manually inspect candidate RGB, report GPU resource limits without presuming Epic fits 8GB. Do not retune model/test accuracy on this diagnostic."
+}

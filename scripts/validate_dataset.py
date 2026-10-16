@@ -43,17 +43,18 @@ def read_png(path, width, height):
     return rows[:, 1:].reshape(height, width, 3), hashlib.sha256(raw).hexdigest(), len(raw)
 
 
-def validate(root):
+def validate(root, criteria_reference, rig_reference):
     plan = json.loads((root / 'plan.json').read_text())
     criteria = json.loads((root / 'criteria.json').read_text())
     rig = json.loads((root / 'rig.json').read_text())
     acquisition = json.loads((root / 'report.json').read_text())
     if acquisition['task'] != 'dataset-collect' or acquisition['status'] != 'passed':
         raise ValueError('Only complete acquisition may pass a full dataset audit')
-    if hashlib.sha256((root / 'criteria.json').read_bytes()).hexdigest() != plan['criteria_sha256']:
-        raise ValueError('Saved criteria hash mismatch')
-    if hashlib.sha256((root / 'rig.json').read_bytes()).hexdigest() != plan['rig_sha256']:
-        raise ValueError('Saved rig hash mismatch')
+    # Export JSON formatting can differ; verify original frozen bytes AND values.
+    for reference, saved, expected in [(criteria_reference, criteria, plan['criteria_sha256']),
+                                       (rig_reference, rig, plan['rig_sha256'])]:
+        if hashlib.sha256(reference.read_bytes()).hexdigest() != expected or json.loads(reference.read_text()) != saved:
+            raise ValueError('Frozen source config hash or exported values differ')
     groups = check_group_splits(plan)
     scenes = {s['id']: s for s in plan['scenes']}
     if len(scenes) != criteria['scene_count']:
@@ -154,9 +155,11 @@ def validate(root):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('root', type=Path)
+    parser.add_argument('--criteria', type=Path, default=ROOT / 'configs/dataset_pilot_criteria_v1.json')
+    parser.add_argument('--rig', type=Path, default=ROOT / 'configs/camera_rig_v1.json')
     args = parser.parse_args()
     try:
-        report = validate(args.root.resolve())
+        report = validate(args.root.resolve(), args.criteria, args.rig)
     except Exception as exc:
         report = {'task': 'dataset-on-disk-audit', 'status': 'failed', 'error': f'{type(exc).__name__}: {exc}'}
     write_json(args.root / 'audit.json', report)

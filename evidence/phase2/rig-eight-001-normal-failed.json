@@ -1,0 +1,40 @@
+{
+  "task": "eight-camera-rig-smoke",
+  "status": "failed",
+  "errors": [
+    "RuntimeError: time-out of 15000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000",
+    "actor cleanup: Actor destroy failed",
+    "actor cleanup: Actor destroy failed",
+    "actor cleanup: Actor destroy failed",
+    "actor cleanup: Actor destroy failed",
+    "actor cleanup: Actor destroy failed",
+    "actor cleanup: Actor destroy failed",
+    "actor cleanup: Actor destroy failed",
+    "actor cleanup: Actor destroy failed",
+    "actor cleanup: Actor destroy failed",
+    "world restore: time-out of 15000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000"
+  ],
+  "checks": {
+    "eight_cameras": true,
+    "complete_bundles": false,
+    "saved_images": false,
+    "timestamp_alignment": true,
+    "cleanup": false
+  },
+  "ai_model": null,
+  "training_dataset": false,
+  "labels_collected": false,
+  "rig_sha256": "df872f550458d9e284927b8bf1ccac8def4851fb7ff7e02a9a0f838aac537f10",
+  "criteria_sha256": "25def8bb846537e7469a7c57f064fc3addf6ab7623ed0e947a378772ab67a1ca",
+  "scope": "Single stationary ClearNoon scene. Synchronization/calibration/data ownership only; no labels, dataset split, object inference, BEV or 3D reconstruction. This is not full Phase 2 acceptance.",
+  "metrics": {
+    "bundles": 0,
+    "saved_images": 0,
+    "max_timestamp_error_s": 0.0,
+    "capture_wall_s": null,
+    "wall_bundle_rate_hz": null,
+    "mean_bundle_commit_latency_ms": null,
+    "max_bundle_commit_latency_ms": null,
+    "sampled_total_gpu_used_mib_max": null
+  }
+}

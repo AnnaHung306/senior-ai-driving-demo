@@ -61,7 +61,7 @@ BEVFormer 與 BEVDet 有官方開源實作。BEVFormer tiny config 標示至少�
 
 擷取**僅本專案 server** 的輕量 dump，StatsThread 指令在 `_Thrd_yield`，頂部 return-address candidate 對應 PixelReader.cpp:64 的 GPU readback 等待。DIA 讀取同一 PDB 的 enum：`StatsThread=0`、`HighTaskPriority=512`、`AnyNormalThreadHiPriTask=767`。官方 PixelReader.cpp:58 與實際反組譯都傳 512 給 AsyncTask；其 thread-index 位元為 0，會選到 StatsThread，而不是任意 worker。
 
-本地僅把該 verified callsite 的 enum 改為 767，保留高 task priority，指定 AnyThread。已對照官方 ZIP 原檔、保存 `.exe.stock`、驗證一 byte 差異，並實際測試 restore → reapply 雜湊一致。Source patch 在 `patches/pixel-reader-task-thread.patch`，長期應用 source patch 重建；目前的 binary 修正只適用這一個已核實 build，腳本拒絕其他 build。
+本地最初把該 verified callsite 的 enum 改為 767，保留高 task priority，指定 AnyThread。已對照官方 ZIP 原檔、保存 `.exe.stock`、驗證一 byte 差異，並實際測試 restore → reapply 雜湊一致。此歷史 normal 版本 source patch 在 `patches/pixel-reader-task-thread-normal.patch`；目前 active background 版本見 D006。長期應用 source patch 重建，binary 腳本只支援核對固定 SHA256 的 build。
 
 - Stock executable SHA256：`ba05ec36f7f0b548b266865ea2787a1dc5a028e298ebefcf0c49196ac629c4d3`。
 - Local fixed SHA256：`9deba9928ffe56ee8c27cc89d88bcdd4e49204b771f86da2e438c613f4205245`。
@@ -73,3 +73,39 @@ BEVFormer 與 BEVDet 有官方開源實作。BEVFormer tiny config 標示至少�
 CARLA 0.9.15 的官方 wheel 僅到 Python 3.10，已準備 matching diagnostic runtime；大型 server 下載在 6,265,982,548 bytes 停滯後自行退出，等待安裝程序已中止，**未完成 0.9.15 測試**。既然 0.9.16 已通過，不再重下載這份備案。原始 source 的兩版本都含同一排程寫法，不能假設單純降版就可解決。
 
 目前是模擬器工程驗收通過，仍沒有 AI 感知模型或真實道路能力。
+
+## D006 — 八鏡頭規模化與 DX12
+
+Normal worker 版本的單鏡頭 140 幀與五條規則路線通過，但八鏡頭失敗；輕量 dump 的多個 normal worker 含 PixelReader GPU wait return-address candidates。改用 PDB 已核實的 AnyBackgroundHiPriTask=2815 隔離工作池，保留相同 task priority。此版本改兩個 byte，SHA256 `b0370d6dcd57b95299d12005cebad1dc6187804e83aeb51a184ccbc4b581fea8`，source patch 為 `patches/pixel-reader-task-thread.patch`。
+
+Background 在 DX11 仍無法通過八鏡頭。新 CrashContext 對應 PID 3372，類型 GPUCrash，D3D device lost，0x887A0020 INTERNAL_ERROR。這是圖形裝置錯誤證據，不是 OOM 證據；當時取樣 GPU 約 2063MiB。移動執行緒本身不能宣稱解決八鏡頭。
+
+先前 DX12 測試使用未修正的 lifecycle／排程，不能推論修正後也一定失敗。只改 graphics API 為 DX12，重新跑同一 Phase 0 v2 原數值門檻後通過，再跑原八鏡頭門檻亦通過，最後五條規則路線回歸 5/5。因此本專案目前預設 DX12 + background 修正；不修改驅動、登錄檔 TDR 或其他全域設定。
+
+Dump 工具只讀專案自己的程序且不含完整 heap。stack scan 是 return-address candidates，並非已 unwind 的堆疊；實際 CrashContext、精確指令位址與匹配官方 PDB 分別記錄，不混稱。
+
+## D007 — 24 感測器 pilot、GT 邊界與 NPC 清理
+
+先凍結 `dataset_pilot_criteria_v1.json` 與 `dataset_scenes_v1.json`，按地圖幾何選六個不同道路群組，整群組先分 train／validation／test。先通過 24 感測器五幀 probe，再收完整資料，不因看過結果而挑選成功場景或降低影格／同步門檻。
+
+NPC 場景最初在收完資料後 native abort；啟用 faulthandler 證實退出點在 finally 的 world.apply_settings，而非 3D box 計算。先取消 NPC autopilot 註冊，保持 TM 同步直到 world settings 恢復後再關閉 TM 同步；NPC 五幀 probe 與六場景完整收集均通過，原兩次失敗不回寫。
+
+RGB manifest 僅存 RGB 路徑、frame／timestamp、scene ID 與 calibration；GT 深度、語意、自車 world pose、NPC boxes 及道路存 labels。物件 pose／velocity 取自該原始影格 snapshot，先轉成獨立 Python 資料，再推進下一 tick；不拿未來 live actor transform 配舊影像。RGB-only loader 會拒絕額外 GT 欄位及標籤路徑。
+
+標籤編碼依 [CARLA 官方 sensors](https://carla.readthedocs.io/en/0.9.16/ref_sensors/)：語意原始 red class ID；深度保留 packed RGB，meters=(R+256G+65536B)*1000/16777215。沒有把調色盤或灰階展示圖作原始訓練標籤。Snapshot 依 [官方 ActorSnapshot API](https://carla.readthedocs.io/en/0.9.16/python_api/#carlaactorsnapshot)。
+
+資料 pilot 只驗證擷取、同步、標籤隔離、群組切分與磁碟完整性。六個短停駐場景不具足夠多樣性；缺行人／兩輪車與長移動序列。保留完整 Phase 2 的要求，下一步先擴充可訓練覆蓋，再進入 Phase 3 CUDA／小型感知模型試跑。
+
+## D008 — Low 畫質對照與 Epic pilot
+
+磁碟完整性通過後抽看 RGB，Low／DX12 雨天有黑天空與明顯雜訊；不能因檔案可讀就直接當成訓練品質合格。先固定 render_quality_probe_v1.json，只以相同雨天 scene-02、rig、seed、五組／24 感測器比較 Epic。Shipping 程序命令列確實含 quality-level=Epic；單鏡頭原門檻與有六 NPC 的 probe 都通過，人工對照看到天空／光照恢復，仍有雨霧與模糊。
+
+因此預設改為 DX12／Epic。原 Low 資料不覆寫、不改稱沒有瑕疵；Epic 另收六場景共 4320 PNG，五條規則路線也以 Epic 回歸 5/5。Probe 後 GPU 全裝置取樣 3382MiB，不是感測器 active 峰值。新 pilot 仍缺資料覆蓋，不將畫質改善等同模型準確率或完整 Phase 2 通過。
+
+單元測試增至 14 項，加入不正確焦距／反向外參拒絕；Epic 磁碟 auditor 對每組 calibration 比對凍結 FOV、安裝位置／yaw 與 optical 軸轉換。原生 background 版本在 server 停止後實際 restore → reapply，雜湊完全回到 b0370d6d...，證據另存，不以文案宣稱可還原。
+
+## D009 — smoke 重跑不再載入相同地圖
+
+接手回歸檢查發現 smoke 雖移除了 reload_world，仍每次無條件 load_world(Town01)。新 server 正常，但重跑可能再次觸發已知 lifecycle 問題。改先讀目前地圖，只在不同時 load，記錄 map_lifecycle；原 protocol 與數值門檻不變。
+
+以同一 DX12／Epic server 連續實測：phase0-map-reuse-005a=loaded_map_once、005b=reused_existing_map，兩者 doctor／140 幀 smoke 全通過，完整報告保留。測後僅停止路徑核對一致的自有程序樹；沒有留下訓練或監督工作。

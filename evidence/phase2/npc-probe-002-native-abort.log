@@ -1,0 +1,10 @@
+INFO:  Found the required file in cache!  Carla/Maps/Nav/Town01.bin 
+INFO:  Found the required file in cache!  Carla/Maps/TM/Town01.bin 
+Fatal Python error: Aborted
+
+Thread 0x00001c58 (most recent call first):
+  File "C:\code\senior_AI\scripts\collect_dataset.py", line 262 in collect_scene
+  File "C:\code\senior_AI\scripts\collect_dataset.py", line 323 in main
+  File "C:\code\senior_AI\scripts\collect_dataset.py", line 343 in <module>
+
+Extension modules: numpy._core._multiarray_umath, numpy.linalg._umath_linalg, carla.libcarla (total: 3)

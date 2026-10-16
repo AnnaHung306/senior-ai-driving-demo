@@ -1,0 +1,488 @@
+{
+  "task": "exploratory-rgb-quality-sample",
+  "sampling": "First bundle of each scene, all eight cameras",
+  "sampled_images": 48,
+  "samples": [
+    {
+      "scene_id": "scene-00",
+      "weather": "ClearNoon",
+      "camera": "front",
+      "image": "inputs/rgb/scene-00/front/00125828.png",
+      "mean_rgb": 176.02340856481482,
+      "std_rgb": 41.24554569190899,
+      "near_black_fraction": 0.00022569444444444443,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-00",
+      "weather": "ClearNoon",
+      "camera": "front_right",
+      "image": "inputs/rgb/scene-00/front_right/00125828.png",
+      "mean_rgb": 171.90451244212963,
+      "std_rgb": 39.77778944183056,
+      "near_black_fraction": 0.0003255208333333333,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-00",
+      "weather": "ClearNoon",
+      "camera": "right",
+      "image": "inputs/rgb/scene-00/right/00125828.png",
+      "mean_rgb": 169.71506221064814,
+      "std_rgb": 34.99334019780414,
+      "near_black_fraction": 0.0005078125,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-00",
+      "weather": "ClearNoon",
+      "camera": "rear_right",
+      "image": "inputs/rgb/scene-00/rear_right/00125828.png",
+      "mean_rgb": 170.8841261574074,
+      "std_rgb": 40.85244407227711,
+      "near_black_fraction": 0.0,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-00",
+      "weather": "ClearNoon",
+      "camera": "rear",
+      "image": "inputs/rgb/scene-00/rear/00125828.png",
+      "mean_rgb": 164.0710329861111,
+      "std_rgb": 50.57195790117684,
+      "near_black_fraction": 0.0006510416666666666,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-00",
+      "weather": "ClearNoon",
+      "camera": "rear_left",
+      "image": "inputs/rgb/scene-00/rear_left/00125828.png",
+      "mean_rgb": 149.4886053240741,
+      "std_rgb": 57.25638851040077,
+      "near_black_fraction": 0.000859375,
+      "near_white_fraction": 4.340277777777778e-06
+    },
+    {
+      "scene_id": "scene-00",
+      "weather": "ClearNoon",
+      "camera": "left",
+      "image": "inputs/rgb/scene-00/left/00125828.png",
+      "mean_rgb": 140.0335257523148,
+      "std_rgb": 61.01127436068034,
+      "near_black_fraction": 0.0030078125,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-00",
+      "weather": "ClearNoon",
+      "camera": "front_left",
+      "image": "inputs/rgb/scene-00/front_left/00125828.png",
+      "mean_rgb": 159.1523755787037,
+      "std_rgb": 58.18409278994987,
+      "near_black_fraction": 0.0017491319444444444,
+      "near_white_fraction": 4.340277777777778e-06
+    },
+    {
+      "scene_id": "scene-01",
+      "weather": "ClearNight",
+      "camera": "front",
+      "image": "inputs/rgb/scene-01/front/00125886.png",
+      "mean_rgb": 21.639791666666667,
+      "std_rgb": 24.58504674966979,
+      "near_black_fraction": 0.3890104166666667,
+      "near_white_fraction": 2.604166666666667e-05
+    },
+    {
+      "scene_id": "scene-01",
+      "weather": "ClearNight",
+      "camera": "front_right",
+      "image": "inputs/rgb/scene-01/front_right/00125886.png",
+      "mean_rgb": 20.154811921296297,
+      "std_rgb": 17.924316688653313,
+      "near_black_fraction": 0.20576388888888889,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-01",
+      "weather": "ClearNight",
+      "camera": "right",
+      "image": "inputs/rgb/scene-01/right/00125886.png",
+      "mean_rgb": 19.718454861111113,
+      "std_rgb": 20.313500480695406,
+      "near_black_fraction": 0.2923046875,
+      "near_white_fraction": 3.90625e-05
+    },
+    {
+      "scene_id": "scene-01",
+      "weather": "ClearNight",
+      "camera": "rear_right",
+      "image": "inputs/rgb/scene-01/rear_right/00125886.png",
+      "mean_rgb": 22.464231770833333,
+      "std_rgb": 26.12820149459422,
+      "near_black_fraction": 0.4786328125,
+      "near_white_fraction": 4.774305555555556e-05
+    },
+    {
+      "scene_id": "scene-01",
+      "weather": "ClearNight",
+      "camera": "rear",
+      "image": "inputs/rgb/scene-01/rear/00125886.png",
+      "mean_rgb": 23.3758203125,
+      "std_rgb": 29.049295170301875,
+      "near_black_fraction": 0.49961371527777776,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-01",
+      "weather": "ClearNight",
+      "camera": "rear_left",
+      "image": "inputs/rgb/scene-01/rear_left/00125886.png",
+      "mean_rgb": 28.495287905092592,
+      "std_rgb": 36.51781945978001,
+      "near_black_fraction": 0.4743967013888889,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-01",
+      "weather": "ClearNight",
+      "camera": "left",
+      "image": "inputs/rgb/scene-01/left/00125886.png",
+      "mean_rgb": 32.57570167824074,
+      "std_rgb": 40.234067270662194,
+      "near_black_fraction": 0.40649305555555554,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-01",
+      "weather": "ClearNight",
+      "camera": "front_left",
+      "image": "inputs/rgb/scene-01/front_left/00125886.png",
+      "mean_rgb": 26.86089554398148,
+      "std_rgb": 32.229282577308496,
+      "near_black_fraction": 0.4294487847222222,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-02",
+      "weather": "HardRainNoon",
+      "camera": "front",
+      "image": "inputs/rgb/scene-02/front/00125940.png",
+      "mean_rgb": 84.72992042824075,
+      "std_rgb": 56.466547050324344,
+      "near_black_fraction": 0.1581640625,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-02",
+      "weather": "HardRainNoon",
+      "camera": "front_right",
+      "image": "inputs/rgb/scene-02/front_right/00125940.png",
+      "mean_rgb": 78.166953125,
+      "std_rgb": 56.161185851210774,
+      "near_black_fraction": 0.15849392361111111,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-02",
+      "weather": "HardRainNoon",
+      "camera": "right",
+      "image": "inputs/rgb/scene-02/right/00125940.png",
+      "mean_rgb": 73.05789207175926,
+      "std_rgb": 55.513212480530164,
+      "near_black_fraction": 0.2634157986111111,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-02",
+      "weather": "HardRainNoon",
+      "camera": "rear_right",
+      "image": "inputs/rgb/scene-02/rear_right/00125940.png",
+      "mean_rgb": 66.79857783564815,
+      "std_rgb": 60.395616596354394,
+      "near_black_fraction": 0.3839019097222222,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-02",
+      "weather": "HardRainNoon",
+      "camera": "rear",
+      "image": "inputs/rgb/scene-02/rear/00125940.png",
+      "mean_rgb": 77.99170283564816,
+      "std_rgb": 58.47816169790895,
+      "near_black_fraction": 0.26903211805555555,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-02",
+      "weather": "HardRainNoon",
+      "camera": "rear_left",
+      "image": "inputs/rgb/scene-02/rear_left/00125940.png",
+      "mean_rgb": 79.84815393518518,
+      "std_rgb": 60.783023846395544,
+      "near_black_fraction": 0.2677994791666667,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-02",
+      "weather": "HardRainNoon",
+      "camera": "left",
+      "image": "inputs/rgb/scene-02/left/00125940.png",
+      "mean_rgb": 88.21799479166667,
+      "std_rgb": 54.80957566659577,
+      "near_black_fraction": 0.17450086805555556,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-02",
+      "weather": "HardRainNoon",
+      "camera": "front_left",
+      "image": "inputs/rgb/scene-02/front_left/00125940.png",
+      "mean_rgb": 98.43482783564815,
+      "std_rgb": 48.08879404333921,
+      "near_black_fraction": 0.08251736111111112,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-03",
+      "weather": "WetCloudyNoon",
+      "camera": "front",
+      "image": "inputs/rgb/scene-03/front/00125994.png",
+      "mean_rgb": 123.07736979166667,
+      "std_rgb": 52.33174919668539,
+      "near_black_fraction": 0.0008289930555555556,
+      "near_white_fraction": 0.0006727430555555556
+    },
+    {
+      "scene_id": "scene-03",
+      "weather": "WetCloudyNoon",
+      "camera": "front_right",
+      "image": "inputs/rgb/scene-03/front_right/00125994.png",
+      "mean_rgb": 116.30099971064814,
+      "std_rgb": 50.05511811110148,
+      "near_black_fraction": 0.0024652777777777776,
+      "near_white_fraction": 0.0005685763888888889
+    },
+    {
+      "scene_id": "scene-03",
+      "weather": "WetCloudyNoon",
+      "camera": "right",
+      "image": "inputs/rgb/scene-03/right/00125994.png",
+      "mean_rgb": 113.49887152777778,
+      "std_rgb": 49.31615857901383,
+      "near_black_fraction": 0.004214409722222222,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-03",
+      "weather": "WetCloudyNoon",
+      "camera": "rear_right",
+      "image": "inputs/rgb/scene-03/rear_right/00125994.png",
+      "mean_rgb": 110.89383391203704,
+      "std_rgb": 54.076840146407406,
+      "near_black_fraction": 0.0020008680555555556,
+      "near_white_fraction": 8.680555555555556e-06
+    },
+    {
+      "scene_id": "scene-03",
+      "weather": "WetCloudyNoon",
+      "camera": "rear",
+      "image": "inputs/rgb/scene-03/rear/00125994.png",
+      "mean_rgb": 113.49796730324074,
+      "std_rgb": 61.94417045526796,
+      "near_black_fraction": 0.00024739583333333335,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-03",
+      "weather": "WetCloudyNoon",
+      "camera": "rear_left",
+      "image": "inputs/rgb/scene-03/rear_left/00125994.png",
+      "mean_rgb": 119.86353298611111,
+      "std_rgb": 59.74045183196603,
+      "near_black_fraction": 0.0007161458333333333,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-03",
+      "weather": "WetCloudyNoon",
+      "camera": "left",
+      "image": "inputs/rgb/scene-03/left/00125994.png",
+      "mean_rgb": 116.7747410300926,
+      "std_rgb": 56.59100949716351,
+      "near_black_fraction": 0.0010763888888888889,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-03",
+      "weather": "WetCloudyNoon",
+      "camera": "front_left",
+      "image": "inputs/rgb/scene-03/front_left/00125994.png",
+      "mean_rgb": 115.75807725694445,
+      "std_rgb": 55.453111076601395,
+      "near_black_fraction": 0.0004600694444444444,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-04",
+      "weather": "ClearNoon",
+      "camera": "front",
+      "image": "inputs/rgb/scene-04/front/00126048.png",
+      "mean_rgb": 147.2967722800926,
+      "std_rgb": 63.44791565651229,
+      "near_black_fraction": 0.004587673611111111,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-04",
+      "weather": "ClearNoon",
+      "camera": "front_right",
+      "image": "inputs/rgb/scene-04/front_right/00126048.png",
+      "mean_rgb": 144.69146412037037,
+      "std_rgb": 61.36993024761469,
+      "near_black_fraction": 0.012135416666666666,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-04",
+      "weather": "ClearNoon",
+      "camera": "right",
+      "image": "inputs/rgb/scene-04/right/00126048.png",
+      "mean_rgb": 142.4265726273148,
+      "std_rgb": 59.28124436659897,
+      "near_black_fraction": 0.012903645833333333,
+      "near_white_fraction": 2.170138888888889e-05
+    },
+    {
+      "scene_id": "scene-04",
+      "weather": "ClearNoon",
+      "camera": "rear_right",
+      "image": "inputs/rgb/scene-04/rear_right/00126048.png",
+      "mean_rgb": 157.61997251157408,
+      "std_rgb": 58.5542905685034,
+      "near_black_fraction": 0.0008463541666666667,
+      "near_white_fraction": 2.604166666666667e-05
+    },
+    {
+      "scene_id": "scene-04",
+      "weather": "ClearNoon",
+      "camera": "rear",
+      "image": "inputs/rgb/scene-04/rear/00126048.png",
+      "mean_rgb": 164.95064380787036,
+      "std_rgb": 65.72437615943811,
+      "near_black_fraction": 0.002348090277777778,
+      "near_white_fraction": 1.736111111111111e-05
+    },
+    {
+      "scene_id": "scene-04",
+      "weather": "ClearNoon",
+      "camera": "rear_left",
+      "image": "inputs/rgb/scene-04/rear_left/00126048.png",
+      "mean_rgb": 161.45046875,
+      "std_rgb": 63.4260437822892,
+      "near_black_fraction": 0.003472222222222222,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-04",
+      "weather": "ClearNoon",
+      "camera": "left",
+      "image": "inputs/rgb/scene-04/left/00126048.png",
+      "mean_rgb": 148.68329427083333,
+      "std_rgb": 61.11545859574063,
+      "near_black_fraction": 0.0126953125,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-04",
+      "weather": "ClearNoon",
+      "camera": "front_left",
+      "image": "inputs/rgb/scene-04/front_left/00126048.png",
+      "mean_rgb": 143.57820167824073,
+      "std_rgb": 66.08248244693425,
+      "near_black_fraction": 0.011905381944444444,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-05",
+      "weather": "HardRainNight",
+      "camera": "front",
+      "image": "inputs/rgb/scene-05/front/00126102.png",
+      "mean_rgb": 17.424000289351852,
+      "std_rgb": 22.834553573284577,
+      "near_black_fraction": 0.3746657986111111,
+      "near_white_fraction": 8.680555555555556e-06
+    },
+    {
+      "scene_id": "scene-05",
+      "weather": "HardRainNight",
+      "camera": "front_right",
+      "image": "inputs/rgb/scene-05/front_right/00126102.png",
+      "mean_rgb": 8.043174189814815,
+      "std_rgb": 15.10135038858374,
+      "near_black_fraction": 0.5652213541666666,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-05",
+      "weather": "HardRainNight",
+      "camera": "right",
+      "image": "inputs/rgb/scene-05/right/00126102.png",
+      "mean_rgb": 6.146234085648148,
+      "std_rgb": 13.611072673768977,
+      "near_black_fraction": 0.5991189236111111,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-05",
+      "weather": "HardRainNight",
+      "camera": "rear_right",
+      "image": "inputs/rgb/scene-05/rear_right/00126102.png",
+      "mean_rgb": 7.939733796296296,
+      "std_rgb": 15.354120474782514,
+      "near_black_fraction": 0.57078125,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-05",
+      "weather": "HardRainNight",
+      "camera": "rear",
+      "image": "inputs/rgb/scene-05/rear/00126102.png",
+      "mean_rgb": 20.28112847222222,
+      "std_rgb": 26.90015226532829,
+      "near_black_fraction": 0.3408159722222222,
+      "near_white_fraction": 1.736111111111111e-05
+    },
+    {
+      "scene_id": "scene-05",
+      "weather": "HardRainNight",
+      "camera": "rear_left",
+      "image": "inputs/rgb/scene-05/rear_left/00126102.png",
+      "mean_rgb": 30.917975983796296,
+      "std_rgb": 32.588803103882725,
+      "near_black_fraction": 0.16051649305555554,
+      "near_white_fraction": 2.604166666666667e-05
+    },
+    {
+      "scene_id": "scene-05",
+      "weather": "HardRainNight",
+      "camera": "left",
+      "image": "inputs/rgb/scene-05/left/00126102.png",
+      "mean_rgb": 22.79545138888889,
+      "std_rgb": 29.074452492853773,
+      "near_black_fraction": 0.22671875,
+      "near_white_fraction": 0.0
+    },
+    {
+      "scene_id": "scene-05",
+      "weather": "HardRainNight",
+      "camera": "front_left",
+      "image": "inputs/rgb/scene-05/front_left/00126102.png",
+      "mean_rgb": 16.65118634259259,
+      "std_rgb": 20.888851962807163,
+      "near_black_fraction": 0.33541666666666664,
+      "near_white_fraction": 4.340277777777778e-06
+    }
+  ],
+  "limitations": "Descriptive anomaly inspection only, no quality acceptance thresholds and no model metrics. Short stationary sequences are strongly correlated."
+}

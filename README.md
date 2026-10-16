@@ -1,62 +1,69 @@
 # 多鏡頭三維環境感知與自主駕駛研究系統
 
-長期需求見 [PROJECT_SPEC.md](PROJECT_SPEC.md)，執行狀態見 [CURRENT_TASK.md](CURRENT_TASK.md)。
-目前是 Phase 0：已建置獨立 Python 3.12 / CARLA API、硬體檢查、固定車輛控制與攝影機驗收程式。
-實測狀態：CARLA 0.9.16 已完整安裝，API / RPC 曾通過，但本機車輛物理 tick 會造成 server 崩潰（D3D12 / D3D11、兩個車型均失敗）。**Phase 0 未通過**，不可依下列可重現指令宣稱系統已可行駛。
-尚未完成自主導航、八鏡頭資料集、AI 模型、BEV / occupancy 或 3D 導航介面。下一步相容性對照見 [DECISIONS.md](DECISIONS.md)。
-只有實際 `doctor` 與 `smoke` 都通過，才算 Phase 0 通過；單元測試不能代替模擬器驗收。
+長期需求見 [PROJECT_SPEC.md](PROJECT_SPEC.md)，當前任務見 [CURRENT_TASK.md](CURRENT_TASK.md)。
 
-## 環境
+實測已通過：CARLA 車輛加速／煞停與單鏡頭、五條固定規則導航路線、八鏡頭同步擷取，以及六場景 RGB／語意／深度資料 pilot。使用本地修正 CARLA 0.9.16 與 DX12／Epic；官方原樣 binary 的失敗紀錄保留。
 
-- Windows 11；本機 RTX 4070 Laptop 8GB、64GB RAM。
-- Python 3.12 x64、CARLA server / client **0.9.16**。
-- 現有 `.venv` 使用 bundled Python 3.12.14，無須啟用 venv，直接執行下列命令。
-- 新環境：`./scripts/setup.ps1 -Python312 '你的 Python 3.12 python.exe 絕對路徑'`；此腳本預設透過系統 `python -m pip --python` 安裝依賴，需要系統 pip 支援此參數。
-- `.venv` 不可搬移；大型模擬器、影像、權重與原始 log 不納入 Git。
+尚無訓練模型、AI 感知、BEV／occupancy、3D 導航介面或 AI 自主駕駛閉環。資料 pilot 不等於完整 Phase 2，詳見 [EVALUATION.md](EVALUATION.md)。
 
-## 安裝與執行（PowerShell，工作目錄為專案根目錄）
+## 環境與安裝
+
+Windows 11、RTX 4070 Laptop 8GB、64GB RAM；server／client 固定 0.9.16。本機 .venv 為 Python 3.12.14，不修改系統 Python。
 
 ```powershell
-# 官方下載約 7.3GiB；已存在檔案不覆寫。
-python scripts/download_carla.py
-# 中斷下載可選 --resume；若官方 Range 請求停滯，保留原檔並改用新 --directory 完整下載。
+# 新機建立環境；baseline/data 使用額外固定依賴。
+.\scripts\setup.ps1 -Python312 '你的 Python 3.12 python.exe 絕對路徑'
+python -m pip --python .venv\Scripts\python.exe install -r requirements-baseline.txt
 
-# 核對檔案大小、SHA256（本地追溯）、每個 ZIP member CRC 並安全解壓。
+# 官方 archive 約 7.3GiB；下載、ZIP CRC 驗證與安全解壓。
+python scripts/download_carla.py
 .\.venv\Scripts\python.exe scripts/install_carla.py
 
-# 啟動專案專用 server，DX11 / Low / offscreen / 無音效（此設定仍有已知崩潰）。
-.\scripts\start_carla.ps1
-
-# 自動等待 RPC，集中執行環境與控制驗收。每次使用新的 run-id。
-.\.venv\Scripts\python.exe scripts/verify_phase0.py --run-id ("phase0-" + (Get-Date -Format 'yyyyMMdd-HHmmss'))
+# 僅支援已核對 SHA256 的特定 build，保留 .exe.stock；先關閉 server。
+.\.venv\Scripts\python.exe scripts/patch_pixel_reader.py --pool background
+# 還原：.\.venv\Scripts\python.exe scripts/patch_pixel_reader.py --restore
 ```
 
-下載大小是 2026-10-16 官方 HEAD 的 7,812,252,810 bytes。若官方檔案改變，先核實 release 與 metadata，再明確傳入 `install_carla.py --expected-size`，不要跳過 ZIP 驗證。沒有取得發布者 checksum，因此本地 SHA256 不等於已完成來源 checksum 比對。
+Patch 改正 PixelReader 的 TaskGraph 執行緒選擇，源碼差異在 patches/pixel-reader-task-thread.patch。完整雜湊、適用範圍與失敗分析見 [DECISIONS.md](DECISIONS.md)。本地 archive SHA256 僅供追溯，沒有冒充發布者 checksum。
 
-`smoke` 會重新載入 Town01，須使用本專案專用 CARLA server，且只能有一個 tick client。
-啟動腳本使用隱藏背景程序，不需要桌面操作；結束後可依工作管理員確認本專案的 CARLA server 程序並關閉，避免占用 GPU。
+## 執行與驗收
 
-## 個別檢查
+使用專案專用 server、唯一 tick client；以下依序執行，每次換新輸出目錄。
 
 ```powershell
-.\.venv\Scripts\python.exe scripts/run.py doctor
-.\.venv\Scripts\python.exe scripts/run.py smoke --output artifacts/runs/my-new-run
+# 預設 DX12 / Epic / offscreen / 隱藏背景程序。
+.\scripts\start_carla.ps1
+.\.venv\Scripts\python.exe scripts/verify_phase0.py --run-id my-new-phase0-run
+
+# Town01 初次載入後沿用；路線與門檻已在 configs 凍結。
+.\.venv\Scripts\python.exe scripts/baseline.py run --output artifacts/runs/my-new-baseline
+.\.venv\Scripts\python.exe scripts/rig_capture.py --output artifacts/runs/my-new-rig
+
+# 24 感測器先五幀測試；--probe-scene 1 可驗證 NPC 清理。
+.\.venv\Scripts\python.exe scripts/collect_dataset.py probe --output data/my-new-probe
+.\.venv\Scripts\python.exe scripts/collect_dataset.py collect --output data/my-new-pilot
+.\.venv\Scripts\python.exe scripts/validate_dataset.py data/my-new-pilot
+
+.\scripts\stop_carla.ps1
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
-退出碼：doctor 0=環境通過、2=依賴未就緒；smoke 0=實測通過、1=失敗。
-集中 verifier 將原始輸出保存為 `artifacts/reports/<run-id>-<stage>.log`，每階段最多 300 秒；只輸出精簡狀態。超時屬失敗，不能視為通過。
-`smoke` 140 個同步 tick、每 tick 0.05 秒：20 tick 煞車穩定、40 tick 油門 0.55、80 tick 全煞車。
-測量自車移動與煞停，保存 14 張 640×360 RGB、內外參、逐幀遙測、事件及 JSON 報告。
-門檻在 `configs/phase0_acceptance.json` 先固定，每次 run 複製並雜湊，不在看到結果後降低門檻。
+verify_phase0 等 RPC 後集中執行 doctor／smoke，各子程序最長 300 秒。14 張實際 RGB、140 幀遙測與原數值門檻均保存；額外 brake tick 只排空 readback，不改善驗收的最終車速。命令失敗時先看 run 報告，不繼續下一步。
 
-## 產物
+collect_dataset prepare 僅在建立新的版本化場景計畫時執行；已提交的 configs/dataset_scenes_v1.json 不覆寫。場景按幾何選定與分組，整個 scene 不跨 split；這不保證共用城鎮中的所有可見內容完全互斥。
 
-- `artifacts/reports/environment.json`：硬體、Python、CARLA API / RPC 與資源檢查。
-- `artifacts/reports/installation.json`：archive 來源、大小、SHA256、解壓結果。
-- `artifacts/reports/phase0-pipeline.json`：集中驗收結果。
-- `artifacts/runs/<id>/report.json`：通過與否、核心數據、錯誤與程式版本。
-- `sensors/front/`、`sensor_manifest.json`、`calibration.json`：影像與參數。
-- `evaluation/ego.jsonl`、`evaluation/collisions.json`：模擬器自車真值驗收資料；不是 AI 感知結果。
+## 資料與證據
 
-固定程序自行記錄，不需要 LLM 逐幀監看。完整研究方向、未完成項目與風險分別保存在 ROADMAP、ARCHITECTURE、EVALUATION、EXPERIMENTS、DECISIONS。
+- evidence/phase0/：環境、原生修正、歷史失敗及正式通過報告。
+- evidence/phase1/：五條規則路線結果，標記 simulator GT／BasicAgent。
+- evidence/phase2/：八鏡頭、資料 pilot 與獨立稽核結果。
+- data/town01-pilot-v1-epic/inputs/：RGB 與不含 GT 的輸入 manifest。
+- data/town01-pilot-v1-epic/calibration/：八方位 K 與相機至自車變換。
+- data/town01-pilot-v1-epic/labels/：GT 語意、深度、NPC 3D boxes、自車狀態與道路；正式推論禁止讀取。
+- data/town01-pilot-v1-epic/indexes/：train／validation／test 整群組清單；audit.json 與 image_inventory.jsonl 為磁碟檢查及逐圖 hash。
+
+語意 PNG 紅色通道存原始 class ID；深度 PNG 保留 CARLA 24-bit packed RGB，不能當普通灰階。公式與依據保存於 encoding.json。3D boxes 包含不可見／遮擋 NPC，尚未建立逐相機可見度標籤。
+
+大型模擬器、影像、logs、環境與權重不進 Git。4320 PNG 是小型管線資料，尚缺長序列、移動自車、多城鎮、行人與兩輪車。所有工作僅限模擬研究。
+
+Low 版本保留在 data/town01-pilot-v1b；其完整性通過，但抽樣雨天有黑天空與明顯雜訊。固定場景 Epic 對照改善後，另收目前 Epic 版本；兩者都不是完整研究資料集。

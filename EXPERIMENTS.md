@@ -70,3 +70,50 @@
 - 批次切換下一案時，Windows 終止程序後的埠釋放競態使防護中止；因此 v1 第二、三案**沒有執行**。
 - 修正 runner 在停止自己啟動的程序樹後，等待埠確實關閉再啟動下一案。
 - 新 v2 先沿用 working map lifecycle，只增加 5 個有記錄的 sensor startup warmup ticks，之後仍要求 image.frame 等於 world.tick；不是容許錯配或跳過正式驗收。
+
+## DEBUG-003 — 多版本有限診斷與真正等待點
+
+- 使用者要求繼續嘗試後，v1–v12 的獨立 server 實驗、原始結果及雜湊集中於 evidence/phase0/diagnostic-matrix-results.json；每案有期限、設定讀回及清理，不重寫失敗狀態。
+- 載入流程、不同官方 CPython 3.12／3.11、callback 所有權、緩衝、prefetch、節奏、on_tick queue、RHI／單執行緒／Vulkan 等隔離，沒有單獨解決原始停滯。啟動時指定 Town01 的 launcher 參數未生效，map readback 拒絕該案，不能當成 Town01 成功。
+- 輕量 dump、匹配 PDB／DIA enum 與官方 PixelReader source 定位到 StatsThread 的 GPU readback 等待。不是看著未解碼位址猜測；stack scan 與真正 instruction pointer 分開標示。
+- Normal enum 767 修正後，嚴格等待目前 frame 仍逾時；採用一 tick pipeline、將影像配回原始 snapshot 才通過三幀 probe。正式 protocol v2 在 140 幀測試前凍結，原數值門檻沒有降低。
+- 正式 normal 與 background 修正版均通過 140 幀與五條固定規則路線。重複載入已在 Town01 的地圖曾造成 Baseline preflight 失敗；修正為沿用並驗證 OpenDrive hash，未刪除失敗紀錄。
+- 0.9.15 備案下載在 6265982548 bytes 停滯後退出，沒有完成 server 測試；不宣稱降版有效。
+
+## RIG-001 — 八鏡頭與繪圖後端
+
+- normal／DX11 八鏡頭失敗；dump 顯示多個 normal workers 含 PixelReader wait candidates。背景池 enum 2815 保留 task priority，但 DX11 八鏡頭依然失敗。
+- 第二案 CrashContext 實際為 GPUCrash／D3D device lost 0x887A0020；不是憑 GPU 用量宣稱 OOM。
+- 修正後僅換 DX12：phase0-dx12-background-003 通過原門檻；rig-eight-003-dx12 通過 20 組／160 PNG、零時間戳誤差與完整清理。約 4.34 組／牆鐘秒，取樣 GPU 最高 2824MiB，不是即時 20Hz 或模型峰值顯存。
+- 最終 DX12 五路線回歸 phase1-baseline-004-dx12 為 5/5，無碰撞／跨線／off-driving-lane。仍為 simulator GT BasicAgent，號誌行為沒有刺激。
+
+## DATA-001 — 多模態資料與 NPC 清理
+
+- 六場景／rig／門檻在收集前凍結，先 24 感測器五幀 probe 通過。
+- 首次全場景在 scene-01 清理時程序退出，磁碟其實已寫完該案 30 組；NPC 五幀獨立重現以 faulthandler 證實 native abort 在 finally 的 world.apply_settings。兩次均記為失敗。
+- 修正為先取消 NPC autopilot 註冊，world 恢復前保持 TM 同步，才關閉 TM 同步；同一 NPC 五幀 probe 通過，之後 town01-pilot-v1b 六案均完整通過。
+- 共 180 組／4320 PNG，RGB 與 GT 深度／語意／3D／道路分存；630 筆 NPC box 標註，按原始 snapshot 複製，未混入未來 actor transform。
+- 獨立磁碟稽核 4320 PNG 的解壓／尺寸／CRC、逐圖 SHA256、每圖 frame／timestamp、K/T、GT 對齊與整群組 split 全通過。train／validation／test=90／30／60，群組交集 0，原點最小距離 164.88m。
+- 匯出 JSON 排版與原 config byte 格式不同；auditor 比對凍結來源檔 byte hash，並比對匯出 JSON 值，未修改感測器資料或門檻。audit-provenance.json 保存實際 auditor hash。
+- 新增資料邊界測試初次又遇到 sandbox 外部 tempdir 子資料夾權限；改用專案 artifacts/runs/test-temp，之後 13 項通過。保留此次失敗原因，不改產品門檻。
+
+## QUALITY-001 — 資料完整性與視覺品質分開
+
+- 從每個場景第一組抽八視角，共 48 張 RGB。亮度平均範圍 6.15–176.02，最暗夜雨畫面近黑像素約 59.91%；實際檢視看到 Low／DX12 雨天有黑天空與明顯雜訊。這些為觀測描述，不是事後設定的通過門檻。
+- 完整性通過不等於影像足以訓練。先凍結 render_quality_probe_v1.json，以同一雨天 scene-02／seed／rig 作 Epic 對照，不修改驅動或全域設定；新結果另記。
+- Pilot 停駐自車、每場景 1.5 秒、單一 NPC 車型、共享 Town01，且缺行人／兩輪車；完整 Phase 2 未通過，無模型／checkpoint／準確率宣稱。
+
+## QUALITY-002 — Epic 對照與最終 pilot
+
+- Epic 單鏡頭 Phase 0 原門檻通過；同一雨天／六 NPC／24 感測器 probe 通過。Shipping 命令列核對確實為 Epic，人工檢視天空／光照恢復；雨霧、反射與模糊仍存在。不宣稱圖像品質基準全面通過。
+- 新資料 town01-pilot-v1-epic 不覆寫 Low；六場景均通過，共 180 組／4320 PNG。source 08c718d；新 auditor 4a4dd8b。
+- Epic auditor 92.875 秒完成，4320 PNG、約 677.4MB、CRC 錯誤 0、同步誤差 0；train／validation／test 90／30／60，群組交集 0。K／T 數值符合凍結 FOV 與安裝幾何，630 筆 NPC box GT。
+- Epic 48 張探索性 RGB 樣本平均值範圍 14.92–167.10、最大近黑比例約 49.49%；不是事後制定的品質閾值，也不是模型效能。
+- phase1-baseline-005-epic 最終回歸 5/5，無碰撞／跨線／off-driving-lane。模擬器已關閉，未啟動模型訓練。
+- Background native patch 實際 restore／reapply，前後精確為 b0370d6d...；原檔 ba05ec36... 保留。14 項單元測試通過。
+
+## REGRESSION-001 — 同 server 重跑
+
+- source c853f10；smoke 改為僅地圖不同時 load，保存 map_lifecycle，未更動 protocol／門檻。
+- 同一 server 的 005a 初次 load 與 005b reuse，兩次 doctor／140 幀 smoke 均通過。測後關閉自有 server；14 項單元測試再次通過並保存 log。
+- 已核對完整路徑及原始失敗下載大小後，刪除唯一未完成的 0.9.15 archive cache（約 6.27GB）；0.9.16 完整 ZIP、stock 備份及失敗紀錄仍保留。

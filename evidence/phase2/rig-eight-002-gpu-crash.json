@@ -1,0 +1,9 @@
+{
+  "ProcessId": "3372",
+  "CrashType": "GPUCrash",
+  "ErrorMessage": "LowLevelFatalError [File:Unknown] [Line: 198] \nUnreal Engine is exiting due to D3D device being lost. (Error: 0x887A0020 - 'INTERNAL_ERROR')\n\n\n",
+  "SecondsSinceStart": "18",
+  "bIsOOM": null,
+  "source_sha256": "1b481307a5594728acd2753d5c6b14e2787e7e6ea0b3c87b7a0b951f107dcf8b",
+  "note": "Exact PID matches the project-owned DX11 background worker eight-camera run. GPU device lost is not evidence of VRAM OOM."
+}

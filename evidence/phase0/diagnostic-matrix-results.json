@@ -1,0 +1,316 @@
+[
+  {
+    "run": "landscape-v1",
+    "cases": [
+      {
+        "id": "load-once-low",
+        "status": "failed",
+        "exit_code": 1,
+        "stage": "rgb_capture",
+        "rgb_frames": 0,
+        "errors": [
+          "TimeoutError: Camera timeout at frame 57"
+        ],
+        "launcher_exit_code": 1
+      }
+    ],
+    "summary_sha256": "ef128c2853f21600046b3c1a8f27b833a5cebd85cba19e2f68f7553ea3296dd8"
+  },
+  {
+    "run": "landscape-v2",
+    "cases": [
+      {
+        "id": "load-once-low-warmup",
+        "status": "failed",
+        "exit_code": 1,
+        "stage": "rgb_capture",
+        "rgb_frames": 0,
+        "errors": [
+          "TimeoutError: Camera timeout at frame 63"
+        ],
+        "launcher_exit_code": 1
+      },
+      {
+        "id": "direct-map-low-warmup",
+        "status": "failed",
+        "exit_code": 1,
+        "stage": "connect",
+        "rgb_frames": 0,
+        "errors": [
+          "RuntimeError: Requested Town01 but server loaded another map"
+        ],
+        "launcher_exit_code": 1
+      },
+      {
+        "id": "reload-epic-warmup",
+        "status": "failed",
+        "exit_code": 1,
+        "stage": "rgb_capture",
+        "rgb_frames": 0,
+        "errors": [
+          "TimeoutError: Camera timeout at frame 63"
+        ],
+        "launcher_exit_code": 1
+      }
+    ],
+    "summary_sha256": "f03fc11aaff7fe3d834875d1b89f014071b62b3c6b22d89fc806e4befa4852a3"
+  },
+  {
+    "run": "landscape-v3",
+    "cases": [
+      {
+        "id": "every-tick-offscreen",
+        "status": "failed",
+        "exit_code": 1,
+        "stage": "rgb_capture",
+        "rgb_frames": 0,
+        "errors": [
+          "TimeoutError: Camera timeout at frame 62",
+          "cleanup: Cannot destroy actor 198",
+          "cleanup: Cannot destroy actor 197",
+          "restore: time-out of 2000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000"
+        ],
+        "callback_count": 5,
+        "launcher_exit_code": 1
+      },
+      {
+        "id": "every-tick-windowed",
+        "status": "failed",
+        "exit_code": 1,
+        "stage": "rgb_capture",
+        "rgb_frames": 0,
+        "errors": [
+          "TimeoutError: Camera timeout at frame 67",
+          "cleanup: Cannot destroy actor 198",
+          "cleanup: Cannot destroy actor 197",
+          "restore: time-out of 2000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000"
+        ],
+        "callback_count": 5,
+        "launcher_exit_code": 1
+      }
+    ],
+    "summary_sha256": "561ad76caf724f0581048d5e96ea493fca1c4714c465904aafd97911dbc6b4a9"
+  },
+  {
+    "run": "landscape-v4",
+    "cases": [
+      {
+        "id": "frame-join-prefetch-1",
+        "status": "failed",
+        "exit_code": 1,
+        "stage": "rgb_capture",
+        "rgb_frames": 0,
+        "errors": [
+          "RuntimeError: time-out of 5000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000",
+          "cleanup: Cannot destroy actor 198",
+          "cleanup: Cannot destroy actor 197",
+          "restore: time-out of 2000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000"
+        ],
+        "callback_count": 5,
+        "launcher_exit_code": 1
+      },
+      {
+        "id": "frame-join-prefetch-2",
+        "status": "failed",
+        "exit_code": 1,
+        "stage": "rgb_capture",
+        "rgb_frames": 0,
+        "errors": [
+          "RuntimeError: time-out of 5000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000",
+          "cleanup: Cannot destroy actor 198",
+          "cleanup: Cannot destroy actor 197",
+          "restore: time-out of 2000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000"
+        ],
+        "callback_count": 5,
+        "launcher_exit_code": 1
+      }
+    ],
+    "summary_sha256": "3d7f605545e4f968b23110b6da7d3f756592455e1ba55726278ff6a0a30b15b2"
+  },
+  {
+    "run": "landscape-v5",
+    "cases": [
+      {
+        "id": "paced-every-tick",
+        "status": "failed",
+        "exit_code": 1,
+        "stage": "rgb_capture",
+        "rgb_frames": 0,
+        "errors": [
+          "TimeoutError: Camera timeout at frame 62",
+          "cleanup: Cannot destroy actor 198",
+          "cleanup: Cannot destroy actor 197",
+          "restore: time-out of 2000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000"
+        ],
+        "callback_count": 5,
+        "launcher_exit_code": 1
+      }
+    ],
+    "summary_sha256": "e4e9c67d96530f43414427c5edf3c09f32e75f27e5430c90ce124d1c2826ff40"
+  },
+  {
+    "run": "landscape-v6",
+    "cases": [
+      {
+        "id": "reference-snapshot-queue",
+        "status": "failed",
+        "exit_code": 1,
+        "stage": "rgb_capture",
+        "rgb_frames": 0,
+        "errors": [
+          "TimeoutError: Camera timeout at frame 63",
+          "cleanup: Cannot destroy actor 198",
+          "cleanup: Cannot destroy actor 197",
+          "restore: time-out of 2000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000"
+        ],
+        "callback_count": 5,
+        "launcher_exit_code": 1
+      }
+    ],
+    "summary_sha256": "4376286551eecd4f5499bf71e3716cfc24762f39408f02d01d16a7a7ffc56dac"
+  },
+  {
+    "run": "landscape-v7",
+    "cases": [
+      {
+        "id": "buffered-frame-audit",
+        "status": "failed",
+        "exit_code": 1,
+        "stage": "buffered_tick_production",
+        "rgb_frames": 0,
+        "errors": [
+          "RuntimeError: time-out of 5000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000",
+          "cleanup: Cannot destroy actor 198",
+          "cleanup: Cannot destroy actor 197",
+          "restore: time-out of 2000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000"
+        ],
+        "callback_count": 5,
+        "launcher_exit_code": 1
+      }
+    ],
+    "summary_sha256": "8b62000f2f1b149d3df5627568756acf6dbcc09e2b1c9f5614c8cd4a464fa796"
+  },
+  {
+    "run": "landscape-v8",
+    "cases": [
+      {
+        "id": "no-rhi-thread",
+        "status": "failed",
+        "exit_code": 1,
+        "stage": "rgb_capture",
+        "rgb_frames": 0,
+        "errors": [
+          "TimeoutError: Camera timeout at frame 62",
+          "cleanup: Cannot destroy actor 198",
+          "cleanup: Cannot destroy actor 197",
+          "restore: time-out of 2000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000"
+        ],
+        "callback_count": 5,
+        "launcher_exit_code": 1
+      },
+      {
+        "id": "single-thread",
+        "status": "failed",
+        "exit_code": 1,
+        "stage": "rgb_capture",
+        "rgb_frames": 0,
+        "errors": [
+          "RuntimeError: time-out of 5000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000",
+          "cleanup: Cannot destroy actor 198",
+          "cleanup: Cannot destroy actor 197",
+          "restore: time-out of 2000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000"
+        ],
+        "callback_count": 4,
+        "launcher_exit_code": 1
+      },
+      {
+        "id": "vulkan-backend",
+        "status": "failed",
+        "error": "RuntimeError: Server startup deadline or early exit",
+        "launcher_exit_code": 3
+      }
+    ],
+    "summary_sha256": "d89bdf49a3135d466e41ead613889048ec4045d33cc6984b2c62d99744e8efc0"
+  },
+  {
+    "run": "landscape-v9",
+    "cases": [
+      {
+        "id": "async-fixed-step-camera",
+        "status": "failed",
+        "exit_code": 1,
+        "stage": "rgb_capture",
+        "rgb_frames": 0,
+        "errors": [
+          "RuntimeError: time-out of 5000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000",
+          "cleanup: Cannot destroy actor 198",
+          "cleanup: Cannot destroy actor 197",
+          "restore: time-out of 2000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000"
+        ],
+        "callback_count": 5,
+        "launcher_exit_code": 1
+      }
+    ],
+    "summary_sha256": "f5e83e95e3373063bcc153d8fa8afa6e2b025fb69bd761e3c4bec94267afbaf4"
+  },
+  {
+    "run": "landscape-v10",
+    "cases": [
+      {
+        "id": "owned-image-payload",
+        "status": "failed",
+        "exit_code": 1,
+        "stage": "rgb_capture",
+        "rgb_frames": 0,
+        "errors": [
+          "TimeoutError: Camera timeout at frame 61",
+          "cleanup: Cannot destroy actor 198",
+          "cleanup: Cannot destroy actor 197",
+          "restore: time-out of 2000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000"
+        ],
+        "callback_count": 5,
+        "launcher_exit_code": 1
+      }
+    ],
+    "summary_sha256": "6e60082ff723ee82dcd2fb348542c6ab323a7449edadad4fb5fd173cc51672f2"
+  },
+  {
+    "run": "landscape-v11",
+    "cases": [
+      {
+        "id": "native-stall-dump",
+        "status": "failed",
+        "exit_code": 1,
+        "stage": "rgb_capture",
+        "rgb_frames": 0,
+        "errors": [
+          "TimeoutError: Camera timeout at frame 62",
+          "cleanup: Cannot destroy actor 198",
+          "cleanup: Cannot destroy actor 197",
+          "restore: time-out of 2000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000"
+        ],
+        "callback_count": 5,
+        "launcher_exit_code": 1
+      }
+    ],
+    "summary_sha256": "c8453d360494c3b3a8f84049c2fa17c8621f6c9553acb8907fa0b02be9709bec"
+  },
+  {
+    "run": "landscape-v12",
+    "cases": [
+      {
+        "id": "pixel-reader-any-thread",
+        "status": "failed",
+        "exit_code": 1,
+        "stage": "rgb_capture",
+        "rgb_frames": 0,
+        "errors": [
+          "TimeoutError: Camera timeout at frame 63"
+        ],
+        "callback_count": 5,
+        "launcher_exit_code": 1
+      }
+    ],
+    "summary_sha256": "debc4a9c6666ca1bb2cac75e7f762496a1df981bfde63f159ba4fdcdfc0e30cc"
+  }
+]

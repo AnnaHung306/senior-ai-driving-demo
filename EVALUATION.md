@@ -1,13 +1,41 @@
 # 驗收方式與結果
 
-## 最新結果 — Phase 0 v2 通過
+## 最新結果 — Phase 0、初始 Baseline 與資料管線 pilot
+
+最終使用本地 background 排程修正的 CARLA 0.9.16 + DX12。
+
+目前預設 **DX12／Epic**：phase0-dx12-epic-004 原門檻通過（140 幀、14 PNG、位移 6.3031m、峰速 5.1616m/s、最終 0、時間戳誤差 0、碰撞 0）；phase1-baseline-005-epic 五路線 5/5。相同場景／rig／seed／門檻另收 `data/town01-pilot-v1-epic`，六案各 30 組、共 4320 PNG 完整收集；其磁碟稽核另存該目錄 audit.json 與 evidence/phase2/dataset-pilot-epic-audit.json，不和下表的 Low 數值混用。
+
+Low 雨天抽樣有黑天空與明顯雜訊；固定場景 Epic 五幀／24 感測器／六 NPC 通過，人工對照看到灰色天空與光照恢復，仍有雨霧／反射／模糊。這支持畫質設定影響部分現象，沒有宣稱所有渲染品質問題均已解決。Low 與 Epic 各抽 48 RGB 的探索性 profile 分別保存，不設定事後畫質通過門檻。Epic probe 後總 GPU 取樣 3382MiB，不是峰值。
+
+下表是先前 **DX12／Low** 的完整性與速度測量，保留作比較；最新單元測試為 14 項，另加入錯誤焦距／反向外參拒絕。Epic auditor 也逐相機檢查 K／T 數值與凍結 rig 的 FOV／安裝位置一致。
+
+| 實測 | 結果與範圍 | 證據 |
+|---|---|---|
+| Phase 0 v2 | 140 幀、14 PNG、位移 7.6264m、峰速 5.1616m/s、最終 0、碰撞 0、時間戳誤差 0、清理成功 | evidence/phase0/dx12-background-acceptance.json |
+| Phase 1 初始規則 Baseline | 預先固定的五條 40m 路線 5/5；碰撞／跨線／off-driving-lane 均 0，終速均 ≤0.2m/s；晴天無 NPC、非路口，號誌未刺激 | evidence/phase1/baseline-004-dx12.json |
+| 八 RGB rig | 20 完整組、160 PNG、時間戳誤差 0、清理成功；約 4.34 組／牆鐘秒，平均提交延遲 212.5ms、最大 281ms | evidence/phase2/rig-eight-003-dx12.json |
+| 24 感測器資料 pilot | 六場景各 30 組，共 180 組／4320 PNG；RGB、原始語意 ID、24-bit 深度、NPC 3D GT、道路 GT、K/T | evidence/phase2/dataset-pilot-v1b.json |
+| 獨立磁碟稽核 | 全 4320 PNG 解壓、尺寸／CRC／逐圖 SHA256、全部 manifest 同幀與標籤配對通過；PNG CRC 錯誤 0；約 683.7MB 影像 | evidence/phase2/dataset-pilot-v1b-audit.json |
+| 群組切分 | train 90、validation 30、test 60 組；scene group 交集 0；原點最小間距 164.88m | 同上 |
+| 單元測試 | 13 項通過；含原生 callback 資料所有權、同步、PNG 編碼、GT 輸入拒絕、路徑隔離、NaN、群組洩漏與 depth channel 次序 | tests/ |
+
+八 RGB rig 每五組取樣的全 GPU 用量最高 2824MiB；並非連續量測峰值，也不是模型 VRAM。20Hz 是模擬 fixed timestep，不是實時處理速度。
+
+Pilot 只有六個共享 Town01 的停駐自車場景，各 1.5 模擬秒；天氣含晴／夜／雨，NPC 為 0／3／6 輛單一車型。共 630 筆 NPC 3D box 標註，包含不可見／遮擋物件，未做逐相機可見度過濾。語意共有 19 種實際出現的 class IDs；沒有行人、騎士、兩輪車或大型車類別樣本。群組不交集與原點分離不等於所有可見內容完全互斥，更不等於 unseen-town 評估。**完整 Phase 2 尚未通過，不開始宣稱模型品質。**
+
+八鏡頭 DX11 兩次失敗均保留；第二次確認 GPUCrash／D3D device lost 0x887A0020，沒有將它誤稱 OOM。NPC 資料清理的兩次 native abort 亦保留，經有紀錄的順序修正後 probe 與六場景正式收集通過。
+
+最終重跑回歸：同一 DX12／Epic server 的 005a 初次載入、005b 沿用 Town01，兩次 doctor／140 幀原門檻均通過，見 evidence/phase0/repeated-map-regression.json。
+
+## 歷史結果 — 首次 Phase 0 v2 通過
 
 `phase0-native-fixed-001`：140 影格、14 PNG，位移 6.3031m、峰速 5.1616m/s、最終 0m/s、最大時間戳誤差 0s、碰撞 0、清理成功，全部門檻通過。
 doctor 同時通過。來源程式 `33a4aa2`；數值門檻 SHA256 仍為下方原值，沒有降低。
 使用 **本地修正的 CARLA 0.9.16**，不是未修改的官方 binary。Patch hash / 原檔備份 / source diff 見 D005。
 v2 protocol 在正式測試前保存為 `configs/phase0_protocol_v2.json`：地圖 preroll、sensor warmup、每 tick RGB，以及一個 tick 的 readback pipeline。
 影像必須配對其原本 snapshot；額外最後一個全煞車 tick 只排空 GPU pipeline，不能用來改善量測到的最終車速。
-原 v1 的失敗仍是失敗，不回寫為通過。Phase 1 路線與數值門檻已凍結，尚待測試。
+原 v1 的失敗仍是失敗，不回寫為通過。後續 Phase 1 與資料 pilot 結果見本檔頂部。
 
 ## Phase 0，protocol v1（實機測試前凍結）
 

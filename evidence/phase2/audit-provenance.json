@@ -1,0 +1,15 @@
+{
+  "audit_script_sha256": "5e23e6ff1294839d69311543e79c99c6b12c1996df0172ed16e05560abde5b54",
+  "audit_script_base_git_revision": "84a9c49",
+  "audit_script_modified_before_execution": true,
+  "note": "Auditor verifies frozen source byte hashes plus JSON values of exported configs, whose serialization can differ. This adjustment preceded the audit; sensor data and gates were unchanged.",
+  "native_binary_sha256": "b0370d6dcd57b95299d12005cebad1dc6187804e83aeb51a184ccbc4b581fea8",
+  "validated_scope": [
+    "Phase 0 v2 DX12",
+    "five frozen rules routes DX12",
+    "eight RGB rig DX12",
+    "24 sensor six-scene pilot DX12"
+  ],
+  "dx11_eight_camera_status": "failed GPUCrash; not accepted",
+  "server_stopped_after_tests": true
+}

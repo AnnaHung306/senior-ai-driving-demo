@@ -1,0 +1,181 @@
+{
+  "task": "phase1-rules-baseline",
+  "status": "passed",
+  "ai_model": null,
+  "started_utc": "2026-10-16T05:31:32.597343+00:00",
+  "routes": [
+    {
+      "id": "town01-road-4-lane-1",
+      "status": "passed",
+      "provenance": "carla_basic_agent_rules_with_simulator_gt",
+      "errors": [],
+      "checks": {
+        "arrival": true,
+        "agent_done": true,
+        "collision_free": true,
+        "lane_invasion_free": true,
+        "on_driving_lane": true,
+        "within_time": true,
+        "cleanup": true
+      },
+      "metrics": {
+        "goal_distance_m": 1.4759236574172974,
+        "final_speed_mps": 0.19690865166694135,
+        "simulation_seconds": 10.25,
+        "path_length_m": 38.531757060904056,
+        "collisions": 0,
+        "lane_invasion_events": 0,
+        "off_driving_lane_ticks": 0,
+        "max_lane_center_error_m": 0.24664311360616215
+      },
+      "seed": 42,
+      "traffic_compliance": "not_exercised",
+      "events": {
+        "collisions": [],
+        "lane_invasions": []
+      },
+      "wall_seconds": 0.6720000000004802
+    },
+    {
+      "id": "town01-road-10-lane-1",
+      "status": "passed",
+      "provenance": "carla_basic_agent_rules_with_simulator_gt",
+      "errors": [],
+      "checks": {
+        "arrival": true,
+        "agent_done": true,
+        "collision_free": true,
+        "lane_invasion_free": true,
+        "on_driving_lane": true,
+        "within_time": true,
+        "cleanup": true
+      },
+      "metrics": {
+        "goal_distance_m": 2.9042367935180664,
+        "final_speed_mps": 1.2838468576329135e-05,
+        "simulation_seconds": 9.950000000000001,
+        "path_length_m": 37.11105398146901,
+        "collisions": 0,
+        "lane_invasion_events": 0,
+        "off_driving_lane_ticks": 0,
+        "max_lane_center_error_m": 0.3654670766298186
+      },
+      "seed": 42,
+      "traffic_compliance": "not_exercised",
+      "events": {
+        "collisions": [],
+        "lane_invasions": []
+      },
+      "wall_seconds": 0.7659999999996217
+    },
+    {
+      "id": "town01-road-12-lane-1",
+      "status": "passed",
+      "provenance": "carla_basic_agent_rules_with_simulator_gt",
+      "errors": [],
+      "checks": {
+        "arrival": true,
+        "agent_done": true,
+        "collision_free": true,
+        "lane_invasion_free": true,
+        "on_driving_lane": true,
+        "within_time": true,
+        "cleanup": true
+      },
+      "metrics": {
+        "goal_distance_m": 1.7444168329238892,
+        "final_speed_mps": 0.19846758891180102,
+        "simulation_seconds": 10.200000000000001,
+        "path_length_m": 38.279488613363355,
+        "collisions": 0,
+        "lane_invasion_events": 0,
+        "off_driving_lane_ticks": 0,
+        "max_lane_center_error_m": 0.4136962901881115
+      },
+      "seed": 42,
+      "traffic_compliance": "not_exercised",
+      "events": {
+        "collisions": [],
+        "lane_invasions": []
+      },
+      "wall_seconds": 0.7180000000007567
+    },
+    {
+      "id": "town01-road-24-lane--1",
+      "status": "passed",
+      "provenance": "carla_basic_agent_rules_with_simulator_gt",
+      "errors": [],
+      "checks": {
+        "arrival": true,
+        "agent_done": true,
+        "collision_free": true,
+        "lane_invasion_free": true,
+        "on_driving_lane": true,
+        "within_time": true,
+        "cleanup": true
+      },
+      "metrics": {
+        "goal_distance_m": 1.6778582334518433,
+        "final_speed_mps": 0.19846732428601885,
+        "simulation_seconds": 10.200000000000001,
+        "path_length_m": 38.32800179219339,
+        "collisions": 0,
+        "lane_invasion_events": 0,
+        "off_driving_lane_ticks": 0,
+        "max_lane_center_error_m": 0.21548462130162047
+      },
+      "seed": 42,
+      "traffic_compliance": "not_exercised",
+      "events": {
+        "collisions": [],
+        "lane_invasions": []
+      },
+      "wall_seconds": 0.75
+    },
+    {
+      "id": "town01-road-6-lane--1",
+      "status": "passed",
+      "provenance": "carla_basic_agent_rules_with_simulator_gt",
+      "errors": [],
+      "checks": {
+        "arrival": true,
+        "agent_done": true,
+        "collision_free": true,
+        "lane_invasion_free": true,
+        "on_driving_lane": true,
+        "within_time": true,
+        "cleanup": true
+      },
+      "metrics": {
+        "goal_distance_m": 2.493699073791504,
+        "final_speed_mps": 0.19846739638563743,
+        "simulation_seconds": 10.0,
+        "path_length_m": 37.50934644998051,
+        "collisions": 0,
+        "lane_invasion_events": 0,
+        "off_driving_lane_ticks": 0,
+        "max_lane_center_error_m": 0.1342189323651093
+      },
+      "seed": 42,
+      "traffic_compliance": "not_exercised",
+      "events": {
+        "collisions": [],
+        "lane_invasions": []
+      },
+      "wall_seconds": 0.75
+    }
+  ],
+  "criteria_sha256": "8c134088fdf5a1573c3327e31ed235bef2160d2523b731492f28aaea2ddebb79",
+  "scenarios_sha256": "c0f8ceb13ea3b94146ef62e4fe43bcaa5bf6d630aa4b3ac98e917715ebcae88c",
+  "dependencies": {
+    "carla": "0.9.16",
+    "numpy": "2.3.5",
+    "networkx": "3.5",
+    "shapely": "2.1.2"
+  },
+  "agent_sha256": "298d7d7b8d89925b51300179932c18e6a066ab5c3e95708453f7fa020b136ea1",
+  "server_binary_sha256": "b0370d6dcd57b95299d12005cebad1dc6187804e83aeb51a184ccbc4b581fea8",
+  "git_revision": "84a9c49ab369d1461079b2fb467d68d95bc384f5",
+  "completed_routes": 5,
+  "completion_rate": 1.0
+}

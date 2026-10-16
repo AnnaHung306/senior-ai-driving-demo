@@ -1,0 +1,62 @@
+{
+  "task": "dataset-probe",
+  "status": "passed",
+  "scope": "Small stationary-ego pipeline pilot, not sufficient training diversity or full Phase 2 acceptance. Six spatially separated scene groups; RGB inputs isolated from simulator GT semantic/depth/3D/road labels. No model, inference, perception quality, long driving episode or real-world claim.",
+  "scenes": [
+    {
+      "scene_id": "scene-00",
+      "split": "train",
+      "status": "passed",
+      "errors": [],
+      "bundles": 5,
+      "images": 120,
+      "max_timestamp_error_s": 0.0,
+      "requested_npcs": 0,
+      "spawned_npcs": 0,
+      "semantic_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        20,
+        21,
+        24,
+        26,
+        28
+      ],
+      "depth_min_m": 2.5678874592713985,
+      "depth_max_m": 1000.0,
+      "stage": "capture",
+      "checks": {
+        "complete_bundles": true,
+        "complete_images": true,
+        "traffic_density": true,
+        "semantic_signal": true,
+        "valid_depth_range": true,
+        "cleanup": true
+      },
+      "wall_s": 2.688000000000102
+    }
+  ],
+  "ai_model": null,
+  "plan_sha256": "ba79e6ffd887589be4461bc53bd83128f5e4f516a8c65cf400528c6a04087c71",
+  "criteria_sha256": "72b01e3616c20d3da5e67f7726dc00ad3a12d898ee6662c38aaaf7f198cb0fd4",
+  "rig_sha256": "df872f550458d9e284927b8bf1ccac8def4851fb7ff7e02a9a0f838aac537f10",
+  "git_revision": "9c5f2b1db735bdd6e9e4bfc3eb2dd31b2d7cf9ed",
+  "server_launch": {
+    "launcher_pid": 22536,
+    "graphics_api": "dx12",
+    "server_binary_sha256": "b0370d6dcd57b95299d12005cebad1dc6187804e83aeb51a184ccbc4b581fea8",
+    "port": 2000,
+    "executable": "C:\\code\\senior_AI\\artifacts\\carla\\CarlaUE4.exe"
+  },
+  "total_bundles": 5,
+  "total_images": 120
+}

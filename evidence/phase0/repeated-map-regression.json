@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "same_server": true,
+  "runs": [
+    {
+      "run": "phase0-map-reuse-005a",
+      "status": "passed",
+      "map_lifecycle": "loaded_map_once",
+      "metrics": {
+        "distance_m": 6.30310059410974,
+        "max_speed_mps": 5.161573496097732,
+        "final_speed_mps": 0.0,
+        "saved_images": 14,
+        "max_timestamp_error_s": 0.0,
+        "observed_frames": 140,
+        "collision_count": 0,
+        "cleanup_ok": true
+      }
+    },
+    {
+      "run": "phase0-map-reuse-005b",
+      "status": "passed",
+      "map_lifecycle": "reused_existing_map",
+      "metrics": {
+        "distance_m": 6.30310059410974,
+        "max_speed_mps": 5.161573496097732,
+        "final_speed_mps": 0.0,
+        "saved_images": 14,
+        "max_timestamp_error_s": 0.0,
+        "observed_frames": 140,
+        "collision_count": 0,
+        "cleanup_ok": true
+      }
+    }
+  ]
+}

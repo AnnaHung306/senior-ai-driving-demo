@@ -1,0 +1,74 @@
+{
+  "task": "dataset-on-disk-audit",
+  "status": "passed",
+  "bundles_by_scene": {
+    "scene-00": 30,
+    "scene-01": 30,
+    "scene-02": 30,
+    "scene-03": 30,
+    "scene-04": 30,
+    "scene-05": 30
+  },
+  "split_bundles": {
+    "train": 90,
+    "validation": 30,
+    "test": 60
+  },
+  "scene_groups": {
+    "train": [
+      "town01-road-11",
+      "town01-road-24",
+      "town01-road-8"
+    ],
+    "validation": [
+      "town01-road-3"
+    ],
+    "test": [
+      "town01-road-10",
+      "town01-road-6"
+    ]
+  },
+  "scene_group_overlap": 0,
+  "min_scene_origin_separation_m": 164.88054171388362,
+  "checked_pngs": 4320,
+  "png_crc_errors": 0,
+  "image_bytes": 683667034,
+  "max_timestamp_error_s": 0.0,
+  "semantic_pixel_counts": {
+    "1": 61793153,
+    "2": 47212722,
+    "3": 47424716,
+    "4": 1685501,
+    "5": 8761963,
+    "6": 2258017,
+    "7": 25087,
+    "8": 50784,
+    "9": 60617030,
+    "10": 23129272,
+    "11": 69105471,
+    "14": 3295435,
+    "20": 2352862,
+    "21": 1092813,
+    "22": 155,
+    "23": 387729,
+    "24": 397379,
+    "26": 44461,
+    "28": 2141450
+  },
+  "depth_min_m": 1.5296936946924742,
+  "depth_max_m": 1000.0,
+  "box_annotations_by_blueprint": {
+    "vehicle.lincoln.mkz_2020": 630
+  },
+  "inventory_sha256": "9c90b38248c9ef2b7e55a09ee4c7f67dce203b8e9ae8bc1abe071c5fdb1f84c7",
+  "scope": "Small stationary-ego pipeline pilot, not sufficient training diversity or full Phase 2 acceptance. Six spatially separated scene groups; RGB inputs isolated from simulator GT semantic/depth/3D/road labels. No model, inference, perception quality, long driving episode or real-world claim.",
+  "ai_model": null,
+  "limitations": [
+    "Stationary ego and 1.5 simulation seconds per scene",
+    "Only six groups in one shared town",
+    "NPC vehicles are one blueprint; no pedestrians/bicycles/motorcycles collected",
+    "Origin separation/group disjointness do not guarantee zero visual content overlap",
+    "3D boxes are GT and include occluded/out-of-view actors",
+    "No trained perception or model quality metric"
+  ]
+}

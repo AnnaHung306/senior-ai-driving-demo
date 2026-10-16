@@ -1,0 +1,7 @@
+{
+  "status": "failed",
+  "observed_process_exit_code": 1,
+  "completed_scenes_in_summary": 1,
+  "scene_01_written_feature_frames": 30,
+  "note": "The run did not return a final summary. Later five-frame NPC reproduction aborted with faulthandler at world.apply_settings in cleanup. These incomplete runs are not accepted or relabeled as passed."
+}

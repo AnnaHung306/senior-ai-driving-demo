@@ -1,0 +1,13 @@
+{
+  "task": "rain-quality-diagnostic",
+  "status": "probe_passed",
+  "scene": "scene-02",
+  "weather": "HardRainNoon",
+  "reference": "data/town01-pilot-v1b/inputs/rgb/scene-02/front/00125940.png",
+  "candidate": "data/pilot-quality-epic-001/inputs/rgb/scene-02/front/00004766.png",
+  "observations": "Low shows a black sky and strong grain/specular patterns. Epic restores a gray sky/lighting; rain blur and reflections remain. Manual observation supports a quality-setting contribution, not a proof of all renderer correctness.",
+  "candidate_shipping_command_line": "CarlaUE4 -dx12 -RenderOffScreen -quality-level=Epic -carla-rpc-port=2000 -nosound -unattended",
+  "post_probe_total_gpu_used_mib": 3382,
+  "gpu_sample_is_peak": false,
+  "scope": "One frozen scene comparison, not a perception or image-quality benchmark; pilot group splits unchanged."
+}

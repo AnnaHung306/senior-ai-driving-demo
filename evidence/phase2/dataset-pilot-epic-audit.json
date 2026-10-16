@@ -1,0 +1,77 @@
+{
+  "task": "dataset-on-disk-audit",
+  "status": "passed",
+  "bundles_by_scene": {
+    "scene-00": 30,
+    "scene-01": 30,
+    "scene-02": 30,
+    "scene-03": 30,
+    "scene-04": 30,
+    "scene-05": 30
+  },
+  "auditor_sha256": "fb869a01224680ee01305d1a4f550bb1824c559305953ed129ff166d0a0b975b",
+  "auditor_git_revision": "4a4dd8be92a0a2f778da6083ac77d3d8b71d3fb6",
+  "wall_s": 92.875,
+  "split_bundles": {
+    "train": 90,
+    "validation": 30,
+    "test": 60
+  },
+  "scene_groups": {
+    "train": [
+      "town01-road-11",
+      "town01-road-24",
+      "town01-road-8"
+    ],
+    "validation": [
+      "town01-road-3"
+    ],
+    "test": [
+      "town01-road-10",
+      "town01-road-6"
+    ]
+  },
+  "scene_group_overlap": 0,
+  "min_scene_origin_separation_m": 164.88054171388362,
+  "checked_pngs": 4320,
+  "png_crc_errors": 0,
+  "image_bytes": 677433409,
+  "max_timestamp_error_s": 0.0,
+  "semantic_pixel_counts": {
+    "1": 61797130,
+    "2": 47229210,
+    "3": 47427538,
+    "4": 1685671,
+    "5": 8762415,
+    "6": 2258271,
+    "7": 25092,
+    "8": 50784,
+    "9": 60587063,
+    "10": 23130991,
+    "11": 69114688,
+    "14": 3295421,
+    "20": 2352483,
+    "21": 1092804,
+    "22": 155,
+    "23": 387942,
+    "24": 392428,
+    "26": 44464,
+    "28": 2141450
+  },
+  "depth_min_m": 1.5298725086374585,
+  "depth_max_m": 1000.0,
+  "box_annotations_by_blueprint": {
+    "vehicle.lincoln.mkz_2020": 630
+  },
+  "inventory_sha256": "5994667e46f1d4730ee6b94a6631c72143adc5dd8e45c9c8ff5f4397d1903b24",
+  "scope": "Small stationary-ego pipeline pilot, not sufficient training diversity or full Phase 2 acceptance. Six spatially separated scene groups; RGB inputs isolated from simulator GT semantic/depth/3D/road labels. No model, inference, perception quality, long driving episode or real-world claim.",
+  "ai_model": null,
+  "limitations": [
+    "Stationary ego and 1.5 simulation seconds per scene",
+    "Only six groups in one shared town",
+    "NPC vehicles are one blueprint; no pedestrians/bicycles/motorcycles collected",
+    "Origin separation/group disjointness do not guarantee zero visual content overlap",
+    "3D boxes are GT and include occluded/out-of-view actors",
+    "No trained perception or model quality metric"
+  ]
+}

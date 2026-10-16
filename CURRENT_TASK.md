@@ -1,25 +1,31 @@
 # 目前任務
 
-更新：2026-10-16（Asia/Taipei）。
+更新：2026-10-16（Asia/Taipei）。原始長期需求完整保存在 PROJECT_SPEC.md。
 
-任務：Phase 0 — 在本機 CARLA 0.9.16 驗證車輛加速、煞停與 RGB 擷取。
-狀態：已定位 PixelReader 把 GPU 等待任務錯排到 StatsThread，完成有原檔備份的一個 byte 排程修正。修正後 1 tick 延遲、原始幀號／時間戳配對的 RGB probe 通過（3 張）；正準備正式 140 影格驗收，尚未宣告 Phase 0 通過。
+目前：Phase 2 小型資料管線 pilot 收集與磁碟稽核均通過；稽核見 data/town01-pilot-v1-epic/audit.json。完整 Phase 2 尚未通過，沒有開始模型訓練。
 
-已完成：
+已實測完成：
 
-- 原始規格完整保存；建立模組架構、路線圖、風險與初始驗收標準。
-- 硬體評估：Core Ultra 7 165H、22 邏輯核心、63.43GiB RAM、RTX 4070 Laptop 8188MiB。
-- 獨立 Python 3.12.14 venv；CARLA 0.9.16 API 已安裝並成功 import。
-- 環境 doctor、同步 RGB / 控制 smoke、安裝與集中驗收程式。
-- 6 項單元測試通過；無模擬器時的失敗報告已實際驗證。
+- Phase 0：原數值門檻通過。正式 phase0-dx12-epic-004：140 幀、14 PNG、位移 6.3031m、峰速 5.1616m/s、最終 0、碰撞 0、時間戳誤差 0、清理成功。
+- Phase 1 初始規則 Baseline：五條預先固定的 40m 晴天、無 NPC、非路口路線全部通過；最新 phase1-baseline-005-epic。碰撞、車道線跨越與偏離可行駛車道均為 0。號誌／停車標誌沒有受測，非 AI。
+- 八鏡頭 RGB：rig-eight-003-dx12，20 組完整同步影格、160 PNG、時間戳誤差 0、清理成功；約 4.34 組／牆鐘秒，非 20Hz 實時推論。每 5 組取樣的總 GPU 使用量最高 2824MiB，並非連續量測峰值。
+- DX12／Epic 的 24 感測器（8 方位 × RGB／語意／深度）：五幀 probe 通過，六場景正式 pilot 收集 180 組、4320 PNG，包含晴天、夜間、雨天與 0／3／6 輛 NPC。
+- 收集前凍結整群組切分：train 3 群組／90 組、validation 1 群組／30 組、test 2 群組／60 組。RGB 輸入與 GT 標籤分開；14 項單元測試通過。
+- 同一 DX12／Epic server 連續兩次 Phase 0 也通過：005a 初次載入、005b 沿用地圖，避免再次觸發冗餘 map load。
 
-實際執行：7.3GiB 官方 archive 完整下載、CRC 驗證、約 18.07GiB 解壓完成。D3D12 / D3D11 的完整 smoke 均失敗；無攝影機的 Tesla / Lincoln 物理隔離測試也失敗。沒有有效相機影像或行駛指標，不宣稱完成車輛控制驗收。
-驗收門檻：`configs/phase0_acceptance.json`，首次測試前已固定。
+關鍵修正與不要重犯：
 
-完成條件：實際 server RPC 正確回報 0.9.16，140 個影格完整、影像時間戳誤差 ≤0.0001 秒、儲存影像 ≥10、位移 ≥1m、峰值速度 ≥1m/s、最終速度 ≤0.2m/s、碰撞 0、資源清理成功。
+1. 不因為「車輛 tick 時 crash」就推斷物理引擎故障。官方 PDB 顯示初期錯誤涉及地形渲染；Town01 只需初次 load，不要對已載入地圖再次 reload。
+2. 官方 PixelReader 把 priority bit 512 當成完整 thread enum，誤排 StatsThread。當前使用 AnyBackgroundHiPriTask=2815，只有兩個 byte 不同；原檔備份、固定 hash、source patch 與還原腳本齊全。
+3. DX11 單鏡頭通過不代表八鏡頭可用；八鏡頭失敗留下 GPUCrash／D3D device lost 0x887A0020。當前選用 DX12／Epic，已通過單鏡頭、24 感測器與規則回歸；Low 版八 RGB 通過但雨天畫質有問題，保留作歷史對照。
+4. NPC 資料曾完整寫入，卻在清理切換時序時 native abort。現在先取消 autopilot 註冊，保持 TM 同步直到 world 恢復完成；同一 NPC probe 與六場景均完整通過。
+5. Low／DX12 的雨天 RGB 有黑天空與明顯雜訊；CRC 正確仍不代表適合訓練。固定場景 Epic 對照改善天空／光照，已另收 Epic pilot；仍須量測跨場景畫質與長序列穩定性。
+6. 保留失敗結果，只修改有證據的新假說；不能用 GT 冒充模型輸出，不能把延遲影像誤配成當前影格。數值門檻沒有降低。
 
-下一個單一任務：依 DECISIONS.md D004，在獨立資料夾與 client 環境評估 CARLA 0.9.15 是否可完成相同物理 / RGB probe；先核實官方 wheel / server 可用性，不混用 0.9.16 client，不改動本次門檻。不再重跑已失敗的 0.9.16 設定。替代版本尚未下載或測試。
+原生 build：stock ba05ec36...，當前 background b0370d6d...；完整值與診斷見 DECISIONS D005–D009。這是本地實驗修正版。大型 CARLA、影像與 raw logs 不進 Git；精簡證據在 evidence/。
 
-當前執行：`scripts/diagnose_landscape.py batch --output artifacts/runs/landscape-v1`；每案獨立 server / log / report，避免重跑既有相同條件，成功即停止矩陣。沒有進行中的訓練或排程。Phase 1–10 均未開始。
+下一個單一任務：擴充 Phase 2 的可訓練資料覆蓋。新的版本化計畫須先固定較長的移動自車 episode、路口、行人／兩輪車、類別與場景分佈及 split，再收集／稽核。本 pilot 保留作回歸；每場景只有 1.5 秒、共用 Town01、NPC 僅單一車型，不足以驗收完整資料集或支撐準確率宣稱。
 
-接手時只需先讀此檔、EVALUATION 最新結果、相關程式；不需重讀整份規格或逐秒詢問訓練狀態。
+沒有 AI 模型、checkpoint、BEV／occupancy、3D 導航介面或完整 AI 閉環。模擬器已在集中測試後關閉，沒有訓練、監控排程或其他背景工作。
+
+接手先讀本檔、EVALUATION 最新結果與當前任務程式；不必重讀全部原始 log，也不需逐幀讓 LLM 監督。

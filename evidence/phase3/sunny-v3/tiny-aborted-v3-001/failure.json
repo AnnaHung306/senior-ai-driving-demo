@@ -1,0 +1,15 @@
+{
+  "error": "ExperimentAbortedForGeneralization",
+  "deliberate_stop": true,
+  "not_a_runtime_exception": true,
+  "reason": "Three full epochs retained; validation mIoU 0.29369 and severe train/validation wall/fence gap. Replace exploratory TinyUNet with transferred MobileNet encoder and paired augmentation. No heldout predictions evaluated, no gates lowered.",
+  "last_completed_epoch": 2,
+  "last_completed_updates": 7200,
+  "state_before_stop": {
+    "status": "training",
+    "task": "segmentation",
+    "last_sha256": "73e7cbb8da481fb6189d17ae774d67dc74e13929429c0f984e2c34e32004e614",
+    "epoch": 2,
+    "updates": 7200
+  }
+}

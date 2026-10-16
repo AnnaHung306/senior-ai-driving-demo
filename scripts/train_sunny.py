@@ -28,6 +28,8 @@ from senior_ai.core import write_json
 from senior_ai.detection_model import make_detector
 from senior_ai.detection_metrics import evaluate_detection
 from senior_ai.segmentation_model import TinyUNet
+from senior_ai.mobile_segmentation import MobileUNet
+from senior_ai.sunny_augmentation import paired_geometry
 from senior_ai.segmentation_metrics import confusion, metrics
 from senior_ai.segmentation_training import weighted_loss, seed_all, configure_cuda
 from senior_ai.sunny_data import SunnySamples, SEGMENTATION_NAMES, DETECTION_CLASSES, sha, verify
@@ -45,6 +47,10 @@ def build_model(task,config,pretrained=True):
     c=config[task]; path=ROOT/c['pretrained_path']
     if pretrained and sha(path)!=c['pretrained_sha256']: raise ValueError('Starting weights changed')
     if task=='detection': return make_detector(weights=path if pretrained else None)
+    if c.get('architecture')=='mobilenet_unet':
+        model=MobileUNet(classes=len(SEGMENTATION_NAMES),precision=c['precision'])
+        if pretrained:model.load_encoder(path)
+        return model
     model=TinyUNet(width=c['width'],classes=len(SEGMENTATION_NAMES))
     if pretrained:
         old=torch.load(path,map_location='cpu',weights_only=False)['model']
@@ -63,11 +69,12 @@ def batches(data,size,shuffle=False):
     return DataLoader(data,batch_size=size,shuffle=shuffle,num_workers=0,collate_fn=lambda samples:list(zip(*samples)))
 
 
-def inputs(batch,augment=False):
+def inputs(batch,augment=False,photometric_range=(.9,1.1)):
     rgb=torch.stack(batch).cuda().float().div_(255)
     if augment:
-        contrast=torch.rand((len(rgb),1,1,1),device='cuda')*.2+.9
-        brightness=torch.rand_like(contrast)*.2+.9
+        low,high=photometric_range
+        contrast=torch.rand((len(rgb),1,1,1),device='cuda')*(high-low)+low
+        brightness=torch.rand_like(contrast)*(high-low)+low
         mean=rgb.mean((2,3),keepdim=True); rgb=((rgb-mean)*contrast+mean).mul(brightness).clamp_(0,1)
     return rgb
 
@@ -80,7 +87,8 @@ def step(model,task,rgb,target,optimizer,weights,clip):
         if not model.rpn.last_supervised_samples and not model.roi_heads.last_supervised_samples:
             return 0.,0.,{'_skipped_empty_supervision':True}
     else:
-        loss=segmentation_loss(model(rgb),torch.stack(target).cuda().long(),weights); parts={'weighted_ce_plus_foreground_dice':loss}
+        truth=target if torch.is_tensor(target) else torch.stack(target)
+        loss=segmentation_loss(model(rgb),truth.cuda().long(),weights); parts={'weighted_ce_plus_foreground_dice':loss}
     if not torch.isfinite(loss): raise FloatingPointError('Nonfinite training loss')
     loss.backward(); norm=torch.nn.utils.clip_grad_norm_(model.parameters(),clip,error_if_nonfinite=True)
     optimizer.step()
@@ -124,6 +132,14 @@ def save_checkpoint(path,value):
     temp=path.with_suffix('.pt.tmp'); torch.save(value,temp); temp.replace(path)
 
 
+def make_optimizer(model,c):
+    if c.get('encoder_learning_rate') is not None:
+        encoder=list(model.encoder.parameters());ids={id(p) for p in encoder}
+        groups=[{'params':encoder,'lr':c['encoder_learning_rate']},{'params':[p for p in model.parameters() if id(p) not in ids],'lr':c['learning_rate']}]
+        return torch.optim.AdamW(groups,weight_decay=c['weight_decay'])
+    return torch.optim.AdamW(model.parameters(),lr=c['learning_rate'],weight_decay=c['weight_decay'])
+
+
 def require_idle_gpu():
     # Model training must not compete with the 32-camera server on 8GB VRAM.
     processes=subprocess.check_output(['powershell','-NoProfile','-Command',
@@ -138,6 +154,7 @@ def run(args):
     root=args.dataset_root.resolve() if args.dataset_root else ROOT/config['dataset']; run=args.run.resolve()
     require_idle_gpu()
     configure_cuda(); seed_all(config['seed'])
+    if c.get('precision')=='bfloat16' and not torch.cuda.is_bf16_supported():raise RuntimeError('BF16 CUDA required by this experiment')
     provenance={'data':verify(root),'source':source_fingerprint(),'config_sha256':sha(args.config),
                 'python':platform.python_version(),'torch':torch.__version__,'torchvision':torchvision.__version__,
                 'numpy':np.__version__,'pillow':PIL.__version__,'cudnn':torch.backends.cudnn.version(),
@@ -168,7 +185,7 @@ def run(args):
         'train_segmentation_pixels':train.support.tolist(),'cache_budget_gib_per_split':config['cache_budget_gib_per_split']})
     weights=torch.tensor(np.clip(np.sqrt(max(1,train.support.max())/np.maximum(1,train.support)),1,20),device='cuda',dtype=torch.float32)
     if not args.resume:
-        model=build_model(task,config).cuda(); optimizer=torch.optim.AdamW(model.parameters(),lr=c['learning_rate'],weight_decay=c['weight_decay'])
+        model=build_model(task,config).cuda(); optimizer=make_optimizer(model,c)
         if task=='detection':
             choices=sorted(range(len(train)),key=lambda i:(-len(train.targets[i]['boxes']),i))[:2]
         else: choices=[0,len(train)//2]
@@ -178,7 +195,7 @@ def run(args):
         write_json(run/'overfit.json',sanity)
         if not sanity['passed']: raise RuntimeError('Train-only overfit sanity failed')
         del model,optimizer,rgb,target; gc.collect(); torch.cuda.empty_cache(); seed_all(config['seed'])
-    model=build_model(task,config,pretrained=not args.resume).cuda(); optimizer=torch.optim.AdamW(model.parameters(),lr=c['learning_rate'],weight_decay=c['weight_decay'])
+    model=build_model(task,config,pretrained=not args.resume).cuda(); optimizer=make_optimizer(model,c)
     total_steps=math.ceil(len(train)/c['batch_size'])*c['epochs']
     schedule=torch.optim.lr_scheduler.LambdaLR(optimizer,lambda s:min(1,(s+1)/max(1,c['warmup_steps']))*.5*(1+math.cos(math.pi*min(s,total_steps)/total_steps)))
     first_epoch=0; best=-math.inf; updates=0
@@ -194,7 +211,10 @@ def run(args):
     for epoch in range(first_epoch,c['epochs']):
         losses=[]; max_norm=0.; epoch_start=time.monotonic();skipped=0
         for rgb,target,indices in batches(train,c['batch_size'],shuffle=True):
-            loss,norm,parts=step(model,task,inputs(rgb,augment=True),target,optimizer,weights,c['gradient_clip'])
+            images=inputs(rgb,augment=True,photometric_range=c.get('photometric_range',(.9,1.1)))
+            if task=='segmentation' and c.get('paired_geometry'):
+                images,target=paired_geometry(images,torch.stack(target).cuda(),**c['paired_geometry'])
+            loss,norm,parts=step(model,task,images,target,optimizer,weights,c['gradient_clip'])
             if parts.get('_skipped_empty_supervision'):
                 skipped+=1;continue
             losses.append(loss); max_norm=max(max_norm,norm); updates+=1; schedule.step()
@@ -232,9 +252,11 @@ def run(args):
     receipt={'status':'completed','task':task,'best_epoch':checkpoint['epoch'],'best_score':best,'updates':updates,
              'last_sha256':sha(run/'last.pt'),'best_sha256':sha(run/'best.pt'),'checkpoint_reload_identical':identical,
              'training_wall_s':time.monotonic()-started,'max_cuda_allocated_mib':torch.cuda.max_memory_allocated()/1024**2,
+             'parameter_count':sum(p.numel() for p in model.parameters()),
              'max_cuda_reserved_mib':torch.cuda.max_memory_reserved()/1024**2,
              'rpn_ignore_calls':getattr(getattr(model,'rpn',None),'ignore_assignment_calls',None),
              'roi_ignore_calls':getattr(getattr(model,'roi_heads',None),'ignore_assignment_calls',None),'lockbox_opened':False}
+    receipt['validation_sha256']=sha(run/'validation.json');receipt['validation_frames_sha256']=sha(run/'validation_frames.jsonl')
     write_json(run/'state.json',receipt); print(json.dumps(receipt),flush=True)
 
 

@@ -87,7 +87,7 @@ def train(args):
     require_idle_gpu();configure_cuda();seed_all(config['seed']);model=LightStateNet().cuda()
     optimizer=torch.optim.AdamW(model.parameters(),lr=config['learning_rate'],weight_decay=.0001)
     weights=torch.tensor(np.clip(sum(train.counts)/(4*np.array(train.counts)),.1,10),device='cuda',dtype=torch.float32)
-    source={str(p.relative_to(ROOT)).replace('\\','/'):sha(p) for p in sorted((ROOT/'src').rglob('*.py'))+[Path(__file__),ROOT/'scripts/train_sunny.py',ROOT/'scripts/predict_sunny.py',ROOT/'scripts/evaluate_light_state.py',ROOT/'scripts/audit_light_supplement.py',ROOT/'scripts/audit_sunny_dataset.py',ROOT/'scripts/validate_dataset.py',ROOT/'scripts/collect_dataset.py',ROOT/'scripts/rig_capture.py']}
+    source={str(p.relative_to(ROOT)).replace('\\','/'):sha(p) for p in sorted((ROOT/'src').rglob('*.py'))+[Path(__file__),ROOT/'scripts/train_sunny.py',ROOT/'scripts/predict_sunny.py',ROOT/'scripts/evaluate_light_state.py',ROOT/'scripts/validate_light_joint.py',ROOT/'scripts/audit_light_supplement.py',ROOT/'scripts/audit_sunny_dataset.py',ROOT/'scripts/validate_dataset.py',ROOT/'scripts/collect_dataset.py',ROOT/'scripts/rig_capture.py']}
     for relative in source:
         destination=args.run/'source'/relative;destination.parent.mkdir(parents=True,exist_ok=True);destination.write_bytes((ROOT/relative).read_bytes())
     write_json(args.run/'config.json',config);best=-1.;started=time.monotonic();updates=0
@@ -119,7 +119,8 @@ def train(args):
     identical=torch.equal(before,after)
     if not identical:raise RuntimeError('Phase checkpoint reload differs')
     write_json(args.run/'state.json',{'status':'completed','best_sha256':sha(args.run/'best.pt'),'updates':updates,'wall_s':time.monotonic()-started,
-                                   'validation_quality':quality(result,config),'lockbox_opened':False,'checkpoint_reload_identical':identical})
+                                   'validation_quality':quality(result,config),'lockbox_opened':False,'checkpoint_reload_identical':identical,
+                                   'validation_sha256':sha(args.run/'validation.json'),'validation_frames_sha256':sha(args.run/'validation_frames.jsonl')})
 
 
 if __name__=='__main__':

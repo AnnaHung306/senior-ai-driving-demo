@@ -22,7 +22,17 @@ def joint_scores(matrix):
     classes=[{'name':name,'gt_objects':int(matrix[c].sum()),'correct_state_recall_including_missed_detections':float(matrix[c,c]/matrix[c].sum()) if matrix[c].sum() else None} for c,name in enumerate(LIGHT_STATES)]
     values=[r['correct_state_recall_including_missed_detections'] for r in classes if r['gt_objects']]
     return {'confusion_true_rows_phase_prediction_columns_plus_missed':matrix.tolist(),'classes':classes,
-            'macro_correct_state_recall':float(np.mean(values)) if values else None}
+            'macro_correct_state_recall':float(np.mean(values)) if values else None,
+            'all_phase_classes_present':bool((matrix.sum(1)>0).all()),
+            'red_as_green_rate_all_GT_red':float(matrix[1,3]/matrix[1].sum()) if matrix[1].sum() else None,
+            'red_as_green_rate_matched_red':float(matrix[1,3]/matrix[1,:4].sum()) if matrix[1,:4].sum() else None}
+
+
+def joint_quality(result,config):
+    checks={'all_classes':result['all_phase_classes_present'],
+        'macro_correct_state_recall':(result['macro_correct_state_recall'] or 0)>=config['minimum_joint_macro_correct_state_recall'],
+        'red_as_green':result['red_as_green_rate_matched_red'] is not None and result['red_as_green_rate_matched_red']<=config['max_red_as_green_rate']}
+    return {'passed':all(checks.values()),'checks':checks}
 
 
 @torch.inference_mode()
@@ -92,11 +102,18 @@ def main(args):
     state=json.loads((args.run/'state.json').read_text(encoding='utf-8'))
     if state['status']!='completed' or not state['validation_quality']['passed']: raise ValueError('Validation-qualified phase checkpoint required')
     if sha(args.run/'best.pt')!=state['best_sha256']: raise ValueError('Phase checkpoint changed')
+    if sha(args.run/'validation.json')!=state['validation_sha256']:raise ValueError('Phase validation changed')
     saved=torch.load(args.run/'best.pt',map_location='cpu',weights_only=False);config=saved['config']
     if verify(args.root)!=saved['data']: raise ValueError('Phase data changed')
     for relative,digest in saved['source'].items():
         if sha(ROOT/relative)!=digest: raise ValueError('Frozen phase source changed')
     if (args.run/'lockbox_started.json').exists(): raise FileExistsError('Phase heldout already opened')
+    validation_joint=args.run/'validation_joint_quality.json'
+    if not validation_joint.exists():raise ValueError('Validation detector-box phase check required before heldout')
+    validation_joint=json.loads(validation_joint.read_text(encoding='utf-8'))
+    if not validation_joint['passed'] or validation_joint['phase_sha256']!=state['best_sha256'] or validation_joint['detector_sha256']!=sha(args.detector_run/'best.pt'):
+        raise ValueError('Joint validation failed or model pair changed')
+    if validation_joint['joint_report_sha256']!=sha(args.run/'validation_joint.json'):raise ValueError('Joint validation report changed')
     supplement_signature=None
     if config.get('heldout_supplement_plan'):
         if args.supplement_root is None:raise ValueError('Frozen phase supplement required')
@@ -134,8 +151,8 @@ def main(args):
         write_json(args.run/(split+'_joint.json'),combined)
         (args.run/(split+'_joint_frames.jsonl')).write_text(''.join(json.dumps(r)+'\n' for r in joint_frames),encoding='utf-8')
         error_gallery(args.root,args.supplement_root,crop_frames,joint_frames,args.run/(split+'_phase_errors'))
-        result[split]={'crop_quality':quality(cropped,config),'joint_quality':(combined['macro_correct_state_recall'] or 0)>=config['minimum_joint_macro_correct_state_recall']}
-    final={'status':'passed' if result['lockbox']['crop_quality']['passed'] and result['lockbox']['joint_quality'] else 'quality_failed',
+        result[split]={'crop_quality':quality(cropped,config),'joint_quality':joint_quality(combined,config)}
+    final={'status':'passed' if result['lockbox']['crop_quality']['passed'] and result['lockbox']['joint_quality']['passed'] else 'quality_failed',
            'quality':result,'checkpoint_sha256':state['best_sha256'],'supplement':supplement_signature,
            'scope':'Observable lamp color eligibility; unknown class for back-facing/unresolvable lamps; ClearNoon only. Dynamic and controlled stationary phase tests reported separately; pooled phase acceptance includes the pre-frozen coverage supplement.'}
     write_json(args.run/'final_evaluation.json',final);print(json.dumps(final));return 0 if final['status']=='passed' else 2

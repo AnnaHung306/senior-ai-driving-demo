@@ -2,7 +2,7 @@
 
 2026-10-16 使用者指示：「可以不用考慮雨天情況，強制模擬器永遠晴天也可以。我們在理想環境中進行模擬」。從本版本起，訓練、驗證與後續理想環境模擬固定 ClearNoon；既有雨夜失敗保留歷史，不再列為本階段必須改善的品質門檻。對雨夜、真實道路的泛化沒有主張。
 
-Phase 3 尚未完成。凍結的 configs/dataset_sunny_v3_1.json 採18個30秒路線群組，train=Town01/Town03、validation=Town04、development=Town05、lockbox=Town02。每秒儲存5 bundles，每bundle八方向RGB、semantic、depth、instance共32張，預計2700 bundles / 86400 PNG。這是計畫量，必須以採集與獨立稽核收據確認實收量。單行道路可採同向車隊，沒有真實人行道的場景不造出行人路徑；各split的逐類正樣本及群組覆蓋另行檢查。
+Phase 3 尚未完成。目前凍結的 configs/dataset_sunny_v3_8.json 採18個30秒路線群組，train=Town01/Town03、validation=Town04、development=Town05、lockbox=Town02。每秒儲存5 bundles，每bundle八方向RGB、semantic、depth、instance共32張，已實收2700 bundles / 86400 PNG；18場採集與全圖獨立稽核均通過，另有assistant GT抽查綁定收據。單行道路可採同向車隊，沒有真實人行道的場景不造出行人路徑；各split的逐類正樣本及群組覆蓋另行檢查。
 
 訓練資料必須通過原始影像CRC/SHA、時間與capture pose、actor taxonomy、真實可見框、ignore前景、類別與群組覆蓋，以及GT抽查。未經驗收的fixture與失敗採集不可批准訓練。卡車 european_hgv、公車 fusorosa、施工交通桶 trafficcone01 在五城鎮32-sensor試驗中分別實測raw15、16、21。raw21只對已核准且ID一致的施工交通桶給正例，其他Dynamic物件仍ignore。Town04首次靜態fixture放置碰撞失敗保留，修正fixture先在空中生成再停用物理放置；這不是無碰撞駕駛證據。
 
@@ -20,7 +20,7 @@ Phase 3 尚未完成。凍結的 configs/dataset_sunny_v3_1.json 採18個30秒�
 
 號誌補充：configs/light_state_v1.json、light_labels.py、LightStateNet。燈具由semantic7+軸向depth+實際lamp world OBB對應；相位標籤以simulator phase為來源，只有至少2個已確認燈具像素符合互斥的發光色範圍才標red/yellow/green，其餘unknown_or_unobservable。這是有明確可見性條件的合成GT，不是人類相位認證；不能從背面偷讀隱藏相位。class/group覆蓋不足不得訓練該head。後續必須分GT-crop分類與實際detector-box聯合召回、red→green錯誤率，不能只報完美GT框分類。
 
-目前canonical採集為data/sunny-cross-town-v3-005、configs/dataset_sunny_v3_6.json；六個幾何、seed、split、criteria、rig完全相同的已通過場景由004以PNG hardlink及獨立metadata副本沿用，report.reuse_lineage保留來源hash。它們算該資料集的六個groups，不是新增獨立樣本；失敗場景不沿用。Town03-02僅將無法在彎道生成的卡車移到同一對向車道的直線段，剩餘12場先全部原生spawn預檢通過。
+歷史005版採集為data/sunny-cross-town-v3-005、configs/dataset_sunny_v3_6.json；六個幾何、seed、split、criteria、rig完全相同的已通過場景由004以PNG hardlink及獨立metadata副本沿用，report.reuse_lineage保留來源hash。它們算該資料集的六個groups，不是新增獨立樣本；失敗場景不沿用。Town03-02僅將無法在彎道生成的卡車移到同一對向車道的直線段，剩餘12場先全部原生spawn預檢通過。
 
 模型訓練最終草案configs/sunny_training_v3_8.json：MobileNet P2/P3/P4/P5+pool（strides4/8/16/32/64）照顧小物件；保留官方backbone、高層FPN、RPN卷積/ratio通道，新增低層FPN與任務head再微調。分割增加terrain/ground成17類，loss為weighted CE+0.5 foreground Dice，避免薄線與稀少body只由大量背景主導；ignore255同時遮罩兩項loss。只輸出可見road/road-line↔sidewalk/terrain界面，另報2px tolerance boundaryF1（門檻.5）；不把車輛遮擋輪廓當道路邊界，也不補不可見邊界。所有新增門檻均在任何新模型評分前設定。
 
@@ -29,3 +29,8 @@ Ignore-aware訓練也處理整批ROI/RPN均無監督樣本的情形：空CE不�
 004/003兩次Town01相同seed的交通互動差異很大：003卡車0.56m未過門檻，004同位置73.99m且新紀錄沒有zero-speed-limit ticks，不能把改善歸因於缺值fallback。原生模擬的交通時序/互動未宣稱bitwise重現；各次失敗、實際控制、位姿與採集hash保留，零碰撞/位移門檻沒有降低。
 
 原生CARLA client在跨城鎮時曾assert _episode!=nullptr，Python finally無法攔截；伺服器仍正常載入新town。supervise_sunny_collection.py僅在所有既有episodes已通過且cleanup成功、下一場尚未開始時有界重連新client；任何半成品/失敗scene都停下診斷，不盲目覆寫重試。執行狀態以artifacts/reports/sunny-cross-town-v3-005-execution.json的child poll及timestamp確認，不能只看舊log假設仍在採集。
+
+
+2026-10-17 實際執行更新：canonical 為 data/sunny-cross-town-v3-007，audit完整86400 PNG通過；105物件GT panels、18語意targets及四split16個相位cro​​ps由assistant實際檢視，另存 visual_review.json 綁定audit與review圖SHA。已正式開始 configs/sunny_training_v3_9.json 的17類分割訓練；不是舊8類權重的重跑測試成績。
+
+主 lockbox 黃燈只有4個crops／1群組，沒有通過獨立相位覆蓋。configs/light_lockbox_supplement_v1.json 在phase／detector模型評分前凍結17個既有Town02 heldout視角的Off/R/Y/G控制補收；它只補phase測試，不作訓練、不算新增動態路線。仍用原route group，新增同pose Off亮度對照。configs/light_state_v1_1.json維持原門檻，main dynamic與controlled joint分開保存後再報pooled phase驗收。補收尚未執行／批准；主audit通過不等於phase可以忽略缺類。

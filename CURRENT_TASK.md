@@ -1,3 +1,33 @@
+# 優先更新：Tiny過擬合後已停止，轉移編碼器新訓練
+
+2026-10-17：Tiny sunny-segmentation-v3-001 **已刻意abort，不是完成或runtime exception**，保留3完整epochs/7200updates/valmIoU.29369，lockbox未開。實際train/val抽查牆面.9735/.00165、柵欄.7954/.00753，診斷JSON及舊state/metrics進evidence。用CIM核對命令列後停止原16320/27812；exec1528 exit1，原排隊80306見failure marker也exit1；phase/det尚未啟動。
+
+新模型MobileUNet = exact COCO MobileNet body transfer＋FrozenBN＋多尺度decoder/全解析度RGBstem，3,589,953params。paired scale .75/1/1.25 crop/pad255/flip.5；photometric.8..1.2，val完全不變。CUDA BF16 autocast，params/loss/outputsFP32、strict deterministic；真實CUDA synthetic fwd/back/reload passed。batch8 peak allocated4055.69MiB/reserved4624；71 tests passed。configs/sunny_training_v4_1.json 凍結8epochs/batch8，encoderLR5e-5/decoder5e-4，原quality gates不變。
+
+準備／執行新run artifacts/runs/sunny-segmentation-v4-001；確認新的exec session（本段稍後再更新）。之後仍須phase sunny-light-state-v1-001 configlight_state_v1_1、det sunny-detection-v3-001 configsunny_training_v3_9（尚無此兩run，勿認為已完成）。Light head source要在目前程式版freeze，源碼內含新validate_light_joint.py：必須在任何model lockbox opening前先通過validation detector-box phase joint，且matched-red→green≤.02，不能以漏判稀釋危險錯誤。原GT-crop/perclass gate不變；validation predictions SHA綁state，joint receipt綁兩checkpoint SHA與reportSHA。
+
+GPU訓練全停後仍須正式collect_light_supplement（204PNG plan，未採集），完整audit/actualQA/receipt；RGB-only8view三模型demo、benchmarks、errorgallery、export_sunny_results.py結果/模型卡。CARLA off。不可在訓練啟動後再改Src/train_sunny/predict_sunny/evaluate_sunny原地強行resume，必要時用run/source凍結腳本。當前src新增MobileUNet不能作舊Tiny source。後方歷史「正在執行」「排隊」已失效，以本段優先。
+
+---
+
+# 最新執行狀態（2026-10-17，優先於下方歷史）
+
+使用者要求盡力完成整個 Phase3，固定 ClearNoon 理想環境；尚未完成，不進 Phase4。
+
+- 主資料 data/sunny-cross-town-v3-007，18 場／2700 bundles／86400 PNG，完整 audit passed。實際檢視 105 物件 GT panels、18 語意圖、16 四相位 crops；visual_review.json 已綁定 auditSHA 批准，限 assistant 抽查，非逐圖人工認證。
+- **真正 GPU 分割訓練執行中**：exec session1528，artifacts/runs/sunny-segmentation-v3-001，config sunny_training_v3_9.json（17類、12epochs）。source snapshot 從 b4fc0d8 凍結；後續工作目錄 predict_sunny.py 改精度 flags，不要拿目前 source 強行驗證／resume 舊run，必要時用 run/source/scripts 下的凍結版本及 --dataset-root ABS。
+- 已過 overfit；第1輪 val focusmIoU .2198543、marginF1 .1941849，未達驗收。first epoch 507秒，28,800 total updates，不能把中間 checkpoint 當正式完成。查看 progress.json/epochs.jsonl 及 write_stdin 真實程序，不以舊log判斷存活。
+- **串行排隊程序 exec session80306**：等分割 state.status=completed 後自動 train_light_state.py（configs/light_state_v1_1.json，run sunny-light-state-v1-001），成功後 train_sunny.py detection（sunny_training_v3_9.json，run sunny-detection-v3-001）。遇 failure.json／native非零停止。訓練尚未啟動的不要當成已在跑。phase source snapshot 預計採 d600d58 或之後的實際版本；仍需最後確認。
+- CARLA off；不與 GPU training 同跑。67 unit tests passed（phase3-sunny-tests-007.log）；deploy flag change後 RGB-only CPU inference test passed（sunny-inference-tests-002.log）。早期第1輪分割實際RGB-only CPU預覽已生成並看過，artifacts/runs/sunny-segmentation-validation-preview-e01，不是正式best或測試成績。
+- 主 lockbox Yellow 4 crops／1 group，明顯未滿 phase原門檻。**補收計畫已凍結，但尚未採集**：configs/light_lockbox_supplement_v1.json（17 camera poses×Off/R/Y/G，68RGB／204PNG，僅Town02 heldout，不參與train）。用原town02-00/01 frame索引0/40/80/120，最多4個GT燈具支持最多的camera，沿用原group，不膨脹獨立數。新 scripts/collect_light_supplement.py 與 audit_light_supplement.py；待GPU訓練全停後啟動CARLA、確認Town02，再collect（RPC必須escalated）；新版本目錄，不覆寫。
+- 補收 auditor有每圖CRC/SHA、actualpose/optics/time/nativephase、main lamp OBB-depth/color eligibility；並以同pose Off圖確認已知相位至少2色素比Off亮>30，防燈殼假色。獨立quota10/class、2原groups。audit後必須實際看 qa 圖再寫visual_review.json statuspassed/auditSHA/reviewed_images hashes；verify_supplement 綁mainaudit。不是動態路線，不代替原動態測試。
+- phase evaluator 新增 --supplement-root；main dynamic與controlled joint分別保存，pooled phase驗收門檻不變。先verify+coverage再立once marker。必須完成且val-qualifiedphase與passed detector heldout才跑。LightCrops禁止train載補收、同原group不重算，已有測試。
+- 集成 scripts/predict_perception.py（八RGB-only）、benchmark_perception.py（3warm/10 full8view bundles，actualseqCPU-output timing）、phase錯誤PNG/crops+joint；尚未用最終權重驗證。export_sunny_results.py 已新增但還沒實測／commit，最後會拒絕缺真模型／demo／heldout證據的完成宣告。
+
+接著：持續監看／完成seg→phase→det GPU訓練。只用val診斷改進，別提前開lockbox；完成且val過門檻後用凍結source evaluator一次heldout，若quality fail不得降低門檻或宣稱完成。補收號誌資料及QA；實際全模型RGB-only8方向demo（最好獨立僅複製RGB＋input manifest的根目錄，無labels/training）；個別＋整套benchmark、FP/FN與phase錯例、模型卡/evidence/registry/readme。所有權重ignored但本機保留hash。Git latest d600d58，export script目前untracked。
+
+---
+
 # 最新實際狀態
 
 007完整audit已通過86400張、105物件GT抽查/18語意圖/16 phase crops已由assistant實際檢視，visual_review.json已綁定批准；不是人工認證。CARLA off。準備正式segmentation/detection training configs/sunny_training_v3_9.json。phase lockbox黃燈僅4crops/1group，必須額外正式補收才能phase驗收，不能放寬門檻。

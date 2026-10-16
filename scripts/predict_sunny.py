@@ -17,6 +17,7 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src'))
 from senior_ai.core import write_json
 from senior_ai.detection_model import make_detector
 from senior_ai.segmentation_model import TinyUNet
+from senior_ai.mobile_segmentation import MobileUNet
 from senior_ai.segmentation_data import load_inference_rgb
 from senior_ai.sunny_data import SEGMENTATION_NAMES,DETECTION_CLASSES,sha
 from senior_ai.light_model import LightStateNet,crop_rgb
@@ -34,7 +35,10 @@ def load_model(checkpoint,device):
         configure_cuda()
     saved=torch.load(checkpoint,map_location='cpu',weights_only=False); task=saved['task']
     if task not in ['detection','segmentation']:raise ValueError('Expected detector or segmentation checkpoint')
-    model=make_detector() if task=='detection' else TinyUNet(width=saved['config']['segmentation']['width'],classes=len(SEGMENTATION_NAMES))
+    if task=='detection':model=make_detector()
+    else:
+        c=saved['config']['segmentation']
+        model=MobileUNet(classes=len(SEGMENTATION_NAMES),precision=c['precision']) if c.get('architecture')=='mobilenet_unet' else TinyUNet(width=c['width'],classes=len(SEGMENTATION_NAMES))
     model.load_state_dict(saved['model']);model.to(device).eval()
     return model,task,saved
 

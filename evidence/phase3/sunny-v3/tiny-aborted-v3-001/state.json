@@ -1,0 +1,9 @@
+{
+  "status": "aborted",
+  "task": "segmentation",
+  "last_sha256": "73e7cbb8da481fb6189d17ae774d67dc74e13929429c0f984e2c34e32004e614",
+  "epoch": 2,
+  "updates": 7200,
+  "reason": "Deliberate architecture/augmentation iteration after train/validation overfit diagnosis; not completed, lockbox never opened.",
+  "lockbox_opened": false
+}

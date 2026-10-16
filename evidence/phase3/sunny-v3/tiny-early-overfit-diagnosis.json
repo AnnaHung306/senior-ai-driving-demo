@@ -1,0 +1,107 @@
+{
+  "epoch": 1,
+  "diagnostics": [
+    {
+      "split": "train",
+      "category": 12,
+      "sample": {
+        "scene_id": "town03-02",
+        "group_id": "town03-route-02",
+        "split": "train",
+        "camera": "front",
+        "frame": 244882,
+        "input_manifest": "inputs/frames/town03-02/00244882.json",
+        "rgb": "inputs/rgb/town03-02/front/00244882.png",
+        "semantic": "labels/semantic_segmentation/town03-02/front/00244882.png",
+        "detection": "labels/visible/town03-02/front/00244882.json",
+        "instance": "labels/instance_segmentation/town03-02/front/00244882.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "metrics": {
+        "name": "12",
+        "support_pixels": 96704,
+        "predicted_pixels": 97226,
+        "iou": 0.9735208515661572,
+        "precision": 0.9839343385514163,
+        "recall": 0.9892455327597618
+      }
+    },
+    {
+      "split": "train",
+      "category": 13,
+      "sample": {
+        "scene_id": "town01-00",
+        "group_id": "town01-route-00",
+        "split": "train",
+        "camera": "front",
+        "frame": 167149,
+        "input_manifest": "inputs/frames/town01-00/00167149.json",
+        "rgb": "inputs/rgb/town01-00/front/00167149.png",
+        "semantic": "labels/semantic_segmentation/town01-00/front/00167149.png",
+        "detection": "labels/visible/town01-00/front/00167149.json",
+        "instance": "labels/instance_segmentation/town01-00/front/00167149.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "metrics": {
+        "name": "13",
+        "support_pixels": 10834,
+        "predicted_pixels": 12379,
+        "iou": 0.795421146260345,
+        "precision": 0.8307617739720494,
+        "recall": 0.9492338932988739
+      }
+    },
+    {
+      "split": "validation",
+      "category": 12,
+      "sample": {
+        "scene_id": "town04-02",
+        "group_id": "town04-route-02",
+        "split": "validation",
+        "camera": "front",
+        "frame": 248088,
+        "input_manifest": "inputs/frames/town04-02/00248088.json",
+        "rgb": "inputs/rgb/town04-02/front/00248088.png",
+        "semantic": "labels/semantic_segmentation/town04-02/front/00248088.png",
+        "detection": "labels/visible/town04-02/front/00248088.json",
+        "instance": "labels/instance_segmentation/town04-02/front/00248088.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "metrics": {
+        "name": "12",
+        "support_pixels": 9068,
+        "predicted_pixels": 15,
+        "iou": 0.0016541685046316719,
+        "precision": 1.0,
+        "recall": 0.0016541685046316719
+      }
+    },
+    {
+      "split": "validation",
+      "category": 13,
+      "sample": {
+        "scene_id": "town04-00",
+        "group_id": "town04-route-00",
+        "split": "validation",
+        "camera": "front",
+        "frame": 246578,
+        "input_manifest": "inputs/frames/town04-00/00246578.json",
+        "rgb": "inputs/rgb/town04-00/front/00246578.png",
+        "semantic": "labels/semantic_segmentation/town04-00/front/00246578.png",
+        "detection": "labels/visible/town04-00/front/00246578.json",
+        "instance": "labels/instance_segmentation/town04-00/front/00246578.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "metrics": {
+        "name": "13",
+        "support_pixels": 11525,
+        "predicted_pixels": 387,
+        "iou": 0.007527700245284615,
+        "precision": 0.22997416020671835,
+        "recall": 0.00772234273318872
+      }
+    }
+  ],
+  "method": "Take every 40th manifest row per train/validation (front-camera subset), independently select largest raw4 and raw5 pixel support, infer actual epoch1 checkpoint on CPU RGB only; targets used only for confusion metrics. No heldout samples.",
+  "checkpoint_sha256": "cea21be599e405c58e9651f041c34e1cd2c93b0f5c401f87f9ca239f806eb0ba"
+}

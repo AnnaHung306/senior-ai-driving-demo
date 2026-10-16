@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "training_approved": false,
+  "scope": "Synthetic CUDA operator/gradient/AMP/reload check only, no real accuracy",
+  "losses": [
+    3.370795726776123,
+    3.3556878566741943,
+    3.3468525409698486
+  ],
+  "output_dtype": "torch.float32",
+  "bf16_supported": true,
+  "strict_determinism": true,
+  "reload_identical": true,
+  "wall_s": 2.533336299995426,
+  "parameters": 3589953,
+  "peak_allocated_mib": 1092.18896484375,
+  "peak_reserved_mib": 1296.0,
+  "sources": {
+    "src/senior_ai/mobile_segmentation.py": "b1296a20a061b923cdc2a7e2dd0275fecf1af50b513f97f9a0836694d93aa25b",
+    "src/senior_ai/sunny_losses.py": "550a25cdc5d7a52416550eda62e4491ed01f1e72e86255e4ed9390953b2b399f",
+    "src/senior_ai/sunny_augmentation.py": "56970d305e21b6c32823d81a48d161d5063c98fc3d28191bf528cc322e421ea1"
+  }
+}

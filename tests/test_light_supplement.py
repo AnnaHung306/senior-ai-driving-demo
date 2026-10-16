@@ -9,9 +9,20 @@ from PIL import Image
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from train_light_state import LightCrops
 from collect_light_supplement import camera_transform
+from evaluate_light_state import joint_scores,joint_quality
 
 
 class SupplementTests(unittest.TestCase):
+    def test_red_green_joint_rate_cannot_hide_behind_detector_misses(self):
+        matrix=np.eye(4,5,dtype=np.int64)*100
+        matrix[1,1]=95;matrix[1,3]=5;matrix[1,4]=200
+        score=joint_scores(matrix)
+        self.assertLess(score['red_as_green_rate_all_GT_red'],.02)
+        self.assertGreater(score['red_as_green_rate_matched_red'],.02)
+        self.assertFalse(joint_quality(score,{'minimum_joint_macro_correct_state_recall':.4,'max_red_as_green_rate':.02})['passed'])
+        matrix[1,3]=0;matrix[1,1]=100
+        self.assertTrue(joint_quality(joint_scores(matrix),{'minimum_joint_macro_correct_state_recall':.4,'max_red_as_green_rate':.02})['passed'])
+
     def test_heldout_only_and_original_groups_count_once(self):
         config={'minimum_samples_per_class':{'lockbox':2},'minimum_groups_per_class':2}
         with tempfile.TemporaryDirectory(dir=ROOT/'artifacts/runs/test-temp') as folder:

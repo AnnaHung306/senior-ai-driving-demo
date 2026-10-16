@@ -1,0 +1,9 @@
+{
+  "version": "landscape-diagnostics-v8",
+  "evidence": "Symbolized Landscape/Texture crash and later render stalls persisted across Python versions and window modes. Isolate render-thread scheduling and graphics backend without changing the driver.",
+  "cases": [
+    {"id": "no-rhi-thread", "setup": "load", "quality": "Low", "direct_map": false, "sensor_warmup_ticks": 5, "sensor_tick": "0.0", "snapshot_callback": true, "additional_args": ["-norhithread"], "hypothesis": "Disable the separate RHI thread to test native render synchronization"},
+    {"id": "single-thread", "setup": "load", "quality": "Low", "direct_map": false, "sensor_warmup_ticks": 5, "sensor_tick": "0.0", "snapshot_callback": true, "additional_args": ["-onethread"], "hypothesis": "Reduce native task/render concurrency around landscape resources"},
+    {"id": "vulkan-backend", "setup": "load", "quality": "Low", "direct_map": false, "sensor_warmup_ticks": 5, "sensor_tick": "0.0", "snapshot_callback": true, "graphics_api": "vulkan", "additional_args": ["-graphicsadapter=0"], "hypothesis": "Use the packaged Vulkan shader target to test the Direct3D readback path"}
+  ]
+}

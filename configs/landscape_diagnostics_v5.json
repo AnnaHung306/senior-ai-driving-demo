@@ -1,0 +1,7 @@
+{
+  "version": "landscape-diagnostics-v5",
+  "evidence": "The five paced warmup ticks each produced a camera callback; immediate unpaced capture/prefetch then stalls. Test equivalent pacing during capture before other native calls.",
+  "cases": [
+    {"id": "paced-every-tick", "setup": "load", "quality": "Low", "direct_map": false, "sensor_warmup_ticks": 5, "sensor_tick": "0.0", "offscreen": true, "post_tick_sleep_s": 0.05, "hypothesis": "Allow render/readback and callbacks to progress between client native calls"}
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "version": "landscape-diagnostics-v6",
+  "evidence": "Pacing, graphics mode and one/two tick prefetch did not resolve RGB waits. Follow the packaged synchronous_mode.py reference: get world snapshots through on_tick queues rather than immediate get_snapshot native calls.",
+  "cases": [
+    {"id": "reference-snapshot-queue", "setup": "load", "quality": "Low", "direct_map": false, "sensor_warmup_ticks": 5, "sensor_tick": "0.0", "offscreen": true, "snapshot_callback": true, "hypothesis": "Pair world and sensor callbacks by exact frame using the official synchronization pattern"}
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "version": "landscape-diagnostics-v9",
+  "evidence": "Native render options and runtime replacements did not resolve the stall. Test whether continuous world progression avoids the synchronous camera barrier; this is diagnostic only, not the frozen synchronous acceptance.",
+  "cases": [
+    {"id": "async-fixed-step-camera", "setup": "load", "quality": "Low", "direct_map": false, "sensor_warmup_ticks": 5, "sensor_tick": "0.0", "snapshot_callback": true, "asynchronous": true, "additional_args": ["-benchmark", "-fps=20"], "hypothesis": "Keep 0.05s physics steps and exact frame joins while the server advances independently"}
+  ]
+}

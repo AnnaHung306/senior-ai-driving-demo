@@ -55,3 +55,18 @@
 - 官方 PDB 的本地解析嘗試回報 error 126，未取得符號，沒有根據未解碼位址臆測函式。
 - 依避免無限修正規則停止重跑 0.9.16 本設定；提出 D004 決策報告，下一個任務選為隔離版本對照，未執行新版本下載。
 - verifier 增加 300 秒子程序期限，將重複 streaming 原始 log 留在檔案，只回傳精簡狀態，避免 LLM 可見輸出膨脹。
+
+## DEBUG-002 — 2026-10-16，官方符號解析成功
+
+- 使用者授權繼續多方向嘗試；先回看共同前置條件，避免重跑原先的 renderer / vehicle 組合。
+- 發現本機 Visual Studio 2022 安裝含 `llvm-symbolizer.exe`，對官方 Shipping.exe + PDB 執行 `--relative-address` 成功。
+- `0x2331d26` → `FLandscapeRenderSystem::FetchHeightmapLODBiases`（LandscapeRender.cpp:986）；`0x2f570ec` → `UTexture2D::GetNumResidentMips`（Texture2D.cpp:213）。輸出保存 `evidence/phase0/landscape-symbols.txt`。
+- 這項新證據定位到地形渲染／貼圖讀取，不能再將「物理 tick 時崩潰」的時間關聯當成物理引擎故障的根因。
+- 新矩陣 `configs/landscape_diagnostics_v1.json` 在執行前固定：Town01 只 load 一次、啟動時直接 Town01、原 reload 但 Epic。先測空場景，再車輛，再精確同幀 RGB。既有完整驗收門檻保持不變。
+
+## LANDSCAPE-001 — 2026-10-16，移除第二次 reload
+
+- v1 首案 `load-once-low`：空場景 10 ticks + Tesla 20 ticks 成功；RGB 第一幀等待逾時，但 actor 清理與 settings restore 沒有錯誤，server 並未像原先崩潰。
+- 批次切換下一案時，Windows 終止程序後的埠釋放競態使防護中止；因此 v1 第二、三案**沒有執行**。
+- 修正 runner 在停止自己啟動的程序樹後，等待埠確實關閉再啟動下一案。
+- 新 v2 先沿用 working map lifecycle，只增加 5 個有記錄的 sensor startup warmup ticks，之後仍要求 image.frame 等於 world.tick；不是容許錯配或跳過正式驗收。

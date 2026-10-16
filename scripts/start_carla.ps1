@@ -14,6 +14,7 @@ if (-not $CarlaRoot) {
 $executable = Join-Path $CarlaRoot 'CarlaUE4.exe'
 if (-not (Test-Path -LiteralPath $executable)) { throw "CARLA not installed: $executable" }
 $server = Start-Process -FilePath $executable -WorkingDirectory $CarlaRoot -WindowStyle Hidden -PassThru -ArgumentList @("-$GraphicsApi", '-RenderOffScreen', '-quality-level=Low', "-carla-rpc-port=$Port", '-nosound', '-unattended')
-$launch = @{launcher_pid=$server.Id; executable=$executable; port=$Port; graphics_api=$GraphicsApi}
+$shipping = Join-Path $CarlaRoot 'CarlaUE4\Binaries\Win64\CarlaUE4-Win64-Shipping.exe'
+$launch = @{launcher_pid=$server.Id; executable=$executable; port=$Port; graphics_api=$GraphicsApi; server_binary_sha256=(Get-FileHash -LiteralPath $shipping -Algorithm SHA256).Hash.ToLowerInvariant()}
 $launch | ConvertTo-Json | Set-Content -LiteralPath (Join-Path (Split-Path -Parent $PSScriptRoot) 'artifacts\reports\server-launch.json')
 $launch | ConvertTo-Json

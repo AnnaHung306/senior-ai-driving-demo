@@ -1,0 +1,7 @@
+{
+  "version": "landscape-diagnostics-v7",
+  "evidence": "Official CPython 3.11 and 3.12 show the same result. Separate production from consumption to distinguish a stalled simulator from frame-join processing.",
+  "cases": [
+    {"id": "buffered-frame-audit", "setup": "load", "quality": "Low", "direct_map": false, "sensor_warmup_ticks": 5, "sensor_tick": "0.0", "offscreen": true, "snapshot_callback": true, "collect_before_join": 30, "hypothesis": "Collect a bounded 30-frame RGB/state batch, then validate every frame and timestamp after ticking ends"}
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "version": "landscape-diagnostics-v4",
+  "evidence": "Both render contexts delivered all five warmup callback frames; waiting for the newest tick produced no new callback. Test GPU readback pipeline delay while retaining exact image frame IDs.",
+  "cases": [
+    {"id": "frame-join-prefetch-1", "setup": "load", "quality": "Low", "direct_map": false, "sensor_warmup_ticks": 5, "sensor_tick": "0.0", "offscreen": true, "prefetch_ticks": 1, "hypothesis": "Advance one tick before requesting the older frame; join it to that older snapshot"},
+    {"id": "frame-join-prefetch-2", "setup": "load", "quality": "Low", "direct_map": false, "sensor_warmup_ticks": 5, "sensor_tick": "0.0", "offscreen": true, "prefetch_ticks": 2, "hypothesis": "Test a two-tick GPU readback pipeline with exact timestamp/frame matching"}
+  ]
+}

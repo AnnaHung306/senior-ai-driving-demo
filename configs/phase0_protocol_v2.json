@@ -1,0 +1,14 @@
+{
+  "version": "phase0-v2-pipelined-readback",
+  "map": "Town01",
+  "world_preroll_ticks": 10,
+  "sensor_warmup_ticks": 5,
+  "sensor_tick_s": 0.0,
+  "readback_lag_ticks": 1,
+  "measured_control_ticks": 140,
+  "control_schedule": "20 brake-settle + 40 throttle 0.55 + 80 full brake",
+  "flush_ticks": 1,
+  "flush_control": "full brake, excluded from measured metrics",
+  "frame_join": "Image frame and timestamp must match the stored snapshot of that same original frame",
+  "criteria": "Unchanged phase0-v1 numeric gates; previous v1 failed runs remain failed"
+}

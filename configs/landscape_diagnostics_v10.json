@@ -1,0 +1,7 @@
+{
+  "version": "landscape-diagnostics-v10",
+  "evidence": "Stalls recur after native image objects are retained in the callback queue. The official BufferPool has no fixed five-item cap; do not claim pool exhaustion. Test explicit data ownership instead.",
+  "cases": [
+    {"id": "owned-image-payload", "setup": "load", "quality": "Low", "direct_map": false, "sensor_warmup_ticks": 5, "sensor_tick": "0.0", "snapshot_callback": true, "copy_image_data": true, "hypothesis": "Copy sensor metadata/BGRA bytes in the callback and release the native Image before downstream joins"}
+  ]
+}

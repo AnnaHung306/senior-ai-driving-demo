@@ -1,0 +1,5 @@
+--- a/Unreal/CarlaUE4/Plugins/Carla/Source/Carla/Sensor/PixelReader.cpp
++++ b/Unreal/CarlaUE4/Plugins/Carla/Source/Carla/Sensor/PixelReader.cpp
+@@ -58 +58 @@
+-  AsyncTask(ENamedThreads::HighTaskPriority, [=, Readback=std::move(BackBufferReadback)]() mutable {
++  AsyncTask(ENamedThreads::AnyNormalThreadHiPriTask, [=, Readback=std::move(BackBufferReadback)]() mutable {

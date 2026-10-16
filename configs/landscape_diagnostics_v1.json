@@ -1,0 +1,9 @@
+{
+  "version": "landscape-diagnostics-v1",
+  "evidence": "Official PDB resolves the fault to FLandscapeRenderSystem::FetchHeightmapLODBiases / UTexture2D::GetNumResidentMips",
+  "cases": [
+    {"id": "load-once-low", "setup": "load", "quality": "Low", "direct_map": false, "hypothesis": "Avoid the second synchronous world reload while retaining Town01 and Low"},
+    {"id": "direct-map-low", "setup": "current", "quality": "Low", "direct_map": true, "hypothesis": "Avoid runtime map switching and landscape resource replacement"},
+    {"id": "reload-epic", "setup": "load-reload", "quality": "Epic", "direct_map": false, "hypothesis": "Test landscape texture/LOD scalability independently of graphics API"}
+  ]
+}

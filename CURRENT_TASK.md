@@ -3,7 +3,7 @@
 更新：2026-10-16（Asia/Taipei）。
 
 任務：Phase 0 — 在本機 CARLA 0.9.16 驗證車輛加速、煞停與 RGB 擷取。
-狀態：遇到重大相容性阻礙，Phase 0 未通過。官方模擬器已安裝且 RPC 曾通過；車輛物理 tick 使 server 崩潰，停止重複嘗試本設定。
+狀態：已定位 PixelReader 把 GPU 等待任務錯排到 StatsThread，完成有原檔備份的一個 byte 排程修正。修正後 1 tick 延遲、原始幀號／時間戳配對的 RGB probe 通過（3 張）；正準備正式 140 影格驗收，尚未宣告 Phase 0 通過。
 
 已完成：
 
@@ -20,6 +20,6 @@
 
 下一個單一任務：依 DECISIONS.md D004，在獨立資料夾與 client 環境評估 CARLA 0.9.15 是否可完成相同物理 / RGB probe；先核實官方 wheel / server 可用性，不混用 0.9.16 client，不改動本次門檻。不再重跑已失敗的 0.9.16 設定。替代版本尚未下載或測試。
 
-目前沒有進行中的訓練、下載、驗收或排程；本次啟動的 CARLA 程序已崩潰退出。Phase 1–10 均未開始。
+當前執行：`scripts/diagnose_landscape.py batch --output artifacts/runs/landscape-v1`；每案獨立 server / log / report，避免重跑既有相同條件，成功即停止矩陣。沒有進行中的訓練或排程。Phase 1–10 均未開始。
 
 接手時只需先讀此檔、EVALUATION 最新結果、相關程式；不需重讀整份規格或逐秒詢問訓練狀態。

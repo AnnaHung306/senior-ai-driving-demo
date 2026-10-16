@@ -21,20 +21,30 @@ def speed(vector):
 def run(args):
     criteria_bytes = args.criteria.read_bytes()
     criteria = json.loads(criteria_bytes)
+    protocol_bytes = args.protocol.read_bytes()
+    protocol = json.loads(protocol_bytes)
     if criteria['expected_frames'] != 140:
         raise ValueError('This phase-0 protocol has exactly 140 frames')
+    if protocol['readback_lag_ticks'] != 1 or protocol['measured_control_ticks'] != 140 or args.map != protocol['map']:
+        raise ValueError('Unsupported protocol or map; acceptance inputs must remain fixed')
     args.output.mkdir(parents=True, exist_ok=False)
     frames_dir = args.output / 'sensors' / 'front'
     frames_dir.mkdir(parents=True)
     evaluation_dir = args.output / 'evaluation'
     evaluation_dir.mkdir()
     write_json(args.output / 'criteria.json', criteria)
+    write_json(args.output / 'protocol.json', protocol)
     report = {'schema_version': 1, 'task': 'phase0-carla-control-camera',
               'status': 'failed', 'started_utc': datetime.now(timezone.utc).isoformat(),
               'criteria_sha256': hashlib.sha256(criteria_bytes).hexdigest(),
+              'protocol_sha256': hashlib.sha256(protocol_bytes).hexdigest(),
+              'protocol_version': protocol['version'],
               'provenance': {'images': 'carla_rgb_sensor', 'ego_state': 'simulator_ground_truth',
                              'control': 'open_loop_test_protocol', 'ai_model': None},
               'errors': [], 'checks': {}, 'metrics': {}}
+    launch_path = Path('artifacts/reports/server-launch.json')
+    if args.host in ['localhost', '127.0.0.1'] and launch_path.exists():
+        report['local_launch_evidence'] = json.loads(launch_path.read_text())
     try:
         revision = subprocess.run(['git', 'rev-parse', 'HEAD'], capture_output=True,
                                   text=True, timeout=5)
@@ -63,8 +73,9 @@ def run(args):
         settings.max_substep_delta_time = 0.01
         settings.max_substeps = 10
         world.apply_settings(settings)
-        world = client.reload_world(False)
         world.set_weather(carla.WeatherParameters.ClearNoon)
+        for _ in range(protocol['world_preroll_ticks']):
+            world.tick(args.timeout)
         library = world.get_blueprint_library()
         bp = library.find('vehicle.tesla.model3')
         bp.set_attribute('role_name', 'phase0_acceptance')
@@ -79,7 +90,7 @@ def run(args):
         actors.append(vehicle)
         camera_bp = library.find('sensor.camera.rgb')
         for key, value in {'image_size_x': '640', 'image_size_y': '360',
-                           'fov': '90', 'sensor_tick': '0.05'}.items():
+                           'fov': '90', 'sensor_tick': str(protocol['sensor_tick_s'])}.items():
             camera_bp.set_attribute(key, value)
         extrinsic = carla.Transform(carla.Location(x=1.5, z=1.7))
         camera = world.spawn_actor(camera_bp, extrinsic, attach_to=vehicle)
@@ -98,8 +109,37 @@ def run(args):
             'camera_local_to_ego': extrinsic.get_matrix(),
             'coordinate_system': 'CARLA left-handed: x forward, y right, z up; meters',
             'optical_from_carla_camera': [[0, 1, 0], [0, 0, -1], [1, 0, 0]],
-            'sensor_tick_s': 0.05})
+            'sensor_tick_s': protocol['sensor_tick_s'], 'effective_rate_hz': 20,
+            'readback_lag_ticks': 1})
+        for _ in range(protocol['sensor_warmup_ticks']):
+            vehicle.apply_control(carla.VehicleControl(brake=1.0))
+            world.tick(args.timeout)
+        pending = None
         with (evaluation_dir / 'ego.jsonl').open('w', encoding='utf-8') as log:
+            def consume(item, observed_frame):
+                nonlocal saved, max_error
+                old_step, record = item
+                if observed_frame - record['frame'] != 1:
+                    raise RuntimeError('Readback must lag exactly one recorded simulation frame')
+                image = receive_frame(image_queue, record['frame'], args.timeout)
+                if image.width != 640 or image.height != 360 or len(image.raw_data) != 640 * 360 * 4:
+                    raise RuntimeError('Malformed RGB sensor image')
+                error = abs(image.timestamp - record['timestamp_s'])
+                if not math.isfinite(error):
+                    raise RuntimeError('Non-finite camera timestamp')
+                max_error = max(max_error, error)
+                record['image_frame'] = image.frame
+                record['readback_observed_world_frame'] = observed_frame
+                observations.append(record)
+                log.write(json.dumps(record, allow_nan=False) + '\n')
+                if old_step % 10 == 0:
+                    path = frames_dir / f"{record['frame']:08d}.png"
+                    image.save_to_disk(str(path))
+                    if not path.exists() or path.stat().st_size < 100:
+                        raise RuntimeError('Camera image was not saved')
+                    samples.append({'frame': image.frame, 'timestamp_s': image.timestamp,
+                                    'image': path.relative_to(args.output).as_posix()})
+                    saved += 1
             for step in range(140):
                 stage = 'settle' if step < 20 else 'accelerate' if step < 60 else 'brake'
                 control = carla.VehicleControl(throttle=0.55 if stage == 'accelerate' else 0.0,
@@ -109,11 +149,6 @@ def run(args):
                 snapshot = world.get_snapshot()
                 if snapshot.frame != frame:
                     raise RuntimeError('Multiple clients are ticking this server')
-                image = receive_frame(image_queue, frame, args.timeout)
-                if image.width != 640 or image.height != 360 or len(image.raw_data) != 640 * 360 * 4:
-                    raise RuntimeError('Malformed RGB sensor image')
-                timestamp_error = abs(image.timestamp - snapshot.timestamp.elapsed_seconds)
-                max_error = max(max_error, timestamp_error)
                 ego = snapshot.find(vehicle.id)
                 if ego is None:
                     raise RuntimeError('Ego vehicle missing from snapshot')
@@ -125,16 +160,14 @@ def run(args):
                           'control': {'throttle': control.throttle, 'brake': control.brake,
                                       'steer': control.steer},
                           'source': 'simulator_ground_truth_evaluation_only'}
-                observations.append(record)
-                log.write(json.dumps(record, allow_nan=False) + '\n')
-                if step % 10 == 0:
-                    path = frames_dir / f'{frame:08d}.png'
-                    image.save_to_disk(str(path))
-                    if not path.exists() or path.stat().st_size < 100:
-                        raise RuntimeError('Camera image was not saved')
-                    samples.append({'frame': frame, 'timestamp_s': image.timestamp,
-                                    'image': path.relative_to(args.output).as_posix()})
-                    saved += 1
+                if pending is not None:
+                    consume(pending, frame)
+                pending = (step, record)
+            # Advance the GPU readback pipeline. Use only the stored final snapshot
+            # for metrics; this extra brake tick must not improve measured stopping.
+            vehicle.apply_control(carla.VehicleControl(brake=1.0))
+            flush_frame = world.tick(args.timeout)
+            consume(pending, flush_frame)
         write_json(args.output / 'sensor_manifest.json', {'samples': samples, 'camera_count': 1,
                     'provenance': 'simulator_rgb', 'purpose': 'phase0_smoke_only'})
     except (Exception, KeyboardInterrupt) as exc:

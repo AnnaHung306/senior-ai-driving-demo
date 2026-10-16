@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 artifacts/downloads/
 artifacts/carla/
+artifacts/carla-*/
+artifacts/runtimes/
 artifacts/runs/
 artifacts/reports/*
 !artifacts/reports/.gitkeep

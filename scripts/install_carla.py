@@ -21,9 +21,11 @@ def main():
     parser.add_argument('--expected-size', type=int, default=7812252810,
                         help='Official HEAD size on 2026-10-16; not a publisher checksum')
     parser.add_argument('--wait-seconds', type=int, default=0)
+    parser.add_argument('--version', choices=['0.9.15', '0.9.16'], default='0.9.16')
     args = parser.parse_args()
     deadline = time.monotonic() + args.wait_seconds
-    report = {'status': 'failed', 'source': 'https://downloads.carlasim.com/Windows/CARLA_0.9.16.zip',
+    report = {'status': 'failed', 'version': args.version,
+              'source': f'https://downloads.carlasim.com/Windows/CARLA_{args.version}.zip',
               'archive': str(args.archive.resolve()), 'errors': [],
               'publisher_checksum_verified': False,
               'started_utc': datetime.now(timezone.utc).isoformat()}
@@ -68,7 +70,8 @@ def main():
         report['zip_crc_verified'] = True
     except Exception as exc:
         report['errors'].append(f'{type(exc).__name__}: {exc}')
-    write_json(ROOT / 'artifacts/reports/installation.json', report)
+    report_name = 'installation.json' if args.version == '0.9.16' else f'installation-{args.version}.json'
+    write_json(ROOT / 'artifacts/reports' / report_name, report)
     print(json.dumps(report), flush=True)
     return 0 if report['status'] == 'passed' else 1
 

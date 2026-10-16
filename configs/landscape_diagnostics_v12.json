@@ -1,0 +1,7 @@
+{
+  "version": "landscape-diagnostics-v12-native-fix",
+  "evidence": "Owned server dump: StatsThread waits in PixelReader.cpp:64. Bundled PDB: StatsThread=0, HighTaskPriority=512, AnyNormalThreadHiPriTask=767. Disassembly: PixelReader passes 512 to AsyncTask. Test the verified one-byte change to 767, retaining task priority and changing only thread selection.",
+  "cases": [
+    {"id": "pixel-reader-any-thread", "setup": "load", "quality": "Low", "direct_map": false, "sensor_warmup_ticks": 5, "sensor_tick": "0.0", "snapshot_callback": true, "copy_image_data": true, "hypothesis": "Move GPU readback polling off the named StatsThread onto the worker pool"}
+  ]
+}

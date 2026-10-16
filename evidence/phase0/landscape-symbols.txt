@@ -1,0 +1,16 @@
+FLandscapeRenderSystem::FetchHeightmapLODBiases
+C:\Users\jenkins\unreal-engine\Engine\Source\Runtime\Landscape\Private\LandscapeRender.cpp:986:0
+FLandscapeRenderSystem::FGetSectionLODBiasesTask::AnyThreadTask(void)
+C:\Users\jenkins\unreal-engine\Engine\Source\Runtime\Landscape\Public\LandscapeRender.h:640:0
+
+FScopeCycleCounter::{dtor}
+C:\Users\jenkins\unreal-engine\Engine\Source\Runtime\Core\Public\Stats\Stats.h:71:0
+TGraphTask<struct FLandscapeRenderSystem::FGetSectionLODBiasesTask>::ExecuteTask(class TArray<class FBaseGraphTask *, class TSizedDefaultAllocator<32>> &, enum ENamedThreads::Type)
+C:\Users\jenkins\unreal-engine\Engine\Source\Runtime\Core\Public\Async\TaskGraphInterfaces.h:889:0
+
+FTaskThreadAnyThread::ProcessTasks(void)
+C:\Users\jenkins\unreal-engine\Engine\Source\Runtime\Core\Private\Async\TaskGraph.cpp:1066:0
+
+UTexture2D::GetNumResidentMips(void) const
+C:\Users\jenkins\unreal-engine\Engine\Source\Runtime\Engine\Private\Texture2D.cpp:213:0
+

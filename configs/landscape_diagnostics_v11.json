@@ -1,0 +1,7 @@
+{
+  "version": "landscape-diagnostics-v11-forensics",
+  "evidence": "Parameter changes no longer add useful discrimination. Capture a native dump of the owned server at the known five-callback stall instead of guessing more flags.",
+  "cases": [
+    {"id": "native-stall-dump", "setup": "load", "quality": "Low", "direct_map": false, "sensor_warmup_ticks": 5, "sensor_tick": "0.0", "snapshot_callback": true, "copy_image_data": true, "save_startup_images": 3, "dump_hang": true, "hypothesis": "Locate the blocked native game/render threads and preserve actual startup RGB pixels"}
+  ]
+}

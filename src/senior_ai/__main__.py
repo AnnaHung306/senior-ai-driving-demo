@@ -18,6 +18,7 @@ def main():
     smoke.add_argument('--timeout', type=float, default=30)
     smoke.add_argument('--output', type=Path, required=True, help='New run directory; existing paths are refused')
     smoke.add_argument('--criteria', type=Path, default=Path('configs/phase0_acceptance.json'))
+    smoke.add_argument('--protocol', type=Path, default=Path('configs/phase0_protocol_v2.json'))
     def run_smoke(args):
         from .smoke import run
         return run(args)

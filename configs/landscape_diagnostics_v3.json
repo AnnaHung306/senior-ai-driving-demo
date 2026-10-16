@@ -1,0 +1,8 @@
+{
+  "version": "landscape-diagnostics-v3",
+  "evidence": "Load-once and Epic+reload both complete empty/vehicle ticks but exact RGB frame waits time out. Audit actual callback frames before attributing this to absent images.",
+  "cases": [
+    {"id": "every-tick-offscreen", "setup": "load", "quality": "Low", "direct_map": false, "sensor_warmup_ticks": 5, "sensor_tick": "0.0", "offscreen": true, "hypothesis": "Sample every simulation tick and audit callback frame IDs"},
+    {"id": "every-tick-windowed", "setup": "load", "quality": "Low", "direct_map": false, "sensor_warmup_ticks": 5, "sensor_tick": "0.0", "offscreen": false, "hypothesis": "Retain all inputs and replace offscreen renderer with a hidden windowed render context"}
+  ]
+}

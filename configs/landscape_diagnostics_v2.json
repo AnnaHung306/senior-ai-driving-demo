@@ -1,0 +1,9 @@
+{
+  "version": "landscape-diagnostics-v2",
+  "evidence": "load-once-low completed 10 empty and 20 vehicle ticks; RGB timed out without server crash",
+  "cases": [
+    {"id": "load-once-low-warmup", "setup": "load", "quality": "Low", "direct_map": false, "sensor_warmup_ticks": 5, "hypothesis": "Keep the working map lifecycle and allow stream initialization before exact-frame capture"},
+    {"id": "direct-map-low-warmup", "setup": "current", "quality": "Low", "direct_map": true, "sensor_warmup_ticks": 5, "hypothesis": "Avoid runtime map changes entirely"},
+    {"id": "reload-epic-warmup", "setup": "load-reload", "quality": "Epic", "direct_map": false, "sensor_warmup_ticks": 5, "hypothesis": "Test texture/LOD quality at the original reload lifecycle"}
+  ]
+}

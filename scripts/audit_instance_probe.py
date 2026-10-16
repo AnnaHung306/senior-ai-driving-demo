@@ -33,7 +33,7 @@ def raw_rgb(path, shape):
     return array
 
 
-def audit(root, revision='v2'):
+def audit(root, revision='v3'):
     if not re.fullmatch('[A-Za-z0-9_-]+', revision):
         raise ValueError('Invalid audit revision')
     config = json.loads((root / 'config.json').read_text())
@@ -131,6 +131,7 @@ def audit(root, revision='v2'):
         'checks': checks, 'training_approved': False, 'checked_pngs': len(verified),
         'inventory_sha256': sha(root / 'image_inventory.jsonl'), 'auditor_sha256': sha(Path(__file__)),
         'metadata_sha256': metadata_hashes, 'qa_directory': qa.name, 'revision': revision,
+        'geometry_source_sha256': sha(ROOT / 'src/senior_ai/instance_labels.py'),
         'semantic_disagreement_pixels': mismatches, 'semantic_disagreement_fraction': mismatches / pixels,
         'front_target_visible_pixels': {name: roles['target']['visible_pixels'] for name, roles in front.items()},
         'car_depth_geometry_hypotheses': {h: depth_totals[h] / depth_totals['pixels'] if depth_totals['pixels'] else None for h in ['axial', 'range']},
@@ -148,6 +149,6 @@ def audit(root, revision='v2'):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(); parser.add_argument('root', type=Path)
-    parser.add_argument('--revision', default='v2')
+    parser.add_argument('--revision', default='v3')
     args = parser.parse_args()
     raise SystemExit(audit(args.root.resolve(), args.revision))

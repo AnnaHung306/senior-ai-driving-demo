@@ -18,7 +18,10 @@ def classify_candidate(candidate, policy):
         reasons.append('semantic_alignment')
     if candidate['amodal_projection']['near_plane_clipped']:
         reasons.append('near_plane')
-    projected = candidate['amodal_projection']['bbox_xyxy']
+    projection_key = policy.get('geometry_projection', 'amodal_projection')
+    if 'geometry_tolerance_m' in policy and candidate.get('geometry_tolerance_m') != policy['geometry_tolerance_m']:
+        raise ValueError('Policy/audit geometry tolerance differs')
+    projected = candidate[projection_key]['bbox_xyxy']
     margin = policy['projection_margin_pixels']
     if projected is None or any([box[0] < projected[0] - margin, box[1] < projected[1] - margin,
                                   box[2] > projected[2] + margin, box[3] > projected[3] + margin]):

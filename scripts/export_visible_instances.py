@@ -22,6 +22,7 @@ def main():
     parser.add_argument('root', type=Path)
     parser.add_argument('--policy', type=Path, default=ROOT / 'configs/visibility_policy_v1.json')
     parser.add_argument('--audit', default='audit-v2.json')
+    parser.add_argument('--output', default='visible_instances')
     args = parser.parse_args()
     root = args.root.resolve()
     audit_path = safe_path(root, args.audit)
@@ -35,7 +36,7 @@ def main():
         if digest(safe_path(root, name)) != expected:
             raise ValueError('Metadata changed after audit')
     inventory = {i['path']: i['sha256'] for i in [json.loads(s) for s in (root / 'image_inventory.jsonl').read_text().splitlines()]}
-    destination = root / 'visible_instances'; destination.mkdir(exist_ok=False)
+    destination = safe_path(root, args.output); destination.mkdir(exist_ok=False)
     policy = json.loads(args.policy.read_text())
     (destination / 'policy.json').write_bytes(args.policy.read_bytes())
     index = {x['case']: x for x in json.loads((root / 'index.json').read_text())}
@@ -63,7 +64,8 @@ def main():
         'views': len(exported), 'positive_object_views': positive, 'ignored_object_views': ignored,
         'not_visible_object_views': invisible, 'ignore_pixels': ignore_pixels, 'ignore_reasons': dict(reasons),
         'policy_sha256': hashlib.sha256(args.policy.read_bytes()).hexdigest(),
-        'raw_audit_sha256': digest(audit_path)}
+        'raw_audit_sha256': digest(audit_path), 'exporter_sha256': digest(Path(__file__)),
+        'policy_source_sha256': digest(ROOT / 'src/senior_ai/visibility_policy.py')}
     write_json(destination / 'report.json', summary)
     print(json.dumps(summary))
 

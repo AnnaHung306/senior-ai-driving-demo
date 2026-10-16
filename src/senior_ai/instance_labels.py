@@ -3,7 +3,7 @@
 CARLA 0.9.16 Tagger.cpp: R=semantic, G=actor low byte, B=actor high byte.
 All pixel boxes use xyxy with exclusive maxima; projected boxes are continuous.
 """
-from itertools import combinations
+from itertools import combinations, product
 
 import numpy as np
 
@@ -90,18 +90,23 @@ def visible_candidate(actor, classes, ids, semantic, depth, camera, near=0.1):
     invalid_tags = [int(t) for t in tags if int(t) not in allowed]
     projection = project_box(actor['world_vertices_m'], camera['T_world_from_camera'], camera['K'],
                              ids.shape[1], ids.shape[0], near)
+    tolerance = 0.15
+    local = np.array(list(product(*[[-float(e) - tolerance, float(e) + tolerance] for e in actor['extent_m']])))
+    expanded = (np.asarray(actor['T_world_from_box']) @ np.c_[local, np.ones(8)].T).T[:, :3]
+    support_envelope = project_box(expanded, camera['T_world_from_camera'], camera['K'], ids.shape[1], ids.shape[0], near)
     result = {'source': 'simulator_ground_truth_candidate_not_training_approved',
         'actor_id': actor['actor_id'], 'kind': actor['kind'], 'visible_pixels': int(mask.sum()),
         'semantic_pixels_by_tag': {str(int(t)): int(n) for t, n in zip(tags, counts)},
         'unexpected_semantic_tags': invalid_tags,
         'instance_semantic_disagreement_pixels': int((classes[mask] != semantic[mask]).sum()),
         'visible_bbox_xyxy': bbox, 'amodal_projection': projection,
+        'projection_support_envelope': support_envelope, 'geometry_tolerance_m': tolerance,
         'status': 'not_visible' if bbox is None else 'candidate_requires_policy_and_qa',
         'occlusion': 'unknown; bbox fill is not physical visibility fraction'}
     if bbox is not None:
         result['touches_image_boundary'] = bbox[0] == 0 or bbox[1] == 0 or bbox[2] == ids.shape[1] or bbox[3] == ids.shape[0]
         result['depth_geometry'] = depth_box_support(mask, depth, camera['K'], camera['T_world_from_camera'],
-                                                     actor['T_world_from_box'], actor['extent_m'])
+                                                     actor['T_world_from_box'], actor['extent_m'], tolerance=tolerance)
         projected = projection['bbox_xyxy']
         result['visible_pixels_per_projected_bbox_area_not_visibility'] = (float(mask.sum()) /
             ((projected[2] - projected[0]) * (projected[3] - projected[1]))) if projected else None

@@ -58,3 +58,15 @@ class VisibilityPolicyTests(unittest.TestCase):
         self.assertEqual(labels.tolist(), [1, -1, 0, -1])
         with self.assertRaises(ValueError):
             ignore_background_proposals([[1, 0, 0, 1]], [0], [])
+
+    def test_projection_and_depth_tolerance_are_consistent_in_revised_policy(self):
+        c = copy.deepcopy(self.candidate)
+        c['visible_bbox_xyxy'] = [0, 0, 12, 8]
+        c['geometry_tolerance_m'] = .15
+        c['projection_support_envelope'] = {'bbox_xyxy': [0, 0, 12, 8]}
+        self.assertEqual(classify_candidate(c, self.policy)[0], 'ignore')
+        policy = {**self.policy, 'geometry_projection': 'projection_support_envelope', 'geometry_tolerance_m': .15}
+        self.assertEqual(classify_candidate(c, policy)[0], 'positive')
+        policy['geometry_tolerance_m'] = .2
+        with self.assertRaises(ValueError):
+            classify_candidate(c, policy)

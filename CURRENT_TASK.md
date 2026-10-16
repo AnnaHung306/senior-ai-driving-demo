@@ -1,3 +1,7 @@
+# 最新實際狀態
+
+007完整audit已通過86400張、105物件GT抽查/18語意圖/16 phase crops已由assistant實際檢視，visual_review.json已綁定批准；不是人工認證。CARLA off。準備正式segmentation/detection training configs/sunny_training_v3_9.json。phase lockbox黃燈僅4crops/1group，必須額外正式補收才能phase驗收，不能放寬門檻。
+
 # 目前任務（2026-10-16 晴天 Phase3）
 
 使用者要求這次盡力完成整個Phase3才結束；明確允許全程理想晴朗白天，雨夜需求移除。Phase3尚未完成，不進Phase4。請持續做到實際訓練/評估，不能再只交小probe。

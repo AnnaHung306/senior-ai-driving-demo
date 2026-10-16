@@ -10,7 +10,7 @@ from .dataset import safe_path
 from .instance_labels import decode_instance_rgb
 
 DETECTION_CLASSES={'car':1,'pedestrian':2,'bicycle':3,'motorcycle':4,'truck':5,'bus':6,'traffic_light':7,'temporary_obstacle':8}
-SEGMENTATION_NAMES=['other_annotated','road','sidewalk','pedestrian','rider','car','truck','bus','motorcycle','bicycle','road_line','traffic_light','wall','fence','pole','verified_temporary_obstacle','terrain_or_ground']
+SEGMENTATION_NAMES=['other_annotated','road','sidewalk','pedestrian','rider','car','truck','bus','motorcycle','bicycle','road_line','traffic_light','wall','fence','pole','temporary_obstacle','terrain_or_ground']
 # CARLA 0.9.16 rpc/ObjectLabel.h: raw4 Walls,5 Fences,6 Poles,11 Sky.
 RAW_TO_SEG={1:1,2:2,12:3,13:4,14:5,15:6,16:7,18:8,19:9,24:10,7:11,4:12,5:13,6:14,10:16,25:16}
 

@@ -22,6 +22,7 @@ ROOT=Path(__file__).resolve().parents[1]; sys.path.insert(0,str(ROOT/'src'))
 import numpy as np
 import torch
 import torchvision
+import PIL
 from torch.utils.data import DataLoader
 from senior_ai.core import write_json
 from senior_ai.detection_model import make_detector
@@ -134,22 +135,29 @@ def require_idle_gpu():
 
 def run(args):
     config=json.loads(args.config.read_text(encoding='utf-8')); task=args.task; c=config[task]
-    root=ROOT/config['dataset']; run=args.run.resolve()
+    root=args.dataset_root.resolve() if args.dataset_root else ROOT/config['dataset']; run=args.run.resolve()
     require_idle_gpu()
     configure_cuda(); seed_all(config['seed'])
     provenance={'data':verify(root),'source':source_fingerprint(),'config_sha256':sha(args.config),
                 'python':platform.python_version(),'torch':torch.__version__,'torchvision':torchvision.__version__,
+                'numpy':np.__version__,'pillow':PIL.__version__,'cudnn':torch.backends.cudnn.version(),
+                'driver':subprocess.check_output(['nvidia-smi','--query-gpu=driver_version','--format=csv,noheader'],text=True).strip(),
                 'cuda':torch.version.cuda,'device':torch.cuda.get_device_name(),
                 'git_revision':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()}
     if run.exists() and not args.resume: raise FileExistsError('New experiment requires new run directory')
     if args.resume:
         prior=json.loads((run/'provenance.json').read_text(encoding='utf-8'))
-        if prior!=provenance: raise ValueError('Resume source/config/data/runtime differs')
+        # Git may advance for docs alone. Exact source bytes, config, data and
+        # runtime are authoritative; retain the original Git attribution.
+        if {k:v for k,v in prior.items() if k!='git_revision'}!={k:v for k,v in provenance.items() if k!='git_revision'}:
+            raise ValueError('Resume source/config/data/runtime differs')
+        provenance=prior
         state=json.loads((run/'state.json').read_text(encoding='utf-8'))
         if state['status']=='completed' or (run/'lockbox_started.json').exists(): raise ValueError('Completed or evaluated run cannot resume')
         if sha(run/'last.pt')!=state['last_sha256']: raise ValueError('Checkpoint integrity failure')
     else:
-        run.mkdir(parents=True); write_json(run/'config.json',config); write_json(run/'provenance.json',provenance)
+        run.mkdir(parents=True);(run/'config.json').write_bytes(args.config.read_bytes());write_json(run/'provenance.json',provenance)
+        if sha(run/'config.json')!=provenance['config_sha256']:raise ValueError('Frozen config bytes differ')
         for relative in provenance['source']['files']:
             destination=run/'source'/relative; destination.parent.mkdir(parents=True,exist_ok=True); destination.write_bytes((ROOT/relative).read_bytes())
     started=time.monotonic()
@@ -170,7 +178,7 @@ def run(args):
         write_json(run/'overfit.json',sanity)
         if not sanity['passed']: raise RuntimeError('Train-only overfit sanity failed')
         del model,optimizer,rgb,target; gc.collect(); torch.cuda.empty_cache(); seed_all(config['seed'])
-    model=build_model(task,config).cuda(); optimizer=torch.optim.AdamW(model.parameters(),lr=c['learning_rate'],weight_decay=c['weight_decay'])
+    model=build_model(task,config,pretrained=not args.resume).cuda(); optimizer=torch.optim.AdamW(model.parameters(),lr=c['learning_rate'],weight_decay=c['weight_decay'])
     total_steps=math.ceil(len(train)/c['batch_size'])*c['epochs']
     schedule=torch.optim.lr_scheduler.LambdaLR(optimizer,lambda s:min(1,(s+1)/max(1,c['warmup_steps']))*.5*(1+math.cos(math.pi*min(s,total_steps)/total_steps)))
     first_epoch=0; best=-math.inf; updates=0
@@ -178,6 +186,8 @@ def run(args):
         saved=torch.load(run/'last.pt',map_location='cpu',weights_only=False)
         model.load_state_dict(saved['model']); optimizer.load_state_dict(saved['optimizer']); schedule.load_state_dict(saved['scheduler'])
         first_epoch=saved['epoch']+1; best=saved['best_score']; updates=saved['updates']
+        if task=='detection':
+            model.rpn.ignore_assignment_calls=saved.get('rpn_ignore_calls',0);model.roi_heads.ignore_assignment_calls=saved.get('roi_ignore_calls',0)
         random.setstate(saved['rng']['python']); np.random.set_state(saved['rng']['numpy']); torch.set_rng_state(saved['rng']['torch']); torch.cuda.set_rng_state_all(saved['rng']['cuda'])
     else:
         baseline,_=evaluate(model,task,validation,c['batch_size']); write_json(run/'initial_validation.json',baseline)
@@ -199,6 +209,7 @@ def run(args):
         checkpoint={'task':task,'model':model.state_dict(),'optimizer':optimizer.state_dict(),'scheduler':schedule.state_dict(),
             'epoch':epoch,'updates':updates,'best_score':best,'config':config,'provenance':provenance,
             'rng':{'python':random.getstate(),'numpy':np.random.get_state(),'torch':torch.get_rng_state(),'cuda':torch.cuda.get_rng_state_all()}}
+        if task=='detection':checkpoint.update({'rpn_ignore_calls':model.rpn.ignore_assignment_calls,'roi_ignore_calls':model.roi_heads.ignore_assignment_calls})
         save_checkpoint(run/'last.pt',checkpoint)
         if improved: save_checkpoint(run/'best.pt',checkpoint)
         row={'epoch':epoch,'updates':updates,'mean_loss':float(np.mean(losses)),'max_gradient_norm':max_norm,
@@ -229,7 +240,7 @@ def run(args):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(); p.add_argument('--task',choices=['detection','segmentation'],required=True); p.add_argument('--config',type=Path,required=True)
-    p.add_argument('--run',type=Path,required=True); p.add_argument('--resume',action='store_true'); a=p.parse_args()
+    p.add_argument('--run',type=Path,required=True);p.add_argument('--dataset-root',type=Path);p.add_argument('--resume',action='store_true');a=p.parse_args()
     try: run(a)
     except Exception as exc:
         if a.run.is_dir(): write_json(a.run/'failure.json',{'error':type(exc).__name__,'message':str(exc),'traceback':traceback.format_exc()})

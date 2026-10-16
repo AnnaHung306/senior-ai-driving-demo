@@ -1,0 +1,87 @@
+{
+  "status": "passed",
+  "training_approved": true,
+  "audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+  "reviewer": "Codex assistant",
+  "scope": "Inspected all 105 mid-episode object GT panels across all 18 scenes via 14 contact pages, 18 front-view semantic targets via three contact pages, and 16 balanced phase crops across four splits. No detector/model scores observed.",
+  "limitations": [
+    "Assistant visual sample review, not exhaustive human certification.",
+    "Phase color eligibility is a conservative RGB/semantic heuristic bound to native state; small lamps remain an ambiguity limitation.",
+    "Phase lockbox yellow has 4 crops in one group, below separate phase coverage requirements. Object/semantic approval does not waive phase coverage.",
+    "Shared assets and correlated sequence frames; town split is not asset OOD evidence."
+  ],
+  "reviewed_images": [
+    {
+      "path": "qa-review/objects-00.png",
+      "sha256": "bb4bd57716aa3b03342103bd13deb51c0cf26eae0508e3436f11d8a121be3183"
+    },
+    {
+      "path": "qa-review/objects-01.png",
+      "sha256": "50600c0a67579c974fc8c72cd2d4d0f55be474910c732a35af2d64a22c7aaf9a"
+    },
+    {
+      "path": "qa-review/objects-02.png",
+      "sha256": "94bd848fe5cc23ec99f257c5b8a822b917605150e1cc2ce30b81bdf3e81cd7e8"
+    },
+    {
+      "path": "qa-review/objects-03.png",
+      "sha256": "93f2c2837e471b76e41ce4de06536cc10f7636267a63d7274bc85cf817d00835"
+    },
+    {
+      "path": "qa-review/objects-04.png",
+      "sha256": "51598377746e5b97d0435115aa59e358bec12aa6db2d30b4b153355046ae0812"
+    },
+    {
+      "path": "qa-review/objects-05.png",
+      "sha256": "b13b6e42ecde47e6c1ce5d32ac2ecd2e8de8110532b01cd25cb4664908d85e34"
+    },
+    {
+      "path": "qa-review/objects-06.png",
+      "sha256": "569523c86ad09168f5db3b816404bf38ce2c90801acd3ec1218eb01c074bedc6"
+    },
+    {
+      "path": "qa-review/objects-07.png",
+      "sha256": "980fda2ce8dc3c4643d4813f4ab6d3c16e1b3ca9f6151e1ff4b083c392e3f8d4"
+    },
+    {
+      "path": "qa-review/objects-08.png",
+      "sha256": "9b7600cfa3c3ce47ea852e4b1c754ceb3a78f47eb45f49d122bcdf7191dcb580"
+    },
+    {
+      "path": "qa-review/objects-09.png",
+      "sha256": "48c61a84052cf805ba237e1873dbd40b56db9655e18e9abec0513d00ae33d43f"
+    },
+    {
+      "path": "qa-review/objects-10.png",
+      "sha256": "a3004b6422b88b22ed7f76b1a55c1b644438a516a39a8203bcc78ddac1b6acc0"
+    },
+    {
+      "path": "qa-review/objects-11.png",
+      "sha256": "8cf708813a462fcf514206dab3baf271eab41200b316986cf08c68cabfe1bf25"
+    },
+    {
+      "path": "qa-review/objects-12.png",
+      "sha256": "43523dd2548c2116c077e2d6a6043ee46b29cc46322d19d6da28bdb0c148b1e9"
+    },
+    {
+      "path": "qa-review/objects-13.png",
+      "sha256": "0ea9c1e9f9db5817a78c654f83c734a6c6ed858ef4dbbf40ac8714a74b1fb467"
+    },
+    {
+      "path": "qa-review/phase-balanced.png",
+      "sha256": "9e6fd18058eba2d22242422643d0c2ab1390ab74a640bc2bbb93f00e21e3a499"
+    },
+    {
+      "path": "qa-review/semantic-00.png",
+      "sha256": "822225e2e757f9aba989e8916b3a987e550a7b96048ffea421fbea2343c9cd9e"
+    },
+    {
+      "path": "qa-review/semantic-01.png",
+      "sha256": "dfcfabffaee76348dd6fa5a87729abbe97e2d1922297b56db4e9e48960c1912e"
+    },
+    {
+      "path": "qa-review/semantic-02.png",
+      "sha256": "f103f178aae8865f6e34d94790fe08a29e0448f487ceeed88ce446855fc7b577"
+    }
+  ]
+}

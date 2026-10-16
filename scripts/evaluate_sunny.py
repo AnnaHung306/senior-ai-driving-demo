@@ -80,7 +80,7 @@ def main(args):
     run=args.run.resolve(); state=json.loads((run/'state.json').read_text(encoding='utf-8'))
     if state['status']!='completed' or not state['checkpoint_reload_identical']: raise ValueError('Completed, verified training required')
     if sha(run/'best.pt')!=state['best_sha256']: raise ValueError('Selected model changed')
-    model,task,saved=load_model(run/'best.pt','cpu');config=saved['config'];root=ROOT/config['dataset']
+    model,task,saved=load_model(run/'best.pt','cpu');config=saved['config'];root=args.dataset_root.resolve() if args.dataset_root else ROOT/config['dataset']
     for relative,digest in saved['provenance']['source']['files'].items():
         if sha(ROOT/relative)!=digest: raise ValueError('Evaluation source differs from frozen training source: '+relative)
     if verify(root)!=saved['provenance']['data']: raise ValueError('Training dataset differs')
@@ -106,4 +106,4 @@ def main(args):
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--run',type=Path,required=True);sys.exit(main(p.parse_args()))
+    p=argparse.ArgumentParser();p.add_argument('--run',type=Path,required=True);p.add_argument('--dataset-root',type=Path);sys.exit(main(p.parse_args()))

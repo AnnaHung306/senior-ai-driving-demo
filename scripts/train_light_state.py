@@ -83,6 +83,8 @@ def train(args):
     optimizer=torch.optim.AdamW(model.parameters(),lr=config['learning_rate'],weight_decay=.0001)
     weights=torch.tensor(np.clip(sum(train.counts)/(4*np.array(train.counts)),.1,10),device='cuda',dtype=torch.float32)
     source={str(p.relative_to(ROOT)).replace('\\','/'):sha(p) for p in sorted((ROOT/'src').rglob('*.py'))+[Path(__file__),ROOT/'scripts/train_sunny.py',ROOT/'scripts/evaluate_light_state.py']}
+    for relative in source:
+        destination=args.run/'source'/relative;destination.parent.mkdir(parents=True,exist_ok=True);destination.write_bytes((ROOT/relative).read_bytes())
     write_json(args.run/'config.json',config);best=-1.;started=time.monotonic();updates=0
     for epoch in range(config['epochs']):
         model.train();losses=[]

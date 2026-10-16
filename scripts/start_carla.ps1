@@ -1,4 +1,5 @@
-param([string]$CarlaRoot = '', [int]$Port = 2000)
+param([string]$CarlaRoot = '', [int]$Port = 2000,
+      [ValidateSet('dx11','dx12')][string]$GraphicsApi = 'dx11')
 $ErrorActionPreference = 'Stop'
 if (-not $CarlaRoot) {
     $report = Join-Path (Split-Path -Parent $PSScriptRoot) 'artifacts\reports\installation.json'
@@ -12,5 +13,7 @@ if (-not $CarlaRoot) {
 }
 $executable = Join-Path $CarlaRoot 'CarlaUE4.exe'
 if (-not (Test-Path -LiteralPath $executable)) { throw "CARLA not installed: $executable" }
-$server = Start-Process -FilePath $executable -WorkingDirectory $CarlaRoot -WindowStyle Hidden -PassThru -ArgumentList @('-RenderOffScreen', '-quality-level=Low', "-carla-rpc-port=$Port", '-nosound', '-unattended')
-@{launcher_pid=$server.Id; executable=$executable; port=$Port} | ConvertTo-Json
+$server = Start-Process -FilePath $executable -WorkingDirectory $CarlaRoot -WindowStyle Hidden -PassThru -ArgumentList @("-$GraphicsApi", '-RenderOffScreen', '-quality-level=Low', "-carla-rpc-port=$Port", '-nosound', '-unattended')
+$launch = @{launcher_pid=$server.Id; executable=$executable; port=$Port; graphics_api=$GraphicsApi}
+$launch | ConvertTo-Json | Set-Content -LiteralPath (Join-Path (Split-Path -Parent $PSScriptRoot) 'artifacts\reports\server-launch.json')
+$launch | ConvertTo-Json

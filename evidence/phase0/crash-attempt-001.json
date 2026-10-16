@@ -1,0 +1,9 @@
+{
+  "Error": "Unhandled Exception: EXCEPTION_ACCESS_VIOLATION 0x0000000000000000",
+  "ProcessId": "6248",
+  "SecondsSinceStart": "221",
+  "CrashedThread": "TaskGraphThreadNP 0",
+  "RHI": "D3D12",
+  "Adapter": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "OutOfMemory": "0"
+}

@@ -38,3 +38,12 @@
 - 同時獨立新建 client 可成功取得 server 0.9.16；重新執行 doctor 全數通過。
 - 推測啟動前建立的 client 保留失敗連線狀態；最小修正為每次 readiness retry 重建 client，保留原 180 秒上限與所有車輛驗收門檻。
 - 此次尚未執行車輛 smoke，不將 doctor 通過冒充車輛驗收完成。
+
+## SIM-001 — 2026-10-16，第一次實機控制 / RGB
+
+- 程式版本 `9a965b2`，原始 phase0-v1 門檻未修改。
+- doctor 通過；smoke 在第一張 RGB 前 server 崩潰，沒有有效行駛指標，結果 failed。
+- CrashContext：D3D12、RTX 4070 Laptop、TaskGraphThreadNP 0、NULL access violation；bIsOOM=0。不能僅根據觀察到約 7GB GPU 使用量就判定是 OOM。
+- 證據 `evidence/phase0/crash-attempt-001.json` 與 `simulation-attempt-001.json`。
+- 下一個有限對照實驗僅改渲染後端為 `-dx11`；保持同一地圖、攝影機、控制 protocol 與驗收標準。
+- 此為相容性假說，並非已證實的根因或修復。

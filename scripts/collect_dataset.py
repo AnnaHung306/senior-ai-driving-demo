@@ -1,5 +1,6 @@
 """Bounded eight-position RGB/semantic/depth pilot; simulator GT is labels only."""
 import argparse
+import faulthandler
 from concurrent.futures import ThreadPoolExecutor
 import hashlib
 import json
@@ -193,7 +194,7 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
                                 'frame': frame, 'input': input_relative, 'label': label_relative})
                 result['bundles'] += 1
                 result['images'] += len(jobs)
-            for _ in range(count):
+            for step in range(count):
                 if time.monotonic() - started > criteria['max_scene_wall_s']:
                     raise TimeoutError('Scene wall-clock deadline')
                 vehicle.apply_control(carla.VehicleControl(brake=1))
@@ -203,6 +204,8 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
                     raise ValueError('Multiple tick clients detected')
                 # Copy pending GT now, before advancing; live actor state later is forbidden.
                 ego = snapshot.find(vehicle.id)
+                if ego is None:
+                    raise ValueError('Missing ego snapshot')
                 stamp = snapshot.timestamp.elapsed_seconds
                 feature = {'schema_version': 1, 'source': 'carla_rgb_only', 'scene_id': scene['id'],
                            'frame': frame, 'timestamp_s': stamp, 'cameras': {}, 'calibration': cal_relative}
@@ -215,12 +218,18 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
                     if state is None:
                         raise ValueError('Missing actor snapshot')
                     bbox, t = actor.bounding_box, state.get_transform()
+                    if step == 0:
+                        result['stage'] = 'object_labels'
+                        write_json(folder / 'report.json', result)
                     labels['objects_3d'].append({'actor_id': actor.id, 'blueprint': actor.type_id,
                          'semantic_tags': list(actor.semantic_tags), 'world_pose': pose(t),
                          'bbox_local_pose': pose(carla.Transform(bbox.location, bbox.rotation)),
                          'extent_m': xyz(bbox.extent), 'world_vertices_m': [xyz(v) for v in bbox.get_world_vertices(t)],
                          'velocity_mps': xyz(state.get_velocity()), 'visibility': 'not_filtered; may be occluded/outside view'})
                 if pending is not None:
+                    if step == 1:
+                        result['stage'] = 'multimodal_consume'
+                        write_json(folder / 'report.json', result)
                     consume(pending, frame)
                 pending = (feature, labels)
             consume(pending, world.tick(15))
@@ -232,7 +241,17 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
     except Exception as exc:
         result['errors'].append(f'{type(exc).__name__}: {exc}')
     finally:
-        client.set_timeout(2)
+        result['stage'] = 'cleanup'
+        write_json(folder / 'report.json', result)
+        # Unregister live vehicles before destroying them. Keep TM synchronous
+        # through world restoration, as in the packaged traffic example.
+        client.set_timeout(15 if not result['errors'] else 2)
+        for npc in label_actors:
+            try:
+                npc.set_autopilot(False, 8000)
+            except Exception as exc:
+                cleanup = False
+                result['errors'].append(f'autopilot unregister: {exc}')
         for sensor in reversed(sensors):
             try:
                 sensor.stop()
@@ -247,10 +266,10 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
                 cleanup = False
                 result['errors'].append(f'destroy: {exc}')
         try:
-            if manager is not None:
-                manager.set_synchronous_mode(False)
             world.set_weather(original_weather)
             world.apply_settings(original)
+            if manager is not None:
+                manager.set_synchronous_mode(False)
         except Exception as exc:
             cleanup = False
             result['errors'].append(f'restore: {exc}')
@@ -266,12 +285,14 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
 
 
 def main():
+    faulthandler.enable()
     parser = argparse.ArgumentParser()
     parser.add_argument('mode', choices=['prepare', 'probe', 'collect'])
     parser.add_argument('--criteria', type=Path, default=ROOT / 'configs/dataset_pilot_criteria_v1.json')
     parser.add_argument('--rig', type=Path, default=ROOT / 'configs/camera_rig_v1.json')
     parser.add_argument('--plan', type=Path, default=ROOT / 'configs/dataset_scenes_v1.json')
     parser.add_argument('--output', type=Path)
+    parser.add_argument('--probe-scene', type=int, default=0)
     args = parser.parse_args()
     if args.mode != 'prepare' and args.output is None:
         parser.error('--output required')
@@ -306,7 +327,7 @@ def main():
               'git_revision': subprocess.run(['git', 'rev-parse', 'HEAD'], capture_output=True, text=True, check=True).stdout.strip(),
               'server_launch': json.loads((ROOT / 'artifacts/reports/server-launch.json').read_text(encoding='utf-8-sig'))}
     all_indexes = []
-    scenes = plan['scenes'][:1] if args.mode == 'probe' else plan['scenes']
+    scenes = [plan['scenes'][args.probe_scene]] if args.mode == 'probe' else plan['scenes']
     count = 5 if args.mode == 'probe' else criteria['bundles_per_scene']
     for scene in scenes:
         result, indexes = collect_scene(world, client, scene, rig, criteria, args.output, count)

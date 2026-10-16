@@ -37,6 +37,11 @@ class DatasetBoundaryTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 read_sensor_frame(root, 'inputs/frames/1.json')
             bad = copy.deepcopy(feature)
+            bad['cameras']['0']['timestamp_s'] = float('nan')
+            path.write_text(json.dumps(bad))
+            with self.assertRaises(ValueError):
+                read_sensor_frame(root, 'inputs/frames/1.json')
+            bad = copy.deepcopy(feature)
             bad['cameras']['0']['image'] = 'labels/semantic_segmentation/0.png'
             path.write_text(json.dumps(bad))
             with self.assertRaises(ValueError):

@@ -1,5 +1,6 @@
 """Explicit RGB-only inference boundary and independently located simulator labels."""
 import json
+import math
 from pathlib import Path
 
 import numpy as np
@@ -23,10 +24,12 @@ def read_sensor_frame(root, relative):
         raise ValueError('Unexpected inference fields; GT is forbidden')
     if frame['source'] != 'carla_rgb_only' or len(frame['cameras']) != 8:
         raise ValueError('Eight RGB inputs required')
+    if frame['schema_version'] != 1 or not isinstance(frame['frame'], int) or frame['frame'] < 0 or not math.isfinite(frame['timestamp_s']):
+        raise ValueError('Invalid input frame metadata')
     for camera in frame['cameras'].values():
         if set(camera) != {'image', 'frame', 'timestamp_s'} or camera['frame'] != frame['frame']:
             raise ValueError('Invalid camera input or frame mismatch')
-        if abs(camera['timestamp_s'] - frame['timestamp_s']) > 0.0001:
+        if not math.isfinite(camera['timestamp_s']) or abs(camera['timestamp_s'] - frame['timestamp_s']) > 0.0001:
             raise ValueError('Input timestamp mismatch')
         image = safe_path(root, camera['image'])
         if not image.is_relative_to((Path(root) / 'inputs/rgb').resolve()):

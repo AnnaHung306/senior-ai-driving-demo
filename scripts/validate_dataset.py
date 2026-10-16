@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'src'))
 from senior_ai.core import write_json
 from senior_ai.dataset import check_group_splits, read_sensor_frame, safe_path, validate_calibration
+from senior_ai.motion import audit_episode, require_class_coverage
 
 
 def read_png(path, width, height):
@@ -68,11 +69,14 @@ def validate(root, criteria_reference, rig_reference):
         raise ValueError('Insufficient scene origin separation')
     counts, pixels, files, seen, metadata_files, objects = Counter(), Counter(), [], set(), set(), Counter()
     depth_min, depth_max, max_error = float('inf'), 0.0, 0.0
+    episodes = {name: [] for name in scenes}
+    split_pixels = {name: Counter() for name in groups}
+    split_positive_images = {name: Counter() for name in groups}
     names = {c['name'] for c in rig['cameras']}
     for split in ['train', 'validation', 'test']:
         for line in (root / f'indexes/{split}.jsonl').read_text().splitlines():
-            if time.monotonic() - started > 600:
-                raise TimeoutError('Dataset audit exceeded 600 second wall-clock limit')
+            if time.monotonic() - started > criteria.get('max_audit_wall_s', 600):
+                raise TimeoutError('Dataset audit exceeded its configured wall-clock limit')
             index = json.loads(line)
             scene = scenes[index['scene_id']]
             if scene['split'] != split or index['split'] != split or index['group_id'] != scene['group_id']:
@@ -91,6 +95,12 @@ def validate(root, criteria_reference, rig_reference):
                 raise ValueError('GT/feature alignment failure')
             if len(labels['objects_3d']) != scene['requested_npcs']:
                 raise ValueError('Object labels incomplete')
+            if 'participants' in scene:
+                expected = Counter((p['blueprint'], p['kind']) for p in scene['participants'])
+                actual = Counter((o['blueprint'], o.get('kind')) for o in labels['objects_3d'])
+                if actual != expected:
+                    raise ValueError('Participant classes/blueprints differ from frozen plan')
+                episodes[scene['id']].append(labels)
             for box in labels['objects_3d']:
                 values = np.array(box['world_vertices_m'])
                 if values.shape != (8, 3) or not np.isfinite(values).all() or min(box['extent_m']) <= 0:
@@ -114,10 +124,14 @@ def validate(root, criteria_reference, rig_reference):
                     rgb, digest, size = read_png(path, rig['width'], rig['height'])
                     files.append({'path': relative, 'sha256': digest, 'bytes': size})
                     if modality == 'semantic_segmentation':
-                        ids, totals = np.unique(rgb[..., 0], return_counts=True)
+                        hist = np.bincount(rgb[..., 0].reshape(-1), minlength=29)
+                        ids = np.flatnonzero(hist)
                         if ids.max() > 28 or rgb[..., 1:].any():
                             raise ValueError('Semantic encoding corrupt')
-                        pixels.update({int(k): int(v) for k, v in zip(ids, totals)})
+                        tally = {int(k): int(hist[k]) for k in ids}
+                        pixels.update(tally)
+                        split_pixels[split].update(tally)
+                        split_positive_images[split].update(int(k) for k in ids)
                     elif modality == 'depth':
                         data = rgb.astype(np.uint32)
                         meters = (data[..., 0] + data[..., 1] * 256 + data[..., 2] * 65536) * (1000.0 / 16777215)
@@ -138,6 +152,19 @@ def validate(root, criteria_reference, rig_reference):
         raise ValueError('Image count mismatch')
     if not 0 <= depth_min < depth_max <= 1000:
         raise ValueError('Invalid depth ranges')
+    motion = {}
+    if 'capture_stride_ticks' in criteria:
+        if criteria['simulation_ticks_per_scene'] != criteria['bundles_per_scene'] * criteria['capture_stride_ticks']:
+            raise ValueError('Capture cadence and episode duration config differ')
+        require_class_coverage(split_pixels, split_positive_images, criteria)
+        route_roads = {split: {r for s in scenes.values() if s['split'] == split for r in s['route_road_ids']} for split in groups}
+        if any(route_roads[a] & route_roads[b] for a, b in [('train', 'validation'), ('train', 'test'), ('validation', 'test')]):
+            raise ValueError('Planned route roads cross splits')
+        for scene_id, records in episodes.items():
+            motion[scene_id] = audit_episode(records, criteria)
+            collisions = json.loads((root / f'scenes/{scene_id}/collisions.json').read_text())
+            if len(collisions) > criteria['max_ego_collisions']:
+                raise ValueError('Ego collision in motion episode')
     inventory = root / 'image_inventory.jsonl'
     inventory.write_text(''.join(json.dumps(item) + '\n' for item in files))
     return {'task': 'dataset-on-disk-audit', 'status': 'passed', 'bundles_by_scene': dict(counts),
@@ -150,9 +177,14 @@ def validate(root, criteria_reference, rig_reference):
             'image_bytes': sum(f['bytes'] for f in files), 'max_timestamp_error_s': max_error,
             'semantic_pixel_counts': dict(sorted(pixels.items())), 'depth_min_m': depth_min, 'depth_max_m': depth_max,
             'box_annotations_by_blueprint': dict(objects), 'inventory_sha256': hashlib.sha256(inventory.read_bytes()).hexdigest(),
+            'semantic_pixels_by_split': {s: dict(sorted(v.items())) for s, v in split_pixels.items()},
+            'semantic_positive_images_by_split': {s: dict(sorted(v.items())) for s, v in split_positive_images.items()},
+            'motion_episodes': motion,
             'scope': criteria['scope'], 'ai_model': None,
-            'limitations': ['Stationary ego and 1.5 simulation seconds per scene', 'Only six groups in one shared town',
-                            'NPC vehicles are one blueprint; no pedestrians/bicycles/motorcycles collected',
+            'limitations': (['Only six ten-second episodes, one shared town, fixed participant choreography',
+                             'Scripted walker/Traffic Manager/BasicAgent behavior is not a learned AI policy'] if motion else
+                            ['Stationary ego and 1.5 simulation seconds per scene', 'Only six groups in one shared town',
+                             'NPC vehicles are one blueprint; no pedestrians/bicycles/motorcycles collected']) + [
                             'Origin separation/group disjointness do not guarantee zero visual content overlap',
                             '3D boxes are GT and include occluded/out-of-view actors', 'No trained perception or model quality metric']}
 

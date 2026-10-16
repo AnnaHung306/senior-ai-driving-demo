@@ -234,6 +234,9 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
                     motion_labels.append(labels)
                 result['bundles'] += 1
                 result['images'] += len(jobs)
+                if result['bundles'] % 10 == 0:
+                    result['stage'] = 'capture'
+                    write_json(folder / 'report.json', result)
             for step in range(simulation_ticks):
                 if time.monotonic() - started > criteria['max_scene_wall_s']:
                     raise TimeoutError('Scene wall-clock deadline')
@@ -288,6 +291,11 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
                          'bbox_local_pose': pose(carla.Transform(bbox.location, bbox.rotation)),
                          'extent_m': xyz(bbox.extent), 'world_vertices_m': [xyz(v) for v in bbox.get_world_vertices(t)],
                          'velocity_mps': xyz(state.get_velocity()), 'visibility': 'not_filtered; may be occluded/outside view'})
+                    if moving and actor.type_id.startswith('vehicle.'):
+                        applied = actor.get_control()
+                        labels['objects_3d'][-1]['control_state'] = {'throttle': applied.throttle, 'brake': applied.brake,
+                            'steer': applied.steer, 'at_traffic_light': actor.is_at_traffic_light(),
+                            'traffic_light_state': str(actor.get_traffic_light_state())}
                 pending = (feature, labels)
             if pending is not None:
                 consume(pending, world.tick(15))
@@ -367,6 +375,7 @@ def main():
     parser.add_argument('--plan', type=Path, default=ROOT / 'configs/dataset_scenes_v1.json')
     parser.add_argument('--output', type=Path)
     parser.add_argument('--probe-scene', type=int, default=0)
+    parser.add_argument('--probe-bundles', type=int, default=5)
     args = parser.parse_args()
     if args.mode != 'prepare' and args.output is None:
         parser.error('--output required')
@@ -405,7 +414,9 @@ def main():
         report['agent_sha256'] = sha(ROOT / 'artifacts/carla/PythonAPI/carla/agents/navigation/basic_agent.py')
     all_indexes = []
     scenes = [plan['scenes'][args.probe_scene]] if args.mode == 'probe' else plan['scenes']
-    count = 5 if args.mode == 'probe' else criteria['bundles_per_scene']
+    count = args.probe_bundles if args.mode == 'probe' else criteria['bundles_per_scene']
+    if not 1 <= count <= criteria['bundles_per_scene']:
+        raise ValueError('Probe bundle count must be within frozen full-episode count')
     for scene in scenes:
         result, indexes = collect_scene(world, client, scene, rig, criteria, args.output, count)
         report['scenes'].append(result)

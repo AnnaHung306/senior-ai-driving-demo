@@ -1,7 +1,7 @@
 """Phase 0 only: measured vehicle control and a real RGB sensor in CARLA.
 
 This uses simulator ego telemetry for acceptance. It is neither AI perception nor
-autonomous routing. Run against a dedicated local server: the map is reloaded.
+autonomous routing. Use a dedicated server; load the map only if it differs.
 """
 from datetime import datetime, timezone
 import hashlib
@@ -63,7 +63,11 @@ def run(args):
         report['server_version'] = client.get_server_version()
         if report['client_version'] != '0.9.16' or report['server_version'] != '0.9.16':
             raise RuntimeError('Client and server must both be CARLA 0.9.16')
-        world = client.load_world(args.map)
+        world = client.get_world()
+        report['map_lifecycle'] = 'reused_existing_map'
+        if world.get_map().name.split('/')[-1] != args.map:
+            world = client.load_world(args.map)
+            report['map_lifecycle'] = 'loaded_map_once'
         saved_settings = world.get_settings()
         settings = world.get_settings()
         settings.synchronous_mode = True

@@ -63,3 +63,24 @@ def decode_depth_bgra(raw, width, height):
 
 def semantic_ids_bgra(raw, width, height):
     return np.frombuffer(raw, dtype=np.uint8).reshape(height, width, 4)[..., 2].copy()
+
+
+def validate_calibration(calibration, rig):
+    definitions = {c['name']: c for c in rig['cameras']}
+    if len(calibration['cameras']) != len(definitions) or {c['name'] for c in calibration['cameras']} != set(definitions):
+        raise ValueError('Calibration camera names differ')
+    focal = rig['width'] / (2 * math.tan(math.radians(rig['horizontal_fov_deg']) / 2))
+    expected_k = np.array([[focal, 0, rig['width'] / 2], [0, focal, rig['height'] / 2], [0, 0, 1]])
+    for camera in calibration['cameras']:
+        definition = definitions[camera['name']]
+        yaw = math.radians(definition['yaw_deg'])
+        expected_t = np.eye(4)
+        expected_t[:3, :3] = [[math.cos(yaw), -math.sin(yaw), 0], [math.sin(yaw), math.cos(yaw), 0], [0, 0, 1]]
+        expected_t[:3, 3] = definition['position_m']
+        k, t = np.array(camera['K']), np.array(camera['T_ego_from_camera_local'])
+        if k.shape != (3, 3) or t.shape != (4, 4) or not np.isfinite(k).all() or not np.isfinite(t).all():
+            raise ValueError('Invalid calibration shape/value')
+        if not np.allclose(k, expected_k, atol=1e-5, rtol=0) or not np.allclose(t, expected_t, atol=1e-5, rtol=0):
+            raise ValueError('Calibration differs from frozen FOV/mounting geometry')
+    if calibration['optical_from_carla_camera'] != [[0, 1, 0], [0, 0, -1], [1, 0, 0]]:
+        raise ValueError('Wrong CARLA-to-optical axis conversion')

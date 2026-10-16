@@ -5,7 +5,9 @@ import hashlib
 import json
 from pathlib import Path
 import struct
+import subprocess
 import sys
+import time
 import zlib
 
 import numpy as np
@@ -13,7 +15,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'src'))
 from senior_ai.core import write_json
-from senior_ai.dataset import check_group_splits, read_sensor_frame, safe_path
+from senior_ai.dataset import check_group_splits, read_sensor_frame, safe_path, validate_calibration
 
 
 def read_png(path, width, height):
@@ -44,6 +46,7 @@ def read_png(path, width, height):
 
 
 def validate(root, criteria_reference, rig_reference):
+    started = time.monotonic()
     plan = json.loads((root / 'plan.json').read_text())
     criteria = json.loads((root / 'criteria.json').read_text())
     rig = json.loads((root / 'rig.json').read_text())
@@ -68,6 +71,8 @@ def validate(root, criteria_reference, rig_reference):
     names = {c['name'] for c in rig['cameras']}
     for split in ['train', 'validation', 'test']:
         for line in (root / f'indexes/{split}.jsonl').read_text().splitlines():
+            if time.monotonic() - started > 600:
+                raise TimeoutError('Dataset audit exceeded 600 second wall-clock limit')
             index = json.loads(line)
             scene = scenes[index['scene_id']]
             if scene['split'] != split or index['split'] != split or index['group_id'] != scene['group_id']:
@@ -118,18 +123,15 @@ def validate(root, criteria_reference, rig_reference):
                         meters = (data[..., 0] + data[..., 1] * 256 + data[..., 2] * 65536) * (1000.0 / 16777215)
                         depth_min, depth_max = min(depth_min, float(meters.min())), max(depth_max, float(meters.max()))
             calibration = json.loads(safe_path(root, feature['calibration']).read_text())
-            if {c['name'] for c in calibration['cameras']} != names:
-                raise ValueError('Calibration directions differ')
-            for camera in calibration['cameras']:
-                k, t = np.asarray(camera['K']), np.asarray(camera['T_ego_from_camera_local'])
-                if k.shape != (3, 3) or t.shape != (4, 4) or not np.isfinite(k).all() or not np.isfinite(t).all():
-                    raise ValueError('Invalid calibration shape/value')
-                if k[0, 0] <= 0 or k[1, 1] <= 0 or abs(np.linalg.det(t) - 1) > 1e-4:
-                    raise ValueError('Invalid calibration matrix')
+            validate_calibration(calibration, rig)
             roads = json.loads(safe_path(root, labels['roads']).read_text())
             if roads['source'] != 'simulator_ground_truth' or not roads['waypoints']:
                 raise ValueError('Missing road labels')
             counts[scene['id']] += 1
+            if counts[scene['id']] > criteria['bundles_per_scene']:
+                raise ValueError('Too many frames in scene')
+            if counts[scene['id']] == criteria['bundles_per_scene']:
+                print(json.dumps({'audited_scene': scene['id'], 'checked_pngs': len(files)}), flush=True)
     if set(counts) != set(scenes) or any(n != criteria['bundles_per_scene'] for n in counts.values()):
         raise ValueError('Incomplete scene bundles')
     if len(files) != criteria['scene_count'] * criteria['bundles_per_scene'] * 24:
@@ -139,6 +141,9 @@ def validate(root, criteria_reference, rig_reference):
     inventory = root / 'image_inventory.jsonl'
     inventory.write_text(''.join(json.dumps(item) + '\n' for item in files))
     return {'task': 'dataset-on-disk-audit', 'status': 'passed', 'bundles_by_scene': dict(counts),
+            'auditor_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+            'auditor_git_revision': subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=ROOT, capture_output=True, text=True, check=True, timeout=5).stdout.strip(),
+            'wall_s': time.monotonic() - started,
             'split_bundles': {s: sum(counts[c['id']] for c in scenes.values() if c['split'] == s) for s in groups},
             'scene_groups': {k: sorted(v) for k, v in groups.items()}, 'scene_group_overlap': 0,
             'min_scene_origin_separation_m': separation, 'checked_pngs': len(files), 'png_crc_errors': 0,

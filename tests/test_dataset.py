@@ -6,10 +6,26 @@ import unittest
 
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
-from senior_ai.dataset import check_group_splits, decode_depth_bgra, read_sensor_frame, semantic_ids_bgra
+from senior_ai.dataset import check_group_splits, decode_depth_bgra, read_sensor_frame, semantic_ids_bgra, validate_calibration
 
 
 class DatasetBoundaryTests(unittest.TestCase):
+    def test_calibration_rejects_wrong_focal_or_inverse_transform(self):
+        rig = {'width': 640, 'height': 360, 'horizontal_fov_deg': 90,
+               'cameras': [{'name': 'front', 'yaw_deg': 0, 'position_m': [1.6, 0, 1.7]}]}
+        valid = {'optical_from_carla_camera': [[0, 1, 0], [0, 0, -1], [1, 0, 0]],
+                 'cameras': [{'name': 'front', 'K': [[320, 0, 320], [0, 320, 180], [0, 0, 1]],
+                              'T_ego_from_camera_local': [[1, 0, 0, 1.6], [0, 1, 0, 0], [0, 0, 1, 1.7], [0, 0, 0, 1]]}]}
+        validate_calibration(valid, rig)
+        bad = copy.deepcopy(valid)
+        bad['cameras'][0]['K'][0][0] = 640
+        with self.assertRaises(ValueError):
+            validate_calibration(bad, rig)
+        bad = copy.deepcopy(valid)
+        bad['cameras'][0]['T_ego_from_camera_local'][0][3] = -1.6
+        with self.assertRaises(ValueError):
+            validate_calibration(bad, rig)
+
     def test_group_leak_rejected(self):
         plan = {'scenes': [{'id': str(i), 'group_id': str(i), 'split': split}
                            for i, split in enumerate(['train', 'validation', 'test'])]}

@@ -1,6 +1,6 @@
 # 系統架構與介面
 
-狀態：2026-10-16，Phase 0、初始規則 Baseline 與八鏡頭多模態資料 pilot 已實作及實測；AI、融合、3D 與完整閉環仍為設計。
+狀態：2026-10-16，Phase 0、初始規則 Baseline、八鏡頭 pilot 與 Phase 2 v2 基礎動態資料已實作及實測；AI、融合、3D 與完整閉環仍為設計。
 專案僅限模擬研究。第一個 MVP 是 CARLA 的加速、煞停與同步 RGB 擷取；第一個研究 MVP 是固定路線 Baseline + 八鏡頭資料集 + 自行微調的 2D 感知模型。
 
 ## 模組邊界
@@ -36,7 +36,7 @@
 ## 檔案與真值隔離
 
 `data/<version>/sensors/` 與 `calibration/`：模型推論可讀；`labels/`：訓練與評估可讀，正式推論不可讀。
-dataset.py 的 read_sensor_frame 僅接受 inputs/ 的固定 RGB schema 與 calibration，拒絕 GT 欄位、labels 路徑、越界路徑和非有限時間戳。單元測試確認此邊界。訓練 loader／模型尚未實作。
+dataset.py 的 read_sensor_frame 僅接受 inputs/ 的固定 RGB schema 與 calibration，拒絕 GT 欄位、labels 路徑、越界路徑和非有限時間戳。單元測試確認此邊界。訓練／評估另由 segmentation_data.SegmentationSamples 讀原始語意標籤，需 acquisition／audit 全通過；load_inference_rgb 的實際影像解碼不讀 GT。模型尚未實作。
 同一 scenario / route / seed 的相鄰影格不得跨 train / validation / test。先固定場景群組 split，再建立影格 manifest。
 模擬器導航代理只作 Baseline / 教師，必須標記來源，不能稱為自訓 AI。
 
@@ -50,3 +50,11 @@ CARLA 0.9.16 Windows 預編譯包、同版本 Python client、Python 3.12 venv�
 CARLA 與訓練分時執行，未經實測不保證 8GB GPU 能同時負擔多鏡頭模型。
 初始 2D 模型候選為 torchvision Faster R-CNN / DeepLabV3 的小批次微調；須先驗證 PyTorch CUDA 相容性與單批次峰值顯存，再鎖定版本。
 BEVDet / BEVFormer 為後續研究候選，不在目前環境直接安裝舊版 OpenMMLab 依賴。
+
+## 動態資料 v2
+
+模擬以 20Hz 步進，24 個 RGB／語意／深度感測器維持同步；每四 tick 選一個 frame，等待恰好下一 tick 回傳後按原始 snapshot 配對，輸出 5Hz，非牆鐘實時保證。未選取的舊影格只丟棄，不冒充 selected frame。
+
+自車 BasicAgent 必須在暖機後從有效 snapshot 初始化，避免 client 尚未收到 actor 時以 (0,0,0) 建立路線。行人按幾何固定路徑控制，兩輪車／車輛由 Traffic Manager 控制，GT control_state 與軌跡均只進 labels。
+
+磁碟 auditor 新增 frame／timestamp stride、參與者 identity、實際位移、每 split 像素／正樣本覆蓋與規劃道路群組檢查；同時報告觀測到的跨 split 自車最小位置距離。訓練 reader 使用獨立 Pillow 解碼與 raw red-ID 目標，不依賴 CARLA 程序；目前沒有模型。

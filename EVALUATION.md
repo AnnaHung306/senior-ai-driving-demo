@@ -1,6 +1,25 @@
 # 驗收方式與結果
 
-## 最新結果 — Phase 0、初始 Baseline 與資料管線 pilot
+## Phase 2 v2 — 基礎資料版本驗收通過
+
+新版 `data/town01-motion-v2-001` 六案收集均通過，各 200 個 0.05 秒 world tick、每四 tick 存一組（5Hz），共 300 組、7200 PNG。每案五個受控角色：一台汽車、一台自行車、一台機車、兩名行人。自車使用已標記來源的 BasicAgent 規則，不是 AI 感知或 AI 駕駛。
+
+| 場景／split | 天氣 | 自車位移 m | 自車 collision callbacks |
+|---|---|---:|---:|
+| scene-00／train | ClearNoon | 17.6586 | 0 |
+| scene-01／train | ClearNight | 17.2544 | 0 |
+| scene-02／train | HardRainNoon | 20.4886 | 0 |
+| scene-03／validation | WetCloudyNoon | 16.5617 | 0 |
+| scene-04／test | ClearNoon | 15.8407 | 0 |
+| scene-05／test | HardRainNight | 17.5501 | 0 |
+
+單場景標籤跨度約 9.8 秒；每個 participant 都移動超過 1m。這是 ego collision 檢查，未宣稱所有 NPC 相互間沒有碰撞、交通規則完全受測或有 AI 導航能力。每個 split 的道路、人行道、行人、汽車、機車、自行車與車道線，必須各有至少 1000 個語意像素／10 張正樣本，並由獨立磁碟 auditor 確認。
+
+已完成 19 項單元測試。v2 磁碟 auditor 256.141 秒通過全部 7200 PNG（1,231,370,833 bytes），CRC 錯誤與 timestamp 誤差均 0；所有固定 cadence／motion／class coverage／split／K/T 門檻通過。觀測跨 split ego 最小距離 147.36m；每 required class 最少 86 張正樣本，最少 actor 位移 7.56m。訓練清單 train／validation／test=1200／400／800 view，96 個首尾樣本用 Pillow 獨立解碼通過，舊資料的 regression 也通過。證據見 evidence/phase2/motion-v2/audit-001.json、training-format-001.json。這是有限單城、固定演出的基礎版本，不是泛化或模型品質通過。
+
+失敗保留：full-probe-002 的導航由首次 tick 前 `(0,0,0)` client 座標初始化，導致偏向對向車道並有十次 collision callbacks。經單車實測確證座標生命週期，改從暖機 snapshot 初始化；相同場景 full-probe-003 通過，正式六案也全部零 ego collision。
+
+## 前輪結果 — Phase 0、初始 Baseline 與資料管線 pilot
 
 最終使用本地 background 排程修正的 CARLA 0.9.16 + DX12。
 
@@ -22,7 +41,7 @@ Low 雨天抽樣有黑天空與明顯雜訊；固定場景 Epic 五幀／24 感�
 
 八 RGB rig 每五組取樣的全 GPU 用量最高 2824MiB；並非連續量測峰值，也不是模型 VRAM。20Hz 是模擬 fixed timestep，不是實時處理速度。
 
-Pilot 只有六個共享 Town01 的停駐自車場景，各 1.5 模擬秒；天氣含晴／夜／雨，NPC 為 0／3／6 輛單一車型。共 630 筆 NPC 3D box 標註，包含不可見／遮擋物件，未做逐相機可見度過濾。語意共有 19 種實際出現的 class IDs；沒有行人、騎士、兩輪車或大型車類別樣本。群組不交集與原點分離不等於所有可見內容完全互斥，更不等於 unseen-town 評估。**完整 Phase 2 尚未通過，不開始宣稱模型品質。**
+Pilot 只有六個共享 Town01 的停駐自車場景，各 1.5 模擬秒；天氣含晴／夜／雨，NPC 為 0／3／6 輛單一車型。共 630 筆 NPC 3D box 標註，包含不可見／遮擋物件，未做逐相機可見度過濾。語意共有 19 種實際出現的 class IDs；沒有行人、騎士、兩輪車或大型車類別樣本。群組不交集與原點分離不等於所有可見內容完全互斥，更不等於 unseen-town 評估。**此為前輪 pilot，當時完整 Phase 2 尚未通過；本輪 v2 基礎資料驗收見頂部，仍不宣稱模型品質。**
 
 八鏡頭 DX11 兩次失敗均保留；第二次確認 GPUCrash／D3D device lost 0x887A0020，沒有將它誤稱 OOM。NPC 資料清理的兩次 native abort 亦保留，經有紀錄的順序修正後 probe 與六場景正式收集通過。
 

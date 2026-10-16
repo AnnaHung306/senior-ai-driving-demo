@@ -1,0 +1,26 @@
+{
+  "task": "segmentation-training-format",
+  "status": "passed",
+  "splits": {
+    "train": {
+      "samples": 720,
+      "independently_decoded_samples": 48,
+      "index_sha256": "bf16693c39ab9101ab08c33159addaf30876a395c3213973e5803448efebe165"
+    },
+    "validation": {
+      "samples": 240,
+      "independently_decoded_samples": 16,
+      "index_sha256": "038c6d7efa634d3f57f2023c772278e69b3ae2c8daa253caf931c42fae900261"
+    },
+    "test": {
+      "samples": 480,
+      "independently_decoded_samples": 32,
+      "index_sha256": "27ec48cb82c9cf44a4ee3750ed8efc009ea4c6d6ece4d58fa765a80af1dc0ffb"
+    }
+  },
+  "decoder": {
+    "Pillow": "12.0.0"
+  },
+  "audit_sha256": "f89d58ec1934036fbdce1624e1fc7ef095467634c3a585505af75c6a6a91b4c7",
+  "note": "Per-view lists retain whole-scene splits. Raw RGB + class-ID targets; no learned model or quality metric."
+}

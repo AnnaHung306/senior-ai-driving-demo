@@ -117,3 +117,24 @@
 - source c853f10；smoke 改為僅地圖不同時 load，保存 map_lifecycle，未更動 protocol／門檻。
 - 同一 server 的 005a 初次 load 與 005b reuse，兩次 doctor／140 幀 smoke 均通過。測後關閉自有 server；14 項單元測試再次通過並保存 log。
 - 已核對完整路徑及原始失敗下載大小後，刪除唯一未完成的 0.9.15 archive cache（約 6.27GB）；0.9.16 完整 ZIP、stock 備份及失敗紀錄仍保留。
+
+## MOTION-001 — Phase 2 v2 凍結與短測試
+
+- criteria dataset-motion-v2、scenes town01-motion-scenes-v2 在影像收集前固定；保留既有六個空間群組／split，route roads 在 train／validation／test 分別為 [8,11,12,24,256]／[3,13,15]／[6,10]，交集 0。
+- 舊 stationary probe 回歸通過。新 20-tick 短測試 5 組／120 PNG 通過，實際語意出現 12 pedestrian、18 motorcycle、19 bicycle，不以生成角色取代覆蓋驗證。
+- 完整 motion-v2-full-probe-002：50 組／1200 PNG、同步與移動通過，但 ego collision callbacks=10，結果 failed。其他 actor 259 為對向車；ego 先偏向對向車道。
+- 單車初始 snapshot 診斷證實第一 tick 前讀取位置為 (0,0,0)，不是 spawn pose。source 1f61d27 改成暖機後導航；相同 frozen scene 的 full-probe-003 通過：自車位移 17.6586m、標籤跨度 9.8s、五個角色位移皆超過 1m、碰撞 0。失敗資料與 JSON 均保留。
+- 全場景 run town01-motion-v2-001 依相同 plan 啟動，任一 case failed 即停止；完整結果在集中分析時另填，不提前宣稱通過。
+
+## FORMAT-001 — 獨立訓練資料讀取
+
+- 安裝 Pillow 12.0.0，新增 requirements-dataset.txt、SegmentationSamples 與 export_training_index.py。
+- 舊 Epic stationary 資料成功輸出 train／validation／test=720／240／480 個 per-view 樣本；首尾每 scene 八視角共 96 個樣本，用 Pillow 實際讀 RGB／原始語意紅通道與形狀檢查通過。
+- 19 項單元測試通過；含新 cadence、actor identity、靜止角色拒絕、像素覆蓋不足拒絕、RGB-only 真正解碼與 probe 不可訓練。
+
+## MOTION-002 — 六場景正式收集／稽核通過
+
+- acquisition source 1f61d27；六案各 50 組、共 300 組／7200 PNG。自車位移分別 17.6586、17.2544、20.4886、16.5617、15.8407、17.5501m，各案 ego collision 0，角色移動／9.8s label span／原同步與完整性門檻皆通過。總 case wall 約 388.11s，未宣稱實時。
+- auditor source 74db217／SHA256 c621a7381ad572a910f201b02ce442eba403ec2c0db47b2e987e2d7af20c8699；256.141s 通過全部 PNG，約 1.23GB、CRC 0、timestamp error 0。固定 class coverage 與 group／planned-road split 全通過；觀測 ego 跨 split 最小距離 147.36m，actor 最小位移 7.56m。
+- 新資料 train／validation／test=150／50／100 bundles，training export=1200／400／800 view；各 scene 首尾共 96 個 sample 以 Pillow 獨立解碼通過。
+- 19 項 unit tests 通過，沒有訓練、checkpoint 或感知準確率。資料與模擬器程序均已結束，Phase 2 v2 基礎版本驗收通過，下一步 Phase 3 CUDA／小型模型實驗。

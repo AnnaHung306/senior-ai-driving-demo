@@ -109,3 +109,29 @@ RGB manifest 僅存 RGB 路徑、frame／timestamp、scene ID 與 calibration；
 接手回歸檢查發現 smoke 雖移除了 reload_world，仍每次無條件 load_world(Town01)。新 server 正常，但重跑可能再次觸發已知 lifecycle 問題。改先讀目前地圖，只在不同時 load，記錄 map_lifecycle；原 protocol 與數值門檻不變。
 
 以同一 DX12／Epic server 連續實測：phase0-map-reuse-005a=loaded_map_once、005b=reused_existing_map，兩者 doctor／140 幀 smoke 全通過，完整報告保留。測後僅停止路徑核對一致的自有程序樹；沒有留下訓練或監督工作。
+
+## D010 — Phase 2 動態資料與初始 snapshot
+
+新版 dataset-motion-v2 在收集前固定六組場景、各 200 個 0.05 秒 tick、每四 tick 保存一組（5Hz，共 50 組／場景），八方位 RGB／語意／深度不變。每場景有車、自行車、機車與兩名行人，自車使用 BasicAgent 規則控制，行人使用凍結人行道路徑，車輛使用 Traffic Manager。這是可觀測的模擬資料產生方法，不是 AI。
+
+門檻新增自車位移至少 5m、標籤跨度至少 9.5s、每個參與者位移至少 1m、ego collision 0；每個 split 的道路／人行道／行人／汽車／機車／自行車／車道線各至少 1000 語意像素、10 張正樣本。以像素確認可見覆蓋，不把 spawn 成功當成影像樣本。保持既有空間群組切分，另檢查規劃路徑的道路 IDs 不跨 split。
+
+幾何準備時，路口 waypoint 不一定有直接的 get_left_lane 連結；原準備程式在凍結前拒絕該案。改以 2.8–8m 距離與反向朝向條件，按幾何選最近反向車道，才產生固定 plan。未以駕駛成績選場景。
+
+完整首案曾有 10 個碰撞 callbacks，不能通過。追查到導航初始化早於第一個 snapshot。單車診斷證實 spawn 後 get_location=(0,0,0)、snapshot 尚無該 actor，下一 tick 才回報實際 (92.11,227.22,0.2853)。改在暖機 snapshot 後才建立導航，與既有通過的 Baseline 順序一致。同一場景自車移動 17.66m，五個參與者均移動、碰撞 0、50 組／1200 PNG、9.8s 標籤跨度全部通過，沒有降低門檻。
+
+## D011 — 訓練格式與推論 API 分離
+
+新增固定 Pillow 12.0.0 於 requirements-dataset.txt，僅裝入專案 venv。其獨立 PNG decoder 可核對原本自製 lossless serializer 的實際色彩通道。SegmentationSamples 只接受完整 acquisition 與 audit 通過的資料，按整 scene 分組展開每個相機 view，回傳 uint8 RGB HWC 與原始語意 ID HW；不預先選模型、歸一化或重新映射類別。
+
+load_inference_rgb 僅讀固定 RGB manifest／RGB PNG，不讀 labels、深度或 CARLA actor。新增測試確認沒有 labels 資料夾時仍可解碼，並拒絕將 probe／不完整資料匯入訓練。舊 Epic pilot 的 1440 個 per-view 樣本及各場景首尾共 96 個樣本，已用此獨立 decoder 實際驗證。
+
+目前尚未安裝 PyTorch 或產生模型；先完成新版全場景資料驗收，再進入 Phase 3 CUDA／小型感知試跑。已查閱 PyTorch 官方安裝頁，頁面 selector 的 stable 顯示與部分文字版本不一致；正式選版前須核實可用官方 wheel，不把快取顯示當成全域最新版本。
+
+## D012 — Phase 2 v2 基礎資料版本驗收
+
+六場景 acquisition、全 7200 PNG 磁碟 audit、群組／路線 split、motion／class coverage 與 training export 均通過，允許下一步進入 Phase 3 的最小感知實驗。這是完成可訓練的基礎研究版本，不是宣稱資料覆蓋已足夠量產或模型品質已合格。
+
+Train／validation／test 為 1200／400／800 per-view 樣本；獨立 Pillow decoder 抽查各場景首尾共 96 個樣本通過。19 項 unit tests 通過，資料卡與完整精簡證據見 evidence/phase2/motion-v2。探索性 RGB profile 48 張樣本平均值範圍約 15.28–164.99、最大近黑比例約 49.26%；夜雨低照度是限制，沒有事後畫質通過門檻。
+
+長尾大型車、更多密度／城鎮、較長且更自然的交通互動仍待擴充；第一個模型的實驗必須記錄這些限制，不能藉固定劇本宣稱 AI 駕駛成功。下一步先關閉 CARLA、核實官方 torch CUDA wheel、量測小批次 forward／backward，再凍結訓練設定；test 不用於調參。

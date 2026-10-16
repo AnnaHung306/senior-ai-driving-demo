@@ -1,0 +1,24 @@
+test_calibration_rejects_wrong_focal_or_inverse_transform (test_dataset.DatasetBoundaryTests.test_calibration_rejects_wrong_focal_or_inverse_transform) ... ok
+test_depth_channel_order_and_range (test_dataset.DatasetBoundaryTests.test_depth_channel_order_and_range) ... ok
+test_group_leak_rejected (test_dataset.DatasetBoundaryTests.test_group_leak_rejected) ... ok
+test_rgb_manifest_does_not_read_labels_and_rejects_gt (test_dataset.DatasetBoundaryTests.test_rgb_manifest_does_not_read_labels_and_rejects_gt) ... ok
+test_semantic_ids_are_red_not_palette (test_dataset.DatasetBoundaryTests.test_semantic_ids_are_red_not_palette) ... ok
+test_malformed_sensor_payload_is_rejected (test_frames.OwnedFrameTests.test_malformed_sensor_payload_is_rejected) ... ok
+test_native_payload_is_copied_before_callback_returns (test_frames.OwnedFrameTests.test_native_payload_is_copied_before_callback_returns) ... ok
+test_png_encodes_actual_pixel_order_and_valid_crc (test_frames.OwnedFrameTests.test_png_encodes_actual_pixel_order_and_valid_crc) ... ok
+test_bad_cadence_identity_or_static_participant_rejected (test_motion.MotionAuditTests.test_bad_cadence_identity_or_static_participant_rejected) ... ok
+test_measured_motion_passes_but_stationary_ego_fails (test_motion.MotionAuditTests.test_measured_motion_passes_but_stationary_ego_fails) ... ok
+test_spawned_class_does_not_replace_pixel_coverage (test_motion.MotionAuditTests.test_spawned_class_does_not_replace_pixel_coverage) ... ok
+test_invalid_numbers_cannot_enter_report (test_phase0.AcceptanceTests.test_invalid_numbers_cannot_enter_report) ... ok
+test_known_projection (test_phase0.AcceptanceTests.test_known_projection) ... ok
+test_nominal_acceptance_and_failures (test_phase0.AcceptanceTests.test_nominal_acceptance_and_failures) ... ok
+test_future_frame_fails_instead_of_silent_misalignment (test_phase0.FrameSynchronizationTests.test_future_frame_fails_instead_of_silent_misalignment) ... ok
+test_missing_camera_times_out (test_phase0.FrameSynchronizationTests.test_missing_camera_times_out) ... ok
+test_stale_frames_are_not_used (test_phase0.FrameSynchronizationTests.test_stale_frames_are_not_used) ... ok
+test_inference_decodes_actual_rgb_without_labels (test_segmentation_data.SegmentationInputTests.test_inference_decodes_actual_rgb_without_labels) ... ok
+test_partial_acquisition_cannot_enter_training (test_segmentation_data.SegmentationInputTests.test_partial_acquisition_cannot_enter_training) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.148s
+
+OK

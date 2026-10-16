@@ -1,0 +1,29 @@
+{
+  "task": "post-training-engineering-audit",
+  "status": "passed",
+  "checks": {
+    "completed": true,
+    "all_images_and_metadata_unchanged": true,
+    "numerical_source_unchanged": true,
+    "config_bytes_unchanged": true,
+    "acquisition_plan_bytes_match": true,
+    "criteria_matches_frozen_source_bytes_and_copy_values": true,
+    "rig_matches_frozen_source_bytes_and_copy_values": true,
+    "all_epochs_completed": true,
+    "earliest_validation_best_selected": true,
+    "last_checkpoint_complete": true,
+    "finite_training_metrics": true,
+    "finite_model_weights": true,
+    "checkpoint_sha_matches_test_marker": true,
+    "checkpoint_provenance_matches_receipt": true,
+    "checkpoint_config_matches": true,
+    "no_posthoc_quality_pass": true,
+    "disjoint_scene_groups": true
+  },
+  "verified_images_again": 7200,
+  "optimizer_updates_last": [
+    4800
+  ],
+  "amp_backoffs": 0,
+  "note": "Engineering/integrity audit only; does not imply perception quality or full Phase 3 acceptance."
+}

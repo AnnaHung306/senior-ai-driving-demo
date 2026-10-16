@@ -1,0 +1,21 @@
+{
+  "samples": 50,
+  "warmup": 10,
+  "batch_size": 1,
+  "network_ms": {
+    "p50": 9.066599999641767,
+    "p95": 9.846145000665272
+  },
+  "warm_file_cache_load_to_mask_and_confidence_ms": {
+    "p50": 25.644450000982033,
+    "p95": 32.03789999988658
+  },
+  "one_eight_view_sequential_mask_only_ms": 217.0851999999286,
+  "excludes": [
+    "model loading",
+    "sensor acquisition",
+    "disk output writing",
+    "simulator render"
+  ],
+  "note": "8-view measurement is one bundle, not a p95 or a live real-time guarantee"
+}

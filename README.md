@@ -4,7 +4,9 @@
 
 實測已通過：CARLA 車輛加速／煞停與單鏡頭、五條固定規則導航路線、八鏡頭同步擷取，以及六場景資料 pilot；本輪另完成含移動自車、行人與兩輪車的 Phase 2 v2 基礎資料驗收。使用本地修正 CARLA 0.9.16 與 DX12／Epic；官方原樣 binary 的失敗紀錄保留。
 
-尚無訓練模型、AI 感知、BEV／occupancy、3D 導航介面或 AI 自主駕駛閉環。Phase 2 v2 基礎資料驗收已通過，仍是有限單城研究資料，詳見 [EVALUATION.md](EVALUATION.md)。
+Phase 3 已完成第一輪真實 CUDA 自訓 Tiny U-Net segmentation 與可恢復訓練管線：validation focus mIoU 27.50%、test 26.22%，夜雨 test 場景僅 11.83%；32 tests 與訓練後完整性 audit 通過。模型仍不可靠，整個 Phase 3 尚未通過；偵測、完整類別、BEV／occupancy、3D 導航與 AI 駕駛閉環未完成。
+
+訓練協議與命令見 [PHASE3.md](PHASE3.md)，完整逐類結果見 [model card](evidence/phase3/segmentation-v1-002/MODEL_CARD.md)，弱點與下一步見 [CURRENT_TASK.md](CURRENT_TASK.md)。Checkpoint、source snapshot 與實際圖在 artifacts/runs/segmentation-v1-002（ignored，本機保留）；數值與指紋進 evidence/phase3。
 
 ## 環境與安裝
 

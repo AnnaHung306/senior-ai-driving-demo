@@ -6,6 +6,7 @@ import random
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 os.environ.setdefault('CUBLAS_WORKSPACE_CONFIG', ':4096:8')
 ROOT = Path(__file__).resolve().parents[1]
@@ -99,6 +100,37 @@ class SegmentationTests(unittest.TestCase):
             write_inventory()
             with self.assertRaisesRegex(ValueError, 'Cross-split'):
                 fingerprints(root, ROOT)
+
+    def test_test_started_receipt_prevents_reopening_run(self):
+        from senior_ai.segmentation_training import run_experiment
+        temp = ROOT / 'artifacts/runs/test-temp'
+        temp.mkdir(parents=True, exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=temp) as folder:
+            run = Path(folder)
+            config = ROOT / 'configs/segmentation_v1_1.json'
+            (run / 'config.json').write_bytes(config.read_bytes())
+            (run / 'test_started.json').write_text('{}')
+            with self.assertRaisesRegex(ValueError, 'Test already opened'):
+                run_experiment(ROOT, config, run, resume=True)
+
+    def test_resume_rejects_changed_provenance_before_loading_samples(self):
+        from senior_ai.segmentation_training import run_experiment
+        temp = ROOT / 'artifacts/runs/test-temp'
+        temp.mkdir(parents=True, exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=temp) as folder:
+            run = Path(folder)
+            config = ROOT / 'configs/segmentation_v1_1.json'
+            (run / 'config.json').write_bytes(config.read_bytes())
+            torch.save({'provenance': {'source_sha256': 'old'}}, run / 'last.pt')
+            with patch('senior_ai.segmentation_training.configure_cuda'), \
+                 patch('torch.cuda.reset_peak_memory_stats'), \
+                 patch('senior_ai.segmentation_training.fingerprints', return_value={'data_sha256': 'data', 'source_sha256': 'new'}), \
+                 patch('senior_ai.segmentation_training.environment', return_value={}), \
+                 patch('senior_ai.segmentation_training.runtime_signature', return_value='runtime'), \
+                 patch('senior_ai.segmentation_training.CachedSamples') as samples:
+                with self.assertRaisesRegex(ValueError, 'Resume data/config/source mismatch'):
+                    run_experiment(ROOT, config, run, resume=True)
+                samples.assert_not_called()
 
     @unittest.skipUnless(torch.cuda.is_available(), 'CUDA checkpoint RNG resume requires GPU')
     def test_epoch_boundary_checkpoint_repeats_next_update_exactly(self):

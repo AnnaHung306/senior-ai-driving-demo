@@ -1,0 +1,1703 @@
+{
+  "confusion_true_rows_predicted_columns": [
+    [
+      5333838,
+      82624,
+      183835,
+      32852515,
+      11797753,
+      4248031,
+      63159,
+      6475139
+    ],
+    [
+      394074,
+      209170,
+      1329,
+      12014403,
+      613053,
+      863203,
+      1762,
+      1431809
+    ],
+    [
+      344416,
+      125932,
+      4247,
+      10380153,
+      585939,
+      999097,
+      2537,
+      1301918
+    ],
+    [
+      5833,
+      342,
+      538,
+      114359,
+      34832,
+      102951,
+      147,
+      16834
+    ],
+    [
+      301049,
+      4941,
+      1160,
+      508479,
+      90384,
+      79098,
+      1454,
+      233422
+    ],
+    [
+      67396,
+      1364,
+      79,
+      71499,
+      5420,
+      4481,
+      193,
+      58355
+    ],
+    [
+      3012,
+      238,
+      103,
+      29275,
+      4252,
+      4885,
+      83,
+      16548
+    ],
+    [
+      1236,
+      151,
+      81,
+      32994,
+      11158,
+      37692,
+      36,
+      3710
+    ]
+  ],
+  "classes": [
+    {
+      "name": "other_annotated",
+      "support_pixels": 61036894,
+      "predicted_pixels": 6450854,
+      "iou": 0.08581661234184623,
+      "precision": 0.8268421514422741,
+      "recall": 0.08738711376761733
+    },
+    {
+      "name": "road",
+      "support_pixels": 15528803,
+      "predicted_pixels": 424762,
+      "iou": 0.013285362822769627,
+      "precision": 0.49244047254697926,
+      "recall": 0.013469808329721228
+    },
+    {
+      "name": "sidewalk",
+      "support_pixels": 13744239,
+      "predicted_pixels": 191372,
+      "iou": 0.00030485170009196517,
+      "precision": 0.02219237924043225,
+      "recall": 0.00030900219357361293
+    },
+    {
+      "name": "pedestrian",
+      "support_pixels": 275836,
+      "predicted_pixels": 56003677,
+      "iou": 0.002036120118178613,
+      "precision": 0.0020419909214175348,
+      "recall": 0.4145905538073348
+    },
+    {
+      "name": "car",
+      "support_pixels": 1219987,
+      "predicted_pixels": 13142791,
+      "iou": 0.006332784815217405,
+      "precision": 0.006877078087903855,
+      "recall": 0.07408603534299955
+    },
+    {
+      "name": "motorcycle",
+      "support_pixels": 208787,
+      "predicted_pixels": 6339438,
+      "iou": 0.0006847761770631614,
+      "precision": 0.0007068449916222858,
+      "recall": 0.02146206420897853
+    },
+    {
+      "name": "bicycle",
+      "support_pixels": 58396,
+      "predicted_pixels": 69371,
+      "iou": 0.0006500422919081482,
+      "precision": 0.0011964653817877788,
+      "recall": 0.0014213302280978149
+    },
+    {
+      "name": "road_line",
+      "support_pixels": 87058,
+      "predicted_pixels": 9537735,
+      "iou": 0.0003856114743007622,
+      "precision": 0.00038898124135342406,
+      "recall": 0.0426152679822647
+    }
+  ],
+  "pixel_accuracy": 0.0625029513888889,
+  "focus_macro_iou": 0.003382792771361383,
+  "focus_supported_classes": 7,
+  "frequency_weighted_iou": 0.05921199284729452,
+  "weighted_loss": 2.354859283875232,
+  "by": {
+    "scene_id": {
+      "scene-03": {
+        "confusion_true_rows_predicted_columns": [
+          [
+            5333838,
+            82624,
+            183835,
+            32852515,
+            11797753,
+            4248031,
+            63159,
+            6475139
+          ],
+          [
+            394074,
+            209170,
+            1329,
+            12014403,
+            613053,
+            863203,
+            1762,
+            1431809
+          ],
+          [
+            344416,
+            125932,
+            4247,
+            10380153,
+            585939,
+            999097,
+            2537,
+            1301918
+          ],
+          [
+            5833,
+            342,
+            538,
+            114359,
+            34832,
+            102951,
+            147,
+            16834
+          ],
+          [
+            301049,
+            4941,
+            1160,
+            508479,
+            90384,
+            79098,
+            1454,
+            233422
+          ],
+          [
+            67396,
+            1364,
+            79,
+            71499,
+            5420,
+            4481,
+            193,
+            58355
+          ],
+          [
+            3012,
+            238,
+            103,
+            29275,
+            4252,
+            4885,
+            83,
+            16548
+          ],
+          [
+            1236,
+            151,
+            81,
+            32994,
+            11158,
+            37692,
+            36,
+            3710
+          ]
+        ],
+        "classes": [
+          {
+            "name": "other_annotated",
+            "support_pixels": 61036894,
+            "predicted_pixels": 6450854,
+            "iou": 0.08581661234184623,
+            "precision": 0.8268421514422741,
+            "recall": 0.08738711376761733
+          },
+          {
+            "name": "road",
+            "support_pixels": 15528803,
+            "predicted_pixels": 424762,
+            "iou": 0.013285362822769627,
+            "precision": 0.49244047254697926,
+            "recall": 0.013469808329721228
+          },
+          {
+            "name": "sidewalk",
+            "support_pixels": 13744239,
+            "predicted_pixels": 191372,
+            "iou": 0.00030485170009196517,
+            "precision": 0.02219237924043225,
+            "recall": 0.00030900219357361293
+          },
+          {
+            "name": "pedestrian",
+            "support_pixels": 275836,
+            "predicted_pixels": 56003677,
+            "iou": 0.002036120118178613,
+            "precision": 0.0020419909214175348,
+            "recall": 0.4145905538073348
+          },
+          {
+            "name": "car",
+            "support_pixels": 1219987,
+            "predicted_pixels": 13142791,
+            "iou": 0.006332784815217405,
+            "precision": 0.006877078087903855,
+            "recall": 0.07408603534299955
+          },
+          {
+            "name": "motorcycle",
+            "support_pixels": 208787,
+            "predicted_pixels": 6339438,
+            "iou": 0.0006847761770631614,
+            "precision": 0.0007068449916222858,
+            "recall": 0.02146206420897853
+          },
+          {
+            "name": "bicycle",
+            "support_pixels": 58396,
+            "predicted_pixels": 69371,
+            "iou": 0.0006500422919081482,
+            "precision": 0.0011964653817877788,
+            "recall": 0.0014213302280978149
+          },
+          {
+            "name": "road_line",
+            "support_pixels": 87058,
+            "predicted_pixels": 9537735,
+            "iou": 0.0003856114743007622,
+            "precision": 0.00038898124135342406,
+            "recall": 0.0426152679822647
+          }
+        ],
+        "pixel_accuracy": 0.0625029513888889,
+        "focus_macro_iou": 0.003382792771361383,
+        "focus_supported_classes": 7,
+        "frequency_weighted_iou": 0.05921199284729452
+      }
+    },
+    "camera": {
+      "front": {
+        "confusion_true_rows_predicted_columns": [
+          [
+            882090,
+            9194,
+            28320,
+            4034446,
+            583757,
+            539448,
+            5808,
+            1248648
+          ],
+          [
+            88336,
+            33874,
+            148,
+            1591207,
+            186121,
+            159492,
+            469,
+            305559
+          ],
+          [
+            24083,
+            9778,
+            568,
+            1250414,
+            71523,
+            206493,
+            373,
+            167254
+          ],
+          [
+            632,
+            46,
+            92,
+            19740,
+            5718,
+            14438,
+            12,
+            2176
+          ],
+          [
+            1,
+            0,
+            0,
+            339,
+            0,
+            30,
+            0,
+            23
+          ],
+          [
+            3075,
+            27,
+            6,
+            3408,
+            697,
+            246,
+            13,
+            4195
+          ],
+          [
+            912,
+            98,
+            55,
+            14795,
+            2592,
+            2715,
+            22,
+            7475
+          ],
+          [
+            228,
+            16,
+            5,
+            3578,
+            2210,
+            2146,
+            0,
+            836
+          ]
+        ],
+        "classes": [
+          {
+            "name": "other_annotated",
+            "support_pixels": 7331711,
+            "predicted_pixels": 999357,
+            "iou": 0.11841758694951174,
+            "precision": 0.8826575488038809,
+            "recall": 0.1203116162107317
+          },
+          {
+            "name": "road",
+            "support_pixels": 2365206,
+            "predicted_pixels": 53033,
+            "iou": 0.01420671751179035,
+            "precision": 0.6387343729376049,
+            "recall": 0.014321796917477802
+          },
+          {
+            "name": "sidewalk",
+            "support_pixels": 1730486,
+            "predicted_pixels": 29194,
+            "iou": 0.00032289018550268547,
+            "precision": 0.01945605261355073,
+            "recall": 0.00032823149103777783
+          },
+          {
+            "name": "pedestrian",
+            "support_pixels": 42854,
+            "predicted_pixels": 6917927,
+            "iou": 0.002843953810386655,
+            "precision": 0.0028534559558087273,
+            "recall": 0.46063377981051945
+          },
+          {
+            "name": "car",
+            "support_pixels": 393,
+            "predicted_pixels": 852618,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          {
+            "name": "motorcycle",
+            "support_pixels": 11667,
+            "predicted_pixels": 925008,
+            "iou": 0.0002627001086040693,
+            "precision": 0.0002659436458927923,
+            "recall": 0.02108511185394703
+          },
+          {
+            "name": "bicycle",
+            "support_pixels": 28664,
+            "predicted_pixels": 6697,
+            "iou": 0.0006225416678457228,
+            "precision": 0.003285053008809915,
+            "recall": 0.0007675132570471671
+          },
+          {
+            "name": "road_line",
+            "support_pixels": 9019,
+            "predicted_pixels": 1736166,
+            "iou": 0.0004792618908257465,
+            "precision": 0.00048152077623913843,
+            "recall": 0.09269320323760949
+          }
+        ],
+        "pixel_accuracy": 0.08136944444444444,
+        "focus_macro_iou": 0.002676866453565033,
+        "focus_supported_classes": 7,
+        "frequency_weighted_iou": 0.0783429862840322
+      },
+      "front_right": {
+        "confusion_true_rows_predicted_columns": [
+          [
+            536486,
+            9591,
+            25806,
+            4842753,
+            1166367,
+            656197,
+            8922,
+            1158304
+          ],
+          [
+            7624,
+            4897,
+            23,
+            140110,
+            8662,
+            8973,
+            5,
+            28356
+          ],
+          [
+            84027,
+            35663,
+            490,
+            2097219,
+            110703,
+            181369,
+            387,
+            341569
+          ],
+          [
+            1555,
+            34,
+            111,
+            26988,
+            8958,
+            24237,
+            30,
+            3584
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "classes": [
+          {
+            "name": "other_annotated",
+            "support_pixels": 8404426,
+            "predicted_pixels": 629692,
+            "iou": 0.06313358827494531,
+            "precision": 0.8519816037046684,
+            "recall": 0.06383374664730226
+          },
+          {
+            "name": "road",
+            "support_pixels": 198650,
+            "predicted_pixels": 50185,
+            "iou": 0.0200747730980823,
+            "precision": 0.09757895785593305,
+            "recall": 0.02465139692927259
+          },
+          {
+            "name": "sidewalk",
+            "support_pixels": 2851427,
+            "predicted_pixels": 26430,
+            "iou": 0.00017029457834193552,
+            "precision": 0.018539538403329548,
+            "recall": 0.00017184378207823662
+          },
+          {
+            "name": "pedestrian",
+            "support_pixels": 65497,
+            "predicted_pixels": 7107070,
+            "iou": 0.003776880781809284,
+            "precision": 0.0037973454602248185,
+            "recall": 0.4120494068430615
+          },
+          {
+            "name": "car",
+            "support_pixels": 0,
+            "predicted_pixels": 1294690,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          {
+            "name": "motorcycle",
+            "support_pixels": 0,
+            "predicted_pixels": 870776,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          {
+            "name": "bicycle",
+            "support_pixels": 0,
+            "predicted_pixels": 9344,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          {
+            "name": "road_line",
+            "support_pixels": 0,
+            "predicted_pixels": 1531813,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": null
+          }
+        ],
+        "pixel_accuracy": 0.04938029513888889,
+        "focus_macro_iou": 0.008007316152744507,
+        "focus_supported_classes": 3,
+        "frequency_weighted_iou": 0.0464689567158319
+      },
+      "right": {
+        "confusion_true_rows_predicted_columns": [
+          [
+            873576,
+            15638,
+            28219,
+            5793671,
+            674929,
+            593295,
+            7730,
+            839691
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            80642,
+            42401,
+            386,
+            1902098,
+            141565,
+            144971,
+            308,
+            326619
+          ],
+          [
+            1699,
+            21,
+            80,
+            18549,
+            8075,
+            23522,
+            21,
+            2294
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "classes": [
+          {
+            "name": "other_annotated",
+            "support_pixels": 8826749,
+            "predicted_pixels": 955917,
+            "iou": 0.09805445898514888,
+            "precision": 0.9138617683334431,
+            "recall": 0.09896916747037895
+          },
+          {
+            "name": "road",
+            "support_pixels": 0,
+            "predicted_pixels": 58060,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          {
+            "name": "sidewalk",
+            "support_pixels": 2638990,
+            "predicted_pixels": 28685,
+            "iou": 0.00014471622685055874,
+            "precision": 0.013456510371274185,
+            "recall": 0.00014626807983357268
+          },
+          {
+            "name": "pedestrian",
+            "support_pixels": 54261,
+            "predicted_pixels": 7714318,
+            "iou": 0.002393410090025458,
+            "precision": 0.0024044899367643385,
+            "recall": 0.34184773594294243
+          },
+          {
+            "name": "car",
+            "support_pixels": 0,
+            "predicted_pixels": 824569,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          {
+            "name": "motorcycle",
+            "support_pixels": 0,
+            "predicted_pixels": 761788,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          {
+            "name": "bicycle",
+            "support_pixels": 0,
+            "predicted_pixels": 8059,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          {
+            "name": "road_line",
+            "support_pixels": 0,
+            "predicted_pixels": 1168604,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": null
+          }
+        ],
+        "pixel_accuracy": 0.07747491319444444,
+        "focus_macro_iou": 0.0012690631584380083,
+        "focus_supported_classes": 2,
+        "frequency_weighted_iou": 0.07517481521641452
+      },
+      "rear_right": {
+        "confusion_true_rows_predicted_columns": [
+          [
+            905293,
+            10423,
+            27151,
+            5078307,
+            1016103,
+            433241,
+            6770,
+            622324
+          ],
+          [
+            11718,
+            10360,
+            38,
+            380289,
+            23205,
+            86756,
+            43,
+            52630
+          ],
+          [
+            89162,
+            29838,
+            865,
+            2211592,
+            145274,
+            109024,
+            521,
+            228612
+          ],
+          [
+            646,
+            16,
+            110,
+            11187,
+            5863,
+            21475,
+            8,
+            1156
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "classes": [
+          {
+            "name": "other_annotated",
+            "support_pixels": 8099612,
+            "predicted_pixels": 1006819,
+            "iou": 0.11038626590602427,
+            "precision": 0.8991616169341262,
+            "recall": 0.11176992181847722
+          },
+          {
+            "name": "road",
+            "support_pixels": 565039,
+            "predicted_pixels": 50637,
+            "iou": 0.01711502752281453,
+            "precision": 0.20459347907656456,
+            "recall": 0.018335017582857112
+          },
+          {
+            "name": "sidewalk",
+            "support_pixels": 2814888,
+            "predicted_pixels": 28164,
+            "iou": 0.00030434309916975904,
+            "precision": 0.030712966908109644,
+            "recall": 0.0003072946419182575
+          },
+          {
+            "name": "pedestrian",
+            "support_pixels": 40461,
+            "predicted_pixels": 7681375,
+            "iou": 0.0014508506352707794,
+            "precision": 0.001456379879904314,
+            "recall": 0.27648847037888336
+          },
+          {
+            "name": "car",
+            "support_pixels": 0,
+            "predicted_pixels": 1190445,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          {
+            "name": "motorcycle",
+            "support_pixels": 0,
+            "predicted_pixels": 650496,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          {
+            "name": "bicycle",
+            "support_pixels": 0,
+            "predicted_pixels": 7342,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          {
+            "name": "road_line",
+            "support_pixels": 0,
+            "predicted_pixels": 904722,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": null
+          }
+        ],
+        "pixel_accuracy": 0.08052994791666666,
+        "focus_macro_iou": 0.006290073752418356,
+        "focus_supported_classes": 3,
+        "frequency_weighted_iou": 0.07853055352511963
+      },
+      "rear": {
+        "confusion_true_rows_predicted_columns": [
+          [
+            390426,
+            6821,
+            14352,
+            2614993,
+            3173887,
+            366517,
+            7390,
+            481840
+          ],
+          [
+            68448,
+            31225,
+            91,
+            2410823,
+            99699,
+            109893,
+            337,
+            216044
+          ],
+          [
+            29954,
+            5633,
+            528,
+            1202953,
+            49512,
+            83278,
+            206,
+            100216
+          ],
+          [
+            210,
+            4,
+            26,
+            4554,
+            2172,
+            7853,
+            6,
+            353
+          ],
+          [
+            1069,
+            348,
+            0,
+            6124,
+            498,
+            182,
+            66,
+            1656
+          ],
+          [
+            1318,
+            278,
+            1,
+            1092,
+            233,
+            63,
+            6,
+            1077
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            279,
+            49,
+            2,
+            11130,
+            3251,
+            9856,
+            10,
+            1168
+          ]
+        ],
+        "classes": [
+          {
+            "name": "other_annotated",
+            "support_pixels": 7056226,
+            "predicted_pixels": 491704,
+            "iou": 0.05454778649093315,
+            "precision": 0.7940264874802727,
+            "recall": 0.0553307107793883
+          },
+          {
+            "name": "road",
+            "support_pixels": 2936560,
+            "predicted_pixels": 44358,
+            "iou": 0.010585847408526921,
+            "precision": 0.7039316470535191,
+            "recall": 0.010633189854796088
+          },
+          {
+            "name": "sidewalk",
+            "support_pixels": 1472280,
+            "predicted_pixels": 15000,
+            "iou": 0.00035513656615225673,
+            "precision": 0.0352,
+            "recall": 0.00035862743499877743
+          },
+          {
+            "name": "pedestrian",
+            "support_pixels": 15178,
+            "predicted_pixels": 6251669,
+            "iou": 0.0007272096658524281,
+            "precision": 0.0007284454759201103,
+            "recall": 0.3000395308999868
+          },
+          {
+            "name": "car",
+            "support_pixels": 9943,
+            "predicted_pixels": 3329252,
+            "iou": 0.0001491599866654566,
+            "precision": 0.0001495831496083805,
+            "recall": 0.05008548727748165
+          },
+          {
+            "name": "motorcycle",
+            "support_pixels": 4068,
+            "predicted_pixels": 577642,
+            "iou": 0.00010831311775011304,
+            "precision": 0.00010906409159998753,
+            "recall": 0.015486725663716814
+          },
+          {
+            "name": "bicycle",
+            "support_pixels": 0,
+            "predicted_pixels": 8021,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          {
+            "name": "road_line",
+            "support_pixels": 25745,
+            "predicted_pixels": 802354,
+            "iou": 0.0014124515830220418,
+            "precision": 0.001455716554039738,
+            "recall": 0.0453680326276947
+          }
+        ],
+        "pixel_accuracy": 0.03719288194444444,
+        "focus_macro_iou": 0.002223019721328203,
+        "focus_supported_classes": 6,
+        "frequency_weighted_iou": 0.03615969363534664
+      },
+      "rear_left": {
+        "confusion_true_rows_predicted_columns": [
+          [
+            498786,
+            9214,
+            14172,
+            3123783,
+            2366325,
+            537260,
+            9196,
+            623012
+          ],
+          [
+            75137,
+            44070,
+            292,
+            2769565,
+            87364,
+            116468,
+            264,
+            258371
+          ],
+          [
+            17459,
+            673,
+            544,
+            440309,
+            22858,
+            59933,
+            317,
+            48021
+          ],
+          [
+            254,
+            101,
+            27,
+            7017,
+            1014,
+            3025,
+            15,
+            1162
+          ],
+          [
+            91128,
+            1081,
+            307,
+            112548,
+            20087,
+            18595,
+            367,
+            61557
+          ],
+          [
+            19855,
+            597,
+            24,
+            10749,
+            828,
+            1050,
+            38,
+            15403
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            342,
+            61,
+            4,
+            11539,
+            2834,
+            13882,
+            13,
+            1103
+          ]
+        ],
+        "classes": [
+          {
+            "name": "other_annotated",
+            "support_pixels": 7181748,
+            "predicted_pixels": 702961,
+            "iou": 0.06753197941543664,
+            "precision": 0.7095500319363378,
+            "recall": 0.06945189388433011
+          },
+          {
+            "name": "road",
+            "support_pixels": 3351531,
+            "predicted_pixels": 55797,
+            "iou": 0.013103365843476772,
+            "precision": 0.7898274100758105,
+            "recall": 0.013149214493316637
+          },
+          {
+            "name": "sidewalk",
+            "support_pixels": 590114,
+            "predicted_pixels": 15370,
+            "iou": 0.0008992627368003438,
+            "precision": 0.03539362394274561,
+            "recall": 0.0009218557770193556
+          },
+          {
+            "name": "pedestrian",
+            "support_pixels": 12615,
+            "predicted_pixels": 6475510,
+            "iou": 0.001082685244560035,
+            "precision": 0.0010836212128465558,
+            "recall": 0.556242568370987
+          },
+          {
+            "name": "car",
+            "support_pixels": 305670,
+            "predicted_pixels": 2501310,
+            "iou": 0.007207668181017355,
+            "precision": 0.008030591969807821,
+            "recall": 0.06571465960022246
+          },
+          {
+            "name": "motorcycle",
+            "support_pixels": 48544,
+            "predicted_pixels": 750213,
+            "iou": 0.0013162727668178918,
+            "precision": 0.0013996025128863402,
+            "recall": 0.02162986156888596
+          },
+          {
+            "name": "bicycle",
+            "support_pixels": 0,
+            "predicted_pixels": 10210,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          {
+            "name": "road_line",
+            "support_pixels": 29778,
+            "predicted_pixels": 1008629,
+            "iou": 0.0010633334104563367,
+            "precision": 0.001093563639355997,
+            "recall": 0.03704076835247498
+          }
+        ],
+        "pixel_accuracy": 0.04970980902777778,
+        "focus_macro_iou": 0.004112098030521456,
+        "focus_supported_classes": 6,
+        "frequency_weighted_iou": 0.04615946610737949
+      },
+      "left": {
+        "confusion_true_rows_predicted_columns": [
+          [
+            493078,
+            6463,
+            21014,
+            3740753,
+            1646864,
+            682296,
+            11740,
+            638499
+          ],
+          [
+            41738,
+            44237,
+            200,
+            2209744,
+            28637,
+            157200,
+            126,
+            225536
+          ],
+          [
+            8327,
+            162,
+            277,
+            649004,
+            16050,
+            83539,
+            201,
+            43338
+          ],
+          [
+            412,
+            77,
+            69,
+            16800,
+            2027,
+            5901,
+            20,
+            3538
+          ],
+          [
+            175481,
+            2855,
+            536,
+            253753,
+            49772,
+            39569,
+            807,
+            128382
+          ],
+          [
+            34944,
+            322,
+            15,
+            28113,
+            1314,
+            1393,
+            78,
+            22872
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            4,
+            1453,
+            36,
+            394,
+            0,
+            37
+          ]
+        ],
+        "classes": [
+          {
+            "name": "other_annotated",
+            "support_pixels": 7240707,
+            "predicted_pixels": 753982,
+            "iou": 0.06572961461211466,
+            "precision": 0.6539652140236769,
+            "recall": 0.06809804622670135
+          },
+          {
+            "name": "road",
+            "support_pixels": 2707418,
+            "predicted_pixels": 54117,
+            "iou": 0.016279774982353792,
+            "precision": 0.8174325997376055,
+            "recall": 0.016339183679801198
+          },
+          {
+            "name": "sidewalk",
+            "support_pixels": 800898,
+            "predicted_pixels": 22115,
+            "iou": 0.0003366815114447405,
+            "precision": 0.012525435224960434,
+            "recall": 0.000345861770162992
+          },
+          {
+            "name": "pedestrian",
+            "support_pixels": 28844,
+            "predicted_pixels": 6899620,
+            "iou": 0.002430673713305508,
+            "precision": 0.0024349167055576974,
+            "recall": 0.5824434891138538
+          },
+          {
+            "name": "car",
+            "support_pixels": 651155,
+            "predicted_pixels": 1744700,
+            "iou": 0.02121493570346829,
+            "precision": 0.028527540551384192,
+            "recall": 0.07643648593652817
+          },
+          {
+            "name": "motorcycle",
+            "support_pixels": 89051,
+            "predicted_pixels": 970292,
+            "iou": 0.0013166973864549363,
+            "precision": 0.0014356502990852237,
+            "recall": 0.01564272158650661
+          },
+          {
+            "name": "bicycle",
+            "support_pixels": 0,
+            "predicted_pixels": 12972,
+            "iou": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          {
+            "name": "road_line",
+            "support_pixels": 1927,
+            "predicted_pixels": 1062202,
+            "iou": 3.477142953804746e-05,
+            "precision": 3.4833299127661216e-05,
+            "recall": 0.019200830306175403
+          }
+        ],
+        "pixel_accuracy": 0.05256892361111111,
+        "focus_macro_iou": 0.006935589121094218,
+        "focus_supported_classes": 6,
+        "frequency_weighted_iou": 0.04637815330170596
+      },
+      "front_left": {
+        "confusion_true_rows_predicted_columns": [
+          [
+            754103,
+            15280,
+            24801,
+            3623809,
+            1169521,
+            439777,
+            5603,
+            862821
+          ],
+          [
+            101073,
+            40507,
+            537,
+            2512665,
+            179365,
+            224421,
+            518,
+            345313
+          ],
+          [
+            10762,
+            1784,
+            589,
+            626564,
+            28454,
+            130490,
+            224,
+            46289
+          ],
+          [
+            425,
+            43,
+            23,
+            9524,
+            1005,
+            2500,
+            35,
+            2571
+          ],
+          [
+            33370,
+            657,
+            317,
+            135715,
+            20027,
+            20722,
+            214,
+            41804
+          ],
+          [
+            8204,
+            140,
+            33,
+            28137,
+            2348,
+            1729,
+            58,
+            14808
+          ],
+          [
+            2100,
+            140,
+            48,
+            14480,
+            1660,
+            2170,
+            61,
+            9073
+          ],
+          [
+            385,
+            24,
+            66,
+            5294,
+            2827,
+            11414,
+            13,
+            566
+          ]
+        ],
+        "classes": [
+          {
+            "name": "other_annotated",
+            "support_pixels": 6895715,
+            "predicted_pixels": 910422,
+            "iou": 0.10693411290983566,
+            "precision": 0.8283005024043795,
+            "recall": 0.1093582028839649
+          },
+          {
+            "name": "road",
+            "support_pixels": 3404399,
+            "predicted_pixels": 58575,
+            "iou": 0.011835614485106796,
+            "precision": 0.6915407597097738,
+            "recall": 0.011898429061928405
+          },
+          {
+            "name": "sidewalk",
+            "support_pixels": 845156,
+            "predicted_pixels": 26414,
+            "iou": 0.0006762489652472327,
+            "precision": 0.02229878094949648,
+            "recall": 0.0006969127593012414
+          },
+          {
+            "name": "pedestrian",
+            "support_pixels": 16126,
+            "predicted_pixels": 6956188,
+            "iou": 0.001367842488427771,
+            "precision": 0.00136914068452434,
+            "recall": 0.5905990326181322
+          },
+          {
+            "name": "car",
+            "support_pixels": 252826,
+            "predicted_pixels": 1405207,
+            "iou": 0.012226450940961144,
+            "precision": 0.014251992766901958,
+            "recall": 0.07921258098455064
+          },
+          {
+            "name": "motorcycle",
+            "support_pixels": 55457,
+            "predicted_pixels": 833223,
+            "iou": 0.0019493748809122488,
+            "precision": 0.002075074739895562,
+            "recall": 0.031177308545359467
+          },
+          {
+            "name": "bicycle",
+            "support_pixels": 29732,
+            "predicted_pixels": 6726,
+            "iou": 0.0016759623045855428,
+            "precision": 0.009069283377936367,
+            "recall": 0.00205166150948473
+          },
+          {
+            "name": "road_line",
+            "support_pixels": 20589,
+            "predicted_pixels": 1323245,
+            "iou": 0.00042136044333669826,
+            "precision": 0.00042773636023563284,
+            "recall": 0.027490407499150032
+          }
+        ],
+        "pixel_accuracy": 0.07179739583333333,
+        "focus_macro_iou": 0.004307550644082491,
+        "focus_supported_classes": 7,
+        "frequency_weighted_iou": 0.06784129257723519
+      }
+    },
+    "weather": {
+      "WetCloudyNoon": {
+        "confusion_true_rows_predicted_columns": [
+          [
+            5333838,
+            82624,
+            183835,
+            32852515,
+            11797753,
+            4248031,
+            63159,
+            6475139
+          ],
+          [
+            394074,
+            209170,
+            1329,
+            12014403,
+            613053,
+            863203,
+            1762,
+            1431809
+          ],
+          [
+            344416,
+            125932,
+            4247,
+            10380153,
+            585939,
+            999097,
+            2537,
+            1301918
+          ],
+          [
+            5833,
+            342,
+            538,
+            114359,
+            34832,
+            102951,
+            147,
+            16834
+          ],
+          [
+            301049,
+            4941,
+            1160,
+            508479,
+            90384,
+            79098,
+            1454,
+            233422
+          ],
+          [
+            67396,
+            1364,
+            79,
+            71499,
+            5420,
+            4481,
+            193,
+            58355
+          ],
+          [
+            3012,
+            238,
+            103,
+            29275,
+            4252,
+            4885,
+            83,
+            16548
+          ],
+          [
+            1236,
+            151,
+            81,
+            32994,
+            11158,
+            37692,
+            36,
+            3710
+          ]
+        ],
+        "classes": [
+          {
+            "name": "other_annotated",
+            "support_pixels": 61036894,
+            "predicted_pixels": 6450854,
+            "iou": 0.08581661234184623,
+            "precision": 0.8268421514422741,
+            "recall": 0.08738711376761733
+          },
+          {
+            "name": "road",
+            "support_pixels": 15528803,
+            "predicted_pixels": 424762,
+            "iou": 0.013285362822769627,
+            "precision": 0.49244047254697926,
+            "recall": 0.013469808329721228
+          },
+          {
+            "name": "sidewalk",
+            "support_pixels": 13744239,
+            "predicted_pixels": 191372,
+            "iou": 0.00030485170009196517,
+            "precision": 0.02219237924043225,
+            "recall": 0.00030900219357361293
+          },
+          {
+            "name": "pedestrian",
+            "support_pixels": 275836,
+            "predicted_pixels": 56003677,
+            "iou": 0.002036120118178613,
+            "precision": 0.0020419909214175348,
+            "recall": 0.4145905538073348
+          },
+          {
+            "name": "car",
+            "support_pixels": 1219987,
+            "predicted_pixels": 13142791,
+            "iou": 0.006332784815217405,
+            "precision": 0.006877078087903855,
+            "recall": 0.07408603534299955
+          },
+          {
+            "name": "motorcycle",
+            "support_pixels": 208787,
+            "predicted_pixels": 6339438,
+            "iou": 0.0006847761770631614,
+            "precision": 0.0007068449916222858,
+            "recall": 0.02146206420897853
+          },
+          {
+            "name": "bicycle",
+            "support_pixels": 58396,
+            "predicted_pixels": 69371,
+            "iou": 0.0006500422919081482,
+            "precision": 0.0011964653817877788,
+            "recall": 0.0014213302280978149
+          },
+          {
+            "name": "road_line",
+            "support_pixels": 87058,
+            "predicted_pixels": 9537735,
+            "iou": 0.0003856114743007622,
+            "precision": 0.00038898124135342406,
+            "recall": 0.0426152679822647
+          }
+        ],
+        "pixel_accuracy": 0.0625029513888889,
+        "focus_macro_iou": 0.003382792771361383,
+        "focus_supported_classes": 7,
+        "frequency_weighted_iou": 0.05921199284729452
+      }
+    }
+  }
+}

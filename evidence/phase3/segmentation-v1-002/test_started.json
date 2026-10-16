@@ -1,0 +1,11 @@
+{
+  "best_epoch": 12,
+  "checkpoint_sha256": "f06e4b110ea767d2c4b910d2cbfa8f9ea3ef96fa807c950bd2afd5f54947a1d4",
+  "selection": "maximum validation macro IoU over supported focus classes 1..7; earliest epoch wins ties",
+  "provenance": {
+    "data_sha256": "6d8e99f1f68a02173f702be15391b42ed06aebd6b1ff2a9ba3ab82f2abdc4f55",
+    "source_sha256": "3f5b26463e277e2dbc87150fa8d06996dbba0423c2f8e0cb21b08bdc309cbcc0",
+    "config_sha256": "7fdc014df85049758a17edf2c51926da0ae199fc7d875f2f9cb77b333433f36e",
+    "runtime_sha256": "1c1ec9bbcc032b5cc3c4e42d12e3433ea5a4bc8270e53873818db5d3f70c3f13"
+  }
+}

@@ -1,0 +1,49 @@
+test_calibration_rejects_wrong_focal_or_inverse_transform (test_dataset.DatasetBoundaryTests.test_calibration_rejects_wrong_focal_or_inverse_transform) ... ok
+test_depth_channel_order_and_range (test_dataset.DatasetBoundaryTests.test_depth_channel_order_and_range) ... ok
+test_group_leak_rejected (test_dataset.DatasetBoundaryTests.test_group_leak_rejected) ... ok
+test_rgb_manifest_does_not_read_labels_and_rejects_gt (test_dataset.DatasetBoundaryTests.test_rgb_manifest_does_not_read_labels_and_rejects_gt) ... ok
+test_semantic_ids_are_red_not_palette (test_dataset.DatasetBoundaryTests.test_semantic_ids_are_red_not_palette) ... ok
+test_malformed_sensor_payload_is_rejected (test_frames.OwnedFrameTests.test_malformed_sensor_payload_is_rejected) ... ok
+test_native_payload_is_copied_before_callback_returns (test_frames.OwnedFrameTests.test_native_payload_is_copied_before_callback_returns) ... ok
+test_png_encodes_actual_pixel_order_and_valid_crc (test_frames.OwnedFrameTests.test_png_encodes_actual_pixel_order_and_valid_crc) ... ok
+test_bad_cadence_identity_or_static_participant_rejected (test_motion.MotionAuditTests.test_bad_cadence_identity_or_static_participant_rejected) ... ok
+test_measured_motion_passes_but_stationary_ego_fails (test_motion.MotionAuditTests.test_measured_motion_passes_but_stationary_ego_fails) ... ok
+test_spawned_class_does_not_replace_pixel_coverage (test_motion.MotionAuditTests.test_spawned_class_does_not_replace_pixel_coverage) ... ok
+test_invalid_numbers_cannot_enter_report (test_phase0.AcceptanceTests.test_invalid_numbers_cannot_enter_report) ... ok
+test_known_projection (test_phase0.AcceptanceTests.test_known_projection) ... ok
+test_nominal_acceptance_and_failures (test_phase0.AcceptanceTests.test_nominal_acceptance_and_failures) ... ok
+test_future_frame_fails_instead_of_silent_misalignment (test_phase0.FrameSynchronizationTests.test_future_frame_fails_instead_of_silent_misalignment) ... ok
+test_missing_camera_times_out (test_phase0.FrameSynchronizationTests.test_missing_camera_times_out) ... ok
+test_stale_frames_are_not_used (test_phase0.FrameSynchronizationTests.test_stale_frames_are_not_used) ... ok
+test_absent_class_false_positive_is_not_perfect (test_segmentation.SegmentationTests.test_absent_class_false_positive_is_not_perfect) ... ok
+test_baselines_use_training_prior_only (test_segmentation.SegmentationTests.test_baselines_use_training_prior_only) ... ok
+test_confusion_ignore_and_hand_computed_metrics (test_segmentation.SegmentationTests.test_confusion_ignore_and_hand_computed_metrics) ... ok
+test_epoch_boundary_checkpoint_repeats_next_update_exactly (test_segmentation.SegmentationTests.test_epoch_boundary_checkpoint_repeats_next_update_exactly) ... ERROR
+test_integrity_rejects_corruption_and_cross_split_duplicates (test_segmentation.SegmentationTests.test_integrity_rejects_corruption_and_cross_split_duplicates) ... ok
+test_mapping_keeps_single_pixel_small_objects_and_unknown (test_segmentation.SegmentationTests.test_mapping_keeps_single_pixel_small_objects_and_unknown) ... ok
+test_model_odd_size_and_gradient (test_segmentation.SegmentationTests.test_model_odd_size_and_gradient) ... ok
+test_prediction_runs_with_only_rgb_and_no_ground_truth (test_segmentation.SegmentationTests.test_prediction_runs_with_only_rgb_and_no_ground_truth) ... ok
+test_inference_decodes_actual_rgb_without_labels (test_segmentation_data.SegmentationInputTests.test_inference_decodes_actual_rgb_without_labels) ... ok
+test_partial_acquisition_cannot_enter_training (test_segmentation_data.SegmentationInputTests.test_partial_acquisition_cannot_enter_training) ... ok
+
+======================================================================
+ERROR: test_epoch_boundary_checkpoint_repeats_next_update_exactly (test_segmentation.SegmentationTests.test_epoch_boundary_checkpoint_repeats_next_update_exactly)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\code\senior_AI\tests\test_segmentation.py", line 103, in test_epoch_boundary_checkpoint_repeats_next_update_exactly
+    train_batch(model, x, y, optimizer, scaler, weights, 5)
+  File "C:\code\senior_AI\src\senior_ai\segmentation_training.py", line 158, in train_batch
+    loss = weighted_loss(model(rgb), target, weights)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\code\senior_AI\src\senior_ai\segmentation_training.py", line 152, in weighted_loss
+    return F.cross_entropy(logits.float(), target, weight=weights, ignore_index=255)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\code\senior_AI\.venv\Lib\site-packages\torch\nn\functional.py", line 3504, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: nll_loss2d_forward_out_cuda_template does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True)'. You can turn off determinism just for this operation, or you can use the 'warn_only=True' option, if that's acceptable for your application. You can also file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation.
+
+----------------------------------------------------------------------
+Ran 27 tests in 3.837s
+
+FAILED (errors=1)

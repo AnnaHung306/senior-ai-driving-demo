@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "source": "learned_prediction",
+  "model_version": "segmentation-foundation-v1.1",
+  "checkpoint_sha256": "f06e4b110ea767d2c4b910d2cbfa8f9ea3ef96fa807c950bd2afd5f54947a1d4",
+  "checkpoint_epoch": 12,
+  "frame": 95101,
+  "timestamp_s": 619.2176457419991,
+  "camera": "front",
+  "calibration_reference": "calibration/scene-04.json",
+  "input_manifest": "inputs/frames/scene-04/00095101.json",
+  "input_rgb_sha256": "8fbf695751520e325b240b806cc1c280206d42ccb60e2fc033cf4baf4320ed41",
+  "class_names": [
+    "other_annotated",
+    "road",
+    "sidewalk",
+    "pedestrian",
+    "car",
+    "motorcycle",
+    "bicycle",
+    "road_line"
+  ],
+  "class_id_encoding": "model IDs 0..7; not raw CARLA IDs",
+  "elapsed_forward_and_cpu_output_s_no_warmup": 0.3498858000002656,
+  "confidence": "uncalibrated max softmax; not safety probability",
+  "outputs": [
+    "class_ids.png",
+    "prediction.png",
+    "rgb.png",
+    "uncalibrated_softmax_confidence.npy"
+  ]
+}

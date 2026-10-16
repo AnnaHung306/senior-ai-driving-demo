@@ -37,14 +37,24 @@
 
 ## 命令
 
+下列 run 已完成；重新訓練須換全新 run ID。resume 僅用於同環境且尚未打開 test 的中斷實驗，不能覆寫已完成結果。續跑使用原 run/config.json，避免 Git 換行正規化改變 raw config SHA；evidence 的 frozen-config-bytes.base64.txt 可還原精確原始 bytes，JSON 值與 configs/segmentation_v1_1.json 一致。
+
 ```powershell
 python -m pip --python .venv/Scripts/python.exe install torch==2.10.0 --index-url https://download.pytorch.org/whl/cu128
 .venv/Scripts/python.exe -m unittest discover -s tests
 .venv/Scripts/python.exe scripts/train_segmentation.py --config configs/segmentation_v1_1.json --run artifacts/runs/segmentation-v1-002
 # 同環境中斷後僅續接完整 epoch：
-.venv/Scripts/python.exe scripts/train_segmentation.py --config configs/segmentation_v1_1.json --run artifacts/runs/segmentation-v1-002 --resume
+.venv/Scripts/python.exe scripts/train_segmentation.py --config artifacts/runs/segmentation-v1-002/config.json --run artifacts/runs/segmentation-v1-002 --resume
 # inference 不需要 labels：
 .venv/Scripts/python.exe scripts/predict_segmentation.py --checkpoint artifacts/runs/segmentation-v1-002/best.pt --root data/town01-motion-v2-001 --manifest inputs/frames/scene-04/FRAME.json --camera front --output artifacts/runs/prediction-001
 ```
 
 資料補強與偵測標註契約（尚未收集／驗證）：configs/detection_label_contract_v1.json。訓練後用 scripts/summarize_training.py 建 model card / registry；scripts/build_error_catalog.py 依逐 frame counts 建 FP / FN triage 清單。
+
+```powershell
+.venv/Scripts/python.exe scripts/verify_training_receipt.py artifacts/runs/segmentation-v1-002
+.venv/Scripts/python.exe scripts/build_error_catalog.py artifacts/runs/segmentation-v1-002
+.venv/Scripts/python.exe scripts/summarize_training.py artifacts/runs/segmentation-v1-002 evidence/phase3/segmentation-v1-002
+```
+
+前兩步為工程稽核與既有預測 counts 分析，不重跑 test 選模；summary 只有 completed 且工程 audit passed 才登錄。evidence 保存數值、model card、資料與程式指紋；原始資料、完整 checkpoint 與逐張圖留在 ignored 的 data / artifacts/runs，複製專案時須另外保留。

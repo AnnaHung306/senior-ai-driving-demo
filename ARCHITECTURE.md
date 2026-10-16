@@ -35,8 +35,8 @@
 
 ## 檔案與真值隔離
 
-`data/<version>/sensors/` 與 `calibration/`：模型推論可讀；`labels/`：訓練與評估可讀，正式推論不可讀。
-dataset.py 的 read_sensor_frame 僅接受 inputs/ 的固定 RGB schema 與 calibration，拒絕 GT 欄位、labels 路徑、越界路徑和非有限時間戳。單元測試確認此邊界。訓練／評估另由 segmentation_data.SegmentationSamples 讀原始語意標籤，需 acquisition／audit 全通過；load_inference_rgb 的實際影像解碼不讀 GT。模型尚未實作。
+`data/<version>/inputs/` 與 `calibration/`：模型推論可讀；`labels/`：訓練與評估可讀，正式推論不可讀。
+dataset.py 的 read_sensor_frame 僅接受 inputs/ 的固定 RGB schema 與 calibration，拒絕 GT 欄位、labels 路徑、越界路徑和非有限時間戳。單元測試確認此邊界。訓練／評估另由 segmentation_data.SegmentationSamples 讀原始語意標籤，需 acquisition／audit 全通過；load_inference_rgb 的實際影像解碼不讀 GT。TinyUNet.forward 唯一參數為 RGB tensor，不接受 GT 或模擬器物件。
 同一 scenario / route / seed 的相鄰影格不得跨 train / validation / test。先固定場景群組 split，再建立影格 manifest。
 模擬器導航代理只作 Baseline / 教師，必須標記來源，不能稱為自訓 AI。
 
@@ -48,7 +48,7 @@ dataset.py 的 read_sensor_frame 僅接受 inputs/ 的固定 RGB schema 與 cali
 CARLA 0.9.16 Windows 預編譯包、同版本 Python client、Python 3.12 venv。
 目前採 DX12、Epic、640×360 八方位。歷史 Low RGB rig 約 4.34 組／牆鐘秒，不能當作 Epic 或 AI 的吞吐量；資源取樣與畫質對照限制見 EVALUATION。
 CARLA 與訓練分時執行，未經實測不保證 8GB GPU 能同時負擔多鏡頭模型。
-初始 2D 模型候選為 torchvision Faster R-CNN / DeepLabV3 的小批次微調；須先驗證 PyTorch CUDA 相容性與單批次峰值顯存，再鎖定版本。
+初始 2D 實作選 Tiny U-Net（488,120 parameters、16/32/64/128 channels、GroupNorm），原解析度與小批次先驗證訓練工程。無預訓練下載；並未聲稱比 Faster R-CNN / DeepLabV3 更準。後續可用本管線比較微調模型，偵測需先補合格 instance 標註。
 BEVDet / BEVFormer 為後續研究候選，不在目前環境直接安裝舊版 OpenMMLab 依賴。
 
 ## 動態資料 v2
@@ -57,4 +57,16 @@ BEVDet / BEVFormer 為後續研究候選，不在目前環境直接安裝舊版 
 
 自車 BasicAgent 必須在暖機後從有效 snapshot 初始化，避免 client 尚未收到 actor 時以 (0,0,0) 建立路線。行人按幾何固定路徑控制，兩輪車／車輛由 Traffic Manager 控制，GT control_state 與軌跡均只進 labels。
 
-磁碟 auditor 新增 frame／timestamp stride、參與者 identity、實際位移、每 split 像素／正樣本覆蓋與規劃道路群組檢查；同時報告觀測到的跨 split 自車最小位置距離。訓練 reader 使用獨立 Pillow 解碼與 raw red-ID 目標，不依賴 CARLA 程序；目前沒有模型。
+磁碟 auditor 新增 frame／timestamp stride、參與者 identity、實際位移、每 split 像素／正樣本覆蓋與規劃道路群組檢查；同時報告觀測到的跨 split 自車最小位置距離。訓練 reader 使用獨立 Pillow 解碼與 raw red-ID 目標，不依賴 CARLA 程序。
+
+## Phase 3 訓練與產物契約
+
+segmentation_training.py 在讀取前重驗全影像 inventory hash／bytes 與 acquisition/audit 清單一致性，封存 metadata / source / config / runtime fingerprints。CachedSamples 只在訓練程序中載入原圖與整數 GT；模型 8 個 logits 對應七類 focus + other_annotated，未知 raw 0 忽略 255，映射保存在 config / checkpoint / prediction receipt。
+
+每 epoch 先完成 train-only optimizer 更新，再用 validation supported focus mIoU 選 best；last / best 原子儲存權重、optimizer / scheduler / scaler、Python / NumPy / Torch / CUDA RNG。resume 拒絕來源、資料、設定或數值環境改變。loss 非有限立即拒絕；AMP 梯度溢位只允許有限次 scale 回退、跳過權重更新後重試同 batch，每次回退均記錄。
+
+最終 test 先落 test_started.json，固定 best checkpoint hash，禁止重新選模／覆蓋已打開 test 的實驗。confusion、逐類 support／IoU／precision／recall、逐 scene／camera／weather 分解、常數／prior 基準、所有 frame 的錯誤指標與實際對照圖分開保存。沒有正式品質門檻時 report 不產生 quality=passed。
+
+predict_segmentation.py 不需 audit、plan、indexes、labels 或 CARLA，只讀 RGB manifest / PNG 與自產 checkpoint；輸出 frame / timestamp / camera / calibration reference、checkpoint SHA256、model class IDs PNG、著色圖與未校準 softmax NPY。單元測試以完全沒有 GT 的 fixture 執行真正模型 forward。
+
+偵測與 v3 擴充契約在 configs/detection_label_contract_v1.json、configs/dataset_expansion_v3_plan.json，均明確標記尚未收集／驗證，不能作為完成證據。

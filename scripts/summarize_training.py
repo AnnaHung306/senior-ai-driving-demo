@@ -1,5 +1,6 @@
 """Build a model card and compact, versionable evidence from a completed run."""
 import argparse
+import hashlib
 import html
 import json
 from pathlib import Path
@@ -15,12 +16,20 @@ def summarize(run, destination):
     read = lambda name: json.loads((run / name).read_text(encoding='utf-8'))
     report, test, val = read('report.json'), read('test.json'), read('validation.json')
     config, environment, timing = read('config.json'), read('environment.json'), read('latency.json')
-    if report['status'] != 'completed':
-        raise ValueError('Only completed experiments can enter the model registry')
+    if report['status'] != 'completed' or read('engineering_audit.json')['status'] != 'passed':
+        raise ValueError('Only completed, integrity-audited experiments can enter the model registry')
     destination.mkdir(parents=True, exist_ok=False)
+    analysis_files = {}
+    for name in ['summarize_training.py', 'build_error_catalog.py', 'verify_training_receipt.py']:
+        path = ROOT / 'scripts' / name
+        analysis_files[name] = hashlib.sha256(path.read_bytes()).hexdigest()
+        (destination / name).write_bytes(path.read_bytes())
+    write_json(destination / 'analysis_provenance.json', {'source_files_sha256': analysis_files,
+               'note': 'Post-training evidence tools; numerical training source fingerprints are separate.'})
     for name in ['report.json', 'test.json', 'validation.json', 'config.json', 'environment.json', 'provenance.json',
                  'cuda_overfit.json', 'latency.json', 'train_validation_statistics.json', 'test_statistics.json',
-                 'untrained_validation.json', 'history.json', 'test_started.json']:
+                 'untrained_validation.json', 'history.json', 'test_started.json', 'engineering_audit.json',
+                 'error_catalog.json']:
         shutil.copyfile(run / name, destination / name)
     header = '| 類別 | Test IoU | Precision | Recall | GT pixels |\n|---|---:|---:|---:|---:|\n'
     percentage = lambda value: '—' if value is None else f'{value * 100:.2f}%'
@@ -53,7 +62,7 @@ Validation focus mIoU **{percentage(val['focus_macro_iou'])}**；test focus mIoU
 
 ## 工程與速度
 
-- CUDA / overfit sanity、checkpoint 重載 forward 一致性通過。train-only overfit loss ratio={read('cuda_overfit.json')['loss_ratio']:.4f}。GPU peak allocated={report['peak_allocated_vram_bytes'] / 2**20:.1f} MiB；reserved={report['peak_reserved_vram_bytes'] / 2**20:.1f} MiB。
+- CUDA / overfit sanity、checkpoint 重載 forward 一致性、訓練後全影像／metadata／source 再驗證通過。train-only overfit loss ratio={read('cuda_overfit.json')['loss_ratio']:.4f}。GPU peak allocated={report['peak_allocated_vram_bytes'] / 2**20:.1f} MiB；reserved={report['peak_reserved_vram_bytes'] / 2**20:.1f} MiB。
 - Batch 1、warmup {timing['warmup']}、{timing['samples']} 次同步 CUDA：network p50 / p95={timing['network_ms']['p50']:.2f} / {timing['network_ms']['p95']:.2f}ms；warm-cache 載圖到 mask+confidence p50 / p95={timing['warm_file_cache_load_to_mask_and_confidence_ms']['p50']:.2f} / {timing['warm_file_cache_load_to_mask_and_confidence_ms']['p95']:.2f}ms。
 - 八方向順序處理單 bundle={timing['one_eight_view_sequential_mask_only_ms']:.2f}ms；不是分位數，也不含感測器、模擬器渲染或寫檔，不代表八鏡頭閉環即時達標。
 - RGB-only 生產推論 CLI：scripts/predict_segmentation.py；輸出 model IDs 0..7、frame / timestamp / camera / checkpoint hash、未校準 softmax。模型 forward 不接觸 labels、depth 或 simulator。
@@ -61,6 +70,8 @@ Validation focus mIoU **{percentage(val['focus_macro_iou'])}**；test focus mIoU
 ## 誤差與適用限制
 
 最差 scene frame 與各 focus 類最差正樣本按固定規則保存於原 run 的 validation_errors / test_errors，RGB／GT／prediction 並排；GT 只供評估。錯誤清單保留所有 frame 的逐類 IoU / support，不能只展示好結果。
+
+error_catalog.json 另保存每 split / focus 類的前三大 false-positive / false-negative 像素案例，及 class GT support 為 0、1..100、101..1000、>1000 pixels 的影像分層。這是每張圖的語意支持像素分層，不能冒充 instance 大小、遮擋標註或 small-object AP。
 
 單城、固定車型、腳本演出與極少群組限制很大；validation 一組與 test 兩組不足以聲稱可靠泛化信賴區間。像素準確率不能替代兩輪車／行人召回。大型車、號誌狀態、臨時障礙物、可見性正確的 instance detection、遮擋分層、OOD 與 confidence calibration 尚未完成。語意道路不是導航可行駛區域。不得將本模型直接接上車輛控制。
 

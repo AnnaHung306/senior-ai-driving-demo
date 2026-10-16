@@ -135,3 +135,13 @@ load_inference_rgb 僅讀固定 RGB manifest／RGB PNG，不讀 labels、深度�
 Train／validation／test 為 1200／400／800 per-view 樣本；獨立 Pillow decoder 抽查各場景首尾共 96 個樣本通過。19 項 unit tests 通過，資料卡與完整精簡證據見 evidence/phase2/motion-v2。探索性 RGB profile 48 張樣本平均值範圍約 15.28–164.99、最大近黑比例約 49.26%；夜雨低照度是限制，沒有事後畫質通過門檻。
 
 長尾大型車、更多密度／城鎮、較長且更自然的交通互動仍待擴充；第一個模型的實驗必須記錄這些限制，不能藉固定劇本宣稱 AI 駕駛成功。下一步先關閉 CARLA、核實官方 torch CUDA wheel、量測小批次 forward／backward，再凍結訓練設定；test 不用於調參。
+
+## D013 — Phase 3 先建立可稽核的 scratch segmentation 基準
+
+固定官方 torch 2.10.0+cu128，不聲稱最新。保留 NumPy 2.3.5 / Pillow 12.0.0、Python 3.12.14 與同一 venv，pip check 通過；CARLA 關閉。原解析度 Tiny U-Net 能保留極少的兩輪車／車道線像素，先檢驗工程與資料訊號，後續再比較預訓練 backbone，不以模型大小推斷品質。
+
+只學七類 focus + other_annotated，raw 0 ignore。其他類別合併的資訊損失明確記在 model card；大型車／交通燈／臨時障礙物的完整 Phase 3 目標沒有刪除。當前只有六個短場景，無法作可靠泛化驗收；supported-focus macro IoU 與逐類 recall 必須並列，不用背景 pixel accuracy 冒充成功。
+
+嚴格 deterministic 的 CUDA CE reduction 在 GPU 測試失敗後，依官方 v2.10.0 源碼改為 per-pixel loss + tensor reduction，保持原 weighted-mean 定義；等價與 ignore 梯度測試通過。segmentation-v1-001 的完整解析度 overfit 又攔下 AMP 梯度溢位，失敗原樣保留；v1.1 加入 bounded GradScaler backoff / same-batch retry，人工 Inf 測試確認跳過壞更新，成功 retry 只推進一次 Adam step。未為通過檢查而關閉 finite / deterministic 保護。
+
+正式設定、資料／程式／runtime 指紋及 test-once 政策在訓練前凍結。每 epoch checkpoint 可在相同環境精確恢復 RNG 與下一步更新；只宣稱已測的 epoch 邊界恢復，不宣稱任意中斷點或跨 GPU 版本 bitwise 一致。參見 PHASE3.md 與 configs/segmentation_v1_1.json。

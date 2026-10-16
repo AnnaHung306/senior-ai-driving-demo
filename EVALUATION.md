@@ -1,5 +1,27 @@
 # 驗收方式與結果
 
+## Phase 3 — 首輪 segmentation baseline，工程完成、品質未驗收
+
+固定 configs/segmentation_v1_1.json 與 source commit a1eff7b，在 CARLA 關閉時實際完成 16 epochs / 4800 optimizer updates，704.96 秒。Tiny U-Net 從零訓練，原解析度 640×360、488,120 parameters。只 train 更新及算 loss weights，validation 選 epoch 12，最後才開 test。32 tests 通過；訓練後再驗全部 7200 PNG、639 metadata、source/config/criteria/rig 未變，checkpoint / test receipt hash 一致，finite weights 與恢復契約通過。
+
+| Test 語意類別 | IoU | Precision | Recall |
+|---|---:|---:|---:|
+| 道路 | 36.82% | 60.58% | 48.41% |
+| 人行道 | 26.23% | 43.68% | 39.64% |
+| 行人 | 13.70% | 14.67% | 67.41% |
+| 汽車 | 17.01% | 18.87% | 63.24% |
+| 機車 | 49.01% | 55.98% | 79.75% |
+| 自行車 | 6.13% | 8.10% | 20.21% |
+| 車道線 | 34.63% | 52.10% | 50.82% |
+
+Validation focus mIoU=27.50%，test pooled focus mIoU=26.22%，pixel accuracy=68.00%；constant train-majority focus mIoU=0%，train-prior expected-counts 基準=2.69%。Other_annotated IoU=65.92%，不混入 focus 平均。晴天 scene-04=49.04%，夜雨 scene-05=11.83%；不同幾何／天氣有混淆，不能作單一因果結論。夜雨道路 IoU=1.13%，自行車 recall=3.03%，屬明顯失敗。
+
+保留 validation+test 全 1200 筆 per-view 指標、14 張固定規則錯誤對照圖與 84 筆逐類 FP / FN triage entries。Bicycle 在 test 的 700 張 GT-negative views 上誤報 47,257 pixels；100 張 positive views 總 recall=20.21%。這些影格高度相關，不能當成 1200 個獨立場景或以像素 bootstrap 給泛化信賴區間。
+
+GPU peak allocated / reserved=1382.4 / 1538.0 MiB。Batch1 network p50 / p95=9.07 / 9.85ms；warm-cache 載圖到 mask+confidence=25.64 / 32.04ms。八鏡頭單 bundle 順序處理=217.09ms，不含感測器、CARLA render 或寫檔，不代表 20Hz 閉環。
+
+真實 best checkpoint 另在完全無 labels / audit / plan / indexes 的 RGB+calibration fixture 成功執行獨立推論。成果與限制見 evidence/phase3/segmentation-v1-002/MODEL_CARD.md；原圖、checkpoint、source snapshot、review.html 在 artifacts/runs/segmentation-v1-002。尚無 detection AP／mAP、號誌狀態、完整長尾類別或正式品質門檻；整個 Phase 3 未通過。錯誤分析見同 evidence 下 ERROR_ANALYSIS.md。
+
 ## Phase 2 v2 — 基礎資料版本驗收通過
 
 新版 `data/town01-motion-v2-001` 六案收集均通過，各 200 個 0.05 秒 world tick、每四 tick 存一組（5Hz），共 300 組、7200 PNG。每案五個受控角色：一台汽車、一台自行車、一台機車、兩名行人。自車使用已標記來源的 BasicAgent 規則，不是 AI 感知或 AI 駕駛。
@@ -98,8 +120,7 @@ v2 protocol 在正式測試前保存為 `configs/phase0_protocol_v2.json`：地�
 兩個完整 smoke 都維持相同門檻 SHA256；沒有事後降低標準。Probe 僅供隔離故障，不能替代正式 smoke。
 當次 server 已退出；最新執行狀態請看本檔頂部與 CURRENT_TASK。
 
-感知 mAP / mIoU、3D 誤差、導航成功率與真實影像 FPS：**未測試，沒有數據**。
-目前無模型、無資料集、無 AI 辨識畫面；模擬器自車遙測清楚標記為 GT。
+上述為初次 Phase 0 的歷史狀態；當時感知 mAP / mIoU、3D 誤差與 AI 導航均未測，沒有模型或資料集。最新 segmentation 結果以本檔頂部 Phase 3 為準；偵測 mAP、3D / AI 駕駛仍未完成。
 
 ## 後續正式評估原則
 

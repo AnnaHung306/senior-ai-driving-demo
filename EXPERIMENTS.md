@@ -1,5 +1,17 @@
 # 實驗紀錄
 
+## SEG-001 / SEG-002 — 2026-10-16，Phase 3 首輪真實訓練
+
+- 協議先凍結於 PHASE3.md / configs/segmentation_v1.json；PyTorch 2.10.0+cu128 官方 wheel 安裝、pip check 通過。CUDA NLLLoss2d mean / sum 不支援 strict deterministic，改成等價 per-pixel reduction；單元測試確認 loss / ignore 梯度。
+- segmentation-v1-001（source 13df777）在 train-only 完整解析度 overfit 出現非有限 AMP 梯度，沒有正式訓練／test。第一步梯度對照未重現，必須保留完整 80-step sanity gate。失敗 config、source snapshot、trace、environment / provenance 保留。
+- v1.1 另凍結 initial loss scale=1024、bounded GradScaler backoff / same-batch retry；人工注入 Inf 確認跳過壞更新。source commit a1eff7b；configs/segmentation_v1_1.json；seed 20261016、batch4、16 epochs、lr 0.001、AdamW + cosine、640×360 Tiny U-Net 488,120 parameters、無 pretrained。
+- segmentation-v1-002 真正完成 704.96s / 4800 updates。CUDA 80-step sanity loss ratio 0.3716；正式 run 無 AMP backoff。每 epoch last / validation-best checkpoint 含 optimizer / scheduler / scaler / RNG。32 tests 通過，包括同環境恢復後下一步權重完全一致、無 GT 的真實模型推論、resume mismatch 與 test 重開拒絕。
+- Validation 選 epoch12，focus mIoU=27.50%；最終 test=26.22%，不是正式品質通過。晴天 scene04=49.04%，夜雨 scene05=11.83%，夜雨道路 IoU=1.13%、自行車 recall=3.03%；兩場景不同幾何，天氣與場景混淆。整體自行車 precision / recall=8.10% / 20.21%，行人／汽車大量誤報。
+- 7200 PNG + 639 metadata / source / config 訓練後再驗未變，checkpoint hash f06e4b110ea767d2c4b910d2cbfa8f9ea3ef96fa807c950bd2afd5f54947a1d4；GPU peak allocated=1382.4MiB；network p50/p95=9.07/9.85ms；八 view 順序單 bundle 217.09ms，不能稱八鏡頭 20Hz 即時。
+- 14 張真實錯誤對照圖、84 FP/FN triage entries、完整逐類 / scene / camera / weather confusion。RGB-only 實際 best model fixture 無 labels / audit / plan / indexes；輸出 class IDs / confidence / model hash / frame metadata 成功。
+- Compact evidence / model card：evidence/phase3/segmentation-v1-002；失敗：evidence/phase3/failures；完整權重／圖／logs：artifacts/runs/segmentation-v1-002。Test 已揭露，日後據此改模型必須視為 development，再收新 lockbox。
+- 下一步仍在 Phase3：32-sensor instance / visibility pilot、v3 獨立群組／夜雨／負樣本／長尾擴充，再做 detection 與模型比較。擴充 JSON 均是尚未收集計畫，沒有假裝已有資料或 AP。
+
 ## ENV-001 — 2026-10-16，環境建立
 
 - 模型 / 權重 / dataset：無；未開始訓練。

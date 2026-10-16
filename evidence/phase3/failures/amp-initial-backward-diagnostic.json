@@ -1,0 +1,12 @@
+[
+  {
+    "initial_scale": 65536,
+    "loss": 2.383410930633545,
+    "nonfinite_gradient_parameters": []
+  },
+  {
+    "initial_scale": 1024,
+    "loss": 2.383410930633545,
+    "nonfinite_gradient_parameters": []
+  }
+]

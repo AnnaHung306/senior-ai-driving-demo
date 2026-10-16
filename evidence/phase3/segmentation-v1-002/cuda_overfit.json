@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "steps": 80,
+  "first_5_mean_loss": 2.072899055480957,
+  "last_5_mean_loss": 0.7703510165214539,
+  "loss_ratio": 0.37162977834572647,
+  "amp_overflow_backoffs": [],
+  "parameter_count": 488120
+}

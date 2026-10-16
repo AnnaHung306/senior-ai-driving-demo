@@ -1,0 +1,8 @@
+{
+  "source_files_sha256": {
+    "summarize_training.py": "c8edd13d57eababce65009ae47c6e3ba52a04cd99bc746f932f1d29ecb9aa8bb",
+    "build_error_catalog.py": "51cc7c43551a54744ecb720810bbbd500b3ba9d086aa2df61444b71ebe1e9eac",
+    "verify_training_receipt.py": "a3f3ad2b478a0bcde2e18b4873bb008a65112b07802cc3fcb5482677fce92a0a"
+  },
+  "note": "Post-training evidence tools; numerical training source fingerprints are separate."
+}

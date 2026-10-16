@@ -4,6 +4,7 @@ from collections import Counter
 import hashlib
 import json
 from pathlib import Path
+import re
 import sys
 
 import numpy as np
@@ -32,7 +33,9 @@ def raw_rgb(path, shape):
     return array
 
 
-def audit(root):
+def audit(root, revision='v2'):
+    if not re.fullmatch('[A-Za-z0-9_-]+', revision):
+        raise ValueError('Invalid audit revision')
     config = json.loads((root / 'config.json').read_text())
     rig = json.loads((root / 'rig.json').read_text())
     acquisition = json.loads((root / 'report.json').read_text())
@@ -48,10 +51,13 @@ def audit(root):
             raise ValueError('Inventory corruption or duplicate')
         verified[item['path']] = raw_rgb(path, shape)
     index = json.loads((root / 'index.json').read_text())
+    metadata_names = ['config.json', 'rig.json', 'report.json', 'index.json', 'calibration/probe.json'] + [
+        entry[key] for entry in index for key in ['input', 'label']]
+    metadata_hashes = {name: sha(safe_path(root, name)) for name in metadata_names}
     results, mismatches, pixels, references = [], 0, 0, []
     depth_totals = {'axial': 0., 'range': 0., 'pixels': 0}
     unknown_foreground = Counter()
-    qa = root / 'qa'; qa.mkdir(exist_ok=False)
+    qa = root / ('qa-' + revision); qa.mkdir(exist_ok=False)
     palette = {'car': (0, 140, 255), 'pedestrian': (255, 40, 100), 'bicycle': (255, 220, 0), 'motorcycle': (0, 230, 180)}
     for entry in index:
         feature = read_sensor_frame(root, entry['input'])
@@ -124,6 +130,7 @@ def audit(root):
     summary = {'task': 'instance-probe-independent-audit', 'status': 'passed' if all(checks.values()) else 'failed',
         'checks': checks, 'training_approved': False, 'checked_pngs': len(verified),
         'inventory_sha256': sha(root / 'image_inventory.jsonl'), 'auditor_sha256': sha(Path(__file__)),
+        'metadata_sha256': metadata_hashes, 'qa_directory': qa.name, 'revision': revision,
         'semantic_disagreement_pixels': mismatches, 'semantic_disagreement_fraction': mismatches / pixels,
         'front_target_visible_pixels': {name: roles['target']['visible_pixels'] for name, roles in front.items()},
         'car_depth_geometry_hypotheses': {h: depth_totals[h] / depth_totals['pixels'] if depth_totals['pixels'] else None for h in ['axial', 'range']},
@@ -131,11 +138,16 @@ def audit(root):
         'limitations': ['Controlled static GT engineering fixture; not natural driving data',
             'No training-approved labels or detector AP', 'Unknown foreground requires resolution/ignore-aware training',
             'Mask/bbox fill is not an occlusion fraction', 'Visual review must be recorded separately']}
-    write_json(root / 'audit.json', summary)
+    destination = root / f'audit-{revision}.json'
+    if destination.exists():
+        raise FileExistsError('Audit revision already exists; retain prior evidence')
+    write_json(destination, summary)
     print(json.dumps({k: v for k, v in summary.items() if k != 'cases'}))
     return 0 if summary['status'] == 'passed' else 1
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(); parser.add_argument('root', type=Path)
-    raise SystemExit(audit(parser.parse_args().root.resolve()))
+    parser.add_argument('--revision', default='v2')
+    args = parser.parse_args()
+    raise SystemExit(audit(args.root.resolve(), args.revision))

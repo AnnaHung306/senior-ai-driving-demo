@@ -22,20 +22,23 @@ from train_sunny import require_idle_gpu,save_checkpoint
 
 
 class LightCrops(Dataset):
-    def __init__(self,root,split,config,allow_lockbox=False):
+    def __init__(self,root,split,config,allow_lockbox=False,supplement_root=None):
         if split=='lockbox' and not allow_lockbox: raise ValueError('Lockbox forbidden during training')
+        if supplement_root is not None and split!='lockbox':raise ValueError('Supplement is heldout only')
         self.samples=[];self.crops=[];counts=Counter();groups=defaultdict(set)
-        for line in (root/f'training/{split}.jsonl').read_text(encoding='utf-8').splitlines():
-            row=json.loads(line)
-            if row['split']!=split: raise ValueError('Split mismatch')
-            labels=json.loads(safe_path(root,row['detection']).read_text(encoding='utf-8'))
-            lights=[p for p in labels['positive_objects'] if p['category_id']==7]
-            if not lights: continue
-            rgb=png(safe_path(root,row['rgb']))
-            for light in lights:
-                state=light['light_state_class'];box=light['visible_bbox_xyxy']
-                self.samples.append({**row,'box':box,'target':state,'world_phase':light['world_phase']})
-                self.crops.append(crop_rgb(rgb,box));counts[state]+=1;groups[state].add(row['group_id'])
+        for data_root in [root]+([supplement_root] if supplement_root is not None else []):
+            for line in (data_root/f'training/{split}.jsonl').read_text(encoding='utf-8').splitlines():
+                row=json.loads(line)
+                if row['split']!=split: raise ValueError('Split mismatch')
+                labels=json.loads(safe_path(data_root,row['detection']).read_text(encoding='utf-8'))
+                lights=[p for p in labels['positive_objects'] if p['category_id']==7]
+                if not lights: continue
+                rgb=png(safe_path(data_root,row['rgb']))
+                for light in lights:
+                    state=light['light_state_class'];box=light['visible_bbox_xyxy']
+                    self.samples.append({**row,'data_root':str(data_root.resolve()),'controlled_supplement':data_root!=root,
+                                         'box':box,'target':state,'world_phase':light['world_phase']})
+                    self.crops.append(crop_rgb(rgb,box));counts[state]+=1;groups[state].add(row['group_id'])
         self.counts=[counts[c] for c in range(4)]
         self.coverage={LIGHT_STATES[c]:{'samples':counts[c],'groups':len(groups[c])} for c in range(4)}
         self.approved=all(counts[c]>=config['minimum_samples_per_class'][split] and len(groups[c])>=config['minimum_groups_per_class'] for c in range(4))
@@ -75,6 +78,8 @@ def train(args):
     if args.run.exists(): raise FileExistsError('Use a new run directory')
     config=json.loads(args.config.read_text(encoding='utf-8'))
     if config['crop_wh']!=[32,64] or config['class_names']!=LIGHT_STATES:raise ValueError('Phase crop/schema differs from implementation')
+    if config.get('heldout_supplement_plan') and sha(ROOT/config['heldout_supplement_plan'])!=config['heldout_supplement_plan_sha256']:
+        raise ValueError('Frozen heldout phase coverage plan changed')
     args.run.mkdir(parents=True)
     data_signature=verify(args.root);train=LightCrops(args.root,'train',config);validation=LightCrops(args.root,'validation',config)
     write_json(args.run/'coverage.json',{'train':train.coverage,'validation':validation.coverage})
@@ -82,7 +87,7 @@ def train(args):
     require_idle_gpu();configure_cuda();seed_all(config['seed']);model=LightStateNet().cuda()
     optimizer=torch.optim.AdamW(model.parameters(),lr=config['learning_rate'],weight_decay=.0001)
     weights=torch.tensor(np.clip(sum(train.counts)/(4*np.array(train.counts)),.1,10),device='cuda',dtype=torch.float32)
-    source={str(p.relative_to(ROOT)).replace('\\','/'):sha(p) for p in sorted((ROOT/'src').rglob('*.py'))+[Path(__file__),ROOT/'scripts/train_sunny.py',ROOT/'scripts/evaluate_light_state.py']}
+    source={str(p.relative_to(ROOT)).replace('\\','/'):sha(p) for p in sorted((ROOT/'src').rglob('*.py'))+[Path(__file__),ROOT/'scripts/train_sunny.py',ROOT/'scripts/evaluate_light_state.py',ROOT/'scripts/audit_light_supplement.py',ROOT/'scripts/audit_sunny_dataset.py',ROOT/'scripts/validate_dataset.py',ROOT/'scripts/collect_dataset.py',ROOT/'scripts/rig_capture.py']}
     for relative in source:
         destination=args.run/'source'/relative;destination.parent.mkdir(parents=True,exist_ok=True);destination.write_bytes((ROOT/relative).read_bytes())
     write_json(args.run/'config.json',config);best=-1.;started=time.monotonic();updates=0

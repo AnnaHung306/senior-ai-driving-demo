@@ -13,6 +13,15 @@ from senior_ai.light_model import crop_rgb
 from senior_ai.light_labels import LIGHT_STATES
 from senior_ai.detection_metrics import iou
 from senior_ai.dataset import safe_path
+from audit_light_supplement import verify_supplement
+
+
+@torch.inference_mode()
+def joint_scores(matrix):
+    classes=[{'name':name,'gt_objects':int(matrix[c].sum()),'correct_state_recall_including_missed_detections':float(matrix[c,c]/matrix[c].sum()) if matrix[c].sum() else None} for c,name in enumerate(LIGHT_STATES)]
+    values=[r['correct_state_recall_including_missed_detections'] for r in classes if r['gt_objects']]
+    return {'confusion_true_rows_phase_prediction_columns_plus_missed':matrix.tolist(),'classes':classes,
+            'macro_correct_state_recall':float(np.mean(values)) if values else None}
 
 
 @torch.inference_mode()
@@ -38,11 +47,22 @@ def joint(model,root,frames):
                 truth=t['light_state_class'];matrix[truth,4]+=1
                 records.append({'scene_id':row['scene_id'],'camera':row['camera'],'frame':row['frame'],'rgb':row['rgb'],
                                 'box':t['box'],'target':truth,'prediction':None,'matched':False})
-    classes=[{'name':name,'gt_objects':int(matrix[c].sum()),'correct_state_recall_including_missed_detections':float(matrix[c,c]/matrix[c].sum()) if matrix[c].sum() else None} for c,name in enumerate(LIGHT_STATES)]
-    values=[r['correct_state_recall_including_missed_detections'] for r in classes if r['gt_objects']]
-    return {'confusion_true_rows_phase_prediction_columns_plus_missed':matrix.tolist(),'classes':classes,
-            'macro_correct_state_recall':float(np.mean(values)) if values else None,
-            'unmatched_detector_light_predictions':sum('target' not in r for r in records)},records
+    return {**joint_scores(matrix),'unmatched_detector_light_predictions':sum('target' not in r for r in records)},records
+
+
+@torch.inference_mode()
+def supplement_detector(checkpoint,root):
+    from predict_sunny import load_model
+    detector,task,_=load_model(checkpoint,'cuda')
+    if task!='detection':raise ValueError('Detector checkpoint required')
+    frames=[]
+    for line in (root/'training/lockbox.jsonl').read_text(encoding='utf-8').splitlines():
+        row=json.loads(line);rgb=png(safe_path(root,row['rgb']));image=torch.from_numpy(rgb.transpose(2,0,1).copy()).cuda().float()/255
+        p=detector([image])[0];labels=json.loads(safe_path(root,row['detection']).read_text(encoding='utf-8'))
+        frames.append({**row,'targets':[{'label':7,'box':p['visible_bbox_xyxy'],'light_state_class':p['light_state_class']} for p in labels['positive_objects']],
+            'predictions':[{'box':b,'label':int(l),'score':float(s)} for b,l,s in zip(p['boxes'].cpu().tolist(),p['labels'].cpu().tolist(),p['scores'].cpu().tolist())]})
+    del detector
+    return frames
 
 
 def main(args):
@@ -54,23 +74,48 @@ def main(args):
     for relative,digest in saved['source'].items():
         if sha(ROOT/relative)!=digest: raise ValueError('Frozen phase source changed')
     if (args.run/'lockbox_started.json').exists(): raise FileExistsError('Phase heldout already opened')
+    supplement_signature=None
+    if config.get('heldout_supplement_plan'):
+        if args.supplement_root is None:raise ValueError('Frozen phase supplement required')
+        if sha(args.supplement_root/'plan.json')!=config['heldout_supplement_plan_sha256']:raise ValueError('Different supplement plan')
+        supplement_signature=verify_supplement(args.supplement_root,saved['data']['audit_sha256'])
     for split in ['development','lockbox']:
         if not (args.detector_run/(split+'_frames.jsonl')).exists(): raise ValueError('Completed detector heldout predictions required')
-    write_json(args.run/'lockbox_started.json',{'best_sha256':state['best_sha256'],'detector_run':str(args.detector_run)})
+    detector_state=json.loads((args.detector_run/'state.json').read_text(encoding='utf-8'))
+    detector_final=json.loads((args.detector_run/'final_evaluation.json').read_text(encoding='utf-8'))
+    if detector_final['status']!='passed' or sha(args.detector_run/'best.pt')!=detector_state['best_sha256']:raise ValueError('Qualified detector required')
+    # Coverage is checked before the irreversible evaluation marker. No model
+    # predictions are made in this preflight and coverage never lowers a gate.
+    for split in ['development','lockbox']:
+        coverage=LightCrops(args.root,split,config,allow_lockbox=split=='lockbox',supplement_root=args.supplement_root if split=='lockbox' else None)
+        if not coverage.approved:raise ValueError('Heldout phase coverage missing')
+        del coverage
+    write_json(args.run/'lockbox_started.json',{'best_sha256':state['best_sha256'],'detector_run':str(args.detector_run),
+        'detector_sha256':detector_state['best_sha256'],'supplement':supplement_signature})
     require_idle_gpu();configure_cuda();model=LightStateNet().cuda().eval();model.load_state_dict(saved['model']);result={}
     for split in ['development','lockbox']:
-        data=LightCrops(args.root,split,config,allow_lockbox=split=='lockbox')
+        data=LightCrops(args.root,split,config,allow_lockbox=split=='lockbox',supplement_root=args.supplement_root if split=='lockbox' else None)
         if not data.approved: raise ValueError('Heldout phase coverage missing')
         cropped,crop_frames=evaluate(model,data,config['batch_size']);write_json(args.run/(split+'_crops.json'),cropped)
         (args.run/(split+'_crop_frames.jsonl')).write_text(''.join(json.dumps(r)+'\n' for r in crop_frames),encoding='utf-8')
         detector_frames=[json.loads(line) for line in (args.detector_run/(split+'_frames.jsonl')).read_text(encoding='utf-8').splitlines()]
-        combined,joint_frames=joint(model,args.root,detector_frames);write_json(args.run/(split+'_joint.json'),combined)
+        combined,joint_frames=joint(model,args.root,detector_frames)
+        if split=='lockbox' and args.supplement_root is not None:
+            write_json(args.run/'lockbox_dynamic_joint.json',combined)
+            supplemental_frames=supplement_detector(args.detector_run/'best.pt',args.supplement_root)
+            (args.run/'lockbox_supplement_detector_frames.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in supplemental_frames),encoding='utf-8')
+            extra,extra_frames=joint(model,args.supplement_root,supplemental_frames);write_json(args.run/'lockbox_controlled_joint.json',extra)
+            matrix=np.array(combined['confusion_true_rows_phase_prediction_columns_plus_missed'])+np.array(extra['confusion_true_rows_phase_prediction_columns_plus_missed'])
+            combined={**joint_scores(matrix),'unmatched_detector_light_predictions':combined['unmatched_detector_light_predictions']+extra['unmatched_detector_light_predictions']}
+            joint_frames.extend({**r,'controlled_supplement':True} for r in extra_frames)
+        write_json(args.run/(split+'_joint.json'),combined)
         (args.run/(split+'_joint_frames.jsonl')).write_text(''.join(json.dumps(r)+'\n' for r in joint_frames),encoding='utf-8')
         result[split]={'crop_quality':quality(cropped,config),'joint_quality':(combined['macro_correct_state_recall'] or 0)>=config['minimum_joint_macro_correct_state_recall']}
     final={'status':'passed' if result['lockbox']['crop_quality']['passed'] and result['lockbox']['joint_quality'] else 'quality_failed',
-           'quality':result,'checkpoint_sha256':state['best_sha256'],'scope':'Observable lamp color eligibility; unknown class for back-facing/unresolvable lamps; ClearNoon only'}
+           'quality':result,'checkpoint_sha256':state['best_sha256'],'supplement':supplement_signature,
+           'scope':'Observable lamp color eligibility; unknown class for back-facing/unresolvable lamps; ClearNoon only. Dynamic and controlled stationary phase tests reported separately; pooled phase acceptance includes the pre-frozen coverage supplement.'}
     write_json(args.run/'final_evaluation.json',final);print(json.dumps(final));return 0 if final['status']=='passed' else 2
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--run',type=Path,required=True);p.add_argument('--detector-run',type=Path,required=True);sys.exit(main(p.parse_args()))
+    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--run',type=Path,required=True);p.add_argument('--detector-run',type=Path,required=True);p.add_argument('--supplement-root',type=Path);sys.exit(main(p.parse_args()))

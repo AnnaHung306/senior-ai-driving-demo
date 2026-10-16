@@ -30,3 +30,11 @@
 ## 模型版本登錄
 
 尚無模型版本。後續每次訓練必須記錄 architecture、初始化來源（自訓 / 微調 / 直接預訓練）、dataset / split 版本、seed、hyperparameters、耗時與峰值資源、權重路徑、測試版本、逐類指標、已知限制。
+
+## START-001 — 2026-10-16，CARLA 啟動等待
+
+- 官方 archive 下載完成；SHA256 `0972f26fa3f1c741fbfcb4602b4ccf520415b8f8cf3d06cb83c9502fe8118bd2`，ZIP CRC 通過，解壓約 18.07GiB。
+- 第一次自動等待 RPC 180 秒後失敗；已保存 `evidence/phase0/startup-attempt-001.json`。
+- 同時獨立新建 client 可成功取得 server 0.9.16；重新執行 doctor 全數通過。
+- 推測啟動前建立的 client 保留失敗連線狀態；最小修正為每次 readiness retry 重建 client，保留原 180 秒上限與所有車輛驗收門檻。
+- 此次尚未執行車輛 smoke，不將 doctor 通過冒充車輛驗收完成。

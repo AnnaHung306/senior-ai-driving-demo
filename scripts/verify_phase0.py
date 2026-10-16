@@ -17,12 +17,14 @@ def main():
     parser.add_argument('--run-id', default='phase0-001')
     args = parser.parse_args()
     import carla
-    client = carla.Client('127.0.0.1', 2000)
-    client.set_timeout(2)
     deadline = time.monotonic() + args.wait_server_seconds
     ready = False
     while time.monotonic() < deadline:
         try:
+            # A client created before startup may retain a failed connection.
+            # Rebuild the transport for each bounded readiness attempt.
+            client = carla.Client('127.0.0.1', 2000)
+            client.set_timeout(2)
             client.get_server_version()
             ready = True
             break

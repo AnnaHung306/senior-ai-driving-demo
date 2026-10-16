@@ -1,0 +1,20 @@
+{
+  "version": "phase1-v1",
+  "scenario_count": 5,
+  "map": "Town01",
+  "weather": "ClearNoon",
+  "traffic_actors": 0,
+  "fixed_delta_s": 0.05,
+  "route_distance_m": 40.0,
+  "target_speed_kph": 15,
+  "arrival_radius_m": 3.0,
+  "max_final_speed_mps": 0.2,
+  "max_simulation_seconds_per_route": 120,
+  "max_collisions": 0,
+  "max_lane_invasion_events": 0,
+  "max_off_driving_lane_ticks": 0,
+  "required_completed_routes": 5,
+  "require_agent_done": true,
+  "controller_options": {"dt": 0.05, "base_min_distance": 1.0, "distance_ratio": 0.2, "max_brake": 1.0, "sampling_resolution": 2.0},
+  "scope": "Five fixed short non-junction routes; no NPCs. Traffic-light/stop-sign compliance is not stimulated or claimed. Simulator-map/actor GT is allowed for this rules baseline, not AI perception."
+}

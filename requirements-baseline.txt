@@ -1,0 +1,4 @@
+-r requirements-sim.txt
+numpy==2.3.5
+networkx==3.5
+shapely==2.1.2

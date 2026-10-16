@@ -41,6 +41,8 @@ BEVFormer 與 BEVDet 有官方開源實作。BEVFormer tiny config 標示至少�
 
 ## D004 — 2026-10-16：車輛物理 tick 崩潰，停止重複修正
 
+歷史決策；使用者後續授權繼續深入嘗試，最新結果與原生修正見 D005。
+
 **證據**：官方 0.9.16 archive CRC 通過、API / RPC 0.9.16 成功。完整 smoke 的 D3D12 / D3D11 均失敗，沒有有效影像。Tesla 與 Lincoln 的無攝影機隔離 probe 也在第一個 tick 後失去 server。CrashContext 為 TaskGraphThreadNP 存取違例，bIsOOM=0。切換後端沒有解決，不能宣稱顯存不足、攝影機或特定車型就是根因。
 
 此為 Phase 0 重大阻礙；依規格第 7F 與第 11 節，不再反覆啟動相同失敗條件，不開始模型訓練或視覺化。所有本次 server 已退出，無背景工作正在進行。
@@ -52,3 +54,22 @@ BEVFormer 與 BEVDet 有官方開源實作。BEVFormer tiny config 標示至少�
 | 小型 CPU 模擬器替代實驗 | 可縮小控制 / 感測試驗，但道路 / 標註 / 感知域需要重新驗證，不能冒充 CARLA 成果 | 僅作後備研究方案 |
 
 下一個實驗先重現短物理 / RGB probe，通過才跑完整 smoke；保留原版失敗紀錄，固定新版本、輸入與門檻後再測試。此決策沒有刪除八鏡頭、AI 訓練、BEV、3D 或完整自主駕駛的長期目標。
+
+## D005 — 2026-10-16：PixelReader 排程修正與精確影格 pipeline
+
+以本機 LLVM / 官方 PDB 解析初次 crash 後，新增有限對照。空場景與車輛可先步進，不能再推論物理引擎本身故障。不同 Python、renderer、consumer 與節奏仍在五個 RGB callbacks 後停滯。
+
+擷取**僅本專案 server** 的輕量 dump，StatsThread 指令在 `_Thrd_yield`，頂部 return-address candidate 對應 PixelReader.cpp:64 的 GPU readback 等待。DIA 讀取同一 PDB 的 enum：`StatsThread=0`、`HighTaskPriority=512`、`AnyNormalThreadHiPriTask=767`。官方 PixelReader.cpp:58 與實際反組譯都傳 512 給 AsyncTask；其 thread-index 位元為 0，會選到 StatsThread，而不是任意 worker。
+
+本地僅把該 verified callsite 的 enum 改為 767，保留高 task priority，指定 AnyThread。已對照官方 ZIP 原檔、保存 `.exe.stock`、驗證一 byte 差異，並實際測試 restore → reapply 雜湊一致。Source patch 在 `patches/pixel-reader-task-thread.patch`，長期應用 source patch 重建；目前的 binary 修正只適用這一個已核實 build，腳本拒絕其他 build。
+
+- Stock executable SHA256：`ba05ec36f7f0b548b266865ea2787a1dc5a028e298ebefcf0c49196ac629c4d3`。
+- Local fixed SHA256：`9deba9928ffe56ee8c27cc89d88bcdd4e49204b771f86da2e438c613f4205245`。
+- `scripts/patch_pixel_reader.py --restore` 可還原；套用不修改原 ZIP、不修改驅動或全域設定。
+- Source patch 初次零 context 檢查失敗，已改為正常 context diff，並以 `git apply --check --ignore-space-change` 對官方 source fixture 驗證通過。此格式問題沒有改變實際二進位測試內容。
+
+修正後 server 在 sensor timeout 後仍正常回應；再用一 tick lookahead，三張影像與原始 snapshot 幀號及時間戳全數配對通過。正式 v2 protocol 先凍結，再測原數值門檻，140 影格驗收通過。這不是把前一張影像當成目前影像，控制／遙測均按原始 frame 保存。
+
+CARLA 0.9.15 的官方 wheel 僅到 Python 3.10，已準備 matching diagnostic runtime；大型 server 下載在 6,265,982,548 bytes 停滯後自行退出，等待安裝程序已中止，**未完成 0.9.15 測試**。既然 0.9.16 已通過，不再重下載這份備案。原始 source 的兩版本都含同一排程寫法，不能假設單純降版就可解決。
+
+目前是模擬器工程驗收通過，仍沒有 AI 感知模型或真實道路能力。

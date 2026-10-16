@@ -1,0 +1,15 @@
+{
+  "active": true,
+  "status": "experimental_pending_acceptance",
+  "stock_sha256": "ba05ec36f7f0b548b266865ea2787a1dc5a028e298ebefcf0c49196ac629c4d3",
+  "patched_sha256": "9deba9928ffe56ee8c27cc89d88bcdd4e49204b771f86da2e438c613f4205245",
+  "changed_bytes": 1,
+  "instruction_rva": "0x8945b8",
+  "file_offset": "0x893bb9",
+  "from_task_enum": 512,
+  "to_task_enum": 767,
+  "from_name": "HighTaskPriority (thread index 0 = StatsThread)",
+  "to_name": "AnyNormalThreadHiPriTask (AnyThread | HighTaskPriority)",
+  "backup": "C:\\code\\senior_AI\\artifacts\\carla\\CarlaUE4\\Binaries\\Win64\\CarlaUE4-Win64-Shipping.exe.stock",
+  "source_patch": "patches/pixel-reader-task-thread.patch"
+}

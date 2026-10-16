@@ -1,5 +1,14 @@
 # 驗收方式與結果
 
+## 最新結果 — Phase 0 v2 通過
+
+`phase0-native-fixed-001`：140 影格、14 PNG，位移 6.3031m、峰速 5.1616m/s、最終 0m/s、最大時間戳誤差 0s、碰撞 0、清理成功，全部門檻通過。
+doctor 同時通過。來源程式 `33a4aa2`；數值門檻 SHA256 仍為下方原值，沒有降低。
+使用 **本地修正的 CARLA 0.9.16**，不是未修改的官方 binary。Patch hash / 原檔備份 / source diff 見 D005。
+v2 protocol 在正式測試前保存為 `configs/phase0_protocol_v2.json`：地圖 preroll、sensor warmup、每 tick RGB，以及一個 tick 的 readback pipeline。
+影像必須配對其原本 snapshot；額外最後一個全煞車 tick 只排空 GPU pipeline，不能用來改善量測到的最終車速。
+原 v1 的失敗仍是失敗，不回寫為通過。Phase 1 路線與數值門檻已凍結，尚待測試。
+
 ## Phase 0，protocol v1（實機測試前凍結）
 
 固定輸入：CARLA 0.9.16、Town01、ClearNoon、第一個可用 spawn（記錄 index）、單一 Tesla Model 3、前向 RGB 640×360 / FOV 90°。
@@ -38,9 +47,9 @@
 | Tesla 無攝影機物理 probe | 失敗；第一個 tick 後 server 不再回應 | `evidence/phase0/isolation-tesla.json` |
 | Lincoln 無攝影機物理 probe | 失敗；第一個 tick 後 server 不再回應 | `evidence/phase0/isolation-lincoln.json` |
 
-結論：Phase 0 **未通過**。無有效 RGB 存檔或加速 / 煞停指標，不能進入 Phase 1 或訓練。
+初次執行結論（歷史）：未修改的 v1 **未通過**。當時無有效 RGB 存檔或加速 / 煞停指標。
 兩個完整 smoke 都維持相同門檻 SHA256；沒有事後降低標準。Probe 僅供隔離故障，不能替代正式 smoke。
-目前 server 已退出；doctor 若再執行應回報 server 未就緒。
+當次 server 已退出；最新執行狀態請看本檔頂部與 CURRENT_TASK。
 
 感知 mAP / mIoU、3D 誤差、導航成功率與真實影像 FPS：**未測試，沒有數據**。
 目前無模型、無資料集、無 AI 辨識畫面；模擬器自車遙測清楚標記為 GT。

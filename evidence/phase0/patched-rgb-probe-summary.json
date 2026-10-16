@@ -1,0 +1,20 @@
+{
+  "started_utc": "2026-10-16T04:27:35.808362+00:00",
+  "cases": [
+    {
+      "id": "frame-join-prefetch-1",
+      "status": "passed",
+      "exit_code": 0,
+      "stage": "rgb_capture",
+      "rgb_frames": 3,
+      "errors": [],
+      "callback_count": 10,
+      "launcher_exit_code": 1
+    }
+  ],
+  "server_binary_sha256": "9deba9928ffe56ee8c27cc89d88bcdd4e49204b771f86da2e438c613f4205245",
+  "runtime": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "runtime_executable": "C:\\code\\senior_AI\\.venv\\Scripts\\python.exe",
+  "expected_version": "0.9.16",
+  "plan_version": "landscape-diagnostics-v4"
+}

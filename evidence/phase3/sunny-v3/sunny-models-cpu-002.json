@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "device": "cpu",
+  "strict_deterministic": true,
+  "scope": "Synthetic engineering check only; no perception accuracy or training approval",
+  "source": {
+    "scripts/verify_sunny_models.py": "aa3206ee5b8aa0554518aaca3fad00d4617540c49c09ae43af1c5ac7f87edae8",
+    "src/senior_ai/detection_model.py": "993e0becddd7770609a54621fc4e0590906c1386c4555664ba45eab8dd5e567d",
+    "src/senior_ai/segmentation_model.py": "c2a84e2ca62115dab46f94957168c0170ff5a240f35a4ad146ae56fe6067627a",
+    "src/senior_ai/light_model.py": "0b1080bd52e595fde47cc120e968181b8c667728c56617193c21668b20e84349",
+    "src/senior_ai/sunny_losses.py": "d94cbbac4ef6810dc148c72b2063d283d2ae0b9197c948a84befac0285880170"
+  },
+  "results": [
+    {
+      "task": "detection",
+      "finite_loss_and_gradients": true,
+      "losses": {
+        "loss_classifier": 2.245405673980713,
+        "loss_box_reg": 0.020576801151037216,
+        "loss_objectness": 0.17889460921287537,
+        "loss_rpn_box_reg": 0.008257506415247917
+      },
+      "rpn_ignore_calls": 1,
+      "roi_ignore_calls": 1,
+      "pyramid_strides": [
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "roi_impl": "EagerDeterministicRoIAlign"
+    },
+    {
+      "task": "segmentation",
+      "finite_loss_and_gradients": true,
+      "losses": {
+        "weighted_ce_plus_foreground_dice": 3.400573968887329
+      }
+    },
+    {
+      "task": "light_state",
+      "finite_loss_and_gradients": true,
+      "losses": {
+        "ce": 1.8388621807098389
+      }
+    }
+  ]
+}

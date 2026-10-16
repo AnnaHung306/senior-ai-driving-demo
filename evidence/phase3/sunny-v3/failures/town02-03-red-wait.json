@@ -1,0 +1,10 @@
+{
+  "failed_root": "data/sunny-cross-town-v3-005",
+  "scene": "town02-03",
+  "samples": 150,
+  "bike_at_red_and_braking": 134,
+  "sampling_hz": 5,
+  "observed_red_wait_seconds": 26.8,
+  "new_scenario": "explicit all-green acquisition only for this same geometry/seed;17 other groups unchanged",
+  "endpoint_warning": "First and last samples are Green; endpoint-only checks miss the134 intervening red/braking samples."
+}

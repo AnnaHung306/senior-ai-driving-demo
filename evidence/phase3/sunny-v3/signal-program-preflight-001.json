@@ -1,0 +1,67 @@
+[
+  {
+    "stage": "before",
+    "states": {
+      "Green": 8,
+      "Red": 16
+    },
+    "frozen": {
+      "false": 24
+    }
+  },
+  {
+    "stage": "frozen_confirmed",
+    "states": {
+      "Green": 8,
+      "Red": 16
+    },
+    "frozen": {
+      "true": 24
+    }
+  },
+  {
+    "stage": "green_tick_0",
+    "states": {
+      "Green": 24
+    },
+    "frozen": {
+      "true": 24
+    }
+  },
+  {
+    "stage": "green_tick_1",
+    "states": {
+      "Green": 24
+    },
+    "frozen": {
+      "true": 24
+    }
+  },
+  {
+    "stage": "green_tick_2",
+    "states": {
+      "Green": 24
+    },
+    "frozen": {
+      "true": 24
+    }
+  },
+  {
+    "stage": "green_tick_3",
+    "states": {
+      "Green": 24
+    },
+    "frozen": {
+      "true": 24
+    }
+  },
+  {
+    "stage": "green_tick_4",
+    "states": {
+      "Green": 24
+    },
+    "frozen": {
+      "true": 24
+    }
+  }
+]

@@ -9,7 +9,8 @@ import numpy as np
 
 
 TAGS = {'car': {14}, 'truck': {15}, 'bus': {16}, 'motorcycle': {18, 13},
-        'bicycle': {19, 13}, 'pedestrian': {12}, 'traffic_light': {7}}
+        'bicycle': {19, 13}, 'pedestrian': {12}, 'traffic_light': {7},
+        'temporary_obstacle': {21}}
 
 
 def decode_instance_rgb(rgb):

@@ -1,3 +1,4 @@
 # Install the CUDA wheel separately using the official cu128 index (see PHASE3.md).
 -r requirements-dataset.txt
 torch==2.10.0+cu128
+torchvision==0.25.0+cu128

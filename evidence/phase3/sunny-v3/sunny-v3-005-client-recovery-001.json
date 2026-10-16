@@ -1,0 +1,9 @@
+{
+  "event": "native_client_assert_between_maps",
+  "root": "data/sunny-cross-town-v3-005",
+  "completed_scenes": 11,
+  "error": "Assertion failed: _episode != nullptr; LibCarla/client/detail/Simulator.h:384",
+  "server_probe": "same host RPC responded Carla/Maps/Town05 within 5-second timeout; no server restart or reload",
+  "action": "resume unchanged plan/source/criteria with a fresh client; bounded supervisor only retries between cleaned completed scenes",
+  "limits": "Previous update incorrectly assumed acquisition remained live; execution monitor now records child poll state and timestamps."
+}

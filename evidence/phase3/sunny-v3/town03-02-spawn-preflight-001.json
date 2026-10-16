@@ -1,0 +1,142 @@
+{
+  "training_approved": false,
+  "scene": "town03-02",
+  "results": [
+    {
+      "blueprint": "vehicle.tesla.model3",
+      "kind": "ego",
+      "success": true,
+      "planned_pose": {
+        "position_m": [
+          178.7642364501953,
+          -193.89999389648438,
+          0.27530714869499207
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "blueprint": "vehicle.bh.crossbike",
+      "kind": "bicycle",
+      "success": true,
+      "planned_pose": {
+        "position_m": [
+          186.7642364501953,
+          -193.89999389648438,
+          0.4000000059604645
+        ],
+        "rotation_deg": [
+          0.0,
+          -0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "blueprint": "vehicle.kawasaki.ninja",
+      "kind": "motorcycle",
+      "success": true,
+      "planned_pose": {
+        "position_m": [
+          194.20999145507812,
+          -204.39999389648438,
+          0.4000000059604645
+        ],
+        "rotation_deg": [
+          360.0,
+          180.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "blueprint": "vehicle.lincoln.mkz_2020",
+      "kind": "car",
+      "success": true,
+      "planned_pose": {
+        "position_m": [
+          210.552734375,
+          -202.68820190429688,
+          0.4000000059604645
+        ],
+        "rotation_deg": [
+          360.0,
+          196.67263793945312,
+          0.0
+        ]
+      }
+    },
+    {
+      "blueprint": "vehicle.carlamotors.european_hgv",
+      "kind": "truck",
+      "success": false,
+      "planned_pose": {
+        "position_m": [
+          228.19973754882812,
+          -191.92652893066406,
+          0.4000000059604645
+        ],
+        "rotation_deg": [
+          360.0,
+          226.07960510253906,
+          0.0
+        ]
+      }
+    },
+    {
+      "blueprint": "vehicle.mitsubishi.fusorosa",
+      "kind": "bus",
+      "success": true,
+      "planned_pose": {
+        "position_m": [
+          238.77459716796875,
+          -174.32577514648438,
+          0.4000000059604645
+        ],
+        "rotation_deg": [
+          360.0,
+          247.91580200195312,
+          0.0
+        ]
+      }
+    },
+    {
+      "blueprint": "walker.pedestrian.0017",
+      "kind": "pedestrian",
+      "success": true,
+      "planned_pose": {
+        "position_m": [
+          188.7642822265625,
+          -188.01499938964844,
+          1.0
+        ],
+        "rotation_deg": [
+          0.0,
+          -0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "blueprint": "static.prop.trafficcone01",
+      "kind": "temporary_obstacle",
+      "success": true,
+      "planned_pose": {
+        "position_m": [
+          190.7642822265625,
+          -187.21499633789062,
+          0.05000000074505806
+        ],
+        "rotation_deg": [
+          0.0,
+          -0.0,
+          0.0
+        ]
+      }
+    }
+  ]
+}

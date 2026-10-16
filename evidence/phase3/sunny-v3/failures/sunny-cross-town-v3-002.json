@@ -1,0 +1,155 @@
+{
+  "task": "sunny-cross-town-collect-v3",
+  "status": "failed",
+  "signature": {
+    "plan": "45f8541d69bf8890e9c5b995febf4e58810cf01055dd02156b5145379576c907",
+    "collector": "7e68e069cca9b7c8ed7ec76bb964564b365fd5e6c949c8898df714fb44879fa2",
+    "runner": "ace5e339c3519f850697fd61fecffef066538c5cc85a98e536eeec344fe67c32",
+    "frame": "cffd819cdbd361e66bedb37f0898489334dba57c853bdf37d075159d564a13f7"
+  },
+  "weather": "ClearNoon",
+  "training_approved": false,
+  "scenes": [
+    {
+      "scene_id": "town03-00",
+      "split": "train",
+      "status": "failed",
+      "errors": [
+        "ValueError: Out of range float values are not JSON compliant: nan"
+      ],
+      "bundles": 4,
+      "images": 128,
+      "max_timestamp_error_s": 0.0,
+      "requested_npcs": 8,
+      "spawned_npcs": 8,
+      "semantic_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20,
+        21,
+        23,
+        24,
+        25,
+        27
+      ],
+      "depth_min_m": 2.754569217835022,
+      "depth_max_m": 1000.0,
+      "spawned_kinds": {
+        "bicycle": 1,
+        "motorcycle": 1,
+        "car": 1,
+        "truck": 1,
+        "bus": 1,
+        "pedestrian": 2,
+        "temporary_obstacle": 1
+      },
+      "weather_attributes": {
+        "cloudiness": 5.0,
+        "dust_storm": 0.0,
+        "fog_density": 2.0,
+        "fog_distance": 0.75,
+        "fog_falloff": 0.10000000149011612,
+        "mie_scattering_scale": 0.029999999329447746,
+        "precipitation": 0.0,
+        "precipitation_deposits": 0.0,
+        "rayleigh_scattering_scale": 0.03310000151395798,
+        "scattering_intensity": 1.0,
+        "sun_altitude_angle": 45.0,
+        "sun_azimuth_angle": -1.0,
+        "wetness": 0.0,
+        "wind_intensity": 10.0
+      },
+      "stage": "cleanup",
+      "navigation_start_pose": {
+        "position_m": [
+          -55.04970169067383,
+          0.5458330512046814,
+          0.0013525581452995539
+        ],
+        "rotation_deg": [
+          0.0,
+          1.6669410467147827,
+          0.0
+        ]
+      },
+      "gt_supervisor_brake_ticks": 2,
+      "checks": {
+        "cleanup": true
+      },
+      "wall_s": 18.015999999995984,
+      "semantic_pixel_counts": {
+        "1": 1767357,
+        "2": 2122480,
+        "3": 2351915,
+        "4": 111527,
+        "5": 388,
+        "6": 253977,
+        "7": 5337,
+        "9": 306366,
+        "10": 7023,
+        "11": 1945567,
+        "12": 6111,
+        "13": 7149,
+        "14": 8448,
+        "15": 1037,
+        "16": 9171,
+        "18": 3458,
+        "19": 1855,
+        "20": 124235,
+        "21": 7783,
+        "23": 941,
+        "24": 129157,
+        "25": 6709,
+        "27": 38009
+      },
+      "semantic_positive_images": {
+        "1": 40,
+        "2": 40,
+        "3": 40,
+        "4": 34,
+        "5": 13,
+        "6": 40,
+        "7": 20,
+        "9": 40,
+        "10": 26,
+        "11": 40,
+        "12": 15,
+        "13": 10,
+        "14": 30,
+        "15": 10,
+        "16": 10,
+        "18": 10,
+        "19": 5,
+        "20": 40,
+        "21": 25,
+        "23": 15,
+        "24": 40,
+        "25": 15,
+        "27": 40
+      }
+    }
+  ],
+  "server_launch": {
+    "graphics_api": "dx12",
+    "launcher_pid": 29748,
+    "executable": "C:\\code\\senior_AI\\artifacts\\carla\\CarlaUE4.exe",
+    "port": 2000,
+    "quality_level": "Epic",
+    "server_binary_sha256": "b0370d6dcd57b95299d12005cebad1dc6187804e83aeb51a184ccbc4b581fea8"
+  }
+}

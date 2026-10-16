@@ -1,0 +1,82 @@
+[
+  {
+    "town": "Town03",
+    "status": "passed",
+    "instance_pixels": {
+      "110": {
+        "15": 14599
+      },
+      "111": {
+        "16": 24725
+      },
+      "112": {
+        "21": 5379
+      }
+    },
+    "training_approved": false
+  },
+  {
+    "town": "Town04",
+    "status": "passed",
+    "instance_pixels": {
+      "271": {
+        "15": 14597
+      },
+      "272": {
+        "16": 24726
+      },
+      "273": {
+        "21": 5379
+      }
+    },
+    "training_approved": false
+  },
+  {
+    "town": "Town05",
+    "status": "passed",
+    "instance_pixels": {
+      "421": {
+        "15": 14599
+      },
+      "422": {
+        "16": 24725
+      },
+      "423": {
+        "21": 5379
+      }
+    },
+    "training_approved": false
+  },
+  {
+    "town": "Town02",
+    "status": "passed",
+    "instance_pixels": {
+      "568": {
+        "15": 14599
+      },
+      "569": {
+        "16": 24725
+      },
+      "570": {
+        "21": 5379
+      }
+    },
+    "training_approved": false
+  },
+  {
+    "town": "Town01",
+    "status": "passed",
+    "instance_pixels": {
+      "777": {
+        "15": 14598
+      },
+      "778": {
+        "16": 24725
+      },
+      "779": {
+        "21": 5379
+      }
+    },
+    "training_approved": false
+  }
+]

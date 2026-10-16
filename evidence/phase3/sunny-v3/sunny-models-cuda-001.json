@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "device": "cuda",
+  "strict_deterministic": true,
+  "scope": "Synthetic engineering check only; no perception accuracy or training approval",
+  "source": {
+    "scripts/verify_sunny_models.py": "aa3206ee5b8aa0554518aaca3fad00d4617540c49c09ae43af1c5ac7f87edae8",
+    "src/senior_ai/detection_model.py": "a6aa01157cf94ac5e7b3f48a709f3c9aee5b14800ccb2de6a548211cf2d68e10",
+    "src/senior_ai/segmentation_model.py": "c2a84e2ca62115dab46f94957168c0170ff5a240f35a4ad146ae56fe6067627a",
+    "src/senior_ai/light_model.py": "0b1080bd52e595fde47cc120e968181b8c667728c56617193c21668b20e84349",
+    "src/senior_ai/sunny_losses.py": "d94cbbac4ef6810dc148c72b2063d283d2ae0b9197c948a84befac0285880170"
+  },
+  "results": [
+    {
+      "task": "detection",
+      "finite_loss_and_gradients": true,
+      "losses": {
+        "loss_classifier": 2.219174861907959,
+        "loss_box_reg": 0.0021760347299277782,
+        "loss_objectness": 0.17700938880443573,
+        "loss_rpn_box_reg": 0.006029164884239435
+      },
+      "rpn_ignore_calls": 1,
+      "roi_ignore_calls": 1,
+      "pyramid_strides": [
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "roi_impl": "EagerDeterministicRoIAlign",
+      "max_cuda_allocated_mib": 1566.18896484375,
+      "max_cuda_reserved_mib": 1642.0
+    },
+    {
+      "task": "segmentation",
+      "finite_loss_and_gradients": true,
+      "losses": {
+        "weighted_ce_plus_foreground_dice": 3.3636112213134766
+      },
+      "max_cuda_allocated_mib": 853.46435546875,
+      "max_cuda_reserved_mib": 1022.0
+    },
+    {
+      "task": "light_state",
+      "finite_loss_and_gradients": true,
+      "losses": {
+        "ce": 1.3183307647705078
+      },
+      "max_cuda_allocated_mib": 68.88671875,
+      "max_cuda_reserved_mib": 96.0
+    }
+  ]
+}

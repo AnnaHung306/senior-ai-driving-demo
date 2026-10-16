@@ -19,6 +19,7 @@ sys.path.insert(0, str(ROOT / 'src'))
 from senior_ai.core import intrinsics, receive_frame, write_json
 from senior_ai.dataset import check_group_splits, decode_depth_bgra, semantic_ids_bgra
 from senior_ai.frames import RgbFrame
+from senior_ai.acquisition_safety import forecast_conflict, tm_target_speed
 from rig_capture import validate_rig
 
 
@@ -91,12 +92,14 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
               'spawned_npcs': 0, 'semantic_ids': [], 'depth_min_m': None, 'depth_max_m': None}
     actors, sensors, queues, indexes, label_actors = [], [], {}, [], []
     autopilot_actors, pedestrian_controls, actor_kinds, collision_events = [], [], {}, []
+    static_ids = set()
     moving = 'ego_route_m' in scene
     stride = criteria.get('capture_stride_ticks', 1)
     simulation_ticks = count * stride
     motion_labels, pixel_counts, positive_images = [], Counter(), Counter()
     original, original_weather = world.get_settings(), world.get_weather()
     manager = None
+    saved_light_states = []
     cleanup = True
     started = time.monotonic()
     classes, depth_min, depth_max = set(), math.inf, -math.inf
@@ -113,6 +116,21 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
         manager = client.get_trafficmanager(8000)
         manager.set_synchronous_mode(True)
         manager.set_random_device_seed(scene['seed'])
+        # TM seeding resets all traffic lights. Apply a scenario program only
+        # AFTER that reset, and confirm the actual snapshot rather than assuming.
+        program = scene.get('traffic_light_program')
+        if program:
+            if program['mode'] != 'all_green_frozen':raise ValueError('Unknown frozen acquisition signal program')
+            lights = list(world.get_actors().filter('traffic.traffic_light'))
+            saved_light_states = [(a, a.get_state(), a.is_frozen()) for a in lights]
+            if lights:lights[0].freeze(True)
+            world.tick(15)
+            for a in lights:a.set_state(carla.TrafficLightState.Green)
+            world.tick(15)
+            if any(a.get_state()!=carla.TrafficLightState.Green or not a.is_frozen() for a in lights):
+                raise ValueError('Frozen all-green signal program did not apply')
+            result['traffic_light_program'] = program
+            result['signal_program_verified_lights'] = len(lights)
         definitions = scene.get('participants') or [
             {'blueprint': 'vehicle.lincoln.mkz_2020', 'kind': 'car', 'start': p, 'controller': 'traffic_manager'}
             for p in scene.get('npc_spawns', [])]
@@ -131,8 +149,15 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
                 autopilot_actors.append(npc)
                 if 'speed_difference_percent' in definition:
                     manager.vehicle_percentage_speed_difference(npc, definition['speed_difference_percent'])
-            else:
+            elif definition['controller'] == 'walker_path':
                 pedestrian_controls.append([npc, definition, 0])
+            elif definition['controller'] == 'static':
+                if definition['blueprint'] != 'static.prop.trafficcone01' or definition['kind'] != 'temporary_obstacle':
+                    raise ValueError('Static obstacle requires verified blueprint allowlist')
+                npc.set_simulate_physics(False)
+                static_ids.add(npc.id)
+            else:
+                raise ValueError('Unknown participant controller')
         result['spawned_npcs'] = len(label_actors)
         result['spawned_kinds'] = dict(Counter(actor_kinds.values()))
         agent = None
@@ -163,6 +188,19 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
         cal_relative = f'calibration/{scene["id"]}.json'
         write_json(root / cal_relative, {'schema_version': 1, 'coordinate_system': rig['coordinate_system'],
                    'optical_from_carla_camera': [[0, 1, 0], [0, 0, -1], [1, 0, 0]], 'cameras': calibration})
+        light_actors = list(world.get_actors().filter('traffic.traffic_light')) if criteria.get('record_traffic_lights') else []
+        if light_actors:
+            light_geometry = []
+            for light in light_actors:
+                light_geometry.append({'actor_id': light.id, 'world_pose': pose(light.get_transform()),
+                    'lamp_boxes_world': [{'world_pose': pose(carla.Transform(b.location, b.rotation)),
+                        'extent_m': xyz(b.extent), 'world_vertices_m': [xyz(v) for v in b.get_world_vertices(carla.Transform())]}
+                        for b in light.get_light_boxes()]})
+            write_json(root / f'labels/traffic_lights/{scene["id"]}.json', light_geometry)
+        if criteria.get('record_weather'):
+            weather = world.get_weather()
+            result['weather_attributes'] = {k: getattr(weather, k) for k in dir(weather)
+                if not k.startswith('_') and isinstance(getattr(weather, k), (float, int, bool))}
         result['stage'] = 'warmup'
         write_json(folder / 'report.json', result)
         for _ in range(criteria.get('sensor_warmup_ticks', 5)):
@@ -182,6 +220,11 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
                                opt_dict={'dt': criteria['fixed_delta_s'], 'base_min_distance': 1.0,
                                          'distance_ratio': 0.2, 'max_brake': 1.0, 'sampling_resolution': 2.0})
             agent.set_destination(carla.Location(*scene['goal_m']), start_location=initial_pose.location)
+            if criteria.get('follow_frozen_route'):
+                from agents.navigation.local_planner import RoadOption
+                road_map = world.get_map()
+                agent.set_global_plan([(road_map.get_waypoint(carla.Location(*p)), RoadOption.LANEFOLLOW)
+                                       for p in scene['ego_route_m']])
         # Static road labels are kept exclusively under labels/.
         local_roads = []
         origin = transform(scene['start']).location
@@ -255,6 +298,36 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
                 if time.monotonic() - started > criteria['max_scene_wall_s']:
                     raise TimeoutError('Scene wall-clock deadline')
                 control = agent.run_step() if agent is not None and not agent.done() else carla.VehicleControl(brake=1)
+                if moving and criteria.get('gt_collision_supervisor'):
+                    # Acquisition safety rules only, never a learned controller.
+                    # Forecast both OBB footprints at common future times, so a
+                    # crossing/curving-lane vehicle cannot bypass lane-ID checks.
+                    current = world.get_snapshot()
+                    e = current.find(vehicle.id)
+                    ep = [xyz(v) for v in vehicle.bounding_box.get_world_vertices(e.get_transform())]
+                    ev = xyz(e.get_velocity())
+                    hazard = False
+                    for npc in autopilot_actors:
+                        n = current.find(npc.id)
+                        npoly = [xyz(v) for v in npc.bounding_box.get_world_vertices(n.get_transform())]
+                        nv = xyz(n.get_velocity())
+                        conflict = forecast_conflict(ep, ev, npoly, nv)
+                        # Traffic Manager's longitudinal PID divides by its
+                        # target speed. An exact zero produces NaN controls.
+                        speed_limit = npc.get_speed_limit()
+                        target_speed = tm_target_speed(speed_limit, conflict)
+                        manager.set_desired_speed(npc, target_speed)
+                        profile = result.setdefault('npc_supervisor_profile', {}).setdefault(str(npc.id),
+                            {'kind': actor_kinds[npc.id], 'zero_speed_limit_ticks': 0, 'brake_ticks': 0,
+                             'min_target_kph': target_speed, 'max_target_kph': target_speed})
+                        profile['zero_speed_limit_ticks'] += int(speed_limit <= .1)
+                        profile['brake_ticks'] += int(conflict)
+                        profile['min_target_kph'] = min(profile['min_target_kph'], target_speed)
+                        profile['max_target_kph'] = max(profile['max_target_kph'], target_speed)
+                        hazard |= conflict
+                    if hazard:
+                        control = carla.VehicleControl(brake=1)
+                    result['gt_supervisor_brake_ticks'] = result.get('gt_supervisor_brake_ticks', 0) + int(hazard)
                 vehicle.apply_control(control)
                 for entry in pedestrian_controls:
                     pedestrian, definition, index = entry
@@ -291,10 +364,16 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
                 if 'instance_segmentation' in criteria['modalities']:
                     labels['instance_segmentation'] = {}
                     labels['capture_world_from_camera'] = {}
+                if light_actors:
+                    labels['traffic_lights'] = f'labels/traffic_lights/{scene["id"]}.json'
+                    labels['traffic_light_states'] = {str(a.id): str(a.get_state()) for a in light_actors}
+                    if program and any(state!='Green' for state in labels['traffic_light_states'].values()):
+                        raise ValueError('Frozen all-green program changed during capture')
                 if moving:
                     labels['episode_tick'] = step
                     labels['ego_control'] = {'throttle': control.throttle, 'brake': control.brake, 'steer': control.steer,
-                                             'source': 'carla_basic_agent_rules_with_simulator_gt'}
+                                             'source': 'carla_basic_agent_rules_with_simulator_gt',
+                                             'gt_collision_supervisor': bool(criteria.get('gt_collision_supervisor'))}
                 for actor in label_actors:
                     state = snapshot.find(actor.id)
                     if state is None:
@@ -310,6 +389,8 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
                          'velocity_mps': xyz(state.get_velocity()), 'visibility': 'not_filtered; may be occluded/outside view'})
                     if moving and actor.type_id.startswith('vehicle.'):
                         applied = actor.get_control()
+                        if not all(math.isfinite(v) for v in [applied.throttle, applied.brake, applied.steer]):
+                            raise ValueError(f'Nonfinite Traffic Manager control on actor {actor.id} ({actor.type_id})')
                         labels['objects_3d'][-1]['control_state'] = {'throttle': applied.throttle, 'brake': applied.brake,
                             'steer': applied.steer, 'at_traffic_light': actor.is_at_traffic_light(),
                             'traffic_light_state': str(actor.get_traffic_light_state())}
@@ -333,9 +414,12 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
             if count == criteria['bundles_per_scene']:
                 result['checks'].update({'ego_motion': displacement >= criteria['min_ego_displacement_m'],
                     'label_duration': result['motion']['label_duration_s'] >= criteria['min_label_duration_s'],
-                    'participant_motion': all(v >= criteria['min_participant_displacement_m'] for v in deltas.values())})
+                    'participant_motion': all(v >= criteria['min_participant_displacement_m'] for k, v in deltas.items()
+                        if not (criteria.get('static_controller_motion_exempt') and int(k) in static_ids))})
     except Exception as exc:
         result['errors'].append(f'{type(exc).__name__}: {exc}')
+        import traceback
+        result['failure_traceback'] = traceback.format_exc()
     finally:
         result['stage'] = 'cleanup'
         write_json(folder / 'report.json', result)
@@ -362,6 +446,10 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
                 cleanup = False
                 result['errors'].append(f'destroy: {exc}')
         try:
+            for light, state, frozen in saved_light_states:
+                light.set_state(state)
+            if saved_light_states:
+                saved_light_states[0][0].freeze(saved_light_states[0][2])
             world.set_weather(original_weather)
             world.apply_settings(original)
             if manager is not None:

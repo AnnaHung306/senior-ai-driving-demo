@@ -1,0 +1,78 @@
+{
+  "version": "sunny-training-v3.8",
+  "dataset": "data/sunny-cross-town-v3-005",
+  "seed": 20261016,
+  "precision": "float32",
+  "deterministic_algorithms": true,
+  "TF32": false,
+  "cache_budget_gib_per_split": 16,
+  "augmentation": "training RGB brightness and contrast independently uniform 0.9 to 1.1; no geometric augmentation",
+  "selection": "validation only; maximum mAP50:95 for detection, focus mIoU for segmentation; earliest tie",
+  "detection": {
+    "epochs": 8,
+    "batch_size": 4,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0001,
+    "gradient_clip": 5.0,
+    "pretrained_path": "weights/fasterrcnn_mobilenet_v3_large_320_fpn-907ea3f9.pth",
+    "pretrained_sha256": "907ea3f91ff92242bc1baea8049276a3e76bca48ce7560bd268cc029f37977b5",
+    "warmup_steps": 250,
+    "overfit_steps": 80,
+    "overfit_loss_ratio_max": 0.8,
+    "roi_implementation": "TorchVision 0.25 deterministic eager Python ROIAlign, fixed sampling_ratio 2; no Inductor/Triton",
+    "roi_batch_size_per_image": 128,
+    "roi_determinism_note": "Pinned Windows runtime reports is_compile_supported(cuda)=false and no Triton. Preserve strict determinism using the upstream differentiable implementation, not a silent CUDA nondeterministic backward. CPU values match official op; CUDA verification still required.",
+    "backbone_pyramid_strides": [
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "anchor_sizes_pixels": [
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "pretrained_transfer": "COCO MobileNet body and stride32 FPN projection/output; RPN convolution plus 32px ratio-specific anchor channels; new lower FPN projections and project class head seeded initialization."
+  },
+  "segmentation": {
+    "epochs": 12,
+    "batch_size": 4,
+    "width": 16,
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "gradient_clip": 5.0,
+    "pretrained_path": "artifacts/runs/segmentation-v1-002/best.pt",
+    "pretrained_sha256": "f06e4b110ea767d2c4b910d2cbfa8f9ea3ef96fa807c950bd2afd5f54947a1d4",
+    "warmup_steps": 0,
+    "overfit_steps": 80,
+    "overfit_loss_ratio_max": 0.8,
+    "class_weights": "inverse sqrt train frequency relative to max, clamp 1 to 20; zero-support classes recorded",
+    "raw_static_mapping": {
+      "4": "wall/model12",
+      "5": "fence/model13",
+      "6": "pole/model14",
+      "11": "sky/other0"
+    },
+    "taxonomy_source": "https://github.com/carla-simulator/carla/blob/0.9.16/LibCarla/source/carla/rpc/ObjectLabel.h",
+    "loss": "inverse-sqrt train-frequency weighted CE plus 0.5 foreground soft Dice; ignore255 masked; absent classes excluded from per-batch Dice; annotated other0 supervised by CE",
+    "motivation": "Prior exploratory small-body/line recall motivates foreground-normalized loss, before any new validation/lockbox model scoring.",
+    "classes": 17,
+    "terrain_mapping": "raw10 Terrain and raw25 Ground -> model16; raw11 Sky remains annotated other0",
+    "visible_margin": "Road/road-line side next to sidewalk or terrain/ground; predicted masks only; no occlusion completion"
+  },
+  "quality_gates_source": "frozen dataset plan",
+  "lockbox_policy": "training and model selection cannot instantiate lockbox data; one explicit final evaluation after completed training",
+  "quality_gates": {
+    "detection_mAP50": 0.5,
+    "detection_per_class_recall_at_score_0_5": 0.5,
+    "segmentation_focus_mIoU": 0.5,
+    "segmentation_per_focus_class_IoU": 0.2,
+    "detection_per_class_precision_at_score_0_5": 0.5,
+    "minimum_visible_margin_f1": 0.5
+  },
+  "quality_gate_note": "Original gates retained; additionally require precision>=0.5 per object category at the frozen score=0.5, before any new model scoring. AP alone can hide many lower-score false positives after full recall."
+}

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "reviewer": "Codex assistant",
+  "scope": "Five towns, front/rear controlled engineering RGB and tight GT boxes; checked 10 panels. Not a human annotation certification or a motion/collision acceptance.",
+  "sha256": "1d303d8b122f24401c3b440e2354b02abe3e812546a9296970661e0f3cc2d696",
+  "observations": [
+    "Truck red cab/body and bus front agree with observed raw15/raw16 instance boxes.",
+    "Blueprint static.prop.trafficcone01 visually appears as an orange/white traffic barrel, not a pointed cone. The model category is temporary_obstacle, not cone. Raw21 alone never gives this category.",
+    "Some static fixtures are suspended or overlap road markings by design; they remain training_approved=false. Natural driving data must pass separate audit."
+  ],
+  "training_approved": false
+}

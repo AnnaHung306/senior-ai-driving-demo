@@ -1,0 +1,39 @@
+{
+  "version": "sunny-training-v3.1",
+  "dataset": "data/sunny-cross-town-v3-001",
+  "seed": 20261016,
+  "precision": "float32",
+  "deterministic_algorithms": true,
+  "TF32": false,
+  "cache_budget_gib_per_split": 16,
+  "augmentation": "training RGB brightness and contrast independently uniform 0.9 to 1.1; no geometric augmentation",
+  "selection": "validation only; maximum mAP50:95 for detection, focus mIoU for segmentation; earliest tie",
+  "detection": {
+    "epochs": 8,
+    "batch_size": 4,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0001,
+    "gradient_clip": 5.0,
+    "pretrained_path": "weights/fasterrcnn_mobilenet_v3_large_320_fpn-907ea3f9.pth",
+    "pretrained_sha256": "907ea3f91ff92242bc1baea8049276a3e76bca48ce7560bd268cc029f37977b5",
+    "warmup_steps": 250,
+    "overfit_steps": 80,
+    "overfit_loss_ratio_max": 0.8
+  },
+  "segmentation": {
+    "epochs": 12,
+    "batch_size": 4,
+    "width": 16,
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "gradient_clip": 5.0,
+    "pretrained_path": "artifacts/runs/segmentation-v1-002/best.pt",
+    "pretrained_sha256": "f06e4b110ea767d2c4b910d2cbfa8f9ea3ef96fa807c950bd2afd5f54947a1d4",
+    "warmup_steps": 0,
+    "overfit_steps": 80,
+    "overfit_loss_ratio_max": 0.8,
+    "class_weights": "inverse sqrt train frequency relative to max, clamp 1 to 20; zero-support classes recorded"
+  },
+  "quality_gates_source": "frozen dataset plan",
+  "lockbox_policy": "training and model selection cannot instantiate lockbox data; one explicit final evaluation after completed training"
+}

@@ -1,3 +1,38 @@
+# 目前任務（2026-10-16 晴天 Phase3）
+
+使用者要求這次盡力完成整個Phase3才結束；明確允許全程理想晴朗白天，雨夜需求移除。Phase3尚未完成，不進Phase4。請持續做到實際訓練/評估，不能再只交小probe。
+
+## 現在真的在執行
+
+- canonical資料 data/sunny-cross-town-v3-007，凍結計畫 configs/dataset_sunny_v3_8.json。18個30秒/150bundle×8方向×4模態，預計86400PNG；train Town01/Town03共8groups、val Town04 3、development Town05 3、lockbox Town02 4。
+- **18場全部採集通過：2700 bundles /86400 PNG；007沿用006的17個已過場景，最後一場重新採集後自車76.716m、collision0、全部移動/清理門檻通過。** 最後失敗原因全時間線證實134/150樣本Red/brake，不能只看首尾兩張Green。首次綠燈介入被TM set_random_device_seed 的 ResetAllTrafficLights覆蓋；修到TM seed後才freeze→tick→setGreen→tick，開拍確認24燈Green/frozen，逐幀檢查不變。原失敗005/006不轉pass。
+- **CARLA已由stop_carla.ps1停止project-owned launcher29748/shipping16004，GPU已0MiB；不要再做RPC。** 目前CPU完整audit在跑，exec session26202，日誌artifacts/reports/sunny-cross-town-v3-007-audit.log；只靠write_stdin確認存活/完成，不能用舊檔假設程序活著。尚未批准training。不要在audit進行中修改auditor/geometry/light-label sources，避免hash和實際runtime不符。
+- CUDA synthetic三模型已過strict deterministic finite forward/backward；artifacts/reports/sunny-models-cuda-001.json，batch2 peak allocated detector1566MiB、seg853MiB、phase69MiB，尚非真實訓練/accuracy。65 unit tests已過（phase3-sunny-tests-006.log）。
+- 005沿用004六個完全相同scene的通過資料，raw PNG hardlinks、metadata copies；report.reuse_lineage存hash。其餘實際新增採集，沒有把failed scenes改成pass。完整18成功後仍須audit及GT抽查，尚未批准training。
+
+## 本輪已做但仍需真實GPU/資料驗證
+
+- 五town32-sensor卡車raw15、公車raw16、trafficcone01 raw21 taxonomy工程試驗通過。視覺已確認trafficcone01實際是橙白交通桶，模型類temporary_obstacle，不宣稱涵蓋全部施工錐。evidence/phase3/sunny-v3/assets-contact.png 10 panels已看；fixtures永遠training=false。
+- configs/dataset_sunny_v3_1..v3_6保留幾何及controller修正歷史：v3.1 Town03 collision29；v3.3 TM desired_speed=0導致NaN（上游MotionPlanStage:159除以targetvelocity）；0.1floor與finite actuator guard後20bundle短回歸通過。003低卡車位移失敗不可斷言zero-limit原因，004profile無缺值但通過。Town03-02卡車彎道spawn失敗已移直路，餘下12場原生預檢全過。
+- 新detector: TorchVision0.25.0+cu128、official COCO權重SHA907ea3f91ff92242bc1baea8049276a3e76bca48ce7560bd268cc029f37977b5。自訂MobileNet FPN strides4/8/16/32/64、小anchor16..256；backbone與高層FPN/RPN transfer，新低層FPN+classhead再訓練。真實RPN/ROI ignore、resize、positive precedence、all-ignored differentiable zero已測。Windows無Triton且is_compile_supported(cuda)=False，使用官方eager deterministic ROIAlign，ROI128/sample ratio2限制記憶體。CPU三模型forward/backward finite；新17class/Dice/empty-loss增補後還需總測及CUDA probe。
+- 新分割17類（RAW_TO_SEG見sunny_data.py）：road1/sidewalk2/ped3/rider4/car5/truck6/bus7/moto8/bike9/line10/light11/wall12/fence13/pole14/verified-temp15/terrain16，other0、ignore255。**raw4 Walls、5 Fences、6 Poles、11 Sky、10 Terrain、25 Ground**已依官方enum鎖測；草稿誤碼在任何訓練前修正，沒有錯版權重。temp只依經OBB-depth/semantic驗證的allowlisted actor IDs，不可把全部raw21當障礙物。
+- road_boundaries.py輸出predicted road/line↔sidewalk/terrain可見界面與2px boundaryF1，不推斷遮擋後路界；sunny_losses.py weightedCE+0.5 foreground Dice（ignore255、absent classes處理）。
+- 號誌head LightStateNet RGB crop32×64，phase_target以world phase為GT、至少2個semantic-lamp pixels有互斥發光色才標red/yellow/green，其餘unknown。configs/light_state_v1.json凍結min counts/group、macro/perclass recall與red→green gate。**尚未知main資料是否各phase覆蓋夠；若不夠要正式補收相位介入資料，不能把舊controlled fixtures轉train。** 現有train_light_state.py只支援main crops，尚未實作aux collection。
+- audit_sunny_dataset.py全PNG CRC/SHA+sensor attrs/pose/timestamps、可見候選/GT燈具world OBB-depth、per split每object10views/2groups及semantic15focus支持、verified-temp pixels；含phase crop coverage統計但不把缺phase偽造通過。audit自動pass仍training=false，還需visual_review.json statuspassed/training_approvedtrue/auditSHA+reviewed_images hash，sunny_data.verify會重查所有raw+metadata+review images。
+- train_sunny.py（det/seg）、predict_sunny.py（RGB-only、optional phase head）、evaluate_sunny.py（val gate後一次heldout）、benchmark_sunny.py、verify_sunny_models.py；完整source/config/data hashes、epoch checkpoint/resume、RGB-only reload、FP/FN gallery與小框/truncation recall。**訓練最終草案 configs/sunny_training_v3_9.json 指向007**。16→17類新增及Dice/road margin後還沒重跑完整suite；前輪63tests過，個別empty-ignore/taxonomy也過。code未commit。
+- 品質門檻在任何新model score前：mAP50>=.5，score.5每類P/R>=.5；seg focusmIoU>=.5、每focusIoU>=.2、visibleMarginF1>=.5。val選模；不達標不開lockbox、不降低門檻。state head另有預凍結gate與joint實際detector-box召回。不可把舊26.22%當新成績。
+
+## 接下來必須做完
+
+1. 007已完整採集、CARLA off、CUDA probe passed；繼續監看CPU audit。若有新scene失敗保留並根因修正，盡量用已通過同geometry/criteria資料lineage沿用，勿重跑一切。
+2. 跑完整audit（python scripts/audit_sunny_dataset.py data/sunny-cross-town-v3-007）；若coverage/geometry問題另版修正，不偽裝pass。看QA/逐class snippets後寫綁定receipt。phase coverage不足要另立正式補收計畫。
+3. 真正det/17-class seg/phase訓練與val選模。先verify_sunny_models.py --device cuda（8GBVRAM，source hash/strict determinism），實測容量再選batch；OOM保留失敗、改新config/run，勿覆寫。正式train_sunny參數與readme草案。本輪將先commit訓練基礎，再train以留source revision。不要訓練讀lockbox。
+4. 各模型val通過後一次heldout、逐類mAP/P/R/IoU、boundaryF1、state crop+detector-box joint、實際RGB-only推論與efficiency、FP/FN案例/模型卡；據結果真正完成Phase3。
+
+---
+
+以下保留前輪狀態作歷史（其中下一步/程序停止等描述已被上方更新取代）：
+
 # 目前任務
 
 更新：2026-10-16（Asia/Taipei）；長期需求見 PROJECT_SPEC.md。

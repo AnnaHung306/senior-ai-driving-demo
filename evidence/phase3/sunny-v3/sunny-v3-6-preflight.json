@@ -1,0 +1,581 @@
+{
+  "task": "native-spawn-preflight",
+  "training_approved": false,
+  "plan_sha256": "bb4e0ef62e6fcecfa2736c110ec9f82b34e5fabbf8be90785f9c6423973423b4",
+  "scenes": [
+    {
+      "scene": "town03-02",
+      "status": "passed",
+      "assets": [
+        {
+          "blueprint": "vehicle.tesla.model3",
+          "kind": "ego",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.bh.crossbike",
+          "kind": "bicycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.kawasaki.ninja",
+          "kind": "motorcycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.lincoln.mkz_2020",
+          "kind": "car",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.carlamotors.european_hgv",
+          "kind": "truck",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.mitsubishi.fusorosa",
+          "kind": "bus",
+          "success": true
+        },
+        {
+          "blueprint": "walker.pedestrian.0017",
+          "kind": "pedestrian",
+          "success": true
+        },
+        {
+          "blueprint": "static.prop.trafficcone01",
+          "kind": "temporary_obstacle",
+          "success": true
+        }
+      ]
+    },
+    {
+      "scene": "town03-03",
+      "status": "passed",
+      "assets": [
+        {
+          "blueprint": "vehicle.tesla.model3",
+          "kind": "ego",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.bh.crossbike",
+          "kind": "bicycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.kawasaki.ninja",
+          "kind": "motorcycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.lincoln.mkz_2020",
+          "kind": "car",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.carlamotors.european_hgv",
+          "kind": "truck",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.mitsubishi.fusorosa",
+          "kind": "bus",
+          "success": true
+        },
+        {
+          "blueprint": "walker.pedestrian.0021",
+          "kind": "pedestrian",
+          "success": true
+        },
+        {
+          "blueprint": "static.prop.trafficcone01",
+          "kind": "temporary_obstacle",
+          "success": true
+        }
+      ]
+    },
+    {
+      "scene": "town04-00",
+      "status": "passed",
+      "assets": [
+        {
+          "blueprint": "vehicle.tesla.model3",
+          "kind": "ego",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.bh.crossbike",
+          "kind": "bicycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.kawasaki.ninja",
+          "kind": "motorcycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.lincoln.mkz_2020",
+          "kind": "car",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.carlamotors.european_hgv",
+          "kind": "truck",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.mitsubishi.fusorosa",
+          "kind": "bus",
+          "success": true
+        },
+        {
+          "blueprint": "walker.pedestrian.0017",
+          "kind": "pedestrian",
+          "success": true
+        },
+        {
+          "blueprint": "walker.pedestrian.0018",
+          "kind": "pedestrian",
+          "success": true
+        },
+        {
+          "blueprint": "static.prop.trafficcone01",
+          "kind": "temporary_obstacle",
+          "success": true
+        }
+      ]
+    },
+    {
+      "scene": "town04-01",
+      "status": "passed",
+      "assets": [
+        {
+          "blueprint": "vehicle.tesla.model3",
+          "kind": "ego",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.bh.crossbike",
+          "kind": "bicycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.kawasaki.ninja",
+          "kind": "motorcycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.lincoln.mkz_2020",
+          "kind": "car",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.carlamotors.european_hgv",
+          "kind": "truck",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.mitsubishi.fusorosa",
+          "kind": "bus",
+          "success": true
+        },
+        {
+          "blueprint": "walker.pedestrian.0015",
+          "kind": "pedestrian",
+          "success": true
+        },
+        {
+          "blueprint": "static.prop.trafficcone01",
+          "kind": "temporary_obstacle",
+          "success": true
+        }
+      ]
+    },
+    {
+      "scene": "town04-02",
+      "status": "passed",
+      "assets": [
+        {
+          "blueprint": "vehicle.tesla.model3",
+          "kind": "ego",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.bh.crossbike",
+          "kind": "bicycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.kawasaki.ninja",
+          "kind": "motorcycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.lincoln.mkz_2020",
+          "kind": "car",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.carlamotors.european_hgv",
+          "kind": "truck",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.mitsubishi.fusorosa",
+          "kind": "bus",
+          "success": true
+        },
+        {
+          "blueprint": "static.prop.trafficcone01",
+          "kind": "temporary_obstacle",
+          "success": true
+        }
+      ]
+    },
+    {
+      "scene": "town05-00",
+      "status": "passed",
+      "assets": [
+        {
+          "blueprint": "vehicle.tesla.model3",
+          "kind": "ego",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.bh.crossbike",
+          "kind": "bicycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.kawasaki.ninja",
+          "kind": "motorcycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.lincoln.mkz_2020",
+          "kind": "car",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.carlamotors.european_hgv",
+          "kind": "truck",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.mitsubishi.fusorosa",
+          "kind": "bus",
+          "success": true
+        },
+        {
+          "blueprint": "walker.pedestrian.0023",
+          "kind": "pedestrian",
+          "success": true
+        },
+        {
+          "blueprint": "walker.pedestrian.0024",
+          "kind": "pedestrian",
+          "success": true
+        },
+        {
+          "blueprint": "static.prop.trafficcone01",
+          "kind": "temporary_obstacle",
+          "success": true
+        }
+      ]
+    },
+    {
+      "scene": "town05-01",
+      "status": "passed",
+      "assets": [
+        {
+          "blueprint": "vehicle.tesla.model3",
+          "kind": "ego",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.bh.crossbike",
+          "kind": "bicycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.kawasaki.ninja",
+          "kind": "motorcycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.lincoln.mkz_2020",
+          "kind": "car",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.carlamotors.european_hgv",
+          "kind": "truck",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.mitsubishi.fusorosa",
+          "kind": "bus",
+          "success": true
+        },
+        {
+          "blueprint": "walker.pedestrian.0027",
+          "kind": "pedestrian",
+          "success": true
+        },
+        {
+          "blueprint": "static.prop.trafficcone01",
+          "kind": "temporary_obstacle",
+          "success": true
+        }
+      ]
+    },
+    {
+      "scene": "town05-02",
+      "status": "passed",
+      "assets": [
+        {
+          "blueprint": "vehicle.tesla.model3",
+          "kind": "ego",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.bh.crossbike",
+          "kind": "bicycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.kawasaki.ninja",
+          "kind": "motorcycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.lincoln.mkz_2020",
+          "kind": "car",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.carlamotors.european_hgv",
+          "kind": "truck",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.mitsubishi.fusorosa",
+          "kind": "bus",
+          "success": true
+        },
+        {
+          "blueprint": "static.prop.trafficcone01",
+          "kind": "temporary_obstacle",
+          "success": true
+        }
+      ]
+    },
+    {
+      "scene": "town02-00",
+      "status": "passed",
+      "assets": [
+        {
+          "blueprint": "vehicle.tesla.model3",
+          "kind": "ego",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.bh.crossbike",
+          "kind": "bicycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.kawasaki.ninja",
+          "kind": "motorcycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.lincoln.mkz_2020",
+          "kind": "car",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.carlamotors.european_hgv",
+          "kind": "truck",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.mitsubishi.fusorosa",
+          "kind": "bus",
+          "success": true
+        },
+        {
+          "blueprint": "walker.pedestrian.0029",
+          "kind": "pedestrian",
+          "success": true
+        },
+        {
+          "blueprint": "walker.pedestrian.0030",
+          "kind": "pedestrian",
+          "success": true
+        },
+        {
+          "blueprint": "static.prop.trafficcone01",
+          "kind": "temporary_obstacle",
+          "success": true
+        }
+      ]
+    },
+    {
+      "scene": "town02-01",
+      "status": "passed",
+      "assets": [
+        {
+          "blueprint": "vehicle.tesla.model3",
+          "kind": "ego",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.bh.crossbike",
+          "kind": "bicycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.kawasaki.ninja",
+          "kind": "motorcycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.lincoln.mkz_2020",
+          "kind": "car",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.carlamotors.european_hgv",
+          "kind": "truck",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.mitsubishi.fusorosa",
+          "kind": "bus",
+          "success": true
+        },
+        {
+          "blueprint": "walker.pedestrian.0033",
+          "kind": "pedestrian",
+          "success": true
+        },
+        {
+          "blueprint": "walker.pedestrian.0034",
+          "kind": "pedestrian",
+          "success": true
+        },
+        {
+          "blueprint": "static.prop.trafficcone01",
+          "kind": "temporary_obstacle",
+          "success": true
+        }
+      ]
+    },
+    {
+      "scene": "town02-02",
+      "status": "passed",
+      "assets": [
+        {
+          "blueprint": "vehicle.tesla.model3",
+          "kind": "ego",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.bh.crossbike",
+          "kind": "bicycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.kawasaki.ninja",
+          "kind": "motorcycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.lincoln.mkz_2020",
+          "kind": "car",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.carlamotors.european_hgv",
+          "kind": "truck",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.mitsubishi.fusorosa",
+          "kind": "bus",
+          "success": true
+        },
+        {
+          "blueprint": "walker.pedestrian.0037",
+          "kind": "pedestrian",
+          "success": true
+        },
+        {
+          "blueprint": "walker.pedestrian.0038",
+          "kind": "pedestrian",
+          "success": true
+        },
+        {
+          "blueprint": "static.prop.trafficcone01",
+          "kind": "temporary_obstacle",
+          "success": true
+        }
+      ]
+    },
+    {
+      "scene": "town02-03",
+      "status": "passed",
+      "assets": [
+        {
+          "blueprint": "vehicle.tesla.model3",
+          "kind": "ego",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.bh.crossbike",
+          "kind": "bicycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.kawasaki.ninja",
+          "kind": "motorcycle",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.lincoln.mkz_2020",
+          "kind": "car",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.carlamotors.european_hgv",
+          "kind": "truck",
+          "success": true
+        },
+        {
+          "blueprint": "vehicle.mitsubishi.fusorosa",
+          "kind": "bus",
+          "success": true
+        },
+        {
+          "blueprint": "walker.pedestrian.0041",
+          "kind": "pedestrian",
+          "success": true
+        },
+        {
+          "blueprint": "walker.pedestrian.0042",
+          "kind": "pedestrian",
+          "success": true
+        },
+        {
+          "blueprint": "static.prop.trafficcone01",
+          "kind": "temporary_obstacle",
+          "success": true
+        }
+      ]
+    }
+  ],
+  "status": "passed",
+  "source_sha256": "23a1d340b08e53d1700f81a2e8ca8138f213898500b92682e8f2d2bb925cadd8"
+}

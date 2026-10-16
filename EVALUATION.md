@@ -1,5 +1,15 @@
 # 驗收方式與結果
 
+## Phase 3 — 可見 instance 與動態32 sensors工程驗證
+
+最新完成四次工程採集，共640 unique raw PNG（160 RGB），原始資料不作訓練集；44 tests通過，兩次Phase0回歸008/009通過。五案static：32 sensors、160圖、各模態frame/timestamp/pose一致；同ID Rider+兩輪車body確認、移除遮擋後行人14→212 pixels、partial48，截斷與near-plane觀測通過。Axial depth支持率99.657%，range假設76.812%。
+
+可見框由實際mask產生，保留amodal幾何；visibility_policy_v1_1對tiny/rider-only/near-plane/未解析前景明確ignore。修正v1對兩張真實邊緣車輛的過度排除，投影與depth用一致0.15m支持容差，舊policy與audit保留。原static160 actor-view pairs=34 positive/4 ignore/122不可見，不是獨立物件數。尚未將ignore契約接入真正detector RPN/ROI，training_approved仍false。
+
+短動態probe自車0.4196m、label span0.8s、ego collision0；160 PNG全部CRC/SHA/同步通過，capture vs snapshot×rig最大平移差1.839e-5m、rotation matrix差4.22e-7，各模態pose差0。保存實際capture-time transform與32sensor attributes；這是模擬內部一致性，不是實體校正精度，且不代表完整30秒自然互動或正式motion coverage。
+
+相同幾何、同一凍結checkpoint、0 optimizer updates：晴天focus mIoU47.56%、夜雨2.37%；pose差0、raw semantic target差0.0982%。這是已見Town01道路上的40 views/condition診斷，不能取代原test26.22%、不能提供泛化信賴區間或分離雨／低光因果。Assistant視覺review及真實GT/模型圖見 evidence/phase3/visibility-v1/REPORT.md。GPU case-end樣本最大3938MiB，非連續峰值；無八鏡頭20Hz保證。
+
 ## Phase 3 — 首輪 segmentation baseline，工程完成、品質未驗收
 
 固定 configs/segmentation_v1_1.json 與 source commit a1eff7b，在 CARLA 關閉時實際完成 16 epochs / 4800 optimizer updates，704.96 秒。Tiny U-Net 從零訓練，原解析度 640×360、488,120 parameters。只 train 更新及算 loss weights，validation 選 epoch 12，最後才開 test。32 tests 通過；訓練後再驗全部 7200 PNG、639 metadata、source/config/criteria/rig 未變，checkpoint / test receipt hash 一致，finite weights 與恢復契約通過。

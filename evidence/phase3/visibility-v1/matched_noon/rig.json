@@ -1,0 +1,82 @@
+{
+  "version": "surround-eight-v1",
+  "coordinate_system": "CARLA: x forward, y right, z up, meters; yaw degrees",
+  "width": 640,
+  "height": 360,
+  "horizontal_fov_deg": 90,
+  "sensor_tick_s": 0.0,
+  "cameras": [
+    {
+      "name": "front",
+      "position_m": [
+        1.6,
+        0.0,
+        1.7
+      ],
+      "yaw_deg": 0
+    },
+    {
+      "name": "front_right",
+      "position_m": [
+        1.1,
+        0.7,
+        1.7
+      ],
+      "yaw_deg": 45
+    },
+    {
+      "name": "right",
+      "position_m": [
+        0.0,
+        0.8,
+        1.7
+      ],
+      "yaw_deg": 90
+    },
+    {
+      "name": "rear_right",
+      "position_m": [
+        -1.2,
+        0.7,
+        1.7
+      ],
+      "yaw_deg": 135
+    },
+    {
+      "name": "rear",
+      "position_m": [
+        -1.6,
+        0.0,
+        1.7
+      ],
+      "yaw_deg": 180
+    },
+    {
+      "name": "rear_left",
+      "position_m": [
+        -1.2,
+        -0.7,
+        1.7
+      ],
+      "yaw_deg": -135
+    },
+    {
+      "name": "left",
+      "position_m": [
+        0.0,
+        -0.8,
+        1.7
+      ],
+      "yaw_deg": -90
+    },
+    {
+      "name": "front_left",
+      "position_m": [
+        1.1,
+        -0.7,
+        1.7
+      ],
+      "yaw_deg": -45
+    }
+  ]
+}

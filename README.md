@@ -8,6 +8,8 @@ Phase 3 已完成第一輪真實 CUDA 自訓 Tiny U-Net segmentation 與可恢�
 
 訓練協議與命令見 [PHASE3.md](PHASE3.md)，完整逐類結果見 [model card](evidence/phase3/segmentation-v1-002/MODEL_CARD.md)，弱點與下一步見 [CURRENT_TASK.md](CURRENT_TASK.md)。Checkpoint、source snapshot 與實際圖在 artifacts/runs/segmentation-v1-002（ignored，本機保留）；數值與指紋進 evidence/phase3。
 
+最新一輪完成可見 instance／ignore 政策、四次靜態／動態32-sensor工程採集（640 PNG）、44 tests，以及原凍結模型的同幾何晴天／夜雨診斷（47.56%／2.37% focus mIoU，非新泛化成績）。本輪沒有重訓或新偵測器，資料均非訓練批准。見[圖文證據](evidence/phase3/visibility-v1/REPORT.md)與[執行規格](PHASE3_VISIBILITY.md)。
+
 ## 環境與安裝
 
 Windows 11、RTX 4070 Laptop 8GB、64GB RAM；server／client 固定 0.9.16。本機 .venv 為 Python 3.12.14，不修改系統 Python。

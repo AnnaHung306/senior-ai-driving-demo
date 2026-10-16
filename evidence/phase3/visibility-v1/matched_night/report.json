@@ -1,0 +1,98 @@
+{
+  "task": "controlled-instance-engineering-probe",
+  "status": "passed",
+  "errors": [],
+  "ai_model": null,
+  "training_approved": false,
+  "bundles": 5,
+  "images": 160,
+  "max_timestamp_error_s": 0.0,
+  "max_pose_error": 0.0,
+  "gpu_samples_mib": [
+    3938,
+    3938,
+    3938,
+    3938,
+    3938
+  ],
+  "cases": [
+    {
+      "name": "occluded",
+      "frame": 119175
+    },
+    {
+      "name": "revealed",
+      "frame": 119182
+    },
+    {
+      "name": "partial",
+      "frame": 119189
+    },
+    {
+      "name": "truncated",
+      "frame": 119196
+    },
+    {
+      "name": "near_plane",
+      "frame": 119203
+    }
+  ],
+  "baseline_sha256": "099c88907b1c80c9c4eb0c57f283dcf6ede172b3da55ff0b2a4c332c3c62d2d8",
+  "config_sha256": "b2c456f8fc7d24fa63ff04430b9f2ddcfa028680fc98b4181d4236b0600736a9",
+  "rig_sha256": "df872f550458d9e284927b8bf1ccac8def4851fb7ff7e02a9a0f838aac537f10",
+  "source_sha256": "e9784039aad0e6833ce9f7ca10d226d04b247b5c12359dd93742e54a1d8b9659",
+  "geometry_source_sha256": "2f71c36f4322d3c55e1c5c3b1f27931313e8e8f516de5d7d56f3105e8b5e0777",
+  "git_revision": "b4605f2eef298cd6f04dafdbcfb4be9abf9ba41b",
+  "server_launch": {
+    "quality_level": "Epic",
+    "port": 2000,
+    "graphics_api": "dx12",
+    "launcher_pid": 9428,
+    "server_binary_sha256": "b0370d6dcd57b95299d12005cebad1dc6187804e83aeb51a184ccbc4b581fea8",
+    "executable": "C:\\code\\senior_AI\\artifacts\\carla\\CarlaUE4.exe"
+  },
+  "weather": "HardRainNight",
+  "sensors": 32,
+  "stage": "near_plane",
+  "checks": {
+    "sensors_32": true,
+    "five_bundles": true,
+    "raw_images_160": true
+  },
+  "cleanup": true,
+  "wall_s": 32.875,
+  "warmup_queue_drops": {
+    "front/rgb": 89,
+    "front/semantic_segmentation": 90,
+    "front/depth": 90,
+    "front/instance_segmentation": 89,
+    "front_right/rgb": 89,
+    "front_right/semantic_segmentation": 89,
+    "front_right/depth": 89,
+    "front_right/instance_segmentation": 89,
+    "right/rgb": 89,
+    "right/semantic_segmentation": 89,
+    "right/depth": 89,
+    "right/instance_segmentation": 89,
+    "rear_right/rgb": 89,
+    "rear_right/semantic_segmentation": 89,
+    "rear_right/depth": 89,
+    "rear_right/instance_segmentation": 89,
+    "rear/rgb": 89,
+    "rear/semantic_segmentation": 89,
+    "rear/depth": 89,
+    "rear/instance_segmentation": 90,
+    "rear_left/rgb": 89,
+    "rear_left/semantic_segmentation": 89,
+    "rear_left/depth": 90,
+    "rear_left/instance_segmentation": 90,
+    "left/rgb": 89,
+    "left/semantic_segmentation": 90,
+    "left/depth": 89,
+    "left/instance_segmentation": 90,
+    "front_left/rgb": 89,
+    "front_left/semantic_segmentation": 89,
+    "front_left/depth": 89,
+    "front_left/instance_segmentation": 89
+  }
+}

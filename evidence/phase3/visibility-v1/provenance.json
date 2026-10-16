@@ -1,0 +1,45 @@
+{
+  "git_revision": "785c4801768009df14e6cd6517b3963ebf144c4e",
+  "source_sha256": {
+    "src/senior_ai/instance_labels.py": "58f5de9589127b1aabaed4938b9c7a796c37ec83d7fafe3dd960d8394a3cfb7c",
+    "src/senior_ai/visibility_policy.py": "e66815786d42df84e6809e762758845030637239c28d52d4c614e98ce9a23e01",
+    "src/senior_ai/frames.py": "cffd819cdbd361e66bedb37f0898489334dba57c853bdf37d075159d564a13f7",
+    "scripts/probe_instances.py": "e9784039aad0e6833ce9f7ca10d226d04b247b5c12359dd93742e54a1d8b9659",
+    "scripts/audit_instance_probe.py": "bb40cbdb804bb51f4f9e6ff4bba1015860ef143ded7825fae8b86caa216507cd",
+    "scripts/export_visible_instances.py": "3f9f8f5bbabd7e87737f0f61814f14fbf39df56c4408bc4708bf4acae3fc1286",
+    "scripts/collect_dataset.py": "dd2f8f94edefa3893b90290e3cf751cf834782da8435664b5243cae262f4da6a",
+    "scripts/audit_motion_instances.py": "c66ae394be05aa2aa30fc616444cdb135123359101cf8a08dbef271305740ea5",
+    "scripts/diagnose_illumination.py": "331ff953609346c6e3290cf6b0e33c8b6da105651535a56fe7ec2fb0484890a2",
+    "scripts/summarize_visibility.py": "087cbd427284aed0242feb8efba0ea332b00941abfe7250001f23f4c89a2e737",
+    "configs/visibility_policy_v1_1.json": "7583839494b7ebc235595b9fad331b2a023429dfceaa116c007acf9ab5a023d9",
+    "configs/illumination_diagnostic_v1.json": "4f2d592419b9c87755d9359f10d71669457e14ee99deee5927f3051688720cf2"
+  },
+  "receipts": {
+    "controlled": {
+      "data_path": "data/instance-probe-v1-001",
+      "report_sha256": "d5aa9ff062dce97aab5a35cf20ce5174c698e212034c118740deb2fedbcac769",
+      "audit_sha256": "df91688ae374cdf1d29b65bec357dc76327b7b866124c62faa3f53739a6de9d8",
+      "images": 160
+    },
+    "matched_noon": {
+      "data_path": "data/instance-weather-noon-v1-001",
+      "report_sha256": "5a3efb21eef2ffec7e67df546d6c4b3bf3aa5fabced8c02ebb627bb573741f3d",
+      "audit_sha256": "ab037e7dc8e898915614e447760f8b3af604d0e2ff26a90a2d17d7e9ca0fd0ff",
+      "images": 160
+    },
+    "matched_night": {
+      "data_path": "data/instance-weather-night-v1-001",
+      "report_sha256": "46577debf0d536d3c6164cd4797805c738cb9a4fb36c4ab834c0ff9f5e78bd3d",
+      "audit_sha256": "417b1a23665f497b754e49bb404477047ba2bf736767e5299ddca219d943ac36",
+      "images": 160
+    },
+    "moving": {
+      "data_path": "data/motion-instance-probe-v1-001",
+      "report_sha256": "a9ad909346fbe60dfe4e7fbecdc38d1f9236151202d1f3349f5f86c71af7d1c1",
+      "audit_sha256": "73709567a1f58741634d86afede61fe788bbb20b8317cea915a53fddb2ab64fb",
+      "images": 160
+    }
+  },
+  "original_model_checkpoint_sha256": "f06e4b110ea767d2c4b910d2cbfa8f9ea3ef96fa807c950bd2afd5f54947a1d4",
+  "note": "Capture, audit, and policy source revisions differ deliberately; each original receipt retains its own source hashes. No raw image/weight changed."
+}

@@ -1,5 +1,15 @@
 # 實驗紀錄
 
+## VIS-001 / ILLUM-001 / MOV-VIS-001 — 2026-10-16，instance與動態擷取工程
+
+- 首次sandbox RPC逾時007，host唯讀確認服務正常後改用允許loopback環境，沒有改native build。Phase0回歸008/009均通過，DX12/Epic/background patch沿用。
+- Controlled instance-probe-v1-001（source760f924）：32 sensors、5案160 PNG、timestamp/pose error0。Known-ID Rider+body聯合實測；移除遮擋target14→212px，partial48；原sem/instance差0.0062%。Axial car-depth支持99.657%，range76.812%。
+- Visibility policy v1/v1.1保留雙版本，v1.1以depth一致0.15m OBB envelope避免兩個真實邊緣車輛被固定投影框誤排；visible/amodal boxes與raw data不改。34positive/4ignore/122not-visible actor-view pairs，全部training_approved=false。未知前景與rider-only保留ignore；RPN/ROI整合尚未完成。
+- Matched noon/night（sourceb4605f2）：相同poses/rig/assets/5cases、80ticks sensor warmup，各160 PNG。Audits-v2/v3通過；原凍結模型illumination diagnostic（config先凍結、sourcee639142）0updates，focus mIoU47.56%/2.37%，pose差0、semantic targets差0.0982%。已見train road上的受控診斷，非新泛化成績或雨單因果結果；原test26.22%不變。
+- Moving probe（collector source53d0fa9、audit785c480）：5bundles/160PNG，BasicAgent自車0.4196m/0.8s、ego collision0。每模態實際capture pose一致，capture vs snapshot×rig平移差最大1.839e-5m、rotation matrix差4.22e-7；32sensor attributes與capture-time transforms已保存。部分NPC短暫停住，不能代替正式長episode motion coverage。
+- 共640 unique raw PNG再次SHA通過、44tests通過。Assistant QA檢視原static17張含目標圖/38 visible object views、moving首尾front與paired模型圖，非人類認證。GPU case-end samples最高3938MiB，非連續peak或20Hz達標。
+- 收據／圖：evidence/phase3/visibility-v1/REPORT.md；原始資料在四個data/probe根目錄，原始paired每view結果在artifacts/runs/illumination-diagnostic-v1-001。全部背景程序已結束。下一步是v3跨城鎮幾何/split/長片計畫及完整asset taxonomy，尚無新detector或完整v3資料。
+
 ## SEG-001 / SEG-002 — 2026-10-16，Phase 3 首輪真實訓練
 
 - 協議先凍結於 PHASE3.md / configs/segmentation_v1.json；PyTorch 2.10.0+cu128 官方 wheel 安裝、pip check 通過。CUDA NLLLoss2d mean / sum 不支援 strict deterministic，改成等價 per-pixel reduction；單元測試確認 loss / ignore 梯度。

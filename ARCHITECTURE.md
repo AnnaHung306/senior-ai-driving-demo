@@ -70,3 +70,11 @@ segmentation_training.py 在讀取前重驗全影像 inventory hash／bytes 與 
 predict_segmentation.py 不需 audit、plan、indexes、labels 或 CARLA，只讀 RGB manifest / PNG 與自產 checkpoint；輸出 frame / timestamp / camera / calibration reference、checkpoint SHA256、model class IDs PNG、著色圖與未校準 softmax NPY。單元測試以完全沒有 GT 的 fixture 執行真正模型 forward。
 
 偵測與 v3 擴充契約在 configs/detection_label_contract_v1.json、configs/dataset_expansion_v3_plan.json，均明確標記尚未收集／驗證，不能作為完成證據。
+
+## 可見 instance 工程原型
+
+instance_labels.py 解碼原始instance、檢查目標ID、從實際mask取exclusive-max box、裁切近投影平面、比較depth/OBB支持；visibility_policy.py產生positive/ignore/not-visible與未解析前景ignore mask。Policy v1.1的projection support envelope和depth共用0.15m幾何容差；原始amodal與visible box不變。背景proposal ignore契約已測，尚未接入真實detector RPN / ROI。
+
+RgbFrame增加可選owned capture-time transform，舊像素序列化不變。collect_dataset在四模態新criteria下，將instance／實際拍攝姿態放labels，32 sensor attributes放calibration；完整RGB-only input schema不變。受控三案及短moving probe均是engineering fixtures，training_approved=false；不能取代完整分組資料集或模型訓練。
+
+診斷程式diagnose_illumination僅RGB forward，GT分開評分，固定原checkpoint且無optimizer；pose/target comparability與預測分開保存。Capture、raw audit、policy export、visual QA與model diagnostic各有獨立source/data hashes，後續revision不覆寫既有收據。

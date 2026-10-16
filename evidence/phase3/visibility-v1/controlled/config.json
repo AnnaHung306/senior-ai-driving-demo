@@ -1,0 +1,116 @@
+{
+  "version": "instance-probe-v1",
+  "purpose": "Controlled annotation engineering pilot, not driving, training data or perception acceptance",
+  "map": "Town01",
+  "fixed_delta_s": 0.05,
+  "warmup_ticks": 10,
+  "case_settle_ticks": 5,
+  "sensor_timeout_s": 30,
+  "max_wall_s": 300,
+  "near_plane_m": 0.1,
+  "max_timestamp_error_s": 0.0001,
+  "max_capture_pose_error": 1e-05,
+  "max_semantic_disagreement_fraction": 0.005,
+  "min_known_visible_pixels": 10,
+  "modalities": [
+    "rgb",
+    "semantic_segmentation",
+    "depth",
+    "instance_segmentation"
+  ],
+  "origin_from_motion_scene": "scene-00",
+  "participants": [
+    {
+      "role": "occluder",
+      "kind": "car",
+      "blueprint": "vehicle.lincoln.mkz_2020",
+      "position_ego_m": [
+        10,
+        0,
+        0.3
+      ]
+    },
+    {
+      "role": "target",
+      "kind": "pedestrian",
+      "blueprint": "walker.pedestrian.0001",
+      "position_ego_m": [
+        18,
+        0,
+        0.9
+      ]
+    },
+    {
+      "role": "bicycle",
+      "kind": "bicycle",
+      "blueprint": "vehicle.bh.crossbike",
+      "position_ego_m": [
+        14,
+        -2.5,
+        0.3
+      ]
+    },
+    {
+      "role": "motorcycle",
+      "kind": "motorcycle",
+      "blueprint": "vehicle.kawasaki.ninja",
+      "position_ego_m": [
+        20,
+        2.5,
+        0.3
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "name": "occluded",
+      "occluder_position_ego_m": [
+        10,
+        0,
+        0.3
+      ]
+    },
+    {
+      "name": "revealed",
+      "occluder_position_ego_m": [
+        10,
+        5,
+        0.3
+      ]
+    },
+    {
+      "name": "partial",
+      "occluder_position_ego_m": [
+        10,
+        0.65,
+        0.3
+      ]
+    },
+    {
+      "name": "truncated",
+      "occluder_position_ego_m": [
+        8,
+        6.2,
+        0.3
+      ]
+    },
+    {
+      "name": "near_plane",
+      "occluder_position_ego_m": [
+        2.4,
+        2.2,
+        0.3
+      ]
+    }
+  ],
+  "minimum_required_checks": [
+    "32 sensors, 5 bundles, 160 raw PNGs",
+    "strict original frame/snapshot pairing",
+    "modality poses equal",
+    "known ID tags including Rider preserved",
+    "occluder removal reveals more target pixels",
+    "front truncation touches image boundary",
+    "actual near-plane clipped projection",
+    "independent disk decoder audit and human-style visual QA before label policy"
+  ]
+}

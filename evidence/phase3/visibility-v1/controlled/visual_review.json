@@ -1,0 +1,42 @@
+{
+  "task": "instance-probe-visual-review",
+  "reviewer": "Codex assistant visual inspection, not human certification",
+  "status": "completed_with_scope_limits",
+  "training_approved": false,
+  "audit_sha256": "df91688ae374cdf1d29b65bec357dc76327b7b866124c62faa3f53739a6de9d8",
+  "reviewed_visible_object_views": 38,
+  "reviewed_images": 17,
+  "image_sha256": {
+    "occluded-front.png": "982c7ddd050b1eb71f7c6bc0b64df101a58b3bea70772557a2edc055cc638f3f",
+    "occluded-front_right.png": "fd14783cbf0e7a2d266a62c659749f2a9a58a7898a565f0336d548d9ef1e03be",
+    "occluded-front_left.png": "9bf01769a746b4cc99735faf7579557bd69bc452a00a06eaee8491887fda93de",
+    "revealed-front.png": "11c633c55b7e7db6cbe1dbb6daab152ced1d18e0ad19bd172cbfc884758287e6",
+    "revealed-front_right.png": "a0d004510f160e0692895e3fe44a1140ce6187087cd0f460a4fae374efe4cc84",
+    "revealed-front_left.png": "d0232de5234aaa5e567e83ef90c4f282798b7ab652573a0c6eb43ee6cfc219e7",
+    "partial-front.png": "ea340bc4a39e649c2e66858f3b4d2a2e3338292ae5380650b083638c884b1f38",
+    "partial-front_right.png": "f26f83ff8fc78e4322f35166ca22ed9a96f7965ed0939ca30047164b2e094303",
+    "partial-front_left.png": "fa28e14318997de6e8954bb9ab0b770bdbdb4ba4b4e328c8c03162138ff9a08b",
+    "truncated-front.png": "55fa006d52d737e01c2313133be299688ebe8082dc58f197b4a4e18e05b034bb",
+    "truncated-front_right.png": "d6bc5015d4bddb3332290944efb28e9608c011314633591752772c34ef8f9e61",
+    "truncated-right.png": "b4baf2b08e8fb4c2c9ff15d620fa6fe7160fd6fb7dbb01990309a236bc369190",
+    "truncated-front_left.png": "f33b0496a9ceee70cbf381cc2108799fd26071551b387aca3f5ac3b8a2f94663",
+    "near_plane-front.png": "c408228726704788cc3739cdd45d0541f9f1c3bfda135f8e27347d96d1c4d71f",
+    "near_plane-front_right.png": "735858d7e91ea235c93f1c214edbbf2fccf57a62d17804ce3c057753c8eec19e",
+    "near_plane-right.png": "5c0eac5b426213faaf03978a7fbf2cdebaa74dae73cc78e20c3010e7902a40d3",
+    "near_plane-front_left.png": "41172cb134c87488ac07e0a172c86904b63649f1251ba6cf5c9c0133bfb5bbcb"
+  },
+  "observations": [
+    "Visible pixel boxes follow observed car, person, bicycle and motorcycle silhouettes; Rider union includes the correct vehicle instance.",
+    "Occluded target is only a small head region, not a full hidden pedestrian box.",
+    "v1 rejected two real edge car views; v1.1 uses a 0.15m projection envelope consistent with depth tolerance while preserving raw and visible boxes.",
+    "Near-camera overlapping vehicle is an intentional static annotation intervention, not safe driving or natural traffic.",
+    "Other 23 camera images without known visible targets were checked by geometry/data audits, not all manually inspected.",
+    "Matched revealed day/night semantic-and-model panel inspected; rainy-night output has severe road loss and facade false positives."
+  ],
+  "qa_artifacts": [
+    "qa-front-pairs.png",
+    "qa-other-visible.png",
+    "../../artifacts/runs/illumination-diagnostic-v1-001/revealed.png"
+  ],
+  "policy_version": "visible-instance-policy-v1.1"
+}

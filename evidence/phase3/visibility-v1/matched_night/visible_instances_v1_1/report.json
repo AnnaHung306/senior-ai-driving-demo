@@ -1,0 +1,21 @@
+{
+  "task": "controlled-visible-instance-policy-export",
+  "status": "passed",
+  "training_approved": false,
+  "why_not_training": "Controlled static engineering fixture; no natural episodes/group splits/coverage or ignore-aware detector integration",
+  "views": 40,
+  "positive_object_views": 34,
+  "ignored_object_views": 4,
+  "not_visible_object_views": 122,
+  "ignore_pixels": 181601,
+  "ignore_reasons": {
+    "too_few_visible_pixels": 2,
+    "too_small_visible_bbox": 1,
+    "two_wheeler_body_not_visible": 1,
+    "near_plane": 2
+  },
+  "policy_sha256": "7583839494b7ebc235595b9fad331b2a023429dfceaa116c007acf9ab5a023d9",
+  "raw_audit_sha256": "417b1a23665f497b754e49bb404477047ba2bf736767e5299ddca219d943ac36",
+  "exporter_sha256": "3f9f8f5bbabd7e87737f0f61814f14fbf39df56c4408bc4708bf4acae3fc1286",
+  "policy_source_sha256": "e66815786d42df84e6809e762758845030637239c28d52d4c614e98ce9a23e01"
+}

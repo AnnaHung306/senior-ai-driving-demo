@@ -1,0 +1,13 @@
+{
+  "version": "illumination-development-diagnostic-v1",
+  "checkpoint": "artifacts/runs/segmentation-v1-002/best.pt",
+  "checkpoint_sha256": "f06e4b110ea767d2c4b910d2cbfa8f9ea3ef96fa807c950bd2afd5f54947a1d4",
+  "pairs": {"noon": "data/instance-weather-noon-v1-001", "night": "data/instance-weather-night-v1-001"},
+  "audit": "audit-v2.json",
+  "max_actor_pose_error": 0.00001,
+  "max_global_semantic_target_mismatch_fraction": 0.005,
+  "use_all_captured_views": true,
+  "model_training_or_selection": false,
+  "purpose": "Existing frozen model on matched controlled geometry, two complete weather presets; not unseen-road generalization, test selection, retraining or acceptance. Town01 road-24 appeared in prior train.",
+  "limits": ["only one geometry and four fixed actors", "weather preset changes multiple illumination/rain factors together", "possible skeletal animation and semantic edge differences must be measured", "default camera exposure attributes not separately serialized in this acquisition; 80 ticks sensor warmup, identical source and CARLA build"]
+}

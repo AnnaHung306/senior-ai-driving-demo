@@ -1,0 +1,27 @@
+[
+  {
+    "case": "occluded",
+    "input": "inputs/frames/instance-probe/00078799.json",
+    "label": "labels/frames/00078799.json"
+  },
+  {
+    "case": "revealed",
+    "input": "inputs/frames/instance-probe/00078806.json",
+    "label": "labels/frames/00078806.json"
+  },
+  {
+    "case": "partial",
+    "input": "inputs/frames/instance-probe/00078813.json",
+    "label": "labels/frames/00078813.json"
+  },
+  {
+    "case": "truncated",
+    "input": "inputs/frames/instance-probe/00078820.json",
+    "label": "labels/frames/00078820.json"
+  },
+  {
+    "case": "near_plane",
+    "input": "inputs/frames/instance-probe/00078827.json",
+    "label": "labels/frames/00078827.json"
+  }
+]

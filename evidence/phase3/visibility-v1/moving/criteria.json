@@ -1,0 +1,40 @@
+{
+  "version": "motion-instance-probe-v1",
+  "map": "Town01",
+  "scene_count": 6,
+  "bundles_per_scene": 50,
+  "camera_positions": 8,
+  "modalities": [
+    "rgb",
+    "semantic_segmentation",
+    "depth",
+    "instance_segmentation"
+  ],
+  "fixed_delta_s": 0.05,
+  "capture_stride_ticks": 4,
+  "simulation_ticks_per_scene": 200,
+  "sensor_warmup_ticks": 20,
+  "readback_lag_ticks": 1,
+  "max_timestamp_error_s": 0.0001,
+  "min_scene_origin_separation_m": 70,
+  "max_scene_wall_s": 300,
+  "max_audit_wall_s": 1800,
+  "seed": 42,
+  "target_speed_kph": 12,
+  "min_ego_displacement_m": 5,
+  "min_label_duration_s": 9.5,
+  "min_participant_displacement_m": 1,
+  "max_ego_collisions": 0,
+  "required_semantic_ids_per_split": [
+    1,
+    2,
+    12,
+    14,
+    18,
+    19,
+    24
+  ],
+  "min_semantic_pixels_per_required_class_per_split": 1000,
+  "min_positive_images_per_required_class_per_split": 10,
+  "scope": "One short moving 32-sensor engineering probe using an existing Town01 train group. Not v3 training data, no new lockbox, no full dataset acceptance."
+}

@@ -1,31 +1,33 @@
 # 目前任務
 
-更新：2026-10-16（Asia/Taipei）。原始長期需求見 PROJECT_SPEC.md。
+更新：2026-10-16（Asia/Taipei）；長期需求見 PROJECT_SPEC.md。
 
-Phase 0、Phase 1 初始規則 Baseline、Phase 2 v2 基礎資料驗收已通過。**Phase 3 進行中：訓練基礎與第一輪實際 segmentation baseline 完成；整個 Phase 3 尚未通過。** 不進入 Phase 4。
+**Phase 3 進行中：首輪 segmentation、可見 instance 政策、靜態／動態32 sensors與配對天候診斷已完成；整個Phase3尚未通過，不進Phase4。** Phase0、Phase1初始規則Baseline、Phase2 v2基礎資料驗收已通過。
 
-## 本輪可追溯成果
+## 最新一輪成果
 
-- 實驗：artifacts/runs/segmentation-v1-002；source commit=a1eff7b；config=configs/segmentation_v1_1.json。PyTorch 2.10.0+cu128 / Python 3.12.14 / RTX 4070 Laptop。CARLA 關閉，訓練 704.96 秒、16 epochs / 4800 optimizer updates。
-- Tiny U-Net 從零訓練，488,120 parameters，640×360，batch 4，seed 20261016，七個 focus 類 + other_annotated；raw 0 ignore。只 train 更新與算 weights，validation 選模，test 最後一次完整評估。
-- 最佳 epoch 12：validation focus mIoU 27.50%，test 26.22%；常數多數類基準 0%，train-prior 解析期望基準 2.69%。沒有設定事後品質通過線。
-- Test 晴天 scene-04=49.04%，夜雨 scene-05=11.83%；場景幾何不同，不能把差異單獨歸因於天氣。夜雨道路 IoU 僅 1.13%，自行車總 recall 20.21% / precision 8.10%，行人 / 汽車誤報也明顯。不能接上駕駛控制。
-- 保留 14 張按固定錯誤規則選的 RGB / GT / prediction 對照、1200 筆 validation+test per-view 指標、84 筆逐類 FP / FN triage entries。這些不是獨立錯誤場景數。
-- CUDA overfit 80 steps loss ratio=0.3716；正式 run 無 AMP backoff。checkpoint 重載 forward 一致；32 tests 通過，含 RNG 恢復後下一步更新一致、人工 Inf 跳過壞更新、resume 來源不符拒絕、test 重開拒絕、完全無 labels 的 RGB-only 推論。
-- 訓練後再次重驗 7200 PNG hashes、639 metadata files、source/config/criteria/rig，全部未變；engineering_audit passed。實際最佳模型也在僅 RGB+calibration fixture 成功推論，輸出在 rgb_only_demo。
-- Peak allocated / reserved VRAM=1382.4 / 1538.0 MiB。Batch1 network p50 / p95=9.07 / 9.85ms；warm-cache 載圖到 mask+confidence=25.64 / 32.04ms。八方向單 bundle 順序處理 217.09ms，不含模擬器／寫檔，不是 20Hz 八鏡頭即時達標。
+- 四次工程採集：controlled五案、matched noon、matched rainy night、短動態，各5 bundles /160 PNG，共640 unique raw PNG（160 RGB）。全部 training_approved=false，不是已收完的v3。
+- Static32 sensors=八方向RGB/semantic/depth/instance，timestamp / modality pose error 0；涵蓋occluded/revealed/partial/truncated/near-plane。Phase0回歸008與009通過，patched CARLA0.9.16 / DX12 / Epic沿用。
+- 已知instance解碼R=semantic、ID=G+256B；拒絕目標ID高位截斷或重複。Rider13與兩輪車body19/18共用ID實測；visible box合併同一verified instance的rider+body。原模型把Rider歸other，原bicycle IoU不是完整instance AP。
+- 深度軸向支持率99.657%，range假設76.812%；不可把depth直接當歐氏距離。移開遮擋車後front行人14→212pixels，partial48。bbox fill不是occlusion fraction。
+- visibility_policy_v1_1：actual tight mask xyxy；min32 pixels/min4px side，兩輪車body>=8px；near-plane/rider-only/未解析前景明確ignore。v1誤排兩張真實邊緣車輛，v1.1投影與depth一致使用0.15m OBB support envelope；raw visible/amodal boxes不改，v1及audit-v2保留，新增audit-v3。
+- 原static160 actor-view pairs=34 positive/4 ignore/122 not visible，非獨立物件數。proposal background ignore / positive precedence契約已測，尚未接真正detector RPN/ROI；不可批准fixture訓練。
+- 短動態probe：BasicAgent自車0.4196m、span0.8s、ego collision0。160 PNG全CRC/SHA/同步通過，capture vs snapshot×rig平移差最大1.839e-5m、rotation matrix差4.22e-7，各模態pose差0。這是模擬內部一致性，不是實體校正精度；部分NPC短暫停住，非長episode motion coverage。
+- Collector支援第4模態、owned capture-time pose與32 sensor attributes，GT world transforms只進labels。原snapshot/一tick readback、暖機後導航及TM cleanup次序保留。
+- 44 tests通過，全部640 PNG封存時再驗SHA。Assistant檢視static含角色17圖/38 visible object views、動態首尾及配對模型圖；不是人類認證。最大case-end GPU樣本3938MiB，非連續peak，不能稱20Hz即時。
+- 原凍結模型paired diagnostic：ClearNoon focus mIoU47.56%、HardRainNight2.37%；0 optimizer updates、pose差0、semantic targets差0.0982%。同一已見train road、少量相關cases，非新的泛化成績，也不是雨單因素因果結論。
 
-完整協議：PHASE3.md；model card / 數值 / provenance：evidence/phase3/segmentation-v1-002；best / last checkpoint、source snapshot、對照圖、review.html 留在原 run。資料與權重未進 Git，複製工作目錄時須另存。
+主報告：evidence/phase3/visibility-v1/REPORT.md；執行規格：PHASE3_VISIBILITY.md。原始資料：data/instance-probe-v1-001、data/instance-weather-noon-v1-001、data/instance-weather-night-v1-001、data/motion-instance-probe-v1-001。配對模型圖：artifacts/runs/illumination-diagnostic-v1-001。原始圖ignored，收據/指紋/QA圖進evidence。
 
-## 失敗與修正
+## 上輪模型保留
 
-CUDA NLLLoss2d 的 mean / sum atomic reduction 被 deterministic 拒絕；改 per-pixel loss 再 tensor reduction，保持 weighted-mean 定義。segmentation-v1-001 在完整解析度 train-only overfit 出現 AMP 梯度溢位；未碰 test，原 config / source / failure 保留。v1.1 固定 initial scale 1024，有限次 scale backoff / 同 batch retry；只有有限梯度更新，不關閉保護。證據：evidence/phase3/failures。
+segmentation-v1-002，source a1eff7b，config segmentation_v1_1.json，Tiny U-Net 488120 parameters，16 epochs/4800 updates，best epoch12；validation27.50%、原test26.22%。原test夜雨11.83%、自行車recall20.21%/precision8.10%，不可接控制。checkpoint SHA f06e4b110ea767d2c4b910d2cbfa8f9ea3ef96fa807c950bd2afd5f54947a1d4未變。本輪沒有新detector、重訓或重跑原test；要重現原訓練須用原source revision，不可目前source強行resume。
 
 ## 下一個單一任務
 
-Phase 3 資料補強的前置 pilot：依 configs/detection_label_contract_v1.json，實測 RGB / semantic / depth / instance 共 32 sensors 五幀同步、已知 actor 的 instance ID / visibility / near-plane / truncation，保留人工 QA 與峰值資源，再凍結可見性門檻與 v3 capture plan。先回歸既有 Phase 0；不可直接投影所有 3D boxes 當偵測 GT。
+準備並凍結v3跨城鎮幾何/split/長episode收集計畫：先驗證Town03/Town04/Town05/Town02載入、導航/人行道與32-sensor資源，現僅assets已知，未RPC/render新城鎮。擬train=Town01/Town03、validation=Town04、development=Town05、sealed lockbox=Town02；仍待feasibility probes及正式route/quotas凍結，Opt與非Opt同一地理群組。
 
-configs/dataset_expansion_v3_plan.json 明確為未收集計畫：至少 18 個獨立 route groups、較長 episode、跨天氣／時間、空目標負樣本、兩輪車與大型車／號誌／障礙物；保留新的 lockbox。已看到 Town01/02/03/04/05/10HD map assets，但尚未 RPC / render 測試新城鎮。當前 test 已揭露；若據此改模型，只能視為 development test，不能再冒充未見的正式驗收集。
+補truck/bus、號誌物件/相位、temporary-obstacle的asset taxonomy/visibility QA；明確保留Rider或另立版本映射，不能靜默改舊指標。以新groups、30秒episodes、多種天候、空目標負例補資料，實作真正RPN+ROI ignore integration後才批准detector training。Proposed18groups/86400PNG尚未收集；原test與本輪diagnostic都已揭露，只能development，正式lockbox與品質門檻另凍結。詳configs/dataset_expansion_v3_plan.json。
 
 ## 不要重犯
 

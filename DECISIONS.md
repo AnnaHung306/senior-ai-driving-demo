@@ -145,3 +145,11 @@ Train／validation／test 為 1200／400／800 per-view 樣本；獨立 Pillow d
 嚴格 deterministic 的 CUDA CE reduction 在 GPU 測試失敗後，依官方 v2.10.0 源碼改為 per-pixel loss + tensor reduction，保持原 weighted-mean 定義；等價與 ignore 梯度測試通過。segmentation-v1-001 的完整解析度 overfit 又攔下 AMP 梯度溢位，失敗原樣保留；v1.1 加入 bounded GradScaler backoff / same-batch retry，人工 Inf 測試確認跳過壞更新，成功 retry 只推進一次 Adam step。未為通過檢查而關閉 finite / deterministic 保護。
 
 正式設定、資料／程式／runtime 指紋及 test-once 政策在訓練前凍結。每 epoch checkpoint 可在相同環境精確恢復 RNG 與下一步更新；只宣稱已測的 epoch 邊界恢復，不宣稱任意中斷點或跨 GPU 版本 bitwise 一致。參見 PHASE3.md 與 configs/segmentation_v1_1.json。
+
+## D014 — 先驗證可見instance與動態capture geometry，再收v3
+
+已實測32 sensors、同ID Rider與兩輪車body、遮擋/截斷/near-plane，以及moving capture pose與ego snapshot×rig一致性；原始640 PNG、44 tests通過。ID低16位有截斷風險，未解析地圖前景不能直接當背景負例。Visible mask決定box，amodal geometry另存，bbox fill不當occlusion。
+
+Policy v1在QA中誤排兩張真實邊緣車輛，v1.1改成與depth相同的0.15m OBB support envelope；觀測框及model數字不變。舊policy/audit保留，新revision綁source/hash。新來源的圖形容差是標註工程政策，沒有借此放寬原模型或正式test品質門檻。
+
+凍結原模型的同幾何weather診斷為47.56%/2.37%，0updates；同一已見Town01道路，不當泛化成績，且weather preset多因素混合。決定優先補夜雨、負樣本、獨立長episodes、完整asset taxonomy與真正RPN/ROI ignore integration，再訓練detector。短fixtures明確不批准訓練；Phase3仍未完成。

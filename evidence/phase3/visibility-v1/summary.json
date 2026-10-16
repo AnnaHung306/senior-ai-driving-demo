@@ -1,0 +1,14 @@
+{
+  "status": "completed-engineering-iteration",
+  "phase3_complete": false,
+  "unique_raw_images_verified_again": 640,
+  "unit_tests_passed": 44,
+  "training_approved": false,
+  "new_detector_trained": false,
+  "paired_development_miou": {
+    "noon": 0.4755943683312772,
+    "night": 0.023709133070085285
+  },
+  "paired_geometry_pose_error": 0.0,
+  "paired_semantic_target_mismatch_fraction": 0.0009817708333333334
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "task": "phase0-carla-control-camera",
+  "status": "passed",
+  "started_utc": "2026-10-16T09:12:54.516378+00:00",
+  "criteria_sha256": "db9649f3e6cf5c5b9d3c09e2ddc6a43f83810ed94e1cfbe6cc49ff7084ea8def",
+  "protocol_sha256": "ecd15a0192d2e8eb3632e21d4aa09c9624185f14516ff2fa446b44fa8318e5a3",
+  "protocol_version": "phase0-v2-pipelined-readback",
+  "provenance": {
+    "images": "carla_rgb_sensor",
+    "ego_state": "simulator_ground_truth",
+    "control": "open_loop_test_protocol",
+    "ai_model": null
+  },
+  "errors": [],
+  "checks": {
+    "movement": true,
+    "acceleration": true,
+    "stop": true,
+    "images": true,
+    "synchronization": true,
+    "frame_count": true,
+    "collision_free": true,
+    "cleanup": true
+  },
+  "metrics": {
+    "distance_m": 6.30310059410974,
+    "max_speed_mps": 5.161573496097732,
+    "final_speed_mps": 0.0,
+    "saved_images": 14,
+    "max_timestamp_error_s": 0.0,
+    "observed_frames": 140,
+    "collision_count": 0,
+    "cleanup_ok": true
+  },
+  "local_launch_evidence": {
+    "quality_level": "Epic",
+    "server_binary_sha256": "b0370d6dcd57b95299d12005cebad1dc6187804e83aeb51a184ccbc4b581fea8",
+    "executable": "C:\\code\\senior_AI\\artifacts\\carla\\CarlaUE4.exe",
+    "port": 2000,
+    "launcher_pid": 4472,
+    "graphics_api": "dx12"
+  },
+  "git_revision": "53d0fa9315f5e96acb1215a8eba3612d71f89705",
+  "client_version": "0.9.16",
+  "server_version": "0.9.16",
+  "map_lifecycle": "loaded_map_once",
+  "spawn_index": 0,
+  "wall_time_s": 16.468,
+  "finished_utc": "2026-10-16T09:13:11.031940+00:00"
+}

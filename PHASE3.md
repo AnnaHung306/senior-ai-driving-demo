@@ -1,5 +1,7 @@
 # Phase 3 訓練基礎與實驗協議
 
+最新可見instance／32-sensor靜態與動態試驗另見 [PHASE3_VISIBILITY.md](PHASE3_VISIBILITY.md)；不更改本頁原始模型實驗或其test成績。
+
 本協議與 configs/segmentation_v1.json 在首次訓練前建立。第一個實驗是從零訓練的小型單視角語意分割網路，八個方向共用權重。Phase 3 的物件偵測、號誌狀態與更廣類別覆蓋仍須另做，不以本實驗代替整個階段。
 
 ## 資料與任務定義

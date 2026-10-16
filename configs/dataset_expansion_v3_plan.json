@@ -1,6 +1,11 @@
 {
   "version": "dataset-expansion-v3-research-plan",
   "status": "planned_not_collected",
+  "proposed_town_allocation_pending_runtime_probes": {"train": ["Town01", "Town03"], "validation": ["Town04"], "development_test": ["Town05"], "sealed_acceptance_lockbox": ["Town02"]},
+  "town_allocation_note": "Proposed feasibility allocation only; freeze actual routes and quotas after map/blueprint runtime probes, before acquisition or model scoring. Opt and non-Opt versions of the same town are one geographic group.",
+  "prerequisite_evidence": "2026-10-16: controlled 32-sensor five-case pilot, matched noon/night fixtures, and one five-bundle moving probe completed; these are engineering fixtures, not the proposed 18 groups or 30-second dataset.",
+  "label_policy_candidate": "configs/visibility_policy_v1_1.json; add verified large vehicles / traffic-light state / temporary-obstacle taxonomy, natural-data QA and actual RPN/ROI ignore integration before training approval",
+  "sensor_metadata_requirement": "Record per-modality actual sensor attributes and capture-time world transform. Moving probe now records all 32 sensors; RGB-only inference keeps GT transforms under labels. Serialize actual weather attributes in future long captures as well.",
   "motivation": ["six 10-second groups are too few", "rare-class imbalance", "weather and scene identity are confounded", "no reliable visible instance labels", "no untouched benchmark remains after exploratory error analysis"],
   "proposed_minimum_independent_route_groups": {"train": 8, "validation": 3, "development_test": 3, "sealed_acceptance_lockbox": 4},
   "proposed_minimum_seconds_per_episode": 30,

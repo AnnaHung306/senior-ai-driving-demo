@@ -1,0 +1,980 @@
+{
+  "task": "frozen-model-paired-illumination-development-diagnostic",
+  "status": "completed",
+  "formal_acceptance": false,
+  "optimizer_updates": 0,
+  "checkpoint_sha256": "f06e4b110ea767d2c4b910d2cbfa8f9ea3ef96fa807c950bd2afd5f54947a1d4",
+  "checkpoint_unchanged": true,
+  "pose_error_max": 0.0,
+  "raw_semantic_target_mismatch_fraction": 0.0009817708333333334,
+  "mapped_target_agreement": {
+    "confusion_true_rows_predicted_columns": [
+      [
+        6048233,
+        0,
+        3,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1480908,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1507077,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        695,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        167416,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1543,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1985,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8135
+      ]
+    ],
+    "classes": [
+      {
+        "name": "other_annotated",
+        "support_pixels": 6048238,
+        "predicted_pixels": 6048236,
+        "iou": 0.999998677301384,
+        "precision": 0.999999503987609,
+        "recall": 0.999999173312955
+      },
+      {
+        "name": "road",
+        "support_pixels": 1480908,
+        "predicted_pixels": 1480908,
+        "iou": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      {
+        "name": "sidewalk",
+        "support_pixels": 1507078,
+        "predicted_pixels": 1507080,
+        "iou": 0.9999973458626311,
+        "precision": 0.9999980093956525,
+        "recall": 0.9999993364643369
+      },
+      {
+        "name": "pedestrian",
+        "support_pixels": 695,
+        "predicted_pixels": 695,
+        "iou": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      {
+        "name": "car",
+        "support_pixels": 167418,
+        "predicted_pixels": 167418,
+        "iou": 0.9999761079918768,
+        "precision": 0.9999880538532296,
+        "recall": 0.9999880538532296
+      },
+      {
+        "name": "motorcycle",
+        "support_pixels": 1543,
+        "predicted_pixels": 1543,
+        "iou": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      {
+        "name": "bicycle",
+        "support_pixels": 1985,
+        "predicted_pixels": 1985,
+        "iou": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      {
+        "name": "road_line",
+        "support_pixels": 8135,
+        "predicted_pixels": 8135,
+        "iou": 1.0,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    ],
+    "pixel_accuracy": 0.9999991319444445,
+    "focus_macro_iou": 0.9999962076935011,
+    "focus_supported_classes": 7,
+    "frequency_weighted_iou": 0.9999982638953683
+  },
+  "views_per_condition": 40,
+  "results": {
+    "noon": {
+      "confusion_true_rows_predicted_columns": [
+        [
+          5983821,
+          2741,
+          46372,
+          3478,
+          9659,
+          110,
+          1765,
+          292
+        ],
+        [
+          2301,
+          1454571,
+          19869,
+          28,
+          1122,
+          41,
+          807,
+          2169
+        ],
+        [
+          12392,
+          8996,
+          1479010,
+          382,
+          6074,
+          8,
+          216,
+          0
+        ],
+        [
+          394,
+          70,
+          14,
+          39,
+          93,
+          0,
+          71,
+          14
+        ],
+        [
+          79541,
+          1735,
+          35166,
+          746,
+          49565,
+          510,
+          155,
+          0
+        ],
+        [
+          1065,
+          49,
+          50,
+          38,
+          83,
+          133,
+          125,
+          0
+        ],
+        [
+          27,
+          51,
+          15,
+          97,
+          1,
+          32,
+          1762,
+          0
+        ],
+        [
+          38,
+          58,
+          2,
+          0,
+          0,
+          0,
+          0,
+          8037
+        ]
+      ],
+      "classes": [
+        {
+          "name": "other_annotated",
+          "support_pixels": 6048238,
+          "predicted_pixels": 6079579,
+          "iou": 0.9739298332876519,
+          "precision": 0.9842492383107448,
+          "recall": 0.9893494601237584
+        },
+        {
+          "name": "road",
+          "support_pixels": 1480908,
+          "predicted_pixels": 1468271,
+          "iou": 0.9732123740806954,
+          "precision": 0.990669297425339,
+          "recall": 0.9822156406745051
+        },
+        {
+          "name": "sidewalk",
+          "support_pixels": 1507078,
+          "predicted_pixels": 1580498,
+          "iou": 0.919458697995606,
+          "precision": 0.9357873277916201,
+          "recall": 0.9813758810094766
+        },
+        {
+          "name": "pedestrian",
+          "support_pixels": 695,
+          "predicted_pixels": 4808,
+          "iou": 0.007137628111273792,
+          "precision": 0.008111480865224625,
+          "recall": 0.05611510791366906
+        },
+        {
+          "name": "car",
+          "support_pixels": 167418,
+          "predicted_pixels": 66597,
+          "iou": 0.26871780970452697,
+          "precision": 0.7442527441176029,
+          "recall": 0.29605538233642736
+        },
+        {
+          "name": "motorcycle",
+          "support_pixels": 1543,
+          "predicted_pixels": 834,
+          "iou": 0.059269162210338684,
+          "precision": 0.15947242206235013,
+          "recall": 0.08619572261827609
+        },
+        {
+          "name": "bicycle",
+          "support_pixels": 1985,
+          "predicted_pixels": 4901,
+          "iou": 0.343871975019516,
+          "precision": 0.3595184656192614,
+          "recall": 0.8876574307304785
+        },
+        {
+          "name": "road_line",
+          "support_pixels": 8135,
+          "predicted_pixels": 10512,
+          "iou": 0.757492931196984,
+          "precision": 0.764554794520548,
+          "recall": 0.9879532882606024
+        }
+      ],
+      "pixel_accuracy": 0.9740601128472223,
+      "focus_macro_iou": 0.4755943683312772,
+      "focus_supported_classes": 7,
+      "frequency_weighted_iou": 0.9515432720547525,
+      "rgb_profile": [
+        {
+          "case": "occluded",
+          "camera": "front",
+          "mean_rgb_0_255": 160.04607928240742,
+          "near_black_pixel_fraction": 9.98263888888889e-05
+        },
+        {
+          "case": "occluded",
+          "camera": "front_right",
+          "mean_rgb_0_255": 149.16343315972222,
+          "near_black_pixel_fraction": 0.00017361111111111112
+        },
+        {
+          "case": "occluded",
+          "camera": "right",
+          "mean_rgb_0_255": 142.288359375,
+          "near_black_pixel_fraction": 0.0003949652777777778
+        },
+        {
+          "case": "occluded",
+          "camera": "rear_right",
+          "mean_rgb_0_255": 151.68913194444445,
+          "near_black_pixel_fraction": 0.0
+        },
+        {
+          "case": "occluded",
+          "camera": "rear",
+          "mean_rgb_0_255": 148.34999421296297,
+          "near_black_pixel_fraction": 9.114583333333334e-05
+        },
+        {
+          "case": "occluded",
+          "camera": "rear_left",
+          "mean_rgb_0_255": 122.79665075231482,
+          "near_black_pixel_fraction": 0.00010416666666666667
+        },
+        {
+          "case": "occluded",
+          "camera": "left",
+          "mean_rgb_0_255": 103.22838975694444,
+          "near_black_pixel_fraction": 0.00040364583333333333
+        },
+        {
+          "case": "occluded",
+          "camera": "front_left",
+          "mean_rgb_0_255": 138.75818142361112,
+          "near_black_pixel_fraction": 0.0003862847222222222
+        },
+        {
+          "case": "revealed",
+          "camera": "front",
+          "mean_rgb_0_255": 159.3443995949074,
+          "near_black_pixel_fraction": 0.00011284722222222222
+        },
+        {
+          "case": "revealed",
+          "camera": "front_right",
+          "mean_rgb_0_255": 148.41468894675927,
+          "near_black_pixel_fraction": 0.0
+        },
+        {
+          "case": "revealed",
+          "camera": "right",
+          "mean_rgb_0_255": 142.33941116898148,
+          "near_black_pixel_fraction": 0.00034288194444444443
+        },
+        {
+          "case": "revealed",
+          "camera": "rear_right",
+          "mean_rgb_0_255": 151.7376461226852,
+          "near_black_pixel_fraction": 0.0
+        },
+        {
+          "case": "revealed",
+          "camera": "rear",
+          "mean_rgb_0_255": 148.38597511574073,
+          "near_black_pixel_fraction": 9.548611111111112e-05
+        },
+        {
+          "case": "revealed",
+          "camera": "rear_left",
+          "mean_rgb_0_255": 122.80152777777778,
+          "near_black_pixel_fraction": 0.00010416666666666667
+        },
+        {
+          "case": "revealed",
+          "camera": "left",
+          "mean_rgb_0_255": 103.28986689814815,
+          "near_black_pixel_fraction": 0.000390625
+        },
+        {
+          "case": "revealed",
+          "camera": "front_left",
+          "mean_rgb_0_255": 139.41297309027777,
+          "near_black_pixel_fraction": 0.000390625
+        },
+        {
+          "case": "partial",
+          "camera": "front",
+          "mean_rgb_0_255": 160.41300491898147,
+          "near_black_pixel_fraction": 9.98263888888889e-05
+        },
+        {
+          "case": "partial",
+          "camera": "front_right",
+          "mean_rgb_0_255": 146.88162760416665,
+          "near_black_pixel_fraction": 0.00024739583333333335
+        },
+        {
+          "case": "partial",
+          "camera": "right",
+          "mean_rgb_0_255": 142.35181278935184,
+          "near_black_pixel_fraction": 0.0003862847222222222
+        },
+        {
+          "case": "partial",
+          "camera": "rear_right",
+          "mean_rgb_0_255": 151.7448755787037,
+          "near_black_pixel_fraction": 0.0
+        },
+        {
+          "case": "partial",
+          "camera": "rear",
+          "mean_rgb_0_255": 148.38042245370372,
+          "near_black_pixel_fraction": 9.114583333333334e-05
+        },
+        {
+          "case": "partial",
+          "camera": "rear_left",
+          "mean_rgb_0_255": 122.79863570601852,
+          "near_black_pixel_fraction": 9.98263888888889e-05
+        },
+        {
+          "case": "partial",
+          "camera": "left",
+          "mean_rgb_0_255": 103.29398582175926,
+          "near_black_pixel_fraction": 0.0003993055555555556
+        },
+        {
+          "case": "partial",
+          "camera": "front_left",
+          "mean_rgb_0_255": 139.42255208333333,
+          "near_black_pixel_fraction": 0.0003862847222222222
+        },
+        {
+          "case": "truncated",
+          "camera": "front",
+          "mean_rgb_0_255": 161.34729311342593,
+          "near_black_pixel_fraction": 0.0001171875
+        },
+        {
+          "case": "truncated",
+          "camera": "front_right",
+          "mean_rgb_0_255": 147.9192259837963,
+          "near_black_pixel_fraction": 0.0
+        },
+        {
+          "case": "truncated",
+          "camera": "right",
+          "mean_rgb_0_255": 141.45606770833334,
+          "near_black_pixel_fraction": 0.00046875
+        },
+        {
+          "case": "truncated",
+          "camera": "rear_right",
+          "mean_rgb_0_255": 151.76992042824074,
+          "near_black_pixel_fraction": 0.0
+        },
+        {
+          "case": "truncated",
+          "camera": "rear",
+          "mean_rgb_0_255": 148.39403501157406,
+          "near_black_pixel_fraction": 9.548611111111112e-05
+        },
+        {
+          "case": "truncated",
+          "camera": "rear_left",
+          "mean_rgb_0_255": 122.8092578125,
+          "near_black_pixel_fraction": 9.548611111111112e-05
+        },
+        {
+          "case": "truncated",
+          "camera": "left",
+          "mean_rgb_0_255": 103.30955584490741,
+          "near_black_pixel_fraction": 0.000390625
+        },
+        {
+          "case": "truncated",
+          "camera": "front_left",
+          "mean_rgb_0_255": 139.4571629050926,
+          "near_black_pixel_fraction": 0.0003862847222222222
+        },
+        {
+          "case": "near_plane",
+          "camera": "front",
+          "mean_rgb_0_255": 158.48200520833333,
+          "near_black_pixel_fraction": 9.98263888888889e-05
+        },
+        {
+          "case": "near_plane",
+          "camera": "front_right",
+          "mean_rgb_0_255": 128.46739438657409,
+          "near_black_pixel_fraction": 0.00043836805555555556
+        },
+        {
+          "case": "near_plane",
+          "camera": "right",
+          "mean_rgb_0_255": 130.30750868055554,
+          "near_black_pixel_fraction": 0.000390625
+        },
+        {
+          "case": "near_plane",
+          "camera": "rear_right",
+          "mean_rgb_0_255": 151.6914554398148,
+          "near_black_pixel_fraction": 0.0
+        },
+        {
+          "case": "near_plane",
+          "camera": "rear",
+          "mean_rgb_0_255": 148.38167679398148,
+          "near_black_pixel_fraction": 9.548611111111112e-05
+        },
+        {
+          "case": "near_plane",
+          "camera": "rear_left",
+          "mean_rgb_0_255": 122.80195746527778,
+          "near_black_pixel_fraction": 0.00010416666666666667
+        },
+        {
+          "case": "near_plane",
+          "camera": "left",
+          "mean_rgb_0_255": 103.28618200231482,
+          "near_black_pixel_fraction": 0.00040364583333333333
+        },
+        {
+          "case": "near_plane",
+          "camera": "front_left",
+          "mean_rgb_0_255": 139.45551070601852,
+          "near_black_pixel_fraction": 0.0003949652777777778
+        }
+      ],
+      "raw_audit_sha256": "45c2cc677a8c2b9b8ddc8b957d3a88826a11b93d7afe6916c248a4e80f0854b3",
+      "acquisition_report_sha256": "5a3efb21eef2ffec7e67df546d6c4b3bf3aa5fabced8c02ebb627bb573741f3d"
+    },
+    "night": {
+      "confusion_true_rows_predicted_columns": [
+        [
+          4365386,
+          529389,
+          1017402,
+          122784,
+          11116,
+          805,
+          193,
+          1161
+        ],
+        [
+          1159331,
+          47,
+          244130,
+          10761,
+          66566,
+          69,
+          0,
+          4
+        ],
+        [
+          1239428,
+          37,
+          190943,
+          24656,
+          46697,
+          5319,
+          0,
+          0
+        ],
+        [
+          149,
+          4,
+          480,
+          34,
+          0,
+          0,
+          0,
+          28
+        ],
+        [
+          131342,
+          30,
+          6578,
+          982,
+          27944,
+          541,
+          1,
+          0
+        ],
+        [
+          159,
+          22,
+          1183,
+          20,
+          159,
+          0,
+          0,
+          0
+        ],
+        [
+          171,
+          4,
+          638,
+          1152,
+          0,
+          0,
+          0,
+          20
+        ],
+        [
+          6640,
+          0,
+          510,
+          973,
+          0,
+          0,
+          0,
+          12
+        ]
+      ],
+      "classes": [
+        {
+          "name": "other_annotated",
+          "support_pixels": 6048236,
+          "predicted_pixels": 6902606,
+          "iou": 0.5084629168211916,
+          "precision": 0.6324257823784235,
+          "recall": 0.7217618492400099
+        },
+        {
+          "name": "road",
+          "support_pixels": 1480908,
+          "predicted_pixels": 529533,
+          "iou": 2.3378501925493212e-05,
+          "precision": 8.875745232119622e-05,
+          "recall": 3.1737285503218294e-05
+        },
+        {
+          "name": "sidewalk",
+          "support_pixels": 1507080,
+          "predicted_pixels": 1461864,
+          "iou": 0.0687339565392525,
+          "precision": 0.13061611750477473,
+          "recall": 0.12669732197361785
+        },
+        {
+          "name": "pedestrian",
+          "support_pixels": 695,
+          "predicted_pixels": 161362,
+          "iou": 0.0002098467501527561,
+          "precision": 0.000210706362092686,
+          "recall": 0.04892086330935252
+        },
+        {
+          "name": "car",
+          "support_pixels": 167418,
+          "predicted_pixels": 152482,
+          "iou": 0.09571305265176945,
+          "precision": 0.1832609750659094,
+          "recall": 0.16691156267545904
+        },
+        {
+          "name": "motorcycle",
+          "support_pixels": 1543,
+          "predicted_pixels": 6734,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "name": "bicycle",
+          "support_pixels": 1985,
+          "predicted_pixels": 194,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "name": "road_line",
+          "support_pixels": 8135,
+          "predicted_pixels": 1225,
+          "iou": 0.0012836970474967907,
+          "precision": 0.009795918367346938,
+          "recall": 0.0014751075599262447
+        }
+      ],
+      "pixel_accuracy": 0.497435546875,
+      "focus_macro_iou": 0.023709133070085285,
+      "focus_supported_classes": 7,
+      "frequency_weighted_iou": 0.34667541095729926,
+      "rgb_profile": [
+        {
+          "case": "occluded",
+          "camera": "front",
+          "mean_rgb_0_255": 35.24769386574074,
+          "near_black_pixel_fraction": 0.01690104166666667
+        },
+        {
+          "case": "occluded",
+          "camera": "front_right",
+          "mean_rgb_0_255": 23.466100983796295,
+          "near_black_pixel_fraction": 0.09284722222222222
+        },
+        {
+          "case": "occluded",
+          "camera": "right",
+          "mean_rgb_0_255": 20.50866608796296,
+          "near_black_pixel_fraction": 0.16452690972222223
+        },
+        {
+          "case": "occluded",
+          "camera": "rear_right",
+          "mean_rgb_0_255": 28.025771122685185,
+          "near_black_pixel_fraction": 0.04335503472222222
+        },
+        {
+          "case": "occluded",
+          "camera": "rear",
+          "mean_rgb_0_255": 34.09004340277778,
+          "near_black_pixel_fraction": 0.0051736111111111115
+        },
+        {
+          "case": "occluded",
+          "camera": "rear_left",
+          "mean_rgb_0_255": 31.89531684027778,
+          "near_black_pixel_fraction": 0.012513020833333333
+        },
+        {
+          "case": "occluded",
+          "camera": "left",
+          "mean_rgb_0_255": 27.542887731481482,
+          "near_black_pixel_fraction": 0.018953993055555556
+        },
+        {
+          "case": "occluded",
+          "camera": "front_left",
+          "mean_rgb_0_255": 33.39184172453704,
+          "near_black_pixel_fraction": 0.014370659722222222
+        },
+        {
+          "case": "revealed",
+          "camera": "front",
+          "mean_rgb_0_255": 35.39320167824074,
+          "near_black_pixel_fraction": 0.03193576388888889
+        },
+        {
+          "case": "revealed",
+          "camera": "front_right",
+          "mean_rgb_0_255": 23.442473958333334,
+          "near_black_pixel_fraction": 0.09680121527777778
+        },
+        {
+          "case": "revealed",
+          "camera": "right",
+          "mean_rgb_0_255": 20.661060474537038,
+          "near_black_pixel_fraction": 0.1608637152777778
+        },
+        {
+          "case": "revealed",
+          "camera": "rear_right",
+          "mean_rgb_0_255": 28.106838831018518,
+          "near_black_pixel_fraction": 0.044240451388888886
+        },
+        {
+          "case": "revealed",
+          "camera": "rear",
+          "mean_rgb_0_255": 34.17778501157407,
+          "near_black_pixel_fraction": 0.005130208333333333
+        },
+        {
+          "case": "revealed",
+          "camera": "rear_left",
+          "mean_rgb_0_255": 32.0544140625,
+          "near_black_pixel_fraction": 0.012078993055555556
+        },
+        {
+          "case": "revealed",
+          "camera": "left",
+          "mean_rgb_0_255": 27.604631076388888,
+          "near_black_pixel_fraction": 0.020230034722222224
+        },
+        {
+          "case": "revealed",
+          "camera": "front_left",
+          "mean_rgb_0_255": 33.53394386574074,
+          "near_black_pixel_fraction": 0.013294270833333333
+        },
+        {
+          "case": "partial",
+          "camera": "front",
+          "mean_rgb_0_255": 35.389013310185184,
+          "near_black_pixel_fraction": 0.018719618055555557
+        },
+        {
+          "case": "partial",
+          "camera": "front_right",
+          "mean_rgb_0_255": 23.431838831018517,
+          "near_black_pixel_fraction": 0.09901041666666667
+        },
+        {
+          "case": "partial",
+          "camera": "right",
+          "mean_rgb_0_255": 20.748956886574074,
+          "near_black_pixel_fraction": 0.15678819444444445
+        },
+        {
+          "case": "partial",
+          "camera": "rear_right",
+          "mean_rgb_0_255": 28.192978877314815,
+          "near_black_pixel_fraction": 0.043658854166666664
+        },
+        {
+          "case": "partial",
+          "camera": "rear",
+          "mean_rgb_0_255": 34.109677372685184,
+          "near_black_pixel_fraction": 0.005091145833333333
+        },
+        {
+          "case": "partial",
+          "camera": "rear_left",
+          "mean_rgb_0_255": 32.041399016203705,
+          "near_black_pixel_fraction": 0.012113715277777777
+        },
+        {
+          "case": "partial",
+          "camera": "left",
+          "mean_rgb_0_255": 27.697337962962962,
+          "near_black_pixel_fraction": 0.019053819444444446
+        },
+        {
+          "case": "partial",
+          "camera": "front_left",
+          "mean_rgb_0_255": 33.7081958912037,
+          "near_black_pixel_fraction": 0.012782118055555555
+        },
+        {
+          "case": "truncated",
+          "camera": "front",
+          "mean_rgb_0_255": 35.4883275462963,
+          "near_black_pixel_fraction": 0.03704861111111111
+        },
+        {
+          "case": "truncated",
+          "camera": "front_right",
+          "mean_rgb_0_255": 23.291789641203703,
+          "near_black_pixel_fraction": 0.10980902777777778
+        },
+        {
+          "case": "truncated",
+          "camera": "right",
+          "mean_rgb_0_255": 20.72744502314815,
+          "near_black_pixel_fraction": 0.1579861111111111
+        },
+        {
+          "case": "truncated",
+          "camera": "rear_right",
+          "mean_rgb_0_255": 28.152256944444446,
+          "near_black_pixel_fraction": 0.04422743055555556
+        },
+        {
+          "case": "truncated",
+          "camera": "rear",
+          "mean_rgb_0_255": 34.00732783564815,
+          "near_black_pixel_fraction": 0.0052734375
+        },
+        {
+          "case": "truncated",
+          "camera": "rear_left",
+          "mean_rgb_0_255": 32.14635706018519,
+          "near_black_pixel_fraction": 0.012105034722222222
+        },
+        {
+          "case": "truncated",
+          "camera": "left",
+          "mean_rgb_0_255": 27.679817708333335,
+          "near_black_pixel_fraction": 0.019435763888888888
+        },
+        {
+          "case": "truncated",
+          "camera": "front_left",
+          "mean_rgb_0_255": 33.61804253472222,
+          "near_black_pixel_fraction": 0.01302517361111111
+        },
+        {
+          "case": "near_plane",
+          "camera": "front",
+          "mean_rgb_0_255": 35.93404224537037,
+          "near_black_pixel_fraction": 0.03171006944444445
+        },
+        {
+          "case": "near_plane",
+          "camera": "front_right",
+          "mean_rgb_0_255": 23.86543113425926,
+          "near_black_pixel_fraction": 0.13051649305555554
+        },
+        {
+          "case": "near_plane",
+          "camera": "right",
+          "mean_rgb_0_255": 20.317388599537036,
+          "near_black_pixel_fraction": 0.15030815972222222
+        },
+        {
+          "case": "near_plane",
+          "camera": "rear_right",
+          "mean_rgb_0_255": 28.163583622685184,
+          "near_black_pixel_fraction": 0.044110243055555554
+        },
+        {
+          "case": "near_plane",
+          "camera": "rear",
+          "mean_rgb_0_255": 34.1711646412037,
+          "near_black_pixel_fraction": 0.005143229166666667
+        },
+        {
+          "case": "near_plane",
+          "camera": "rear_left",
+          "mean_rgb_0_255": 32.23337094907407,
+          "near_black_pixel_fraction": 0.012061631944444444
+        },
+        {
+          "case": "near_plane",
+          "camera": "left",
+          "mean_rgb_0_255": 27.53582320601852,
+          "near_black_pixel_fraction": 0.020308159722222222
+        },
+        {
+          "case": "near_plane",
+          "camera": "front_left",
+          "mean_rgb_0_255": 33.59667679398148,
+          "near_black_pixel_fraction": 0.013302951388888888
+        }
+      ],
+      "raw_audit_sha256": "7e76e97a473fa3448b7054c91acccd5a663aaa9ccf1b51976ba7e3115655f8b8",
+      "acquisition_report_sha256": "46577debf0d536d3c6164cd4797805c738cb9a4fb36c4ab834c0ff9f5e78bd3d"
+    }
+  },
+  "panels": [
+    "occluded.png",
+    "revealed.png",
+    "partial.png",
+    "truncated.png",
+    "near_plane.png"
+  ],
+  "source_sha256": "331ff953609346c6e3290cf6b0e33c8b6da105651535a56fe7ec2fb0484890a2",
+  "model_source_sha256": "c2a84e2ca62115dab46f94957168c0170ff5a240f35a4ad146ae56fe6067627a",
+  "config_sha256": "4f2d592419b9c87755d9359f10d71669457e14ee99deee5927f3051688720cf2",
+  "limits": [
+    "only one geometry and four fixed actors",
+    "weather preset changes multiple illumination/rain factors together",
+    "possible skeletal animation and semantic edge differences must be measured",
+    "default camera exposure attributes not separately serialized in this acquisition; 80 ticks sensor warmup, identical source and CARLA build"
+  ],
+  "interpretation": "Matched actor and camera geometry, fixed existing weights. Two full weather presets on a prior training road; not a new generalization score or rain-only causal effect."
+}

@@ -1,5 +1,6 @@
 """Bounded eight-position RGB/semantic/depth pilot; simulator GT is labels only."""
 import argparse
+from collections import Counter
 import faulthandler
 from concurrent.futures import ThreadPoolExecutor
 import hashlib
@@ -10,6 +11,8 @@ import queue
 import subprocess
 import sys
 import time
+
+import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'src'))
@@ -87,6 +90,11 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
               'bundles': 0, 'images': 0, 'max_timestamp_error_s': 0.0, 'requested_npcs': scene['requested_npcs'],
               'spawned_npcs': 0, 'semantic_ids': [], 'depth_min_m': None, 'depth_max_m': None}
     actors, sensors, queues, indexes, label_actors = [], [], {}, [], []
+    autopilot_actors, pedestrian_controls, actor_kinds, collision_events = [], [], {}, []
+    moving = 'ego_route_m' in scene
+    stride = criteria.get('capture_stride_ticks', 1)
+    simulation_ticks = count * stride
+    motion_labels, pixel_counts, positive_images = [], Counter(), Counter()
     original, original_weather = world.get_settings(), world.get_weather()
     manager = None
     cleanup = True
@@ -105,14 +113,40 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
         manager = client.get_trafficmanager(8000)
         manager.set_synchronous_mode(True)
         manager.set_random_device_seed(scene['seed'])
-        for npc_pose in scene['npc_spawns']:
-            npc = world.try_spawn_actor(library.find('vehicle.lincoln.mkz_2020'), transform(npc_pose))
+        definitions = scene.get('participants') or [
+            {'blueprint': 'vehicle.lincoln.mkz_2020', 'kind': 'car', 'start': p, 'controller': 'traffic_manager'}
+            for p in scene.get('npc_spawns', [])]
+        for definition in definitions:
+            bp = library.find(definition['blueprint'])
+            if bp.has_attribute('is_invincible'):
+                bp.set_attribute('is_invincible', 'false')
+            npc = world.try_spawn_actor(bp, transform(definition['start']))
             if npc is None:
                 raise RuntimeError('Frozen NPC spawn failed; no density substitution')
             actors.append(npc)
             label_actors.append(npc)
-            npc.set_autopilot(True, 8000)
+            actor_kinds[npc.id] = definition['kind']
+            if definition['controller'] == 'traffic_manager':
+                npc.set_autopilot(True, 8000)
+                autopilot_actors.append(npc)
+                if 'speed_difference_percent' in definition:
+                    manager.vehicle_percentage_speed_difference(npc, definition['speed_difference_percent'])
+            else:
+                pedestrian_controls.append([npc, definition, 0])
         result['spawned_npcs'] = len(label_actors)
+        result['spawned_kinds'] = dict(Counter(actor_kinds.values()))
+        agent = None
+        if moving:
+            sys.path.insert(0, str(ROOT / 'artifacts/carla/PythonAPI/carla'))
+            from agents.navigation.basic_agent import BasicAgent
+            agent = BasicAgent(vehicle, target_speed=criteria['target_speed_kph'],
+                               opt_dict={'dt': criteria['fixed_delta_s'], 'base_min_distance': 1.0,
+                                         'distance_ratio': 0.2, 'max_brake': 1.0, 'sampling_resolution': 2.0})
+            agent.set_destination(carla.Location(*scene['goal_m']), start_location=vehicle.get_location())
+            collision = world.spawn_actor(library.find('sensor.other.collision'), carla.Transform(), attach_to=vehicle)
+            actors.append(collision)
+            sensors.append(collision)
+            collision.listen(lambda event: collision_events.append({'frame': event.frame, 'other_actor': event.other_actor.id}))
         calibration = []
         for definition in rig['cameras']:
             name = definition['name']
@@ -135,7 +169,7 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
                    'optical_from_carla_camera': [[0, 1, 0], [0, 0, -1], [1, 0, 0]], 'cameras': calibration})
         result['stage'] = 'warmup'
         write_json(folder / 'report.json', result)
-        for _ in range(5):
+        for _ in range(criteria.get('sensor_warmup_ticks', 5)):
             vehicle.apply_control(carla.VehicleControl(brake=1))
             world.tick(15)
         # Static road labels are kept exclusively under labels/.
@@ -178,7 +212,11 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
                         labels[modality][name] = entry
                     if modality == 'semantic_segmentation':
                         tags = semantic_ids_bgra(image.raw_data, image.width, image.height)
-                        classes.update(int(v) for v in set(tags.reshape(-1)))
+                        hist = np.bincount(tags.reshape(-1), minlength=29)
+                        present = np.flatnonzero(hist)
+                        classes.update(int(v) for v in present)
+                        pixel_counts.update({int(k): int(hist[k]) for k in present})
+                        positive_images.update(int(k) for k in present)
                         if tags.max() > 28:
                             raise ValueError('Unknown semantic class ID')
                     if modality == 'depth':
@@ -192,16 +230,36 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
                 write_json(root / label_relative, labels)
                 indexes.append({'scene_id': scene['id'], 'group_id': scene['group_id'], 'split': scene['split'],
                                 'frame': frame, 'input': input_relative, 'label': label_relative})
+                if moving:
+                    motion_labels.append(labels)
                 result['bundles'] += 1
                 result['images'] += len(jobs)
-            for step in range(count):
+            for step in range(simulation_ticks):
                 if time.monotonic() - started > criteria['max_scene_wall_s']:
                     raise TimeoutError('Scene wall-clock deadline')
-                vehicle.apply_control(carla.VehicleControl(brake=1))
+                control = agent.run_step() if agent is not None and not agent.done() else carla.VehicleControl(brake=1)
+                vehicle.apply_control(control)
+                for entry in pedestrian_controls:
+                    pedestrian, definition, index = entry
+                    location = pedestrian.get_location()
+                    path = definition['path_m']
+                    while index < len(path) - 1 and math.hypot(path[index][0] - location.x, path[index][1] - location.y) < 0.4:
+                        index += 1
+                    entry[2] = index
+                    dx, dy = path[index][0] - location.x, path[index][1] - location.y
+                    length = math.hypot(dx, dy)
+                    direction = carla.Vector3D(dx / length, dy / length, 0) if length > 0.1 else carla.Vector3D()
+                    pedestrian.apply_control(carla.WalkerControl(direction, definition['speed_mps'] if length > 0.1 else 0, False))
                 frame = world.tick(15)
                 snapshot = world.get_snapshot()
                 if snapshot.frame != frame:
                     raise ValueError('Multiple tick clients detected')
+                # Drain selected F after exactly one world tick, even when saving only every N ticks.
+                if pending is not None:
+                    consume(pending, frame)
+                    pending = None
+                if step % stride:
+                    continue
                 # Copy pending GT now, before advancing; live actor state later is forbidden.
                 ego = snapshot.find(vehicle.id)
                 if ego is None:
@@ -213,6 +271,10 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
                           'ego_world_pose': pose(ego.get_transform()), 'ego_velocity_mps': xyz(ego.get_velocity()),
                           'objects_3d': [], 'semantic_segmentation': {}, 'depth': {},
                           'roads': f'labels/roads/{scene["id"]}.json'}
+                if moving:
+                    labels['episode_tick'] = step
+                    labels['ego_control'] = {'throttle': control.throttle, 'brake': control.brake, 'steer': control.steer,
+                                             'source': 'carla_basic_agent_rules_with_simulator_gt'}
                 for actor in label_actors:
                     state = snapshot.find(actor.id)
                     if state is None:
@@ -221,23 +283,32 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
                     if step == 0:
                         result['stage'] = 'object_labels'
                         write_json(folder / 'report.json', result)
-                    labels['objects_3d'].append({'actor_id': actor.id, 'blueprint': actor.type_id,
+                    labels['objects_3d'].append({'actor_id': actor.id, 'blueprint': actor.type_id, 'kind': actor_kinds[actor.id],
                          'semantic_tags': list(actor.semantic_tags), 'world_pose': pose(t),
                          'bbox_local_pose': pose(carla.Transform(bbox.location, bbox.rotation)),
                          'extent_m': xyz(bbox.extent), 'world_vertices_m': [xyz(v) for v in bbox.get_world_vertices(t)],
                          'velocity_mps': xyz(state.get_velocity()), 'visibility': 'not_filtered; may be occluded/outside view'})
-                if pending is not None:
-                    if step == 1:
-                        result['stage'] = 'multimodal_consume'
-                        write_json(folder / 'report.json', result)
-                    consume(pending, frame)
                 pending = (feature, labels)
-            consume(pending, world.tick(15))
+            if pending is not None:
+                consume(pending, world.tick(15))
         result['checks'] = {'complete_bundles': result['bundles'] == count,
                             'complete_images': result['images'] == count * 24,
                             'traffic_density': result['spawned_npcs'] == scene['requested_npcs'],
                             'semantic_signal': 1 in classes and len(classes) >= 3,
                             'valid_depth_range': 0 <= depth_min < depth_max <= 1000}
+        if moving:
+            first, last = motion_labels[0], motion_labels[-1]
+            displacement = math.dist(first['ego_world_pose']['position_m'], last['ego_world_pose']['position_m'])
+            origins = {o['actor_id']: o['world_pose']['position_m'] for o in first['objects_3d']}
+            deltas = {str(o['actor_id']): math.dist(origins[o['actor_id']], o['world_pose']['position_m']) for o in last['objects_3d']}
+            result['motion'] = {'ego_displacement_m': displacement, 'label_duration_s': last['timestamp_s'] - first['timestamp_s'],
+                                'participant_displacements_m': deltas, 'simulation_ticks': simulation_ticks,
+                                'capture_stride_ticks': stride, 'ego_collisions': len(collision_events)}
+            result['checks']['ego_collision_free'] = len(collision_events) <= criteria['max_ego_collisions']
+            if count == criteria['bundles_per_scene']:
+                result['checks'].update({'ego_motion': displacement >= criteria['min_ego_displacement_m'],
+                    'label_duration': result['motion']['label_duration_s'] >= criteria['min_label_duration_s'],
+                    'participant_motion': all(v >= criteria['min_participant_displacement_m'] for v in deltas.values())})
     except Exception as exc:
         result['errors'].append(f'{type(exc).__name__}: {exc}')
     finally:
@@ -246,7 +317,7 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
         # Unregister live vehicles before destroying them. Keep TM synchronous
         # through world restoration, as in the packaged traffic example.
         client.set_timeout(15 if not result['errors'] else 2)
-        for npc in label_actors:
+        for npc in autopilot_actors:
             try:
                 npc.set_autopilot(False, 8000)
             except Exception as exc:
@@ -276,8 +347,11 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
         client.set_timeout(15)
         result.setdefault('checks', {})['cleanup'] = cleanup
         result.update({'wall_s': time.monotonic() - started, 'semantic_ids': sorted(classes),
+                       'semantic_pixel_counts': dict(sorted(pixel_counts.items())),
+                       'semantic_positive_images': dict(sorted(positive_images.items())),
                        'depth_min_m': depth_min if math.isfinite(depth_min) else None,
                        'depth_max_m': depth_max if math.isfinite(depth_max) else None})
+        write_json(folder / 'collisions.json', collision_events)
         if all(result['checks'].values()) and not result['errors'] and result['bundles'] == count:
             result['status'] = 'passed'
         write_json(folder / 'report.json', result)
@@ -321,11 +395,14 @@ def main():
     write_json(args.output / 'encoding.json', {'depth': 'Packed RGB PNG, raw CARLA 24-bit channels. meters=(R+256*G+65536*B)*1000/16777215; not grayscale.',
                  'semantic': 'Raw ID in PNG red channel (0..28); not CityScapes visualization colors.',
                  'source': 'https://carla.readthedocs.io/en/0.9.16/ref_sensors/',
-                 'labels': 'Simulator GT only. 3D boxes include spawned NPC vehicles regardless of visibility; no pedestrian labels captured.'})
+                 'labels': 'Simulator GT only. Boxes include all spawned participants regardless of visibility. Participant kinds are recorded in scene plan; no per-object visibility filtering.'})
     report = {'task': f'dataset-{args.mode}', 'status': 'failed', 'scope': criteria['scope'], 'scenes': [], 'ai_model': None,
               'plan_sha256': sha(args.plan), 'criteria_sha256': sha(args.criteria), 'rig_sha256': sha(args.rig),
               'git_revision': subprocess.run(['git', 'rev-parse', 'HEAD'], capture_output=True, text=True, check=True).stdout.strip(),
               'server_launch': json.loads((ROOT / 'artifacts/reports/server-launch.json').read_text(encoding='utf-8-sig'))}
+    report['controller_source'] = 'carla_basic_agent_rules_with_simulator_gt' if 'ego_route_m' in plan['scenes'][0] else 'stationary_brake'
+    if report['controller_source'] != 'stationary_brake':
+        report['agent_sha256'] = sha(ROOT / 'artifacts/carla/PythonAPI/carla/agents/navigation/basic_agent.py')
     all_indexes = []
     scenes = [plan['scenes'][args.probe_scene]] if args.mode == 'probe' else plan['scenes']
     count = 5 if args.mode == 'probe' else criteria['bundles_per_scene']

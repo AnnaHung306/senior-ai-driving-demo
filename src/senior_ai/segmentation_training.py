@@ -158,18 +158,32 @@ def weighted_loss(logits, target, weights):
     return pixels.sum() / denominator
 
 
-def train_batch(model, rgb, target, optimizer, scaler, weights, clip):
-    optimizer.zero_grad(set_to_none=True)
-    with torch.autocast('cuda', dtype=torch.float16):
-        loss = weighted_loss(model(rgb), target, weights)
-    if not torch.isfinite(loss):
-        raise FloatingPointError('Nonfinite loss')
-    scaler.scale(loss).backward()
-    scaler.unscale_(optimizer)
-    norm = torch.nn.utils.clip_grad_norm_(model.parameters(), clip, error_if_nonfinite=True)
-    scaler.step(optimizer)
-    scaler.update()
-    return float(loss.detach()), float(norm)
+def train_batch(model, rgb, target, optimizer, scaler, weights, clip, overflow_events=None, max_retries=8):
+    # A finite fp32 loss can still overflow a loss-scaled fp16 backward pass.
+    # GradScaler records the overflow at unscale_, skips the optimizer update and
+    # backs off the scale. Retry the SAME augmented batch; never clip Inf to zero.
+    for attempt in range(max_retries + 1):
+        optimizer.zero_grad(set_to_none=True)
+        with torch.autocast('cuda', dtype=torch.float16):
+            loss = weighted_loss(model(rgb), target, weights)
+        if not torch.isfinite(loss):
+            raise FloatingPointError('Nonfinite loss')
+        scaler.scale(loss).backward()
+        scaler.unscale_(optimizer)
+        finite = torch.stack([torch.isfinite(p.grad).all() for p in model.parameters() if p.grad is not None]).all()
+        if finite:
+            norm = torch.nn.utils.clip_grad_norm_(model.parameters(), clip, error_if_nonfinite=True)
+            scaler.step(optimizer)
+            scaler.update()
+            return float(loss.detach()), float(norm)
+        old_scale = scaler.get_scale()
+        scaler.step(optimizer)  # Guaranteed skip: unscale_ recorded nonfinite grads.
+        scaler.update()
+        if overflow_events is not None:
+            overflow_events.append({'scale_before': old_scale, 'scale_after': scaler.get_scale(), 'attempt': attempt})
+        if scaler.get_scale() >= old_scale or attempt == max_retries:
+            raise FloatingPointError('AMP gradients remain nonfinite after bounded scale backoff; no weight update')
+    raise AssertionError('Unreachable')
 
 
 @torch.inference_mode()
@@ -259,20 +273,22 @@ def cuda_smoke_and_overfit(train, config, weights):
     seed_all(config['seed'])
     model = TinyUNet(config['width']).cuda().train()
     optimizer = torch.optim.AdamW(model.parameters(), lr=config['learning_rate'])
-    scaler = torch.amp.GradScaler('cuda')
+    scaler = torch.amp.GradScaler('cuda', init_scale=config.get('grad_scaler_initial_scale', 65536))
     # Fixed train-only first two views, independent from formal model initialization.
     rgb = torch.stack(train.rgb[:2])
     target = torch.stack(train.target[:2])
     rgb, target = tensors(rgb, target)
-    losses = []
+    losses, overflows = [], []
     for _ in range(config['overfit_steps']):
-        loss, _ = train_batch(model, rgb, target, optimizer, scaler, weights, config['gradient_clip_norm'])
+        loss, _ = train_batch(model, rgb, target, optimizer, scaler, weights, config['gradient_clip_norm'],
+                              overflows, config.get('amp_max_retries', 8))
         losses.append(loss)
     ratio = float(np.mean(losses[-5:]) / np.mean(losses[:5]))
     if ratio >= config['overfit_required_loss_ratio']:
         raise RuntimeError(f'Train-only overfit sanity failed: loss ratio {ratio}')
     return {'status': 'passed', 'steps': len(losses), 'first_5_mean_loss': float(np.mean(losses[:5])),
             'last_5_mean_loss': float(np.mean(losses[-5:])), 'loss_ratio': ratio,
+            'amp_overflow_backoffs': overflows,
             'parameter_count': sum(p.numel() for p in model.parameters())}
 
 
@@ -388,7 +404,7 @@ def run_experiment(repository, config_path, run, resume=False):
     model = TinyUNet(config['width']).cuda()
     optimizer = torch.optim.AdamW(model.parameters(), lr=config['learning_rate'], weight_decay=config['weight_decay'])
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=config['epochs'])
-    scaler = torch.amp.GradScaler('cuda')
+    scaler = torch.amp.GradScaler('cuda', init_scale=config.get('grad_scaler_initial_scale', 65536))
     best_score, first_epoch = -1., 1
     history = []
     if resume:
@@ -404,11 +420,12 @@ def run_experiment(repository, config_path, run, resume=False):
     for epoch in range(first_epoch, config['epochs'] + 1):
         epoch_start = time.perf_counter()
         model.train()
-        losses, norms = [], []
+        losses, norms, overflows = [], [], []
         learning_rate = optimizer.param_groups[0]['lr']
         for rgb, target, _ in loader(train, config, shuffle=True):
             rgb, target = tensors(rgb, target, augment=True)
-            loss, norm = train_batch(model, rgb, target, optimizer, scaler, weights, config['gradient_clip_norm'])
+            loss, norm = train_batch(model, rgb, target, optimizer, scaler, weights, config['gradient_clip_norm'],
+                                    overflows, config.get('amp_max_retries', 8))
             losses.append(loss)
             norms.append(norm)
         val = evaluate(model, validation, config, weights, plan)
@@ -418,6 +435,7 @@ def run_experiment(repository, config_path, run, resume=False):
         scheduler.step()
         entry = {'epoch': epoch, 'learning_rate': learning_rate, 'train_mean_batch_weighted_loss': float(np.mean(losses)),
                  'max_preclip_gradient_norm': max(norms), 'validation': val, 'selected': improved,
+                 'amp_overflow_backoffs': overflows, 'grad_scaler_scale': scaler.get_scale(),
                  'elapsed_s': time.perf_counter() - epoch_start}
         history.append(entry)
         write_json(run / 'history.json', history)

@@ -1,0 +1,25 @@
+{
+  "version": "detection-label-contract-v1",
+  "status": "planned_not_collected_or_validated",
+  "requires_new_dataset_version": true,
+  "required_modalities_per_view": ["rgb", "raw_semantic", "packed_depth", "instance_segmentation"],
+  "rgb_only_inference": true,
+  "alignment": "same simulator frame and timestamp, same K and camera pose for all four sensors",
+  "class_scope": ["car", "motorcycle", "bicycle", "pedestrian", "truck", "bus", "traffic_light", "temporary_obstacle"],
+  "annotation_requirements": [
+    "Verify CARLA instance encoding and actor-ID relationship empirically on known spawned actors before export; reject ambiguous IDs",
+    "Use visible instance pixels for visible bounding boxes, preserve projected 3D extent separately as amodal geometry",
+    "Clip 3D boxes against camera near plane before projection; discard behind-camera geometry, clip coordinates to image bounds",
+    "Check semantic class and depth consistency against instance mask; manually inspect collisions or mismatches",
+    "Store instance ID, actor ID, class taxonomy version, visible pixel count, visible bbox, amodal projected bbox, truncation and visibility policy",
+    "Treat ambiguous, tiny, heavily occluded and incomplete objects explicitly as ignore under a pre-frozen policy; do not silently relabel as negatives",
+    "Label traffic-light state separately from traffic-light object presence with facing/direction and visibility; raw semantic mask does not encode signal state",
+    "Store intentional empty negative images; do not select only images containing target objects"
+  ],
+  "pilot_before_threshold_freeze": "32 synchronized sensors instead of 24: five-frame probe, own-payload queue safety, GPU/timeout/frame/PNG audit and known-actor visibility checks. Retain prior dataset unchanged.",
+  "parameters_to_freeze_after_pilot_before_full_collection": ["near_plane_m", "min_visible_pixels", "min_visible_bbox_side_px", "occlusion_ignore_policy", "truncation_policy", "taxonomic_ambiguity_policy"],
+  "manual_qa": "review every pilot instance, then a recorded stratified sample by class/weather/occlusion/truncation with corrections versioned before training",
+  "split": "whole episodes and connected spatial route groups; reserve new town/weather/actor seeds for lockbox; never split frames randomly",
+  "evaluation": ["class-wise AP50 and AP50:95", "PR curves", "small-object AP", "occlusion and truncation strata", "false positives on empty negatives", "per-scene/weather breakdown"],
+  "prohibited_shortcuts": ["semantic connected components used as instance truth", "all projected 3D boxes treated as visible", "test used for thresholds or hyperparameters", "simulator signal state passed into learned inference"]
+}

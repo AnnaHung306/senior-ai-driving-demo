@@ -18,6 +18,7 @@
 - 每 epoch 記錄 loss、LR、validation metrics、梯度／非有限檢查。last 與 best 原子 checkpoint 包含 optimizer、scheduler、scaler、所有 RNG、config / data / code 指紋及下一個 epoch。恢復時拒絕不一致來源；只保證同環境 epoch 邊界恢復，不保證跨硬體位元一致。
 - CUDA deterministic algorithms（發現不支援則明確失敗），禁用 TF32 / cuDNN benchmark。無 NaN／Inf、checkpoint 可重載且 forward 相同、RGB-only 推論成功、資料邊界與指標單元測試為工程門檻。OOM 或中斷保留 last 與失敗收據，不以降低設定覆蓋同一實驗。
 - 首次 GPU 測試發現 PyTorch 2.10.0 CUDA NLLLoss2d 的 mean / sum reduction 使用 atomicAdd，strict deterministic 模式拒絕；依[官方該版源碼](https://github.com/pytorch/pytorch/blob/v2.10.0/aten/src/ATen/native/cuda/NLLLoss2d.cu)改用 reduction=none，再以 tensor.sum / 有效像素權重和求 weighted mean，保持同一 loss 定義與 deterministic 門檻。另測 ignore 像素零梯度、weighted mean 等價與無標籤 batch 拒絕。
+- segmentation-v1-001 在 train-only overfit 檢查發現有限 loss 仍可有 loss-scaled float16 梯度溢位；原 run / config / source / failure 保留，未評估 test。v1.1 固定 initial loss scale=1024；遇溢位時由 GradScaler 跳過 optimizer update、減半 scale、重試同一增強後 batch（最多八次），記錄全部回退。loss 非有限立即失敗，梯度持續非有限也失敗；只允許有限梯度更新，不關閉 NaN / Inf 保護。測試人工注入一次 Inf，驗證只有成功的 retry 推進一次 Adam step。
 
 ## 評估與選模
 
@@ -39,9 +40,11 @@
 ```powershell
 python -m pip --python .venv/Scripts/python.exe install torch==2.10.0 --index-url https://download.pytorch.org/whl/cu128
 .venv/Scripts/python.exe -m unittest discover -s tests
-.venv/Scripts/python.exe scripts/train_segmentation.py --config configs/segmentation_v1.json --run artifacts/runs/segmentation-v1-001
+.venv/Scripts/python.exe scripts/train_segmentation.py --config configs/segmentation_v1_1.json --run artifacts/runs/segmentation-v1-002
 # 同環境中斷後僅續接完整 epoch：
-.venv/Scripts/python.exe scripts/train_segmentation.py --config configs/segmentation_v1.json --run artifacts/runs/segmentation-v1-001 --resume
+.venv/Scripts/python.exe scripts/train_segmentation.py --config configs/segmentation_v1_1.json --run artifacts/runs/segmentation-v1-002 --resume
 # inference 不需要 labels：
-.venv/Scripts/python.exe scripts/predict_segmentation.py --checkpoint artifacts/runs/segmentation-v1-001/best.pt --root data/town01-motion-v2-001 --manifest inputs/frames/scene-04/FRAME.json --camera front --output artifacts/runs/prediction-001
+.venv/Scripts/python.exe scripts/predict_segmentation.py --checkpoint artifacts/runs/segmentation-v1-002/best.pt --root data/town01-motion-v2-001 --manifest inputs/frames/scene-04/FRAME.json --camera front --output artifacts/runs/prediction-001
 ```
+
+資料補強與偵測標註契約（尚未收集／驗證）：configs/detection_label_contract_v1.json。訓練後用 scripts/summarize_training.py 建 model card / registry；scripts/build_error_catalog.py 依逐 frame counts 建 FP / FN triage 清單。

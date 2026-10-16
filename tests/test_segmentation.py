@@ -158,3 +158,26 @@ class SegmentationTests(unittest.TestCase):
             confidence = np.load(root / 'prediction/uncalibrated_softmax_confidence.npy', allow_pickle=False)
             self.assertEqual(confidence.shape, (32, 64))
             self.assertTrue(np.isfinite(confidence).all())
+
+    @unittest.skipUnless(torch.cuda.is_available(), 'AMP overflow recovery requires GPU')
+    def test_amp_overflow_skips_update_and_retries_same_batch(self):
+        from senior_ai.segmentation_training import configure_cuda, train_batch
+        configure_cuda()
+        model = TinyUNet(4).cuda()
+        optimizer = torch.optim.AdamW(model.parameters(), lr=.001)
+        scaler = torch.amp.GradScaler('cuda', init_scale=1024)
+        calls = []
+        def inject_once(gradient):
+            calls.append(1)
+            return torch.full_like(gradient, float('inf')) if len(calls) == 1 else gradient
+        hook = model.head.weight.register_hook(inject_once)
+        events = []
+        train_batch(model, torch.rand(2, 3, 32, 64, device='cuda'),
+                    torch.zeros(2, 32, 64, dtype=torch.long, device='cuda'), optimizer,
+                    scaler, torch.ones(8, device='cuda'), 5, events)
+        hook.remove()
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]['scale_after'], 512)
+        # Only the successful retry advances Adam's step counter.
+        self.assertEqual(optimizer.state[model.head.weight]['step'].item(), 1)
+        self.assertTrue(all(torch.isfinite(p).all() for p in model.parameters()))

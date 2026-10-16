@@ -153,6 +153,7 @@ def validate(root, criteria_reference, rig_reference):
     if not 0 <= depth_min < depth_max <= 1000:
         raise ValueError('Invalid depth ranges')
     motion = {}
+    min_cross_split_ego_separation = None
     if 'capture_stride_ticks' in criteria:
         if criteria['simulation_ticks_per_scene'] != criteria['bundles_per_scene'] * criteria['capture_stride_ticks']:
             raise ValueError('Capture cadence and episode duration config differ')
@@ -165,6 +166,11 @@ def validate(root, criteria_reference, rig_reference):
             collisions = json.loads((root / f'scenes/{scene_id}/collisions.json').read_text())
             if len(collisions) > criteria['max_ego_collisions']:
                 raise ValueError('Ego collision in motion episode')
+        positions_by_split = {split: np.array([label['ego_world_pose']['position_m'][:2]
+                                for scene_id, records in episodes.items() if scenes[scene_id]['split'] == split
+                                for label in records]) for split in groups}
+        min_cross_split_ego_separation = min(float(np.linalg.norm(positions_by_split[a][:, None] - positions_by_split[b], axis=2).min())
+                    for a, b in [('train', 'validation'), ('train', 'test'), ('validation', 'test')])
     inventory = root / 'image_inventory.jsonl'
     inventory.write_text(''.join(json.dumps(item) + '\n' for item in files))
     return {'task': 'dataset-on-disk-audit', 'status': 'passed', 'bundles_by_scene': dict(counts),
@@ -180,6 +186,7 @@ def validate(root, criteria_reference, rig_reference):
             'semantic_pixels_by_split': {s: dict(sorted(v.items())) for s, v in split_pixels.items()},
             'semantic_positive_images_by_split': {s: dict(sorted(v.items())) for s, v in split_positive_images.items()},
             'motion_episodes': motion,
+            'min_cross_split_observed_ego_separation_m': min_cross_split_ego_separation,
             'scope': criteria['scope'], 'ai_model': None,
             'limitations': (['Only six ten-second episodes, one shared town, fixed participant choreography',
                              'Scripted walker/Traffic Manager/BasicAgent behavior is not a learned AI policy'] if motion else

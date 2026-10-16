@@ -137,12 +137,6 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
         result['spawned_kinds'] = dict(Counter(actor_kinds.values()))
         agent = None
         if moving:
-            sys.path.insert(0, str(ROOT / 'artifacts/carla/PythonAPI/carla'))
-            from agents.navigation.basic_agent import BasicAgent
-            agent = BasicAgent(vehicle, target_speed=criteria['target_speed_kph'],
-                               opt_dict={'dt': criteria['fixed_delta_s'], 'base_min_distance': 1.0,
-                                         'distance_ratio': 0.2, 'max_brake': 1.0, 'sampling_resolution': 2.0})
-            agent.set_destination(carla.Location(*scene['goal_m']), start_location=vehicle.get_location())
             collision = world.spawn_actor(library.find('sensor.other.collision'), carla.Transform(), attach_to=vehicle)
             actors.append(collision)
             sensors.append(collision)
@@ -172,6 +166,20 @@ def collect_scene(world, client, scene, rig, criteria, root, count):
         for _ in range(criteria.get('sensor_warmup_ticks', 5)):
             vehicle.apply_control(carla.VehicleControl(brake=1))
             world.tick(15)
+        if moving:
+            # Actor.get_location() is (0,0,0) before the first received snapshot.
+            # Initialize navigation only after warmup, as in the verified baseline.
+            initial = world.get_snapshot().find(vehicle.id)
+            if initial is None:
+                raise ValueError('Navigation requires an observed ego snapshot')
+            initial_pose = initial.get_transform()
+            result['navigation_start_pose'] = pose(initial_pose)
+            sys.path.insert(0, str(ROOT / 'artifacts/carla/PythonAPI/carla'))
+            from agents.navigation.basic_agent import BasicAgent
+            agent = BasicAgent(vehicle, target_speed=criteria['target_speed_kph'],
+                               opt_dict={'dt': criteria['fixed_delta_s'], 'base_min_distance': 1.0,
+                                         'distance_ratio': 0.2, 'max_brake': 1.0, 'sampling_resolution': 2.0})
+            agent.set_destination(carla.Location(*scene['goal_m']), start_location=initial_pose.location)
         # Static road labels are kept exclusively under labels/.
         local_roads = []
         origin = transform(scene['start']).location

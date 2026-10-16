@@ -1,0 +1,15 @@
+{
+  "version": "dataset-pilot-v1",
+  "map": "Town01",
+  "scene_count": 6,
+  "bundles_per_scene": 30,
+  "camera_positions": 8,
+  "modalities": ["rgb", "semantic_segmentation", "depth"],
+  "fixed_delta_s": 0.05,
+  "readback_lag_ticks": 1,
+  "max_timestamp_error_s": 0.0001,
+  "min_scene_origin_separation_m": 70,
+  "max_scene_wall_s": 180,
+  "seed": 42,
+  "scope": "Small stationary-ego pipeline pilot, not sufficient training diversity or full Phase 2 acceptance. Six spatially separated scene groups; RGB inputs isolated from simulator GT semantic/depth/3D/road labels. No model, inference, perception quality, long driving episode or real-world claim."
+}

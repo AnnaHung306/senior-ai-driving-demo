@@ -1,5 +1,5 @@
 param([string]$CarlaRoot = '', [int]$Port = 2000,
-      [ValidateSet('dx11','dx12')][string]$GraphicsApi = 'dx11')
+      [ValidateSet('dx11','dx12')][string]$GraphicsApi = 'dx12')
 $ErrorActionPreference = 'Stop'
 if (-not $CarlaRoot) {
     $report = Join-Path (Split-Path -Parent $PSScriptRoot) 'artifacts\reports\installation.json'

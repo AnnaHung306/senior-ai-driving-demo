@@ -186,7 +186,7 @@ def main():
         report['checks'] = {'eight_cameras': len(cameras) == criteria['expected_cameras'],
                             'complete_bundles': len(bundles) == criteria['expected_bundles'],
                             'saved_images': saved == criteria['expected_saved_images'],
-                            'timestamp_alignment': max_error <= criteria['max_timestamp_error_s'],
+                            'timestamp_alignment': bool(bundles) and max_error <= criteria['max_timestamp_error_s'],
                             'cleanup': cleanup_ok}
         report['metrics'] = {'bundles': len(bundles), 'saved_images': saved,
                              'max_timestamp_error_s': max_error, 'capture_wall_s': capture_wall,

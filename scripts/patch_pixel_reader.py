@@ -17,6 +17,7 @@ BINARY = ROOT / 'artifacts/carla/CarlaUE4/Binaries/Win64/CarlaUE4-Win64-Shipping
 BACKUP = BINARY.with_suffix('.exe.stock')
 MANIFEST = ROOT / 'artifacts/reports/pixel-reader-patch.json'
 INSTRUCTION_RVA = 0x8945B8
+EXPECTED_STOCK_SHA256 = 'ba05ec36f7f0b548b266865ea2787a1dc5a028e298ebefcf0c49196ac629c4d3'
 ORIGINAL = bytes.fromhex('48 8d 54 24 70 b9 00 02 00 00 e8 2e c1 7c 00')
 VARIANTS = {'normal': (767, bytes.fromhex('48 8d 54 24 70 b9 ff 02 00 00 e8 2e c1 7c 00')),
             'background': (2815, bytes.fromhex('48 8d 54 24 70 b9 ff 0a 00 00 e8 2e c1 7c 00'))}
@@ -59,6 +60,8 @@ def main():
     with zipfile.ZipFile(ROOT / 'artifacts/downloads/CARLA_0.9.16.zip') as archive:
         member = 'CarlaUE4/Binaries/Win64/CarlaUE4-Win64-Shipping.exe'
         archived = archive.read(member)
+    if sha(archived) != EXPECTED_STOCK_SHA256:
+        raise ValueError('Patch refused: archive executable is not the verified 0.9.16 build')
     offset = file_offset(archived, INSTRUCTION_RVA - 5)
     if archived[offset:offset + len(ORIGINAL)] != ORIGINAL:
         raise ValueError('Patch refused: disassembled instruction context does not match')

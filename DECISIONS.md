@@ -32,6 +32,9 @@ BEVFormer 與 BEVDet 有官方開源實作。BEVFormer tiny config 標示至少�
 - [CARLA sensors](https://carla.readthedocs.io/en/0.9.16/ref_sensors/)：RGB frame、timestamp、BGRA 與相機參數。
 - [BEVFormer official](https://github.com/fundamentalvision/BEVFormer)、[tiny config](https://github.com/fundamentalvision/BEVFormer/blob/master/projects/configs/bevformer/bevformer_tiny.py)：相機 BEV / 時序模型候選。
 - [BEVDet official](https://github.com/HuangJunJie2017/BEVDet)：多鏡頭 3D / BEV 候選。
+- [BEVFormer 安裝](https://github.com/fundamentalvision/BEVFormer/blob/master/docs/install.md)：範例依賴 Python 3.8、torch 1.9.1 / CUDA 11.1、mmcv-full 1.4.0、mmdet3d 0.17.1，與本案 CARLA Python 3.12 不同；不能直接混裝，後續需要獨立環境與適配實驗。
+- [BEVDet dev3.0 runtime](https://github.com/HuangJunJie2017/BEVDet/blob/dev3.0/requirements/runtime.txt)：包含舊版 numba / networkx 等約束，列為相容性風險，尚未試裝。
+- [TorchVision 微調官方教學](https://docs.pytorch.org/tutorials/intermediate/torchvision_tutorial.html)：自訂 dataset / boxes / labels / image_id 與 COCO 評估流程，可作 Phase 3 的小規模可驗證起點；尚未安裝或訓練。
 - [指定影片](https://www.youtube.com/watch?v=--cGYatMESY)：已嘗試存取但工具無法讀取內容；未據此捏造影片分析，僅採用需求書列出的公開概念。
 
 官方 Windows archive 約 7.3GiB，需另留解壓空間；下載 checksum 僅記錄本地 SHA256，不宣稱已比對發布者 checksum。

@@ -1,0 +1,199 @@
+{
+  "scope": "Saved GT-crop validation only. Exploratory thresholds are not adopted; model outputs/gates unchanged. Abstention is separate from the supervised unknown/unobservable class.",
+  "limitations": "Correlated synthetic frames and few original groups; top-label calibration diagnostics are not general safety probabilities or independent-trial confidence intervals.",
+  "checkpoint_sha256": "e4fdbc431dcf0db5d772ba0724ee74a00f4ea0fb525025c42db12493859ee60b",
+  "validation_frames_sha256": "04e6e94817fd9afd620ab0c89ec1d3aeed2abde2822f673543a4f07b0f1e9720",
+  "tool_sha256": "14af88b2f0ad48b776fb28be8c9aa41ecf83b6436a74141ea83fe2c296bbe134",
+  "crops": 2368,
+  "accuracy": 0.9362331081081081,
+  "top_label_ECE_10_bins": 0.007816072654079737,
+  "confidence_bins": [
+    {
+      "lower": 0.4,
+      "upper": 0.5,
+      "count": 15,
+      "accuracy": 0.3333333333333333,
+      "mean_softmax_max": 0.4624195178349813,
+      "absolute_gap": 0.129086184501648
+    },
+    {
+      "lower": 0.5,
+      "upper": 0.6,
+      "count": 70,
+      "accuracy": 0.4714285714285714,
+      "mean_softmax_max": 0.5494664081505367,
+      "absolute_gap": 0.07803783672196529
+    },
+    {
+      "lower": 0.6,
+      "upper": 0.7,
+      "count": 65,
+      "accuracy": 0.5846153846153846,
+      "mean_softmax_max": 0.649092240516956,
+      "absolute_gap": 0.06447685590157137
+    },
+    {
+      "lower": 0.7,
+      "upper": 0.8,
+      "count": 76,
+      "accuracy": 0.7894736842105263,
+      "mean_softmax_max": 0.7493830009510642,
+      "absolute_gap": 0.04009068325946208
+    },
+    {
+      "lower": 0.8,
+      "upper": 0.9,
+      "count": 144,
+      "accuracy": 0.8472222222222222,
+      "mean_softmax_max": 0.8572152621216245,
+      "absolute_gap": 0.009993039899402256
+    },
+    {
+      "lower": 0.9,
+      "upper": 1.0,
+      "count": 1998,
+      "accuracy": 0.9804804804804805,
+      "mean_softmax_max": 0.9816980147146964,
+      "absolute_gap": 0.001217534234215889
+    }
+  ],
+  "exploratory_abstention": [
+    {
+      "threshold": 0.0,
+      "retained_predictions": 2368,
+      "coverage": 1.0,
+      "accuracy_on_retained": 0.9362331081081081,
+      "macro_correct_state_recall_including_abstentions": 0.9438117039805592,
+      "accepted_GT_red": 753,
+      "red_as_green_count": 10,
+      "red_as_green_rate_accepted_GT_red": 0.013280212483399735,
+      "red_as_green_rate_all_GT_red": 0.013280212483399735,
+      "unknown_GT_predicted_known_count": 43
+    },
+    {
+      "threshold": 0.5,
+      "retained_predictions": 2353,
+      "coverage": 0.9936655405405406,
+      "accuracy_on_retained": 0.9400764980875478,
+      "macro_correct_state_recall_including_abstentions": 0.9408707795064128,
+      "accepted_GT_red": 740,
+      "red_as_green_count": 7,
+      "red_as_green_rate_accepted_GT_red": 0.00945945945945946,
+      "red_as_green_rate_all_GT_red": 0.009296148738379814,
+      "unknown_GT_predicted_known_count": 42
+    },
+    {
+      "threshold": 0.9,
+      "retained_predictions": 1998,
+      "coverage": 0.84375,
+      "accuracy_on_retained": 0.9804804804804805,
+      "macro_correct_state_recall_including_abstentions": 0.747454269695187,
+      "accepted_GT_red": 529,
+      "red_as_green_count": 0,
+      "red_as_green_rate_accepted_GT_red": 0.0,
+      "red_as_green_rate_all_GT_red": 0.0,
+      "unknown_GT_predicted_known_count": 18
+    },
+    {
+      "threshold": 0.95,
+      "retained_predictions": 1805,
+      "coverage": 0.7622466216216216,
+      "accuracy_on_retained": 0.9850415512465374,
+      "macro_correct_state_recall_including_abstentions": 0.659581117653737,
+      "accepted_GT_red": 444,
+      "red_as_green_count": 0,
+      "red_as_green_rate_accepted_GT_red": 0.0,
+      "red_as_green_rate_all_GT_red": 0.0,
+      "unknown_GT_predicted_known_count": 13
+    },
+    {
+      "threshold": 0.99,
+      "retained_predictions": 1033,
+      "coverage": 0.4362331081081081,
+      "accuracy_on_retained": 0.9990319457889641,
+      "macro_correct_state_recall_including_abstentions": 0.4618180055986203,
+      "accepted_GT_red": 251,
+      "red_as_green_count": 0,
+      "red_as_green_rate_accepted_GT_red": 0.0,
+      "red_as_green_rate_all_GT_red": 0.0,
+      "unknown_GT_predicted_known_count": 0
+    },
+    {
+      "threshold": 0.999,
+      "retained_predictions": 0,
+      "coverage": 0.0,
+      "accuracy_on_retained": null,
+      "macro_correct_state_recall_including_abstentions": 0.0,
+      "accepted_GT_red": 0,
+      "red_as_green_count": 0,
+      "red_as_green_rate_accepted_GT_red": null,
+      "red_as_green_rate_all_GT_red": 0.0,
+      "unknown_GT_predicted_known_count": 0
+    }
+  ],
+  "error_confidence": [
+    {
+      "target": "unknown_or_unobservable",
+      "prediction": "red",
+      "count": 28,
+      "min_confidence": 0.5063292980194092,
+      "mean_confidence": 0.8671221073184695,
+      "max_confidence": 0.9876152276992798,
+      "count_at_least_0_99": 0
+    },
+    {
+      "target": "unknown_or_unobservable",
+      "prediction": "yellow",
+      "count": 3,
+      "min_confidence": 0.49766024947166443,
+      "mean_confidence": 0.6274154484272003,
+      "max_confidence": 0.7739992141723633,
+      "count_at_least_0_99": 0
+    },
+    {
+      "target": "unknown_or_unobservable",
+      "prediction": "green",
+      "count": 12,
+      "min_confidence": 0.505973756313324,
+      "mean_confidence": 0.7102316419283549,
+      "max_confidence": 0.9567016959190369,
+      "count_at_least_0_99": 0
+    },
+    {
+      "target": "red",
+      "prediction": "unknown_or_unobservable",
+      "count": 87,
+      "min_confidence": 0.4392106831073761,
+      "mean_confidence": 0.7093565570211958,
+      "max_confidence": 0.9908355474472046,
+      "count_at_least_0_99": 1
+    },
+    {
+      "target": "red",
+      "prediction": "yellow",
+      "count": 1,
+      "min_confidence": 0.5040264129638672,
+      "mean_confidence": 0.5040264129638672,
+      "max_confidence": 0.5040264129638672,
+      "count_at_least_0_99": 0
+    },
+    {
+      "target": "red",
+      "prediction": "green",
+      "count": 10,
+      "min_confidence": 0.40755388140678406,
+      "mean_confidence": 0.5800747781991958,
+      "max_confidence": 0.7563106417655945,
+      "count_at_least_0_99": 0
+    },
+    {
+      "target": "green",
+      "prediction": "unknown_or_unobservable",
+      "count": 10,
+      "min_confidence": 0.5200491547584534,
+      "mean_confidence": 0.7087750732898712,
+      "max_confidence": 0.9689815640449524,
+      "count_at_least_0_99": 0
+    }
+  ]
+}

@@ -75,3 +75,5 @@ CPU錯例exec74874已exit0，產生8例/3pages；Town04-02沒有≥512px的fence
 - 新perception_inputs.py只讀嚴格RGB-only manifest，產生manifest與8張RGB各自SHA，另外綁helper source。predict_perception、benchmark_sunny與benchmark_perception都在推論/計時前記錄；hash計算不列timing。export除了模型tuple/frame也核對真實RGB bytes，避免相同frame編號下混入不同圖。實際預選RGB-only fixture8圖核對通過；2input tests與6export regression通過，含同frame改RGB/GT欄位拒絕/錯收據不先建output。未執行真實三模型demo或benchmark。
 - CPU-only完整suite010：**Ran83, OK skipped3，即80通過/3CUDA跳過**，9.316秒。CUDA_VISIBLE_DEVICES=-1僅test子程序設定，沒有改既有GPU訓練；不把skipped說成GPU測試通過。log保存在evidence/phase3/sunny-v3/perception-input-binding/cpu-suite-010.log。
 - 16:05 detector仍epoch0/2100updates，meanloss .37545，queue56349活著，還沒有首輪last/state。CURRENT_TASK已重新整理為最新現況，舊節點全部保留本checkpoint。
+
+16:09小段：新增analyze_sunny_phase_confidence.py，純JSON/CPU，不開模型或heldout；先核對best與validation兩SHA、2368逐張混淆，再計10bins top-label ECE .007816與離線棄權探索。紅→綠10例confidence最大.7563；門檻.9時此val紅→綠為0，但保留率84.38%、含棄權macro recall74.75%（不能忽略被棄權GT），.999則全棄權/undefined accuracy，報表以—處理。沒有採用門檻、修改模型/gate或將棄權當成原unknown語意類。此分析只描述少數相關路線，不是安全機率/獨立泛化CI。JSON與REPORT落evidence/phase3/sunny-v3/light-state-v1-002-confidence。偵測首輪訓練更新已2400，meanloss .36573，尚未完成首輪validation/state。

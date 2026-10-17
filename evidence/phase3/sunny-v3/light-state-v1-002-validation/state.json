@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "best_sha256": "e4fdbc431dcf0db5d772ba0724ee74a00f4ea0fb525025c42db12493859ee60b",
+  "updates": 832,
+  "wall_s": 6.1710000000020955,
+  "validation_quality": {
+    "passed": true,
+    "checks": {
+      "all_classes": true,
+      "macro_recall": true,
+      "unknown_or_unobservable": true,
+      "red": true,
+      "yellow": true,
+      "green": true,
+      "red_as_green": true
+    }
+  },
+  "lockbox_opened": false,
+  "checkpoint_reload_identical": true,
+  "validation_sha256": "3cda92e2ab47df3bb16e82036745d9124d59bed480cf28525b3484531b1b619a",
+  "validation_frames_sha256": "04e6e94817fd9afd620ab0c89ec1d3aeed2abde2822f673543a4f07b0f1e9720"
+}

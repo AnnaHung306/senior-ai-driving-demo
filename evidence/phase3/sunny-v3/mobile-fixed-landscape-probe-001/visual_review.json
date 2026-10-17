@@ -1,0 +1,18 @@
+{
+  "status": "inspected_with_failures",
+  "reviewed_at_utc": "2026-10-17T07:42:59.897112+00:00",
+  "reviewer": "assistant actual view_image inspection",
+  "report_sha256": "1ea2b507529741fbc0fc553be38039567c5ef8aee4133935ee6abe3b65ad3fc5",
+  "reviewed_images": [
+    {
+      "path": "page.png",
+      "sha256": "b97a597a8886a57712300434d2146181b3c4c0480e5dcbd95cfba148652a8ae1"
+    }
+  ],
+  "observations": [
+    "Fixed train wall example is a large tunnel wall and is segmented nearly perfectly. Fixed train fence example is a broad opaque concrete barrier tagged Fence, also fitted well.",
+    "Fixed validation wall along the divided road improves substantially versus historical Tiny; current CPU IoU .5151, so wall failure is not universal.",
+    "Fixed validation wooden fence next to a house is almost entirely missed; CPU IoU .00758, while selected train concrete fence IoU .9067. Material/geometry coverage mismatch is a supported hypothesis, not proven causal attribution."
+  ],
+  "limits": "Only four deliberately selected historical samples; no full train accuracy estimate. Historical Tiny epoch1 and current Mobile best epoch6 differ in architecture and training budget. Acceptance remains original full validation GPU metrics."
+}

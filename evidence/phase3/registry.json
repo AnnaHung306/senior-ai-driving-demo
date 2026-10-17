@@ -27,5 +27,44 @@
       "softmax confidence uncalibrated",
       "not a driving-quality acceptance"
     ]
+  },
+  {
+    "run": "sunny-segmentation-v4-001",
+    "task": "sunny-17-class-segmentation",
+    "status": "completed",
+    "quality_acceptance": "validation_failed",
+    "model_card": "evidence/phase3/sunny-v3/segmentation-v4-001/MODEL_CARD.md",
+    "checkpoint_sha256": "a7031897c0ce35cc97f4ab035277c51e0a35558dccc225b69455a16cc6f9eb67",
+    "best_epoch_zero_based": 6,
+    "validation_focus_macro_iou": 0.508456084924232,
+    "validation_visible_margin_f1": 0.40733338637564714,
+    "failed_gates": [
+      "wall_IoU",
+      "fence_IoU",
+      "visible_margin_F1"
+    ],
+    "heldout_opened": false,
+    "provenance": {
+      "data_audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+      "source_sha256": "c15c5cfb8f6f71b0587c3a3eaaf82ba8a97069e3b4bb99e16c2e9a20b431d7c1",
+      "config_sha256": "25c02eefe5f5328f97773a024efe400ea4b786cfcc516a4c00d8b5a4fae853de"
+    }
+  },
+  {
+    "run": "sunny-light-state-v1-002",
+    "task": "observable-RGB-light-state",
+    "status": "completed",
+    "quality_acceptance": "GT_crop_validation_passed_joint_pending",
+    "model_card": "evidence/phase3/sunny-v3/light-state-v1-002-validation/MODEL_CARD.md",
+    "checkpoint_sha256": "e4fdbc431dcf0db5d772ba0724ee74a00f4ea0fb525025c42db12493859ee60b",
+    "best_epoch_zero_based": 8,
+    "validation_macro_recall": 0.9438117039805592,
+    "validation_red_as_green_rate": 0.013280212483399735,
+    "heldout_opened": false,
+    "limits": [
+      "actual detector-box joint validation pending",
+      "yellow validation31crops/2groups",
+      "main heldout yellow coverage insufficient; frozen controlled supplement pending"
+    ]
   }
 ]

@@ -1,0 +1,19 @@
+{
+  "status": "completed",
+  "task": "segmentation",
+  "best_epoch": 6,
+  "best_score": 0.508456084924232,
+  "updates": 9600,
+  "last_sha256": "af3f0eee89a5dd3b7738331e51f8ab7eceedc236b7bc5471b5a2108e10da087f",
+  "best_sha256": "a7031897c0ce35cc97f4ab035277c51e0a35558dccc225b69455a16cc6f9eb67",
+  "checkpoint_reload_identical": true,
+  "training_wall_s": 42396.5,
+  "max_cuda_allocated_mib": 4046.5146484375,
+  "parameter_count": 3589953,
+  "max_cuda_reserved_mib": 4662.0,
+  "rpn_ignore_calls": null,
+  "roi_ignore_calls": null,
+  "lockbox_opened": false,
+  "validation_sha256": "f68d0df2b0f8724c2864925999b88130ef2125a63c7ea9963cee9eb575357a36",
+  "validation_frames_sha256": "3abe9776737742e68e59dbb986dd6cf10ed9079b164c62318d6458ab5400e4af"
+}

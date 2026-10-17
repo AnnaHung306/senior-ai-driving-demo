@@ -43,3 +43,10 @@
 CPU錯例exec74874已exit0，產生8例/3pages；Town04-02沒有≥512px的fence候選，因此只有2例，不硬湊。已透過view_image實際看完3pages，`evidence/phase3/sunny-v3/segmentation-v4-validation-review-001/` 保存catalog、頁面、visual_review與prior-shift。標記是 **inspected_with_failures**，不是模型驗收通過。可見木/白色柵欄被漏掉，草地常判sidewalk並引出錯誤margin；wall支持有小/遠結構，需局部overlay再判材質。訓練/驗證有效pixel比例：wall8.719%/.247%、fence1.280%/.985%、sidewalk13.648%/3.854%、terrain4.362%/16.437%。這是train/validation分布差異證據，不是證明因果，也不准用validation城鎮回灌train。
 
 15:40補正：先前Get-ChildItem空輸出不能證明run目錄未建立。新v1-002經Get-Item確認目錄15:35:59已建立，只是尚未寫coverage。PID33276讀取累計約320MB/81665次，仍有CPU/I/O活動；依程式順序應為完整verify或crop前置，沒有觀測堆疊，不能更精確斷言。CPU panel工具在原輸出目錄重跑exit0，已保存的8panels通過SHA後跳過，證實可續跑。
+
+## 後續小段：固定樣本比對與號誌正式完成
+
+- `probe_sunny_landscape.py`重用舊Tiny診斷的4個既定train/validation案例；CPU FP32重跑v4 best並逐例落盤。train wall .986128、train fence .906728、val wall .515145、val fence .007582；是刻意挑選樣本，不能當full train成績。已實際檢視contact sheet並保存 `evidence/phase3/sunny-v3/mobile-fixed-landscape-probe-001/`。train牆面是大片隧道，train fence是語意標為Fence的寬混凝土障壁；val木柵欄仍幾乎漏光，支持材質/幾何覆蓋差異假說。
+- **light-state-v1-002 completed**，16輪/832updates，best epoch8（第9輪），訓練wall_s 6.171秒不含全資料verify/crop前置。SHA e4fdbc431dcf0db5d772ba0724ee74a00f4ea0fb525025c42db12493859ee60b。macro recall .94381170398，red→green 10/753=.01328021248，GT crop所有門檻通過，exact reload true。CPU逐張重算2368crops混淆與quality一致，source/plan/SHA核對，新舊best和last全部model tensors完全一致，沒有變更訓練數學。原v1-001 failure保留。
+- 號誌11類型錯例/3pages已實際看圖，保存 `evidence/phase3/sunny-v3/light-state-v1-002-validation/`；標記inspected_with_failures，不把GT crop gate當detector joint合格。小crop細節不足，存在紅→綠案例；yellow val只有31crop/2groups，不能過度宣稱。
+- queue **56349**已接續偵測v3-001；15:43:44已建立run/config/provenance/source，git_revision d3c2ef7，尚未epoch成績。模型程式尚未修改，不啟CARLA、不重開訓練。後續所有phase命令使用 **v1-002**，v1-001是失敗歷史。

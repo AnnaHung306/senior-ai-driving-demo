@@ -1,0 +1,167 @@
+{
+  "identity": {
+    "checkpoint_sha256": "a7031897c0ce35cc97f4ab035277c51e0a35558dccc225b69455a16cc6f9eb67",
+    "selection_sha256": "8eed44decdab50a5d8ed808fc99236f3f527a1dc5400c3e164cbe1592dbe31a7",
+    "tool_sha256": "41dfc47a2a3b60c1eca38e305cc41405f71d4b48ae0611b109c01f9dc0e2e5e1",
+    "selected_raw_sha256": {
+      "inputs/rgb/town01-00/front/00167149.png": "8974244730ba2219f2aa6382c4c20ed42f9fb1e4295a01105e216ef961dfae7b",
+      "labels/semantic_segmentation/town01-00/front/00167149.png": "af0cdc60b261cd1adb5ae0a3740e4536870548e2d561b4257ae0e861fa92b0c2",
+      "labels/instance_segmentation/town01-00/front/00167149.png": "90ddd37f51c7ade8d6831340ff31eaf1f277c2f96ca537f4955fe4146521ae03",
+      "inputs/rgb/town03-02/front/00244882.png": "248f501f6de57fcd10edc4a87d071eca203a91ce26e3ce0b455a1e5abafeb31b",
+      "labels/semantic_segmentation/town03-02/front/00244882.png": "e765cd674ad8d5b2c08cf76a5cafb5ac49f56f7640c40c323fb5952b49382224",
+      "labels/instance_segmentation/town03-02/front/00244882.png": "568fc0e26b5d670d67b50293eab27515c98550c7ca0a27cccdd7bcda0cb93aed",
+      "inputs/rgb/town04-00/front/00246578.png": "558143e749a487b5fc3e54a999e1ab74a48975839539534cec0ef94e104acb3b",
+      "labels/semantic_segmentation/town04-00/front/00246578.png": "5232d8e0870f49a46aa5586b572bcad4f68a8d586509402f335377afe43942f2",
+      "labels/instance_segmentation/town04-00/front/00246578.png": "c35e24abf57577447f1968805380bc2737865c4ba7d151f3787f77550f960264",
+      "inputs/rgb/town04-02/front/00248088.png": "009dd15c55e3bdd7aa1105687915be5fe57124226fe0dbc68c507d71c0ae4820",
+      "labels/semantic_segmentation/town04-02/front/00248088.png": "09eb8abcb902bb54bfb4b058ff5389d214d8693aaf2a6adbc6c28f49c334b2d3",
+      "labels/instance_segmentation/town04-02/front/00248088.png": "2729a7afae95a5de0f91e2b32ccb48c625b4879b1e33b3bd0ea245502cf65770"
+    }
+  },
+  "status": "completed",
+  "cases": [
+    {
+      "id": "train-wall",
+      "sample": {
+        "scene_id": "town03-02",
+        "group_id": "town03-route-02",
+        "split": "train",
+        "camera": "front",
+        "frame": 244882,
+        "input_manifest": "inputs/frames/town03-02/00244882.json",
+        "rgb": "inputs/rgb/town03-02/front/00244882.png",
+        "semantic": "labels/semantic_segmentation/town03-02/front/00244882.png",
+        "detection": "labels/visible/town03-02/front/00244882.json",
+        "instance": "labels/instance_segmentation/town03-02/front/00244882.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "category": 12,
+      "current_CPU_metrics": {
+        "name": "wall",
+        "support_pixels": 96704,
+        "predicted_pixels": 97013,
+        "iou": 0.9861280565950684,
+        "precision": 0.9914341376928866,
+        "recall": 0.9946020847121112
+      },
+      "historical_Tiny_CPU_metrics": {
+        "name": "12",
+        "support_pixels": 96704,
+        "predicted_pixels": 97226,
+        "iou": 0.9735208515661572,
+        "precision": 0.9839343385514163,
+        "recall": 0.9892455327597618
+      },
+      "panel": "train-wall.png",
+      "panel_sha256": "330a27ac467814aeacb0d15e7db051f41d4a21357156f08fa08da8fb2907397c"
+    },
+    {
+      "id": "train-fence",
+      "sample": {
+        "scene_id": "town01-00",
+        "group_id": "town01-route-00",
+        "split": "train",
+        "camera": "front",
+        "frame": 167149,
+        "input_manifest": "inputs/frames/town01-00/00167149.json",
+        "rgb": "inputs/rgb/town01-00/front/00167149.png",
+        "semantic": "labels/semantic_segmentation/town01-00/front/00167149.png",
+        "detection": "labels/visible/town01-00/front/00167149.json",
+        "instance": "labels/instance_segmentation/town01-00/front/00167149.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "category": 13,
+      "current_CPU_metrics": {
+        "name": "fence",
+        "support_pixels": 10834,
+        "predicted_pixels": 11469,
+        "iou": 0.9067282209113448,
+        "precision": 0.924753683843404,
+        "recall": 0.9789551412220786
+      },
+      "historical_Tiny_CPU_metrics": {
+        "name": "13",
+        "support_pixels": 10834,
+        "predicted_pixels": 12379,
+        "iou": 0.795421146260345,
+        "precision": 0.8307617739720494,
+        "recall": 0.9492338932988739
+      },
+      "panel": "train-fence.png",
+      "panel_sha256": "e0a623f8c8313c9bea27d89c572137bda288865cac9d8fad1b3ff167443ad883"
+    },
+    {
+      "id": "validation-wall",
+      "sample": {
+        "scene_id": "town04-02",
+        "group_id": "town04-route-02",
+        "split": "validation",
+        "camera": "front",
+        "frame": 248088,
+        "input_manifest": "inputs/frames/town04-02/00248088.json",
+        "rgb": "inputs/rgb/town04-02/front/00248088.png",
+        "semantic": "labels/semantic_segmentation/town04-02/front/00248088.png",
+        "detection": "labels/visible/town04-02/front/00248088.json",
+        "instance": "labels/instance_segmentation/town04-02/front/00248088.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "category": 12,
+      "current_CPU_metrics": {
+        "name": "wall",
+        "support_pixels": 9068,
+        "predicted_pixels": 5888,
+        "iou": 0.5151453753419106,
+        "precision": 0.8636209239130435,
+        "recall": 0.5607631230701368
+      },
+      "historical_Tiny_CPU_metrics": {
+        "name": "12",
+        "support_pixels": 9068,
+        "predicted_pixels": 15,
+        "iou": 0.0016541685046316719,
+        "precision": 1.0,
+        "recall": 0.0016541685046316719
+      },
+      "panel": "validation-wall.png",
+      "panel_sha256": "5f7daca80f242331e24e393be039df67ab1583d7b37b28acc4d7b99fd544b28e"
+    },
+    {
+      "id": "validation-fence",
+      "sample": {
+        "scene_id": "town04-00",
+        "group_id": "town04-route-00",
+        "split": "validation",
+        "camera": "front",
+        "frame": 246578,
+        "input_manifest": "inputs/frames/town04-00/00246578.json",
+        "rgb": "inputs/rgb/town04-00/front/00246578.png",
+        "semantic": "labels/semantic_segmentation/town04-00/front/00246578.png",
+        "detection": "labels/visible/town04-00/front/00246578.json",
+        "instance": "labels/instance_segmentation/town04-00/front/00246578.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "category": 13,
+      "current_CPU_metrics": {
+        "name": "fence",
+        "support_pixels": 11525,
+        "predicted_pixels": 170,
+        "iou": 0.007581631773929526,
+        "precision": 0.5176470588235295,
+        "recall": 0.007635574837310195
+      },
+      "historical_Tiny_CPU_metrics": {
+        "name": "13",
+        "support_pixels": 11525,
+        "predicted_pixels": 387,
+        "iou": 0.007527700245284615,
+        "precision": 0.22997416020671835,
+        "recall": 0.00772234273318872
+      },
+      "panel": "validation-fence.png",
+      "panel_sha256": "e05fb26ecab2d34771ea48dfe10a03842ac2723f157216d6b4c8d0e8c70c21f6"
+    }
+  ],
+  "scope": "Four fixed examples only, CPU float32. Historical Tiny epoch1 and current Mobile best epoch6; not matched training budgets or full train/generalization estimates.",
+  "selection": "Take every 40th manifest row per train/validation (front-camera subset), independently select largest raw4 and raw5 pixel support, infer actual epoch1 checkpoint on CPU RGB only; targets used only for confusion metrics. No heldout samples.",
+  "baseline_checkpoint_sha256": "cea21be599e405c58e9651f041c34e1cd2c93b0f5c401f87f9ca239f806eb0ba"
+}

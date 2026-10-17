@@ -14,3 +14,5 @@
 - 新增可中斷續跑的CPU validation錯例工具 `review_sunny_segmentation.py`，exec74874已exit0，輸出8例/3pages，已實際看完並保存evidence，標記inspected_with_failures。CPU FP32診斷不取代GPU BF16驗收。
 
 - 15:40實際Get-Item確認v1-002目錄15:35:59已建立，無檔案表示尚未寫coverage；不能用Get-ChildItem空輸出推定目錄不存在。新Python PID33276累積讀取約320MB/81665次，有前置I/O活動。
+
+- 最新15:44：號誌v1-002已completed且GT crop gate passed（macro recall94.38%、紅→綠1.33%），最佳epoch8。queue56349已接det v3-001，run/source已凍結，尚未epoch；所有後續phase命令改v1-002。號誌/固定景物錯例都實際看圖並保存evidence，joint仍未做。

@@ -1,0 +1,27 @@
+{
+  "status": "inspected_with_failures",
+  "reviewed_at_utc": "2026-10-17T07:45:12.406938+00:00",
+  "reviewer": "assistant actual view_image inspection of all three contact pages",
+  "catalog_sha256": "bab1b80b03816db152412865bf2ae4c8f2027e6a60a36d4034e02ec4b1dff47c",
+  "reviewed_images": [
+    {
+      "path": "page-00.png",
+      "sha256": "e6d0f0a8c3f15d8dc4b4969463fb58048c37ff7967f9df32914f5fb576a8dc61"
+    },
+    {
+      "path": "page-01.png",
+      "sha256": "acc09dd9cef9bbce995966c1c38cd492e8496390db9e04d1ed383754021bf5ed"
+    },
+    {
+      "path": "page-02.png",
+      "sha256": "1208fe4adf5eb07c93abc3937eefbbd36b3ed5d626211182fd2f30ade32b1da6"
+    }
+  ],
+  "cases_seen": 11,
+  "limits": "Stratified GT-crop validation mistakes only. GT targets follow predeclared native phase + semantic lens/color support rules; enlarged pixels do not restore image detail. No data relabeling, no detector-box joint test or heldout claim.",
+  "observations": [
+    "Wrong known/unknown decisions often concern very small, pixelated lamp crops; visible color in an enlarged crop alone does not establish the minimum supervised raw-pixel criterion.",
+    "The selected red-to-green case visibly contains a bright upper red lamp yet was classified green. Red/green confusion remains a measured error even though its full validation rate is below the frozen gate.",
+    "No yellow GT misclassifications in the saved validation confusion. Only 31 yellow crops across 2 original groups, so this is limited coverage, not a broad reliability claim."
+  ]
+}

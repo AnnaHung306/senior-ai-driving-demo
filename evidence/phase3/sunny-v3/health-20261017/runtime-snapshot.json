@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-10-17T12:27:18.3972108+08:00",
+  "scope": "Read-only native process observation; not proof of epoch progress",
+  "python_processes": [
+    {
+      "ProcessId": 27812,
+      "ParentProcessId": 27384,
+      "CreationDate": "2026-10-17T12:23:03.319208+08:00",
+      "KernelModeTime": 156250,
+      "UserModeTime": 0,
+      "WorkingSetSize": 4440064,
+      "CommandLine": "\"C:\\code\\senior_AI\\.venv\\Scripts\\python.exe\" scripts/train_light_state.py --root data/sunny-cross-town-v3-007 --config configs/light_state_v1_1.json --run artifacts/runs/sunny-light-state-v1-001"
+    },
+    {
+      "ProcessId": 24688,
+      "ParentProcessId": 27812,
+      "CreationDate": "2026-10-17T12:23:03.353327+08:00",
+      "KernelModeTime": 312187500,
+      "UserModeTime": 106562500,
+      "WorkingSetSize": 588382208,
+      "CommandLine": "\"C:\\Users\\HP\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" scripts/train_light_state.py --root data/sunny-cross-town-v3-007 --config configs/light_state_v1_1.json --run artifacts/runs/sunny-light-state-v1-001"
+    }
+  ],
+  "gpu": [
+    "0 MiB, 0 %"
+  ],
+  "carla_process_ids": []
+}

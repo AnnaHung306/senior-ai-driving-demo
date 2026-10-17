@@ -1,0 +1,123 @@
+{
+  "scope": "Existing aggregate validation confusion only; hypothesis for train/validation work, no heldout access or new training",
+  "classes": [
+    {
+      "class": "wall",
+      "gt_pixels": 2048168,
+      "predicted_pixels": 10571025,
+      "GT_predicted_as": [
+        {
+          "class": "wall",
+          "pixels": 736131,
+          "fraction_of_GT": 0.3594094820346768
+        },
+        {
+          "class": "other_annotated",
+          "pixels": 635798,
+          "fraction_of_GT": 0.310422777819007
+        },
+        {
+          "class": "fence",
+          "pixels": 424254,
+          "fraction_of_GT": 0.20713828162533543
+        },
+        {
+          "class": "bus",
+          "pixels": 79560,
+          "fraction_of_GT": 0.038844469789587575
+        },
+        {
+          "class": "sidewalk",
+          "pixels": 61693,
+          "fraction_of_GT": 0.03012106428769515
+        }
+      ],
+      "prediction_GT_origins": [
+        {
+          "class": "terrain_or_ground",
+          "pixels": 3899247,
+          "fraction_of_predictions": 0.368861770736518
+        },
+        {
+          "class": "other_annotated",
+          "pixels": 3743880,
+          "fraction_of_predictions": 0.3541643312734574
+        },
+        {
+          "class": "fence",
+          "pixels": 1701661,
+          "fraction_of_predictions": 0.16097407772661593
+        },
+        {
+          "class": "wall",
+          "pixels": 736131,
+          "fraction_of_predictions": 0.06963667194051665
+        },
+        {
+          "class": "sidewalk",
+          "pixels": 259927,
+          "fraction_of_predictions": 0.02458862787667232
+        }
+      ]
+    },
+    {
+      "class": "fence",
+      "gt_pixels": 8168548,
+      "predicted_pixels": 1865531,
+      "GT_predicted_as": [
+        {
+          "class": "other_annotated",
+          "pixels": 5633232,
+          "fraction_of_GT": 0.689624643204643
+        },
+        {
+          "class": "wall",
+          "pixels": 1701661,
+          "fraction_of_GT": 0.20831866324345527
+        },
+        {
+          "class": "pole",
+          "pixels": 328425,
+          "fraction_of_GT": 0.040206043962770374
+        },
+        {
+          "class": "sidewalk",
+          "pixels": 282103,
+          "fraction_of_GT": 0.03453526869157162
+        },
+        {
+          "class": "fence",
+          "pixels": 72558,
+          "fraction_of_GT": 0.008882606798662382
+        }
+      ],
+      "prediction_GT_origins": [
+        {
+          "class": "other_annotated",
+          "pixels": 722974,
+          "fraction_of_predictions": 0.38754327856251114
+        },
+        {
+          "class": "terrain_or_ground",
+          "pixels": 452617,
+          "fraction_of_predictions": 0.2426210017415953
+        },
+        {
+          "class": "wall",
+          "pixels": 424254,
+          "fraction_of_predictions": 0.2274172876248103
+        },
+        {
+          "class": "pole",
+          "pixels": 134334,
+          "fraction_of_predictions": 0.07200845228516707
+        },
+        {
+          "class": "fence",
+          "pixels": 72558,
+          "fraction_of_predictions": 0.03889401998680268
+        }
+      ]
+    }
+  ]
+}

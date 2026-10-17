@@ -1,0 +1,55 @@
+{
+  "checked_at_utc": "2026-10-17T04:25:33.116797+00:00",
+  "status": "passed",
+  "scope": "Byte hashes and RGB-only input schema; no model inference, collection, raw data re-audit, or heldout scoring",
+  "fixture_files": [
+    "inputs/frames/frame.json",
+    "inputs/rgb/front.png",
+    "inputs/rgb/front_left.png",
+    "inputs/rgb/front_right.png",
+    "inputs/rgb/left.png",
+    "inputs/rgb/rear.png",
+    "inputs/rgb/rear_left.png",
+    "inputs/rgb/rear_right.png",
+    "inputs/rgb/right.png"
+  ],
+  "rgb_hashes": [
+    {
+      "path": "inputs/rgb/front.png",
+      "sha256": "d70901a2a22eb3417f0749887437a08a9e20fb4559a596357e38c19de3b0fed2"
+    },
+    {
+      "path": "inputs/rgb/front_right.png",
+      "sha256": "ee41f02480dd0b76dcbc00eb944a0b1aa1171622fbcf13f3bb2e167d2cb155dd"
+    },
+    {
+      "path": "inputs/rgb/right.png",
+      "sha256": "7758bd334c8d165b35de8af647582de3d8e8231b1b1f9fb87e3b559fcb647c36"
+    },
+    {
+      "path": "inputs/rgb/rear_right.png",
+      "sha256": "6f40610355e33553c42de724556599e03526e5538ae3fd358f5e5801c3eeac87"
+    },
+    {
+      "path": "inputs/rgb/rear.png",
+      "sha256": "2870ca2d3601b9d48f96aa0f3267a5d70af6d82f77595b3b1bc8d9a9034af64a"
+    },
+    {
+      "path": "inputs/rgb/rear_left.png",
+      "sha256": "0921fa421cbc64742290b48c470831b51f6e29d0f8e7d618ff5584f1fdd0a737"
+    },
+    {
+      "path": "inputs/rgb/left.png",
+      "sha256": "0d2cd609d105e2423fac4fe53f05fabae378f29fea359cdc8e1ed38035cb8f86"
+    },
+    {
+      "path": "inputs/rgb/front_left.png",
+      "sha256": "78eded91256bcf66713cc10e0e203ed52ec248c564cc5527ea2ea224af0ad9f1"
+    }
+  ],
+  "manifest_sha256": "e767160593c437acf7e4b33bb06eafce049d1a82d978e38cca17937f7229b7ac",
+  "phase_config_sha256": "393740842538738c1b196620457ff4cdc70c523e533fa72722b74ad241a6f2d2",
+  "supplement_plan": "configs/light_lockbox_supplement_v1.json",
+  "supplement_plan_sha256": "daa805761dbe8f3b7acb00ebbe40786741cb9da7138d4f13eb5dac76bb2e5692",
+  "config_still_binds_frozen_plan": true
+}

@@ -1,13 +1,12 @@
-# 目前任務：先存檔，接續完成晴天 Phase 3
+# 目前任務：可中斷的小檢查，繼續晴天 Phase 3
 
-最新完整段落存檔：**CHECKPOINT_PHASE3_2026-10-17.md**（2026-10-17 10:11 Asia/Taipei）。請先讀此檔；舊歷史見Git，不要拿舊程序或舊成績當目前狀態。
+最新狀態：**CHECKPOINT_PHASE3_2026-10-17_SMALL_CHECKS.md**（2026-10-17 12:26 Asia/Taipei）；完整流程與限制見 **CHECKPOINT_PHASE3_2026-10-17.md**。舊程序與舊成績不能當最新狀態。
 
-- 使用者要求token快用完先段落存檔再繼續；**沒有要求停止訓練**。
-- CARLA off，固定ClearNoon；主007資料18場/86400PNG完整audit與assistant視覺抽查已過。
-- 真正在跑：segmentation v4-001，exec68540，8epochs/batch8 MobileUNet BF16/FP32。第一輪val mIoU44.36%、marginF1 .36546，仍未通過wall/fence等門檻。最近epoch1/2200updates（會繼續更新）。
-- queue exec57077等v4 completed後自動phase v1-001 configlight_state_v1_1→det v3-001 configsunny_training_v3_9。存檔時兩個後續run還沒開始；不要重複啟動。
-- Tiny v3-001已刻意abort、保留3輪29.37%與嚴重過擬合證據，不是完成。新v4來源snapshot commit046ec3b，勿強行用後續修改source resume/eval，可用run/source凍結腳本及absolute --dataset-root。
-- phase lockbox黃燈不足，補收204PNG plan已凍結但**未採集**；訓練全部退出後才啟CARLA補收、audit、實際看QA、寫bound review。
-- 正式heldout前先通過actual detector-box phase validation joint，再一次heldout；原門檻不降低。最後需三模型實際RGB-only8view demo、benchmarks、錯例、模型卡與registry/README。
-- 存檔前完整suite **72 tests passed**，log phase3-sunny-tests-009.log；last.pt SHA已核對，完整/partial進度分別存於evidence checkpoint receipt。
-- Phase3仍未完成，不進Phase4。詳checkpoint的全部參數、執行順序、坑與品質條件。
+- 使用者允許繼續，但本輪做小工作，每項落盤，避免中斷丟失成果；沒有要求停止原背景程序。
+- 分割 v4-001已完成8輪/9600updates，exec68540 exit0，best第7輪。檔案SHA、27個source、3600張validation逐張混淆合計核對通過。
+- val mIoU50.85%達總平均門檻；wall6.19%、fence.73%、路緣F1 .40733仍失敗，**不能說品質通過**。未開heldout。
+- queue exec57077仍活，號誌 v1-001程序已呼叫；12:25尚無run/log內容/epochs，不能當成已訓練。Python實際命令已核對。det v3-001仍排其後，不重複開run。
+- 新檢查器 `scripts/check_sunny_segmentation_artifacts.py` 純CPU讀檔、輸出atomic、可立即重跑。收據與薄弱類別混淆診斷在 `evidence/phase3/sunny-v3/health-20261017/`。
+- RGB-only示範輸入9檔SHA與schema通過，號誌config仍綁補收plan；沒有做推論/採集。
+- CARLA off，ClearNoon；黃燈補收、joint validation、heldout、三模型RGB-only demo/benchmark及最終模型卡導出仍未完成。
+- Phase3未完成，不進Phase4。先查實際程序及新log再接續；勿以歷史PID殺程序或重新啟動相同run。

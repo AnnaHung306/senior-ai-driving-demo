@@ -81,3 +81,11 @@ CPU錯例exec74874已exit0，產生8例/3pages；Town04-02沒有≥512px的fence
 16:12偵測進度：已完成首輪validation並存state/last/best，epoch0 score AP50:95 .3076915452，2400updates；現epoch1/3000updates，第2輪。不是mAP50數值，不能混稱驗收mAP50門檻。首輪wall_s1264.141保留原值，未宣稱純GPU效能。
 
 準備好scout_training_scenery.py與PHASE3_SEGMENTATION_RECOVERY.md：只讀已載入原train Town01/Town03的原生Fences/Walls/road spawn inventory，綁main audit/map SHA，不load map/tick/spawn/改設定，不輸出渲染訓練圖。bbox按原生值保存、未假設座標轉換；物件name hints不是材質GT。2offline tests與--help通過，**未真正連server完成scout**；不可把工具完成當補景完成。需等GPU工作全部退出再由start_carla busy guard允許啟動。新補景另建seg-only/train-only版本，主007 immutable，姿態/appearance sites/模態時間/CRC/SHA/audit/實看review與採樣策略先凍結，詳新恢復計畫。
+
+## 後續小段：首輪detector快照與CPU分段對照
+
+- 首輪detector：mAP50 .5683550、選模metric AP50:95 .3076915；未過pedestrian precision .44156、bicycle recall .25514、motorcycle recall .44852、traffic_light recall .33573。保留原訓練不調閾值，全部8輪未完成；18:41第2輪/3900updates。
+- `artifacts/runs/sunny-detection-first-epoch-snapshot-001`保存首輪best/last、config/provenance/state/best_validation/epochs/overfit與完整27source，receipt綁各SHA。用hardlink保留原子存檔前inode，未複製大權重入Git，未干預原訓練。初次sandbox建hardlink WinError5，改native權限在同workspace完成；不是auto-review拒絕。evidence/phase3/sunny-v3/detection-first-epoch-001只保存metadata/metrics/receipt。不要在原queue仍跑時從snapshot另外resume。
+- 新 `evaluate_sunny_segmentation_cpu.py` 只做CPU FP32、同精度train/val診斷，主007不改、不讀heldout。固定每scene每第10個bundle×8方向，960train+360val=1320；每20views atomic chunk、source/config/model/data/選例SHA綁定，逐chunk核對raw bytes，resume跳過logits但重驗bytes。val另與同一批原GPU BF16結果比較，並強制target supports完全相同，避免把CPU數值差異當domain差異。seen train不是泛化成績，此subset不是正式驗收。
+- smoke exec26912以--max-new-chunks1存20張後exit0，接著 **exec99969** 去掉chunk budget用同output續跑；新首條log saved_views40/new_chunks1，沒有重算第一chunk。18:41已380/1320。root `artifacts/runs/sunny-mobile-CPU-stratified-eval-001`，log `sunny-mobile-CPU-stratified-eval-resume-001.log`。code/首20與恢復prefix證據已保存。兩個正在跑的只有GPUqueue56349與CPUdiag99969；原smoke不是live。
+- 16:12→18:38又有牆鐘長跳，原值保留，不推定原因或當純GPU效能。

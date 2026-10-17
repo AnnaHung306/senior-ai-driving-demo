@@ -1,0 +1,52 @@
+{
+  "data": {
+    "audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+    "review_sha256": "2316ef3a7a5ed2c31a7e983957953c90846b26e670a41323532244af1f5976ee",
+    "image_inventory_sha256": "dfa830811b91994fbce03d7b321a533cd9dbd40227779b8dbe2511ec9163df59",
+    "metadata_inventory_sha256": "dc0f3d5a091f66eb4f481a9c8c0fadd255dce2eb36574498846a360faf6aae25",
+    "verified_images": 86400
+  },
+  "source": {
+    "files": {
+      "src/senior_ai/__init__.py": "c285e576bba7be22f3dfe803e0f8ea274a4e0076d45de75baef01ddae84afff1",
+      "src/senior_ai/__main__.py": "ea4b9d7761dc175bd590279a1cf5a5521d2496b76c5353489b0086e5f8293afb",
+      "src/senior_ai/acquisition_safety.py": "dc4deb5ed40296f8cbda4b6c49a16d62b5c26ed32e8bd9145efe3f5f64e32074",
+      "src/senior_ai/core.py": "eba53145e07996150e6bc4aebfe464a6c3cf201350edb0f4d035007a8ecd6f35",
+      "src/senior_ai/dataset.py": "5623aee9fd60b7a378e810f1ee558237985bc93c278f86607f29d517722045bd",
+      "src/senior_ai/detection_metrics.py": "a1017dd068d9df03752fb8e379f8ee5311412b1aa14d2f8d99cc79f0d51cb9b6",
+      "src/senior_ai/detection_model.py": "a6aa01157cf94ac5e7b3f48a709f3c9aee5b14800ccb2de6a548211cf2d68e10",
+      "src/senior_ai/doctor.py": "b9e189ced0c73643ce566857354224154c521097d2d34478a8fd900a25215e73",
+      "src/senior_ai/frames.py": "cffd819cdbd361e66bedb37f0898489334dba57c853bdf37d075159d564a13f7",
+      "src/senior_ai/instance_labels.py": "53439db03595dc6119813ee859897eb1affbcf5a8d5a701a21effa787b3196c8",
+      "src/senior_ai/light_labels.py": "e516649cf73cf9aec93691de41199bbeed341851d9960dc43d05de9efb5346bf",
+      "src/senior_ai/light_model.py": "0b1080bd52e595fde47cc120e968181b8c667728c56617193c21668b20e84349",
+      "src/senior_ai/mobile_segmentation.py": "b1296a20a061b923cdc2a7e2dd0275fecf1af50b513f97f9a0836694d93aa25b",
+      "src/senior_ai/motion.py": "d9e10c9ba82fbf4fbfd6218f6b79557e10ffd09defa13e5c716cf51cd5c083ad",
+      "src/senior_ai/road_boundaries.py": "33f43f10dc7b48aee446f324fafef5a5bcc81d56e13370212c819a4ed6c1bfe6",
+      "src/senior_ai/segmentation_data.py": "94b9d623ad2447dbe939b09dd52efbc8b1ec06c59ccba7546400313e988ecc81",
+      "src/senior_ai/segmentation_metrics.py": "d1c42901688b44c255c7b49acfb606236434c6a9211fa254d4416a2aacecf84a",
+      "src/senior_ai/segmentation_model.py": "c2a84e2ca62115dab46f94957168c0170ff5a240f35a4ad146ae56fe6067627a",
+      "src/senior_ai/segmentation_training.py": "ccac2aeb158ed861cfd8325195c836230b9c4d76ca29b2662c1f0f53fe95efb8",
+      "src/senior_ai/smoke.py": "f2bb3a97920ed840b10490d8416f43bc0e4f0caf10fcc5ffe3cc3b577cc9ddb0",
+      "src/senior_ai/sunny_augmentation.py": "56970d305e21b6c32823d81a48d161d5063c98fc3d28191bf528cc322e421ea1",
+      "src/senior_ai/sunny_data.py": "bc9e5a0a3b66dc6fe4865f1bf3d591740d7617aeddbbd52baff318ff87004483",
+      "src/senior_ai/sunny_losses.py": "550a25cdc5d7a52416550eda62e4491ed01f1e72e86255e4ed9390953b2b399f",
+      "src/senior_ai/visibility_policy.py": "e66815786d42df84e6809e762758845030637239c28d52d4c614e98ce9a23e01",
+      "scripts/train_sunny.py": "0ca00eb344e71c7b941f3600c526a124a05b3c662ba3e278e14cfa5bbbd2d08d",
+      "scripts/predict_sunny.py": "673d1bc3081672d526fefc7e99bbee57a328c49509b4334c6b3b1087ae066986",
+      "scripts/evaluate_sunny.py": "b5c45d4f3e6172cbee12bb352ef87dcf8c10a5bc11d70de7fa22142ad6a7312f"
+    },
+    "sha256": "c15c5cfb8f6f71b0587c3a3eaaf82ba8a97069e3b4bb99e16c2e9a20b431d7c1"
+  },
+  "config_sha256": "92b3e4738054974caff6f7a7bf7ccb6fbf60444f3d92fd3019006cb5cd198f8a",
+  "python": "3.12.14",
+  "torch": "2.10.0+cu128",
+  "torchvision": "0.25.0+cu128",
+  "numpy": "2.3.5",
+  "pillow": "12.0.0",
+  "cudnn": 91002,
+  "driver": "595.95",
+  "cuda": "12.8",
+  "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "git_revision": "d3c2ef79866fcd99851fc43012b17ad17a8e5041"
+}

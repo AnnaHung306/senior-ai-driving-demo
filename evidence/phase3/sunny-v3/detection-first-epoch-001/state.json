@@ -1,0 +1,7 @@
+{
+  "status": "training",
+  "task": "detection",
+  "last_sha256": "d2b39c3f2f3fbe64fafa3eb8a3f39881cf69da8e4b461f9285baa28d2bd2df40",
+  "epoch": 0,
+  "updates": 2400
+}

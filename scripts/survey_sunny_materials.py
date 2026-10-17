@@ -63,7 +63,7 @@ def main(args):
             groups[row['scene_id']].append(row)
         for scene in sorted(groups):
             frames = sorted({r['frame'] for r in groups[scene]})
-            positions = [0, 40, 80, 120]
+            positions = list(range(len(frames))) if split == 'train' and args.training_all else [0, 40, 80, 120]
             if len(frames) <= max(positions):
                 raise ValueError('Expected full 150-bundle scenes')
             chosen = {frames[i] for i in positions}
@@ -79,7 +79,8 @@ def main(args):
         raise ValueError('Selected images missing from inventory')
     identity = {'tool_sha256': sha(Path(__file__)), 'audit_sha256': sha(root / 'audit.json'),
                 'image_inventory_sha256': sha(root / 'image_inventory.jsonl'),
-                'selection': 'bundle positions0/40/80/120 per train/validation scene, all cameras', 'selected_views': len(selected)}
+                'selection': 'all train bundles; validation positions0/40/80/120; all cameras' if args.training_all else 'bundle positions0/40/80/120 per train/validation scene, all cameras',
+                'selected_views': len(selected)}
     output.mkdir(parents=True, exist_ok=True)
     progress_path = output / 'progress.json'
     if progress_path.exists() and read(progress_path)['identity'] != identity:
@@ -121,13 +122,18 @@ def main(args):
         write(progress_path, {'identity': identity, 'status': 'scanning', 'completed_views': len(records)})
         if (i + 1) % 32 == 0:
             print(json.dumps({'surveyed_views': i + 1, 'total': len(selected)}), flush=True)
-    # One strongest fence context per original group, plus a warm-color example
-    # per split. Color selection deliberately does not assert wood/concrete.
+    # Support/warm/bright-neutral contexts per group. Color selection deliberately
+    # does not assert wood/concrete, and identical views are not duplicated.
     gallery = []
     for group in sorted({r['sample']['group_id'] for r in records}):
         candidates = [r for r in records if r['sample']['group_id'] == group and r['classes']['fence']['pixels'] >= 512]
         if candidates:
             gallery.append(('max_fence_support', max(candidates, key=lambda r: r['classes']['fence']['pixels'])))
+            if args.training_all:
+                for key in ['warm_color_fraction', 'bright_neutral_fraction']:
+                    chosen = max(candidates, key=lambda r: r['classes']['fence'][key])
+                    if not any(r['sample']['rgb'] == chosen['sample']['rgb'] for _, r in gallery):
+                        gallery.append(('max_' + key, chosen))
     for split in ['train', 'validation']:
         candidates = [r for r in records if r['sample']['split'] == split and r['classes']['fence']['pixels'] >= 512]
         if candidates:
@@ -153,7 +159,7 @@ def main(args):
         name = f'page-{start // 8:02d}.png'; temporary = output / (name + '.tmp'); page.save(temporary, format='PNG'); temporary.replace(output / name)
         pages.append({'path': name, 'sha256': sha(output / name)})
     summary = {'identity': identity, 'status': 'completed', 'completed_views': len(records), 'pages': pages,
-               'scope': 'Systematic sparse train/validation RGB+raw semantic support survey, not full dataset coverage, model metrics, or automatic material labels; no development/lockbox index access.',
+               'scope': 'Systematic train/validation RGB+raw semantic support survey; selection mode defines coverage. Not model metrics or automatic material labels; no development/lockbox index access.',
                'gallery': [r for _, r in panels], 'class_support_in_survey': {
                    split: {name: {'pixels': sum(r['classes'][name]['pixels'] for r in records if r['sample']['split'] == split),
                                   'positive_views_512px': sum(r['classes'][name]['pixels'] >= 512 for r in records if r['sample']['split'] == split)}
@@ -164,4 +170,6 @@ def main(args):
 
 if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__); p.add_argument('--root', type=Path, required=True)
-    p.add_argument('--output', type=Path, required=True); main(p.parse_args())
+    p.add_argument('--output', type=Path, required=True)
+    p.add_argument('--training-all', action='store_true', help='All train views, with validation kept at fixed sparse positions')
+    main(p.parse_args())

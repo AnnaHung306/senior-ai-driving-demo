@@ -18,3 +18,5 @@
 - 最新15:44：號誌v1-002已completed且GT crop gate passed（macro recall94.38%、紅→綠1.33%），最佳epoch8。queue56349已接det v3-001，run/source已凍結，尚未epoch；所有後續phase命令改v1-002。號誌/固定景物錯例都實際看圖並保存evidence，joint仍未做。
 
 - 15:48新增純CPU/無模型的352view train/validation材質支持survey，逐view atomic可續跑；8例contact page已實看，evidence/material-survey-001保留全部352records。當批train fence主要混凝土/網，val木/白柵；尚未證明全train欠缺，下一步掃全train。偵測目前epoch0/100updates。
+
+- 全train材質掃描exec19187已啟動：survey_sunny_materials.py --training-all，輸出artifacts/runs/sunny-train-full-material-survey-001，9696views（9600train+96固定val），15:50已存1137views。每view獨立JSON，重跑同命令可續；若舊程序仍活勿重開。偵測epoch0/300updates，無完成epoch。

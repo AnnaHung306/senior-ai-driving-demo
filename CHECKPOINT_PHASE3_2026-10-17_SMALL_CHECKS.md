@@ -52,3 +52,5 @@ CPU錯例exec74874已exit0，產生8例/3pages；Town04-02沒有≥512px的fence
 - queue **56349**已接續偵測v3-001；15:43:44已建立run/config/provenance/source，git_revision d3c2ef7，尚未epoch成績。模型程式尚未修改，不啟CARLA、不重開訓練。後續所有phase命令使用 **v1-002**，v1-001是失敗歷史。
 
 15:48進度：detector v3-001真實訓練epoch0/100updates，meanloss .84613；overfit預檢已落盤。新增 `survey_sunny_materials.py` 純numpy/PIL、不載模型、不用GPU，對train/validation每scene bundle位置0/40/80/120×8方向共352views讀RGB+raw semantic，核對bound inventories/canonical indexes/selected raw SHA，逐view獨立atomic JSON可續跑。8個範例contact page已實看；全部352records、摘要與圖保存evidence/phase3/sunny-v3/material-survey-001。選到train混凝土/金屬網、val木板/白柵，不足以推斷全train完全缺類，下一步掃全train再決定是否補收。
+
+全train survey程序 **exec19187**：`.venv/Scripts/python.exe scripts/survey_sunny_materials.py --root data/sunny-cross-town-v3-007 --training-all --output artifacts/runs/sunny-train-full-material-survey-001`，log同名放reports。全9600train +固定96val共9696views，15:50已存1137view。現工具加入--training-all及每group暖色/中性亮色代表圖選擇，新tool SHA綁新output，不覆寫原352view結果。原v1工具在commit ab4e748可追溯；原舊report若要續跑需用同一tool bytes，不能忽略identity變更。detector仍epoch0/300updates、meanloss .55927；兩程序一個GPU訓練、一個CPU讀圖，不啟CARLA。

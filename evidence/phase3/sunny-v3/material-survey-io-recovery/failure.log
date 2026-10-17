@@ -1,0 +1,45 @@
+{"surveyed_views": 32, "total": 9696}
+{"surveyed_views": 64, "total": 9696}
+{"surveyed_views": 96, "total": 9696}
+{"surveyed_views": 128, "total": 9696}
+{"surveyed_views": 160, "total": 9696}
+{"surveyed_views": 192, "total": 9696}
+{"surveyed_views": 224, "total": 9696}
+{"surveyed_views": 256, "total": 9696}
+{"surveyed_views": 288, "total": 9696}
+{"surveyed_views": 320, "total": 9696}
+{"surveyed_views": 352, "total": 9696}
+{"surveyed_views": 384, "total": 9696}
+{"surveyed_views": 416, "total": 9696}
+{"surveyed_views": 448, "total": 9696}
+{"surveyed_views": 480, "total": 9696}
+{"surveyed_views": 512, "total": 9696}
+{"surveyed_views": 544, "total": 9696}
+{"surveyed_views": 576, "total": 9696}
+{"surveyed_views": 608, "total": 9696}
+{"surveyed_views": 640, "total": 9696}
+{"surveyed_views": 672, "total": 9696}
+{"surveyed_views": 704, "total": 9696}
+{"surveyed_views": 736, "total": 9696}
+{"surveyed_views": 768, "total": 9696}
+{"surveyed_views": 800, "total": 9696}
+{"surveyed_views": 832, "total": 9696}
+{"surveyed_views": 864, "total": 9696}
+{"surveyed_views": 896, "total": 9696}
+{"surveyed_views": 928, "total": 9696}
+{"surveyed_views": 960, "total": 9696}
+{"surveyed_views": 992, "total": 9696}
+{"surveyed_views": 1024, "total": 9696}
+{"surveyed_views": 1056, "total": 9696}
+{"surveyed_views": 1088, "total": 9696}
+{"surveyed_views": 1120, "total": 9696}
+Traceback (most recent call last):
+  File "C:\code\senior_AI\scripts\survey_sunny_materials.py", line 175, in <module>
+    main(p.parse_args())
+  File "C:\code\senior_AI\scripts\survey_sunny_materials.py", line 122, in main
+    write(progress_path, {'identity': identity, 'status': 'scanning', 'completed_views': len(records)})
+  File "C:\code\senior_AI\scripts\survey_sunny_materials.py", line 31, in write
+    temporary.replace(path)
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1376, in replace
+    os.replace(self, target)
+PermissionError: [WinError 5] �s���Q�ڡC: 'C:\\code\\senior_AI\\artifacts\\runs\\sunny-train-full-material-survey-001\\progress.json.tmp' -> 'C:\\code\\senior_AI\\artifacts\\runs\\sunny-train-full-material-survey-001\\progress.json'

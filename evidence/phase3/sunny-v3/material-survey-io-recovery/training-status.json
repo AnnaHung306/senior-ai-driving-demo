@@ -1,0 +1,98 @@
+{
+  "sampled_at": "2026-10-17T15:54:53.4497504+08:00",
+  "scope": "Read-only saved records; process liveness and GPU activity are not inferred. Each file is an independent observation.",
+  "runs": [
+    {
+      "run": "C:\\code\\senior_AI\\artifacts\\runs\\sunny-segmentation-v4-001",
+      "status_recorded": "completed",
+      "state": {
+        "status": "completed",
+        "task": "segmentation",
+        "best_epoch": 6,
+        "best_score": 0.508456084924232,
+        "updates": 9600,
+        "last_sha256": "af3f0eee89a5dd3b7738331e51f8ab7eceedc236b7bc5471b5a2108e10da087f",
+        "best_sha256": "a7031897c0ce35cc97f4ab035277c51e0a35558dccc225b69455a16cc6f9eb67",
+        "checkpoint_reload_identical": true,
+        "training_wall_s": 42396.5,
+        "max_cuda_allocated_mib": 4046.5146484375,
+        "parameter_count": 3589953,
+        "max_cuda_reserved_mib": 4662.0,
+        "rpn_ignore_calls": null,
+        "roi_ignore_calls": null,
+        "lockbox_opened": false,
+        "validation_sha256": "f68d0df2b0f8724c2864925999b88130ef2125a63c7ea9963cee9eb575357a36",
+        "validation_frames_sha256": "3abe9776737742e68e59dbb986dd6cf10ed9079b164c62318d6458ab5400e4af"
+      },
+      "latest_progress": {
+        "epoch": 7,
+        "updates": 9600,
+        "mean_loss": 0.1674794431279103,
+        "lr": 0.0
+      },
+      "last_complete_epoch": {
+        "epoch": 7,
+        "updates": 9600,
+        "mean_loss": 0.1674794431279103,
+        "max_gradient_norm": 4.8073296546936035,
+        "skipped_fully_ignored_batches": 0,
+        "validation_score": 0.5081954301475009,
+        "best_score": 0.508456084924232,
+        "improved": false,
+        "wall_s": 4402.358999999997
+      },
+      "failure_message": null,
+      "lockbox_marker_exists": false
+    },
+    {
+      "run": "C:\\code\\senior_AI\\artifacts\\runs\\sunny-light-state-v1-002",
+      "status_recorded": "completed",
+      "state": {
+        "status": "completed",
+        "best_sha256": "e4fdbc431dcf0db5d772ba0724ee74a00f4ea0fb525025c42db12493859ee60b",
+        "updates": 832,
+        "wall_s": 6.1710000000020955,
+        "validation_quality": {
+          "passed": true,
+          "checks": {
+            "all_classes": true,
+            "macro_recall": true,
+            "unknown_or_unobservable": true,
+            "red": true,
+            "yellow": true,
+            "green": true,
+            "red_as_green": true
+          }
+        },
+        "lockbox_opened": false,
+        "checkpoint_reload_identical": true,
+        "validation_sha256": "3cda92e2ab47df3bb16e82036745d9124d59bed480cf28525b3484531b1b619a",
+        "validation_frames_sha256": "04e6e94817fd9afd620ab0c89ec1d3aeed2abde2822f673543a4f07b0f1e9720"
+      },
+      "latest_progress": null,
+      "last_complete_epoch": {
+        "epoch": 15,
+        "mean_loss": 0.025740167000689186,
+        "validation_macro_recall": 0.8930643963645932,
+        "best": 0.9438117039805592,
+        "updates": 832
+      },
+      "failure_message": null,
+      "lockbox_marker_exists": false
+    },
+    {
+      "run": "C:\\code\\senior_AI\\artifacts\\runs\\sunny-detection-v3-001",
+      "status_recorded": "directory_exists_no_state",
+      "state": null,
+      "latest_progress": {
+        "epoch": 0,
+        "updates": 800,
+        "mean_loss": 0.45720176833798176,
+        "lr": 0.00019914448613738106
+      },
+      "last_complete_epoch": null,
+      "failure_message": null,
+      "lockbox_marker_exists": false
+    }
+  ]
+}

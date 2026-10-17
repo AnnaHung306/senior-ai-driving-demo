@@ -1,0 +1,7 @@
+test_persistent_lock_is_bounded_and_retains_last_good_progress (test_material_survey_io.SurveyAtomicWriteTests.test_persistent_lock_is_bounded_and_retains_last_good_progress) ... ok
+test_temporary_windows_lock_retries_without_partial_json (test_material_survey_io.SurveyAtomicWriteTests.test_temporary_windows_lock_retries_without_partial_json) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.025s
+
+OK

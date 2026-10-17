@@ -54,3 +54,11 @@ CPU錯例exec74874已exit0，產生8例/3pages；Town04-02沒有≥512px的fence
 15:48進度：detector v3-001真實訓練epoch0/100updates，meanloss .84613；overfit預檢已落盤。新增 `survey_sunny_materials.py` 純numpy/PIL、不載模型、不用GPU，對train/validation每scene bundle位置0/40/80/120×8方向共352views讀RGB+raw semantic，核對bound inventories/canonical indexes/selected raw SHA，逐view獨立atomic JSON可續跑。8個範例contact page已實看；全部352records、摘要與圖保存evidence/phase3/sunny-v3/material-survey-001。選到train混凝土/金屬網、val木板/白柵，不足以推斷全train完全缺類，下一步掃全train再決定是否補收。
 
 全train survey程序 **exec19187**：`.venv/Scripts/python.exe scripts/survey_sunny_materials.py --root data/sunny-cross-town-v3-007 --training-all --output artifacts/runs/sunny-train-full-material-survey-001`，log同名放reports。全9600train +固定96val共9696views，15:50已存1137view。現工具加入--training-all及每group暖色/中性亮色代表圖選擇，新tool SHA綁新output，不覆寫原352view結果。原v1工具在commit ab4e748可追溯；原舊report若要續跑需用同一tool bytes，不能忽略identity變更。detector仍epoch0/300updates、meanloss .55927；兩程序一個GPU訓練、一個CPU讀圖，不啟CARLA。
+
+## 後續小段：Windows survey寫入恢復
+
+全量survey exec19187在1138張record後，atomic replace progress.json收到WinError5並exit1；確切鎖持有者未證實。資料records沒丟。只為survey.write加8次有界PermissionError retry，永久鎖仍raise且保留舊完整JSON；兩項專門回歸通過。初次測試的系統temp目錄受sandbox權限限制，改用workspace下artifacts/runs/test-temp後通過，不是產品算法錯誤。
+
+為避免默默忽略source identity，先從git d197ca6讀原工具，驗證原toolSHA等於舊progress；以AST確認main/data計算/選例完全一致（只排除新增io_recovery元資料欄位），再備份before-io-recovery的原source/progress/failure，保存1138records SHA及新舊toolSHA receipt，最後只遷移progress identity。raw/records與模型run不改。evidence/phase3/sunny-v3/material-survey-io-recovery保留receipt/failure/regression。新續跑 **exec49830**，log sunny-train-full-material-survey-resume-001.log，15:54已超過2368views。
+
+新增 `.\scripts\status_sunny_training.ps1` 唯讀各run，開檔使用FileShare.ReadWrite|Delete，不阻擋訓練atomic JSON replace；只讀newline完整epoch記錄。它只顯示已存紀錄，不推斷程序存活；可配合exec56349或escalated CIM查實際命令。15:54 detector epoch0/700updates，還沒有首輪last.pt/state，不要說checkpoint已存。

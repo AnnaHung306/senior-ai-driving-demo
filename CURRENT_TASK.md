@@ -20,3 +20,5 @@
 - 15:48新增純CPU/無模型的352view train/validation材質支持survey，逐view atomic可續跑；8例contact page已實看，evidence/material-survey-001保留全部352records。當批train fence主要混凝土/網，val木/白柵；尚未證明全train欠缺，下一步掃全train。偵測目前epoch0/100updates。
 
 - 全train材質掃描exec19187已啟動：survey_sunny_materials.py --training-all，輸出artifacts/runs/sunny-train-full-material-survey-001，9696views（9600train+96固定val），15:50已存1137views。每view獨立JSON，重跑同命令可續；若舊程序仍活勿重開。偵測epoch0/300updates，無完成epoch。
+
+- 全量survey舊exec19187因WinError5更新progress停止，1138張records保留。已加8次有界PermissionError重試、兩項鎖定/保留舊JSON回歸通過；AST核對資料計算/選例不變後，保存舊source/progress/failure與io-recovery.json才遷移progress toolSHA。新exec49830同root續跑，15:54超過2368views。新status_sunny_training.ps1以FileShare.ReadWrite|Delete唯讀狀態，避免讀者阻擋atomic replace；15:54 detector epoch0/700updates，尚無epoch checkpoint。

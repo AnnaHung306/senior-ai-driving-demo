@@ -9,6 +9,7 @@ from collections import defaultdict
 import hashlib
 import json
 from pathlib import Path
+import time
 
 import numpy as np
 from PIL import Image, ImageDraw
@@ -28,7 +29,16 @@ def sha(path):
 def write(path, value):
     temporary = path.with_suffix(path.suffix + '.tmp')
     temporary.write_text(json.dumps(value, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
-    temporary.replace(path)
+    # Windows readers/antivirus may briefly hold a handle without delete sharing.
+    # Retain the last complete JSON and fail after a bounded retry interval.
+    for attempt in range(8):
+        try:
+            temporary.replace(path)
+            return
+        except PermissionError:
+            if attempt == 7:
+                raise
+            time.sleep(min(.025 * 2 ** attempt, .25))
 
 
 def safe(root, relative):
@@ -159,6 +169,7 @@ def main(args):
         name = f'page-{start // 8:02d}.png'; temporary = output / (name + '.tmp'); page.save(temporary, format='PNG'); temporary.replace(output / name)
         pages.append({'path': name, 'sha256': sha(output / name)})
     summary = {'identity': identity, 'status': 'completed', 'completed_views': len(records), 'pages': pages,
+               'io_recovery': read(output / 'io-recovery.json') if (output / 'io-recovery.json').exists() else None,
                'scope': 'Systematic train/validation RGB+raw semantic support survey; selection mode defines coverage. Not model metrics or automatic material labels; no development/lockbox index access.',
                'gallery': [r for _, r in panels], 'class_support_in_survey': {
                    split: {name: {'pixels': sum(r['classes'][name]['pixels'] for r in records if r['sample']['split'] == split),

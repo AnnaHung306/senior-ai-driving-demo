@@ -1,0 +1,38 @@
+{
+  "train": {
+    "unknown_or_unobservable": {
+      "samples": 1709,
+      "groups": 4
+    },
+    "red": {
+      "samples": 1082,
+      "groups": 6
+    },
+    "yellow": {
+      "samples": 77,
+      "groups": 2
+    },
+    "green": {
+      "samples": 401,
+      "groups": 6
+    }
+  },
+  "validation": {
+    "unknown_or_unobservable": {
+      "samples": 1429,
+      "groups": 2
+    },
+    "red": {
+      "samples": 753,
+      "groups": 2
+    },
+    "yellow": {
+      "samples": 31,
+      "groups": 2
+    },
+    "green": {
+      "samples": 155,
+      "groups": 2
+    }
+  }
+}

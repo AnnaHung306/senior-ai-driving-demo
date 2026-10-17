@@ -31,3 +31,7 @@
 1. 用上述小檢查與live程序確認最新狀態。讓原號誌→detector隊列接續，不並行CARLA。
 2. 分割品質尚差3項；先做validation/train錯例分析並保存，下一個訓練方案需另建版本。不使用Town04當train，不開lockbox找改善方向。
 3. 號誌/偵測完成後另核對其品質與指紋；joint validation必須在phase/det任何lockbox marker前。黃燈補收、QA、demo、benchmark及最終導出仍未完成，詳原完整存檔。
+
+## 後續小段：號誌JSON收尾修正
+
+再次接續發現原queue57077已exit1：號誌v1-001其實完成16輪/832updates，但quality紅→綠比較回傳NumPy bool，寫state時TypeError。原run不修改、不提升為completed；保留failure、log、SHA、validation等於 `evidence/phase3/sunny-v3/light-state-v1-001-finalization-failure/`。修正僅在quality比較外加Python bool，不改訓練數學、資料或門檻。新增2%邊界pass/3%fail且可JSON序列化的回歸，相關5tests通過。後續用新v1-002重跑同config，接det v3-001；舊checkpoint保留作診斷，不視為正式完成模型。

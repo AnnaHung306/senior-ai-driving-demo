@@ -59,7 +59,7 @@ def scores(matrix):
 def quality(result,config):
     checks={'all_classes':result['all_classes_present'],'macro_recall':(result['macro_recall'] or 0)>=config['minimum_macro_recall']}
     for c,row in enumerate(result['classes']): checks[row['name']]=(row['recall'] or 0)>=(config['minimum_unknown_recall'] if c==0 else config['minimum_per_class_recall'])
-    m=np.array(result['confusion_true_rows_predicted_columns']);checks['red_as_green']=(m[1,3]/max(1,m[1].sum()))<=config['max_red_as_green_rate']
+    m=np.array(result['confusion_true_rows_predicted_columns']);checks['red_as_green']=bool((m[1,3]/max(1,m[1].sum()))<=config['max_red_as_green_rate'])
     return {'passed':all(checks.values()),'checks':checks}
 
 

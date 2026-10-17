@@ -1,0 +1,45 @@
+{"epoch": 0, "mean_loss": 0.7545628891541407, "validation_macro_recall": 0.7112294825453748, "best": 0.7112294825453748, "updates": 52}
+{"epoch": 1, "mean_loss": 0.18482122054466835, "validation_macro_recall": 0.8119796096470719, "best": 0.8119796096470719, "updates": 104}
+{"epoch": 2, "mean_loss": 0.07320318697020411, "validation_macro_recall": 0.7644242386796449, "best": 0.8119796096470719, "updates": 156}
+{"epoch": 3, "mean_loss": 0.05231633212847205, "validation_macro_recall": 0.8286425140015721, "best": 0.8286425140015721, "updates": 208}
+{"epoch": 4, "mean_loss": 0.04941625486557873, "validation_macro_recall": 0.7187533394267801, "best": 0.8286425140015721, "updates": 260}
+{"epoch": 5, "mean_loss": 0.0407601329139792, "validation_macro_recall": 0.7694535836652938, "best": 0.8286425140015721, "updates": 312}
+{"epoch": 6, "mean_loss": 0.03536642636978426, "validation_macro_recall": 0.8747596969249197, "best": 0.8747596969249197, "updates": 364}
+{"epoch": 7, "mean_loss": 0.03271619245732346, "validation_macro_recall": 0.7063100030707063, "best": 0.8747596969249197, "updates": 416}
+{"epoch": 8, "mean_loss": 0.0324387271852734, "validation_macro_recall": 0.9438117039805592, "best": 0.9438117039805592, "updates": 468}
+{"epoch": 9, "mean_loss": 0.04692343954677479, "validation_macro_recall": 0.9053790691392163, "best": 0.9438117039805592, "updates": 520}
+{"epoch": 10, "mean_loss": 0.03704583436662618, "validation_macro_recall": 0.9031248430808546, "best": 0.9438117039805592, "updates": 572}
+{"epoch": 11, "mean_loss": 0.030128540963722535, "validation_macro_recall": 0.9411718634090619, "best": 0.9438117039805592, "updates": 624}
+{"epoch": 12, "mean_loss": 0.03100533770898787, "validation_macro_recall": 0.8226825603520589, "best": 0.9438117039805592, "updates": 676}
+{"epoch": 13, "mean_loss": 0.025678297146581687, "validation_macro_recall": 0.91738052567865, "best": 0.9438117039805592, "updates": 728}
+{"epoch": 14, "mean_loss": 0.02535964412471423, "validation_macro_recall": 0.8315459112855185, "best": 0.9438117039805592, "updates": 780}
+{"epoch": 15, "mean_loss": 0.025740167000689186, "validation_macro_recall": 0.8930643963645932, "best": 0.9438117039805592, "updates": 832}
+Traceback (most recent call last):
+  File "C:\code\senior_AI\scripts\train_light_state.py", line 128, in <module>
+    try: train(a)
+         ^^^^^^^^
+  File "C:\code\senior_AI\scripts\train_light_state.py", line 121, in train
+    write_json(args.run/'state.json',{'status':'completed','best_sha256':sha(args.run/'best.pt'),'updates':updates,'wall_s':time.monotonic()-started,
+  File "C:\code\senior_AI\src\senior_ai\core.py", line 13, in write_json
+    temporary.write_text(json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False), encoding='utf-8')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bool is not JSON serializable

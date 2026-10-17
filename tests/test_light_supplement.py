@@ -7,12 +7,23 @@ import unittest
 import numpy as np
 from PIL import Image
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
-from train_light_state import LightCrops
+from train_light_state import LightCrops,quality,scores
 from collect_light_supplement import camera_transform
 from evaluate_light_state import joint_scores,joint_quality
 
 
 class SupplementTests(unittest.TestCase):
+    def test_phase_quality_can_be_saved_at_completion(self):
+        config={'minimum_macro_recall':.8,'minimum_unknown_recall':.8,
+                'minimum_per_class_recall':.5,'max_red_as_green_rate':.02}
+        matrix=np.eye(4,dtype=np.int64)*100
+        for red_green,expected in [(2,True),(3,False)]:
+            matrix[1,1]=100-red_green;matrix[1,3]=red_green
+            result=quality(scores(matrix),config)
+            self.assertIs(result['checks']['red_as_green'],expected)
+            self.assertIs(result['passed'],expected)
+            self.assertEqual(json.loads(json.dumps(result,allow_nan=False)),result)
+
     def test_joint_precision_counts_false_light_detections(self):
         matrix=np.eye(4,5,dtype=np.int64)*100
         result=joint_scores(matrix,[0,100,0,0])

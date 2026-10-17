@@ -1,0 +1,20 @@
+{
+  "recorded_at_utc": "2026-10-17T07:35:27.293151+00:00",
+  "run": "artifacts\\runs\\sunny-light-state-v1-001",
+  "status": "failed_during_finalization",
+  "epochs_completed": 16,
+  "updates_recorded": 832,
+  "state_exists": false,
+  "cause": "NumPy bool returned from red_as_green quality comparison is not JSON serializable; failure occurred writing final state after reload check",
+  "policy": "Original run, checkpoints, source and failure retained unchanged; new version reruns same frozen config after scalar type fix; no heldout opened",
+  "artifacts": {
+    "failure.json": "4f10b0d9f099ca69602baea4c414d2b5a92ed508de1d43dec1de23ddcc1cae3e",
+    "config.json": "cc392eda97dceed79e55f477b73e150904ba98bb48fba942520b555811439ac8",
+    "epochs.jsonl": "5c402dca6aa67d84c2695c3a01abb38e2fdbddca4fb0b88f4f2ecf8b05cb9847",
+    "coverage.json": "a7cc806a4de288a10c51d780f6edf2a3ec572b2c16c69b11711c845a2b99caff",
+    "validation.json": "3cda92e2ab47df3bb16e82036745d9124d59bed480cf28525b3484531b1b619a",
+    "best.pt": "224e9f5ce8af0bd97366e96b02ef104d792f693f0b194a08ea5406ca8acddb05",
+    "last.pt": "89964129105dbea2c55b0ab426a5e7cca48f8f4284747b46fa5e77ad3df77836",
+    "validation_frames.jsonl": "04e6e94817fd9afd620ab0c89ec1d3aeed2abde2822f673543a4f07b0f1e9720"
+  }
+}

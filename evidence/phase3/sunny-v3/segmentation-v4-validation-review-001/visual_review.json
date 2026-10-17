@@ -1,0 +1,28 @@
+{
+  "status": "inspected_with_failures",
+  "reviewed_at_utc": "2026-10-17T07:39:33.473633+00:00",
+  "reviewer": "assistant actual image inspection through view_image",
+  "catalog_sha256": "e9a01256cac19fc379c411aecfd227e4342424f2f5d3fd96c87b4f0a34aee29d",
+  "reviewed_images": [
+    {
+      "path": "page-00.png",
+      "sha256": "c60ce5c14395eb7c7bb153042a6da5f4b9e368af26695cff73557c82d9319111"
+    },
+    {
+      "path": "page-01.png",
+      "sha256": "df8e624288275ed506c1ff74537c9cd9d289a69115000bf6761af0b57ca75b0f"
+    },
+    {
+      "path": "page-02.png",
+      "sha256": "15d9b70136e4ed50366881244309a3bad9fe0578d6c8fb33bb25b05ae012f12e"
+    }
+  ],
+  "cases_seen": 8,
+  "limits": "Eight deliberately selected validation failures, CPU float32 re-render. Not exhaustive, not human review, not model/data acceptance approval.",
+  "observations": [
+    "Visible wooden and white picket fence structures are present in RGB and GT; selected predictions mostly miss the fence and confuse it with background/wall/sidewalk. This is visible in Town04-00 and Town04-01.",
+    "Grass near paths and guardrails is often predicted as sidewalk, creating broad pink regions and displaced or spurious road interfaces. Town04-02 margin case visibly adds road/sidewalk-like regions over grass.",
+    "Wall label support in these selected wide views includes small/distant structures. Need focused GT overlays and matched training examples before assigning the failure solely to low resolution or any particular material.",
+    "Guardrails and occluding vehicles make visible interfaces more complex. The margin remains the supervised road-to-sidewalk/terrain interface, not a guaranteed physical curb or free-space boundary."
+  ]
+}

@@ -35,3 +35,11 @@
 ## 後續小段：號誌JSON收尾修正
 
 再次接續發現原queue57077已exit1：號誌v1-001其實完成16輪/832updates，但quality紅→綠比較回傳NumPy bool，寫state時TypeError。原run不修改、不提升為completed；保留failure、log、SHA、validation等於 `evidence/phase3/sunny-v3/light-state-v1-001-finalization-failure/`。修正僅在quality比較外加Python bool，不改訓練數學、資料或門檻。新增2%邊界pass/3%fail且可JSON序列化的回歸，相關5tests通過。後續用新v1-002重跑同config，接det v3-001；舊checkpoint保留作診斷，不視為正式完成模型。
+
+新queue **exec56349** 已啟動：light-state-v1-002 → state completed檢查 → detection-v3-001。Log各自同名，沒有舊queue存活。CPU錯例panel程序 **exec74874** 正在跑 `scripts/review_sunny_segmentation.py`，輸出 `artifacts/runs/sunny-segmentation-v4-validation-review-001`。只選validation三scene每scene wall/fence最低IoU且GT≥512px，以及margin最低F1且GT≥50px。按舊GPU報告選例，CPU FP32只作視覺診斷，不取代GPU BF16驗收。校驗已綁inventory/index與所選raw SHA；逐panel atomic保存+catalog，重跑驗證identity後跳過已存panel。不能把產生圖片當成已看圖。
+
+## 後續小段：分割錯例實際檢視
+
+CPU錯例exec74874已exit0，產生8例/3pages；Town04-02沒有≥512px的fence候選，因此只有2例，不硬湊。已透過view_image實際看完3pages，`evidence/phase3/sunny-v3/segmentation-v4-validation-review-001/` 保存catalog、頁面、visual_review與prior-shift。標記是 **inspected_with_failures**，不是模型驗收通過。可見木/白色柵欄被漏掉，草地常判sidewalk並引出錯誤margin；wall支持有小/遠結構，需局部overlay再判材質。訓練/驗證有效pixel比例：wall8.719%/.247%、fence1.280%/.985%、sidewalk13.648%/3.854%、terrain4.362%/16.437%。這是train/validation分布差異證據，不是證明因果，也不准用validation城鎮回灌train。
+
+15:40補正：先前Get-ChildItem空輸出不能證明run目錄未建立。新v1-002經Get-Item確認目錄15:35:59已建立，只是尚未寫coverage。PID33276讀取累計約320MB/81665次，仍有CPU/I/O活動；依程式順序應為完整verify或crop前置，沒有觀測堆疊，不能更精確斷言。CPU panel工具在原輸出目錄重跑exit0，已保存的8panels通過SHA後跳過，證實可續跑。

@@ -1,0 +1,145 @@
+{
+  "scope": "Existing train pixel statistics vs saved validation GT supports; no heldout data or model scoring",
+  "inputs": {
+    "dataset_statistics_sha256": "a094c7783a128fe309e30b2476edcb4a2e9fba9969cbe3374744fb2dafcef1ae",
+    "validation_sha256": "f68d0df2b0f8724c2864925999b88130ef2125a63c7ea9963cee9eb575357a36"
+  },
+  "classes": [
+    {
+      "name": "other_annotated",
+      "train_pixels": 978155164,
+      "validation_pixels": 413857841,
+      "train_fraction": 0.4424800862021116,
+      "validation_fraction": 0.4991072775896072,
+      "validation_over_train_fraction": 1.1279768133150065
+    },
+    {
+      "name": "road",
+      "train_pixels": 488589805,
+      "validation_pixels": 198638171,
+      "train_fraction": 0.22101939139164317,
+      "validation_fraction": 0.2395551006443028,
+      "validation_over_train_fraction": 1.0838646289628706
+    },
+    {
+      "name": "sidewalk",
+      "train_pixels": 301704847,
+      "validation_pixels": 31957757,
+      "train_fraction": 0.13647976478725096,
+      "validation_fraction": 0.038540647328559885,
+      "validation_over_train_fraction": 0.2823909272457956
+    },
+    {
+      "name": "pedestrian",
+      "train_pixels": 2360924,
+      "validation_pixels": 399691,
+      "train_fraction": 0.0010679919643471147,
+      "validation_fraction": 0.0004820222480382284,
+      "validation_over_train_fraction": 0.4513350887737235
+    },
+    {
+      "name": "rider",
+      "train_pixels": 2996157,
+      "validation_pixels": 604233,
+      "train_fraction": 0.0013553471437125287,
+      "validation_fraction": 0.0007286972911546241,
+      "validation_over_train_fraction": 0.5376462366376462
+    },
+    {
+      "name": "car",
+      "train_pixels": 6538555,
+      "validation_pixels": 2651790,
+      "train_fraction": 0.0029577928804322582,
+      "validation_fraction": 0.0031980249170616643,
+      "validation_over_train_fraction": 1.0812200334305686
+    },
+    {
+      "name": "truck",
+      "train_pixels": 13497474,
+      "validation_pixels": 1342377,
+      "train_fraction": 0.00610574240042632,
+      "validation_fraction": 0.0016188895403069193,
+      "validation_over_train_fraction": 0.2651421291854507
+    },
+    {
+      "name": "bus",
+      "train_pixels": 44150535,
+      "validation_pixels": 17321696,
+      "train_fraction": 0.01997201799025553,
+      "validation_fraction": 0.02088974444196839,
+      "validation_over_train_fraction": 1.0459506121094337
+    },
+    {
+      "name": "motorcycle",
+      "train_pixels": 1229175,
+      "validation_pixels": 446570,
+      "train_fraction": 0.0005560318853026886,
+      "validation_fraction": 0.0005385577241079525,
+      "validation_over_train_fraction": 0.9685734547664948
+    },
+    {
+      "name": "bicycle",
+      "train_pixels": 922143,
+      "validation_pixels": 201966,
+      "train_fraction": 0.0004171423196930276,
+      "validation_fraction": 0.00024356841997265097,
+      "validation_over_train_fraction": 0.5838976494926035
+    },
+    {
+      "name": "road_line",
+      "train_pixels": 13896093,
+      "validation_pixels": 5694147,
+      "train_fraction": 0.0062860624314125275,
+      "validation_fraction": 0.006867068654535964,
+      "validation_over_train_fraction": 1.0924276889488163
+    },
+    {
+      "name": "traffic_light",
+      "train_pixels": 429849,
+      "validation_pixels": 212553,
+      "train_fraction": 0.0001944472917733239,
+      "validation_fraction": 0.0002563362069380335,
+      "validation_over_train_fraction": 1.3182811886979449
+    },
+    {
+      "name": "wall",
+      "train_pixels": 192741757,
+      "validation_pixels": 2048168,
+      "train_fraction": 0.08718901907479625,
+      "validation_fraction": 0.002470064484113883,
+      "validation_over_train_fraction": 0.028329995110908474
+    },
+    {
+      "name": "fence",
+      "train_pixels": 28297482,
+      "validation_pixels": 8168548,
+      "train_fraction": 0.01280070149960656,
+      "validation_fraction": 0.009851164700151302,
+      "validation_over_train_fraction": 0.7695800656279724
+    },
+    {
+      "name": "pole",
+      "train_pixels": 37787338,
+      "validation_pixels": 8926242,
+      "train_fraction": 0.0170935503803038,
+      "validation_fraction": 0.010764933999948089,
+      "validation_over_train_fraction": 0.6297658333374723
+    },
+    {
+      "name": "temporary_obstacle",
+      "train_pixels": 897030,
+      "validation_pixels": 432081,
+      "train_fraction": 0.0004057821563838109,
+      "validation_fraction": 0.0005210841749116337,
+      "validation_over_train_fraction": 1.284147581932518
+    },
+    {
+      "name": "terrain_or_ground",
+      "train_pixels": 96425301,
+      "validation_pixels": 136292335,
+      "train_fraction": 0.043619128200548515,
+      "validation_fraction": 0.16436681763432082,
+      "validation_over_train_fraction": 3.7682279407008847
+    }
+  ]
+}

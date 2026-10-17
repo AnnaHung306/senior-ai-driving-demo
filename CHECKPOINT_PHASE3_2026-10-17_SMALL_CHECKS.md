@@ -77,3 +77,7 @@ CPU錯例exec74874已exit0，產生8例/3pages；Town04-02沒有≥512px的fence
 - 16:05 detector仍epoch0/2100updates，meanloss .37545，queue56349活著，還沒有首輪last/state。CURRENT_TASK已重新整理為最新現況，舊節點全部保留本checkpoint。
 
 16:09小段：新增analyze_sunny_phase_confidence.py，純JSON/CPU，不開模型或heldout；先核對best與validation兩SHA、2368逐張混淆，再計10bins top-label ECE .007816與離線棄權探索。紅→綠10例confidence最大.7563；門檻.9時此val紅→綠為0，但保留率84.38%、含棄權macro recall74.75%（不能忽略被棄權GT），.999則全棄權/undefined accuracy，報表以—處理。沒有採用門檻、修改模型/gate或將棄權當成原unknown語意類。此分析只描述少數相關路線，不是安全機率/獨立泛化CI。JSON與REPORT落evidence/phase3/sunny-v3/light-state-v1-002-confidence。偵測首輪訓練更新已2400，meanloss .36573，尚未完成首輪validation/state。
+
+16:12偵測進度：已完成首輪validation並存state/last/best，epoch0 score AP50:95 .3076915452，2400updates；現epoch1/3000updates，第2輪。不是mAP50數值，不能混稱驗收mAP50門檻。首輪wall_s1264.141保留原值，未宣稱純GPU效能。
+
+準備好scout_training_scenery.py與PHASE3_SEGMENTATION_RECOVERY.md：只讀已載入原train Town01/Town03的原生Fences/Walls/road spawn inventory，綁main audit/map SHA，不load map/tick/spawn/改設定，不輸出渲染訓練圖。bbox按原生值保存、未假設座標轉換；物件name hints不是材質GT。2offline tests與--help通過，**未真正連server完成scout**；不可把工具完成當補景完成。需等GPU工作全部退出再由start_carla busy guard允許啟動。新補景另建seg-only/train-only版本，主007 immutable，姿態/appearance sites/模態時間/CRC/SHA/audit/實看review與採樣策略先凍結，詳新恢復計畫。

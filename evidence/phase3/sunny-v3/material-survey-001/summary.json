@@ -1,0 +1,604 @@
+{
+  "identity": {
+    "tool_sha256": "5416602fc130e141e0c79aee2575fe0d59b26e8bea4b7145f0aa6bd3468c9514",
+    "audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+    "image_inventory_sha256": "dfa830811b91994fbce03d7b321a533cd9dbd40227779b8dbe2511ec9163df59",
+    "selection": "bundle positions0/40/80/120 per train/validation scene, all cameras",
+    "selected_views": 352
+  },
+  "status": "completed",
+  "completed_views": 352,
+  "pages": [
+    {
+      "path": "page-00.png",
+      "sha256": "de32a4258ccfc6ed25761a312daab427a687ca743c14574b41b2a72e67e6b29b"
+    }
+  ],
+  "scope": "Systematic sparse train/validation RGB+raw semantic support survey, not full dataset coverage, model metrics, or automatic material labels; no development/lockbox index access.",
+  "gallery": [
+    {
+      "selection": "max_fence_support",
+      "sample": {
+        "scene_id": "town01-00",
+        "group_id": "town01-route-00",
+        "split": "train",
+        "camera": "front",
+        "frame": 167389,
+        "input_manifest": "inputs/frames/town01-00/00167389.json",
+        "rgb": "inputs/rgb/town01-00/front/00167389.png",
+        "semantic": "labels/semantic_segmentation/town01-00/front/00167389.png",
+        "detection": "labels/visible/town01-00/front/00167389.json",
+        "instance": "labels/instance_segmentation/town01-00/front/00167389.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "raw_sha256": {
+        "rgb": "2f8e24673ecc631910ccc212dff48bfec56d3f57c6ff5062b7c2f316fb3a4282",
+        "semantic": "41abf93d63bf8472f3b44fd85caa0edae3531528ab63afc76d7cef5cb4afb25f"
+      },
+      "classes": {
+        "wall": {
+          "pixels": 0
+        },
+        "fence": {
+          "pixels": 9835,
+          "mean_rgb": [
+            73.43904113769531,
+            66.0851058959961,
+            62.39033889770508
+          ],
+          "std_rgb": [
+            19.90809440612793,
+            19.96927261352539,
+            18.970951080322266
+          ],
+          "bbox_xyxy": [
+            258,
+            164,
+            640,
+            221
+          ],
+          "warm_color_fraction": 0.04453482460599898,
+          "bright_neutral_fraction": 0.009252669039145907
+        },
+        "terrain_or_ground": {
+          "pixels": 9722,
+          "mean_rgb": [
+            142.5748748779297,
+            136.84303283691406,
+            125.95556640625
+          ],
+          "std_rgb": [
+            29.903789520263672,
+            25.38433265686035,
+            20.9676513671875
+          ],
+          "bbox_xyxy": [
+            256,
+            96,
+            640,
+            195
+          ],
+          "warm_color_fraction": 0.0,
+          "bright_neutral_fraction": 0.031063567167249537
+        }
+      }
+    },
+    {
+      "selection": "max_fence_support",
+      "sample": {
+        "scene_id": "town01-01",
+        "group_id": "town01-route-01",
+        "split": "train",
+        "camera": "rear_left",
+        "frame": 168264,
+        "input_manifest": "inputs/frames/town01-01/00168264.json",
+        "rgb": "inputs/rgb/town01-01/rear_left/00168264.png",
+        "semantic": "labels/semantic_segmentation/town01-01/rear_left/00168264.png",
+        "detection": "labels/visible/town01-01/rear_left/00168264.json",
+        "instance": "labels/instance_segmentation/town01-01/rear_left/00168264.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "raw_sha256": {
+        "rgb": "8b0a460d26f23bd6ed5db135bf6b4a5b43ccd82b09fe230776374809b83c094a",
+        "semantic": "8c353d4f57d1f3e61dc96106f1cba6a930d95f5c3ce3032bd3c1dafbd0e2edb3"
+      },
+      "classes": {
+        "wall": {
+          "pixels": 148
+        },
+        "fence": {
+          "pixels": 15008,
+          "mean_rgb": [
+            90.62113189697266,
+            84.82076263427734,
+            78.24480438232422
+          ],
+          "std_rgb": [
+            21.52985191345215,
+            21.46674919128418,
+            19.047992706298828
+          ],
+          "bbox_xyxy": [
+            0,
+            126,
+            639,
+            230
+          ],
+          "warm_color_fraction": 0.017257462686567165,
+          "bright_neutral_fraction": 0.00113272921108742
+        },
+        "terrain_or_ground": {
+          "pixels": 10452,
+          "mean_rgb": [
+            124.11815643310547,
+            122.56974792480469,
+            110.51262664794922
+          ],
+          "std_rgb": [
+            29.709043502807617,
+            27.84759521484375,
+            20.875415802001953
+          ],
+          "bbox_xyxy": [
+            0,
+            111,
+            640,
+            252
+          ],
+          "warm_color_fraction": 0.0,
+          "bright_neutral_fraction": 0.014734022196708763
+        }
+      }
+    },
+    {
+      "selection": "max_fence_support",
+      "sample": {
+        "scene_id": "town01-02",
+        "group_id": "town01-route-02",
+        "split": "train",
+        "camera": "right",
+        "frame": 169397,
+        "input_manifest": "inputs/frames/town01-02/00169397.json",
+        "rgb": "inputs/rgb/town01-02/right/00169397.png",
+        "semantic": "labels/semantic_segmentation/town01-02/right/00169397.png",
+        "detection": "labels/visible/town01-02/right/00169397.json",
+        "instance": "labels/instance_segmentation/town01-02/right/00169397.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "raw_sha256": {
+        "rgb": "129393e05f615c5e1f7cadf0bb8bc8fcaef9ecd66ac9276c41e83bfef8d2ecbc",
+        "semantic": "d85d1598a62d1bb1fadbc2794de577ab2b7e30da1f06db88287b7174e6871a07"
+      },
+      "classes": {
+        "wall": {
+          "pixels": 0
+        },
+        "fence": {
+          "pixels": 22303,
+          "mean_rgb": [
+            93.63610076904297,
+            95.44204711914062,
+            89.06196594238281
+          ],
+          "std_rgb": [
+            51.564266204833984,
+            52.08821487426758,
+            52.888179779052734
+          ],
+          "bbox_xyxy": [
+            0,
+            76,
+            640,
+            278
+          ],
+          "warm_color_fraction": 0.024167152401022286,
+          "bright_neutral_fraction": 0.1024525848540555
+        },
+        "terrain_or_ground": {
+          "pixels": 16083,
+          "mean_rgb": [
+            145.3525390625,
+            148.0940704345703,
+            121.56985473632812
+          ],
+          "std_rgb": [
+            36.96403503417969,
+            36.00522232055664,
+            26.1529541015625
+          ],
+          "bbox_xyxy": [
+            0,
+            107,
+            604,
+            277
+          ],
+          "warm_color_fraction": 0.0,
+          "bright_neutral_fraction": 0.0080830690791519
+        }
+      }
+    },
+    {
+      "selection": "max_fence_support",
+      "sample": {
+        "scene_id": "town01-03",
+        "group_id": "town01-route-03",
+        "split": "train",
+        "camera": "right",
+        "frame": 169728,
+        "input_manifest": "inputs/frames/town01-03/00169728.json",
+        "rgb": "inputs/rgb/town01-03/right/00169728.png",
+        "semantic": "labels/semantic_segmentation/town01-03/right/00169728.png",
+        "detection": "labels/visible/town01-03/right/00169728.json",
+        "instance": "labels/instance_segmentation/town01-03/right/00169728.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "raw_sha256": {
+        "rgb": "34187eb75ab3000b7bf6cf17a7bb4e5f254e07e6e5221c7657bda6f1a5d6107f",
+        "semantic": "0fe103d0e63ed2e0afc01f4dd5b8e25af2997d59ae926c50dcd2834282cdd4f4"
+      },
+      "classes": {
+        "wall": {
+          "pixels": 0
+        },
+        "fence": {
+          "pixels": 24319,
+          "mean_rgb": [
+            104.38912200927734,
+            103.45401000976562,
+            99.62054443359375
+          ],
+          "std_rgb": [
+            45.69114303588867,
+            46.045284271240234,
+            45.81919860839844
+          ],
+          "bbox_xyxy": [
+            0,
+            70,
+            640,
+            284
+          ],
+          "warm_color_fraction": 0.017969488877009745,
+          "bright_neutral_fraction": 0.08742135778609318
+        },
+        "terrain_or_ground": {
+          "pixels": 45770,
+          "mean_rgb": [
+            139.8966522216797,
+            135.19638061523438,
+            121.8226547241211
+          ],
+          "std_rgb": [
+            30.876331329345703,
+            27.460355758666992,
+            21.915369033813477
+          ],
+          "bbox_xyxy": [
+            0,
+            101,
+            640,
+            266
+          ],
+          "warm_color_fraction": 0.0001529386060738475,
+          "bright_neutral_fraction": 0.015446799213458597
+        }
+      }
+    },
+    {
+      "selection": "max_fence_support",
+      "sample": {
+        "scene_id": "town04-01",
+        "group_id": "town04-pedestrian-route-01",
+        "split": "validation",
+        "camera": "front_left",
+        "frame": 247333,
+        "input_manifest": "inputs/frames/town04-01/00247333.json",
+        "rgb": "inputs/rgb/town04-01/front_left/00247333.png",
+        "semantic": "labels/semantic_segmentation/town04-01/front_left/00247333.png",
+        "detection": "labels/visible/town04-01/front_left/00247333.json",
+        "instance": "labels/instance_segmentation/town04-01/front_left/00247333.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "raw_sha256": {
+        "rgb": "4e183c69d38c1627f0d063e1102a39c92489a7bb14252db217fef91e1ccc5d0f",
+        "semantic": "dc5d5ea816f37cf7db739e4f5a44cf06a4c454ef6c833d19f0eeeab62e915400"
+      },
+      "classes": {
+        "wall": {
+          "pixels": 0
+        },
+        "fence": {
+          "pixels": 14279,
+          "mean_rgb": [
+            113.0862808227539,
+            113.98837280273438,
+            119.74494171142578
+          ],
+          "std_rgb": [
+            18.376298904418945,
+            18.28359031677246,
+            18.65256690979004
+          ],
+          "bbox_xyxy": [
+            0,
+            180,
+            355,
+            300
+          ],
+          "warm_color_fraction": 0.0,
+          "bright_neutral_fraction": 0.0016107570558162336
+        },
+        "terrain_or_ground": {
+          "pixels": 14493,
+          "mean_rgb": [
+            72.30110931396484,
+            74.08128356933594,
+            77.13385772705078
+          ],
+          "std_rgb": [
+            27.085630416870117,
+            25.5474796295166,
+            28.84689712524414
+          ],
+          "bbox_xyxy": [
+            0,
+            117,
+            402,
+            332
+          ],
+          "warm_color_fraction": 0.0,
+          "bright_neutral_fraction": 0.011177809977230387
+        }
+      }
+    },
+    {
+      "selection": "max_fence_support",
+      "sample": {
+        "scene_id": "town04-00",
+        "group_id": "town04-route-00",
+        "split": "validation",
+        "camera": "front_right",
+        "frame": 246678,
+        "input_manifest": "inputs/frames/town04-00/00246678.json",
+        "rgb": "inputs/rgb/town04-00/front_right/00246678.png",
+        "semantic": "labels/semantic_segmentation/town04-00/front_right/00246678.png",
+        "detection": "labels/visible/town04-00/front_right/00246678.json",
+        "instance": "labels/instance_segmentation/town04-00/front_right/00246678.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "raw_sha256": {
+        "rgb": "a8b4454dc1354a131aae7f2d92681e58019df558cf287624f31202a22c87d3ad",
+        "semantic": "097bf892ebcc36fd5b4e952896314b03c00216f508148a84e262190027a580d8"
+      },
+      "classes": {
+        "wall": {
+          "pixels": 73
+        },
+        "fence": {
+          "pixels": 25160,
+          "mean_rgb": [
+            82.15286254882812,
+            58.14507293701172,
+            52.751949310302734
+          ],
+          "std_rgb": [
+            17.200590133666992,
+            17.08514976501465,
+            15.51400089263916
+          ],
+          "bbox_xyxy": [
+            63,
+            178,
+            640,
+            274
+          ],
+          "warm_color_fraction": 0.9715818759936407,
+          "bright_neutral_fraction": 0.0
+        },
+        "terrain_or_ground": {
+          "pixels": 41021,
+          "mean_rgb": [
+            125.45503234863281,
+            141.5909881591797,
+            112.28251647949219
+          ],
+          "std_rgb": [
+            44.748897552490234,
+            42.201107025146484,
+            42.77414321899414
+          ],
+          "bbox_xyxy": [
+            0,
+            131,
+            640,
+            360
+          ],
+          "warm_color_fraction": 0.00043879963920918555,
+          "bright_neutral_fraction": 0.13788059774261963
+        }
+      }
+    },
+    {
+      "selection": "max_warm_color_fraction",
+      "sample": {
+        "scene_id": "town01-01",
+        "group_id": "town01-route-01",
+        "split": "train",
+        "camera": "rear_right",
+        "frame": 168424,
+        "input_manifest": "inputs/frames/town01-01/00168424.json",
+        "rgb": "inputs/rgb/town01-01/rear_right/00168424.png",
+        "semantic": "labels/semantic_segmentation/town01-01/rear_right/00168424.png",
+        "detection": "labels/visible/town01-01/rear_right/00168424.json",
+        "instance": "labels/instance_segmentation/town01-01/rear_right/00168424.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "raw_sha256": {
+        "rgb": "ca63bc7d204f86e01c489821642e13478b00690de3d851a2a892736789361e5a",
+        "semantic": "c2e78d4ba28a02beea127d59dbb51520700b67830bf29db5a4434b0f952de088"
+      },
+      "classes": {
+        "wall": {
+          "pixels": 0
+        },
+        "fence": {
+          "pixels": 3488,
+          "mean_rgb": [
+            73.16886138916016,
+            66.1998291015625,
+            60.680904388427734
+          ],
+          "std_rgb": [
+            14.740737915039062,
+            14.891151428222656,
+            12.998565673828125
+          ],
+          "bbox_xyxy": [
+            550,
+            152,
+            640,
+            207
+          ],
+          "warm_color_fraction": 0.21875,
+          "bright_neutral_fraction": 0.0
+        },
+        "terrain_or_ground": {
+          "pixels": 36118,
+          "mean_rgb": [
+            120.68077087402344,
+            132.3273162841797,
+            94.3006820678711
+          ],
+          "std_rgb": [
+            39.2442512512207,
+            37.551856994628906,
+            28.84137725830078
+          ],
+          "bbox_xyxy": [
+            0,
+            121,
+            640,
+            316
+          ],
+          "warm_color_fraction": 8.306107757904645e-05,
+          "bright_neutral_fraction": 0.00022149620687745723
+        }
+      }
+    },
+    {
+      "selection": "max_warm_color_fraction",
+      "sample": {
+        "scene_id": "town04-00",
+        "group_id": "town04-route-00",
+        "split": "validation",
+        "camera": "right",
+        "frame": 246358,
+        "input_manifest": "inputs/frames/town04-00/00246358.json",
+        "rgb": "inputs/rgb/town04-00/right/00246358.png",
+        "semantic": "labels/semantic_segmentation/town04-00/right/00246358.png",
+        "detection": "labels/visible/town04-00/right/00246358.json",
+        "instance": "labels/instance_segmentation/town04-00/right/00246358.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "raw_sha256": {
+        "rgb": "3bba153215b975e906f8ca631c7e2bfc1c4b5215c9f97b3b0ec61980e4d1d6cf",
+        "semantic": "12337b88a3d2778b4a8e54c60b003d16daf8f5dff6c3f89b6aae357d717dc060"
+      },
+      "classes": {
+        "wall": {
+          "pixels": 715,
+          "mean_rgb": [
+            91.70069885253906,
+            83.38321685791016,
+            82.9566421508789
+          ],
+          "std_rgb": [
+            11.031911849975586,
+            10.225919723510742,
+            10.468425750732422
+          ],
+          "bbox_xyxy": [
+            514,
+            174,
+            640,
+            190
+          ],
+          "warm_color_fraction": 0.0,
+          "bright_neutral_fraction": 0.0
+        },
+        "fence": {
+          "pixels": 9880,
+          "mean_rgb": [
+            77.14908599853516,
+            51.69939422607422,
+            46.342613220214844
+          ],
+          "std_rgb": [
+            15.648491859436035,
+            16.817413330078125,
+            15.145183563232422
+          ],
+          "bbox_xyxy": [
+            0,
+            178,
+            270,
+            260
+          ],
+          "warm_color_fraction": 0.9918016194331983,
+          "bright_neutral_fraction": 0.0
+        },
+        "terrain_or_ground": {
+          "pixels": 40370,
+          "mean_rgb": [
+            88.92157745361328,
+            110.87525177001953,
+            71.88224029541016
+          ],
+          "std_rgb": [
+            39.88694381713867,
+            37.20396423339844,
+            34.285831451416016
+          ],
+          "bbox_xyxy": [
+            0,
+            117,
+            640,
+            360
+          ],
+          "warm_color_fraction": 4.9541738915035914e-05,
+          "bright_neutral_fraction": 0.0005697299975229131
+        }
+      }
+    }
+  ],
+  "class_support_in_survey": {
+    "train": {
+      "wall": {
+        "pixels": 5087911,
+        "positive_views_512px": 175
+      },
+      "fence": {
+        "pixels": 757572,
+        "positive_views_512px": 71
+      },
+      "terrain_or_ground": {
+        "pixels": 2565977,
+        "positive_views_512px": 182
+      }
+    },
+    "validation": {
+      "wall": {
+        "pixels": 53181,
+        "positive_views_512px": 22
+      },
+      "fence": {
+        "pixels": 198870,
+        "positive_views_512px": 24
+      },
+      "terrain_or_ground": {
+        "pixels": 3761959,
+        "positive_views_512px": 92
+      }
+    }
+  }
+}

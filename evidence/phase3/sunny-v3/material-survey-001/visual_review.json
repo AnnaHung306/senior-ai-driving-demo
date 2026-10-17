@@ -1,0 +1,18 @@
+{
+  "status": "inspected_appearance_differences",
+  "reviewed_at_utc": "2026-10-17T07:49:13.228147+00:00",
+  "reviewer": "assistant actual view_image inspection",
+  "summary_sha256": "00b0351bba0aeb97d0ad7e97c627566cbc4a95b33a918b75832e9060437ed29c",
+  "views_sha256": "df9d4801a9389a2a36735e6aa13e0d37f2dd140e5cc3831d7114ec3860d5951a",
+  "reviewed_images": [
+    {
+      "path": "page-00.png",
+      "sha256": "de32a4258ccfc6ed25761a312daab427a687ca743c14574b41b2a72e67e6b29b"
+    }
+  ],
+  "observations": [
+    "Selected train fence examples are concrete barriers or metal mesh; validation examples include white picket and wooden panel fences.",
+    "Training examples with warm RGB are not automatically wooden; the selected warm example still looks like metal mesh."
+  ],
+  "limits": "352 sparse fixed-timestep views, not proof that wooden/white picket fences are absent from the full training set. Color descriptors are proxies, not material labels. No model metrics or heldout indexes."
+}

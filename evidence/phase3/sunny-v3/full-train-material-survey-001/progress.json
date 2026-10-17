@@ -1,0 +1,11 @@
+{
+  "identity": {
+    "tool_sha256": "f949ac88b8931807db478cf38539da80653966b5a4b6c2fb5cc27739ca49c299",
+    "audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+    "image_inventory_sha256": "dfa830811b91994fbce03d7b321a533cd9dbd40227779b8dbe2511ec9163df59",
+    "selection": "all train bundles; validation positions0/40/80/120; all cameras",
+    "selected_views": 9696
+  },
+  "status": "completed",
+  "completed_views": 9696
+}

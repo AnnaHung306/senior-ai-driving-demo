@@ -22,3 +22,6 @@
 - 全train材質掃描exec19187已啟動：survey_sunny_materials.py --training-all，輸出artifacts/runs/sunny-train-full-material-survey-001，9696views（9600train+96固定val），15:50已存1137views。每view獨立JSON，重跑同命令可續；若舊程序仍活勿重開。偵測epoch0/300updates，無完成epoch。
 
 - 全量survey舊exec19187因WinError5更新progress停止，1138張records保留。已加8次有界PermissionError重試、兩項鎖定/保留舊JSON回歸通過；AST核對資料計算/選例不變後，保存舊source/progress/failure與io-recovery.json才遷移progress toolSHA。新exec49830同root續跑，15:54超過2368views。新status_sunny_training.ps1以FileShare.ReadWrite|Delete唯讀狀態，避免讀者阻擋atomic replace；15:54 detector epoch0/700updates，尚無epoch checkpoint。
+
+- 全量survey exec49830已exit0，9696records（9600train+96val）完成；全部compressed records/17代表圖/校驗與實看收據進evidence/full-train-material-survey-001。三類train計數與凍結統計完全相同；Fence>=512px只在Town01四groups，Town03四groups為0。
+- 新start_carla前置assert_training_idle.ps1已實測拒絕目前detector PID，沒有啟server。export修正三模型benchmark綁定/同bundle/有效測量/三種benchmark齊全、validationSHA與final checkpoint marker；5項回歸通過，錯報告在output建目錄前拒絕。偵測16:00仍epoch0/1600updates。

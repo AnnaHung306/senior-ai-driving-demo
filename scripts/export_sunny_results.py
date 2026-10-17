@@ -1,16 +1,60 @@
 """Export actual trained results and model cards; incomplete evidence cannot pass."""
 import argparse
+import hashlib
 import json
+import math
 from pathlib import Path
 import shutil
 import sys
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src'))
-from senior_ai.sunny_data import sha
 from senior_ai.core import write_json
 
 
 def read(path):return json.loads(path.read_text(encoding='utf-8'))
+
+def sha(path):
+    with Path(path).open('rb') as stream:return hashlib.file_digest(stream,'sha256').hexdigest()
 def number(value):return '—' if value is None else f'{value*100:.2f}%'
+
+
+def validate_benchmark(value,model_hashes,demo_frame):
+    """Reject stale model pairs, incomplete receipts and wrong demo bundles."""
+    keys={'detector_sha256':'detection','segmentation_sha256':'segmentation','phase_sha256':'light_state'}
+    if any(key in value for key in keys):
+        if any(value.get(key)!=model_hashes[name] for key,name in keys.items()):
+            raise ValueError('Integrated benchmark model tuple mismatch')
+        if value.get('frame')!=demo_frame or value.get('cameras')!=8:
+            raise ValueError('Integrated benchmark must measure the demo eight-view bundle')
+        times=value.get('eight_view_RGB_decode_to_CPU_perception_ms',{}).get('samples',[])
+        if not times or len(times)!=value.get('measured_bundles') or value.get('warmup_bundles',0)<1:
+            raise ValueError('Integrated benchmark has no complete warmed measurements')
+        if any(not isinstance(v,(int,float)) or isinstance(v,bool) or not math.isfinite(v) or v<=0 for v in times):
+            raise ValueError('Invalid integrated benchmark duration')
+        return 'integrated'
+    task=value.get('task')
+    if task not in ['detection','segmentation'] or value.get('checkpoint_sha256')!=model_hashes[task]:
+        raise ValueError('Individual benchmark task/checkpoint mismatch')
+    if value.get('samples',0)<1 or value.get('warmup',0)<1:
+        raise ValueError('Individual benchmark lacks warmed measurements')
+    for name in ['network_and_result_to_cpu_ms','warm_filesystem_RGB_manifest_to_result_ms']:
+        for percentile in ['p50','p95']:
+            v=value.get(name,{}).get(percentile)
+            if not isinstance(v,(int,float)) or isinstance(v,bool) or not math.isfinite(v) or v<=0:
+                raise ValueError('Invalid individual benchmark duration')
+    return task
+
+
+def final_receipt(run,state):
+    path=run/'final_evaluation.json'
+    if not path.exists():return {'status':'not_evaluated'}
+    value=read(path)
+    if value.get('checkpoint_sha256')!=state['best_sha256']:
+        raise ValueError('Final evaluation belongs to another checkpoint: '+run.name)
+    if value.get('status')=='passed':
+        marker=run/'lockbox_started.json'
+        if not marker.exists() or read(marker).get('best_sha256')!=state['best_sha256']:
+            raise ValueError('Passed heldout receipt lacks bound evaluation marker: '+run.name)
+    return value
 
 
 def metric_table(task,result):
@@ -33,10 +77,25 @@ def export(args):
     states={name:read(run/'state.json') for name,run in runs.items()}
     for name,run in runs.items():
         if states[name]['status']!='completed' or sha(run/'best.pt')!=states[name]['best_sha256']:raise ValueError('Completed intact model required: '+name)
+        if not states[name].get('checkpoint_reload_identical'):raise ValueError('Verified checkpoint reload required: '+name)
+        for filename,key in [('validation.json','validation_sha256'),('validation_frames.jsonl','validation_frames_sha256')]:
+            if sha(run/filename)!=states[name].get(key):raise ValueError('Validation artifact changed: '+name+'/'+filename)
+    finals={name:final_receipt(run,states[name]) for name,run in runs.items()}
+    model_hashes={name:state['best_sha256'] for name,state in states.items()}
+    demo=read(args.demo/'perception.json')
+    for key,name in [('detector_sha256','detection'),('segmentation_sha256','segmentation'),('phase_sha256','light_state')]:
+        if demo.get(key)!=model_hashes[name]:raise ValueError('Demo checkpoint mismatch')
+    if demo['source']!='learned_prediction' or demo['model_inputs']!='RGB_only' or len(demo['cameras'])!=8:raise ValueError('Actual RGB-only eight-view demo required')
+    benchmarks=[(source,read(source)) for source in args.benchmark]
+    kinds={validate_benchmark(value,model_hashes,demo['frame']) for _,value in benchmarks}
+    if kinds!={'detection','segmentation','integrated'}:raise ValueError('Detector, segmentation and integrated eight-view benchmarks required')
+    if len({source.name for source,_ in benchmarks})!=len(benchmarks):raise ValueError('Benchmark filenames must be distinct')
+    reserved={'summary.json','perception.json','REPORT.md','surround.png'}
+    if any(source.name in reserved for source,_ in benchmarks):raise ValueError('Benchmark filename collides with export artifact')
     args.output.mkdir(parents=True);summary={'scope':'ClearNoon ideal simulation only','models':{},'phase3_complete':False,
         'source_sha256':sha(Path(__file__)),'data_audit_sha256':sha(args.root/'audit.json'),'data_review_sha256':sha(args.root/'visual_review.json')}
     for name,run in runs.items():
-        output=args.output/name;output.mkdir();state=states[name];final=read(run/'final_evaluation.json') if (run/'final_evaluation.json').exists() else {'status':'not_evaluated'}
+        output=args.output/name;output.mkdir();state=states[name];final=finals[name]
         model={'run':run.as_posix(),'checkpoint':(run/'best.pt').as_posix(),'checkpoint_sha256':state['best_sha256'],
                'training_status':state['status'],'heldout_status':final['status']}
         summary['models'][name]=model
@@ -62,14 +121,8 @@ def export(args):
                 card+='\n'
         card+='## 使用限制\n\n八方向逐鏡頭二維感知；沒有跨鏡頭融合、深度／BEV／3D occupancy、導航規劃或 learned vehicle control。只有晴朗白天合成資料；共用資產、短序列與少量城鎮／路線高度相關，像素／frames 不是獨立試驗，沒有可靠廣泛泛化信賴區間。分類與偵測分數均未校準。規則資料生成器的零碰撞不代表 learned driving。\n'
         (output/'MODEL_CARD.md').write_text(card,encoding='utf-8',newline='\n')
-    for source in args.benchmark:
-        value=read(source)
-        if value.get('checkpoint_sha256') and value['checkpoint_sha256'] not in {s['best_sha256'] for s in states.values()}:raise ValueError('Benchmark checkpoint mismatch')
+    for source,value in benchmarks:
         shutil.copyfile(source,args.output/source.name)
-    demo=read(args.demo/'perception.json')
-    for key,name in [('detector_sha256','detection'),('segmentation_sha256','segmentation'),('phase_sha256','light_state')]:
-        if demo[key]!=states[name]['best_sha256']:raise ValueError('Demo checkpoint mismatch')
-    if demo['source']!='learned_prediction' or demo['model_inputs']!='RGB_only' or len(demo['cameras'])!=8:raise ValueError('Actual RGB-only eight-view demo required')
     shutil.copyfile(args.demo/'surround.png',args.output/'surround.png');shutil.copyfile(args.demo/'perception.json',args.output/'perception.json')
     summary['phase3_complete']=all(m['heldout_status']=='passed' for m in summary['models'].values())
     summary['rgb_only_demo']=True;summary['benchmark_files']=[p.name for p in args.benchmark]

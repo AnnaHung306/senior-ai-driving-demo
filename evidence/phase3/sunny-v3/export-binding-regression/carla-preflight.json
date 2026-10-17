@@ -1,0 +1,6 @@
+{
+  "scope": "Read-only preflight call only; server not started",
+  "result": "blocked_existing_training",
+  "observed_message": "Perception training/evaluation is still running (PID 27224, 9168). Keep CARLA off until it exits.",
+  "limits": "Only busy branch exercised against actual native processes; PIDs historical and cannot be used to stop anything without rechecking commands."
+}

@@ -62,3 +62,10 @@ CPU錯例exec74874已exit0，產生8例/3pages；Town04-02沒有≥512px的fence
 為避免默默忽略source identity，先從git d197ca6讀原工具，驗證原toolSHA等於舊progress；以AST確認main/data計算/選例完全一致（只排除新增io_recovery元資料欄位），再備份before-io-recovery的原source/progress/failure，保存1138records SHA及新舊toolSHA receipt，最後只遷移progress identity。raw/records與模型run不改。evidence/phase3/sunny-v3/material-survey-io-recovery保留receipt/failure/regression。新續跑 **exec49830**，log sunny-train-full-material-survey-resume-001.log，15:54已超過2368views。
 
 新增 `.\scripts\status_sunny_training.ps1` 唯讀各run，開檔使用FileShare.ReadWrite|Delete，不阻擋訓練atomic JSON replace；只讀newline完整epoch記錄。它只顯示已存紀錄，不推斷程序存活；可配合exec56349或escalated CIM查實際命令。15:54 detector epoch0/700updates，還沒有首輪last.pt/state，不要說checkpoint已存。
+
+## 後續小段：全train掃描落盤、啟動與匯出檢查
+
+- exec49830已exit0，全9696view完成；已實看17代表圖/3pages。evidence/phase3/sunny-v3/full-train-material-survey-001保存約2.4MB deterministic gzip全records、摘要、圖及review。wall192741757px、fence28297482px、terrain96425301px與凍結trainer統計逐一完全相同；Fence>=512px的train views分別Town01四groups526/455/839/767，Town03四groups均0。自動掃描全train，但只人工式實看17代表，不可宣稱已視覺檢查全部圖或證明所有材質缺失。
+- start_carla.ps1新增assert_training_idle.ps1，先查本機感知GPU腳本實際命令及GPU使用量；訓練/評估或>2048MiB先拒啟，不能與train爭VRAM。escalated唯讀實測目前detector PID27224/9168被拒，沒有啟動/停止任何程序。
+- export_sunny_results.py發現原本只驗證singular checkpoint欄位，整合benchmark三個SHA可被漏檢。現在逐模型綁定、同demo frame/8方向、正確測量數/有限正時間，要求det/seg/integrated三種收據齊全；validation JSON/frames SHA與checkpoint reload、final checkpoint和lockbox marker也核對。錯證據在建立output前拒絕。5項專門回歸通過，無GPU。尚未以最終三模型真的export，不能當Phase3完成。
+- 偵測16:00仍epoch0/1600updates，meanloss .39615，首輪state/last還未產生；queue56349保留。模型/訓練src未改，phase後續用v1-002。

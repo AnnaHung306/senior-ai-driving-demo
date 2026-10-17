@@ -1,0 +1,89 @@
+{
+  "status": "passed",
+  "scope": "Full 9600 training RGB+semantic survey; validation remains sparse96views. No heldout indexes or model scoring.",
+  "views": 9696,
+  "train_views": 9600,
+  "summary_sha256": "0516d6f48a141730adb1cb647fdb79a84b5181f4f2e1499e404def85dbebd0c2",
+  "records_gzip_sha256": "a9a3fb718cf2012e017d879a48b16f9dc69153b683fa28f51bf97259ba975b9d",
+  "groups": {
+    "train/town01-route-00": {
+      "views": 1200,
+      "wall_pixels": 9909459,
+      "fence_pixels": 2638139,
+      "fence_views_512px": 526,
+      "terrain_pixels": 16794084
+    },
+    "train/town01-route-01": {
+      "views": 1200,
+      "wall_pixels": 2827442,
+      "fence_pixels": 2123968,
+      "fence_views_512px": 455,
+      "terrain_pixels": 31752224
+    },
+    "train/town01-route-02": {
+      "views": 1200,
+      "wall_pixels": 103864,
+      "fence_pixels": 11748524,
+      "fence_views_512px": 839,
+      "terrain_pixels": 4643694
+    },
+    "train/town01-route-03": {
+      "views": 1200,
+      "wall_pixels": 2886816,
+      "fence_pixels": 11682250,
+      "fence_views_512px": 767,
+      "terrain_pixels": 21017191
+    },
+    "train/town03-route-00": {
+      "views": 1200,
+      "wall_pixels": 4116543,
+      "fence_pixels": 5669,
+      "fence_views_512px": 0,
+      "terrain_pixels": 1069205
+    },
+    "train/town03-route-01": {
+      "views": 1200,
+      "wall_pixels": 18779774,
+      "fence_pixels": 89545,
+      "fence_views_512px": 0,
+      "terrain_pixels": 12405493
+    },
+    "train/town03-route-02": {
+      "views": 1200,
+      "wall_pixels": 128556708,
+      "fence_pixels": 0,
+      "fence_views_512px": 0,
+      "terrain_pixels": 23656
+    },
+    "train/town03-route-03": {
+      "views": 1200,
+      "wall_pixels": 25561151,
+      "fence_pixels": 9387,
+      "fence_views_512px": 0,
+      "terrain_pixels": 8719754
+    },
+    "validation/town04-route-00": {
+      "views": 32,
+      "wall_pixels": 26140,
+      "fence_pixels": 167762,
+      "fence_views_512px": 19,
+      "terrain_pixels": 869561
+    },
+    "validation/town04-pedestrian-route-01": {
+      "views": 32,
+      "wall_pixels": 2689,
+      "fence_pixels": 31108,
+      "fence_views_512px": 5,
+      "terrain_pixels": 1728713
+    },
+    "validation/town04-route-02": {
+      "views": 32,
+      "wall_pixels": 24352,
+      "fence_pixels": 0,
+      "fence_views_512px": 0,
+      "terrain_pixels": 1163685
+    }
+  },
+  "raw_training_wall_fence_terrain_counts_equal_frozen_training_statistics": true,
+  "frozen_training_statistics_sha256": "a094c7783a128fe309e30b2476edcb4a2e9fba9969cbe3374744fb2dafcef1ae"
+}

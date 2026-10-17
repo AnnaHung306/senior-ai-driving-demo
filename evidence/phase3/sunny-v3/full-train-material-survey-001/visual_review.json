@@ -1,0 +1,26 @@
+{
+  "status": "inspected_appearance_differences",
+  "reviewed_at_utc": "2026-10-17T07:59:40.879488+00:00",
+  "reviewer": "assistant actual view_image inspection of all3pages/17selectedcontexts",
+  "summary_sha256": "0516d6f48a141730adb1cb647fdb79a84b5181f4f2e1499e404def85dbebd0c2",
+  "reviewed_images": [
+    {
+      "path": "page-00.png",
+      "sha256": "d4fa261d82ea21672aab79c85be0907276e81dde9d2aa0149b79dccd0e76637a"
+    },
+    {
+      "path": "page-01.png",
+      "sha256": "70abaf91d0d8ff3dcdbb352666800467c5dc3936afbb253eadced58ce0bc883b"
+    },
+    {
+      "path": "page-02.png",
+      "sha256": "100e2146e9f2c6b32a6c8f8ff6a081e45bcf9c5f7baee46fa67526ae49326097"
+    }
+  ],
+  "observations": [
+    "All 9600 training views were scanned for support/color descriptors. Raw Fence support >=512 pixels occurs in the four Town01 route groups; the four Town03 groups have none at that threshold.",
+    "Selected max-support/warm/bright-neutral train contexts show concrete barriers and metal mesh; validation representatives show white picket and wooden panels.",
+    "Warm color is insufficient to identify wood: the warm train selections still include metal mesh or distant small structures."
+  ],
+  "limits": "Automated descriptors scanned all train views, but only17selected contexts were visually inspected. This does not prove every possible wooden fence is absent; no automatic material annotation, new data approval or model acceptance."
+}

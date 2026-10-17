@@ -2,6 +2,7 @@ param([string]$CarlaRoot = '', [int]$Port = 2000,
       [ValidateSet('dx11','dx12')][string]$GraphicsApi = 'dx12',
       [ValidateSet('Low','Epic')][string]$Quality = 'Epic')
 $ErrorActionPreference = 'Stop'
+& (Join-Path $PSScriptRoot 'assert_training_idle.ps1')
 if (-not $CarlaRoot) {
     $report = Join-Path (Split-Path -Parent $PSScriptRoot) 'artifacts\reports\installation.json'
     if (Test-Path -LiteralPath $report) {

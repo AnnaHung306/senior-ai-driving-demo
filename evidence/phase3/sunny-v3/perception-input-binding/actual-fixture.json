@@ -1,0 +1,16 @@
+{
+  "input_manifest_sha256": "e767160593c437acf7e4b33bb06eafce049d1a82d978e38cca17937f7229b7ac",
+  "input_RGB_sha256": {
+    "front": "d70901a2a22eb3417f0749887437a08a9e20fb4559a596357e38c19de3b0fed2",
+    "front_right": "ee41f02480dd0b76dcbc00eb944a0b1aa1171622fbcf13f3bb2e167d2cb155dd",
+    "right": "7758bd334c8d165b35de8af647582de3d8e8231b1b1f9fb87e3b559fcb647c36",
+    "rear_right": "6f40610355e33553c42de724556599e03526e5538ae3fd358f5e5801c3eeac87",
+    "rear": "2870ca2d3601b9d48f96aa0f3267a5d70af6d82f77595b3b1bc8d9a9034af64a",
+    "rear_left": "0921fa421cbc64742290b48c470831b51f6e29d0f8e7d618ff5584f1fdd0a737",
+    "left": "0d2cd609d105e2423fac4fe53f05fabae378f29fea359cdc8e1ed38035cb8f86",
+    "front_left": "78eded91256bcf66713cc10e0e203ed52ec248c564cc5527ea2ea224af0ad9f1"
+  },
+  "input_fingerprint_source_sha256": "71b41352e67811a1467bd8840cb6b72d06831c06f48e8a08532df21d723e388c",
+  "scope": "Actual preselected validation RGB-only input byte verification; no inference or timing executed",
+  "checked_at_utc": "2026-10-17T08:04:29.770021+00:00"
+}

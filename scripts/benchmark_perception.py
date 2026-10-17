@@ -13,6 +13,7 @@ from senior_ai.sunny_data import sha
 from senior_ai.light_model import LightStateNet,crop_rgb
 from senior_ai.road_boundaries import visible_margin
 from train_sunny import require_idle_gpu
+from perception_inputs import fingerprint_rgb_bundle
 
 
 def main(args):
@@ -24,6 +25,7 @@ def main(args):
     if state['task']!='light_state':raise ValueError('Phase classifier required')
     phase=LightStateNet().cuda().eval();phase.load_state_dict(state['model'])
     frame=read_sensor_frame(args.root,args.manifest);cameras=list(frame['cameras'])
+    inputs=fingerprint_rgb_bundle(args.root,args.manifest)
     def forward():
         results=[]
         for camera in cameras:
@@ -42,7 +44,7 @@ def main(args):
         times=[]
         for _ in range(10):
             torch.cuda.synchronize();started=time.perf_counter();results=forward();torch.cuda.synchronize();times.append((time.perf_counter()-started)*1000)
-    result={'detector_sha256':sha(args.detector),'segmentation_sha256':sha(args.segmentation),'phase_sha256':sha(args.light_checkpoint),
+    result={**inputs,'detector_sha256':sha(args.detector),'segmentation_sha256':sha(args.segmentation),'phase_sha256':sha(args.light_checkpoint),
         'source_sha256':sha(Path(__file__)),'frame':frame['frame'],'cameras':len(cameras),'warmup_bundles':3,'measured_bundles':10,
         'eight_view_RGB_decode_to_CPU_perception_ms':{'p50':float(np.percentile(times,50)),'p95':float(np.percentile(times,95)),'samples':times},
         'max_cuda_allocated_mib':torch.cuda.max_memory_allocated()/1024**2,'max_cuda_reserved_mib':torch.cuda.max_memory_reserved()/1024**2,

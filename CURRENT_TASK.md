@@ -1,27 +1,12 @@
-# 目前任務：可中斷的小檢查，繼續晴天 Phase 3
+# 目前任務：持續做可中斷的小工作，完成晴天 Phase 3
 
-最新狀態：**CHECKPOINT_PHASE3_2026-10-17_SMALL_CHECKS.md**（2026-10-17 12:26 Asia/Taipei）；完整流程與限制見 **CHECKPOINT_PHASE3_2026-10-17.md**。舊程序與舊成績不能當最新狀態。
+使用者最新要求：可以一直做到被強制停止；每個小段落盤/commit。詳細順序、坑與歷史見 **CHECKPOINT_PHASE3_2026-10-17_SMALL_CHECKS.md**，原完整協議見 **CHECKPOINT_PHASE3_2026-10-17.md** / **PHASE3_TRAINING_PROTOCOL.md**。本狀態截至2026-10-17 16:05 Asia/Taipei。
 
-- 使用者允許繼續，但本輪做小工作，每項落盤，避免中斷丟失成果；沒有要求停止原背景程序。
-- 分割 v4-001已完成8輪/9600updates，exec68540 exit0，best第7輪。檔案SHA、27個source、3600張validation逐張混淆合計核對通過。
-- val mIoU50.85%達總平均門檻；wall6.19%、fence.73%、路緣F1 .40733仍失敗，**不能說品質通過**。未開heldout。
-- 更新：queue57077已exit1。號誌v1-001跑完16輪/832updates後，JSON收尾因NumPy bool失敗，原run與failure保留。已修正單一布林型別，5項相關回歸通過。新queue exec56349正在跑v1-002相同設定，成功且state completed後接det v3-001；勿重複啟動。
-- 新檢查器 `scripts/check_sunny_segmentation_artifacts.py` 純CPU讀檔、輸出atomic、可立即重跑。收據與薄弱類別混淆診斷在 `evidence/phase3/sunny-v3/health-20261017/`。
-- RGB-only示範輸入9檔SHA與schema通過，號誌config仍綁補收plan；沒有做推論/採集。
-- CARLA off，ClearNoon；黃燈補收、joint validation、heldout、三模型RGB-only demo/benchmark及最終模型卡導出仍未完成。
-- Phase3未完成，不進Phase4。先查實際程序及新log再接續；勿以歷史PID殺程序或重新啟動相同run。
-
-- 新增可中斷續跑的CPU validation錯例工具 `review_sunny_segmentation.py`，exec74874已exit0，輸出8例/3pages，已實際看完並保存evidence，標記inspected_with_failures。CPU FP32診斷不取代GPU BF16驗收。
-
-- 15:40實際Get-Item確認v1-002目錄15:35:59已建立，無檔案表示尚未寫coverage；不能用Get-ChildItem空輸出推定目錄不存在。新Python PID33276累積讀取約320MB/81665次，有前置I/O活動。
-
-- 最新15:44：號誌v1-002已completed且GT crop gate passed（macro recall94.38%、紅→綠1.33%），最佳epoch8。queue56349已接det v3-001，run/source已凍結，尚未epoch；所有後續phase命令改v1-002。號誌/固定景物錯例都實際看圖並保存evidence，joint仍未做。
-
-- 15:48新增純CPU/無模型的352view train/validation材質支持survey，逐view atomic可續跑；8例contact page已實看，evidence/material-survey-001保留全部352records。當批train fence主要混凝土/網，val木/白柵；尚未證明全train欠缺，下一步掃全train。偵測目前epoch0/100updates。
-
-- 全train材質掃描exec19187已啟動：survey_sunny_materials.py --training-all，輸出artifacts/runs/sunny-train-full-material-survey-001，9696views（9600train+96固定val），15:50已存1137views。每view獨立JSON，重跑同命令可續；若舊程序仍活勿重開。偵測epoch0/300updates，無完成epoch。
-
-- 全量survey舊exec19187因WinError5更新progress停止，1138張records保留。已加8次有界PermissionError重試、兩項鎖定/保留舊JSON回歸通過；AST核對資料計算/選例不變後，保存舊source/progress/failure與io-recovery.json才遷移progress toolSHA。新exec49830同root續跑，15:54超過2368views。新status_sunny_training.ps1以FileShare.ReadWrite|Delete唯讀狀態，避免讀者阻擋atomic replace；15:54 detector epoch0/700updates，尚無epoch checkpoint。
-
-- 全量survey exec49830已exit0，9696records（9600train+96val）完成；全部compressed records/17代表圖/校驗與實看收據進evidence/full-train-material-survey-001。三類train計數與凍結統計完全相同；Fence>=512px只在Town01四groups，Town03四groups為0。
-- 新start_carla前置assert_training_idle.ps1已實測拒絕目前detector PID，沒有啟server。export修正三模型benchmark綁定/同bundle/有效測量/三種benchmark齊全、validationSHA與final checkpoint marker；5項回歸通過，錯報告在output建目錄前拒絕。偵測16:00仍epoch0/1600updates。
+- **唯一背景訓練queue exec56349**：號誌v1-002已成功退出，現跑 `train_sunny.py --task detection --config configs/sunny_training_v3_9.json --run artifacts/runs/sunny-detection-v3-001`。16:05 epoch0/2100updates，meanloss .37545，尚無首輪state/last；不要重複啟動。det source凍結git d3c2ef7，原queue57077已失敗退出。
+- 分割v4-001 completed：8輪/9600updates，best第7輪，val mIoU50.85%；wall6.19%、fence.73%、marginF1 .40733仍失敗，不能進heldout。權重/27source/3600逐張混淆均核對通過。
+- 號誌 **v1-002 completed**：16輪/832updates，best第9輪；GT crop macro recall94.38%、red→green10/753=1.33%，gate passed。actual detector-box joint待做。v1-001僅JSON NumPy bool收尾失敗，failure/權重保留；型別修正後新舊best/last tensor相同。後續命令用v1-002。
+- 全train材質survey已完成並實看17代表圖：9600train+96固定val，全9696records壓縮存evidence/full-train-material-survey-001。三類train像素總數完全等於frozen統計；Fence>=512px只在Town01四groups，Town03四groups為0。代表train多混凝土/網、val木/白柵；不是全圖人工材質標註。先據此規畫train-only補景，不用val/heldout補train、不盲目加權重重訓。
+- 所有CPU掃描/圖片程序已完成；exec19187失敗已由49830續跑完成。Windows短暫replace失敗的8次有界重試/兩項回歸、原1138records與AST一致恢復收據已保存。status_sunny_training.ps1以ReadWrite|Delete分享讀取狀態，不把檔案紀錄當process活著。
+- 最新**83 tests discovered，80 passed / 3 CUDA tests skipped**，CPU-only suite010（CUDA_VISIBLE_DEVICES=-1只用於該test子程序，不影響現有GPU訓練）；之前GPU suite72通過仍保留。8RGB實際輸入指紋核對通過；demo/個別與整合benchmark會綁manifest與8RGB SHA，export拒絕錯模型/輸入/測量收據。尚未以最終三模型真的demo或benchmark。
+- **CARLA off / ClearNoon**；start_carla.ps1新增training/GPU busy前置拒啟，實際busy branch已驗證。黃燈heldout補收204PNG仍未採集；全部新模型development/lockbox未評分，joint validation必須先於det/phase任何lockbox marker。
+- 下一步：保存本段變更；持續看det首輪驗證逐類結果（勿在GPU訓練中再開GPU推論/測試/CARLA）；完善train-only景物補收計畫。完整3模型驗收/補收/QA/demo/benchmark/export仍未完成，Phase3不算完成，不進Phase4。

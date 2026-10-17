@@ -17,8 +17,12 @@ def sha(path):
 def number(value):return '—' if value is None else f'{value*100:.2f}%'
 
 
-def validate_benchmark(value,model_hashes,demo_frame):
+def validate_benchmark(value,model_hashes,demo_frame,demo_inputs):
     """Reject stale model pairs, incomplete receipts and wrong demo bundles."""
+    if not demo_inputs.get('input_manifest_sha256') or not isinstance(demo_inputs.get('input_RGB_sha256'),dict) or len(demo_inputs['input_RGB_sha256'])!=8:
+        raise ValueError('Demo must bind the actual eight RGB image hashes')
+    for key in ['input_manifest_sha256','input_RGB_sha256']:
+        if value.get(key)!=demo_inputs[key]:raise ValueError('Benchmark RGB input mismatch')
     keys={'detector_sha256':'detection','segmentation_sha256':'segmentation','phase_sha256':'light_state'}
     if any(key in value for key in keys):
         if any(value.get(key)!=model_hashes[name] for key,name in keys.items()):
@@ -87,7 +91,7 @@ def export(args):
         if demo.get(key)!=model_hashes[name]:raise ValueError('Demo checkpoint mismatch')
     if demo['source']!='learned_prediction' or demo['model_inputs']!='RGB_only' or len(demo['cameras'])!=8:raise ValueError('Actual RGB-only eight-view demo required')
     benchmarks=[(source,read(source)) for source in args.benchmark]
-    kinds={validate_benchmark(value,model_hashes,demo['frame']) for _,value in benchmarks}
+    kinds={validate_benchmark(value,model_hashes,demo['frame'],demo) for _,value in benchmarks}
     if kinds!={'detection','segmentation','integrated'}:raise ValueError('Detector, segmentation and integrated eight-view benchmarks required')
     if len({source.name for source,_ in benchmarks})!=len(benchmarks):raise ValueError('Benchmark filenames must be distinct')
     reserved={'summary.json','perception.json','REPORT.md','surround.png'}

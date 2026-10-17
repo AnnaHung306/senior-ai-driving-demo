@@ -69,3 +69,9 @@ CPU錯例exec74874已exit0，產生8例/3pages；Town04-02沒有≥512px的fence
 - start_carla.ps1新增assert_training_idle.ps1，先查本機感知GPU腳本實際命令及GPU使用量；訓練/評估或>2048MiB先拒啟，不能與train爭VRAM。escalated唯讀實測目前detector PID27224/9168被拒，沒有啟動/停止任何程序。
 - export_sunny_results.py發現原本只驗證singular checkpoint欄位，整合benchmark三個SHA可被漏檢。現在逐模型綁定、同demo frame/8方向、正確測量數/有限正時間，要求det/seg/integrated三種收據齊全；validation JSON/frames SHA與checkpoint reload、final checkpoint和lockbox marker也核對。錯證據在建立output前拒絕。5項專門回歸通過，無GPU。尚未以最終三模型真的export，不能當Phase3完成。
 - 偵測16:00仍epoch0/1600updates，meanloss .39615，首輪state/last還未產生；queue56349保留。模型/訓練src未改，phase後續用v1-002。
+
+## 後續小段：RGB輸入收據與CPU全suite
+
+- 新perception_inputs.py只讀嚴格RGB-only manifest，產生manifest與8張RGB各自SHA，另外綁helper source。predict_perception、benchmark_sunny與benchmark_perception都在推論/計時前記錄；hash計算不列timing。export除了模型tuple/frame也核對真實RGB bytes，避免相同frame編號下混入不同圖。實際預選RGB-only fixture8圖核對通過；2input tests與6export regression通過，含同frame改RGB/GT欄位拒絕/錯收據不先建output。未執行真實三模型demo或benchmark。
+- CPU-only完整suite010：**Ran83, OK skipped3，即80通過/3CUDA跳過**，9.316秒。CUDA_VISIBLE_DEVICES=-1僅test子程序設定，沒有改既有GPU訓練；不把skipped說成GPU測試通過。log保存在evidence/phase3/sunny-v3/perception-input-binding/cpu-suite-010.log。
+- 16:05 detector仍epoch0/2100updates，meanloss .37545，queue56349活著，還沒有首輪last/state。CURRENT_TASK已重新整理為最新現況，舊節點全部保留本checkpoint。

@@ -17,6 +17,7 @@ from senior_ai.segmentation_data import load_inference_rgb
 from senior_ai.sunny_data import SEGMENTATION_NAMES,DETECTION_CLASSES,sha
 from senior_ai.light_model import LightStateNet,crop_rgb
 from senior_ai.light_labels import LIGHT_STATES
+from perception_inputs import fingerprint_rgb_bundle
 from senior_ai.road_boundaries import visible_margin
 
 
@@ -32,7 +33,7 @@ def main(args):
         if saved['task']!='light_state':raise ValueError('Phase checkpoint task mismatch')
         phase=LightStateNet().to(args.device).eval();phase.load_state_dict(saved['model'])
     frame=read_sensor_frame(args.root,args.manifest);names={v:k for k,v in DETECTION_CLASSES.items()}
-    result={'schema_version':1,'source':'learned_prediction','model_inputs':'RGB_only','frame':frame['frame'],
+    result={**fingerprint_rgb_bundle(args.root,args.manifest),'schema_version':1,'source':'learned_prediction','model_inputs':'RGB_only','frame':frame['frame'],
             'timestamp_s':frame['timestamp_s'],'detector_sha256':sha(args.detector),'segmentation_sha256':sha(args.segmentation),
             'phase_sha256':sha(args.light_checkpoint) if args.light_checkpoint else None,
             'segmentation_classes':SEGMENTATION_NAMES,'display_detection_score_threshold':.5,

@@ -1,0 +1,11 @@
+test_individual_task_cannot_reuse_other_models_hash (test_sunny_export.SunnyExportTests.test_individual_task_cannot_reuse_other_models_hash) ... ok
+test_integrated_benchmark_binds_every_model (test_sunny_export.SunnyExportTests.test_integrated_benchmark_binds_every_model) ... ok
+test_integrated_benchmark_rejects_other_bundle_and_partial_measurements (test_sunny_export.SunnyExportTests.test_integrated_benchmark_rejects_other_bundle_and_partial_measurements) ... ok
+test_same_frame_id_cannot_hide_different_RGB_bytes (test_sunny_export.SunnyExportTests.test_same_frame_id_cannot_hide_different_RGB_bytes) ... ok
+test_stale_final_or_unbound_pass_cannot_be_exported_as_passed (test_sunny_export.SunnyExportTests.test_stale_final_or_unbound_pass_cannot_be_exported_as_passed) ... ok
+test_wrong_integrated_model_fails_before_creating_export_directory (test_sunny_export.SunnyExportTests.test_wrong_integrated_model_fails_before_creating_export_directory) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.074s
+
+OK

@@ -1,0 +1,6 @@
+{
+  "target_pid": 9168,
+  "expected_creation_filetime": "134366965621678596",
+  "command_verified": "\"C:\\Users\\HP\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" scripts/train_sunny.py --task detection --config configs/sunny_training_v3_9.json --run artifacts/runs/sunny-detection-v3-001",
+  "sampled_at": "2026-10-17T18:48:24.6752422+08:00"
+}

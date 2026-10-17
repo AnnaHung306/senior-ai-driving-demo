@@ -1,0 +1,28 @@
+{
+  "sampled_at": "2026-10-17T18:44:23.9956136+08:00",
+  "query_status": "available",
+  "events": [
+    {
+      "TimeCreated": "2026-10-17T18:34:43.0128621+08:00",
+      "ProviderName": "Microsoft-Windows-Kernel-General",
+      "Id": 1,
+      "MessagePrefix": "系統時間已從 ‎2026‎-‎10‎-‎17T10:34:43.008695900Z 變更為 ‎2026‎-‎10‎-‎17T10:34:43.009654600Z。\r\nTime Delta: 0 ms\r\n\r\n變更原因: An application or system component changed the time。\r\n處理常式: '\\Device\\HarddiskVolume3\\Wind"
+    },
+    {
+      "TimeCreated": "2026-10-17T18:34:27.72231+08:00",
+      "ProviderName": "Microsoft-Windows-Kernel-Power",
+      "Id": 507,
+      "MessagePrefix": "系統正在結束現代待命 \r\n\r\n 原因：Input Keyboard."
+    },
+    {
+      "TimeCreated": "2026-10-17T16:13:10.2100512+08:00",
+      "ProviderName": "Microsoft-Windows-Kernel-Power",
+      "Id": 506,
+      "MessagePrefix": "系統正在進入現代待命 \r\n\r\n 原因：Idle Timeout."
+    }
+  ],
+  "gpu": [
+    "5505 MiB, 99 %"
+  ],
+  "limits": "Read-only observation. Empty or unavailable event query does not establish a pause cause; GPU sample is instantaneous."
+}

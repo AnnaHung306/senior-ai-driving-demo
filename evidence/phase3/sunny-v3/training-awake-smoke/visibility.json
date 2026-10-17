@@ -1,0 +1,7 @@
+{
+  "checked_at_utc": "2026-10-17T10:50:38.754217+00:00",
+  "API_request_accepted": true,
+  "short_child_exit_released": true,
+  "powercfg_requests_query": "unavailable_requires_Windows_administrator; sandbox escalation does not grant UAC administrator",
+  "limits": "Native API success and helper/target instance receipt verified. Detailed powercfg request-list diagnostic was unavailable; no global power-policy changes or claim of overriding explicit user sleep."
+}

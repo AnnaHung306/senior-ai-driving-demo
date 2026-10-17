@@ -89,3 +89,12 @@ CPU錯例exec74874已exit0，產生8例/3pages；Town04-02沒有≥512px的fence
 - 新 `evaluate_sunny_segmentation_cpu.py` 只做CPU FP32、同精度train/val診斷，主007不改、不讀heldout。固定每scene每第10個bundle×8方向，960train+360val=1320；每20views atomic chunk、source/config/model/data/選例SHA綁定，逐chunk核對raw bytes，resume跳過logits但重驗bytes。val另與同一批原GPU BF16結果比較，並強制target supports完全相同，避免把CPU數值差異當domain差異。seen train不是泛化成績，此subset不是正式驗收。
 - smoke exec26912以--max-new-chunks1存20張後exit0，接著 **exec99969** 去掉chunk budget用同output續跑；新首條log saved_views40/new_chunks1，沒有重算第一chunk。18:41已380/1320。root `artifacts/runs/sunny-mobile-CPU-stratified-eval-001`，log `sunny-mobile-CPU-stratified-eval-resume-001.log`。code/首20與恢復prefix證據已保存。兩個正在跑的只有GPUqueue56349與CPUdiag99969；原smoke不是live。
 - 16:12→18:38又有牆鐘長跳，原值保留，不推定原因或當純GPU效能。
+
+## 後續小段：CPU診斷完成、確認待命原因與暫時keep-awake
+
+- CPU exec99969已exit0，全1320views完成；960seen train與360val同CPU FP32：wallIoU .9739556/.0652698、fence .6894097/.0073885、focusmIoU .866309/.512267、marginF1 .955622/.401914。相同360val原GPU BF16mIoU .5121547，差.01127百分點，逐張GT support完全相同。資料/evidence保存report、66chunks deterministic gzip（約259KB）、原log、方法與SHA；此subset不是官方gate或泛化CI。新恢復計畫資料覆蓋優先仍成立，但不是因果證明。
+- 新System事件明確記錄：16:13:10 Kernel-Power506 Idle Timeout進入Modern Standby，18:34:27 Kernel-Power507 Input Keyboard退出；16:12→18:38長跳有待命事件支持，不再只猜原因。18:44GPU瞬時5505MiB/99%，snapshot在CPU診斷evidence/runtime-observation.json。早先其他時段仍不推定同原因。
+- 參考Microsoft官方SetThreadExecutionState/system-sleep-criteria文件，新增hold_awake_for_training.py：只持有目前thread的ES_CONTINUOUS|ES_SYSTEM_REQUIRED，綁目標process handle與creation FILETIME防PID重用；不要求display/away mode、不改電源方案。目標退出、最多6h或helper結束會清除；明確使用者sleep仍由Windows處理。原生2秒子程序實測成功設置並在exit後release，收據evidence/training-awake-smoke/release-on-exit.json。
+- **live helper exec8890**，native helperPID14152，target native detectorPID9168，expected creationFILETIME134366965621678596（字串/整數，勿用JS浮點）。18:48啟動，receipt artifacts/reports/sunny-detection-v3-001-awake.json/log與awake-target.json；snapshot另進evidence/training-awake-smoke。不要重複啟動。結束以新receipt為準，PID只供查核，不能未核對命令/creation就殺。
+- `powercfg /requests`系統要求真正OS管理員，sandbox escalation不授予UAC admin；未取得詳細列表，沒有為此要求額外權限，也不聲稱列表驗證成功。API nonzero、短子程序release與active receipt均已確認。
+- 18:50 detector已第3輪/5100updates；第2輪AP50:95 .3029597不如第1輪 .3076915，所以best仍epoch0。第2輪wall_s9582.718包含上述待命長區間，不能當純GPU速度。queue56349仍繼續，phase3未完成，CARLA保持off。

@@ -1,8 +1,8 @@
 # 目前任務：持續做可中斷的小工作，完成晴天 Phase 3
 
-使用者最新要求：可以一直做到被強制停止；每個小段落盤/commit。詳細順序、坑與歷史見 **CHECKPOINT_PHASE3_2026-10-17_SMALL_CHECKS.md**，原完整協議見 **CHECKPOINT_PHASE3_2026-10-17.md** / **PHASE3_TRAINING_PROTOCOL.md**。本狀態截至2026-10-17 18:41 Asia/Taipei。
+使用者最新要求：可以一直做到被強制停止；每個小段落盤/commit。詳細順序、坑與歷史見 **CHECKPOINT_PHASE3_2026-10-17_SMALL_CHECKS.md**，原完整協議見 **CHECKPOINT_PHASE3_2026-10-17.md** / **PHASE3_TRAINING_PROTOCOL.md**。本狀態截至2026-10-17 18:50 Asia/Taipei。
 
-- **唯一背景訓練queue exec56349**：號誌v1-002已成功退出，現跑 `train_sunny.py --task detection --config configs/sunny_training_v3_9.json --run artifacts/runs/sunny-detection-v3-001`。18:41 epoch1/3900updates（第2輪）；首輪state/last已存，best AP50:95=.30769，mAP50=.56836；4項逐類門檻仍不合格，尚未完成run；不要重複啟動。det source凍結git d3c2ef7，原queue57077已失敗退出。
+- **唯一背景訓練queue exec56349**：號誌v1-002已成功退出，現跑 `train_sunny.py --task detection --config configs/sunny_training_v3_9.json --run artifacts/runs/sunny-detection-v3-001`。18:50 epoch2/5100updates（第3輪）；第2輪已存last/state，best仍第1輪 AP50:95=.30769、mAP50=.56836；4項逐類門檻不合格，尚未完成run；不要重複啟動。det source凍結git d3c2ef7，原queue57077已失敗退出。
 - 分割v4-001 completed：8輪/9600updates，best第7輪，val mIoU50.85%；wall6.19%、fence.73%、marginF1 .40733仍失敗，不能進heldout。權重/27source/3600逐張混淆均核對通過。
 - 號誌 **v1-002 completed**：16輪/832updates，best第9輪；GT crop macro recall94.38%、red→green10/753=1.33%，gate passed。actual detector-box joint待做。v1-001僅JSON NumPy bool收尾失敗，failure/權重保留；型別修正後新舊best/last tensor相同。後續命令用v1-002。
 - 全train材質survey已完成並實看17代表圖：9600train+96固定val，全9696records壓縮存evidence/full-train-material-survey-001。三類train像素總數完全等於frozen統計；Fence>=512px只在Town01四groups，Town03四groups為0。代表train多混凝土/網、val木/白柵；不是全圖人工材質標註。先據此規畫train-only補景，不用val/heldout補train、不盲目加權重重訓。
@@ -15,5 +15,8 @@
 
 - train-only景物scout工具與PHASE3_SEGMENTATION_RECOVERY.md已準備；2項offline邊界/原生幾何序列化測試通過，未連server/未採圖。等GPU程序退出才查Town01/03，inventory不是可訓練資料，不能假裝補景完成。
 
-- 新CPU系統性分割抽查：exec99969，evaluate_sunny_segmentation_cpu.py --bundle-stride10，選每scene每10bundle×8views，960train+360val=1320。每20view atomic chunk；先max-new-chunks1成功存20張退出，再接續第一新log=40張，18:41已380張。輸出artifacts/runs/sunny-mobile-CPU-stratified-eval-001；不能與官方GPU gate混用。原smoke26912已exit0，勿再開同output並行。
+- CPU系統性分割抽查：exec99969已exit0（1320全完成），evaluate_sunny_segmentation_cpu.py --bundle-stride10，選每scene每10bundle×8views，960train+360val=1320。每20view atomic chunk；先max-new-chunks1成功存20張退出，再接續第一新log=40張，18:41已380張。輸出artifacts/runs/sunny-mobile-CPU-stratified-eval-001；不能與官方GPU gate混用。原smoke26912已exit0，勿再開同output並行。
 - 偵測首輪權重與27source已另存本機artifacts/runs/sunny-detection-first-epoch-snapshot-001，best/last為hardlinks，原trainer後續atomic replace不覆寫snapshot；evidence/detection-first-epoch-001有SHA與完整數值。初次sandbox硬連結WinError5後native重試成功；沒有改權重/停訓。16:12→18:38牆鐘跳增保留，不推定原因/GPU速度。
+
+- 最新CPU診斷完整落盤：960train/360val，wall IoU97.40%/6.53%、fence68.94%/.74%、marginF1 95.56%/40.19%。同360val CPU/GPU mIoU差.01127百分點；evidence/mobile-CPU-stratified-eval-001含66chunks gzip與報告，不是新gate。
+- 系統event506確認16:13 Idle Timeout進入Modern Standby，event507於18:34鍵盤喚醒，已保留runtime-observation。新增防閒置待命helper **exec8890**，native PID14152，綁定訓練PID9168及精確creation FILETIME；18:48啟動，目標退出或最多6h自動清除。2秒短子程序自動解除實測已通過。powercfg /requests需OS管理員故不可讀；只確認API接受與receipt，未改電源方案/螢幕。勿重開同target helper。

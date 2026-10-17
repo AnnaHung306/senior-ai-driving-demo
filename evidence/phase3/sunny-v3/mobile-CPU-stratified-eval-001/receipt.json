@@ -1,0 +1,9 @@
+{
+  "status": "completed_diagnostic",
+  "report_sha256": "27296a7bcf9c256638920c8894862b90a0ac0ee647c17e20e1b0bb34d8729e07",
+  "chunks_gzip_sha256": "d67175125d3180d7beeb4274a0de2ffc6e8299c6267336598d437bcd9da3754f",
+  "chunk_count": 66,
+  "views": 1320,
+  "selection": "Every10th saved bundle per scene, all8cameras;960seen train+360validation; no heldout",
+  "limits": "CPU FP32 diagnostic, not acceptance. All selected raw SHA and targets were checked. No independent-trial CI or causal proof of material mismatch."
+}

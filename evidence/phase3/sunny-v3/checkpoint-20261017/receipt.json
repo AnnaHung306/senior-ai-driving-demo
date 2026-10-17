@@ -1,0 +1,26 @@
+{
+  "captured_at": "2026-10-17T10:14:20.855277+08:00",
+  "request": "Save a continuation checkpoint; do not stop authorized training",
+  "run": "artifacts/runs/sunny-segmentation-v4-001",
+  "last_full_epoch_zero_based": 0,
+  "persisted_updates": 1200,
+  "last_checkpoint_sha256": "4a512f8e818b2548217416a0bd94428f6efa1325300c6d5426247dc225eefa15",
+  "live_progress": {
+    "epoch": 1,
+    "updates": 2400,
+    "mean_loss": 0.2847873581076662,
+    "lr": 4.267766952966369e-05
+  },
+  "native_sessions": {
+    "segmentation": 68540,
+    "queued_phase_then_detector": 57077
+  },
+  "phase3_complete": false,
+  "CARLA": "off",
+  "lockbox_model_scores_opened": false,
+  "tests": {
+    "suite": "artifacts/reports/phase3-sunny-tests-009.log",
+    "passed": 72
+  },
+  "note": "Partial current-epoch updates are live in memory; last.pt persists the last full epoch. Native training and queued jobs remain running."
+}

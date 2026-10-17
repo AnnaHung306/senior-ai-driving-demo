@@ -18,12 +18,17 @@ from audit_light_supplement import verify_supplement
 
 
 @torch.inference_mode()
-def joint_scores(matrix):
-    classes=[{'name':name,'gt_objects':int(matrix[c].sum()),'correct_state_recall_including_missed_detections':float(matrix[c,c]/matrix[c].sum()) if matrix[c].sum() else None} for c,name in enumerate(LIGHT_STATES)]
+def joint_scores(matrix,unmatched_by_phase=None):
+    unmatched=np.zeros(4,dtype=np.int64) if unmatched_by_phase is None else np.asarray(unmatched_by_phase,dtype=np.int64)
+    predicted=matrix[:,:4].sum(0)+unmatched
+    classes=[{'name':name,'gt_objects':int(matrix[c].sum()),
+        'correct_state_precision_including_false_light_detections':float(matrix[c,c]/predicted[c]) if predicted[c] else None,
+        'correct_state_recall_including_missed_detections':float(matrix[c,c]/matrix[c].sum()) if matrix[c].sum() else None} for c,name in enumerate(LIGHT_STATES)]
     values=[r['correct_state_recall_including_missed_detections'] for r in classes if r['gt_objects']]
     return {'confusion_true_rows_phase_prediction_columns_plus_missed':matrix.tolist(),'classes':classes,
             'macro_correct_state_recall':float(np.mean(values)) if values else None,
             'all_phase_classes_present':bool((matrix.sum(1)>0).all()),
+            'unmatched_detector_light_predictions_by_phase':unmatched.tolist(),
             'red_as_green_rate_all_GT_red':float(matrix[1,3]/matrix[1].sum()) if matrix[1].sum() else None,
             'red_as_green_rate_matched_red':float(matrix[1,3]/matrix[1,:4].sum()) if matrix[1,:4].sum() else None}
 
@@ -58,7 +63,8 @@ def joint(model,root,frames):
                 truth=t['light_state_class'];matrix[truth,4]+=1
                 records.append({'scene_id':row['scene_id'],'camera':row['camera'],'frame':row['frame'],'rgb':row['rgb'],
                                 'box':t['box'],'target':truth,'prediction':None,'matched':False})
-    return {**joint_scores(matrix),'unmatched_detector_light_predictions':sum('target' not in r for r in records)},records
+    unmatched=[sum('target' not in r and r['prediction']==c for r in records) for c in range(4)]
+    return {**joint_scores(matrix,unmatched),'unmatched_detector_light_predictions':sum(unmatched)},records
 
 
 @torch.inference_mode()
@@ -81,6 +87,7 @@ def error_gallery(root,supplement_root,crop_frames,joint_frames,output):
     selected=[];seen=set()
     candidates=[{**r,'error_kind':'crop_misclassification'} for r in crop_frames if r['target']!=r['prediction']]
     candidates.extend({**r,'error_kind':'missed_detection' if r['prediction'] is None else 'joint_misclassification'} for r in joint_frames if 'target' in r and r['target']!=r['prediction'])
+    candidates.extend({**r,'target':-1,'error_kind':'false_positive_light'} for r in joint_frames if 'target' not in r)
     for r in candidates:
         key=(r['error_kind'],r['scene_id'],r['target'],r['prediction'])
         if key not in seen:seen.add(key);selected.append(r)
@@ -89,10 +96,12 @@ def error_gallery(root,supplement_root,crop_frames,joint_frames,output):
     for i,r in enumerate(selected):
         data_root=Path(r['data_root']) if 'data_root' in r else supplement_root if r.get('controlled_supplement') else root
         rgb=Image.open(safe_path(data_root,r['rgb'])).convert('RGB');context=rgb.copy();b=r['box'];ImageDraw.Draw(context).rectangle(b,outline='yellow',width=2)
-        context=context.resize((320,180));crop=rgb.crop(tuple(b));crop.thumbnail((144,180));scale=min(144/crop.width,180/crop.height);crop=crop.resize((max(1,int(crop.width*scale)),max(1,int(crop.height*scale))),Image.Resampling.NEAREST)
+        context=context.resize((320,180));bounds=(int(np.floor(b[0])),int(np.floor(b[1])),int(np.ceil(b[2])),int(np.ceil(b[3])))
+        crop=rgb.crop(bounds);crop.thumbnail((144,180));scale=min(144/crop.width,180/crop.height);crop=crop.resize((max(1,int(crop.width*scale)),max(1,int(crop.height*scale))),Image.Resampling.NEAREST)
         panel=Image.new('RGB',(480,220));panel.paste(context,(0,40));panel.paste(crop,(328,40));d=ImageDraw.Draw(panel)
         prediction='missed' if r['prediction'] is None else LIGHT_STATES[r['prediction']]
-        d.text((4,2),f'GT {LIGHT_STATES[r["target"]]} / predicted {prediction}',fill='white');d.text((4,18),r['error_kind']+' '+r['scene_id'],fill='white')
+        truth='no_light_object' if r['target']==-1 else LIGHT_STATES[r['target']]
+        d.text((4,2),f'GT {truth} / predicted {prediction}',fill='white');d.text((4,18),r['error_kind']+' '+r['scene_id'],fill='white')
         path=output/f'{i:02}.png';panel.save(path);catalog.append({**r,'image':path.name,'image_sha256':sha(path)})
     write_json(output/'catalog.json',{'total_crop_errors':sum(r['target']!=r['prediction'] for r in crop_frames),'selected':catalog,
         'selection':'First per error kind, source route, true and predicted phase; sorted by phase/route, max32. This is a gallery, not an independent dataset.'})
@@ -130,9 +139,9 @@ def main(args):
         coverage=LightCrops(args.root,split,config,allow_lockbox=split=='lockbox',supplement_root=args.supplement_root if split=='lockbox' else None)
         if not coverage.approved:raise ValueError('Heldout phase coverage missing')
         del coverage
+    require_idle_gpu();configure_cuda();model=LightStateNet().cuda().eval();model.load_state_dict(saved['model']);result={}
     write_json(args.run/'lockbox_started.json',{'best_sha256':state['best_sha256'],'detector_run':str(args.detector_run),
         'detector_sha256':detector_state['best_sha256'],'supplement':supplement_signature})
-    require_idle_gpu();configure_cuda();model=LightStateNet().cuda().eval();model.load_state_dict(saved['model']);result={}
     for split in ['development','lockbox']:
         data=LightCrops(args.root,split,config,allow_lockbox=split=='lockbox',supplement_root=args.supplement_root if split=='lockbox' else None)
         if not data.approved: raise ValueError('Heldout phase coverage missing')
@@ -146,7 +155,8 @@ def main(args):
             (args.run/'lockbox_supplement_detector_frames.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in supplemental_frames),encoding='utf-8')
             extra,extra_frames=joint(model,args.supplement_root,supplemental_frames);write_json(args.run/'lockbox_controlled_joint.json',extra)
             matrix=np.array(combined['confusion_true_rows_phase_prediction_columns_plus_missed'])+np.array(extra['confusion_true_rows_phase_prediction_columns_plus_missed'])
-            combined={**joint_scores(matrix),'unmatched_detector_light_predictions':combined['unmatched_detector_light_predictions']+extra['unmatched_detector_light_predictions']}
+            unmatched=np.array(combined['unmatched_detector_light_predictions_by_phase'])+extra['unmatched_detector_light_predictions_by_phase']
+            combined={**joint_scores(matrix,unmatched),'unmatched_detector_light_predictions':combined['unmatched_detector_light_predictions']+extra['unmatched_detector_light_predictions']}
             joint_frames.extend({**r,'controlled_supplement':True} for r in extra_frames)
         write_json(args.run/(split+'_joint.json'),combined)
         (args.run/(split+'_joint_frames.jsonl')).write_text(''.join(json.dumps(r)+'\n' for r in joint_frames),encoding='utf-8')

@@ -1,0 +1,1 @@
+{"epoch": 0, "updates": 1200, "mean_loss": 0.8629366521040599, "max_gradient_norm": 23.896299362182617, "skipped_fully_ignored_batches": 0, "validation_score": 0.44363105265673686, "best_score": 0.44363105265673686, "improved": true, "wall_s": 33883.922}

@@ -13,6 +13,12 @@ from evaluate_light_state import joint_scores,joint_quality
 
 
 class SupplementTests(unittest.TestCase):
+    def test_joint_precision_counts_false_light_detections(self):
+        matrix=np.eye(4,5,dtype=np.int64)*100
+        result=joint_scores(matrix,[0,100,0,0])
+        self.assertEqual(result['classes'][1]['correct_state_precision_including_false_light_detections'],.5)
+        self.assertEqual(result['classes'][1]['correct_state_recall_including_missed_detections'],1.)
+
     def test_red_green_joint_rate_cannot_hide_behind_detector_misses(self):
         matrix=np.eye(4,5,dtype=np.int64)*100
         matrix[1,1]=95;matrix[1,3]=5;matrix[1,4]=200
@@ -25,6 +31,7 @@ class SupplementTests(unittest.TestCase):
 
     def test_heldout_only_and_original_groups_count_once(self):
         config={'minimum_samples_per_class':{'lockbox':2},'minimum_groups_per_class':2}
+        (ROOT/'artifacts/runs/test-temp').mkdir(parents=True,exist_ok=True)
         with tempfile.TemporaryDirectory(dir=ROOT/'artifacts/runs/test-temp') as folder:
             roots=[Path(folder)/name for name in ['main','extra']]
             for root in roots:

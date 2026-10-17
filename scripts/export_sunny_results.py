@@ -57,8 +57,8 @@ def export(args):
             if path.exists():card+=f'## {label}\n\n'+metric_table(name,read(path))+'\n'
             if name=='light_state' and (run/(split+'_joint.json')).exists():
                 joint=read(run/(split+'_joint.json'));card+=f'含偵測漏判的正確狀態 macro recall：{number(joint["macro_correct_state_recall"])}。\n\n'
-                card+='| 狀態 | GT 物件 | 含漏判正確狀態 Recall |\n|---|---:|---:|\n'
-                for r in joint['classes']:card+=f'| {r["name"]} | {r["gt_objects"]} | {number(r["correct_state_recall_including_missed_detections"])} |\n'
+                card+='| 狀態 | GT 物件 | 含偽號誌的狀態 Precision | 含漏判正確狀態 Recall |\n|---|---:|---:|---:|\n'
+                for r in joint['classes']:card+=f'| {r["name"]} | {r["gt_objects"]} | {number(r["correct_state_precision_including_false_light_detections"])} | {number(r["correct_state_recall_including_missed_detections"])} |\n'
                 card+='\n'
         card+='## 使用限制\n\n八方向逐鏡頭二維感知；沒有跨鏡頭融合、深度／BEV／3D occupancy、導航規劃或 learned vehicle control。只有晴朗白天合成資料；共用資產、短序列與少量城鎮／路線高度相關，像素／frames 不是獨立試驗，沒有可靠廣泛泛化信賴區間。分類與偵測分數均未校準。規則資料生成器的零碰撞不代表 learned driving。\n'
         (output/'MODEL_CARD.md').write_text(card,encoding='utf-8',newline='\n')

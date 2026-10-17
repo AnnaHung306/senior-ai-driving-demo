@@ -34,3 +34,6 @@ Ignore-aware訓練也處理整批ROI/RPN均無監督樣本的情形：空CE不�
 2026-10-17 實際執行更新：canonical 為 data/sunny-cross-town-v3-007，audit完整86400 PNG通過；105物件GT panels、18語意targets及四split16個相位cro​​ps由assistant實際檢視，另存 visual_review.json 綁定audit與review圖SHA。已正式開始 configs/sunny_training_v3_9.json 的17類分割訓練；不是舊8類權重的重跑測試成績。
 
 主 lockbox 黃燈只有4個crops／1群組，沒有通過獨立相位覆蓋。configs/light_lockbox_supplement_v1.json 在phase／detector模型評分前凍結17個既有Town02 heldout視角的Off/R/Y/G控制補收；它只補phase測試，不作訓練、不算新增動態路線。仍用原route group，新增同pose Off亮度對照。configs/light_state_v1_1.json維持原門檻，main dynamic與controlled joint分開保存後再報pooled phase驗收。補收尚未執行／批准；主audit通過不等於phase可以忽略缺類。
+
+
+Tiny 三輪實驗（sunny-segmentation-v3-001）已保留後刻意中止，最高 val mIoU29.37%，不是完整訓練通過。train/validation抽查證實靜態類過擬合；轉為configs/sunny_training_v4_1.json：COCO MobileNetV3 FrozenBN encoder＋3.59M multiscale decoder，8epochs/batch8、BF16卷積/FP32參數與loss、train-only paired scale/crop/pad255/flip。CUDA真實正反向、exact reload及batch8約4GB容量已通過，71 tests通過。新run v4-001重新正式訓練中，原品質門檻沒有改動。號誌另需在任何heldout評分前先以actual detector boxes通過joint validation，matched-red→green錯誤率仍不得超過2%。

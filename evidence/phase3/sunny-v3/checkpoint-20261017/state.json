@@ -1,0 +1,7 @@
+{
+  "status": "training",
+  "task": "segmentation",
+  "last_sha256": "4a512f8e818b2548217416a0bd94428f6efa1325300c6d5426247dc225eefa15",
+  "epoch": 0,
+  "updates": 1200
+}

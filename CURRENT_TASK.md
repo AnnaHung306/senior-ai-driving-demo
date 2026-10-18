@@ -42,3 +42,14 @@
 - evidence/phase3/sunny-v3/wall-diagnosis-001保存實看17頁：9個val錯例3頁、24個train形狀候選8頁、16個train外觀分層6頁。val漏檢含木質實心圍牆及水泥道路分隔，岩面誤報明顯；先前「只是低水泥牆不足」推論不完整。train實看主要磚牆/水泥/隧道；沒有憑這16例就斷言全train沒有木牆，亦不可把木質Fence重新標Wall。
 - 全9600train掃描：4688低牆形狀hint、7805中性非牆hint；形狀是depth×pixel高度proxy，不是物體高度，顏色不是材質GT。外觀QA在每秒/相機/group去重候選1374張上分層，非新獨立資料。
 - 新CPU研究exec30015：scripts/study_segmentation_prior.py，output segmentation-train-prior-study-001；不碰GPU/source contract。只第一輪immutable checkpoint，完整3600validation，事先凍結alpha0/.25/.5/.75/1、logits-alpha*log(train頻率CEweights)。探索類別偏置；沒有改任何正式推論、訓練、品質門檻或heldout。CPU FP32不能代替正式GPU BF16驗收。先查progress/report再決定，不要重啟重複研究。
+
+## 11:53執行中補充（務必先讀，避免競爭）
+
+- seg已進最後第6輪，9900/10272updates，最新selected仍第4輪 mIoU .589854、wall .075970、fence .591737、margin .489201，wall/margin失敗。未完成final reload/完整val，不可先用completed checker。
+- CPU研究到3200/3600；尚無report.json。完整結果要實讀，不把先前半批結果當結論。
+- **另有一次性等待接續器exec67677，native32944（creation FILETIME134367682905851523）、awake helper29360。** 它等精確原batch19772退出且state為quality_failed，若seg還不合格，才會啟動calibrate_segmentation_prior.py至sunny-segmentation-v5-prior-001；不開heldout。output phase3-prior-continuation-001有contract/state/awake。不要在它尚活動時啟CARLA，避免等候器剛啟GPU校正時競爭。若CPU完整研究證明效果不足，可查明此owned watcher身分後停止並記operator receipt；原GPU batch保持不動。
+- 正式校正工具尚未GPU執行；新5項prior/3項artifact selection/3項native process identity focused測試都通過，證據prior-calibration-preflight-001。原batch先前GPU94全過，新增11項尚未與完整GPU suite合跑。canonical batch sources及model fingerprint於11:46再核對仍完全相同，無中途改SRC。
+- 修正file-only segmentation artifact checker尊重qualified-first，避免高平均但不合格epoch蓋過低平均已合格epoch；舊v4完整3600frame artifacts重檢通過，模型品質仍原3項失敗。此checker不在active source contract。
+- 見evidence/wall-seen-train-fit-001：第一輪snapshot對28個已選seen train contexts CPU wallIoU .969654/P.981587/R.987617；2頁highest FP/FN已實看。這是有偏樣本非完整train accuracy，支持優先修復外觀泛化，不能當新驗收。
+- candidate configs/segmentation_low_wall_preview_v1_1.json僅預覽表：Town01/03各新增24 native道路pose、原128anchors不變、min8m；未採集/未批准train。舊candidate v1及其exact source在artifacts/runs/low-wall-preview-v1-superseded，v1_1才是目前候選。PHASE3_DOMAIN_RECOVERY.md有先preview原train、若必要才新增未使用城鎮的資料路線，不能只重複既有磚/隧道牆。
+- 最新工具/證據commit e500b16；phase3未通過，不可結束為已完成。繼續等目前批次→統一val/joint/demo/bench/export，按實際結果處理缺口。

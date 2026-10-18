@@ -35,7 +35,9 @@ def load_model(checkpoint,device):
         configure_cuda()
     saved=torch.load(checkpoint,map_location='cpu',weights_only=False); task=saved['task']
     if task not in ['detection','segmentation']:raise ValueError('Expected detector or segmentation checkpoint')
-    if task=='detection':model=make_detector()
+    if task=='detection':
+        c=saved['config']['detection']
+        model=make_detector(min_size=c.get('min_size',360),max_size=c.get('max_size',640))
     else:
         c=saved['config']['segmentation']
         model=MobileUNet(classes=len(SEGMENTATION_NAMES),precision=c['precision']) if c.get('architecture')=='mobilenet_unet' else TinyUNet(width=c['width'],classes=len(SEGMENTATION_NAMES))

@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "training_approved": false,
+  "phase_evaluation_only": true,
+  "audit_sha256": "d27b378a732f38d82416df1892ad94e3857967a5814e59d3362d08514e270295",
+  "reviewed_images": [
+    {
+      "path": "qa/town02-route-00.png",
+      "sha256": "35bdfe842f566bb5a92785cb5381ed7eabab2b7e95b6b4acf9989997f0719b42"
+    },
+    {
+      "path": "qa/town02-route-01.png",
+      "sha256": "3f1a3417e65ee4cfa6648321a90d0cf7e2083ac956106a5df4ecf973f577bddb"
+    }
+  ],
+  "reviewer": "Codex: actual visual inspection of both four-state route panels on 2026-10-18",
+  "observations": "Both original routes show Off dark, Red upper illuminated, Yellow middle illuminated, Green lower illuminated. All204 PNGs independently audited; inspected two largest-lamp panels, not every crop. Controlled static coverage only; no model score or driving claim."
+}

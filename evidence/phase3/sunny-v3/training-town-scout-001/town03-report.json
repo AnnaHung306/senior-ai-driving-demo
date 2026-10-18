@@ -1,0 +1,28 @@
+{
+  "status": "completed_metadata_only",
+  "scope": "Read-only native training-town scenery metadata; no rendered images or model inputs",
+  "town": "Town03",
+  "source_audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+  "source_plan_sha256": "691e434338f0ddacc3be57cac2f499f25a894470c84d98783a9a9d044eefda52",
+  "tool_sha256": "c442bdb25efea50b0151512486356ef9e40c2054357e0be4d7a0f2932a7de1c2",
+  "rendered_images": 0,
+  "training_approved": false,
+  "opendrive_sha256": "abf177bcd9b66cfefb7ac4919f6456815f1384f4229f1343c8a6a90bbb7713c9",
+  "server_version": "0.9.16",
+  "weather_observed": "WeatherParameters(cloudiness=10.000000, precipitation=0.000000, precipitation_deposits=0.000000, wind_intensity=10.000000, sun_azimuth_angle=180.000000, sun_altitude_angle=30.000000, fog_density=2.000000, fog_distance=0.750000, fog_falloff=0.100000, wetness=0.000000, scattering_intensity=1.000000, mie_scattering_scale=0.030000, rayleigh_scattering_scale=0.033100, dust_storm=0.000000)",
+  "files": {
+    "fences.json": {
+      "objects": 794,
+      "sha256": "a79f8c23c16177a3f158229e199f592c0c53a056b1223af97d9dc266c1ea68d2"
+    },
+    "walls.json": {
+      "objects": 1050,
+      "sha256": "273540feabb9788572c44a63ad80d065fb925b8e1de5ade8197a368ae8d0a5ae"
+    },
+    "road_spawn_points.json": {
+      "poses": 265,
+      "sha256": "b0709b64287e8023576fd5b8f7f054c2281fc94fe7b369e50563989de2940b99"
+    }
+  },
+  "limitations": "Native object names are hints, not visual material GT; bbox values are preserved as returned, not converted into verified camera geometry. No new independent route or training approval."
+}

@@ -1,0 +1,102 @@
+{
+  "K": [
+    [
+      320.00000000000006,
+      0,
+      320.0
+    ],
+    [
+      0,
+      320.00000000000006,
+      180.0
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "sensor_attributes": {
+    "rgb": {
+      "role_name": "front",
+      "ros_name": "",
+      "ros_frame_id": "",
+      "ros_publish_tf": "true",
+      "chromatic_aberration_offset": "0.0",
+      "sensor_tick": "0.0",
+      "fstop": "1.4",
+      "image_size_x": "640",
+      "image_size_y": "360",
+      "fov": "90",
+      "lens_circle_falloff": "5.0",
+      "lens_circle_multiplier": "0.0",
+      "exposure_compensation": "0.0",
+      "lens_y_size": "0.08",
+      "lens_k": "-1.0",
+      "exposure_mode": "histogram",
+      "lens_kcube": "0.0",
+      "lens_x_size": "0.08",
+      "exposure_max_bright": "12.0",
+      "shutter_speed": "200.0",
+      "bloom_intensity": "0.675",
+      "iso": "100.0",
+      "enable_postprocess_effects": "true",
+      "gamma": "2.2",
+      "motion_blur_intensity": "0.45",
+      "motion_blur_max_distortion": "0.35",
+      "lens_flare_intensity": "0.1",
+      "motion_blur_min_object_screen_size": "0.1",
+      "exposure_min_bright": "10.0",
+      "exposure_speed_up": "3.0",
+      "exposure_speed_down": "1.0",
+      "tint": "0.0",
+      "calibration_constant": "16.0",
+      "focal_distance": "1000.0",
+      "min_fstop": "1.2",
+      "blade_count": "5",
+      "blur_amount": "1.0",
+      "blur_radius": "0.0",
+      "slope": "0.88",
+      "toe": "0.55",
+      "white_clip": "0.04",
+      "shoulder": "0.26",
+      "black_clip": "0.0",
+      "temp": "6500.0",
+      "chromatic_aberration_intensity": "0.0"
+    },
+    "semantic": {
+      "image_size_x": "640",
+      "role_name": "front",
+      "ros_name": "",
+      "ros_frame_id": "",
+      "ros_publish_tf": "true",
+      "sensor_tick": "0.0",
+      "lens_x_size": "0.08",
+      "image_size_y": "360",
+      "fov": "90",
+      "lens_y_size": "0.08",
+      "lens_k": "-1.0",
+      "lens_circle_falloff": "5.0",
+      "lens_circle_multiplier": "0.0",
+      "lens_kcube": "0.0"
+    },
+    "depth": {
+      "image_size_x": "640",
+      "role_name": "front",
+      "ros_name": "",
+      "ros_frame_id": "",
+      "ros_publish_tf": "true",
+      "sensor_tick": "0.0",
+      "lens_x_size": "0.08",
+      "image_size_y": "360",
+      "fov": "90",
+      "lens_y_size": "0.08",
+      "lens_k": "-1.0",
+      "lens_circle_falloff": "5.0",
+      "lens_circle_multiplier": "0.0",
+      "lens_kcube": "0.0"
+    }
+  },
+  "server": "0.9.16",
+  "weather": "WeatherParameters(cloudiness=5.000000, precipitation=0.000000, precipitation_deposits=0.000000, wind_intensity=10.000000, sun_azimuth_angle=-1.000000, sun_altitude_angle=45.000000, fog_density=2.000000, fog_distance=0.750000, fog_falloff=0.100000, wetness=0.000000, scattering_intensity=1.000000, mie_scattering_scale=0.030000, rayleigh_scattering_scale=0.033100, dust_storm=0.000000)"
+}

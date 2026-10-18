@@ -1,0 +1,28 @@
+{
+  "checkpoint_sha256": "9cbed7cfd641261396e916128535297ecdc267e0cf1d5bbc2af531bd15db5549",
+  "validation_frames_sha256": "764e182638833d316955be96da3619390af638bab260326eb7e24245a19f5171",
+  "heldout_opened": false,
+  "validation_quality": {
+    "passed": false,
+    "checks": {
+      "all_classes_present": true,
+      "mAP50": true,
+      "car/recall": true,
+      "car/precision": true,
+      "pedestrian/recall": false,
+      "pedestrian/precision": true,
+      "bicycle/recall": false,
+      "bicycle/precision": true,
+      "motorcycle/recall": true,
+      "motorcycle/precision": true,
+      "truck/recall": true,
+      "truck/precision": true,
+      "bus/recall": true,
+      "bus/precision": true,
+      "traffic_light/recall": false,
+      "traffic_light/precision": true,
+      "temporary_obstacle/recall": true,
+      "temporary_obstacle/precision": true
+    }
+  }
+}

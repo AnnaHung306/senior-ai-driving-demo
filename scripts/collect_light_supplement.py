@@ -6,6 +6,7 @@ import math
 from pathlib import Path
 import queue
 import sys
+import time
 import traceback
 
 from collect_dataset import ROOT, sha, pose, xyz
@@ -22,6 +23,41 @@ def camera_transform(matrix):
     result=carla.Transform(carla.Location(*m[:3,3]),rotation)
     if np.abs(np.asarray(result.get_matrix())-m).max()>.0001:raise ValueError('Pose reconstruction differs')
     return result
+
+
+def aligned_triplet(world,queues,max_attempts=5,wall_delay_s=0.):
+    """Advance a snapshot pipeline, retaining future frames until their own F+1.
+
+    A future sample proves F is missing in that stream. It must be retained for
+    its own snapshot, not consumed and discarded before selecting a fresh F.
+    Only a complete exact-frame group is returned, after exactly its next tick.
+    """
+    def tick():
+        frame=world.tick(20)
+        if wall_delay_s:time.sleep(wall_delay_s)
+        return frame
+    rejected=[];pending={};frame=tick();snapshot=world.get_snapshot()
+    for attempt in range(max_attempts):
+        next_frame=tick();next_snapshot=world.get_snapshot()
+        if next_frame!=frame+1 or snapshot.frame!=frame or next_snapshot.frame!=next_frame:
+            raise ValueError('Unique tick ownership / snapshot frame mismatch')
+        images={};observed={}
+        for name,q in queues.items():
+            image=pending.pop(name,None);deadline=time.monotonic()+30
+            while image is None or image.frame<frame:
+                remaining=deadline-time.monotonic()
+                if remaining<=0:raise TimeoutError('Camera timeout: '+name)
+                image=q.get(timeout=remaining)
+            observed[name]=image.frame
+            if image.frame>frame:pending[name]=image
+            else:images[name]=image
+        if len(images)==len(queues):
+            if any(abs(image.timestamp-snapshot.timestamp.elapsed_seconds)>.0001 for image in images.values()):raise ValueError('Timestamp mismatch')
+            return frame,snapshot,images,rejected
+        rejected.append({'frame':frame,'attempt':attempt+1,'observed_frames':observed,'readback_frame':next_frame,
+            'reason':'Missing target in at least one stream; future samples retained without relabelling'})
+        frame,snapshot=next_frame,next_snapshot
+    raise RuntimeError('No exact-frame sensor triplet after bounded retries: '+json.dumps(rejected))
 
 
 def collect(args):
@@ -75,14 +111,12 @@ def collect(args):
             for state in plan['phases']:
                 for light in lights:light.set_state(getattr(carla.TrafficLightState,state))
                 for _ in range(4):world.tick(20)
-                frame=world.tick(20);snapshot=world.get_snapshot();observed={str(a.id):str(a.get_state()).split('.')[-1] for a in lights}
+                frame,snapshot,images,rejected=aligned_triplet(world,queues)
+                observed={str(a.id):str(a.get_state()).split('.')[-1] for a in lights}
                 if any(v!=state for v in observed.values()) or any(not a.is_frozen() for a in lights):raise ValueError('Phase program did not persist')
-                world.tick(20)  # GPU camera F readback occurs after the next tick.
                 row={**item,'phase':state,'frame':frame,'timestamp_s':snapshot.timestamp.elapsed_seconds,'states':observed,
-                     'all_lights_frozen':all(a.is_frozen() for a in lights),'images':{}}
-                for modality,q in queues.items():
-                    image=receive_frame(q,frame,30)
-                    if abs(image.timestamp-row['timestamp_s'])>.0001:raise ValueError('Timestamp mismatch')
+                     'all_lights_frozen':all(a.is_frozen() for a in lights),'images':{},'rejected_capture_attempts':rejected}
+                for modality,image in images.items():
                     p=root/f'raw/{item["id"]}/{state}/{modality}.png';p.parent.mkdir(parents=True,exist_ok=True);image.save_to_disk(p)
                     row['images'][modality]={'path':p.relative_to(root).as_posix(),'frame':image.frame,'timestamp_s':image.timestamp,'T_world_from_camera':image.world_from_camera}
                 records.append(row);write_json(root/'records.json',records)

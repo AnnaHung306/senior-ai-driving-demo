@@ -1,0 +1,16 @@
+{
+  "raw_disagreement": 0.020065104166666667,
+  "resolved_disagreement": 0.0,
+  "compared_pixels": 225777,
+  "unlabelled_instance_pixels": 4623,
+  "unlabelled_semantic_pixels": 0,
+  "raw_disagreement_pairs": [
+    {
+      "semantic_raw": 9,
+      "instance_raw": 0,
+      "pixels": 4623
+    }
+  ],
+  "semantic_target_unchanged": true,
+  "model_quality_gates_unchanged": true
+}

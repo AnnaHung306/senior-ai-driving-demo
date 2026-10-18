@@ -1,0 +1,6 @@
+test_adding_small_shape_preserves_original_matches_and_improves_tiny_box_bound (test_anchor_shape_diagnostic.AnchorShapeDiagnosticTests.test_adding_small_shape_preserves_original_matches_and_improves_tiny_box_bound) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.010s
+
+OK

@@ -39,3 +39,10 @@ Ignore-aware訓練也處理整批ROI/RPN均無監督樣本的情形：空CE不�
 Tiny 三輪實驗（sunny-segmentation-v3-001）已保留後刻意中止，最高 val mIoU29.37%，不是完整訓練通過。train/validation抽查證實靜態類過擬合；轉為configs/sunny_training_v4_1.json：COCO MobileNetV3 FrozenBN encoder＋3.59M multiscale decoder，8epochs/batch8、BF16卷積/FP32參數與loss、train-only paired scale/crop/pad255/flip。CUDA真實正反向、exact reload及batch8約4GB容量已通過，71 tests通過。新run v4-001重新正式訓練中，原品質門檻沒有改動。號誌另需在任何heldout評分前先以actual detector boxes通過joint validation，matched-red→green錯誤率仍不得超過2%。
 
 2026-10-17後續實測：Mobile分割v4-001已完成8輪/9600updates，val focus mIoU .5084561但wall .0619479、fence .0072838、visible margin F1 .4073334使品質失敗，未開heldout。27source/權重/設定/逐張混淆核對通過；8個錯例及4個歷史固定train/val probe已實際看圖，材質/類別分布差異另存evidence。號誌v1-001全輪後JSON收尾NumPy bool失敗已保留；只修型別，新v1-002從頭重跑16輪/832updates並成功completed，best/last tensors與原run逐一相同。GT crop macro recall .9438117、red→green10/753=.0132802通過；11類型錯例已看圖，actual detector-box joint尚待做。queue56349已開始detector v3-001，15:43:44凍結source；不能把啟動當成訓練完成。新分割/號誌模型卡與registry已按真實狀態更新，整個Phase3仍未完成。
+
+
+2026-10-18統一查核：detector v3-001已完成8epochs/19200updates，best第4輪，mAP50=.60210175、AP50:95=.36368405；行人recall=.499072、自行車=.307270、traffic_light=.381757未過。號誌用該final detector實際框joint macro=.360204<.4，matched red→green=0；GTcrop通過仍不足以驗收，所有新模型heldout未開。
+
+凍結17視角號誌補收現已原生完成於data/light-lockbox-supplement-v1-002，68組／204PNG；audit及兩個原路線四相位QA實看通過，unknown38/red14/yellow14/green14，各2groups。它只補heldout coverage、不供訓練、不代表phase品質已過。第一次001缺幀失敗保留。
+
+景物補收計畫configs/segmentation_supplement_v1.json只含原train Town01/Town03，128道路錨點×8方向，靜態虛擬rig，不捏造動態episode。原生inventory與白色picket預覽已實看，仍待完整補景audit/review後才訓練。v5從各自v4/v3 best微調，保留所有門檻；validation-only選模優先所有門檻均過，再按原任務均分選模，同分最早；若無合格仍選均分最高並記失敗。每epoch保存全部門檻結果，避免較高均分但漏類的權重蓋掉真正合格的候選。

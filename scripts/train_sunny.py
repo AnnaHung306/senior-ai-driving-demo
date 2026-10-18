@@ -35,18 +35,32 @@ from senior_ai.segmentation_training import weighted_loss, seed_all, configure_c
 from senior_ai.sunny_data import SunnySamples, SEGMENTATION_NAMES, DETECTION_CLASSES, sha, verify
 from senior_ai.sunny_losses import segmentation_loss
 from senior_ai.road_boundaries import boundary_counts,boundary_metrics
+from senior_ai.segmentation_supplement import verify_scenery,append_scenery
+from senior_ai.perception_quality import quality,selection_key
 
 
 def source_fingerprint():
-    files=sorted((ROOT/'src').rglob('*.py'))+[ROOT/'scripts'/name for name in ['train_sunny.py','predict_sunny.py','evaluate_sunny.py']]
+    files=sorted((ROOT/'src').rglob('*.py'))+[ROOT/'scripts'/name for name in ['train_sunny.py','predict_sunny.py','evaluate_sunny.py',
+        'prepare_segmentation_supplement.py','collect_segmentation_supplement.py','audit_segmentation_supplement.py','collect_light_supplement.py',
+        'collect_dataset.py','rig_capture.py','validate_dataset.py']]
     values={p.relative_to(ROOT).as_posix():sha(p) for p in files}
     return {'files':values,'sha256':hashlib.sha256(json.dumps(values,sort_keys=True).encode()).hexdigest()}
 
 
 def build_model(task,config,pretrained=True):
     c=config[task]; path=ROOT/c['pretrained_path']
+    if pretrained and c.get('initial_checkpoint_path'):
+        initial=ROOT/c['initial_checkpoint_path']
+        if sha(initial)!=c['initial_checkpoint_sha256']:raise ValueError('Initial project checkpoint changed')
+        saved=torch.load(initial,map_location='cpu',weights_only=False)
+        if saved['task']!=task or saved['provenance']['data']['audit_sha256']!=c['initial_data_audit_sha256']:
+            raise ValueError('Initial checkpoint task or training audit differs')
+        model=build_model(task,config,pretrained=False)
+        model.load_state_dict(saved['model'])
+        return model
     if pretrained and sha(path)!=c['pretrained_sha256']: raise ValueError('Starting weights changed')
-    if task=='detection': return make_detector(weights=path if pretrained else None)
+    if task=='detection': return make_detector(weights=path if pretrained else None,
+        min_size=c.get('min_size',360),max_size=c.get('max_size',640))
     if c.get('architecture')=='mobilenet_unet':
         model=MobileUNet(classes=len(SEGMENTATION_NAMES),precision=c['precision'])
         if pretrained:model.load_encoder(path)
@@ -161,6 +175,13 @@ def run(args):
                 'driver':subprocess.check_output(['nvidia-smi','--query-gpu=driver_version','--format=csv,noheader'],text=True).strip(),
                 'cuda':torch.version.cuda,'device':torch.cuda.get_device_name(),
                 'git_revision':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()}
+    if c.get('initial_checkpoint_path') and provenance['data']['audit_sha256']!=c['initial_data_audit_sha256']:
+        raise ValueError('Fine-tuning initialization requires the explicitly bound main training audit')
+    scenery=c.get('training_scenery')
+    if scenery:
+        if task!='segmentation':raise ValueError('Static scenery is segmentation training only')
+        provenance['training_supplement']=verify_scenery(ROOT/scenery['root'],provenance['data']['audit_sha256'],scenery['plan_sha256'])
+        provenance['training_supplement']['sampling_repeats']=scenery['sampling_repeats']
     if run.exists() and not args.resume: raise FileExistsError('New experiment requires new run directory')
     if args.resume:
         prior=json.loads((run/'provenance.json').read_text(encoding='utf-8'))
@@ -180,9 +201,11 @@ def run(args):
     started=time.monotonic()
     train=SunnySamples(root,'train',task,config['cache_budget_gib_per_split'])
     validation=SunnySamples(root,'validation',task,config['cache_budget_gib_per_split'])
+    sampling=append_scenery(train,ROOT/scenery['root'],scenery['sampling_repeats'],config['cache_budget_gib_per_split']) if scenery else None
     write_json(run/'dataset_statistics.json',{'train_views':len(train),'validation_views':len(validation),
         'train_groups':sorted({s['group_id'] for s in train.samples}),'validation_groups':sorted({s['group_id'] for s in validation.samples}),
-        'train_segmentation_pixels':train.support.tolist(),'cache_budget_gib_per_split':config['cache_budget_gib_per_split']})
+        'train_segmentation_pixels':train.support.tolist(),'cache_budget_gib_per_split':config['cache_budget_gib_per_split'],
+        'static_training_supplement':sampling,'sample_count_note':'Repeated supplemental views are optimization samples, not independent scenes'})
     weights=torch.tensor(np.clip(np.sqrt(max(1,train.support.max())/np.maximum(1,train.support)),1,20),device='cuda',dtype=torch.float32)
     if not args.resume:
         model=build_model(task,config).cuda(); optimizer=make_optimizer(model,c)
@@ -198,11 +221,13 @@ def run(args):
     model=build_model(task,config,pretrained=not args.resume).cuda(); optimizer=make_optimizer(model,c)
     total_steps=math.ceil(len(train)/c['batch_size'])*c['epochs']
     schedule=torch.optim.lr_scheduler.LambdaLR(optimizer,lambda s:min(1,(s+1)/max(1,c['warmup_steps']))*.5*(1+math.cos(math.pi*min(s,total_steps)/total_steps)))
-    first_epoch=0; best=-math.inf; updates=0
+    first_epoch=0; best=-math.inf; best_qualified=False;updates=0
+    selection_policy=config.get('selection_policy','score_only')
+    selection_key(best,best_qualified,selection_policy)
     if args.resume:
         saved=torch.load(run/'last.pt',map_location='cpu',weights_only=False)
         model.load_state_dict(saved['model']); optimizer.load_state_dict(saved['optimizer']); schedule.load_state_dict(saved['scheduler'])
-        first_epoch=saved['epoch']+1; best=saved['best_score']; updates=saved['updates']
+        first_epoch=saved['epoch']+1; best=saved['best_score'];best_qualified=saved.get('best_validation_qualified',False); updates=saved['updates']
         if task=='detection':
             model.rpn.ignore_assignment_calls=saved.get('rpn_ignore_calls',0);model.roi_heads.ignore_assignment_calls=saved.get('roi_ignore_calls',0)
         random.setstate(saved['rng']['python']); np.random.set_state(saved['rng']['numpy']); torch.set_rng_state(saved['rng']['torch']); torch.cuda.set_rng_state_all(saved['rng']['cuda'])
@@ -224,10 +249,11 @@ def run(args):
         result,_=evaluate(model,task,validation,c['batch_size'])
         score=result['mAP50_95'] if task=='detection' else result['focus_macro_iou']
         if score is None or not math.isfinite(score): raise FloatingPointError('Nonfinite validation score')
-        improved=score>best
-        if improved: best=score; write_json(run/'best_validation.json',result)
+        validation_quality=quality(task,result,config['quality_gates'])
+        improved=selection_key(score,validation_quality['passed'],selection_policy)>selection_key(best,best_qualified,selection_policy)
+        if improved: best=score;best_qualified=validation_quality['passed']; write_json(run/'best_validation.json',result)
         checkpoint={'task':task,'model':model.state_dict(),'optimizer':optimizer.state_dict(),'scheduler':schedule.state_dict(),
-            'epoch':epoch,'updates':updates,'best_score':best,'config':config,'provenance':provenance,
+            'epoch':epoch,'updates':updates,'best_score':best,'best_validation_qualified':best_qualified,'config':config,'provenance':provenance,
             'rng':{'python':random.getstate(),'numpy':np.random.get_state(),'torch':torch.get_rng_state(),'cuda':torch.cuda.get_rng_state_all()}}
         if task=='detection':checkpoint.update({'rpn_ignore_calls':model.rpn.ignore_assignment_calls,'roi_ignore_calls':model.roi_heads.ignore_assignment_calls})
         save_checkpoint(run/'last.pt',checkpoint)
@@ -235,6 +261,7 @@ def run(args):
         row={'epoch':epoch,'updates':updates,'mean_loss':float(np.mean(losses)),'max_gradient_norm':max_norm,
              'skipped_fully_ignored_batches':skipped,
              'validation_score':score,'best_score':best,'improved':improved,'wall_s':time.monotonic()-epoch_start}
+        row['validation_quality']=validation_quality;row['selected_validation_qualified']=best_qualified
         with (run/'epochs.jsonl').open('a',encoding='utf-8') as stream: stream.write(json.dumps(row)+'\n')
         write_json(run/'state.json',{'status':'training','task':task,'last_sha256':sha(run/'last.pt'),'epoch':epoch,'updates':updates})
         print(json.dumps(row),flush=True)
@@ -253,6 +280,7 @@ def run(args):
              'last_sha256':sha(run/'last.pt'),'best_sha256':sha(run/'best.pt'),'checkpoint_reload_identical':identical,
              'training_wall_s':time.monotonic()-started,'max_cuda_allocated_mib':torch.cuda.max_memory_allocated()/1024**2,
              'parameter_count':sum(p.numel() for p in model.parameters()),
+             'selected_validation_qualified':best_qualified,'selection_policy':selection_policy,
              'max_cuda_reserved_mib':torch.cuda.max_memory_reserved()/1024**2,
              'rpn_ignore_calls':getattr(getattr(model,'rpn',None),'ignore_assignment_calls',None),
              'roi_ignore_calls':getattr(getattr(model,'roi_heads',None),'ignore_assignment_calls',None),'lockbox_opened':False}

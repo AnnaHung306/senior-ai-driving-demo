@@ -1,0 +1,24 @@
+{
+  "passed": false,
+  "checks": {
+    "focus_mIoU": true,
+    "all_focus_present": true,
+    "road/IoU": true,
+    "sidewalk/IoU": true,
+    "pedestrian/IoU": true,
+    "rider/IoU": true,
+    "car/IoU": true,
+    "truck/IoU": true,
+    "bus/IoU": true,
+    "motorcycle/IoU": true,
+    "bicycle/IoU": true,
+    "road_line/IoU": true,
+    "traffic_light/IoU": true,
+    "wall/IoU": false,
+    "fence/IoU": false,
+    "pole/IoU": true,
+    "temporary_obstacle/IoU": true,
+    "terrain_or_ground/IoU": true,
+    "visible_margin_f1": false
+  }
+}

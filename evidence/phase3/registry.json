@@ -54,7 +54,7 @@
     "run": "sunny-light-state-v1-002",
     "task": "observable-RGB-light-state",
     "status": "completed",
-    "quality_acceptance": "GT_crop_validation_passed_joint_pending",
+    "quality_acceptance": "GT_crop_validation_passed_joint_failed",
     "model_card": "evidence/phase3/sunny-v3/light-state-v1-002-validation/MODEL_CARD.md",
     "checkpoint_sha256": "e4fdbc431dcf0db5d772ba0724ee74a00f4ea0fb525025c42db12493859ee60b",
     "best_epoch_zero_based": 8,
@@ -65,6 +65,26 @@
       "actual detector-box joint validation pending",
       "yellow validation31crops/2groups",
       "main heldout yellow coverage insufficient; frozen controlled supplement pending"
-    ]
+    ],
+    "validation_joint_macro_correct_state_recall": 0.36020447731935823,
+    "validation_joint_matched_red_as_green": 0.0,
+    "joint_evidence": "evidence/phase3/sunny-v3/light-state-v1-002-joint-validation"
+  },
+  {
+    "run": "sunny-detection-v3-001",
+    "task": "sunny-eight-class-visible-object-detection",
+    "status": "completed",
+    "quality_acceptance": "validation_failed",
+    "model_card": "evidence/phase3/sunny-v3/sunny-detection-v3-001-completed-validation/MODEL_CARD.md",
+    "checkpoint_sha256": "9cbed7cfd641261396e916128535297ecdc267e0cf1d5bbc2af531bd15db5549",
+    "best_epoch_zero_based": 3,
+    "validation_mAP50": 0.6021017525085987,
+    "validation_mAP50_95": 0.3636840532511085,
+    "failed_gates": [
+      "pedestrian_recall",
+      "bicycle_recall",
+      "traffic_light_recall"
+    ],
+    "heldout_opened": false
   }
 ]

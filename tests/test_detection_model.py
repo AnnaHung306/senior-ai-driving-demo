@@ -11,6 +11,19 @@ from senior_ai.visibility_policy import ignore_background_proposals
 
 
 class DetectorIgnoreTests(unittest.TestCase):
+    def test_high_resolution_transform_preserves_raw_box_coordinates(self):
+        model=make_detector(min_size=720,max_size=1280)
+        target={'boxes':torch.tensor([[12.,20,18,34]]),'labels':torch.tensor([7]),
+                'ignore_boxes':torch.tensor([[40.,60,44,70]])}
+        image,out=model.transform.resize(torch.zeros(3,360,640),target)
+        self.assertEqual(tuple(image.shape),(3,720,1280))
+        self.assertTrue(torch.equal(out['boxes'],torch.tensor([[24.,40,36,68]])))
+        self.assertTrue(torch.equal(out['ignore_boxes'],torch.tensor([[80.,120,88,140]])))
+        model.eval()
+        restored=model.transform.postprocess([{'boxes':out['boxes']}],[(720,1280)],[(360,640)])[0]['boxes']
+        self.assertTrue(torch.equal(restored,torch.tensor([[12.,20,18,34]])))
+        for dimensions in [(0,640),(720,640),(360.,640)]:
+            with self.assertRaises(ValueError):make_detector(min_size=dimensions[0],max_size=dimensions[1])
     def test_eager_roi_matches_upstream_and_backpropagates(self):
         reference=MultiScaleRoIAlign(['0','1'],7,2)
         eager=EagerDeterministicRoIAlign(['0','1'],7,2)

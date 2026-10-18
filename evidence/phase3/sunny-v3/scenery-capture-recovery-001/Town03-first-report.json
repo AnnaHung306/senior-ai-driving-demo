@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "town": "Town03",
+  "plan_sha256": "8d2cab60f1287a195e77c4a84435db53070e99360c9ed10399d75dd25e657350",
+  "collector_sha256": "a874ecc8fe730de5ff5367dd38bf70539e969e2cfe84ef736083c54d771ef03e",
+  "records": 512,
+  "cleanup": true,
+  "training_approved": false
+}

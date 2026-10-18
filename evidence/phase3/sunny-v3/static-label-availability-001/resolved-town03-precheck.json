@@ -1,0 +1,10 @@
+{
+  "status": "passed_partial_precheck",
+  "training_approved": false,
+  "scope": "All512 completed Town03 class-pair masks only, formal full audit still required",
+  "views": 512,
+  "max_raw_disagreement": 0.020065104166666667,
+  "max_resolved_disagreement": 4.368548200376569e-06,
+  "compared_pixels": 117870604,
+  "unlabelled_instance_pixels": 94196
+}

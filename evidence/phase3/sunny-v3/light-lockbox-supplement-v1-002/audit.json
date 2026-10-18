@@ -1,0 +1,1153 @@
+{
+  "status": "passed",
+  "checks": {
+    "raw_image_count": true,
+    "pose_alignment": true,
+    "unknown_or_unobservable": true,
+    "red": true,
+    "yellow": true,
+    "green": true
+  },
+  "counts": {
+    "unknown_or_unobservable": 38,
+    "red": 14,
+    "yellow": 14,
+    "green": 14
+  },
+  "groups": {
+    "unknown_or_unobservable": 2,
+    "red": 2,
+    "yellow": 2,
+    "green": 2
+  },
+  "source_audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+  "max_pose_error": 1.52587890625e-05,
+  "checked_images": 204,
+  "auditor_sha256": "f0ca7cc405b13118c849921ad03ad818dc932041fc08c18fae687d57fd3ab77f",
+  "lamp_geometry_source_sha256": "f853cc0a2c44100e552a3c5f52a2ff92218e9e2872f6d7ef49483d1e158da4cd",
+  "files": [
+    {
+      "path": "calibration.json",
+      "sha256": "ca81888ef1ea9f118a62ef58222637a0e62a0b746e020c01b857a8b6c9934917"
+    },
+    {
+      "path": "lamps.json",
+      "sha256": "c6936c717fa7d534b2b56e6c753313a4756c5a1275fe47ae472a017fd2f3f744"
+    },
+    {
+      "path": "plan.json",
+      "sha256": "daa805761dbe8f3b7acb00ebbe40786741cb9da7138d4f13eb5dac76bb2e5692"
+    },
+    {
+      "path": "qa/town02-route-00.png",
+      "sha256": "35bdfe842f566bb5a92785cb5381ed7eabab2b7e95b6b4acf9989997f0719b42"
+    },
+    {
+      "path": "qa/town02-route-01.png",
+      "sha256": "3f1a3417e65ee4cfa6648321a90d0cf7e2083ac956106a5df4ecf973f577bddb"
+    },
+    {
+      "path": "raw/town02-00-000-front_right/Green/depth.png",
+      "sha256": "0b9bb49f5667032c35d1edea37bf914dc053c97b158ba6b385b64d7d9160d2ae"
+    },
+    {
+      "path": "raw/town02-00-000-front_right/Green/rgb.png",
+      "sha256": "cb5718bece2c29c5dac9f53ec7e2ccec35a879eb2be1c4d3d61b131ada9d1bbf"
+    },
+    {
+      "path": "raw/town02-00-000-front_right/Green/semantic.png",
+      "sha256": "7db11bc7e54b72db0eeb4172a9076fa37f1aaee15c119d617f485c97a7fe4268"
+    },
+    {
+      "path": "raw/town02-00-000-front_right/Off/depth.png",
+      "sha256": "0b9bb49f5667032c35d1edea37bf914dc053c97b158ba6b385b64d7d9160d2ae"
+    },
+    {
+      "path": "raw/town02-00-000-front_right/Off/rgb.png",
+      "sha256": "f1808e7cc94ff0398ff69c323d89726b28534e45c1ec3bd5e6fbe403cfadde55"
+    },
+    {
+      "path": "raw/town02-00-000-front_right/Off/semantic.png",
+      "sha256": "7db11bc7e54b72db0eeb4172a9076fa37f1aaee15c119d617f485c97a7fe4268"
+    },
+    {
+      "path": "raw/town02-00-000-front_right/Red/depth.png",
+      "sha256": "0b9bb49f5667032c35d1edea37bf914dc053c97b158ba6b385b64d7d9160d2ae"
+    },
+    {
+      "path": "raw/town02-00-000-front_right/Red/rgb.png",
+      "sha256": "1b7b2f090cd11cc7f1aa0201a67f110af1ce2e8717908bd029a28b9d7b552d89"
+    },
+    {
+      "path": "raw/town02-00-000-front_right/Red/semantic.png",
+      "sha256": "7db11bc7e54b72db0eeb4172a9076fa37f1aaee15c119d617f485c97a7fe4268"
+    },
+    {
+      "path": "raw/town02-00-000-front_right/Yellow/depth.png",
+      "sha256": "0b9bb49f5667032c35d1edea37bf914dc053c97b158ba6b385b64d7d9160d2ae"
+    },
+    {
+      "path": "raw/town02-00-000-front_right/Yellow/rgb.png",
+      "sha256": "ee4a4a871f190de2ebc67ecf6a8a0a1c9c92ed5cd20c6b9c24fd8651d27d2c7a"
+    },
+    {
+      "path": "raw/town02-00-000-front_right/Yellow/semantic.png",
+      "sha256": "7db11bc7e54b72db0eeb4172a9076fa37f1aaee15c119d617f485c97a7fe4268"
+    },
+    {
+      "path": "raw/town02-00-040-front/Green/depth.png",
+      "sha256": "336e4d5561bd130824676e525905ff2c8a2369b40f3c567d3cfe12203d8c9e69"
+    },
+    {
+      "path": "raw/town02-00-040-front/Green/rgb.png",
+      "sha256": "30b71ab176a1be7a03718e5d5242cda17b3b01c47a96bd1b5a7afb11bcc77c42"
+    },
+    {
+      "path": "raw/town02-00-040-front/Green/semantic.png",
+      "sha256": "07065df458f0e60daf3c7330d08fa6f48d66b8b1d7213d9c4fb60eac381e0eb5"
+    },
+    {
+      "path": "raw/town02-00-040-front/Off/depth.png",
+      "sha256": "c62d12bbeb17b780b479f7768189b1b3d862def1cb331ab1159a4c7b7f6ef1cc"
+    },
+    {
+      "path": "raw/town02-00-040-front/Off/rgb.png",
+      "sha256": "04de82a972de7ca0dbb0825a561f3b881f20c0a33c94a0b562bf7eaaf835ec88"
+    },
+    {
+      "path": "raw/town02-00-040-front/Off/semantic.png",
+      "sha256": "7ca641c49c00c3460ec1109e3c26db2f50aea35c7c5ba265a525454e27009ca0"
+    },
+    {
+      "path": "raw/town02-00-040-front/Red/depth.png",
+      "sha256": "1504afca464cdaa27ac48c86207ed7f166423c382a778757eb4592515f2b7579"
+    },
+    {
+      "path": "raw/town02-00-040-front/Red/rgb.png",
+      "sha256": "517e004822de5327b4e13fa1a0c8215e4867b28629448623f88e6254f11e6051"
+    },
+    {
+      "path": "raw/town02-00-040-front/Red/semantic.png",
+      "sha256": "5e06a762c40c8e1519f3e126b046ce496a2162d450aa4da8b812e9d355014142"
+    },
+    {
+      "path": "raw/town02-00-040-front/Yellow/depth.png",
+      "sha256": "ea621f406747d239f63f9bd811e493adca7430c0a27afa42fe7ff8513c36ea94"
+    },
+    {
+      "path": "raw/town02-00-040-front/Yellow/rgb.png",
+      "sha256": "af21a0e2851dd135ddca8ccbaa16ec6807d7ab2e97b53e1aaa0465fee22b4862"
+    },
+    {
+      "path": "raw/town02-00-040-front/Yellow/semantic.png",
+      "sha256": "1af3720e14fe635359ebf40a1cc0b747bb3f6c5ba07a7ea5b5a4e695c09121fa"
+    },
+    {
+      "path": "raw/town02-00-040-front_left/Green/depth.png",
+      "sha256": "9aff67c6d2538a888c9d191e71ab118e87da955b86c4021bce12b052a2cea191"
+    },
+    {
+      "path": "raw/town02-00-040-front_left/Green/rgb.png",
+      "sha256": "4ac463bf8190dad6283f7a81632ebf1363811d47f2e3f6065758bd491dddbca5"
+    },
+    {
+      "path": "raw/town02-00-040-front_left/Green/semantic.png",
+      "sha256": "90434eea39a862ff9a720c766d621848778e780713be3492f0dcbf600e0643e6"
+    },
+    {
+      "path": "raw/town02-00-040-front_left/Off/depth.png",
+      "sha256": "d46d1b94579f727d737f1c3efdd6d2e1407d1a78d837345935838ef333d8acf4"
+    },
+    {
+      "path": "raw/town02-00-040-front_left/Off/rgb.png",
+      "sha256": "1c1c8b71fd961eb251b7e72bfad46f2b86389c2920144789fa41dc98cd431cf3"
+    },
+    {
+      "path": "raw/town02-00-040-front_left/Off/semantic.png",
+      "sha256": "6aa7e51c1bcf63872dc0e65df17fcdd7bd01494ea2097f7ca59e6ed0a416d82c"
+    },
+    {
+      "path": "raw/town02-00-040-front_left/Red/depth.png",
+      "sha256": "3fd1609f05b2280cb64ed70f3fe7a15586deaa3380f1f5521b8efe55614ff7fd"
+    },
+    {
+      "path": "raw/town02-00-040-front_left/Red/rgb.png",
+      "sha256": "2a07b2c6fed457cee2169d8fcd44789630accb09ecd911b2b8e96c41e53733fc"
+    },
+    {
+      "path": "raw/town02-00-040-front_left/Red/semantic.png",
+      "sha256": "22d901652de4dd5c57f13b39be28fd338873151347458183e365ea3fbaaa0530"
+    },
+    {
+      "path": "raw/town02-00-040-front_left/Yellow/depth.png",
+      "sha256": "c1ae4eac7f8e0662529e29fa00484b8e45867f4719f54f6415962fadc53cbbad"
+    },
+    {
+      "path": "raw/town02-00-040-front_left/Yellow/rgb.png",
+      "sha256": "c6dbba2547e5e2ddcd5260aa8cc171deec3ff1b60a9fa00da1d9f8e2ab4d967a"
+    },
+    {
+      "path": "raw/town02-00-040-front_left/Yellow/semantic.png",
+      "sha256": "c122cb95b4ae45ac549a77d53644713b68c909c5f21d1c4ace6e0e0ba557b710"
+    },
+    {
+      "path": "raw/town02-00-040-front_right/Green/depth.png",
+      "sha256": "61ad3d4b91aec0a4ab5e985e44e39a2badf5bb5f37fa41636311f91a92d6072f"
+    },
+    {
+      "path": "raw/town02-00-040-front_right/Green/rgb.png",
+      "sha256": "0d99f391727d3f515df0c4a3a1290ff069093416b72a1c4f06edb7804644f991"
+    },
+    {
+      "path": "raw/town02-00-040-front_right/Green/semantic.png",
+      "sha256": "a2db20451706efab900ee25da75773bb6b6dee4e0d0deab8972ea9ed977477ce"
+    },
+    {
+      "path": "raw/town02-00-040-front_right/Off/depth.png",
+      "sha256": "61ad3d4b91aec0a4ab5e985e44e39a2badf5bb5f37fa41636311f91a92d6072f"
+    },
+    {
+      "path": "raw/town02-00-040-front_right/Off/rgb.png",
+      "sha256": "c76a72e42ea1c152a9c10943ab7979c315c6333472f08f7017d76fa711e0e3f4"
+    },
+    {
+      "path": "raw/town02-00-040-front_right/Off/semantic.png",
+      "sha256": "a2db20451706efab900ee25da75773bb6b6dee4e0d0deab8972ea9ed977477ce"
+    },
+    {
+      "path": "raw/town02-00-040-front_right/Red/depth.png",
+      "sha256": "61ad3d4b91aec0a4ab5e985e44e39a2badf5bb5f37fa41636311f91a92d6072f"
+    },
+    {
+      "path": "raw/town02-00-040-front_right/Red/rgb.png",
+      "sha256": "e450ebd64fe03000e875e33b5767bc2234ed5ea3a5a0aa73d5908d0d453151fc"
+    },
+    {
+      "path": "raw/town02-00-040-front_right/Red/semantic.png",
+      "sha256": "a2db20451706efab900ee25da75773bb6b6dee4e0d0deab8972ea9ed977477ce"
+    },
+    {
+      "path": "raw/town02-00-040-front_right/Yellow/depth.png",
+      "sha256": "61ad3d4b91aec0a4ab5e985e44e39a2badf5bb5f37fa41636311f91a92d6072f"
+    },
+    {
+      "path": "raw/town02-00-040-front_right/Yellow/rgb.png",
+      "sha256": "2dc4491f3bde863e26f20795b734310d52a6f4eb8444b1bf77f05518b5a14a84"
+    },
+    {
+      "path": "raw/town02-00-040-front_right/Yellow/semantic.png",
+      "sha256": "a2db20451706efab900ee25da75773bb6b6dee4e0d0deab8972ea9ed977477ce"
+    },
+    {
+      "path": "raw/town02-00-080-front/Green/depth.png",
+      "sha256": "16e7be3510dc2fa2d6bc53b25a8495a9e6968f23cbd53fdc5809ae226af265e4"
+    },
+    {
+      "path": "raw/town02-00-080-front/Green/rgb.png",
+      "sha256": "06a6234bdf42e303e8458d75ad5d3d280a49dbe60ffd22b02bef79043a22b2e0"
+    },
+    {
+      "path": "raw/town02-00-080-front/Green/semantic.png",
+      "sha256": "76c0e8a5b4761082c7e4135356500e943ce14608ed9c42276c15bb21e1920bf6"
+    },
+    {
+      "path": "raw/town02-00-080-front/Off/depth.png",
+      "sha256": "3c1f185fadb05eab1978e4a347c6edae30bc7e4380f6b24364c61160d4c018ad"
+    },
+    {
+      "path": "raw/town02-00-080-front/Off/rgb.png",
+      "sha256": "4f85dc26b1dd3435515b8f9ca86b2f2cf91cf1c4d8245a1e33fcb49a9d1bd6d7"
+    },
+    {
+      "path": "raw/town02-00-080-front/Off/semantic.png",
+      "sha256": "e6b30672e260a13c8e08b0911115063508e8ef8dd6ae1907f77969aafa3943e2"
+    },
+    {
+      "path": "raw/town02-00-080-front/Red/depth.png",
+      "sha256": "a69e216140bf8a26dd7ce34bcbca609a096e3dc4a2b1139d78f1b0f04e236756"
+    },
+    {
+      "path": "raw/town02-00-080-front/Red/rgb.png",
+      "sha256": "c65e8b6be652bec6e620927728b84bdc8ef4ecc345e0144ee05c0b9c1f29f503"
+    },
+    {
+      "path": "raw/town02-00-080-front/Red/semantic.png",
+      "sha256": "29cf18735377d41d5845acca5caffd577e56f473c2ed18667fcb6b8db66d9283"
+    },
+    {
+      "path": "raw/town02-00-080-front/Yellow/depth.png",
+      "sha256": "196bb37d9fea0e48ed5af9de3ade0221462ea1d3ea9ca30891224322784a52c4"
+    },
+    {
+      "path": "raw/town02-00-080-front/Yellow/rgb.png",
+      "sha256": "a66c1405540dcc16426302ef194d6f70cf37ac8b322fcf03990ee1aaaa95a449"
+    },
+    {
+      "path": "raw/town02-00-080-front/Yellow/semantic.png",
+      "sha256": "823b6faeaac0073b176d773fb2a7bad0f86cc6ddbd56692c46378f31ea8d56ce"
+    },
+    {
+      "path": "raw/town02-00-080-front_left/Green/depth.png",
+      "sha256": "7aa3bfc594b3e7813dacec79c407883683a4a61502df6e0331b8c5a5ea83339b"
+    },
+    {
+      "path": "raw/town02-00-080-front_left/Green/rgb.png",
+      "sha256": "03cd0d2f28e1bf842b8b7e26f4e06a17680eb79df3d3849ce7051373b8f1496c"
+    },
+    {
+      "path": "raw/town02-00-080-front_left/Green/semantic.png",
+      "sha256": "4ed7354a08c93acbe5090c47fdc1f7914cd85ac447ac2a1322d458df85c77dc6"
+    },
+    {
+      "path": "raw/town02-00-080-front_left/Off/depth.png",
+      "sha256": "ee46a02d490acc2e94b436bcf62118444d0d645ac64368b9f12ad61e300aa123"
+    },
+    {
+      "path": "raw/town02-00-080-front_left/Off/rgb.png",
+      "sha256": "986551d6e2020562972701828ea1457939d778a3106b7fc428ef364b0e57a3b2"
+    },
+    {
+      "path": "raw/town02-00-080-front_left/Off/semantic.png",
+      "sha256": "f6f4d639567eb65c9ce878a2f4d2aac06964a492d9f6dcf0f1864d810f91452e"
+    },
+    {
+      "path": "raw/town02-00-080-front_left/Red/depth.png",
+      "sha256": "d626935dfae0a6984f5853925871718cc6d6a627f26f9468e61ce7806d4227b5"
+    },
+    {
+      "path": "raw/town02-00-080-front_left/Red/rgb.png",
+      "sha256": "29ded4b01fcd463ab635886399c7499c20986f029a1508b11001cbd50c0ce703"
+    },
+    {
+      "path": "raw/town02-00-080-front_left/Red/semantic.png",
+      "sha256": "f8e5af15d1c1c261f7a55596e3092cc144f586d86f570e7af701b89bdf31d5c6"
+    },
+    {
+      "path": "raw/town02-00-080-front_left/Yellow/depth.png",
+      "sha256": "792ec6eaeb0b54456ad6006ba72aaaac31ec8b3014297d60bafc54f47603cd9a"
+    },
+    {
+      "path": "raw/town02-00-080-front_left/Yellow/rgb.png",
+      "sha256": "e335a53f951b86fca3ca74b475967b341208ef9e223392bc89ea6f75ebdaaa01"
+    },
+    {
+      "path": "raw/town02-00-080-front_left/Yellow/semantic.png",
+      "sha256": "5044dfcbe85462a0138a0e4e9c98e816a6e0fa53eb396df081e7b7ace4ba5909"
+    },
+    {
+      "path": "raw/town02-00-080-front_right/Green/depth.png",
+      "sha256": "2e13d015fc9bc9a4a07a8dfe78878fa80d22c14f804ff86965b0fb7656620f89"
+    },
+    {
+      "path": "raw/town02-00-080-front_right/Green/rgb.png",
+      "sha256": "32a37b957d2839dee6d6cf69018ec95a51feb1480d2d71a9f3f987739c042171"
+    },
+    {
+      "path": "raw/town02-00-080-front_right/Green/semantic.png",
+      "sha256": "fb37b6fb8c64768089aa328d42c2946c3109730b9f56ff0e60222dc1a98ad5a5"
+    },
+    {
+      "path": "raw/town02-00-080-front_right/Off/depth.png",
+      "sha256": "2e13d015fc9bc9a4a07a8dfe78878fa80d22c14f804ff86965b0fb7656620f89"
+    },
+    {
+      "path": "raw/town02-00-080-front_right/Off/rgb.png",
+      "sha256": "e1351a4999b13a9567fae1e27b5253ef1c49fd9571060cb55183e0faba0fa4f9"
+    },
+    {
+      "path": "raw/town02-00-080-front_right/Off/semantic.png",
+      "sha256": "fb37b6fb8c64768089aa328d42c2946c3109730b9f56ff0e60222dc1a98ad5a5"
+    },
+    {
+      "path": "raw/town02-00-080-front_right/Red/depth.png",
+      "sha256": "2e13d015fc9bc9a4a07a8dfe78878fa80d22c14f804ff86965b0fb7656620f89"
+    },
+    {
+      "path": "raw/town02-00-080-front_right/Red/rgb.png",
+      "sha256": "4793df339615b4916f51567bfa00d9146fed7c197e810b58c0d7b58b9837c6d3"
+    },
+    {
+      "path": "raw/town02-00-080-front_right/Red/semantic.png",
+      "sha256": "fb37b6fb8c64768089aa328d42c2946c3109730b9f56ff0e60222dc1a98ad5a5"
+    },
+    {
+      "path": "raw/town02-00-080-front_right/Yellow/depth.png",
+      "sha256": "2e13d015fc9bc9a4a07a8dfe78878fa80d22c14f804ff86965b0fb7656620f89"
+    },
+    {
+      "path": "raw/town02-00-080-front_right/Yellow/rgb.png",
+      "sha256": "de1184b552085460177cf20207c9a8c50fa642cfbb53e05e09f9d072c8960517"
+    },
+    {
+      "path": "raw/town02-00-080-front_right/Yellow/semantic.png",
+      "sha256": "fb37b6fb8c64768089aa328d42c2946c3109730b9f56ff0e60222dc1a98ad5a5"
+    },
+    {
+      "path": "raw/town02-00-120-front/Green/depth.png",
+      "sha256": "db1eddf72f49d2d599ffd64ab7f1a8856b4c0b429b68eaf29513d30ea512330d"
+    },
+    {
+      "path": "raw/town02-00-120-front/Green/rgb.png",
+      "sha256": "e25a000e173dea5c3b9731cd8e30ac674fad3e75194db8580225c63683e3b746"
+    },
+    {
+      "path": "raw/town02-00-120-front/Green/semantic.png",
+      "sha256": "fcc0b3df3abc66eb884baf52b70d0238cc46d99f7dc798b2cde958d1e184fe1b"
+    },
+    {
+      "path": "raw/town02-00-120-front/Off/depth.png",
+      "sha256": "55c852a7fe970c8027be3e45b6260d6f40282e1a899aec883675861a309888ef"
+    },
+    {
+      "path": "raw/town02-00-120-front/Off/rgb.png",
+      "sha256": "857ba8b7374693e2ffe7ee322d8e45d1408d64410ddc36a6da56054a7fe729a5"
+    },
+    {
+      "path": "raw/town02-00-120-front/Off/semantic.png",
+      "sha256": "82b7eee175477448f046b325f75ebec42d5aca1d6423dd5b6b80aee50fa0d5d4"
+    },
+    {
+      "path": "raw/town02-00-120-front/Red/depth.png",
+      "sha256": "a92361d753f53866a8a0dc904000408f6174bb883a91e8ee924ef88fd4736bfb"
+    },
+    {
+      "path": "raw/town02-00-120-front/Red/rgb.png",
+      "sha256": "ee2c143eb3619344aa840ed71096742ccff756b9060c5993392b6ad7b94f609b"
+    },
+    {
+      "path": "raw/town02-00-120-front/Red/semantic.png",
+      "sha256": "45b333d34912cb8edd6ee2fb3e3158835e459eb18e78a78e3e75f7d2c54d8713"
+    },
+    {
+      "path": "raw/town02-00-120-front/Yellow/depth.png",
+      "sha256": "9824f4c42353d909b59fedb61e2f1d91726e5df43263fa8212963d3c8836f1f1"
+    },
+    {
+      "path": "raw/town02-00-120-front/Yellow/rgb.png",
+      "sha256": "39449c8b308047f25d4274bce97b44c6d0053c098281e9037f9cbfcd3c53442f"
+    },
+    {
+      "path": "raw/town02-00-120-front/Yellow/semantic.png",
+      "sha256": "5a7839210fe5e58270df4a61e7a42f26450a297832c6c00d0feb76737495c4e4"
+    },
+    {
+      "path": "raw/town02-00-120-front_left/Green/depth.png",
+      "sha256": "f41418234bda5ebde8eb1c210b3f8f99b73c5676196c4805f6286659c1653ada"
+    },
+    {
+      "path": "raw/town02-00-120-front_left/Green/rgb.png",
+      "sha256": "e93bc78c816527d1034b0e2d0cb3b79b9ab340f38d94fbd8f970ccf53be7d5dc"
+    },
+    {
+      "path": "raw/town02-00-120-front_left/Green/semantic.png",
+      "sha256": "258bce2f5eb9674045c7357dc01d9bc75f99e9aee3a8994c0fc1bb98a59a0074"
+    },
+    {
+      "path": "raw/town02-00-120-front_left/Off/depth.png",
+      "sha256": "1da69413efd31f1aedf2315e836353c3f38387e411daf4de29a899ba74feccec"
+    },
+    {
+      "path": "raw/town02-00-120-front_left/Off/rgb.png",
+      "sha256": "a511fefbd68e8f02f188cadf6acf24138179695d3475dacd8b5b51e6ccbc00e6"
+    },
+    {
+      "path": "raw/town02-00-120-front_left/Off/semantic.png",
+      "sha256": "40724d4c89a546e4e016743da840acde641014e6460792ed6d7634a0f04646d9"
+    },
+    {
+      "path": "raw/town02-00-120-front_left/Red/depth.png",
+      "sha256": "16357d61372796d2c89765988707f8136f01cad2178d9becc1aa638e042997b5"
+    },
+    {
+      "path": "raw/town02-00-120-front_left/Red/rgb.png",
+      "sha256": "faa94195315c66e5df95f4a777f794afe740c10ecfe2b69121f23135630bdf87"
+    },
+    {
+      "path": "raw/town02-00-120-front_left/Red/semantic.png",
+      "sha256": "855293ffc3108a6bf13f1ff2f987b1621bb3fb65f4a8f29ecfd007b357ec37a5"
+    },
+    {
+      "path": "raw/town02-00-120-front_left/Yellow/depth.png",
+      "sha256": "bd04243a25d44afeddd9fd138d2f1393ebc427bc69f0a94c92923f38aa5aa8f8"
+    },
+    {
+      "path": "raw/town02-00-120-front_left/Yellow/rgb.png",
+      "sha256": "9531d8745850e963fd371dad381ccb4848c3553befc7f1ad404607aa35c55571"
+    },
+    {
+      "path": "raw/town02-00-120-front_left/Yellow/semantic.png",
+      "sha256": "81e28019601e9f5fa86bfe1d68e0e65cb29722a91a87998a1e4f06741e35d7fb"
+    },
+    {
+      "path": "raw/town02-00-120-front_right/Green/depth.png",
+      "sha256": "ff12841c194bfd9cec0e1d49cefce48fb960afd9b412a258058c5dbbf676d463"
+    },
+    {
+      "path": "raw/town02-00-120-front_right/Green/rgb.png",
+      "sha256": "d63181cfe67abca6e5fd5185d0bf7030101d33fef5ba634e8398a2f9ba0e8d6b"
+    },
+    {
+      "path": "raw/town02-00-120-front_right/Green/semantic.png",
+      "sha256": "df68a50f6bc47b178d23a617985efa49ba4e2868e99c3bf8b2041cfd7d2e4c7d"
+    },
+    {
+      "path": "raw/town02-00-120-front_right/Off/depth.png",
+      "sha256": "ff12841c194bfd9cec0e1d49cefce48fb960afd9b412a258058c5dbbf676d463"
+    },
+    {
+      "path": "raw/town02-00-120-front_right/Off/rgb.png",
+      "sha256": "ad68d928a9d7b8682eada0a51c2df84bf09148126529e5b9244ca1e071db6320"
+    },
+    {
+      "path": "raw/town02-00-120-front_right/Off/semantic.png",
+      "sha256": "df68a50f6bc47b178d23a617985efa49ba4e2868e99c3bf8b2041cfd7d2e4c7d"
+    },
+    {
+      "path": "raw/town02-00-120-front_right/Red/depth.png",
+      "sha256": "ff12841c194bfd9cec0e1d49cefce48fb960afd9b412a258058c5dbbf676d463"
+    },
+    {
+      "path": "raw/town02-00-120-front_right/Red/rgb.png",
+      "sha256": "2cfec600a51d9860451d259f4d6e1404e10a48cddc9a4112534000177404fc29"
+    },
+    {
+      "path": "raw/town02-00-120-front_right/Red/semantic.png",
+      "sha256": "df68a50f6bc47b178d23a617985efa49ba4e2868e99c3bf8b2041cfd7d2e4c7d"
+    },
+    {
+      "path": "raw/town02-00-120-front_right/Yellow/depth.png",
+      "sha256": "ff12841c194bfd9cec0e1d49cefce48fb960afd9b412a258058c5dbbf676d463"
+    },
+    {
+      "path": "raw/town02-00-120-front_right/Yellow/rgb.png",
+      "sha256": "b1608b29f51dab2d0177707fe54911bde3b22d3b43539d593d27cdb003cd40c6"
+    },
+    {
+      "path": "raw/town02-00-120-front_right/Yellow/semantic.png",
+      "sha256": "df68a50f6bc47b178d23a617985efa49ba4e2868e99c3bf8b2041cfd7d2e4c7d"
+    },
+    {
+      "path": "raw/town02-01-000-front_right/Green/depth.png",
+      "sha256": "b9944cd997553388ff8fa9d0177ffe08dceb4fc7b2608470043e99b39b6292a8"
+    },
+    {
+      "path": "raw/town02-01-000-front_right/Green/rgb.png",
+      "sha256": "50cb9dd99bef99c5b5f15713a3ad076623eb66f834be31c787de26a24161b3db"
+    },
+    {
+      "path": "raw/town02-01-000-front_right/Green/semantic.png",
+      "sha256": "0818935dcc9fa7ce75df1a8c64d1a798d82f36d7c7b79659b1eed05a42faad18"
+    },
+    {
+      "path": "raw/town02-01-000-front_right/Off/depth.png",
+      "sha256": "b03c7a5219fbd06d5c8c557a200aca41e4c3c3852532cb18a9c0834e727ddbbc"
+    },
+    {
+      "path": "raw/town02-01-000-front_right/Off/rgb.png",
+      "sha256": "b83d343831d24799881399ad6cd52989b8f90133230ef4e560aeb8efacb5b8ca"
+    },
+    {
+      "path": "raw/town02-01-000-front_right/Off/semantic.png",
+      "sha256": "a01917ee97e6e35a46107caefe599649cb9d3f9ddf37362e7d6190e224b42841"
+    },
+    {
+      "path": "raw/town02-01-000-front_right/Red/depth.png",
+      "sha256": "309a7950c03a0dabf7ca67b8b5f7e73d8f3aaf2b89ea74621cadb1ea68a6472e"
+    },
+    {
+      "path": "raw/town02-01-000-front_right/Red/rgb.png",
+      "sha256": "421788720399dd3c89b076c852a550077062623d81fcd805d3ea96604f2a52cf"
+    },
+    {
+      "path": "raw/town02-01-000-front_right/Red/semantic.png",
+      "sha256": "ec12138b83ac062019b1fd141cec342c30c63cfc34b54cd51a44d62d9b56af70"
+    },
+    {
+      "path": "raw/town02-01-000-front_right/Yellow/depth.png",
+      "sha256": "0cacb4a3bce0783948c611da77fed2c9cf6cbb602ccd03d3ce6d373999c266d7"
+    },
+    {
+      "path": "raw/town02-01-000-front_right/Yellow/rgb.png",
+      "sha256": "3ec56627b9ce4a63c05619f68c829e2fef635849de531f87265844df0927e2bc"
+    },
+    {
+      "path": "raw/town02-01-000-front_right/Yellow/semantic.png",
+      "sha256": "bcbdf55c941c3f7238ed3e6629ecf5cb8bd19253e5dd83c734c09e37611902d8"
+    },
+    {
+      "path": "raw/town02-01-040-front/Green/depth.png",
+      "sha256": "a34d56227ad10ebc8f7ae0a8cf21aa438039db4bab9901ba9313893ed24bdc32"
+    },
+    {
+      "path": "raw/town02-01-040-front/Green/rgb.png",
+      "sha256": "aaf5e00613811a725bb1cc8d59edc8e7769720c2ddba24be5cda12d173e7b005"
+    },
+    {
+      "path": "raw/town02-01-040-front/Green/semantic.png",
+      "sha256": "ff59d228bdf220bd3392c51120498e1450b6e8e010564bc587375587b3c364be"
+    },
+    {
+      "path": "raw/town02-01-040-front/Off/depth.png",
+      "sha256": "0546839cf855c9956e0f6c93441ec9be77300b21c2bac68ca8e86965c08a4cdf"
+    },
+    {
+      "path": "raw/town02-01-040-front/Off/rgb.png",
+      "sha256": "58a892de7dea8dd88b4c00029b1bb7b912674d8f1ac79c04101a4576b04ad15a"
+    },
+    {
+      "path": "raw/town02-01-040-front/Off/semantic.png",
+      "sha256": "ecd9fcaf0aab4adfc26b83774df10241513f91579c1cf832c87942460463a153"
+    },
+    {
+      "path": "raw/town02-01-040-front/Red/depth.png",
+      "sha256": "aca27f58b6545240212fe2a6f13048867ec550d77c51cafbe6eb3039eca78d9a"
+    },
+    {
+      "path": "raw/town02-01-040-front/Red/rgb.png",
+      "sha256": "e45cff6de74aa3d518d8845c5cdca94959f41e397449ad224009c7026c74356d"
+    },
+    {
+      "path": "raw/town02-01-040-front/Red/semantic.png",
+      "sha256": "68b1cd30646a7e33dc677d20b87eb550bee15d4f0f6d78df343c6364c211d543"
+    },
+    {
+      "path": "raw/town02-01-040-front/Yellow/depth.png",
+      "sha256": "6e72cad80ef9e4287d13a2e7b9d252dd08423e968d408cfb092ff0309f233687"
+    },
+    {
+      "path": "raw/town02-01-040-front/Yellow/rgb.png",
+      "sha256": "09434805c5b2f7f370ee7b57b63a41d4641a37602225d5289fcf4dbe5216d116"
+    },
+    {
+      "path": "raw/town02-01-040-front/Yellow/semantic.png",
+      "sha256": "81dceb6c88a5f32a0bce25a29fdcdad3fcb2f503310c7577811ca9a332ec3708"
+    },
+    {
+      "path": "raw/town02-01-040-front_right/Green/depth.png",
+      "sha256": "9cbf0cf74dc9c3377f7967ae9da70904f0f5004a439c6c7831f96d7d12db87d2"
+    },
+    {
+      "path": "raw/town02-01-040-front_right/Green/rgb.png",
+      "sha256": "9379b3ed3e20a0fcc93c1d9173bb22e51ba5d6979cc937d8624ae22e4c5b7d68"
+    },
+    {
+      "path": "raw/town02-01-040-front_right/Green/semantic.png",
+      "sha256": "bf8032a5cc8e7e3b4c44fa5e381c4d031c83f114e81cea9ca58de3865e2d0cdc"
+    },
+    {
+      "path": "raw/town02-01-040-front_right/Off/depth.png",
+      "sha256": "dc12d21b1245a4a5eec00b7985ed50bbc7c5d0d31e1664a6f5d4be0edd3e4df1"
+    },
+    {
+      "path": "raw/town02-01-040-front_right/Off/rgb.png",
+      "sha256": "12f0b9f393c21b9092e0c5d806c55a0034ae36fbe5518fa61d18484f389d3624"
+    },
+    {
+      "path": "raw/town02-01-040-front_right/Off/semantic.png",
+      "sha256": "3e593e26553901e4d99cc94247c1a9bebb47a199ad5ee05d633bda1582b6beea"
+    },
+    {
+      "path": "raw/town02-01-040-front_right/Red/depth.png",
+      "sha256": "f5991cddae4c204f829ba88cb781200762ea74b8ce4dc4f6423cbc6833df7b87"
+    },
+    {
+      "path": "raw/town02-01-040-front_right/Red/rgb.png",
+      "sha256": "6701e8dd1cab71e2512c44e67d152eeacc319b88df1ea09855dd0d43398213bd"
+    },
+    {
+      "path": "raw/town02-01-040-front_right/Red/semantic.png",
+      "sha256": "90f98bbc7f55e7f534eb0c38c8d460d3aec47bba7e8354460621b4a296cdd03f"
+    },
+    {
+      "path": "raw/town02-01-040-front_right/Yellow/depth.png",
+      "sha256": "8fda22d5d8fc83219454afd03223ed2051aae8b92cd26ce9b60bf450ec3dd6ba"
+    },
+    {
+      "path": "raw/town02-01-040-front_right/Yellow/rgb.png",
+      "sha256": "f11fd634d35597418e27503a3429c10f8d11e026f83a226f8007dbb161f38b08"
+    },
+    {
+      "path": "raw/town02-01-040-front_right/Yellow/semantic.png",
+      "sha256": "7f8d48b18e5db9329ce3e0619afd0ec253894c9244093fe849324fa020aba6a6"
+    },
+    {
+      "path": "raw/town02-01-080-front/Green/depth.png",
+      "sha256": "610fbbef816f5278db457d59245e4cf3b99348ee0e12df718e2879c7c0f4fb9e"
+    },
+    {
+      "path": "raw/town02-01-080-front/Green/rgb.png",
+      "sha256": "d24d6216166c1c2e98460c69cc904013eff141e5bb452cb8864ccc5431a92edc"
+    },
+    {
+      "path": "raw/town02-01-080-front/Green/semantic.png",
+      "sha256": "bef19d7386ca5fec881f3a53798ddf0752cc3eb35f1b14cc56c938f045047f86"
+    },
+    {
+      "path": "raw/town02-01-080-front/Off/depth.png",
+      "sha256": "f4c602af36fb508511855e097bc3aa10a7eade4391caee27de43f11ad4dbd008"
+    },
+    {
+      "path": "raw/town02-01-080-front/Off/rgb.png",
+      "sha256": "4c56cebab261e264de1d650c891608f5a3ca82d775204426fd70442f794a6733"
+    },
+    {
+      "path": "raw/town02-01-080-front/Off/semantic.png",
+      "sha256": "bb7f7ff06c8ce9c2d602303e28b89e55b5081bc673214cc0b0110e7f9d22e1ee"
+    },
+    {
+      "path": "raw/town02-01-080-front/Red/depth.png",
+      "sha256": "eb74442db768a0fe9699fb24a5dc6543e0380777a82a440c1315c19e6ce536dd"
+    },
+    {
+      "path": "raw/town02-01-080-front/Red/rgb.png",
+      "sha256": "13571d7c5fce7d37782839f3d4f95ee667c047a593bdcad83b05f1ad2c27d6c9"
+    },
+    {
+      "path": "raw/town02-01-080-front/Red/semantic.png",
+      "sha256": "71a83d0a2c5f8dd9235bb4f102b45f67f9241055f65fd72f5a98a6b142b6b0e0"
+    },
+    {
+      "path": "raw/town02-01-080-front/Yellow/depth.png",
+      "sha256": "a1d58462b342602636dcc7dfab33d19ab6dff8cdf05c61da3d313b72251d95aa"
+    },
+    {
+      "path": "raw/town02-01-080-front/Yellow/rgb.png",
+      "sha256": "67acf34f8ffc1daab70a2734f71454f5f1d07c65399d59c76f2601b8799ce713"
+    },
+    {
+      "path": "raw/town02-01-080-front/Yellow/semantic.png",
+      "sha256": "3c542b92d692d5bd54eca6553ac54bedef858691716ae62ae14345465a5933ee"
+    },
+    {
+      "path": "raw/town02-01-080-front_right/Green/depth.png",
+      "sha256": "40ca0c8fa1af5deabf79612cfae12143f14ba651e92c24f955afec6b47594489"
+    },
+    {
+      "path": "raw/town02-01-080-front_right/Green/rgb.png",
+      "sha256": "9e64b0b1e66d974496c9a4fb049afa9e134db0bba2f7dec92ce2954a311db13a"
+    },
+    {
+      "path": "raw/town02-01-080-front_right/Green/semantic.png",
+      "sha256": "1c26e84345ad370ee89f88c98a2a83a614b7e10c703b79c00cc3b35b6e557e4e"
+    },
+    {
+      "path": "raw/town02-01-080-front_right/Off/depth.png",
+      "sha256": "4cdeb2d05a9e255380beefab6ec9e194eae36b98e1c22cc5a90d49b7560b08a0"
+    },
+    {
+      "path": "raw/town02-01-080-front_right/Off/rgb.png",
+      "sha256": "5c8767c1c2c3842aee1ae247d54189bd81445d6e63bbcf70925076d047ae39bf"
+    },
+    {
+      "path": "raw/town02-01-080-front_right/Off/semantic.png",
+      "sha256": "e5f0417b7609812e295214d8cbf3932fc95819d016423051c4fc858006d365e6"
+    },
+    {
+      "path": "raw/town02-01-080-front_right/Red/depth.png",
+      "sha256": "592a19674eda44a4934d76b9f6fb54e968c51434cd060ba63ac6717dc5433f0a"
+    },
+    {
+      "path": "raw/town02-01-080-front_right/Red/rgb.png",
+      "sha256": "be0a6c7ad7848fb8b65d6e81ea7b05c5f5e6e304ec76170311b5ad97001d46ed"
+    },
+    {
+      "path": "raw/town02-01-080-front_right/Red/semantic.png",
+      "sha256": "d0d0b06d1486fe1265d19b4de37f4ab8f017487cadb03fa5be62d5242ffcfd15"
+    },
+    {
+      "path": "raw/town02-01-080-front_right/Yellow/depth.png",
+      "sha256": "ad66cf79884cced9e5669fe6478867e1ca93cd316d5104fb676d846cd0c90af5"
+    },
+    {
+      "path": "raw/town02-01-080-front_right/Yellow/rgb.png",
+      "sha256": "d614677bf6d0af952625c670a3e6018a15c2092f01ed9af8684199bd5a9457a7"
+    },
+    {
+      "path": "raw/town02-01-080-front_right/Yellow/semantic.png",
+      "sha256": "304aa16f7ef34ed9cfbdca760ec80a9a1c752fdea5bf3ac8d8691bfeb3d8d896"
+    },
+    {
+      "path": "raw/town02-01-120-front/Green/depth.png",
+      "sha256": "d8e3a3c662baca9806cabbec51ba7f10848cec4755f284d345f27fac31b76bed"
+    },
+    {
+      "path": "raw/town02-01-120-front/Green/rgb.png",
+      "sha256": "4d441cc302b9a24ae1252929a5ed5d23006cb3ac5af1c157617792ab4a0c4ac5"
+    },
+    {
+      "path": "raw/town02-01-120-front/Green/semantic.png",
+      "sha256": "83449b808bc179fb6da888dc3a64d1c665b00f55518d13e91b336ec4d68a202c"
+    },
+    {
+      "path": "raw/town02-01-120-front/Off/depth.png",
+      "sha256": "7173d15b8b85919c52ebbadb950d727c443e7722f7d0537721d3ac1d29139c9b"
+    },
+    {
+      "path": "raw/town02-01-120-front/Off/rgb.png",
+      "sha256": "bdf27b128e9a58af8514db4830abb9e68258bf5445a9b97fa0bd61fd9ef00a58"
+    },
+    {
+      "path": "raw/town02-01-120-front/Off/semantic.png",
+      "sha256": "5dc51e9b3517299f0a0c76e6f93ec4c329e1873e694048dd8efb3b9b74e03253"
+    },
+    {
+      "path": "raw/town02-01-120-front/Red/depth.png",
+      "sha256": "647cb427c11b03a114b1760fa60f983c2079353983c86e42863db67bf8589dee"
+    },
+    {
+      "path": "raw/town02-01-120-front/Red/rgb.png",
+      "sha256": "1425c8bb87e671e499e9ed2aec98c3f57458ed1dd7c99f1fb42a1cb9d53e8d01"
+    },
+    {
+      "path": "raw/town02-01-120-front/Red/semantic.png",
+      "sha256": "92ce3ee00ccbdcfe34770073f7f9433b5ce36c6d7813159ba1108889c8042f3e"
+    },
+    {
+      "path": "raw/town02-01-120-front/Yellow/depth.png",
+      "sha256": "acd1bb307a038ac3859fc5b09cb09b007b047e37053089ae4922f54eb5f9e48d"
+    },
+    {
+      "path": "raw/town02-01-120-front/Yellow/rgb.png",
+      "sha256": "a6e69d86f5a41ca5d2fe2fc8f78ba5aba3bc409f19a1902f61962e949f229af1"
+    },
+    {
+      "path": "raw/town02-01-120-front/Yellow/semantic.png",
+      "sha256": "2a80159fe3a089c76586f79acbf3db206f8136a7811811b3a1aeddb1b3118679"
+    },
+    {
+      "path": "raw/town02-01-120-front_right/Green/depth.png",
+      "sha256": "ea1ea76f297eb60a78ac871346ce2bd14aaddcf7d58f7c49663e8cd76bae5509"
+    },
+    {
+      "path": "raw/town02-01-120-front_right/Green/rgb.png",
+      "sha256": "e5c4caa659e04b56d8434e4ddccb75bee224b263d73dcb1d9825df6a733d2c6a"
+    },
+    {
+      "path": "raw/town02-01-120-front_right/Green/semantic.png",
+      "sha256": "1992e4bb84feddc4b4e88ce4b9698e7215b0f97c6bbbec8fe91ea9caa52e4c9e"
+    },
+    {
+      "path": "raw/town02-01-120-front_right/Off/depth.png",
+      "sha256": "766a6b50612304b09b46bc22729b3f45551a624f43b1786eae9d85fd6646aa38"
+    },
+    {
+      "path": "raw/town02-01-120-front_right/Off/rgb.png",
+      "sha256": "d661ca95653bc6bb8c0c64833ce6bae4c1cf9f848c98506b650cbeec7fbd042a"
+    },
+    {
+      "path": "raw/town02-01-120-front_right/Off/semantic.png",
+      "sha256": "db61442b39d66caaae91864a670406aad5c97adaa8efd6022cd000d4c542bc8f"
+    },
+    {
+      "path": "raw/town02-01-120-front_right/Red/depth.png",
+      "sha256": "395adb053a53526781b52a3a8a23a372b8ce8af1528a981e12bec420dc2cbd9d"
+    },
+    {
+      "path": "raw/town02-01-120-front_right/Red/rgb.png",
+      "sha256": "e70f60ab4d279fe6a15cfd7d00db21aae0ff3f42bca009cfe78b8175997c62e9"
+    },
+    {
+      "path": "raw/town02-01-120-front_right/Red/semantic.png",
+      "sha256": "3480d6f153880b0986fccfa5d7b853f396f2bd57cb3b1a3a0fe9d22b0f7cb802"
+    },
+    {
+      "path": "raw/town02-01-120-front_right/Yellow/depth.png",
+      "sha256": "281ce95d2d5a362099520b0937940ca11de102ee41b49449d9f5627c6fbdbd99"
+    },
+    {
+      "path": "raw/town02-01-120-front_right/Yellow/rgb.png",
+      "sha256": "a89edd708146780866edad55d36b59e98f742aca9d34c855a356757eea001ffe"
+    },
+    {
+      "path": "raw/town02-01-120-front_right/Yellow/semantic.png",
+      "sha256": "5cacdcb6e57ad6ba20393afac8f02c7fd9d78113eb09e1e97538d744159ea5c1"
+    },
+    {
+      "path": "records.json",
+      "sha256": "8945836559fb52df70d94e5f4093dfdfdd79665c5f6658405d6ee64b9be5b1c8"
+    },
+    {
+      "path": "report.json",
+      "sha256": "607454c4e6e96957c5eef13531df370820071285d606ed468d7580dd756c941f"
+    },
+    {
+      "path": "training/lockbox.jsonl",
+      "sha256": "af60a1e4a76d5e42b24c86339f004633154c71adca9ca0dcb5d9626b6d7255d7"
+    },
+    {
+      "path": "visible/town02-00-000-front_right/Green.json",
+      "sha256": "8a38530c1315950e33882bd6175004e22f64960357d81abff154d3684979cc9d"
+    },
+    {
+      "path": "visible/town02-00-000-front_right/Off.json",
+      "sha256": "210b72b3a6c983b0f63caac06a57b8860b7063a26db05cf69f7ef7e7033ed4e2"
+    },
+    {
+      "path": "visible/town02-00-000-front_right/Red.json",
+      "sha256": "83c59b91520571c85ea04e50c034c96109e3e0932a0d86d4ff5a32edbbe73f2f"
+    },
+    {
+      "path": "visible/town02-00-000-front_right/Yellow.json",
+      "sha256": "43dd9fe9278c82683c1b199b4e4065f1d2c97948a1133a94b0b00d2a14a68a3b"
+    },
+    {
+      "path": "visible/town02-00-040-front/Green.json",
+      "sha256": "37e77f3711c113b1bce56a5d8d24e9ed748769c2208d4b1ba76ed3f3da09e280"
+    },
+    {
+      "path": "visible/town02-00-040-front/Off.json",
+      "sha256": "a66d4a7ea558aeeeef73e42ef1f56586ff8a542d0f11fdde9780c250d7d1fb8a"
+    },
+    {
+      "path": "visible/town02-00-040-front/Red.json",
+      "sha256": "0d722461237bdf572d6a6cec141ec3312af049e90efa494bd2251fc03064a3d6"
+    },
+    {
+      "path": "visible/town02-00-040-front/Yellow.json",
+      "sha256": "540cf364324955ddbc9a90bb2aad4ec8522a6c7f9935ce0f1bca5415c65d5dc2"
+    },
+    {
+      "path": "visible/town02-00-040-front_left/Green.json",
+      "sha256": "0c290e988b2a161f01be4be9233260ecc5154373764f617a6f4072b64caf54d1"
+    },
+    {
+      "path": "visible/town02-00-040-front_left/Off.json",
+      "sha256": "64c18147f64b3520cec7c4ba3aa28ff3acda6fd34d5bcaf9a2b795a60dc7b36d"
+    },
+    {
+      "path": "visible/town02-00-040-front_left/Red.json",
+      "sha256": "6c49258c3a862c97515c9a1b366de1c41af9bb6c59360fbf4784197baf93ea73"
+    },
+    {
+      "path": "visible/town02-00-040-front_left/Yellow.json",
+      "sha256": "353300abcb090aa3bae32da0e6e1ee190fc57f4ac39b94ce59f19c107604529e"
+    },
+    {
+      "path": "visible/town02-00-040-front_right/Green.json",
+      "sha256": "5f24040ee66c129902cf200d191ce218b327718d8d01e096191c7a2fe0f05a9b"
+    },
+    {
+      "path": "visible/town02-00-040-front_right/Off.json",
+      "sha256": "5633e2de95c7f2bf481a770b67519576fbd92c85c0ed7de18a98bb5ca99d9c28"
+    },
+    {
+      "path": "visible/town02-00-040-front_right/Red.json",
+      "sha256": "b3cd07d05c6604eb313527a0ae2ebef3752d70a041e83964ca83d5f92caacd41"
+    },
+    {
+      "path": "visible/town02-00-040-front_right/Yellow.json",
+      "sha256": "2f3ee070acd9518e0140ef38a30426d9c3b3925eb045941cc7be4c8803930ee5"
+    },
+    {
+      "path": "visible/town02-00-080-front/Green.json",
+      "sha256": "8f6fc17fb2e69eb9e241804905cb59bc0c855a237349a0ecd81f3dbf9224febe"
+    },
+    {
+      "path": "visible/town02-00-080-front/Off.json",
+      "sha256": "a72c20f41c01914964029f47888cf5011c0980699222ea362391570f76d2726e"
+    },
+    {
+      "path": "visible/town02-00-080-front/Red.json",
+      "sha256": "1ffbe9bcac610cbaafcffa499727c2f6f7fad4cff64b83af72b4443c6f461da4"
+    },
+    {
+      "path": "visible/town02-00-080-front/Yellow.json",
+      "sha256": "4ead295e73587128c46d9d2284e2efcadc78407cdadc8cc627be3e8ed5df0a55"
+    },
+    {
+      "path": "visible/town02-00-080-front_left/Green.json",
+      "sha256": "33d0969fe210ce3ed7c419dd9402fbdd363edc3ae353ba5d8c02f7565b00a9ba"
+    },
+    {
+      "path": "visible/town02-00-080-front_left/Off.json",
+      "sha256": "59e9b9819ecf64ae3e8a2006ecf4324101c10b7f3d527cbe6e25a863e342ae12"
+    },
+    {
+      "path": "visible/town02-00-080-front_left/Red.json",
+      "sha256": "49635d3182bc2c009f2f9fe2b96cd5045350086dd5a63a5e0b2217fafebc56b1"
+    },
+    {
+      "path": "visible/town02-00-080-front_left/Yellow.json",
+      "sha256": "ebb8abf233692e92c8cf978aca6f41b001ab787db5f96d64c1028134f44441bd"
+    },
+    {
+      "path": "visible/town02-00-080-front_right/Green.json",
+      "sha256": "62d5fbc5c6beb4473b32ec89353e49b5b0262112c1049f9d50e661db8b91ef6d"
+    },
+    {
+      "path": "visible/town02-00-080-front_right/Off.json",
+      "sha256": "1ceda05f5cddf9966ce64a0f14419d857320439c582c90af5117254eaa0ce96d"
+    },
+    {
+      "path": "visible/town02-00-080-front_right/Red.json",
+      "sha256": "5bc56987448bb52abdbb684d757971466c68b0e80e0bdf9fe808f0402eedb8f2"
+    },
+    {
+      "path": "visible/town02-00-080-front_right/Yellow.json",
+      "sha256": "611e3e60cbe78e1c6a8e4268d3fc11e0aca14d04b36c2c7151e701634b37d7e8"
+    },
+    {
+      "path": "visible/town02-00-120-front/Green.json",
+      "sha256": "9cc8b44aff5fb29f5154d5483c487f9f2f6e313b3077fb4da56a46b78cfe6557"
+    },
+    {
+      "path": "visible/town02-00-120-front/Off.json",
+      "sha256": "826552b360ae44b46cfb2fe13557ff841bf20d5bcd951a0686aee6fc9dfc4bf2"
+    },
+    {
+      "path": "visible/town02-00-120-front/Red.json",
+      "sha256": "92ca4d694d77b4c21aa7362da7dd8cbfa94ebce51a7bc738e45b18d4a7cf662d"
+    },
+    {
+      "path": "visible/town02-00-120-front/Yellow.json",
+      "sha256": "f5f4a4024cfaa9fa382532f589a2845c3e5a71873dd3959d78c186727c872c06"
+    },
+    {
+      "path": "visible/town02-00-120-front_left/Green.json",
+      "sha256": "05391b26641666ab6e1b92cae9734357e1b132f52c3229fbb0de3503ff1408a9"
+    },
+    {
+      "path": "visible/town02-00-120-front_left/Off.json",
+      "sha256": "9e3931a1b9e555f668a6c6a5654e72b8fa24705b08544692a27990e5d009d550"
+    },
+    {
+      "path": "visible/town02-00-120-front_left/Red.json",
+      "sha256": "6bc58b3b36d16648fb7541be1756a703d8f4953f34949ebea082e0f51faddc18"
+    },
+    {
+      "path": "visible/town02-00-120-front_left/Yellow.json",
+      "sha256": "be02d34b52fbab1b846157cf2b3f4e8ec871a015846bd61c66b6daad45252b75"
+    },
+    {
+      "path": "visible/town02-00-120-front_right/Green.json",
+      "sha256": "d37e3f1fe3cdbe7ab8a612914bc5f0a003a5211211defdabb2a793aae7eb80bc"
+    },
+    {
+      "path": "visible/town02-00-120-front_right/Off.json",
+      "sha256": "ddca38307035c01114a50a57fcb548467d56be92e7bc1892b9cec294ae9c8aa0"
+    },
+    {
+      "path": "visible/town02-00-120-front_right/Red.json",
+      "sha256": "9ee89cb00414f86a39bba0c2005ce5cf9552f07fb8a0b5307dfdea62ade13f38"
+    },
+    {
+      "path": "visible/town02-00-120-front_right/Yellow.json",
+      "sha256": "b7ec03fb05990a3b6150a63778af4d1484acc7795a61b906eedd73ef88756537"
+    },
+    {
+      "path": "visible/town02-01-000-front_right/Green.json",
+      "sha256": "595d699ee32bd2350dead00dcaf81e213b96da673c79a433a75564f8244d492b"
+    },
+    {
+      "path": "visible/town02-01-000-front_right/Off.json",
+      "sha256": "faa6eff0040565bed8671d8909efbcaa6a537ee04d886a3fd8786355ff8ed931"
+    },
+    {
+      "path": "visible/town02-01-000-front_right/Red.json",
+      "sha256": "b52fe2547fbf423ca0de20d2b87117078996752443eeab9da8e82c25d33d9309"
+    },
+    {
+      "path": "visible/town02-01-000-front_right/Yellow.json",
+      "sha256": "dd20f400d7c9015f38a41fc68a94d7497678a042ac675296bf8e6b6ed09d38ca"
+    },
+    {
+      "path": "visible/town02-01-040-front/Green.json",
+      "sha256": "27915fa7265f9335dcff94367d8df2e3ba1dd4bef7a80505a6ce50551876bf1a"
+    },
+    {
+      "path": "visible/town02-01-040-front/Off.json",
+      "sha256": "7d6601ffad913f8ba9c157db310021437b99cd8dbdd531434a6565b1f35e21f0"
+    },
+    {
+      "path": "visible/town02-01-040-front/Red.json",
+      "sha256": "2fb36e3a58b796a5703c091ca540a32dd2d29d698afcae4d7ecc2d72e9dcc5e7"
+    },
+    {
+      "path": "visible/town02-01-040-front/Yellow.json",
+      "sha256": "1268d6f384fccace48c423bba5d6624c7b7cf61cc5cf2dd9946130ee948fa683"
+    },
+    {
+      "path": "visible/town02-01-040-front_right/Green.json",
+      "sha256": "0fe40186c2465899249e10ef8cb1cfa97fab8ce83c51ae4b4245bf6f6e315f6b"
+    },
+    {
+      "path": "visible/town02-01-040-front_right/Off.json",
+      "sha256": "e5a62f35cafd7e06f70374b488775487738cfa22356efef745ed48982308225b"
+    },
+    {
+      "path": "visible/town02-01-040-front_right/Red.json",
+      "sha256": "b7e82f5ec3c865af632d24af3a0966351f58467e0290fafa1cd267f52cb059a5"
+    },
+    {
+      "path": "visible/town02-01-040-front_right/Yellow.json",
+      "sha256": "8a64349f69789657db9ee9c184831291a2b782acb97363a55d61a884ce70fa05"
+    },
+    {
+      "path": "visible/town02-01-080-front/Green.json",
+      "sha256": "cc566908233862fd779efa909209d8611c0f99f60c26b9ae5d922d4b34753280"
+    },
+    {
+      "path": "visible/town02-01-080-front/Off.json",
+      "sha256": "b5355ba580a616ec5e6a440fef377510d16767bd3eb11661bd8fe58a7fb74597"
+    },
+    {
+      "path": "visible/town02-01-080-front/Red.json",
+      "sha256": "821d905da537de46a810364d012dff039e6d4674f4f6291e997c58557ab80851"
+    },
+    {
+      "path": "visible/town02-01-080-front/Yellow.json",
+      "sha256": "aa313b587d3f4332beab7c8ea14b335cf52a47d7a6ddde3bba40adeba9209d6f"
+    },
+    {
+      "path": "visible/town02-01-080-front_right/Green.json",
+      "sha256": "e20382e4542f5ede39fd6242bdec0fac71e3d348f0502c02c728da05b21384c5"
+    },
+    {
+      "path": "visible/town02-01-080-front_right/Off.json",
+      "sha256": "43000d3b53f0bd33d4f7e54020dfbb923ecd8267a211ed3765258446c9313fa5"
+    },
+    {
+      "path": "visible/town02-01-080-front_right/Red.json",
+      "sha256": "ef5f594ee53eb1d305d1ad94b5f5192ce101e4266021a5579342266b456acb10"
+    },
+    {
+      "path": "visible/town02-01-080-front_right/Yellow.json",
+      "sha256": "a0b29e98ca7427f613c96bf8db0c33181b89e2ab1234e9c0c536dcb5bfbc4770"
+    },
+    {
+      "path": "visible/town02-01-120-front/Green.json",
+      "sha256": "55affd6b8b3cd981ac6dee386163c7557a2d2d1ae4522c6c16849698d613511b"
+    },
+    {
+      "path": "visible/town02-01-120-front/Off.json",
+      "sha256": "59613af124df21ce023a53f4862fa2dade426ce0db2f331ac945bcc2abb3028e"
+    },
+    {
+      "path": "visible/town02-01-120-front/Red.json",
+      "sha256": "0b050f8a91af2e3a377ad4c403610dc8bd0f578cba91deecfd1091a94dcf6a79"
+    },
+    {
+      "path": "visible/town02-01-120-front/Yellow.json",
+      "sha256": "01b24071f2c35143708464a74edbc190b5a5b64f7f80ac58f33a94c632ee2c50"
+    },
+    {
+      "path": "visible/town02-01-120-front_right/Green.json",
+      "sha256": "18764d49cbba037fdffbb7fa4f9d61d61823b6d28496ec5e52da9d3e16f47891"
+    },
+    {
+      "path": "visible/town02-01-120-front_right/Off.json",
+      "sha256": "c818da706ee0a6499a7091b18b27cbfbf6b378e0c5346d1c4b1974314f7930d0"
+    },
+    {
+      "path": "visible/town02-01-120-front_right/Red.json",
+      "sha256": "9f6d755a870d39a6622a68e774b61db8768b484aa8ee2668190b9511eefe55ec"
+    },
+    {
+      "path": "visible/town02-01-120-front_right/Yellow.json",
+      "sha256": "818a3598f00b9cd6869dee5a3648abab6aee8cac4f8a15cd4afb590e51eee646"
+    }
+  ],
+  "limits": "Controlled stationary viewpoints, no ego/participant motion. These add phase coverage, not independent dynamic episodes or detector AP samples.",
+  "training_approved": false,
+  "phase_evaluation_only": true
+}

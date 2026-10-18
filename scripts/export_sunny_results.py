@@ -96,12 +96,18 @@ def export(args):
     if len({source.name for source,_ in benchmarks})!=len(benchmarks):raise ValueError('Benchmark filenames must be distinct')
     reserved={'summary.json','perception.json','REPORT.md','surround.png'}
     if any(source.name in reserved for source,_ in benchmarks):raise ValueError('Benchmark filename collides with export artifact')
+    origins={name:read(run/'provenance.json') for name,run in runs.items() if name!='light_state'}
+    main_audit_sha=sha(args.root/'audit.json')
+    if any(origin['data']['audit_sha256']!=main_audit_sha for origin in origins.values()) or states['light_state'].get('data',{}).get('audit_sha256')!=main_audit_sha:
+        raise ValueError('Export models must bind the reported main audit')
     args.output.mkdir(parents=True);summary={'scope':'ClearNoon ideal simulation only','models':{},'phase3_complete':False,
         'source_sha256':sha(Path(__file__)),'data_audit_sha256':sha(args.root/'audit.json'),'data_review_sha256':sha(args.root/'visual_review.json')}
     for name,run in runs.items():
         output=args.output/name;output.mkdir();state=states[name];final=finals[name]
         model={'run':run.as_posix(),'checkpoint':(run/'best.pt').as_posix(),'checkpoint_sha256':state['best_sha256'],
                'training_status':state['status'],'heldout_status':final['status']}
+        if name in origins and origins[name].get('training_supplement'):
+            model['training_supplement']=origins[name]['training_supplement']
         summary['models'][name]=model
         for filename in ['state.json','config.json','provenance.json','coverage.json','dataset_statistics.json','overfit.json','initial_validation.json','epochs.jsonl','validation.json','validation_quality.json','validation_joint.json','validation_joint_quality.json','best_validation.json','development.json','lockbox.json','development_crops.json','lockbox_crops.json','development_joint.json','lockbox_joint.json','lockbox_dynamic_joint.json','lockbox_controlled_joint.json','lockbox_started.json','final_evaluation.json']:
             if (run/filename).exists():shutil.copyfile(run/filename,output/filename)
@@ -115,6 +121,12 @@ def export(args):
             card+=('MobileNetV3 encoder（官方 COCO detector 完整 body transfer、FrozenBN）＋自行訓練多尺度 U-Net decoder，17類；CUDA BF16 autocast、FP32參數／loss／結果；paired scale/crop/ignore-padding/flip只用於train。' if c.get('architecture')=='mobilenet_unet' else 'Tiny U-Net 17 類，沿用舊自訓八類 backbone 及明確對應 heads，新增類別自行訓練。')
             card+=' weighted CE＋foreground Dice。road 是語意道路，可見道路界面只取 road/line 與 sidewalk/terrain 相鄰處，不推斷遮擋後路界或可安全通行區域。\n\n'
         else:card+='LightStateNet 四類 RGB crop 分類；native phase 只作 GT，必須有可見相容燈色，否則 unknown。正式輸入沒有模擬器狀態。主動態 lockbox 黃燈不足，依訓練前凍結計畫額外補收固定視角相位影像；動態／控制場景分別報告，合併結果只供號誌驗收。\n\n'
+        if name in origins:
+            c=read(run/'config.json')[name]
+            if c.get('initial_checkpoint_path'):card+=f'本次從專案已訓練權重 `{c["initial_checkpoint_path"]}`（SHA `{c["initial_checkpoint_sha256"]}`）再微調，重設optimizer/scheduler；不是從零初始化。\n\n'
+            if name=='detection':card+=f'原始RGB/框為640×360；模型內部resize最短邊{c.get("min_size",360)}、最長邊{c.get("max_size",640)}，輸出框回復原始座標。\n\n'
+            if model.get('training_supplement'):
+                extra=model['training_supplement'];card+=f'另用train-only靜態分割補景：{extra["views"]}個獨特視圖、{extra["groups"]}個相關道路錨點，每輪重複採樣{extra["sampling_repeats"]}次；不是新增動態路線。補景audit SHA `{extra["audit_sha256"]}`。\n\n'
         for split,label in [('validation','驗證／選模'),('development','開發測試'),('lockbox','保留測試')]:
             filename=split+('_crops.json' if name=='light_state' and split!='validation' else '.json');path=run/filename
             if path.exists():card+=f'## {label}\n\n'+metric_table(name,read(path))+'\n'

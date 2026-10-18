@@ -1,0 +1,25 @@
+{
+  "scope": "Post-capture archive of unchanged actual capture source files before correcting retry parity. Collector bytes match native report; helper was unchanged throughout successful Town03 capture.",
+  "files": [
+    {
+      "path": "scripts/collect_segmentation_supplement.py",
+      "sha256": "a874ecc8fe730de5ff5367dd38bf70539e969e2cfe84ef736083c54d771ef03e"
+    },
+    {
+      "path": "scripts/collect_light_supplement.py",
+      "sha256": "dd9af7c7c4f9510b1bf900830083235ba86940416b0f21e51a474e86aa9a4b2d"
+    },
+    {
+      "path": "scripts/collect_dataset.py",
+      "sha256": "8c61b3127987171526dfce57cc77a23dba4ec626c54b2f5efed40b8d8d736575"
+    },
+    {
+      "path": "src/senior_ai/core.py",
+      "sha256": "eba53145e07996150e6bc4aebfe464a6c3cf201350edb0f4d035007a8ecd6f35"
+    },
+    {
+      "path": "src/senior_ai/frames.py",
+      "sha256": "cffd819cdbd361e66bedb37f0898489334dba57c853bdf37d075159d564a13f7"
+    }
+  ]
+}

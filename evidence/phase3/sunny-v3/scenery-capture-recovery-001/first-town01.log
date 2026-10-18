@@ -1,0 +1,54 @@
+INFO:  Found the required file in cache!  Carla/Maps/Nav/Town01.bin 
+{"town": "Town01", "anchor": 3, "views": 8}
+{"town": "Town01", "anchor": 5, "views": 16}
+{"town": "Town01", "anchor": 7, "views": 24}
+{"town": "Town01", "anchor": 9, "views": 32}
+{"town": "Town01", "anchor": 74, "views": 40}
+{"town": "Town01", "anchor": 109, "views": 48}
+{"town": "Town01", "anchor": 107, "views": 56}
+{"town": "Town01", "anchor": 73, "views": 64}
+{"town": "Town01", "anchor": 101, "views": 72}
+{"town": "Town01", "anchor": 45, "views": 80}
+{"town": "Town01", "anchor": 20, "views": 88}
+{"town": "Town01", "anchor": 162, "views": 96}
+{"town": "Town01", "anchor": 79, "views": 104}
+{"town": "Town01", "anchor": 78, "views": 112}
+{"town": "Town01", "anchor": 68, "views": 120}
+{"town": "Town01", "anchor": 171, "views": 128}
+{"town": "Town01", "anchor": 50, "views": 136}
+{"town": "Town01", "anchor": 114, "views": 144}
+{"town": "Town01", "anchor": 113, "views": 152}
+{"town": "Town01", "anchor": 115, "views": 160}
+{"town": "Town01", "anchor": 116, "views": 168}
+{"town": "Town01", "anchor": 110, "views": 176}
+{"town": "Town01", "anchor": 212, "views": 184}
+{"town": "Town01", "anchor": 100, "views": 192}
+{"town": "Town01", "anchor": 211, "views": 200}
+{"town": "Town01", "anchor": 133, "views": 208}
+{"town": "Town01", "anchor": 11, "views": 216}
+{"town": "Town01", "anchor": 83, "views": 224}
+{"town": "Town01", "anchor": 55, "views": 232}
+{"town": "Town01", "anchor": 32, "views": 240}
+{"town": "Town01", "anchor": 35, "views": 248}
+{"town": "Town01", "anchor": 99, "views": 256}
+{"town": "Town01", "anchor": 63, "views": 264}
+{"town": "Town01", "anchor": 237, "views": 272}
+{"town": "Town01", "anchor": 14, "views": 280}
+{"town": "Town01", "anchor": 57, "views": 288}
+{"town": "Town01", "anchor": 119, "views": 296}
+{"town": "Town01", "anchor": 71, "views": 304}
+{"town": "Town01", "anchor": 12, "views": 312}
+{"town": "Town01", "anchor": 176, "views": 320}
+{"town": "Town01", "anchor": 106, "views": 328}
+{"town": "Town01", "anchor": 66, "views": 336}
+{"town": "Town01", "anchor": 145, "views": 344}
+Traceback (most recent call last):
+  File "C:\code\senior_AI\scripts\collect_segmentation_supplement.py", line 81, in <module>
+    p.add_argument('--output',type=Path,required=True);collect(p.parse_args())
+                                                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\code\senior_AI\scripts\collect_segmentation_supplement.py", line 59, in collect
+    frame,snapshot,images,rejected=aligned_triplet(world,queues)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\code\senior_AI\scripts\collect_light_supplement.py", line 39, in aligned_triplet
+    raise RuntimeError('No exact-frame sensor triplet after bounded retries: '+json.dumps(rejected))
+RuntimeError: No exact-frame sensor triplet after bounded retries: [{"frame": 82862, "error": "Expected frame 82862, received future frame 82863", "attempt": 1}, {"frame": 82864, "error": "Expected frame 82864, received future frame 82865", "attempt": 2}, {"frame": 82866, "error": "Expected frame 82866, received future frame 82867", "attempt": 3}, {"frame": 82868, "error": "Expected frame 82868, received future frame 82869", "attempt": 4}, {"frame": 82870, "error": "Expected frame 82870, received future frame 82871", "attempt": 5}]

@@ -1,0 +1,61 @@
+{
+  "status": "failed_precheck",
+  "training_approved": false,
+  "scope": "Only completed Town03 semantic-instance PNG pairing and recorded timing/pose; full1024view/4096PNG audit still required",
+  "views": 512,
+  "semantic_instance_pngs_decoded": 1024,
+  "max_disagreement": 0.020065104166666667,
+  "max_pose_error": 2.666651911908957e-05,
+  "worst": [
+    {
+      "anchor": 90,
+      "camera": "rear_right",
+      "semantic_instance_disagreement": 0.020065104166666667
+    },
+    {
+      "anchor": 82,
+      "camera": "front_right",
+      "semantic_instance_disagreement": 0.014943576388888888
+    },
+    {
+      "anchor": 90,
+      "camera": "right",
+      "semantic_instance_disagreement": 0.01115017361111111
+    },
+    {
+      "anchor": 77,
+      "camera": "rear_right",
+      "semantic_instance_disagreement": 0.011141493055555556
+    },
+    {
+      "anchor": 82,
+      "camera": "rear_left",
+      "semantic_instance_disagreement": 0.01056857638888889
+    },
+    {
+      "anchor": 82,
+      "camera": "left",
+      "semantic_instance_disagreement": 0.010186631944444444
+    },
+    {
+      "anchor": 82,
+      "camera": "right",
+      "semantic_instance_disagreement": 0.009149305555555556
+    },
+    {
+      "anchor": 235,
+      "camera": "front_right",
+      "semantic_instance_disagreement": 0.00814236111111111
+    },
+    {
+      "anchor": 80,
+      "camera": "front_left",
+      "semantic_instance_disagreement": 0.007547743055555556
+    },
+    {
+      "anchor": 9,
+      "camera": "front_left",
+      "semantic_instance_disagreement": 0.007543402777777777
+    }
+  ]
+}

@@ -123,7 +123,7 @@ class IgnoreROI(RoIHeads):
         return [{'boxes':b,'scores':s,'labels':l} for b,s,l in zip(boxes,scores,labels)],{}
 
 
-def make_detector(num_classes=9, weights=None):
+def make_detector(num_classes=9, weights=None, min_size=360, max_size=640):
     """Background plus eight requested object categories. No implicit downloads.
 
     Optional weights must be a locally verified TorchVision COCO state dict.
@@ -131,8 +131,10 @@ def make_detector(num_classes=9, weights=None):
     """
     if not torchvision.__version__.startswith('0.25.0'):
         raise RuntimeError('Pinned TorchVision 0.25.0 required for deterministic ROI internals')
+    if type(min_size) is not int or type(max_size) is not int or not 0 < min_size <= max_size:
+        raise ValueError('Detector resize dimensions must be positive ordered integers')
     model = fasterrcnn_mobilenet_v3_large_320_fpn(weights=None, weights_backbone=None,
-        min_size=360, max_size=640, rpn_pre_nms_top_n_train=1000,
+        min_size=min_size, max_size=max_size, rpn_pre_nms_top_n_train=1000,
         rpn_post_nms_top_n_train=500, rpn_pre_nms_top_n_test=500,
         rpn_post_nms_top_n_test=150, box_detections_per_img=100, box_score_thresh=.01,
         box_batch_size_per_image=128)

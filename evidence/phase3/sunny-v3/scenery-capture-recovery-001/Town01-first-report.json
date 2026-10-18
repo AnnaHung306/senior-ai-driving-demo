@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "town": "Town01",
+  "plan_sha256": "8d2cab60f1287a195e77c4a84435db53070e99360c9ed10399d75dd25e657350",
+  "collector_sha256": "a874ecc8fe730de5ff5367dd38bf70539e969e2cfe84ef736083c54d771ef03e",
+  "records": 344,
+  "cleanup": true,
+  "training_approved": false,
+  "error": "No exact-frame sensor triplet after bounded retries: [{\"frame\": 82862, \"error\": \"Expected frame 82862, received future frame 82863\", \"attempt\": 1}, {\"frame\": 82864, \"error\": \"Expected frame 82864, received future frame 82865\", \"attempt\": 2}, {\"frame\": 82866, \"error\": \"Expected frame 82866, received future frame 82867\", \"attempt\": 3}, {\"frame\": 82868, \"error\": \"Expected frame 82868, received future frame 82869\", \"attempt\": 4}, {\"frame\": 82870, \"error\": \"Expected frame 82870, received future frame 82871\", \"attempt\": 5}]",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\code\\senior_AI\\scripts\\collect_segmentation_supplement.py\", line 59, in collect\n    frame,snapshot,images,rejected=aligned_triplet(world,queues)\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\code\\senior_AI\\scripts\\collect_light_supplement.py\", line 39, in aligned_triplet\n    raise RuntimeError('No exact-frame sensor triplet after bounded retries: '+json.dumps(rejected))\nRuntimeError: No exact-frame sensor triplet after bounded retries: [{\"frame\": 82862, \"error\": \"Expected frame 82862, received future frame 82863\", \"attempt\": 1}, {\"frame\": 82864, \"error\": \"Expected frame 82864, received future frame 82865\", \"attempt\": 2}, {\"frame\": 82866, \"error\": \"Expected frame 82866, received future frame 82867\", \"attempt\": 3}, {\"frame\": 82868, \"error\": \"Expected frame 82868, received future frame 82869\", \"attempt\": 4}, {\"frame\": 82870, \"error\": \"Expected frame 82870, received future frame 82871\", \"attempt\": 5}]\n"
+}

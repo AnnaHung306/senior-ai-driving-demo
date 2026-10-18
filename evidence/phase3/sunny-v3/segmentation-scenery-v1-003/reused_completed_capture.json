@@ -1,0 +1,7 @@
+{
+  "source_root": "data\\segmentation-scenery-v1-001",
+  "source_town": "Town03",
+  "source_report_sha256": "a528c707cd9242351ef6ca0e96903c212b9787c09a2de46ab9240e5a57819378",
+  "views": 512,
+  "scope": "Byte-for-byte reuse of complete Town03; no failed Town01 or probes reused; not new independent scenes."
+}

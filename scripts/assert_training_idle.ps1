@@ -1,6 +1,6 @@
 $ErrorActionPreference = 'Stop'
 # Run before launching CARLA, not after the simulator has claimed GPU memory.
-$taskGpuScripts = '(?:^|[\\/\s])(?:train_sunny|train_light_state|train_segmentation|predict_perception|benchmark_perception|benchmark_sunny|validate_light_joint|evaluate_light_state|evaluate_sunny)\.py(?:\s|"|$)'
+$taskGpuScripts = '(?:^|[\\/\s])(?:train_sunny|train_light_state|train_segmentation|predict_perception|benchmark_perception|benchmark_sunny|validate_light_joint|evaluate_light_state|evaluate_sunny|verify_sunny_capacity|run_phase3_recovery_batch)\.py(?:\s|"|$)'
 $taskBusyProcesses = @(Get-CimInstance Win32_Process | Where-Object {
     $_.Name -match '^python(?:w)?\.exe$' -and $_.CommandLine -match $taskGpuScripts
 })

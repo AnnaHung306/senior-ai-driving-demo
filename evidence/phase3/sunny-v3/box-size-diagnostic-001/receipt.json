@@ -1,0 +1,14 @@
+{
+  "status": "completed_data_diagnostic",
+  "scope": "All train/validation GT label bytes verified against frozen metadata inventory; no inference/heldout indexes/model changes",
+  "report_sha256": "e4476d9f62d4e9ee490794edb7e3d8e7431027bdfcd41b78fee675001032f2c9",
+  "chunks_gzip_sha256": "b87eb6c4c1721024a8d66b298ccafa4ac8b5d42081ef05f8bcdc286206ca3f14",
+  "object_counts_equal_original_audit": true,
+  "candidate_index_sha256": "cbefa8bc9402edbcd6d2d5de77086eccfce9cb48c4cbc4c6cd7146a6b8491a0b",
+  "candidate_views": 1281,
+  "candidate_tag_view_counts": {
+    "traffic_light_short_side_below8": 1221,
+    "small_bicycle_box_below_32_squared": 161
+  },
+  "candidate_policy": "Diagnostic train-only view index, not an active sampler or added independent scenes. Original RGB/GT/group lineage retained. Existing model/config unchanged."
+}

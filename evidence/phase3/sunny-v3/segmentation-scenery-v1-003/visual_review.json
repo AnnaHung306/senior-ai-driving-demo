@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "training_approved": true,
+  "task": "segmentation_only",
+  "split": "train",
+  "audit_sha256": "06703e9bf4d88f3788f1cab169cd2eb04c9b2b4ee165300bdcbca7a0919ca68f",
+  "reviewed_images": [
+    {
+      "path": "qa/review-0.png",
+      "sha256": "141f7fd4da7afd2ff287ba467e9175729b3c107be06585db3d97fedea83690ea"
+    },
+    {
+      "path": "qa/review-1.png",
+      "sha256": "f1eac11ec84f6207884b9b85d1a635d7105bdac7d814d0f00ed2c6404de4c453"
+    },
+    {
+      "path": "qa/review-2.png",
+      "sha256": "bfaf41ab8c2c6d76154df71bf917c9924aab79e3e67ca8921b157c041ccf8238"
+    },
+    {
+      "path": "qa/review-3.png",
+      "sha256": "a98b17d947629729ac7f95d5027dc27e5b446de768435529d01ad25216592238"
+    },
+    {
+      "path": "qa/review-4.png",
+      "sha256": "32f17306bca30af04664d46217d338bdc82c9c0e4f58a273e8c8016504927df0"
+    }
+  ],
+  "reviewer": "Codex assistant: actually viewed all5 QA pages /38 selected RGB-GT contexts on2026-10-18",
+  "observations": [
+    "Wall close/far stone/concrete surfaces align with wall12; road/sidewalk/terrain boundaries visible and matched.",
+    "White picket and metal-mesh fences preserve thin bars/holes. Town03 anchor114 rear_right includes brown wood-panel cross-brace fence, correctly class13; one inspected wood site is not proof of broad independent material coverage.",
+    "Grass/rock terrain, curbside road lines, vegetation occlusion and building negatives inspected. Unknown raw21 props remain ignore255, no invented temporary-obstacle positive.",
+    "Raw0 instance missing vegetation support is reported separately; semantic labels were not changed. The raw and resolved class-pair statistics remain in audit."
+  ],
+  "limits": "1024views/4096PNGs automatically audited,38 contexts visually inspected; not human review of all pixels/images. Static virtual anchors, no dynamic/3D training or independent route claims. Main007 and heldout untouched."
+}

@@ -1,0 +1,22 @@
+{
+  "status": "reviewed_validation_failure",
+  "reviewed_images": [
+    {
+      "path": "review-0.png",
+      "sha256": "e1be7194a2b23f5f1250fb685e9306a96015c29d98a0e6396ef0269f86decc80"
+    },
+    {
+      "path": "review-1.png",
+      "sha256": "b20c4d3678e621f49cfc479be5023bc58f87e7d67e8ea6d7f85f59d0ba9395a9"
+    },
+    {
+      "path": "review-2.png",
+      "sha256": "53ff375c3d8ec922d527b4b15d692cd7c775783813731fee5c95499631c775f3"
+    },
+    {
+      "path": "review-3.png",
+      "sha256": "a6d25afd9305f961d7d8350cb83674d2818c09302c4ff9df0af0d992cea51df6"
+    }
+  ],
+  "observations": "Viewed all28 selected contexts on4pages. Distant and oblique lamps are often missed; some matched boxes yield unknown state. GT-unknown but colored lens examples also appear in crop and joint errors. False positives include side/rear lamp or vegetation-like small regions; labels apply frozen visibility/lamp geometry, so these are not automatically annotation corrections. No heldout opened or thresholds changed."
+}

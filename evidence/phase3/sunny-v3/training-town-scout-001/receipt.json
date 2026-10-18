@@ -1,0 +1,38 @@
+[
+  {
+    "source": "artifacts/runs/train-scenery-scout-town01-001/fences.json",
+    "source_sha256": "8754a24c5d905df6471dde06c2189c20f551743687edb5bbd5e222773a75f289",
+    "archive": "town01-fences.json.gz",
+    "archive_sha256": "be11d6a20751762d716ebd83f101edd7e211220c0710d7ff1692726e28aa9f19"
+  },
+  {
+    "source": "artifacts/runs/train-scenery-scout-town01-001/road_spawn_points.json",
+    "source_sha256": "860511995055e8fd10199b5eb6f62dc6a34aa65884bcfa49384f1e9b626b9ad7",
+    "archive": "town01-road_spawn_points.json.gz",
+    "archive_sha256": "b254ff17d9771b24b917a92928d631450b1ef2d58d06d8a7fcdece51fc06a768"
+  },
+  {
+    "source": "artifacts/runs/train-scenery-scout-town01-001/walls.json",
+    "source_sha256": "cbfcd7fa55df40a35bd7e50cc607d1b8c70f4f3680a5b53e65da9d6a2b288b7e",
+    "archive": "town01-walls.json.gz",
+    "archive_sha256": "61470e7cb63806c758ca85c0bd733437301ceb3750a6100ddecef9210f09c824"
+  },
+  {
+    "source": "artifacts/runs/train-scenery-scout-town03-001/fences.json",
+    "source_sha256": "a79f8c23c16177a3f158229e199f592c0c53a056b1223af97d9dc266c1ea68d2",
+    "archive": "town03-fences.json.gz",
+    "archive_sha256": "ed21b9cf27c042d42c2e01d1683645034fd90331ec8978ec1f4be26c4afef165"
+  },
+  {
+    "source": "artifacts/runs/train-scenery-scout-town03-001/road_spawn_points.json",
+    "source_sha256": "b0709b64287e8023576fd5b8f7f054c2281fc94fe7b369e50563989de2940b99",
+    "archive": "town03-road_spawn_points.json.gz",
+    "archive_sha256": "995d3ca58385b2271e3e807c2cd539be6ac04c591b97adc2c93fc4a55043368b"
+  },
+  {
+    "source": "artifacts/runs/train-scenery-scout-town03-001/walls.json",
+    "source_sha256": "273540feabb9788572c44a63ad80d065fb925b8e1de5ade8197a368ae8d0a5ae",
+    "archive": "town03-walls.json.gz",
+    "archive_sha256": "4581c6fdf3cc95cdf01cf6542966e9f98facc78038d8167b1255f6fdb7ef0275"
+  }
+]

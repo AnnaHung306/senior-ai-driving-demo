@@ -4,15 +4,35 @@ from pathlib import Path
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
+from types import SimpleNamespace
+import queue
 import numpy as np
 from PIL import Image
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from train_light_state import LightCrops,quality,scores
-from collect_light_supplement import camera_transform
+from collect_light_supplement import camera_transform,aligned_triplet
 from evaluate_light_state import joint_scores,joint_quality
 
 
 class SupplementTests(unittest.TestCase):
+    def test_dropped_frame_retries_whole_triplet_without_relabelling(self):
+        class World:
+            frame=100
+            def tick(self,timeout):self.frame+=1;return self.frame
+            def get_snapshot(self):return SimpleNamespace(frame=self.frame,timestamp=SimpleNamespace(elapsed_seconds=self.frame*.05))
+        def streams(start):
+            queues={name:queue.Queue() for name in ['rgb','semantic','depth','instance']}
+            for name,q in queues.items():
+                for frame in range(start if name=='rgb' else 100,107):q.put(SimpleNamespace(frame=frame,timestamp=frame*.05))
+            return queues
+        world=World();frame,snapshot,images,rejected=aligned_triplet(world,streams(102))
+        self.assertEqual(frame,102);self.assertEqual(world.frame,103)
+        self.assertEqual(snapshot.frame,102)
+        self.assertEqual(rejected[0]['frame'],101)
+        self.assertEqual(rejected[0]['observed_frames']['rgb'],102)
+        self.assertTrue(all(image.frame==102 for image in images.values()))
+        with self.assertRaisesRegex(RuntimeError,'bounded retries'):aligned_triplet(World(),streams(105),max_attempts=2)
     def test_phase_quality_can_be_saved_at_completion(self):
         config={'minimum_macro_recall':.8,'minimum_unknown_recall':.8,
                 'minimum_per_class_recall':.5,'max_red_as_green_rate':.02}

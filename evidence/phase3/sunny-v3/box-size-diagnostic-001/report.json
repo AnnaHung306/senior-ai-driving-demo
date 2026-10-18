@@ -1,0 +1,566 @@
+{
+  "status": "completed_data_diagnostic",
+  "identity": {
+    "tool_sha256": "0631624cf123ae7768a3d5b08f3817e928704b2fa9a661c14d442c15ec0126c6",
+    "io_helper_sha256": "f949ac88b8931807db478cf38539da80653966b5a4b6c2fb5cc27739ca49c299",
+    "data_audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+    "config_sha256": "92b3e4738054974caff6f7a7bf7ccb6fbf60444f3d92fd3019006cb5cd198f8a",
+    "torchvision": "0.25.0+cu128",
+    "current_anchor_sizes": [
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "current_ratios": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "selection_sha256": "e336a982d9279a97be152a0fac8cfeed47daf52b2661f9cf5cb7d2f4563af57f"
+  },
+  "scanned_views": 13200,
+  "results": {
+    "train": {
+      "views": 9600,
+      "classes": {
+        "car": {
+          "objects": 1621,
+          "bbox_width_q10_q50_q90": [
+            17.0,
+            37.0,
+            139.0
+          ],
+          "bbox_height_q10_q50_q90": [
+            11.0,
+            19.0,
+            73.0
+          ],
+          "bbox_area_below_32_squared_fraction": 0.6002467612584824,
+          "bbox_short_side_below_8_fraction": 0.01727328809376928,
+          "truncated_fraction": 0.107958050586058,
+          "optimistic_shape_IoU_fraction_at_least": {
+            "0.3": {
+              "current": 0.987045033929673,
+              "add_8px_size": 1.0,
+              "add_quarter_four_aspect_ratios": 0.987045033929673
+            },
+            "0.5": {
+              "current": 0.9549660703269587,
+              "add_8px_size": 0.999383096853794,
+              "add_quarter_four_aspect_ratios": 0.9555829734731647
+            },
+            "0.7": {
+              "current": 0.42504626773596543,
+              "add_8px_size": 0.4521900061690315,
+              "add_quarter_four_aspect_ratios": 0.486119679210364
+            }
+          }
+        },
+        "pedestrian": {
+          "objects": 2876,
+          "bbox_width_q10_q50_q90": [
+            7.0,
+            14.0,
+            35.0
+          ],
+          "bbox_height_q10_q50_q90": [
+            19.0,
+            39.0,
+            101.0
+          ],
+          "bbox_area_below_32_squared_fraction": 0.6582058414464534,
+          "bbox_short_side_below_8_fraction": 0.14673157162726008,
+          "truncated_fraction": 0.039638386648122394,
+          "optimistic_shape_IoU_fraction_at_least": {
+            "0.3": {
+              "current": 0.9749652294853964,
+              "add_8px_size": 0.9975660639777468,
+              "add_quarter_four_aspect_ratios": 0.9773991655076495
+            },
+            "0.5": {
+              "current": 0.8793463143254521,
+              "add_8px_size": 0.9791376912378303,
+              "add_quarter_four_aspect_ratios": 0.8984700973574409
+            },
+            "0.7": {
+              "current": 0.28929068150208626,
+              "add_8px_size": 0.31328233657858134,
+              "add_quarter_four_aspect_ratios": 0.46801112656467314
+            }
+          }
+        },
+        "bicycle": {
+          "objects": 1470,
+          "bbox_width_q10_q50_q90": [
+            23.0,
+            33.0,
+            98.0
+          ],
+          "bbox_height_q10_q50_q90": [
+            38.0,
+            68.0,
+            168.0
+          ],
+          "bbox_area_below_32_squared_fraction": 0.10952380952380952,
+          "bbox_short_side_below_8_fraction": 0.004081632653061225,
+          "truncated_fraction": 0.20748299319727892,
+          "optimistic_shape_IoU_fraction_at_least": {
+            "0.3": {
+              "current": 0.9945578231292517,
+              "add_8px_size": 1.0,
+              "add_quarter_four_aspect_ratios": 0.9945578231292517
+            },
+            "0.5": {
+              "current": 0.991156462585034,
+              "add_8px_size": 0.9979591836734694,
+              "add_quarter_four_aspect_ratios": 0.9931972789115646
+            },
+            "0.7": {
+              "current": 0.41768707482993195,
+              "add_8px_size": 0.42244897959183675,
+              "add_quarter_four_aspect_ratios": 0.41904761904761906
+            }
+          }
+        },
+        "motorcycle": {
+          "objects": 1283,
+          "bbox_width_q10_q50_q90": [
+            9.0,
+            17.0,
+            68.0
+          ],
+          "bbox_height_q10_q50_q90": [
+            11.0,
+            26.0,
+            74.0
+          ],
+          "bbox_area_below_32_squared_fraction": 0.6609508963367108,
+          "bbox_short_side_below_8_fraction": 0.07638347622759158,
+          "truncated_fraction": 0.07092751363990647,
+          "optimistic_shape_IoU_fraction_at_least": {
+            "0.3": {
+              "current": 0.970381917381138,
+              "add_8px_size": 1.0,
+              "add_quarter_four_aspect_ratios": 0.970381917381138
+            },
+            "0.5": {
+              "current": 0.8862042088854248,
+              "add_8px_size": 0.9968823070927514,
+              "add_quarter_four_aspect_ratios": 0.8893219017926735
+            },
+            "0.7": {
+              "current": 0.45752143413873736,
+              "add_8px_size": 0.5198752922837101,
+              "add_quarter_four_aspect_ratios": 0.45752143413873736
+            }
+          }
+        },
+        "truck": {
+          "objects": 1933,
+          "bbox_width_q10_q50_q90": [
+            13.0,
+            49.0,
+            157.79999999999995
+          ],
+          "bbox_height_q10_q50_q90": [
+            17.0,
+            31.0,
+            110.0
+          ],
+          "bbox_area_below_32_squared_fraction": 0.37558199689601657,
+          "bbox_short_side_below_8_fraction": 0.04500775995861355,
+          "truncated_fraction": 0.13605794102431454,
+          "optimistic_shape_IoU_fraction_at_least": {
+            "0.3": {
+              "current": 0.9777547853078117,
+              "add_8px_size": 0.9943093636833937,
+              "add_quarter_four_aspect_ratios": 0.9782721158820487
+            },
+            "0.5": {
+              "current": 0.9311950336264874,
+              "add_8px_size": 0.9720641489912054,
+              "add_quarter_four_aspect_ratios": 0.9374030005173306
+            },
+            "0.7": {
+              "current": 0.5168132436627004,
+              "add_8px_size": 0.5333678220382825,
+              "add_quarter_four_aspect_ratios": 0.5333678220382825
+            }
+          }
+        },
+        "bus": {
+          "objects": 2534,
+          "bbox_width_q10_q50_q90": [
+            24.0,
+            68.0,
+            262.0
+          ],
+          "bbox_height_q10_q50_q90": [
+            24.0,
+            42.0,
+            282.7000000000003
+          ],
+          "bbox_area_below_32_squared_fraction": 0.2095501183898974,
+          "bbox_short_side_below_8_fraction": 0.005919494869771113,
+          "truncated_fraction": 0.20047355958958168,
+          "optimistic_shape_IoU_fraction_at_least": {
+            "0.3": {
+              "current": 0.98973954222573,
+              "add_8px_size": 0.9905288082083662,
+              "add_quarter_four_aspect_ratios": 0.9913180741910024
+            },
+            "0.5": {
+              "current": 0.9711917916337806,
+              "add_8px_size": 0.9731649565903709,
+              "add_quarter_four_aspect_ratios": 0.9806629834254144
+            },
+            "0.7": {
+              "current": 0.5114443567482242,
+              "add_8px_size": 0.5118389897395422,
+              "add_quarter_four_aspect_ratios": 0.5197316495659037
+            }
+          }
+        },
+        "traffic_light": {
+          "objects": 3269,
+          "bbox_width_q10_q50_q90": [
+            4.0,
+            5.0,
+            10.0
+          ],
+          "bbox_height_q10_q50_q90": [
+            9.0,
+            13.0,
+            29.0
+          ],
+          "bbox_area_below_32_squared_fraction": 1.0,
+          "bbox_short_side_below_8_fraction": 0.7274395839706332,
+          "truncated_fraction": 0.0061180789232181095,
+          "optimistic_shape_IoU_fraction_at_least": {
+            "0.3": {
+              "current": 0.47812786784949524,
+              "add_8px_size": 1.0,
+              "add_quarter_four_aspect_ratios": 0.47812786784949524
+            },
+            "0.5": {
+              "current": 0.2560416029366779,
+              "add_8px_size": 0.964515142245335,
+              "add_quarter_four_aspect_ratios": 0.29427959620679106
+            },
+            "0.7": {
+              "current": 0.07678189048638727,
+              "add_8px_size": 0.3594371367390639,
+              "add_quarter_four_aspect_ratios": 0.14224533496482106
+            }
+          }
+        },
+        "temporary_obstacle": {
+          "objects": 1589,
+          "bbox_width_q10_q50_q90": [
+            7.0,
+            16.0,
+            35.0
+          ],
+          "bbox_height_q10_q50_q90": [
+            12.0,
+            29.0,
+            59.0
+          ],
+          "bbox_area_below_32_squared_fraction": 0.6475770925110133,
+          "bbox_short_side_below_8_fraction": 0.1699181875393329,
+          "truncated_fraction": 0.03775959723096287,
+          "optimistic_shape_IoU_fraction_at_least": {
+            "0.3": {
+              "current": 0.9125235997482694,
+              "add_8px_size": 0.9981120201384519,
+              "add_quarter_four_aspect_ratios": 0.9144115796098174
+            },
+            "0.5": {
+              "current": 0.7841409691629956,
+              "add_8px_size": 0.9943360604153556,
+              "add_quarter_four_aspect_ratios": 0.7879169288860919
+            },
+            "0.7": {
+              "current": 0.4260541220893644,
+              "add_8px_size": 0.5890497168030208,
+              "add_quarter_four_aspect_ratios": 0.4292007551919446
+            }
+          }
+        }
+      }
+    },
+    "validation": {
+      "views": 3600,
+      "classes": {
+        "car": {
+          "objects": 946,
+          "bbox_width_q10_q50_q90": [
+            28.0,
+            57.0,
+            138.5
+          ],
+          "bbox_height_q10_q50_q90": [
+            13.0,
+            22.0,
+            67.0
+          ],
+          "bbox_area_below_32_squared_fraction": 0.4376321353065539,
+          "bbox_short_side_below_8_fraction": 0.005285412262156448,
+          "truncated_fraction": 0.1733615221987315,
+          "optimistic_shape_IoU_fraction_at_least": {
+            "0.3": {
+              "current": 0.9978858350951374,
+              "add_8px_size": 1.0,
+              "add_quarter_four_aspect_ratios": 0.9978858350951374
+            },
+            "0.5": {
+              "current": 0.9904862579281184,
+              "add_8px_size": 0.9936575052854123,
+              "add_quarter_four_aspect_ratios": 0.9978858350951374
+            },
+            "0.7": {
+              "current": 0.5560253699788583,
+              "add_8px_size": 0.5560253699788583,
+              "add_quarter_four_aspect_ratios": 0.6617336152219874
+            }
+          }
+        },
+        "pedestrian": {
+          "objects": 539,
+          "bbox_width_q10_q50_q90": [
+            12.0,
+            16.0,
+            31.0
+          ],
+          "bbox_height_q10_q50_q90": [
+            35.0,
+            47.0,
+            87.0
+          ],
+          "bbox_area_below_32_squared_fraction": 0.6233766233766234,
+          "bbox_short_side_below_8_fraction": 0.016697588126159554,
+          "truncated_fraction": 0.04823747680890538,
+          "optimistic_shape_IoU_fraction_at_least": {
+            "0.3": {
+              "current": 0.9944341372912802,
+              "add_8px_size": 0.9944341372912802,
+              "add_quarter_four_aspect_ratios": 1.0
+            },
+            "0.5": {
+              "current": 0.9573283858998145,
+              "add_8px_size": 0.9573283858998145,
+              "add_quarter_four_aspect_ratios": 0.9944341372912802
+            },
+            "0.7": {
+              "current": 0.23376623376623376,
+              "add_8px_size": 0.23376623376623376,
+              "add_quarter_four_aspect_ratios": 0.38589981447124305
+            }
+          }
+        },
+        "bicycle": {
+          "objects": 729,
+          "bbox_width_q10_q50_q90": [
+            7.0,
+            30.0,
+            59.0
+          ],
+          "bbox_height_q10_q50_q90": [
+            10.0,
+            27.0,
+            98.0
+          ],
+          "bbox_area_below_32_squared_fraction": 0.532235939643347,
+          "bbox_short_side_below_8_fraction": 0.16872427983539096,
+          "truncated_fraction": 0.2112482853223594,
+          "optimistic_shape_IoU_fraction_at_least": {
+            "0.3": {
+              "current": 0.831275720164609,
+              "add_8px_size": 1.0,
+              "add_quarter_four_aspect_ratios": 0.831275720164609
+            },
+            "0.5": {
+              "current": 0.7983539094650206,
+              "add_8px_size": 0.9986282578875172,
+              "add_quarter_four_aspect_ratios": 0.7997256515775034
+            },
+            "0.7": {
+              "current": 0.5130315500685871,
+              "add_8px_size": 0.691358024691358,
+              "add_quarter_four_aspect_ratios": 0.5157750342935528
+            }
+          }
+        },
+        "motorcycle": {
+          "objects": 845,
+          "bbox_width_q10_q50_q90": [
+            16.0,
+            33.0,
+            57.60000000000002
+          ],
+          "bbox_height_q10_q50_q90": [
+            22.0,
+            44.0,
+            54.0
+          ],
+          "bbox_area_below_32_squared_fraction": 0.3455621301775148,
+          "bbox_short_side_below_8_fraction": 0.002366863905325444,
+          "truncated_fraction": 0.2556213017751479,
+          "optimistic_shape_IoU_fraction_at_least": {
+            "0.3": {
+              "current": 1.0,
+              "add_8px_size": 1.0,
+              "add_quarter_four_aspect_ratios": 1.0
+            },
+            "0.5": {
+              "current": 0.9846153846153847,
+              "add_8px_size": 0.9988165680473373,
+              "add_quarter_four_aspect_ratios": 0.9857988165680474
+            },
+            "0.7": {
+              "current": 0.41183431952662725,
+              "add_8px_size": 0.41183431952662725,
+              "add_quarter_four_aspect_ratios": 0.5550295857988166
+            }
+          }
+        },
+        "truck": {
+          "objects": 1042,
+          "bbox_width_q10_q50_q90": [
+            38.0,
+            53.0,
+            99.0
+          ],
+          "bbox_height_q10_q50_q90": [
+            16.0,
+            29.0,
+            57.0
+          ],
+          "bbox_area_below_32_squared_fraction": 0.2418426103646833,
+          "bbox_short_side_below_8_fraction": 0.0028790786948176585,
+          "truncated_fraction": 0.362763915547025,
+          "optimistic_shape_IoU_fraction_at_least": {
+            "0.3": {
+              "current": 0.9990403071017274,
+              "add_8px_size": 1.0,
+              "add_quarter_four_aspect_ratios": 0.9990403071017274
+            },
+            "0.5": {
+              "current": 0.9904030710172744,
+              "add_8px_size": 0.9961612284069098,
+              "add_quarter_four_aspect_ratios": 0.9942418426103646
+            },
+            "0.7": {
+              "current": 0.2600767754318618,
+              "add_8px_size": 0.26103646833013433,
+              "add_quarter_four_aspect_ratios": 0.2619961612284069
+            }
+          }
+        },
+        "bus": {
+          "objects": 1018,
+          "bbox_width_q10_q50_q90": [
+            5.0,
+            50.0,
+            268.30000000000007
+          ],
+          "bbox_height_q10_q50_q90": [
+            19.0,
+            27.0,
+            211.60000000000014
+          ],
+          "bbox_area_below_32_squared_fraction": 0.3644400785854617,
+          "bbox_short_side_below_8_fraction": 0.12671905697445973,
+          "truncated_fraction": 0.4302554027504912,
+          "optimistic_shape_IoU_fraction_at_least": {
+            "0.3": {
+              "current": 0.9842829076620825,
+              "add_8px_size": 0.9842829076620825,
+              "add_quarter_four_aspect_ratios": 0.9842829076620825
+            },
+            "0.5": {
+              "current": 0.849705304518664,
+              "add_8px_size": 0.8516699410609038,
+              "add_quarter_four_aspect_ratios": 0.8555992141453831
+            },
+            "0.7": {
+              "current": 0.5343811394891945,
+              "add_8px_size": 0.5343811394891945,
+              "add_quarter_four_aspect_ratios": 0.5442043222003929
+            }
+          }
+        },
+        "traffic_light": {
+          "objects": 2368,
+          "bbox_width_q10_q50_q90": [
+            4.0,
+            5.0,
+            10.0
+          ],
+          "bbox_height_q10_q50_q90": [
+            10.0,
+            12.0,
+            22.0
+          ],
+          "bbox_area_below_32_squared_fraction": 1.0,
+          "bbox_short_side_below_8_fraction": 0.8141891891891891,
+          "truncated_fraction": 0.03125,
+          "optimistic_shape_IoU_fraction_at_least": {
+            "0.3": {
+              "current": 0.33403716216216217,
+              "add_8px_size": 1.0,
+              "add_quarter_four_aspect_ratios": 0.33403716216216217
+            },
+            "0.5": {
+              "current": 0.19425675675675674,
+              "add_8px_size": 1.0,
+              "add_quarter_four_aspect_ratios": 0.19425675675675674
+            },
+            "0.7": {
+              "current": 0.07094594594594594,
+              "add_8px_size": 0.4497466216216216,
+              "add_quarter_four_aspect_ratios": 0.08488175675675676
+            }
+          }
+        },
+        "temporary_obstacle": {
+          "objects": 419,
+          "bbox_width_q10_q50_q90": [
+            7.0,
+            23.0,
+            46.39999999999998
+          ],
+          "bbox_height_q10_q50_q90": [
+            9.0,
+            46.0,
+            64.19999999999999
+          ],
+          "bbox_area_below_32_squared_fraction": 0.431980906921241,
+          "bbox_short_side_below_8_fraction": 0.11455847255369929,
+          "truncated_fraction": 0.07637231503579953,
+          "optimistic_shape_IoU_fraction_at_least": {
+            "0.3": {
+              "current": 0.8758949880668258,
+              "add_8px_size": 1.0,
+              "add_quarter_four_aspect_ratios": 0.8758949880668258
+            },
+            "0.5": {
+              "current": 0.8042959427207638,
+              "add_8px_size": 0.9880668257756563,
+              "add_quarter_four_aspect_ratios": 0.8162291169451074
+            },
+            "0.7": {
+              "current": 0.5346062052505967,
+              "add_8px_size": 0.6515513126491647,
+              "add_quarter_four_aspect_ratios": 0.5369928400954654
+            }
+          }
+        }
+      }
+    }
+  },
+  "scope": "GT labels only at original640x360; no model inference or heldout indexes. Shape IoU assumes exactly aligned centres and ignores feature-grid offsets, ranking, budget and regression.",
+  "limits": "TorchVision RPN allows low-quality best matches, so an IoU below .7 does not mean a GT receives no positive anchor. Candidate shapes are untrained what-if geometry only; no active model/config/threshold changed."
+}

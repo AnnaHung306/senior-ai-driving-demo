@@ -1,0 +1,29 @@
+{
+  "checkpoint_sha256": "a7031897c0ce35cc97f4ab035277c51e0a35558dccc225b69455a16cc6f9eb67",
+  "validation_frames_sha256": "3abe9776737742e68e59dbb986dd6cf10ed9079b164c62318d6458ab5400e4af",
+  "heldout_opened": false,
+  "validation_quality": {
+    "passed": false,
+    "checks": {
+      "focus_mIoU": true,
+      "all_focus_present": true,
+      "road/IoU": true,
+      "sidewalk/IoU": true,
+      "pedestrian/IoU": true,
+      "rider/IoU": true,
+      "car/IoU": true,
+      "truck/IoU": true,
+      "bus/IoU": true,
+      "motorcycle/IoU": true,
+      "bicycle/IoU": true,
+      "road_line/IoU": true,
+      "traffic_light/IoU": true,
+      "wall/IoU": false,
+      "fence/IoU": false,
+      "pole/IoU": true,
+      "temporary_obstacle/IoU": true,
+      "terrain_or_ground/IoU": true,
+      "visible_margin_f1": false
+    }
+  }
+}

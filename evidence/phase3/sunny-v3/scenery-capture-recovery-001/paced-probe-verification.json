@@ -1,0 +1,1039 @@
+{
+  "status": "passed_probe_only",
+  "training_approved": false,
+  "scope": "Engineering probe only, not the full training supplement",
+  "views": 64,
+  "checked_images": 256,
+  "max_pose_error": 4.377842105895979e-05,
+  "max_semantic_instance_disagreement": 0.017096354166666668,
+  "rejected_capture_attempts": 43,
+  "capture_report_sha256": "26bd65e50f49bf452e738d2ed80e267e32d8ae362e7a671f480773dff028e635",
+  "plan_sha256": "8d2cab60f1287a195e77c4a84435db53070e99360c9ed10399d75dd25e657350",
+  "verifier_sha256": "0b768c408cfdd31469c0b43107198b7e66a7b1075aac8e0e84dbeb8f88132154",
+  "files": [
+    {
+      "path": "raw/town01-static-anchor-003/front/rgb.png",
+      "sha256": "415488dc7eb1032fb8f2594b0457fa869f256917a4baa438cc8b0d4f15bef65c"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/front/semantic.png",
+      "sha256": "2ad89e34a65d404288049eb815c0b3ff254f904fb864496f16f77b22d16534b0"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/front/depth.png",
+      "sha256": "40c0564178036e94f6286d07a0adc8c338debe745b31607254b897a4b66fced2"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/front/instance.png",
+      "sha256": "8d899f7c2d504a341531423090704def095cd9f9c67c0effc318be1dc919cb83"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/front_right/rgb.png",
+      "sha256": "55bf5d1119a2d1bb479ee6a4bd5f15be9ce31b510b38fd78e13d3e144008ac7d"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/front_right/semantic.png",
+      "sha256": "51cf89f2479cd20c584629aedd7dca9b5fbffd1dd4000fef6a69aaeb90ef56be"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/front_right/depth.png",
+      "sha256": "9d8d7e682119afa054c3e9a68063c4bb1f20da9cee6eca8caff5395da81bee0d"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/front_right/instance.png",
+      "sha256": "77365002c83dd3a0cad6de2ca1d7ca2036be85334842eba7342572a83cc71f99"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/right/rgb.png",
+      "sha256": "c670a32365a41803e6b06449de067f17c403e7244f15b918ea978fee9fe6367e"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/right/semantic.png",
+      "sha256": "077c740b62ca46724b875d4b4d6cf9413a2470a4c559d0b36fdc9bc368696352"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/right/depth.png",
+      "sha256": "3031cee03ef053fe077d164fcd6e9415da37261604f6d1614da88b353ca0778f"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/right/instance.png",
+      "sha256": "30dedeae65a2d33189385d9c72bd242f132bc3a7be144e752b4e4e2c7e255ed8"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/rear_right/rgb.png",
+      "sha256": "d4f11e42c46d346780c41fdd18d71b6cecb1838d184946e235fbc86aed35cdde"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/rear_right/semantic.png",
+      "sha256": "0cb3a575f84aa866424ee5fc0cb9a215c402ffe678d5b7f1540ca5c3c4d2e1ad"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/rear_right/depth.png",
+      "sha256": "100c05b0c9478e1cc474cf02f2e5ce57171b2cf3e4f06ee6b3a4e930be3efcbb"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/rear_right/instance.png",
+      "sha256": "9703c1616e5bea7439c7133bd561f1b907bccfd8c80a2b0bb4632d93bbd93f93"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/rear/rgb.png",
+      "sha256": "0870dd860ea017bfe67a607fc0526e03e41c67ef14f33ee1f92a008bf3dc52bc"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/rear/semantic.png",
+      "sha256": "1781d48eb8268d0c6e03d37ede772f97e1a14cbf78597e987b648e8e05d801f0"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/rear/depth.png",
+      "sha256": "66defbf3544234f54ebb983ab8f7e267b74755aab8077f6a48f416f84116e79a"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/rear/instance.png",
+      "sha256": "8be6bf893446ddbe21d71f12a36335700ca3a42296208fb7807a15e1a5d1b395"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/rear_left/rgb.png",
+      "sha256": "e5729502dc9369888e909a718620a6dfa0aa61cd858ac4047017b89cb9bee518"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/rear_left/semantic.png",
+      "sha256": "7a049cb7d0ba27cf8280d58af788d72f96801bb218f250c583a6a040b8833bc4"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/rear_left/depth.png",
+      "sha256": "18d4e756c3e1c1facfe28c81fa7a9f35a7650b63b76548bf05372593c6be1d8f"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/rear_left/instance.png",
+      "sha256": "36957efe158504ac1475ff4c0f963a93dbf7b16686daaf76f9def3252afea07a"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/left/rgb.png",
+      "sha256": "3bfadb21e89cada0c41357941299fbe4110f69e3166553ae5c902694029cc8e3"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/left/semantic.png",
+      "sha256": "9175691a1d20595de0e1dc9e1f8fc393b7a2f9673381d68270312ab2ebf725e7"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/left/depth.png",
+      "sha256": "2c25eb9e0f7ba8dd98d2b4f306fe243a374e4aabc55c5eb85e7cb6d390438a41"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/left/instance.png",
+      "sha256": "e63be8b297fa94a77b41978b2a736e6ab38f3196aad26f55aca6d352fe5cdbd0"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/front_left/rgb.png",
+      "sha256": "61144caf60287d35a8348225a006f98791a5b810a00dcb3b6e6fdb1e2df94cf4"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/front_left/semantic.png",
+      "sha256": "2b77453d5d83a64b44b1ec8eac97077a46924e074fad7419780652ec3dfa7ef4"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/front_left/depth.png",
+      "sha256": "8dcbf7be2305a4b19625986995cf678dedc99e023e140303523b2342216ffec9"
+    },
+    {
+      "path": "raw/town01-static-anchor-003/front_left/instance.png",
+      "sha256": "e5296b7bc6be74612fffd70e1f71f3d38e19dba0155e40a42505eb7b7f9d76eb"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/front/rgb.png",
+      "sha256": "958ec6cf934c2c1eec22abc4207e9fdee2ca8870a44fd95c9698926354785526"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/front/semantic.png",
+      "sha256": "27fc1e269f391d5b0eebb45666d8d484a1143a4f93c8b03b38c597bc70b5935f"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/front/depth.png",
+      "sha256": "f47d0d126aacb00843be8a93ceac58557575a23117046e1cf732994d0cd280b6"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/front/instance.png",
+      "sha256": "828035a6353dd04477494c0f990ba76d1a8c6c49f7022bad071ddbe1688e338f"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/front_right/rgb.png",
+      "sha256": "3c3861d0f4882844612f1873023f9273ae83adddb8d998aab83bac5fa16351ce"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/front_right/semantic.png",
+      "sha256": "09e16ecb66bdfff81d1975fe185680d882bdce1ee7e3623b1f8c2c44a55bc07e"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/front_right/depth.png",
+      "sha256": "839881255db2ee4bb8b2f65ba2b4b2aa829f268913923d6889fa31488697284f"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/front_right/instance.png",
+      "sha256": "f8dbe4f203a04d33900b18045df0a5f63026dbe723125f9535ba3272ade6df12"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/right/rgb.png",
+      "sha256": "38af3a3ebc9b5a9c0c14489253c97bc9c5861c12ac4a468d301d523f605b4e63"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/right/semantic.png",
+      "sha256": "8d6c63e5801aea70c3f711e6b4dd7c0d9ecc6775cad737f06841336f406d1ca1"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/right/depth.png",
+      "sha256": "d0521ff9a8b6c13f59e6eaf4f2e85eb28285fc01aa7905b00ec37e13541c2f53"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/right/instance.png",
+      "sha256": "672e404d70b2edb3e93b3a7d64120a3f34f5ac4bd8a4322b627cbe0e1b131e1c"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/rear_right/rgb.png",
+      "sha256": "7247881f303c85438da0fdf3d8946977513a9c7d60a7b6671942f0b9bf77e5db"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/rear_right/semantic.png",
+      "sha256": "da76c8c44ea41940493f7b447886684ba4c03f9c897c6636bbddd25ac4aa29bc"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/rear_right/depth.png",
+      "sha256": "a1431f0e31dc52432f0aea4e091bea6c49cf3ca54c6584dfc0660ccbc610efe6"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/rear_right/instance.png",
+      "sha256": "e8a1880e99f3fab2df159975408e55aae34e376b694afcbb3fbe893e39bd3d43"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/rear/rgb.png",
+      "sha256": "6335b014ffcff2ca0650f60b2d30be3df3ad46e14511b8f20cd58ae4d707588a"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/rear/semantic.png",
+      "sha256": "9edf6a48a1c98ecb3f8beb74b827df745872e8bdce0f5221a74ee3902f57e956"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/rear/depth.png",
+      "sha256": "29062317d4ee4cbc69b64feeb7cbfe19c0febaba54aadbcc226a6bca5cdd85dd"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/rear/instance.png",
+      "sha256": "240d6835d3826aa96b6a4a3087acb42cde3ce41d1afcc96060ba1abd7032a67c"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/rear_left/rgb.png",
+      "sha256": "b757e034deb7c4591d30420283b6992833f5938abdea14a9096c3af794472038"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/rear_left/semantic.png",
+      "sha256": "a62c11b4671d0b2d14f5ddd45d3eb91d1d4e26823844fe44288adf95267da9b3"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/rear_left/depth.png",
+      "sha256": "72290d91d016b8b56a216a40e8dc63a973599a5167f8819c5364e0d98fdcaf54"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/rear_left/instance.png",
+      "sha256": "91d85e19f3ddde76e183d5795f3709b4a7947a5dbfa9d9a3caa5f6af6eccbd96"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/left/rgb.png",
+      "sha256": "bd7f0ae3da8ee8d8d2a5bb6cbd8778666f83e764300949a51f692fe7983ae990"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/left/semantic.png",
+      "sha256": "87de18cf1ae719de254ce4ebf0b9467cbb64d8d0f9f705585b738ba48bb96a70"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/left/depth.png",
+      "sha256": "10162ea450cb81d15434dd0ffc1759e8d2dc0bce1dc342ead84d825a696bee0d"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/left/instance.png",
+      "sha256": "6f4a5aa1e06d87f8d78e2f58f8c58d85d9887d3d4c46ef248c1986d8321d309e"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/front_left/rgb.png",
+      "sha256": "772bc5fa329cd5f7987fe791486e9955e09d4938ec7c03ae0437f4ebc959bff5"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/front_left/semantic.png",
+      "sha256": "29e5a78f560da974a89107b56966e4d78d5f87ea766bfb6a4d5f918a2fcc49eb"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/front_left/depth.png",
+      "sha256": "6be944cecc9ad5ee2a16c3981e2f75f0e65e32054739ac9f0739f15694e6c699"
+    },
+    {
+      "path": "raw/town01-static-anchor-005/front_left/instance.png",
+      "sha256": "5e71f827eb6f1fce4d725b77c00c9523ca55ea599a650d20f2480d76bf40d6e4"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/front/rgb.png",
+      "sha256": "095ff20fa25114d1e6e6ffb4b458b5ed458c5b638e23d4a8abc32f7f9a72c474"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/front/semantic.png",
+      "sha256": "a4729d04f1334f141cd657cacab69189c6221cc8e0cd468b3064f7f693b4e700"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/front/depth.png",
+      "sha256": "19b7bb5318c5744cd3d1e918d2cd40c43bdb6475f3478e8a226e2561c58983f3"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/front/instance.png",
+      "sha256": "33c1ad1130c08c86208ec5639cebe8a61a32a26075531ee3bba5194335df44ab"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/front_right/rgb.png",
+      "sha256": "5b22215f807fe70738eea287d265df4ae690b072d6624889c4e0bfc2838d104c"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/front_right/semantic.png",
+      "sha256": "777e100fecc9a6f0369f3f80ec62e95445c46ab7aed8884705f242a1fd62478b"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/front_right/depth.png",
+      "sha256": "f571fe24774c8fc83b750c7276e4bcf3e74329e0fcd8a6169c741b5895c080a5"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/front_right/instance.png",
+      "sha256": "84d7ea3e6093d05165afdf7fe8e7f6d3f2788ae096dd7e66fd2a3c8b78b57bca"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/right/rgb.png",
+      "sha256": "cfaa01620e3acdd4b5c6649f95507972698eee9bad1bad7253035bf54317e7fa"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/right/semantic.png",
+      "sha256": "7c00c3e929b55646bb9b436c00aaf903c3e52c88af9c283375502d2ed0380d6b"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/right/depth.png",
+      "sha256": "0cdf7797fe274c1bbc07e5a226a41bc9f86a61480c29e3003f6a8056f6fd33cd"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/right/instance.png",
+      "sha256": "25ec4f334ed547553c5fee2edc7e9aee83d2fbd4c8e0c2993e7d37d278012f16"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/rear_right/rgb.png",
+      "sha256": "ed1363dfcf20aeda8789db354cb0bf0114a89cd80945fa0516b68bab4926cc6a"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/rear_right/semantic.png",
+      "sha256": "67b84d77fc1375c5381015efcf833945111628f971772ea7eb1d83e4a74d9360"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/rear_right/depth.png",
+      "sha256": "1c2481b2bad24112d0f75af7a3f764e1bcc949c71936071cb5abd452afe7d15e"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/rear_right/instance.png",
+      "sha256": "eff2f5da74a53cdb2aafe224805bfbb234b3cc157261f9d5edfbded843476335"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/rear/rgb.png",
+      "sha256": "7fdddd418876317afa4e341e47a29c14256b484d81e65919b309ae101bc2fe2b"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/rear/semantic.png",
+      "sha256": "07f080a92d3a94c36035c5f8d38b47b5f75c373ba72f73c4dda2396142e606f3"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/rear/depth.png",
+      "sha256": "2fef8d80c35d0d08eac60377b90f067ebdbcbc9b931f5fbc8ce41c1dde71fc23"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/rear/instance.png",
+      "sha256": "0146a881bf074bcfc297221cec884f5479cf188a059d77b1b13bcfb4067f3b98"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/rear_left/rgb.png",
+      "sha256": "24ad001a152e783dcc7fbd70ff71e2d53e361b58fdab509fc420fd91e692ccee"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/rear_left/semantic.png",
+      "sha256": "f8952d81d0b79dbc46ccbf2f89e83cd51c624a0bc80fecfae82f4ecaa4efca71"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/rear_left/depth.png",
+      "sha256": "c6bfcb63863a4fcb66583b284385defbb8becb514f29d5ba7f1716778a0e4848"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/rear_left/instance.png",
+      "sha256": "00716168ec0efe130906dabff3f720a7988be604371e46b0f1b674800fc13e01"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/left/rgb.png",
+      "sha256": "03d3f7158c9bb802cd8103462c64fa60c6a4a8e2e16ec075176e0d6d318b62df"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/left/semantic.png",
+      "sha256": "80c768dd9b0433c5c10a7d8d0f19f78c422ac5303145ad86fbfa0033cd61ec05"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/left/depth.png",
+      "sha256": "e3372de916cc4c3f037575b963931bfc55441cfad18acb11f3d5849c908e09a3"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/left/instance.png",
+      "sha256": "4362eb92389c3964551733d0840c9eb8410cd6a27784be94e3639df593e96876"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/front_left/rgb.png",
+      "sha256": "eeabef314d4640cddbcfa779614a65a6ea1d05d3308914ba7794f5013cbc8988"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/front_left/semantic.png",
+      "sha256": "8a44dc33150a7e508ea9e2a4cc9a882eb40654d9b44580727f885dab623ebfc3"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/front_left/depth.png",
+      "sha256": "145e70df12dc0bc5533effaafa9fb4efa439f8ea8f7a0a8ff4e644e3acd39f89"
+    },
+    {
+      "path": "raw/town01-static-anchor-007/front_left/instance.png",
+      "sha256": "b4426e0803e6c315330f21700e151d1de3d8d60afeb6939f2bba54e3c51c1d97"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/front/rgb.png",
+      "sha256": "1160bf5c1a8321026dd8fc40e7eb175c5ab6017f40ec5202eddfd07eb65004de"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/front/semantic.png",
+      "sha256": "77562c1cc2a44d549de5db96666f411d8108fa8e0ac97c43fa5824647ba4df30"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/front/depth.png",
+      "sha256": "5b3f3a95ab285015892f1dacac96773d0860cb839ac396c8e908ec615d744e93"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/front/instance.png",
+      "sha256": "6844fb029612f3c6de168eb542881277217073a076d0cd457922cf6f91eb8f8b"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/front_right/rgb.png",
+      "sha256": "6729531de58a65c3a93734ea7ff31a05548fdf49f12472460db74c4597aaa933"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/front_right/semantic.png",
+      "sha256": "0fb49aa41ea60ac208016fca2d09d83d1d14b7b0593b90c1fbbe9d70375f525a"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/front_right/depth.png",
+      "sha256": "fc13d6da5c9fc70be0b25c30e5d6a65f39d00d77a805edfe04ba859536a2d462"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/front_right/instance.png",
+      "sha256": "8520557c7c5caa1e17be5263cc2ad2436bfefd00d2db5a87feff914cadd5e00f"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/right/rgb.png",
+      "sha256": "48bb05b4bab9fd02bf3329425c07abc726f28ccf44ff6e3ea02e6a976422b7a4"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/right/semantic.png",
+      "sha256": "dcc4c9685bc512daa7166f47db87a0d6db67a12101ba6bc9f97f0020624f0e33"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/right/depth.png",
+      "sha256": "900e7ecd3fe2938ab2ef9244906d0e0ae617fba179c373854cd22b2554f363d6"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/right/instance.png",
+      "sha256": "145d65ed2d1f88133d2b1854de40bb8625093ba4bb60c41dd07d54e1cbd4dd89"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/rear_right/rgb.png",
+      "sha256": "47dcf0f90665baf3b9a4a0cf71b5f54bf4c096b2dadc2f10e79a9ac98864b076"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/rear_right/semantic.png",
+      "sha256": "7c6f628fd7a0ff9b40fef36bae67017985eaabaa804c991ac0ad5148869af763"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/rear_right/depth.png",
+      "sha256": "72ec07929360dce881638a2065ac831320228ae4c5fb025f02db7fcd11cb8023"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/rear_right/instance.png",
+      "sha256": "90fe41f1182c0ee0bb81daab5df159455ace81cbb3ba8d3336152b05d1be0ed0"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/rear/rgb.png",
+      "sha256": "3a45a8387901ce04500a257eb05334f091c287aca71fd6bbc20b086360c10622"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/rear/semantic.png",
+      "sha256": "6d4bbed45c9c8000cb7334ee2b46ef2e225424347d9a35f488d9f07a624bb06f"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/rear/depth.png",
+      "sha256": "8bd79fee9fef74e2ad12db270112c8e26b0c1ae3c272eccd965ddf8e5c858206"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/rear/instance.png",
+      "sha256": "50ca40ff6450f29492964449fd7d130e0485deccdcf7c653814efbf6fd6fe62f"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/rear_left/rgb.png",
+      "sha256": "6f10fa5d41ad3fc431d4de40ba52800cedbbec187f5805dcb949277565d8cb82"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/rear_left/semantic.png",
+      "sha256": "67d96df82bac93da53d6891ca0a9d7201d2bcd040701f42e7c6abc259fc35c1e"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/rear_left/depth.png",
+      "sha256": "c4679b0d24e0486343efcb392715bd0afdb7c31633ee71fc4991911ae883de2f"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/rear_left/instance.png",
+      "sha256": "7e4dca379a32d4065de265ce26f2b58372907271eaf1f0fd970ac7ca0bdf5344"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/left/rgb.png",
+      "sha256": "b81c89a79f353404cadd185ca1347817c7a4587b124a2374d47e2dda15e0fca2"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/left/semantic.png",
+      "sha256": "22d1025c9df4d02c9cdd77291c963132b04f7a52d5627a6fdbac69e09bf2dde9"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/left/depth.png",
+      "sha256": "865da5dbabb1ae64246b44f7454948d7ed48298fa146fe06fa29fdb22e2c96a5"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/left/instance.png",
+      "sha256": "ba9be7653af76dc1dc96cc527aebed4b483ed2d7532db6e4f24121789cd2fae0"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/front_left/rgb.png",
+      "sha256": "a4729e11cd693e75413b33ed27b0e8c07534c65fb37e03108834b4acc5652e4b"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/front_left/semantic.png",
+      "sha256": "292dbdb08b2438a70c7eb4f0a1afc4cf0df6a98d9a20697c4741436526bdbab8"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/front_left/depth.png",
+      "sha256": "7ba9ff44e8dac33cebd405aaffc0c3925deabe82a9572bea8530bd553fee34c9"
+    },
+    {
+      "path": "raw/town01-static-anchor-009/front_left/instance.png",
+      "sha256": "cce034ec6dfdfbfecea80ba6e305acd53dc30a1405566d3a1b22ccfc58ca5b2f"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/front/rgb.png",
+      "sha256": "4145215e3f8eeffa148e83b1f960b8827d90461ac903e9760b7f12d9d7027822"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/front/semantic.png",
+      "sha256": "33e228f7dc2f353b394941675a6e1d8a38a457847998cabf7560c4481cdff757"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/front/depth.png",
+      "sha256": "4d8590a0d4ac15f1f9801a466cd3345f7c2c16d511a9844f23e64234c9496f72"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/front/instance.png",
+      "sha256": "00268d23ec266689a950a415b631adad6bbb59fd7fe5beef1fd663e270e72a09"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/front_right/rgb.png",
+      "sha256": "9a0e2af4eb0c27675ed68a9275fbe547aebff8984ba96fbeea99fe0c10962170"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/front_right/semantic.png",
+      "sha256": "f8bdebb32f5d19ff7a40059d407f755ab21e23d7d9cd15b5510b7b91058fcb09"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/front_right/depth.png",
+      "sha256": "e25220370a60fa3cd2e20f322a9b0a38b5991fddb52ac6cd6657a8dc494f8bd2"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/front_right/instance.png",
+      "sha256": "06067a98f262e9e371e97b99525cb61b9e082669372b2988f939d3a5821179ce"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/right/rgb.png",
+      "sha256": "aa20f41504609388655a2744726f9773387dec4a51d8367d262fb693f7287e6f"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/right/semantic.png",
+      "sha256": "698cf3cc7c7188ffb0719d8b3cae19a146c688ab4c2aa027301e34531b702ecd"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/right/depth.png",
+      "sha256": "62201dcdfd582f80ff065db289153a5616b6913dcdcec1c77011452188930a3b"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/right/instance.png",
+      "sha256": "037a5b91d764f8ff3f4957631fcc9f2a136fb31564d60307b71097b0e4e87071"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/rear_right/rgb.png",
+      "sha256": "5e786da52cb187c5c3dd7c0b828e4dfec60657b2dc3d3e06f6fcfb304774ae46"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/rear_right/semantic.png",
+      "sha256": "dfbacd413ac4635560d7c0060f085c3b0ce11ca8a77a94d1c21ffa7cd54917eb"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/rear_right/depth.png",
+      "sha256": "543bfb9156a0a5d275758e2a9a28f4749d6ebf4f8258d5bae3d4e64adc8f00db"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/rear_right/instance.png",
+      "sha256": "59450385c26c96f4604cc58507747d066360065dbb737b8a625c5bfeecce7398"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/rear/rgb.png",
+      "sha256": "bc15dff2c965a922a8754be93a5f7ca51387835f2c2e5caab1f50f91612a315b"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/rear/semantic.png",
+      "sha256": "88da76b558ae3434bc50c61a40129ec7c0f62b1041aa4642482d130e72135db7"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/rear/depth.png",
+      "sha256": "fdee250a311d0d035b18be950227d3ac771193dd06dc1b4251f291dbfff9d15b"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/rear/instance.png",
+      "sha256": "b77dca33e1528af43d52395d8150fb15cf64cded1867725b875bc9efa93ff110"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/rear_left/rgb.png",
+      "sha256": "1c38f0ede249ba4da0e51da6ea59b94fd92879b57f48a3f1f8be56dfd20b658d"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/rear_left/semantic.png",
+      "sha256": "71c94222773db1d48d510515d389be4de751cc246bc4d0e4d82f1594319c4344"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/rear_left/depth.png",
+      "sha256": "2020d2eb301213e285cc41653b5340bcc22593538520bb67bca8e1cb8af95a27"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/rear_left/instance.png",
+      "sha256": "83c9da5d20e180ef4cefdfcb9ff0bad6bc0de8cf8d8cf9b0b558061c35965e12"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/left/rgb.png",
+      "sha256": "9339281d0ab041039e63e94a7c543bd11e685b6e18390a4c3dc2526f261e2bf0"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/left/semantic.png",
+      "sha256": "785302052d43f2a589e7405f94679185253ebada3c6c54dfeeb0402a59d364ac"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/left/depth.png",
+      "sha256": "dad964afb41b65def4d7f76a908e8596e8d6206f821ad4042d8d980cf7e41034"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/left/instance.png",
+      "sha256": "c93035129a129c7098d73e1c992da5f9060901c24e1d1347c79ea470ce9b9cd8"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/front_left/rgb.png",
+      "sha256": "31367589ed059a18fadc5cd8aa54304168ffeb5326d4ac6a845f4650cc2c1d68"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/front_left/semantic.png",
+      "sha256": "5ad48fcac1e5b0e8845f6099a52d1f327ce08264ff8da114893f95a1b315911a"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/front_left/depth.png",
+      "sha256": "cf827f8db50c8fb7341539a8b76ad6857d5cca2a87c41f6266a40bc9d1183451"
+    },
+    {
+      "path": "raw/town01-static-anchor-074/front_left/instance.png",
+      "sha256": "f13b871a917513d01c034eab49d8a9d31204061dee6750c54f55a61ddb3a1c93"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/front/rgb.png",
+      "sha256": "e3ec743945162e79d13489f6d3533d55cf87d7a7f2a262d35ac42e6baea4f792"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/front/semantic.png",
+      "sha256": "0fa57edce310b3fb8aec9c4becab6485f85a764e89488d7dc5b820b960f4f0b9"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/front/depth.png",
+      "sha256": "8fcabf6d66bb9b05b873db7571f3fd6911b2ed2deda04290d7f5b68511a899b3"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/front/instance.png",
+      "sha256": "e30795eb4fe62044553f02005ef64d56ee67b1ce6b1da4ca07dc204c2c0dbf13"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/front_right/rgb.png",
+      "sha256": "fb25d59447cd724fc9f99d454e7e07b2189a9fb06c82af9d91e64342e5c64406"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/front_right/semantic.png",
+      "sha256": "71e99f1c2735600cec2f54a86b13beaee6d65924cf76c26622c52425ab77da11"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/front_right/depth.png",
+      "sha256": "b63b5370f962ca3565c36453c328ff8272db82470f1cf23038d97bd3ddf2c57b"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/front_right/instance.png",
+      "sha256": "ab2e3dab9527034c503ea4d8d8feabaa8fdf36cfe78ce3d68cf63faa195852a7"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/right/rgb.png",
+      "sha256": "f0c1bc8fb85089dfd55aa098bccef56b0e4f3cd88511c03c0705181abd31f11a"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/right/semantic.png",
+      "sha256": "a312a0c5b1aee5e5c0ded4349e08c38af9dc52290bde60adb5c0ba58fe826b62"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/right/depth.png",
+      "sha256": "5d4758599bf554b3af2b8fc4b375ce3b6be1b72bbfa90fe5dd9352aff6d8ee5a"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/right/instance.png",
+      "sha256": "d8af8ced6e8903724a86d7b4c1ace4b45df6d1e898ba8032a00d28b1e4ade745"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/rear_right/rgb.png",
+      "sha256": "b4170a7becbb6c063a7e7067fd4ef1c96511a8282dd2dcedf3d3e6e3c7c774cb"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/rear_right/semantic.png",
+      "sha256": "732decfe1adf7bd40840f62697e958596020090354fd72794ef6798da6b8a956"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/rear_right/depth.png",
+      "sha256": "f754373cebd5cf0aa1516a17de47394bdb6f20cde181fe931bed852d2dfe3d7b"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/rear_right/instance.png",
+      "sha256": "cfdc46a4ac360c1f9be6a63607571ac9b9b329e7ee7fff06bd6237404c82224b"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/rear/rgb.png",
+      "sha256": "6564c34730281db36af1bcd204b1398a1c07538f91d38c0213db9ee1ce9ec561"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/rear/semantic.png",
+      "sha256": "cc94a9ab2fa5cc8a78ac64f4baac5b97272d4619d0e05106cea0d4a78b03d0ff"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/rear/depth.png",
+      "sha256": "2b5b6fd131fae59d92a2a1ce5e6472cd84cf02ddee0008f52a5eda3a454d5bef"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/rear/instance.png",
+      "sha256": "7fcbd0b3abef98e986fb2d370b05efdbb6404de90700a721861e65f4117d87de"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/rear_left/rgb.png",
+      "sha256": "e6824a2e07b6cf46d46eba3409bb03457000b8994a888e9581b1bfe74ab211f2"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/rear_left/semantic.png",
+      "sha256": "0499b8ebe36a01a099581a059cb47a8df85aea86e8d583f0dd09ca9144264df3"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/rear_left/depth.png",
+      "sha256": "28cfae917553a36f4f38577390a02fcc9433d596e09805cd2964c727f88be999"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/rear_left/instance.png",
+      "sha256": "ef24d642c8210b95a782f581a22084c2e3ff334891426d7c7ba645bd85e38911"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/left/rgb.png",
+      "sha256": "6f3a4cfc8507b1741dbe146e1e21016895fec6c1de63f7aaaf32f135705dcde3"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/left/semantic.png",
+      "sha256": "b6d008f39bd0a89a288a015194d8909b54b6c6b29207c9cbfd56215dc9d73970"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/left/depth.png",
+      "sha256": "1c1955299ebfa11700a426f0d9cbec50b9970ef2d567591f201178cfcab2e1aa"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/left/instance.png",
+      "sha256": "0fce1ab1d6f3dd0a3fdfe95ec394f64c5d7b48127b21fc16b9153457d1b5865a"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/front_left/rgb.png",
+      "sha256": "20148723cffe1289f21a6960f4505a749fd24d90f161b84451bb28309fa51afb"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/front_left/semantic.png",
+      "sha256": "084f4ab11c40be712ba7b2483e73b5e02db8e167fb23e093c41987f57d06dff8"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/front_left/depth.png",
+      "sha256": "a3cb36fa3a153b638417ce45b5c2ab40887a3cdfa16af8b3889550afcf549535"
+    },
+    {
+      "path": "raw/town01-static-anchor-109/front_left/instance.png",
+      "sha256": "8838620b0b824309117971ccd0486af64c6a1c93bf4bbf49dd65358e2b8607b4"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/front/rgb.png",
+      "sha256": "31a9674242f53a152148b7bba130ce53d015b4f7c3bdc94dc20fba08d062224e"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/front/semantic.png",
+      "sha256": "37b91148f9d7ff4c1c308ba8116c2b7b8188d840501f0e1ec7c643438f8ce690"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/front/depth.png",
+      "sha256": "2c4a7464f7a72ee2772943ff957db87e3320dfa7986c6f4fe4cbc964be0eb118"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/front/instance.png",
+      "sha256": "533be542ab1f3b84715ed416495ce1708a0b2df12dc82e8662142b2691599b38"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/front_right/rgb.png",
+      "sha256": "bd60e0fbb2a2efbc0790fb95c6efcd8bb0a0eef44812ffb05470fbe32814d4de"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/front_right/semantic.png",
+      "sha256": "cd6b016f6cd47d35d1898b4668cb615a78d521c777c2d7d6b53ea9e440ea2f77"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/front_right/depth.png",
+      "sha256": "50cee559e28531b6c7a7b2ac16be023eb7dac1d34b5549fdb2ec993c9d873eb0"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/front_right/instance.png",
+      "sha256": "7a372be1df7c8a2542851dc6c0b33220738479878d6e4b081770785ce93ad196"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/right/rgb.png",
+      "sha256": "9b88d2bcab3eca095d5f962c80d998061e59cf00fe2ad1ad2553986a64ff2a80"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/right/semantic.png",
+      "sha256": "08d1b4b225eec26f6f2e418163c5baddee2bade44a83106e2c6cdf0f14d5e98b"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/right/depth.png",
+      "sha256": "d982a904b235693e616d236028b6c3a3251a2df16349cbfc11970a90d8bfb06a"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/right/instance.png",
+      "sha256": "fc1ed169c13e0a01d87c794e0edb95dfe8067ead6b10366e42f764036008e83c"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/rear_right/rgb.png",
+      "sha256": "bcf901a1bf92ff922c3e4171e6428608bb3de1d987fb2f621b2af0c068858711"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/rear_right/semantic.png",
+      "sha256": "5c80015c26ce7498ebdcef4c8eca03fcbb6d24a8cb8bc5bfc3154c42ae0a7f2c"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/rear_right/depth.png",
+      "sha256": "16725f97504d70fdc265c4e640d2b45f1097698db834833501b5f4298da56e17"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/rear_right/instance.png",
+      "sha256": "c4e8a75a9c8af53f8e134fdd723857d3a28334e36ff42ff26ea26c0ee6dd4c8a"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/rear/rgb.png",
+      "sha256": "c7e38eae9ffa40ac47dae67964102482dbd3e0844b3a87502d6802a6798a4501"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/rear/semantic.png",
+      "sha256": "37cb21474f11216eccb252ccc2c50e8105200a5bf25f8051bebc864ec6374025"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/rear/depth.png",
+      "sha256": "26535c75af7e4a476d73c270adda36b192c26b460ac075c3b66d31b9a9a5f19f"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/rear/instance.png",
+      "sha256": "ceaa7c25369451a7dcd68e6684ebc81106e5be2bc6e88981c2d34d69350639b9"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/rear_left/rgb.png",
+      "sha256": "4be6d1a411722c1ae63dcd770027d90ca2f4097be839f8d5cedad5dffcf565b0"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/rear_left/semantic.png",
+      "sha256": "ec91903d01834a754d1cd33b19af03d45baf6fd4d7081842d0d0c738ee3c37b5"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/rear_left/depth.png",
+      "sha256": "46a67e0d4dadd47d644a575358067048880a86fa42e07ca1002d3cb573ba01db"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/rear_left/instance.png",
+      "sha256": "b281a126452d8ff21dc035aa5aafd222b4222e2c013663741c490c970a15c361"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/left/rgb.png",
+      "sha256": "5059fd8e8ead401a2235448b4c4ad6206e651afcde1996f12ee2c4d088d76a46"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/left/semantic.png",
+      "sha256": "d5ee4072c0ce241bfdc2ea77c29298e45bdf0d7fd39dee61d2ceaf0230e97eee"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/left/depth.png",
+      "sha256": "cab26e3a65d2036bbf135d7530578d572a56a34680882c91f1d732bdc8b1f288"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/left/instance.png",
+      "sha256": "65807039872ef7845c2e316366f4c1dd2450c72464dc154da893ea0b611c0ba7"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/front_left/rgb.png",
+      "sha256": "0612771a7b77a7e863939ce0d5ab009a25760ebc14875c877d9268db0ef92940"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/front_left/semantic.png",
+      "sha256": "60a16444adcec56553c8cafb3a6a8bcaa1e41516351ef20cd4782efdf2f22da2"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/front_left/depth.png",
+      "sha256": "a182a1b57b6b6f904d445b6f7dd101220352a9bb3d88e5bfed86bf6f725dccd6"
+    },
+    {
+      "path": "raw/town01-static-anchor-107/front_left/instance.png",
+      "sha256": "88a05189f76a39c079ad309b0ca0655c4dadcc188e9f4ad0ba83be5133b435d3"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/front/rgb.png",
+      "sha256": "2ec0b6a335e8bf00f99377df996644fd0e07f75bc3198072ac9ad1f079150af7"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/front/semantic.png",
+      "sha256": "41e92281fa23b2d7abdea6d665210555abe5c20aa4682280557104c4693c1d38"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/front/depth.png",
+      "sha256": "18cab166217cd0f20cc64397d740a48e9401c0426360f9826b7c74221dd34a4d"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/front/instance.png",
+      "sha256": "e6ce17753bcb9ec8a1f2a73e26a7eafa7c318bbab510247a985f4864c2e56d5c"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/front_right/rgb.png",
+      "sha256": "9b28d8a24ce85e7c8030b01b6caed3017f7bf111ba957a5437e255ca22d13d61"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/front_right/semantic.png",
+      "sha256": "77d233ad9763917090edc233c7cc0c72d40ae950894f5fba40d38109407a0476"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/front_right/depth.png",
+      "sha256": "a2d12cabc9618da8d767c6c61f8526cafb5f6434e236dccffdb27df89847fcbd"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/front_right/instance.png",
+      "sha256": "1836e2ca91a79db087b4f9305cc33f99e1be461fa98ae200fcf6d1e01b4871b3"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/right/rgb.png",
+      "sha256": "f292bd5c21b78bda73aeb050744672dbdc1eebdc8e30c515588399e9f8857169"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/right/semantic.png",
+      "sha256": "e49d206d3d647a587faef6078ce31f37ca1ba7c5964815d982a8aeabf52eaca8"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/right/depth.png",
+      "sha256": "c82a5d29bab0677841810ae5d5103db9d52aa8b22de0bed11a70ce35a6f014ca"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/right/instance.png",
+      "sha256": "dfc6b457959bd169a4f2c230704a4e2c8939a2810d0cc130fe85f945b3e33ff6"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/rear_right/rgb.png",
+      "sha256": "28b2ec99bf232a6df62d43260da044512e4da4594d6be20aad5b9c1167c5ef52"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/rear_right/semantic.png",
+      "sha256": "bc131ccdc32da47bc9413fe9dcb56220451ad3bb0eed6d6ba2ce4971b59d8b3e"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/rear_right/depth.png",
+      "sha256": "70f68c09d400bc9a4a4ea1dc29d9c9c2ee6c20cb31a179fb160cf88fbc24c407"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/rear_right/instance.png",
+      "sha256": "dcb687a6ee9ceb542b1aad7838c9063bb547b6e7fb739718230e57b95121e1de"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/rear/rgb.png",
+      "sha256": "f60365c60294a3ca4b2f2006ffff7e9bae384972aacb17d0ca4e669c335b5aec"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/rear/semantic.png",
+      "sha256": "3a0e794cc9795f840c7ee3fc3850f26c975525d5a275c09a7998a5442a9823d5"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/rear/depth.png",
+      "sha256": "4ca98bf1831e2b2e7af6e2fa76d6e06c86bd1e9a099094dcc20ac2c4dcfe26cd"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/rear/instance.png",
+      "sha256": "1909e34e5e6ddeea282aaf40a1d5c8e470144d81aaabe6a7d5148f1112d0345e"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/rear_left/rgb.png",
+      "sha256": "984567649203bf603cbbf4d7725749ac2f2e13cc61f4a014d364b3058c00da4c"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/rear_left/semantic.png",
+      "sha256": "daa4a24a597165e61bd27b932b48eb8c6566cb4eb621a831c681db6f0e774ac7"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/rear_left/depth.png",
+      "sha256": "44bdea4aec45a8e9f3ee771f93da58983043c02e6385487d49e14551f8c52672"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/rear_left/instance.png",
+      "sha256": "e70c9c1f5f82d34369dbb2d02c9851b88403406fa75608801be823d2d9b28d31"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/left/rgb.png",
+      "sha256": "00e991d4cea8704327db12e68a2d250ce67cd19d94c841ef6c6eba7f922c2ccd"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/left/semantic.png",
+      "sha256": "25f783f1945a35db4aedafa57facf521c99461de79cde736ae234bd37af8ccc1"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/left/depth.png",
+      "sha256": "32cf320c4c3beff54b1a20d8596b6e9af3aeb402d54129f5fc722e0a1ce61be5"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/left/instance.png",
+      "sha256": "b25d25ee0b73ec0458efde82c7d2138b9309d9a2c86358bfc97ba6ba4eb380b6"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/front_left/rgb.png",
+      "sha256": "0e238ed3cb5a8ebeddf44d42eb0cd459f10f3502e67016b448b57bacacb7f528"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/front_left/semantic.png",
+      "sha256": "e2607ad95a04ecf75d065092c4d46c67971ed51e4bca434e6e6cd24b4134cca1"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/front_left/depth.png",
+      "sha256": "b20f29b48f61f5d2446836883ee898bab49db93342a8becac9428c587ac78a5f"
+    },
+    {
+      "path": "raw/town01-static-anchor-073/front_left/instance.png",
+      "sha256": "eb080f3d893d05324707aad632bbc9b79e8ef06105f747f1efe9175ec87b5612"
+    }
+  ]
+}

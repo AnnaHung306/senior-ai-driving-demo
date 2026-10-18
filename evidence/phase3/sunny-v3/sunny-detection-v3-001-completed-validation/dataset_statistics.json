@@ -1,0 +1,39 @@
+{
+  "train_views": 9600,
+  "validation_views": 3600,
+  "train_groups": [
+    "town01-route-00",
+    "town01-route-01",
+    "town01-route-02",
+    "town01-route-03",
+    "town03-route-00",
+    "town03-route-01",
+    "town03-route-02",
+    "town03-route-03"
+  ],
+  "validation_groups": [
+    "town04-pedestrian-route-01",
+    "town04-route-00",
+    "town04-route-02"
+  ],
+  "train_segmentation_pixels": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "cache_budget_gib_per_split": 16
+}

@@ -70,6 +70,17 @@ class SunnyExportTests(unittest.TestCase):
                                  light_run=runs['light_state'],demo=demo,benchmark=[benchmark],root=root)
             with self.assertRaisesRegex(ValueError,'tuple mismatch'):export(args)
             self.assertFalse(output.exists())
+            # Correct timings cannot relabel models as trained on another main audit.
+            value['phase_sha256']=hashes['light_state'];benchmark.write_text(json.dumps(value),encoding='utf-8')
+            args.benchmark=[benchmark]
+            for task in ['detection','segmentation']:
+                receipt={**self.inputs,'task':task,'checkpoint_sha256':hashes[task],'samples':50,'warmup':10,
+                    'network_and_result_to_cpu_ms':{'p50':1.,'p95':2.},'warm_filesystem_RGB_manifest_to_result_ms':{'p50':2.,'p95':3.}}
+                file=root/(task+'-benchmark.json');file.write_text(json.dumps(receipt),encoding='utf-8');args.benchmark.append(file)
+                (runs[task]/'provenance.json').write_text(json.dumps({'data':{'audit_sha256':'another-main-audit'}}),encoding='utf-8')
+            (root/'audit.json').write_bytes(b'reported-main-audit')
+            with self.assertRaisesRegex(ValueError,'reported main audit'):export(args)
+            self.assertFalse(output.exists())
 
     def test_stale_final_or_unbound_pass_cannot_be_exported_as_passed(self):
         parent=Path(__file__).resolve().parents[1]/'artifacts/runs/test-temp';parent.mkdir(parents=True,exist_ok=True)

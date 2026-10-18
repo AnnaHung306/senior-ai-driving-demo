@@ -15,21 +15,8 @@ from predict_sunny import load_model,PALETTE
 from senior_ai.core import write_json
 from senior_ai.sunny_data import SunnySamples,DETECTION_CLASSES,SEGMENTATION_NAMES,sha,verify
 from senior_ai.detection_metrics import evaluate_detection
-
-
-def quality(task,result,gates):
-    if task=='detection':
-        checks={'all_classes_present':result['all_classes_present'],'mAP50':(result['mAP50'] or 0)>=gates['detection_mAP50']}
-        for name,v in result['per_class'].items():
-            checks[f'{name}/recall']=(v['recall_at_score'] or 0)>=gates['detection_per_class_recall_at_score_0_5']
-            if 'detection_per_class_precision_at_score_0_5' in gates:
-                checks[f'{name}/precision']=(v['precision_at_score'] or 0)>=gates['detection_per_class_precision_at_score_0_5']
-    else:
-        checks={'focus_mIoU':(result['focus_macro_iou'] or 0)>=gates['segmentation_focus_mIoU'],
-                'all_focus_present':result['focus_supported_classes']==len(SEGMENTATION_NAMES)-1}
-        for row in result['classes'][1:]: checks[row['name']+'/IoU']=(row['iou'] or 0)>=gates['segmentation_per_focus_class_IoU']
-        if 'minimum_visible_margin_f1' in gates:checks['visible_margin_f1']=(result['visible_margin']['f1'] or 0)>=gates['minimum_visible_margin_f1']
-    return {'passed':all(checks.values()),'checks':checks}
+from senior_ai.segmentation_supplement import verify_scenery
+from senior_ai.perception_quality import quality
 
 
 def gallery(model,task,data,frames,output):
@@ -84,6 +71,13 @@ def main(args):
     for relative,digest in saved['provenance']['source']['files'].items():
         if sha(ROOT/relative)!=digest: raise ValueError('Evaluation source differs from frozen training source: '+relative)
     if verify(root)!=saved['provenance']['data']: raise ValueError('Training dataset differs')
+    supplement=saved['provenance'].get('training_supplement')
+    if supplement:
+        signature=verify_scenery(Path(supplement['root']),saved['provenance']['data']['audit_sha256'],supplement['plan_sha256'])
+        if any(signature[key]!=value for key,value in supplement.items() if key!='sampling_repeats'):
+            raise ValueError('Training scenery provenance differs')
+    if sha(run/'validation.json')!=state['validation_sha256'] or sha(run/'validation_frames.jsonl')!=state['validation_frames_sha256']:
+        raise ValueError('Validation results changed after training')
     plan=json.loads((root/'plan.json').read_text(encoding='utf-8'));gates={**plan['quality_gates'],**config.get('quality_gates',{})}
     val=json.loads((run/'validation.json').read_text(encoding='utf-8')); gate=quality(task,val,gates)
     write_json(run/'validation_quality.json',gate)

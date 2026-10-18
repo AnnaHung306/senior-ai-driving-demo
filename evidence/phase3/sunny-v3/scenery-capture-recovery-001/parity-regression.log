@@ -1,0 +1,11 @@
+test_actual_frozen_camera_matrix_roundtrips (test_light_supplement.SupplementTests.test_actual_frozen_camera_matrix_roundtrips) ... ok
+test_dropped_frame_retries_whole_triplet_without_relabelling (test_light_supplement.SupplementTests.test_dropped_frame_retries_whole_triplet_without_relabelling) ... ok
+test_heldout_only_and_original_groups_count_once (test_light_supplement.SupplementTests.test_heldout_only_and_original_groups_count_once) ... ok
+test_joint_precision_counts_false_light_detections (test_light_supplement.SupplementTests.test_joint_precision_counts_false_light_detections) ... ok
+test_phase_quality_can_be_saved_at_completion (test_light_supplement.SupplementTests.test_phase_quality_can_be_saved_at_completion) ... ok
+test_red_green_joint_rate_cannot_hide_behind_detector_misses (test_light_supplement.SupplementTests.test_red_green_joint_rate_cannot_hide_behind_detector_misses) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.136s
+
+OK

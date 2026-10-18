@@ -1,22 +1,35 @@
-# 目前任務：持續做可中斷的小工作，完成晴天 Phase 3
+# 目前任務：批量完成晴天 Phase3（2026-10-18）
 
-使用者最新要求：可以一直做到被強制停止；每個小段落盤/commit。詳細順序、坑與歷史見 **CHECKPOINT_PHASE3_2026-10-17_SMALL_CHECKS.md**，原完整協議見 **CHECKPOINT_PHASE3_2026-10-17.md** / **PHASE3_TRAINING_PROTOCOL.md**。本狀態截至2026-10-17 18:50 Asia/Taipei。
+使用者要求token恢復後盡量一次完成Phase3，允許批量執行及統一驗證；持續工作，不按小段落結束。**Phase3尚未通過，全部新模型heldout未開。** 詳細歷史與恢復見CHECKPOINT_PHASE3_2026-10-18_BATCH.md。
 
-- **唯一背景訓練queue exec56349**：號誌v1-002已成功退出，現跑 `train_sunny.py --task detection --config configs/sunny_training_v3_9.json --run artifacts/runs/sunny-detection-v3-001`。18:50 epoch2/5100updates（第3輪）；第2輪已存last/state，best仍第1輪 AP50:95=.30769、mAP50=.56836；4項逐類門檻不合格，尚未完成run；不要重複啟動。det source凍結git d3c2ef7，原queue57077已失敗退出。
-- 分割v4-001 completed：8輪/9600updates，best第7輪，val mIoU50.85%；wall6.19%、fence.73%、marginF1 .40733仍失敗，不能進heldout。權重/27source/3600逐張混淆均核對通過。
-- 號誌 **v1-002 completed**：16輪/832updates，best第9輪；GT crop macro recall94.38%、red→green10/753=1.33%，gate passed。actual detector-box joint待做。v1-001僅JSON NumPy bool收尾失敗，failure/權重保留；型別修正後新舊best/last tensor相同。後續命令用v1-002。
-- 全train材質survey已完成並實看17代表圖：9600train+96固定val，全9696records壓縮存evidence/full-train-material-survey-001。三類train像素總數完全等於frozen統計；Fence>=512px只在Town01四groups，Town03四groups為0。代表train多混凝土/網、val木/白柵；不是全圖人工材質標註。先據此規畫train-only補景，不用val/heldout補train、不盲目加權重重訓。
-- 所有CPU掃描/圖片程序已完成；exec19187失敗已由49830續跑完成。Windows短暫replace失敗的8次有界重試/兩項回歸、原1138records與AST一致恢復收據已保存。status_sunny_training.ps1以ReadWrite|Delete分享讀取狀態，不把檔案紀錄當process活著。
-- 最新**83 tests discovered，80 passed / 3 CUDA tests skipped**，CPU-only suite010（CUDA_VISIBLE_DEVICES=-1只用於該test子程序，不影響現有GPU訓練）；之前GPU suite72通過仍保留。8RGB實際輸入指紋核對通過；demo/個別與整合benchmark會綁manifest與8RGB SHA，export拒絕錯模型/輸入/測量收據。尚未以最終三模型真的demo或benchmark。
-- **CARLA off / ClearNoon**；start_carla.ps1新增training/GPU busy前置拒啟，實際busy branch已驗證。黃燈heldout補收204PNG仍未採集；全部新模型development/lockbox未評分，joint validation必須先於det/phase任何lockbox marker。
-- 下一步：保存本段變更；持續看det首輪驗證逐類結果（勿在GPU訓練中再開GPU推論/測試/CARLA）；完善train-only景物補收計畫。完整3模型驗收/補收/QA/demo/benchmark/export仍未完成，Phase3不算完成，不進Phase4。
+## 已完成且批准
 
-- 新增純JSON號誌置信度分析，2368crops驗證輸入SHA/混淆一致；門檻.9保留率84.38%、含棄權macro recall74.75%，沒有更改部署/gate或把棄權混同unknown。報告evidence/light-state-v1-002-confidence。
+- 主資料data/sunny-cross-town-v3-007保持immutable：18個30秒動態groups，86400PNG，train Town01/03、val04、dev05、lock02。
+- 舊segv4完成但wall/fence/margin失敗；舊detv3完成8輪，mAP50 .60210，ped/bike/light召回.49907/.30727/.38176未過.5。
+- phasev1-002 GTcrop macro .94381、red→green1.33%通過；搭final detv3的actual框joint macro .360204<.4，matched red→green0，joint失敗已實看28錯例並保存。
+- 號誌heldout覆蓋補收data/light-lockbox-supplement-v1-002完成68組204PNG，audit與兩個4-state QA實看通過；unknown38/R14/Y14/G14，各2原groups。不供train，不代表模型品質過關。
+- **靜態分割補景data/segmentation-scenery-v1-003已完成1024view/128anchor/4096PNG，獨立audit及5頁38情境實看通過，training_approved review已寫，實際verify_scenery也通過。** auditSHA06703e9bf4d88f3788f1cab169cd2eb04c9b2b4ee165300bdcbca7a0919ca68f；reviewSHA607b9c5cc24710dfc582085abb22003d93eb6dd363c06babf2bd92e2d7c3dd54。
+- 補景只原train Town01/03；Town03沿用001成功512view，Town01重收512；失敗344/59view和probe全部不供train。只有static virtual rig，不能算新動態路線或3D資料。QA實見Town03 anchor114的木板斜撐Fence、白picket、metalmesh、石牆/草地/道路negative。
+- 同步採逐幀snapshot buffer、future只留給其真實F、F+1後取完整四模態；每tick wall.05、最多24候選。207不完整候選丟棄，pose最大4.52e-5；沒有錯幀重標。raw0 instance植被缺標分開報告，resolved類別一致性仍2%門檻，語意targets及模型gates不變。
+- CARLA已停（owned27540/30584均退出）；server awake helper23920已released/request_clearedtrue。exec14255採集及23190 audit均exit0，勿重開舊PID。
 
-- train-only景物scout工具與PHASE3_SEGMENTATION_RECOVERY.md已準備；2項offline邊界/原生幾何序列化測試通過，未連server/未採圖。等GPU程序退出才查Town01/03，inventory不是可訓練資料，不能假裝補景完成。
+## 立即執行的唯一批次
 
-- CPU系統性分割抽查：exec99969已exit0（1320全完成），evaluate_sunny_segmentation_cpu.py --bundle-stride10，選每scene每10bundle×8views，960train+360val=1320。每20view atomic chunk；先max-new-chunks1成功存20張退出，再接續第一新log=40張，18:41已380張。輸出artifacts/runs/sunny-mobile-CPU-stratified-eval-001；不能與官方GPU gate混用。原smoke26912已exit0，勿再開同output並行。
-- 偵測首輪權重與27source已另存本機artifacts/runs/sunny-detection-first-epoch-snapshot-001，best/last為hardlinks，原trainer後續atomic replace不覆寫snapshot；evidence/detection-first-epoch-001有SHA與完整數值。初次sandbox硬連結WinError5後native重試成功；沒有改權重/停訓。16:12→18:38牆鐘跳增保留，不推定原因/GPU速度。
+```powershell
+.venv/Scripts/python.exe -u scripts/run_phase3_recovery_batch.py --segmentation-config configs/sunny_segmentation_v5_1.json --output artifacts/runs/phase3-recovery-batch-001
+```
 
-- 最新CPU診斷完整落盤：960train/360val，wall IoU97.40%/6.53%、fence68.94%/.74%、marginF1 95.56%/40.19%。同360val CPU/GPU mIoU差.01127百分點；evidence/mobile-CPU-stratified-eval-001含66chunks gzip與報告，不是新gate。
-- 系統event506確認16:13 Idle Timeout進入Modern Standby，event507於18:34鍵盤喚醒，已保留runtime-observation。新增防閒置待命helper **exec8890**，native PID14152，綁定訓練PID9168及精確creation FILETIME；18:48啟動，目標退出或最多6h自動清除。2秒短子程序自動解除實測已通過。powercfg /requests需OS管理員故不可讀；只確認API接受與receipt，未改電源方案/螢幕。勿重開同target helper。
+目前尚未啟動（commit來源後立即啟動，實際session/PID另更新）。三個新run都未建立，不要重複啟動。
+
+- v5 seg：從v4 best SHAa703...微調6epochs/batch8，decoderLR.00015/encoder.00005；9600main +1024unique static各重複4次=13696sampledviews/epoch、10272updates；70.09%main/29.91%static，不把重複算新場景。
+- v5 det：從v3 best SHA9cbed...微調4epochs/batch2/LR5e-5，內部720x1280、輸入及框仍640x360；min/max resize必須由checkpoint config重建。
+- v1-003 phase：同設定重新訓練，凍結正確新版det loader（舊phase/source硬編360無法正確做新det的controlled測試）。新phase config保存原始bytes/dataSHA。
+- 新選模事先凍結：優先val所有原門檻通過，再比原AP50:95/mIoU；沒有合格仍挑均分最高並記失敗；每epoch保留全部門檻結果。
+- batch序列：完整GPU回歸→真實production loader容量/finite更新檢查→seg→det→phase→actual boxes joint→統一val gates。全部val過才一次heldout；之後真實8RGB demo/個別與整合3種warm benchmark/export。val失敗仍可出真實未合格報告，不能把export存在當完成。
+- batch有OS鎖防重複、source/config/data/input contract、stage receipts、6h防閒置helper。中斷用同來源--resume；不得刪marker重開heldout。無完整epoch的失敗run換版本；完成run不能resume。
+
+## 驗證與限制
+
+最新全CPU suite012=92項/89pass/3CUDA skip；其後同步6項、scenery6項focused及export6項通過；目前總數應94，GPU全套在batch中實跑。GPU容量與新模型品質尚未測，不可假裝通過。主門檻不降低，只有ClearNoon，不進Phase4。
+
+舊run要從自己的source快照執行evaluator，dataset-root用絕對路徑；sourcesha比文件Git revision更具體。Native CARLA RPC需escalation；不用過去DX11/Low。status讀檔用ReadWrite|Delete共享，避免Windows atomic replace鎖；不要用舊log當程序仍活著。

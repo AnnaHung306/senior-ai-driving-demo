@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "task": "controlled-phase-supplement-v1",
+  "plan_sha256": "daa805761dbe8f3b7acb00ebbe40786741cb9da7138d4f13eb5dac76bb2e5692",
+  "source_sha256": "dd9af7c7c4f9510b1bf900830083235ba86940416b0f21e51a474e86aa9a4b2d",
+  "training_approved": false,
+  "records": 68,
+  "cleanup": true
+}

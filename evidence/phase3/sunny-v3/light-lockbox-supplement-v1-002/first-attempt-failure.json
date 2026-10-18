@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "task": "controlled-phase-supplement-v1",
+  "plan_sha256": "daa805761dbe8f3b7acb00ebbe40786741cb9da7138d4f13eb5dac76bb2e5692",
+  "source_sha256": "c0110a9f449261ef51c0e47a4777c671ad1341077bc20a17c766e108d5e786a8",
+  "training_approved": false,
+  "records": 0,
+  "cleanup": true,
+  "error": "Expected frame 11649, received future frame 11650",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\code\\senior_AI\\scripts\\collect_light_supplement.py\", line 84, in collect\n    image=receive_frame(q,frame,30)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\code\\senior_AI\\src\\senior_ai\\core.py\", line 31, in receive_frame\n    raise ValueError(f'Expected frame {expected}, received future frame {sample.frame}')\nValueError: Expected frame 11649, received future frame 11650\n"
+}

@@ -25,6 +25,15 @@ def require(condition, message):
         raise ValueError(message)
 
 
+def selected_epoch(epochs, policy):
+    require(policy in {'score_only', 'qualified_first_then_score'}, 'Unknown selection policy')
+    if policy == 'qualified_first_then_score':
+        require(all('validation_quality' in row for row in epochs), 'Missing per-epoch qualification records')
+    return max(epochs, key=lambda row: (
+        int(row['validation_quality']['passed']) if policy == 'qualified_first_then_score' else 0,
+        row['validation_score']))
+
+
 def check(run):
     state = read(run / 'state.json')
     require(state['status'] == 'completed' and state['task'] == 'segmentation', 'Run is not completed segmentation')
@@ -79,7 +88,7 @@ def check(run):
     require(math.isclose(sum(focus) / len(focus), result['focus_macro_iou'], abs_tol=1e-12), 'Focus mIoU differs')
     epochs = [json.loads(line) for line in (run / 'epochs.jsonl').read_text(encoding='utf-8').splitlines()]
     require([r['epoch'] for r in epochs] == list(range(config['segmentation']['epochs'])), 'Epoch history incomplete')
-    best = max(epochs, key=lambda row: row['validation_score'])
+    best = selected_epoch(epochs, config.get('selection_policy', 'score_only'))
     require(best['epoch'] == state['best_epoch'] and best['validation_score'] == state['best_score'] == result['focus_macro_iou'], 'Best selection differs')
     require(epochs[-1]['updates'] == state['updates'], 'Update count differs')
 

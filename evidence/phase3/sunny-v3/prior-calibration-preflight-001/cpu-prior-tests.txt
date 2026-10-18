@@ -1,0 +1,10 @@
+test_alpha_zero_identity_and_no_input_mutation (test_segmentation_prior.PriorCalibrationTests.test_alpha_zero_identity_and_no_input_mutation) ... ok
+test_partial_alpha_is_linear (test_segmentation_prior.PriorCalibrationTests.test_partial_alpha_is_linear) ... ok
+test_reject_unbounded_duplicate_nonfinite_or_bool_grid (test_segmentation_prior.PriorCalibrationTests.test_reject_unbounded_duplicate_nonfinite_or_bool_grid) ... ok
+test_reject_wrong_or_invalid_support (test_segmentation_prior.PriorCalibrationTests.test_reject_wrong_or_invalid_support) ... ok
+test_train_weight_formula_and_cap (test_segmentation_prior.PriorCalibrationTests.test_train_weight_formula_and_cap) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.005s
+
+OK

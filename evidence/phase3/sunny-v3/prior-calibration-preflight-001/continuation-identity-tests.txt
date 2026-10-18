@@ -1,0 +1,8 @@
+test_absent_process_is_not_alive (test_phase3_continuation.ContinuationIdentityTests.test_absent_process_is_not_alive) ... ok
+test_current_process_only_matches_its_exact_creation (test_phase3_continuation.ContinuationIdentityTests.test_current_process_only_matches_its_exact_creation) ... ok
+test_exited_child_with_retained_process_handle_is_not_alive (test_phase3_continuation.ContinuationIdentityTests.test_exited_child_with_retained_process_handle_is_not_alive) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.068s
+
+OK

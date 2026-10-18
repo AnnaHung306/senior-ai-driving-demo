@@ -1,0 +1,8 @@
+test_no_qualified_candidate_uses_mean_with_earliest_tie (test_segmentation_artifact_selection.ArtifactSelectionTests.test_no_qualified_candidate_uses_mean_with_earliest_tie) ... ok
+test_no_silent_policy_or_missing_qualification_fallback (test_segmentation_artifact_selection.ArtifactSelectionTests.test_no_silent_policy_or_missing_qualification_fallback) ... ok
+test_qualified_lower_mean_beats_failing_higher_mean (test_segmentation_artifact_selection.ArtifactSelectionTests.test_qualified_lower_mean_beats_failing_higher_mean) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK

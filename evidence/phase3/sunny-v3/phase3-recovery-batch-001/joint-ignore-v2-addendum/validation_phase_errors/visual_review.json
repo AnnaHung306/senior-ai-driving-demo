@@ -1,0 +1,29 @@
+{
+  "status": "reviewed_corrected_validation_errors",
+  "checkpoint_sha256": "c2709f15f14b193b68d0cb35d5cec37713f5e1015dff60f42885b85afb5f0846",
+  "reviewed_contexts": 32,
+  "reviewed_images": [
+    {
+      "path": "contact-00.png",
+      "sha256": "104c6abd6a6f34fe61517ec1b3ecd370b796c5bf5f7b4165e1c15e9a8cba13b8"
+    },
+    {
+      "path": "contact-01.png",
+      "sha256": "f6ac325bb0ea255dffb0d103f34a0bb5c23f5171e040cece825f078ed4b23ff1"
+    },
+    {
+      "path": "contact-02.png",
+      "sha256": "3797bfdf6acd8406f230fa675608aeb39dc306717899b154291dadb21e4b3c99"
+    },
+    {
+      "path": "contact-03.png",
+      "sha256": "e6111388ea3bb1c1114a33ed0a72863560da3cf83c91fd2fc372e781ea982232"
+    }
+  ],
+  "scope": "All4 contact pages/32 selected corrected crop/joint contexts actually inspected. No heldout/model inference or new training data approval.",
+  "observations": [
+    "Small lamps and shifted detector crops cause unknown/color errors; red-to-green exists among GT-crop errors but not matched-detector red instances.",
+    "Unscorable ignored regions are excluded from false-positive selection; actual false lights and duplicate/wrong-known-positive hypotheses remain.",
+    "Missed lamps, partial views and yellow/green-as-unknown cases remain despite passing the fixed crop/joint gates. No calibrated confidence or physical occlusion-rate claim."
+  ]
+}

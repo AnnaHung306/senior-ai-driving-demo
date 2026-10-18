@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": {
+    "all_classes": true,
+    "macro_correct_state_recall": true,
+    "red_as_green": true
+  },
+  "phase_sha256": "c2709f15f14b193b68d0cb35d5cec37713f5e1015dff60f42885b85afb5f0846",
+  "detector_sha256": "ec1427214d5fc3e51b9bbb2fed652fa762e97edeb34cfc23a989bdc879c8575f",
+  "joint_report_sha256": "6a746a19745898747c6ea445b1d18b6828e70bedf3264cc7b3b28adb70e34bc3",
+  "data_audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+  "source_sha256": "db8f4ae4a701b8b14585156d3bebe96dcef99d3561713742adbdd5d0d3cfe64c",
+  "lockbox_opened": false
+}

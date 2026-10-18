@@ -13,6 +13,7 @@ from senior_ai.sunny_data import png,sha,verify
 from senior_ai.light_model import crop_rgb
 from senior_ai.light_labels import LIGHT_STATES
 from senior_ai.detection_metrics import iou
+from senior_ai.light_joint_policy import ignored_unmatched_light,JOINT_PROTOCOL
 from senior_ai.dataset import safe_path
 from audit_light_supplement import verify_supplement
 
@@ -49,8 +50,12 @@ def joint(model,root,frames):
         if not targets and not predictions: continue
         rgb=png(safe_path(root,row['rgb']))
         for prediction in sorted(predictions,key=lambda p:-p['score']):
-            crop=crop_rgb(rgb,prediction['box']).cuda().float()/255;pred=int(model(crop[None]).argmax(1)[0])
             overlaps=iou(prediction['box'],[t['box'] for t in targets]);options=[i for i,v in enumerate(overlaps) if v>=.5 and i not in matched]
+            if not options and ignored_unmatched_light(prediction['box'],row['targets'],row.get('ignore_boxes',[])):
+                records.append({'scene_id':row['scene_id'],'camera':row['camera'],'frame':row['frame'],'rgb':row['rgb'],
+                    'box':prediction['box'],'prediction':None,'matched':False,'ignored':True})
+                continue
+            crop=crop_rgb(rgb,prediction['box']).cuda().float()/255;pred=int(model(crop[None]).argmax(1)[0])
             if options:
                 best=max(options,key=lambda i:overlaps[i]);matched.add(best);truth=targets[best]['light_state_class'];matrix[truth,pred]+=1
                 records.append({'scene_id':row['scene_id'],'camera':row['camera'],'frame':row['frame'],'rgb':row['rgb'],
@@ -63,8 +68,9 @@ def joint(model,root,frames):
                 truth=t['light_state_class'];matrix[truth,4]+=1
                 records.append({'scene_id':row['scene_id'],'camera':row['camera'],'frame':row['frame'],'rgb':row['rgb'],
                                 'box':t['box'],'target':truth,'prediction':None,'matched':False})
-    unmatched=[sum('target' not in r and r['prediction']==c for r in records) for c in range(4)]
-    return {**joint_scores(matrix,unmatched),'unmatched_detector_light_predictions':sum(unmatched)},records
+    unmatched=[sum('target' not in r and not r.get('ignored',False) and r['prediction']==c for r in records) for c in range(4)]
+    return {**joint_scores(matrix,unmatched),'unmatched_detector_light_predictions':sum(unmatched),
+        'ignored_detector_light_predictions':sum(r.get('ignored',False) for r in records),'protocol':JOINT_PROTOCOL},records
 
 
 @torch.inference_mode()
@@ -77,6 +83,7 @@ def supplement_detector(checkpoint,root):
         row=json.loads(line);rgb=png(safe_path(root,row['rgb']));image=torch.from_numpy(rgb.transpose(2,0,1).copy()).cuda().float()/255
         p=detector([image])[0];labels=json.loads(safe_path(root,row['detection']).read_text(encoding='utf-8'))
         frames.append({**row,'targets':[{'label':7,'box':p['visible_bbox_xyxy'],'light_state_class':p['light_state_class']} for p in labels['positive_objects']],
+            'ignore_boxes':[r['bbox_xyxy'] for r in labels.get('ignore_regions',[])],
             'predictions':[{'box':b,'label':int(l),'score':float(s)} for b,l,s in zip(p['boxes'].cpu().tolist(),p['labels'].cpu().tolist(),p['scores'].cpu().tolist())]})
     del detector
     return frames
@@ -87,7 +94,7 @@ def error_gallery(root,supplement_root,crop_frames,joint_frames,output):
     selected=[];seen=set()
     candidates=[{**r,'error_kind':'crop_misclassification'} for r in crop_frames if r['target']!=r['prediction']]
     candidates.extend({**r,'error_kind':'missed_detection' if r['prediction'] is None else 'joint_misclassification'} for r in joint_frames if 'target' in r and r['target']!=r['prediction'])
-    candidates.extend({**r,'target':-1,'error_kind':'false_positive_light'} for r in joint_frames if 'target' not in r)
+    candidates.extend({**r,'target':-1,'error_kind':'false_positive_light'} for r in joint_frames if 'target' not in r and not r.get('ignored',False))
     for r in candidates:
         key=(r['error_kind'],r['scene_id'],r['target'],r['prediction'])
         if key not in seen:seen.add(key);selected.append(r)

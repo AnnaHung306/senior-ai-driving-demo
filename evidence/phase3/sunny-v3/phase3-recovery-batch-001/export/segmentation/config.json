@@ -1,0 +1,102 @@
+{
+  "version": "sunny-segmentation-v5.1-training-scenery-recovery",
+  "dataset": "data/sunny-cross-town-v3-007",
+  "seed": 20261016,
+  "precision": "float32",
+  "deterministic_algorithms": true,
+  "TF32": false,
+  "cache_budget_gib_per_split": 16,
+  "augmentation": "Detection unchanged .9..1.1 RGB brightness/contrast; segmentation .8..1.2 plus paired .75/1/1.25 scale, random crop/pad255 and horizontal flip .5. No validation geometry changes.",
+  "selection": "Validation only: prefer all frozen gates qualified, then focus mIoU; if no qualified epoch, highest focus mIoU and report failure. Earliest exact tie.",
+  "detection": {
+    "epochs": 8,
+    "batch_size": 4,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0001,
+    "gradient_clip": 5.0,
+    "pretrained_path": "weights/fasterrcnn_mobilenet_v3_large_320_fpn-907ea3f9.pth",
+    "pretrained_sha256": "907ea3f91ff92242bc1baea8049276a3e76bca48ce7560bd268cc029f37977b5",
+    "warmup_steps": 250,
+    "overfit_steps": 80,
+    "overfit_loss_ratio_max": 0.8,
+    "roi_implementation": "TorchVision 0.25 deterministic eager Python ROIAlign, fixed sampling_ratio 2; no Inductor/Triton",
+    "roi_batch_size_per_image": 128,
+    "roi_determinism_note": "Pinned Windows runtime reports is_compile_supported(cuda)=false and no Triton. Preserve strict determinism using the upstream differentiable implementation, not a silent CUDA nondeterministic backward. CPU values match official op; CUDA verification still required.",
+    "backbone_pyramid_strides": [
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "anchor_sizes_pixels": [
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "pretrained_transfer": "COCO MobileNet body and stride32 FPN projection/output; RPN convolution plus 32px ratio-specific anchor channels; new lower FPN projections and project class head seeded initialization."
+  },
+  "segmentation": {
+    "epochs": 6,
+    "batch_size": 8,
+    "learning_rate": 0.00015,
+    "weight_decay": 0.0001,
+    "gradient_clip": 5.0,
+    "pretrained_path": "weights/fasterrcnn_mobilenet_v3_large_320_fpn-907ea3f9.pth",
+    "pretrained_sha256": "907ea3f91ff92242bc1baea8049276a3e76bca48ce7560bd268cc029f37977b5",
+    "warmup_steps": 100,
+    "overfit_steps": 80,
+    "overfit_loss_ratio_max": 0.8,
+    "class_weights": "inverse sqrt train frequency relative to max, clamp 1 to 20; zero-support classes recorded",
+    "raw_static_mapping": {
+      "4": "wall/model12",
+      "5": "fence/model13",
+      "6": "pole/model14",
+      "11": "sky/other0"
+    },
+    "taxonomy_source": "https://github.com/carla-simulator/carla/blob/0.9.16/LibCarla/source/carla/rpc/ObjectLabel.h",
+    "loss": "inverse-sqrt train-frequency weighted CE plus 0.5 foreground soft Dice; ignore255 masked; absent classes excluded from per-batch Dice; annotated other0 supervised by CE",
+    "motivation": "Data-first recovery from v4 selected epoch7: same MobileUNet, mapping/loss/geometric augmentations; fine-tune frozen v4 best with main9600views plus1024 unique train-only static views repeated4times. Main dynamic samples remain70.09% of each epoch, supplement29.91%. No new dynamic episodes. 13696 sampledviews/epoch, batch8,6epochs=10272newupdates. Lower decoder LR .00015, encoder .00005 and reset optimizer/scheduler; not a strict matched-compute or data-only causal ablation. Original validation and all gates unchanged; no heldout scored.",
+    "classes": 17,
+    "terrain_mapping": "raw10 Terrain and raw25 Ground -> model16; raw11 Sky remains annotated other0",
+    "visible_margin": "Road/road-line side next to sidewalk or terrain/ground; predicted masks only; no occlusion completion",
+    "architecture": "mobilenet_unet",
+    "precision": "bfloat16",
+    "encoder_learning_rate": 5e-05,
+    "photometric_range": [
+      0.8,
+      1.2
+    ],
+    "paired_geometry": {
+      "scales": [
+        0.75,
+        1.0,
+        1.25
+      ],
+      "flip_probability": 0.5
+    },
+    "capacity_evidence": "mobile-sunny-capacity-001: batch8 peak allocated4055.69MiB/reserved4624MiB vs8GiB GPU, synthetic steady step~.31s; strict deterministic BF16 fwd/back/reload passed, no quality claim.",
+    "initial_checkpoint_path": "artifacts/runs/sunny-segmentation-v4-001/best.pt",
+    "initial_checkpoint_sha256": "a7031897c0ce35cc97f4ab035277c51e0a35558dccc225b69455a16cc6f9eb67",
+    "initial_data_audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+    "training_scenery": {
+      "root": "C:/code/senior_AI/data/segmentation-scenery-v1-003",
+      "plan_sha256": "8d2cab60f1287a195e77c4a84435db53070e99360c9ed10399d75dd25e657350",
+      "sampling_repeats": 4
+    }
+  },
+  "quality_gates_source": "frozen dataset plan",
+  "lockbox_policy": "training and model selection cannot instantiate lockbox data; one explicit final evaluation after completed training",
+  "quality_gates": {
+    "detection_mAP50": 0.5,
+    "detection_per_class_recall_at_score_0_5": 0.5,
+    "segmentation_focus_mIoU": 0.5,
+    "segmentation_per_focus_class_IoU": 0.2,
+    "detection_per_class_precision_at_score_0_5": 0.5,
+    "minimum_visible_margin_f1": 0.5
+  },
+  "quality_gate_note": "Original gates retained; additionally require precision>=0.5 per object category at the frozen score=0.5, before any new model scoring. AP alone can hide many lower-score false positives after full recall.",
+  "selection_policy": "qualified_first_then_score"
+}

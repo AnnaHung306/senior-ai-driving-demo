@@ -1,0 +1,42 @@
+{
+  "status": "preview_inspected_not_training_approved",
+  "training_approved": false,
+  "report_sha256": "64e0c753f110b6772aa9152ae4f132ea82e19c815899718a2ac147affd17e5c6",
+  "reviewed_images": [
+    {
+      "path": "page-00.png",
+      "sha256": "98a285f6ded8404c9d34ea3c36a53f4a6f96faf9ac908980b4d6ac8ee12b8be0",
+      "indices": [
+        7,
+        2,
+        10,
+        14
+      ]
+    },
+    {
+      "path": "page-01.png",
+      "sha256": "fc39a3cb56b0897250a6646f830bacafaa9b5b875c330a337123632caf5f4e3c",
+      "indices": [
+        23,
+        22,
+        19,
+        26
+      ]
+    },
+    {
+      "path": "page-02.png",
+      "sha256": "c6195320ee94318b153ee4372c75f734704e168ef3d4e5ccd438e237f9763fd1",
+      "indices": [
+        25,
+        31
+      ]
+    }
+  ],
+  "reviewed_contexts": 10,
+  "observations": [
+    "Rough wooden two-rail fences, light picket fence, farmland, conifers and exposed rock slope inspected.",
+    "All32 captured views have zero semantic Wall pixels; native Walls metadata was also zero. This probe cannot supply Wall-positive evidence.",
+    "Rock slope is terrain/ground, useful as a candidate negative appearance; fence remains raw5/model13, not relabelled as Wall.",
+    "Probe-only data remains excluded from training. Any formal collection needs a new complete capture and audit/review."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "scope": "Synthetic engineering capacity only, no quality metric or training update retained",
+  "config_sha256": "08e0240296f163c20f13e205ecce744e6f6a3c9fc10a2fe9ed25a97c6ccc1ee1",
+  "source_sha256": "4a5c75d321a6bfa2640b2fe65ffca5b33c225e75d4a0f84ea38f9ad7c3b9bb2e",
+  "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "batch_size": 2,
+  "internal_min_size": 720,
+  "internal_max_size": 1280,
+  "input_wh": [
+    640,
+    360
+  ],
+  "strict_deterministic": true,
+  "steps": [
+    {
+      "step": 0,
+      "loss": 1.287712574005127,
+      "gradient_norm": 13.425630569458008,
+      "wall_ms": 1761.7891000118107
+    },
+    {
+      "step": 1,
+      "loss": 0.706868052482605,
+      "gradient_norm": 7.801390647888184,
+      "wall_ms": 572.0948999805842
+    },
+    {
+      "step": 2,
+      "loss": 0.3851158320903778,
+      "gradient_norm": 4.304164886474609,
+      "wall_ms": 547.5597999757156
+    }
+  ],
+  "checkpoint_reload_identical": true,
+  "synthetic_checkpoint_sha256": "52bd389fef5a2bb8a9d1c0830cba0a5dadc0954249a6202b18aed4e0fbe3ddfd",
+  "synthetic_checkpoint_scope": "Capacity-only dummy updates, never a selected trained model",
+  "max_cuda_allocated_mib": 3350.96875,
+  "max_cuda_reserved_mib": 3924.0,
+  "device_total_mib": 8187.5
+}

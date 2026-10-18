@@ -16,6 +16,7 @@ from senior_ai.core import write_json
 from senior_ai.sunny_data import SunnySamples,DETECTION_CLASSES,SEGMENTATION_NAMES,sha,verify
 from senior_ai.detection_metrics import evaluate_detection
 from senior_ai.segmentation_supplement import verify_scenery
+from senior_ai.segmentation_expansion import verify_expansion
 from senior_ai.perception_quality import quality
 
 
@@ -76,6 +77,9 @@ def main(args):
         signature=verify_scenery(Path(supplement['root']),saved['provenance']['data']['audit_sha256'],supplement['plan_sha256'])
         if any(signature[key]!=value for key,value in supplement.items() if key!='sampling_repeats'):
             raise ValueError('Training scenery provenance differs')
+    for expansion in saved['provenance'].get('training_expansions',[]):
+        signature=verify_expansion(Path(expansion['root']),root,expansion['plan_sha256'],expansion['audit_sha256'],expansion['review_sha256'])
+        if any(signature[key]!=value for key,value in expansion.items() if key!='sampling_repeats'):raise ValueError('Training expansion provenance differs')
     if sha(run/'validation.json')!=state['validation_sha256'] or sha(run/'validation_frames.jsonl')!=state['validation_frames_sha256']:
         raise ValueError('Validation results changed after training')
     plan=json.loads((root/'plan.json').read_text(encoding='utf-8'));gates={**plan['quality_gates'],**config.get('quality_gates',{})}

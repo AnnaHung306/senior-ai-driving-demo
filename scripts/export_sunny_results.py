@@ -108,6 +108,7 @@ def export(args):
                'training_status':state['status'],'heldout_status':final['status']}
         if name in origins and origins[name].get('training_supplement'):
             model['training_supplement']=origins[name]['training_supplement']
+        if name in origins and origins[name].get('training_expansions'):model['training_expansions']=origins[name]['training_expansions']
         summary['models'][name]=model
         for filename in ['state.json','config.json','provenance.json','coverage.json','dataset_statistics.json','overfit.json','initial_validation.json','epochs.jsonl','validation.json','validation_quality.json','validation_joint.json','validation_joint_quality.json','best_validation.json','development.json','lockbox.json','development_crops.json','lockbox_crops.json','development_joint.json','lockbox_joint.json','lockbox_dynamic_joint.json','lockbox_controlled_joint.json','lockbox_started.json','final_evaluation.json']:
             if (run/filename).exists():shutil.copyfile(run/filename,output/filename)
@@ -127,6 +128,9 @@ def export(args):
             if name=='detection':card+=f'原始RGB/框為640×360；模型內部resize最短邊{c.get("min_size",360)}、最長邊{c.get("max_size",640)}，輸出框回復原始座標。\n\n'
             if model.get('training_supplement'):
                 extra=model['training_supplement'];card+=f'另用train-only靜態分割補景：{extra["views"]}個獨特視圖、{extra["groups"]}個相關道路錨點，每輪重複採樣{extra["sampling_repeats"]}次；不是新增動態路線。補景audit SHA `{extra["audit_sha256"]}`。\n\n'
+            for extra in model.get('training_expansions',[]):
+                card+=f'保留訓練地圖的靜態分割擴充：{extra["views"]}視圖、{extra["groups"]}相關道路錨點，每輪重複{extra["sampling_repeats"]}次；只用於分割訓練，非新動態路線。audit SHA `{extra["audit_sha256"]}`，review SHA `{extra["review_sha256"]}`。\n\n'
+            if name=='detection' and c.get('bicycle_scale_geometry'):card+='只對含GT自行車的train視圖，以2/3機率縮小到半尺度；所有框同步變換、填補區域ignore。驗證與正式推論不作幾何變換。\n\n'
         for split,label in [('validation','驗證／選模'),('development','開發測試'),('lockbox','保留測試')]:
             filename=split+('_crops.json' if name=='light_state' and split!='validation' else '.json');path=run/filename
             if path.exists():card+=f'## {label}\n\n'+metric_table(name,read(path))+'\n'

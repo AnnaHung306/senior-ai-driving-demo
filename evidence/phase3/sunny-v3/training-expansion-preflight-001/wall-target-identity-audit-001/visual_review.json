@@ -1,0 +1,15 @@
+{
+  "status": "reviewed_validation_labels_only",
+  "report_sha256": "ecdf8ec6f32e3396f25b814beb83141aa6dddbe0d3848bc9f2eb44edd10914c1",
+  "reviewed_images": [
+    {
+      "path": "page-00.png",
+      "sha256": "75864e5a6f1d04bc4fd13ebabe8f6d55260f50ec756ca964215e865c8722821e"
+    },
+    {
+      "path": "page-01.png",
+      "sha256": "8547fbe18037d778d1396debfc88b0d7df91ec24eb5dd30f19d88639c40cb6ab"
+    }
+  ],
+  "findings": "Raw4 Wall cyan positively identifies the solid wood perimeter wall in town04-00 and concrete low/retaining walls in town04-01/02; raw5 Fence orange identifies separate rails. Prior main material diagnosis remains supported, not reversed. Five intentionally selected validation cases, no prevalence inference or heldout."
+}

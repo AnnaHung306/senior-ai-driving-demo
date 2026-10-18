@@ -1,0 +1,32 @@
+{
+  "status": "reviewed_probe_only",
+  "training_approved": false,
+  "report_sha256": "3eda455f1f91358e620da4d523c3fe42e8c04409bcfce04af5ffbcc1ef24d9ba",
+  "reviewed_images": [
+    {
+      "path": "page-00.png",
+      "sha256": "25627ba1cc955ac9f001474a6f905591061559bdafe6dd09e963e06d9dbe3cfa"
+    },
+    {
+      "path": "page-01.png",
+      "sha256": "24693a83e2ded60dd007250efe344e1536da60fbd97330f90074168b9d984282"
+    },
+    {
+      "path": "page-02.png",
+      "sha256": "fa837f4965ee9ff2540127e25e5294702bf689f4ccb7f75fb4dbd42e91238915"
+    },
+    {
+      "path": "page-03.png",
+      "sha256": "b7378ff622d2ee8f438d1f6a3d2f29ab79a7f9b5ad6787c75fa95b18f0ad7945"
+    },
+    {
+      "path": "page-04.png",
+      "sha256": "bf21dd580f035fea63e65bd536126c89c3949fdbcb19ac09bd59e0f27479d4db"
+    },
+    {
+      "path": "page-05.png",
+      "sha256": "50a86325d99f8fb179b6fde7fae0ce575f6540981a8c637bd3b7bb938b38a7c0"
+    }
+  ],
+  "observations": "Six pages actually viewed: multiple brick/stone-tone perimeter walls and low composite brick/concrete walls; rough two-rail fences as Fence and grass/trees as terrain/other. No solid wood wall or highway retaining-wall coverage established. Positions more diverse, materials still limited; formal acquisition may supply structural positives and negatives but quality must be measured."
+}

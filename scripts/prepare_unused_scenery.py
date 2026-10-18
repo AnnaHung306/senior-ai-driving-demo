@@ -30,7 +30,7 @@ def select_anchors(spawns,walls,count):
     def add(index,reason):
         if index in selected or selected and np.linalg.norm(positions[selected]-positions[index],axis=1).min()<8:return False
         selected.append(index);reasons[index]=reason;return True
-    buckets={key:[] for key in ['wood','concrete','stone','other']}
+    buckets={key:[] for key in [(height,hint) for height in ['low','tall'] for hint in ['wood','concrete','stone','other']]}
     for obj in sorted(walls,key=lambda r:(r['native_name'],r['native_id'])):
         height=2*float(obj['bounding_box_as_returned']['extent_m'][2])
         if not .2<=height<=6:continue
@@ -38,13 +38,17 @@ def select_anchors(spawns,walls,count):
         valid=np.flatnonzero((dist>=3)&(dist<=40))
         if not len(valid):continue
         index=min(valid,key=lambda i:(dist[i],int(i)));hint=next((k for k in ['wood','concrete','stone'] if k in obj['native_name'].casefold()),'other')
-        buckets[hint].append((int(index),{'native_wall_id':obj['native_id'],'name_hint_not_material_GT':hint,
+        buckets[('low' if height<=1.6 else 'tall',hint)].append((int(index),{'native_wall_id':obj['native_id'],'name_hint_not_material_GT':hint,
             'native_origin_distance_m':float(dist[index]),'native_bbox_height_hint_m':height}))
-    # Interleave name hints so the first probe anchors are not one long spline.
+    # Interleave height/name strata and maximize separation within each stratum.
+    # Native hints only select positions; RGB/raw labels decide actual material.
     while any(buckets.values()) and len(selected)<max(4,count*3//4):
         for entries in buckets.values():
             if entries:
-                index,reason=entries.pop(0);add(index,reason)
+                if selected:
+                    pick=max(range(len(entries)),key=lambda j:(float(np.linalg.norm(positions[selected]-positions[entries[j][0]],axis=1).min()),-j))
+                else:pick=0
+                index,reason=entries.pop(pick);add(index,reason)
                 if len(selected)>=max(4,count*3//4):break
     if not selected:add(0,{'geometry_only':True})
     while len(selected)<count:
@@ -140,7 +144,7 @@ def main(args):
             'capture_integrity_scope':'Full distribution verified at preparation. Capture rechecks manifest, binary and main maps; no claim of continuously rehashing every asset.'},
         'minimum_anchor_separation_m':8,'minimum_pixels_per_target_class':100000,'minimum_views_per_target_class':16,'target_classes':[12,16],
         'scope':'Previously unused Town06/07 static virtual road rig, sunny train-only segmentation. No ego/NPC, dynamics, new route independence, or detection/phase training. Preview probe cannot pass training audit.',
-        'selection':'Native Walls origins/height and interleaved name hints, then farthest road geometry; before RGB. Names are not material GT.',
+        'selection':'Native Walls origins and low/tall height plus name-hint strata; farthest separation within each stratum, then farthest road geometry. Before RGB; hints are not material GT.',
         'preparer_sha256':sha(Path(__file__))}
     validate_expansion_plan(plan);write_json(args.output,plan)
     print(json.dumps({'plan_sha256':sha(args.output),'towns':list(towns),'training_approved':False}),flush=True)

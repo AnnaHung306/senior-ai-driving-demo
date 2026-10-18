@@ -1,0 +1,41 @@
+{
+  "input_manifest_sha256": "e767160593c437acf7e4b33bb06eafce049d1a82d978e38cca17937f7229b7ac",
+  "input_RGB_sha256": {
+    "front": "d70901a2a22eb3417f0749887437a08a9e20fb4559a596357e38c19de3b0fed2",
+    "front_right": "ee41f02480dd0b76dcbc00eb944a0b1aa1171622fbcf13f3bb2e167d2cb155dd",
+    "right": "7758bd334c8d165b35de8af647582de3d8e8231b1b1f9fb87e3b559fcb647c36",
+    "rear_right": "6f40610355e33553c42de724556599e03526e5538ae3fd358f5e5801c3eeac87",
+    "rear": "2870ca2d3601b9d48f96aa0f3267a5d70af6d82f77595b3b1bc8d9a9034af64a",
+    "rear_left": "0921fa421cbc64742290b48c470831b51f6e29d0f8e7d618ff5584f1fdd0a737",
+    "left": "0d2cd609d105e2423fac4fe53f05fabae378f29fea359cdc8e1ed38035cb8f86",
+    "front_left": "78eded91256bcf66713cc10e0e203ed52ec248c564cc5527ea2ea224af0ad9f1"
+  },
+  "input_fingerprint_source_sha256": "71b41352e67811a1467bd8840cb6b72d06831c06f48e8a08532df21d723e388c",
+  "detector_sha256": "ec1427214d5fc3e51b9bbb2fed652fa762e97edeb34cfc23a989bdc879c8575f",
+  "segmentation_sha256": "3fe7bd08d885e481b7435fdf466945f142f8323447cca46bf31c32455835a53f",
+  "phase_sha256": "c2709f15f14b193b68d0cb35d5cec37713f5e1015dff60f42885b85afb5f0846",
+  "source_sha256": "61947a4ccbd461473982dd3aa2ac2dbe634de8ebf1be72e10661a0d0b60b7350",
+  "frame": 246498,
+  "cameras": 8,
+  "warmup_bundles": 3,
+  "measured_bundles": 10,
+  "eight_view_RGB_decode_to_CPU_perception_ms": {
+    "p50": 699.0848499990534,
+    "p95": 741.7837300032261,
+    "samples": [
+      691.3389000110328,
+      699.3504000129178,
+      682.3932999977842,
+      730.5237999826204,
+      696.8560999957845,
+      705.0311999919359,
+      750.9964000200853,
+      698.819299985189,
+      729.2973999865353,
+      688.1160000048112
+    ]
+  },
+  "max_cuda_allocated_mib": 409.10546875,
+  "max_cuda_reserved_mib": 550.0,
+  "limits": "Warm filesystem and repeated one bundle, sequential camera processing. Includes image decode, GPU copies, detector, semantic argmax, visible margin and phase crops; excludes simulator/render/sensor delivery, PNG writes and vehicle control. No 20Hz claim."
+}

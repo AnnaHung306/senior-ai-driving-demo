@@ -1,0 +1,103 @@
+{
+  "scope": "Validation GT label-identity/material audit only; no model inference, new training data or heldout",
+  "main_audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+  "validation_frames_sha256": "98c4ac93ac6595fb033a334b148775b8659b0a68b94e0c84adb7ee15c44316a0",
+  "catalog": [
+    {
+      "rank": 0,
+      "sample": {
+        "scene_id": "town04-00",
+        "camera": "rear_right",
+        "frame": 246198,
+        "rgb": "inputs/rgb/town04-00/rear_right/00246198.png",
+        "semantic": "labels/semantic_segmentation/town04-00/rear_right/00246198.png"
+      },
+      "reasons": [
+        "maximum_GT_Wall_pixels"
+      ],
+      "wall_raw4_pixels": 4415,
+      "fence_raw5_pixels": 0,
+      "panel": "case-00.png",
+      "panel_sha256": "3c0ff5f7ff39f82b693acf2645a8dc932957698fc83e11a98e927a26c3c5c589",
+      "RGB_sha256": "67d03ceaef281a99653617fa9ddf6d1c1d9e3347c21b26fd5a6a92951b5af7d9",
+      "semantic_sha256": "50f9196e4b5d70c9240256092299e2c25225e26ab7f9dfd21cfc442c063d50ac"
+    },
+    {
+      "rank": 1,
+      "sample": {
+        "scene_id": "town04-00",
+        "camera": "rear_right",
+        "frame": 246202,
+        "rgb": "inputs/rgb/town04-00/rear_right/00246202.png",
+        "semantic": "labels/semantic_segmentation/town04-00/rear_right/00246202.png"
+      },
+      "reasons": [
+        "maximum_Wall_false_negatives"
+      ],
+      "wall_raw4_pixels": 4409,
+      "fence_raw5_pixels": 0,
+      "panel": "case-01.png",
+      "panel_sha256": "87babdec2bed348265d305ab9a6dc2512582440b0cb0e2f7eea90f0c69666ff6",
+      "RGB_sha256": "891e6d40aa211d2ed3e4d3919ce2be31208a5fc59716ab6b94eb5bc7ec48117c",
+      "semantic_sha256": "7755cb452782e662b82b3727d991a9eaed82c0539a17f889852a8dba7fc38c0e"
+    },
+    {
+      "rank": 2,
+      "sample": {
+        "scene_id": "town04-01",
+        "camera": "right",
+        "frame": 247225,
+        "rgb": "inputs/rgb/town04-01/right/00247225.png",
+        "semantic": "labels/semantic_segmentation/town04-01/right/00247225.png"
+      },
+      "reasons": [
+        "maximum_GT_Wall_pixels"
+      ],
+      "wall_raw4_pixels": 1356,
+      "fence_raw5_pixels": 0,
+      "panel": "case-02.png",
+      "panel_sha256": "bc8a8f4a96db02d58c80ce7a916bba9840beee17099c33338f9f1615fa577f0d",
+      "RGB_sha256": "4bcf2ab4dc0d71b2d62db97e381e701619488473ef31a805fca2f82ff52c49bc",
+      "semantic_sha256": "220e4172ae7708de454b0a907cfb154026d0fa82e30e8a95b5e69b955717c6a1"
+    },
+    {
+      "rank": 3,
+      "sample": {
+        "scene_id": "town04-01",
+        "camera": "front",
+        "frame": 247165,
+        "rgb": "inputs/rgb/town04-01/front/00247165.png",
+        "semantic": "labels/semantic_segmentation/town04-01/front/00247165.png"
+      },
+      "reasons": [
+        "maximum_Wall_false_negatives"
+      ],
+      "wall_raw4_pixels": 1060,
+      "fence_raw5_pixels": 633,
+      "panel": "case-03.png",
+      "panel_sha256": "7dc6a8943a6204e524dd0db32b12408853cea058dd95264cd7888098092afda8",
+      "RGB_sha256": "64666c607a1417c1d7737dbe1aef1fc08e2c8c4dde438b002e3c7df8855f5abf",
+      "semantic_sha256": "6478d219ffd8ac0210a17342563926bf5853905213dbcc5ea38a05afca3cde60"
+    },
+    {
+      "rank": 4,
+      "sample": {
+        "scene_id": "town04-02",
+        "camera": "front",
+        "frame": 248104,
+        "rgb": "inputs/rgb/town04-02/front/00248104.png",
+        "semantic": "labels/semantic_segmentation/town04-02/front/00248104.png"
+      },
+      "reasons": [
+        "maximum_GT_Wall_pixels",
+        "maximum_Wall_false_negatives"
+      ],
+      "wall_raw4_pixels": 9172,
+      "fence_raw5_pixels": 0,
+      "panel": "case-04.png",
+      "panel_sha256": "ca6a720edf6ee6e5feb3368e898752a09c309544b712ebeee020859dec559422",
+      "RGB_sha256": "4a6cf003c3fa12dcff99af85b998ab424acf0a189fbc1e279f2d952dda375f2f",
+      "semantic_sha256": "c2f2f262bcfc9f691e5ebdb68f54bc914a1c1b90f5f8fec771624207ffdd73a0"
+    }
+  ]
+}

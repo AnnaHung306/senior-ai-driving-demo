@@ -1,0 +1,18 @@
+{
+  "scope": "Correct legacy joint FP counting using saved phase decisions, CPU only.\n\nKeeps original reports intact; proves GT confusion/recall unchanged and FP\ncount agrees with canonical detector evaluation before emitting a v2 report.\n",
+  "tool_sha256": "79bba5952e23a7310af356daba91792fb74642bc823bf966a2c71c9cf994bf8f",
+  "policy_sha256": "f8dce271eefd3240d88e34688c818adb8d2efac1f14bfd8726ade425b5108c84",
+  "phase_sha256": "c2709f15f14b193b68d0cb35d5cec37713f5e1015dff60f42885b85afb5f0846",
+  "detector_sha256": "ec1427214d5fc3e51b9bbb2fed652fa762e97edeb34cfc23a989bdc879c8575f",
+  "legacy_joint_sha256": "6a746a19745898747c6ea445b1d18b6828e70bedf3264cc7b3b28adb70e34bc3",
+  "legacy_records_sha256": "ffc5e72255713f0ff81ae045ae85f76d67475df406f3dd8016b23daca50ff8e9",
+  "detector_frames_sha256": "23fca48988331744cb57689f5b4d041cc54d7eb39cf224cf66dd1c432e4de550",
+  "matrix_unchanged": true,
+  "legacy_report_recomputed_exact": true,
+  "corrected_FP_matches_detector": true,
+  "old_unmatched": 331,
+  "ignored_at_score_0_5": 289,
+  "new_unmatched": 42,
+  "model_inference_performed": false,
+  "heldout_opened": false
+}

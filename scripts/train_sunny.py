@@ -36,6 +36,8 @@ from senior_ai.sunny_data import SunnySamples, SEGMENTATION_NAMES, DETECTION_CLA
 from senior_ai.sunny_losses import segmentation_loss
 from senior_ai.road_boundaries import boundary_counts,boundary_metrics
 from senior_ai.segmentation_supplement import verify_scenery,append_scenery
+from senior_ai.segmentation_expansion import verify_expansion,append_expansion
+from senior_ai.detection_augmentation import bicycle_scale_batch
 from senior_ai.perception_quality import quality,selection_key
 
 
@@ -182,6 +184,11 @@ def run(args):
         if task!='segmentation':raise ValueError('Static scenery is segmentation training only')
         provenance['training_supplement']=verify_scenery(ROOT/scenery['root'],provenance['data']['audit_sha256'],scenery['plan_sha256'])
         provenance['training_supplement']['sampling_repeats']=scenery['sampling_repeats']
+    expansions=c.get('training_expansions',[])
+    if expansions:
+        if task!='segmentation' or len({str((ROOT/e['root']).resolve()) for e in expansions})!=len(expansions):raise ValueError('Unique segmentation-only expansions required')
+        provenance['training_expansions']=[{**verify_expansion(ROOT/e['root'],root,e['plan_sha256'],e['audit_sha256'],e['review_sha256']),
+            'sampling_repeats':e['sampling_repeats']} for e in expansions]
     if run.exists() and not args.resume: raise FileExistsError('New experiment requires new run directory')
     if args.resume:
         prior=json.loads((run/'provenance.json').read_text(encoding='utf-8'))
@@ -202,10 +209,13 @@ def run(args):
     train=SunnySamples(root,'train',task,config['cache_budget_gib_per_split'])
     validation=SunnySamples(root,'validation',task,config['cache_budget_gib_per_split'])
     sampling=append_scenery(train,ROOT/scenery['root'],scenery['sampling_repeats'],config['cache_budget_gib_per_split']) if scenery else None
+    expansion_sampling=[append_expansion(train,ROOT/e['root'],e['sampling_repeats'],config['cache_budget_gib_per_split']) for e in expansions]
     write_json(run/'dataset_statistics.json',{'train_views':len(train),'validation_views':len(validation),
         'train_groups':sorted({s['group_id'] for s in train.samples}),'validation_groups':sorted({s['group_id'] for s in validation.samples}),
         'train_segmentation_pixels':train.support.tolist(),'cache_budget_gib_per_split':config['cache_budget_gib_per_split'],
-        'static_training_supplement':sampling,'sample_count_note':'Repeated supplemental views are optimization samples, not independent scenes'})
+        'static_training_supplement':sampling,'static_training_expansions':expansion_sampling,
+        'detection_bicycle_scale_policy':c.get('bicycle_scale_geometry'),
+        'sample_count_note':'Repeated supplemental views are optimization samples, not independent scenes'})
     weights=torch.tensor(np.clip(np.sqrt(max(1,train.support.max())/np.maximum(1,train.support)),1,20),device='cuda',dtype=torch.float32)
     if not args.resume:
         model=build_model(task,config).cuda(); optimizer=make_optimizer(model,c)
@@ -234,11 +244,14 @@ def run(args):
     else:
         baseline,_=evaluate(model,task,validation,c['batch_size']); write_json(run/'initial_validation.json',baseline)
     for epoch in range(first_epoch,c['epochs']):
-        losses=[]; max_norm=0.; epoch_start=time.monotonic();skipped=0
+        losses=[]; max_norm=0.; epoch_start=time.monotonic();skipped=0;geometry_counts=Counter()
         for rgb,target,indices in batches(train,c['batch_size'],shuffle=True):
             images=inputs(rgb,augment=True,photometric_range=c.get('photometric_range',(.9,1.1)))
             if task=='segmentation' and c.get('paired_geometry'):
                 images,target=paired_geometry(images,torch.stack(target).cuda(),**c['paired_geometry'])
+            if task=='detection' and c.get('bicycle_scale_geometry'):
+                images,target,ledger=bicycle_scale_batch(images,target,**c['bicycle_scale_geometry'])
+                geometry_counts.update({'views':len(ledger),'bicycle_positive_views':sum(r['bicycle_positive'] for r in ledger),'zoomed_views':sum(r['zoomed'] for r in ledger)})
             loss,norm,parts=step(model,task,images,target,optimizer,weights,c['gradient_clip'])
             if parts.get('_skipped_empty_supervision'):
                 skipped+=1;continue
@@ -262,6 +275,7 @@ def run(args):
              'skipped_fully_ignored_batches':skipped,
              'validation_score':score,'best_score':best,'improved':improved,'wall_s':time.monotonic()-epoch_start}
         row['validation_quality']=validation_quality;row['selected_validation_qualified']=best_qualified
+        if geometry_counts:row['training_geometry_counts']=dict(geometry_counts)
         with (run/'epochs.jsonl').open('a',encoding='utf-8') as stream: stream.write(json.dumps(row)+'\n')
         write_json(run/'state.json',{'status':'training','task':task,'last_sha256':sha(run/'last.pt'),'epoch':epoch,'updates':updates})
         print(json.dumps(row),flush=True)

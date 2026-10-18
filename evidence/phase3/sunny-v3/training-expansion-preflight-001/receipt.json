@@ -1,0 +1,156 @@
+{
+  "status": "CPU_preflight_and_actual_probe_review_only",
+  "full_CPU_tests": 151,
+  "passed": 148,
+  "CUDA_skipped": 3,
+  "failed_first_attempt": "005: three new tests used sandbox system temp; moved fixtures into workspace,006 all pass",
+  "formal_data_training_approved": false,
+  "formal_capture_in_progress": "data/segmentation-expansion-v2-001",
+  "v6_models_trained": false,
+  "files": [
+    {
+      "path": "cpu-regression-20261018-005.log",
+      "sha256": "9a741367927e0d7d45e936d6fc011214f833603e372c3a4391c365636fa1a452"
+    },
+    {
+      "path": "cpu-regression-20261018-006.log",
+      "sha256": "a2bf5422539887d7d946590b73ba306d4cfc787928bb5ef4069f831956e09cff"
+    },
+    {
+      "path": "town06-preview-review-001/page-00.png",
+      "sha256": "b7b7f9de2187ec2ff8e17af40af46597f42695f6ca69748050559f1d58531cf0"
+    },
+    {
+      "path": "town06-preview-review-001/page-01.png",
+      "sha256": "e7ee25623a3abce1c61578b506eba07553b94d9d127642e72b72bcaf8d3d68d8"
+    },
+    {
+      "path": "town06-preview-review-001/page-02.png",
+      "sha256": "82916512e68892cf657b7db5788fc99da3e664488fae870f019ce9665f3e3e40"
+    },
+    {
+      "path": "town06-preview-review-001/report.json",
+      "sha256": "4a9b86bd89a37626b76d67f9554a2b06aa7e9b005c2ddb76d7e9a4d458f2b878"
+    },
+    {
+      "path": "town06-preview-review-001/visual_review.json",
+      "sha256": "a2a91dd4af2d6b96d5f5e517e0a3b170482d76eb91b8d5afd00b47cb97728735"
+    },
+    {
+      "path": "town06-preview-review-002/page-00.png",
+      "sha256": "25627ba1cc955ac9f001474a6f905591061559bdafe6dd09e963e06d9dbe3cfa"
+    },
+    {
+      "path": "town06-preview-review-002/page-01.png",
+      "sha256": "24693a83e2ded60dd007250efe344e1536da60fbd97330f90074168b9d984282"
+    },
+    {
+      "path": "town06-preview-review-002/page-02.png",
+      "sha256": "fa837f4965ee9ff2540127e25e5294702bf689f4ccb7f75fb4dbd42e91238915"
+    },
+    {
+      "path": "town06-preview-review-002/page-03.png",
+      "sha256": "b7378ff622d2ee8f438d1f6a3d2f29ab79a7f9b5ad6787c75fa95b18f0ad7945"
+    },
+    {
+      "path": "town06-preview-review-002/page-04.png",
+      "sha256": "bf21dd580f035fea63e65bd536126c89c3949fdbcb19ac09bd59e0f27479d4db"
+    },
+    {
+      "path": "town06-preview-review-002/page-05.png",
+      "sha256": "50a86325d99f8fb179b6fde7fae0ce575f6540981a8c637bd3b7bb938b38a7c0"
+    },
+    {
+      "path": "town06-preview-review-002/report.json",
+      "sha256": "3eda455f1f91358e620da4d523c3fe42e8c04409bcfce04af5ffbcc1ef24d9ba"
+    },
+    {
+      "path": "town06-preview-review-002/visual_review.json",
+      "sha256": "a8f78970dac13c20c2653967fd34a39441038479f54c991618e1cae0d18c8cf5"
+    },
+    {
+      "path": "town07-preview-review-001/page-00.png",
+      "sha256": "98a285f6ded8404c9d34ea3c36a53f4a6f96faf9ac908980b4d6ac8ee12b8be0"
+    },
+    {
+      "path": "town07-preview-review-001/page-01.png",
+      "sha256": "fc39a3cb56b0897250a6646f830bacafaa9b5b875c330a337123632caf5f4e3c"
+    },
+    {
+      "path": "town07-preview-review-001/page-02.png",
+      "sha256": "c6195320ee94318b153ee4372c75f734704e168ef3d4e5ccd438e237f9763fd1"
+    },
+    {
+      "path": "town07-preview-review-001/report.json",
+      "sha256": "64e0c753f110b6772aa9152ae4f132ea82e19c815899718a2ac147affd17e5c6"
+    },
+    {
+      "path": "town07-preview-review-001/visual_review.json",
+      "sha256": "4a1b65385f4ad427b4f2d390815b59ddf55e118d4703dc41372c6f3895776fb6"
+    },
+    {
+      "path": "wall-target-identity-audit-001/case-00.png",
+      "sha256": "3c0ff5f7ff39f82b693acf2645a8dc932957698fc83e11a98e927a26c3c5c589"
+    },
+    {
+      "path": "wall-target-identity-audit-001/case-01.png",
+      "sha256": "87babdec2bed348265d305ab9a6dc2512582440b0cb0e2f7eea90f0c69666ff6"
+    },
+    {
+      "path": "wall-target-identity-audit-001/case-02.png",
+      "sha256": "bc8a8f4a96db02d58c80ce7a916bba9840beee17099c33338f9f1615fa577f0d"
+    },
+    {
+      "path": "wall-target-identity-audit-001/case-03.png",
+      "sha256": "7dc6a8943a6204e524dd0db32b12408853cea058dd95264cd7888098092afda8"
+    },
+    {
+      "path": "wall-target-identity-audit-001/case-04.png",
+      "sha256": "ca6a720edf6ee6e5feb3368e898752a09c309544b712ebeee020859dec559422"
+    },
+    {
+      "path": "wall-target-identity-audit-001/page-00.png",
+      "sha256": "75864e5a6f1d04bc4fd13ebabe8f6d55260f50ec756ca964215e865c8722821e"
+    },
+    {
+      "path": "wall-target-identity-audit-001/page-01.png",
+      "sha256": "8547fbe18037d778d1396debfc88b0d7df91ec24eb5dd30f19d88639c40cb6ab"
+    },
+    {
+      "path": "wall-target-identity-audit-001/report.json",
+      "sha256": "ecdf8ec6f32e3396f25b814beb83141aa6dddbe0d3848bc9f2eb44edd10914c1"
+    },
+    {
+      "path": "wall-target-identity-audit-001/visual_review.json",
+      "sha256": "9f60f555c64d6375215bf201c331d6de17b9816c3f8695b88469cf22d80dd04d"
+    },
+    {
+      "path": "source/scripts/audit_unused_scenery.py",
+      "sha256": "95d64d859c7e7de6639a0339ee7381ed3ccf831f3a3d7e0b45d3aabcc9901e74"
+    },
+    {
+      "path": "source/scripts/collect_unused_scenery.py",
+      "sha256": "38519d5068bbbd59f5af8c7aa23e79a957b047206a80764f9c5deeea7879d744"
+    },
+    {
+      "path": "source/scripts/prepare_reserved_world.py",
+      "sha256": "8143612c563f68cda3ae8ecafd89361d2ad82874fa8ba6c21b0cf650c94ae2a3"
+    },
+    {
+      "path": "source/scripts/prepare_unused_scenery.py",
+      "sha256": "d78e892bc8c168bfe3b1439d0f5c8389eebe78ea97185e78eab4e8eeffba8e5c"
+    },
+    {
+      "path": "source/scripts/review_scenery_probe.py",
+      "sha256": "9e8260c09b456d20662bded7ab4721a61981fb866af41998527095e50e91d99d"
+    },
+    {
+      "path": "source/src/senior_ai/detection_augmentation.py",
+      "sha256": "32c48ed6349c0a0ccdaa823459c5d9c2b70039cc8903f100c0a406dc40d630a7"
+    },
+    {
+      "path": "source/src/senior_ai/segmentation_expansion.py",
+      "sha256": "e3318eabe32f594b6e7cb3a6de43a71208e4419bcb24a1453d7c782f49b854cd"
+    }
+  ]
+}

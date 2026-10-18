@@ -1,0 +1,75 @@
+{
+  "status": "reviewed_model_errors_quality_failed",
+  "model_quality_passed": false,
+  "checkpoint_sha256": "ec1427214d5fc3e51b9bbb2fed652fa762e97edeb34cfc23a989bdc879c8575f",
+  "validation_frames_sha256": "23fca48988331744cb57689f5b4d041cc54d7eb39cf224cf66dd1c432e4de550",
+  "reviewed_images": [
+    {
+      "path": "page-00.png",
+      "sha256": "1246a9045c0c6b29feab54815a081a32d3051a1a9b2abaaa4255b17f776a626f",
+      "case_ranks": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "path": "page-01.png",
+      "sha256": "17a4e5fde2e368aa9ac96d732380f54cd289b236af6dece6349608e3b5183704",
+      "case_ranks": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "path": "page-02.png",
+      "sha256": "264feddbfb9f2ae5aa6f80b2a0b551a8f39100e24be23877735f50839be9ca97",
+      "case_ranks": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "path": "page-03.png",
+      "sha256": "52fda04ec28fd312f40f8609730c4453b13bf3e83fb75052b58efd6defb5b724",
+      "case_ranks": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "path": "page-04.png",
+      "sha256": "246af372bbfb0813889dbb4577b274deccde8fb8fa45147cbce04e6019d6a032",
+      "case_ranks": [
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "path": "case-07-bike-0-display-zoom.png",
+      "sha256": "931938f1370318a19408a77f35640427e8b7f3b0d30fed6cd1b36cca1e668275"
+    },
+    {
+      "path": "case-10-bike-0-display-zoom.png",
+      "sha256": "60a90e36dd1c7da8a3817a109f98d16a7f707285e7352e3062adf44d78c0241e"
+    },
+    {
+      "path": "case-13-bike-0-display-zoom.png",
+      "sha256": "ddb03b7807af4627b11cb56e277daeff76ce64dd64f1cf6a72637693353c8de4"
+    }
+  ],
+  "reviewed_contexts": 15,
+  "observations": [
+    "Small far bicycles and cyclists partly behind vehicles remain missed; edge clipping is also visible.",
+    "A nearer frontal bicycle is classified as motorcycle; other cases include person/cyclist confusion. These are selected failures, not their full-split prevalence.",
+    "Truck part/duplicate hypotheses, a tiny lamp miss and a barrel-as-bicycle false positive are preserved alongside the sole failing aggregate class gate.",
+    "Nearest-neighbor crops are display-only; no physical occlusion percentage or new inference/heldout claim."
+  ],
+  "input_inventory_binding_receipt_sha256": "88eb723a134adb70fe57d15e42d66eed19499528908268002c78ebc9e0f7ecf2",
+  "tool_as_used": "tool_used.py",
+  "scope": "Actual five pages/15 selected validation contexts and three display zooms inspected. Saved GPU predictions, not fresh CPU results. Not data training approval."
+}

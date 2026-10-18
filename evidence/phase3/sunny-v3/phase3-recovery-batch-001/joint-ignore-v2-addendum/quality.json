@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "checks": {
+    "all_classes": true,
+    "macro_correct_state_recall": true,
+    "red_as_green": true
+  }
+}

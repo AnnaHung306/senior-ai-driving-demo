@@ -1,6 +1,13 @@
+<!-- 最新實際進度優先於下方歷史準備紀錄。 -->
+## 2026-10-18 實際進度
+
+v5全批已完成，Wall/margin與自行車recall仍失敗。新隔離runtime已逐檔驗證且Town06/07實際native載入成功；原runtime保留不變。Town07預覽只有Fence/terrain negatives，沒有Wall；Town06兩次預覽共96views，第二次64views按高度/空間分散，六頁實看為高磚石牆、低磚/水泥複合牆、木欄杆及草樹negative，未證明已補到實心木牆或高速路擋土牆。
+
+已用原始semantic raw4/raw5分別疊圖核對5個validation極值案例：原木圍牆及擋土牆確為Wall，不把Fence重新標Wall。收據wall-target-identity-audit-001。正式plan `configs/segmentation_expansion_diverse_v2_2.json` SHA aff1cc0dc406830104ae50c960f2bc77b9a8d8488ea873e8c43604459e1c44ff，Town06/07各64錨點，另root `data/segmentation-expansion-v2-001`正在正式採集；probe不作train。新v2 loader已接入但仍需實際完整audit、QA批准及統一工程檢查後才能訓練。兩種補景各重複2次時main9600/13696=70.09%。無新heldout開啟。
+
 # Phase3 牆面泛化缺口：資料恢復依據
 
-這是後續實驗的決策依據，並非新資料已採集或模型已通過。正在執行的 v5 批次、原主資料及品質門檻不變。
+這是後續實驗的決策依據，並非新資料已採集或模型已通過。已完成但品質未過的 v5 批次、原主資料及品質門檻不變。
 
 第一輪 immutable checkpoint 對事先按 train GT/外觀分層選出的28個已見訓練畫面，CPU FP32 wall IoU .96965、precision .98159、recall .98762。六個最高 FP/FN 的畫面已實看（兩頁），水泥、磚牆大多吻合原GT。這是有偏的選定樣本診斷，不能稱完整train accuracy或獨立泛化估計；但與完整val wall約.08的落差，支持外觀／場景轉移為優先問題，而不是直接增加模型容量或重複既有牆面。
 

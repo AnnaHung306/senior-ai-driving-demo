@@ -1,0 +1,16 @@
+{
+  "status": "reviewed_quality_not_qualified",
+  "perception_sha256": "a75795d7162f071ba900d019868abc39c13fae54a28d69e358c00493f0f322da",
+  "reviewed_images": [
+    {
+      "path": "surround.png",
+      "sha256": "6b4b693ee41ad1b9c78b0486708ca5bf2a6a5fe6dd5b85454469c73c7d8cd304"
+    }
+  ],
+  "checkpoints": {
+    "detector_sha256": "ec1427214d5fc3e51b9bbb2fed652fa762e97edeb34cfc23a989bdc879c8575f",
+    "segmentation_sha256": "3fe7bd08d885e481b7435fdf466945f142f8323447cca46bf31c32455835a53f",
+    "phase_sha256": "c2709f15f14b193b68d0cb35d5cec37713f5e1015dff60f42885b85afb5f0846"
+  },
+  "observations": "Actual RGB-only eight-view predictions reviewed. Roads, margins and object overlays present; overlapping class hypotheses on near cyclist and pole-like bicycle false positive. Wall/rock errors remain. Selected validation frame, not independent test, fusion or 3D."
+}

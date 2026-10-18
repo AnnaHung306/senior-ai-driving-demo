@@ -1,0 +1,13 @@
+{
+  "helper_pid": 4644,
+  "target_pid": 19772,
+  "target_creation_filetime": "134367639907667432",
+  "started_at_utc": "2026-10-18T02:26:38.689415+00:00",
+  "max_hours": 6.0,
+  "scope": "Thread-owned ES_CONTINUOUS|ES_SYSTEM_REQUIRED only while target process instance runs; no power-plan or display changes",
+  "API_documentation": "https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-setthreadexecutionstate",
+  "status": "released",
+  "request_cleared": true,
+  "reason": "target_process_exited",
+  "ended_at_utc": "2026-10-18T07:12:06.645562+00:00"
+}

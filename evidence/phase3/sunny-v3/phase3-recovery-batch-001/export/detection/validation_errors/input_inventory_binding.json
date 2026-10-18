@@ -1,0 +1,6 @@
+{
+  "actual_image_inventory_sha256": "dfa830811b91994fbce03d7b321a533cd9dbd40227779b8dbe2511ec9163df59",
+  "training_image_inventory_sha256": "dfa830811b91994fbce03d7b321a533cd9dbd40227779b8dbe2511ec9163df59",
+  "matched": true,
+  "source_scope": "Independent binding check for initial gallery tool; actual selected RGB digests were checked during rendering"
+}

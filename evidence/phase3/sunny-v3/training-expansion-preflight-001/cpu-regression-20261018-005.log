@@ -1,0 +1,321 @@
+test_synchronized_forecast (test_acquisition_safety.AcquisitionSafetyTests.test_synchronized_forecast) ... ok
+test_tm_speed_never_zero (test_acquisition_safety.AcquisitionSafetyTests.test_tm_speed_never_zero) ... ok
+test_escape_executable_and_windows_aliases_rejected (test_additional_map_install.AdditionalMapInstallTests.test_escape_executable_and_windows_aliases_rejected) ... ok
+test_existing_asset_comparison_is_byte_exact (test_additional_map_install.AdditionalMapInstallTests.test_existing_asset_comparison_is_byte_exact) ... ok
+test_existing_different_asset_aborts_before_any_install (test_additional_map_install.AdditionalMapInstallTests.test_existing_different_asset_aborts_before_any_install) ... ok
+{"status": "installed_content_only_existing_bytes_preserved", "source": "https://downloads.carlasim.com/Windows/AdditionalMaps_0.9.16.zip", "release_page": "https://github.com/carla-simulator/carla/releases/tag/0.9.16", "archive": "C:\\code\\senior_AI\\artifacts\\runs\\additional-map-test-01mu0k39\\addon.zip", "bytes": 484, "publisher_checksum_verified": false, "tool_sha256": "85b7404857be750260cc986b7867f1b2693cb5b765b8436ca0f1772553e1bc8b", "started_utc": "2026-10-18T07:47:46.197334+00:00", "scope": "CARLA content assets only; no map/data approval or model-quality claim", "shipping_binary_before_sha256": "6cc7e19771e10d0ee9c8cedbc0df7ec4c5cb700376887b940da87c8c5da2509d", "archive_sha256": "781a63cb91d7c45d9f843181c3ed9bfa561eb7f7219067ced18b338d75d604d9", "archive_entries": 3, "uncompressed_bytes": 18, "zip_crc_verified": true, "existing_exact_files": 2, "new_files": 1, "publication": "Verified sibling .partial copy then exclusive atomic publication; no partially copied asset target", "shipping_binary_after_sha256": "6cc7e19771e10d0ee9c8cedbc0df7ec4c5cb700376887b940da87c8c5da2509d", "finished_utc": "2026-10-18T07:47:46.223340+00:00"}
+test_interrupted_publication_recovers_in_new_receipt_run (test_additional_map_install.AdditionalMapInstallTests.test_interrupted_publication_recovers_in_new_receipt_run) ... ok
+test_map_assets_allowed (test_additional_map_install.AdditionalMapInstallTests.test_map_assets_allowed) ... ok
+{"status": "installed_content_only_existing_bytes_preserved", "source": "https://downloads.carlasim.com/Windows/AdditionalMaps_0.9.16.zip", "release_page": "https://github.com/carla-simulator/carla/releases/tag/0.9.16", "archive": "C:\\code\\senior_AI\\artifacts\\runs\\additional-map-test-_i8a2ty3\\addon.zip", "bytes": 484, "publisher_checksum_verified": false, "tool_sha256": "85b7404857be750260cc986b7867f1b2693cb5b765b8436ca0f1772553e1bc8b", "started_utc": "2026-10-18T07:47:46.263370+00:00", "scope": "CARLA content assets only; no map/data approval or model-quality claim", "shipping_binary_before_sha256": "6cc7e19771e10d0ee9c8cedbc0df7ec4c5cb700376887b940da87c8c5da2509d", "archive_sha256": "781a63cb91d7c45d9f843181c3ed9bfa561eb7f7219067ced18b338d75d604d9", "archive_entries": 3, "uncompressed_bytes": 18, "zip_crc_verified": true, "existing_exact_files": 1, "new_files": 2, "publication": "Verified sibling .partial copy then exclusive atomic publication; no partially copied asset target", "shipping_binary_after_sha256": "6cc7e19771e10d0ee9c8cedbc0df7ec4c5cb700376887b940da87c8c5da2509d", "finished_utc": "2026-10-18T07:47:46.289889+00:00"}
+test_new_assets_installed_and_old_binary_preserved (test_additional_map_install.AdditionalMapInstallTests.test_new_assets_installed_and_old_binary_preserved) ... ok
+{"stage": "archive_paths_validated_hashing_baseline_and_archive", "addon_files": 3}
+{"stage": "cloning_baseline", "files": 1, "total": 3}
+{"stage": "archive_paths_validated_hashing_baseline_and_archive", "addon_files": 3}
+{"stage": "verifying_runtime_and_preserved_baseline", "files": 5}
+{"status": "completed_content_not_native_validated", "started_utc": "2026-10-18T07:47:46.449477+00:00", "baseline": "C:\\code\\senior_AI\\artifacts\\runs\\isolated-map-test-_zlyc97y\\artifacts\\carla", "runtime": "C:\\code\\senior_AI\\artifacts\\runs\\isolated-map-test-_zlyc97y\\artifacts\\carla-phase3-expansion-test", "tool_sha256": "3ae833b7d700c2f5de5087ff8a1380bba09d18868a648bd5d23300449e4e5d73", "scope": "Isolated runtime content only. No native startup/availability, new data, or model-quality claim.", "contract_sha256": "1819be6c1cbe14981edb2d7fde34d8db4904fa2d54701bde303adc480cda96d3", "runtime_inventory_sha256": "17225799e6a0118a0d1c3d77f4c59b841fca6526ff3280dee40692714fdd13f2", "baseline_unchanged": true, "shipping_binary_sha256": "d7017ebcd65455e76e953d5b42fa96c3df28c7c3b616c7f069ed930fb4fae5fd", "baseline_files": 3, "addon_files": 3, "replaced_only_in_new_clone": 1, "new_assets": 2, "zip_crc_verified": true, "finished_utc": "2026-10-18T07:47:46.562053+00:00"}
+{"stage": "archive_paths_validated_hashing_baseline_and_archive", "addon_files": 3}
+{"stage": "verifying_runtime_and_preserved_baseline", "files": 5}
+{"status": "completed_content_not_native_validated", "started_utc": "2026-10-18T07:47:46.585059+00:00", "baseline": "C:\\code\\senior_AI\\artifacts\\runs\\isolated-map-test-_zlyc97y\\artifacts\\carla", "runtime": "C:\\code\\senior_AI\\artifacts\\runs\\isolated-map-test-_zlyc97y\\artifacts\\carla-phase3-expansion-test", "tool_sha256": "3ae833b7d700c2f5de5087ff8a1380bba09d18868a648bd5d23300449e4e5d73", "scope": "Isolated runtime content only. No native startup/availability, new data, or model-quality claim.", "contract_sha256": "1819be6c1cbe14981edb2d7fde34d8db4904fa2d54701bde303adc480cda96d3", "runtime_inventory_sha256": "17225799e6a0118a0d1c3d77f4c59b841fca6526ff3280dee40692714fdd13f2", "baseline_unchanged": true, "shipping_binary_sha256": "d7017ebcd65455e76e953d5b42fa96c3df28c7c3b616c7f069ed930fb4fae5fd", "baseline_files": 3, "addon_files": 3, "replaced_only_in_new_clone": 1, "new_assets": 2, "zip_crc_verified": true, "finished_utc": "2026-10-18T07:47:46.643592+00:00"}
+test_clone_interruption_and_completed_resume_are_exact (test_additional_map_runtime.AdditionalRuntimeTests.test_clone_interruption_and_completed_resume_are_exact) ... ok
+{"stage": "archive_paths_validated_hashing_baseline_and_archive", "addon_files": 3}
+{"stage": "cloning_baseline", "files": 1, "total": 3}
+{"stage": "verifying_runtime_and_preserved_baseline", "files": 5}
+{"status": "completed_content_not_native_validated", "started_utc": "2026-10-18T07:47:46.674855+00:00", "baseline": "C:\\code\\senior_AI\\artifacts\\runs\\isolated-map-test-54z53pad\\artifacts\\carla", "runtime": "C:\\code\\senior_AI\\artifacts\\runs\\isolated-map-test-54z53pad\\artifacts\\carla-phase3-expansion-test", "tool_sha256": "3ae833b7d700c2f5de5087ff8a1380bba09d18868a648bd5d23300449e4e5d73", "scope": "Isolated runtime content only. No native startup/availability, new data, or model-quality claim.", "contract_sha256": "4e37b556f9c7327b60be1eea01fcbba05196f00fa97018f77be435134d14be7e", "runtime_inventory_sha256": "17225799e6a0118a0d1c3d77f4c59b841fca6526ff3280dee40692714fdd13f2", "baseline_unchanged": true, "shipping_binary_sha256": "d7017ebcd65455e76e953d5b42fa96c3df28c7c3b616c7f069ed930fb4fae5fd", "baseline_files": 3, "addon_files": 3, "replaced_only_in_new_clone": 1, "new_assets": 2, "zip_crc_verified": true, "finished_utc": "2026-10-18T07:47:46.763036+00:00"}
+{"stage": "archive_paths_validated_hashing_baseline_and_archive", "addon_files": 3}
+{"stage": "verifying_runtime_and_preserved_baseline", "files": 5}
+{"status": "completed_content_not_native_validated", "started_utc": "2026-10-18T07:47:46.786969+00:00", "baseline": "C:\\code\\senior_AI\\artifacts\\runs\\isolated-map-test-54z53pad\\artifacts\\carla", "runtime": "C:\\code\\senior_AI\\artifacts\\runs\\isolated-map-test-54z53pad\\artifacts\\carla-phase3-expansion-test", "tool_sha256": "3ae833b7d700c2f5de5087ff8a1380bba09d18868a648bd5d23300449e4e5d73", "scope": "Isolated runtime content only. No native startup/availability, new data, or model-quality claim.", "contract_sha256": "4e37b556f9c7327b60be1eea01fcbba05196f00fa97018f77be435134d14be7e", "runtime_inventory_sha256": "17225799e6a0118a0d1c3d77f4c59b841fca6526ff3280dee40692714fdd13f2", "baseline_unchanged": true, "shipping_binary_sha256": "d7017ebcd65455e76e953d5b42fa96c3df28c7c3b616c7f069ed930fb4fae5fd", "baseline_files": 3, "addon_files": 3, "replaced_only_in_new_clone": 1, "new_assets": 2, "zip_crc_verified": true, "finished_utc": "2026-10-18T07:47:46.837910+00:00"}
+test_different_shared_asset_changes_only_isolated_clone (test_additional_map_runtime.AdditionalRuntimeTests.test_different_shared_asset_changes_only_isolated_clone) ... ok
+test_engine_plugin_content_allowed_but_code_and_traversal_rejected (test_additional_map_runtime.AdditionalRuntimeTests.test_engine_plugin_content_allowed_but_code_and_traversal_rejected) ... ok
+test_original_root_cannot_be_overlay_target (test_additional_map_runtime.AdditionalRuntimeTests.test_original_root_cannot_be_overlay_target) ... ok
+test_adding_small_shape_preserves_original_matches_and_improves_tiny_box_bound (test_anchor_shape_diagnostic.AnchorShapeDiagnosticTests.test_adding_small_shape_preserves_original_matches_and_improves_tiny_box_bound) ... ok
+test_calibration_rejects_wrong_focal_or_inverse_transform (test_dataset.DatasetBoundaryTests.test_calibration_rejects_wrong_focal_or_inverse_transform) ... ok
+test_depth_channel_order_and_range (test_dataset.DatasetBoundaryTests.test_depth_channel_order_and_range) ... ok
+test_group_leak_rejected (test_dataset.DatasetBoundaryTests.test_group_leak_rejected) ... ok
+test_rgb_manifest_does_not_read_labels_and_rejects_gt (test_dataset.DatasetBoundaryTests.test_rgb_manifest_does_not_read_labels_and_rejects_gt) ... ok
+test_semantic_ids_are_red_not_palette (test_dataset.DatasetBoundaryTests.test_semantic_ids_are_red_not_palette) ... ok
+test_canonical_clipping_phase_and_float32_ignore_preserved (test_detection_artifact_validation.DetectionArtifactValidationTests.test_canonical_clipping_phase_and_float32_ignore_preserved) ... ok
+test_invalid_predictions_rejected (test_detection_artifact_validation.DetectionArtifactValidationTests.test_invalid_predictions_rejected) ... ok
+test_original_coordinate_predictions_and_empty_targets_valid (test_detection_artifact_validation.DetectionArtifactValidationTests.test_original_coordinate_predictions_and_empty_targets_valid) ... ok
+test_duplicate_false_positive_and_ignore (test_detection_metrics.DetectionMetricsTests.test_duplicate_false_positive_and_ignore) ... ok
+test_perfect_and_missing_class (test_detection_metrics.DetectionMetricsTests.test_perfect_and_missing_class) ... ok
+test_size_and_truncation_recall_use_fixed_score (test_detection_metrics.DetectionMetricsTests.test_size_and_truncation_recall_use_fixed_score) ... ok
+test_wrong_class_and_iou_threshold (test_detection_metrics.DetectionMetricsTests.test_wrong_class_and_iou_threshold) ... ok
+test_all_ignored_loss_is_zero_and_differentiable (test_detection_model.DetectorIgnoreTests.test_all_ignored_loss_is_zero_and_differentiable) ... ok
+test_eager_roi_matches_upstream_and_backpropagates (test_detection_model.DetectorIgnoreTests.test_eager_roi_matches_upstream_and_backpropagates) ... ok
+test_high_resolution_transform_preserves_raw_box_coordinates (test_detection_model.DetectorIgnoreTests.test_high_resolution_transform_preserves_raw_box_coordinates) ... ok
+test_ignore_boxes_resize_and_empty_gt (test_detection_model.DetectorIgnoreTests.test_ignore_boxes_resize_and_empty_gt) ... ok
+test_matches_numpy_contract (test_detection_model.DetectorIgnoreTests.test_matches_numpy_contract) ... ok
+test_real_rpn_and_roi_samplers (test_detection_model.DetectorIgnoreTests.test_real_rpn_and_roi_samplers) ... ok
+test_only_bicycle_positive_views_selected_all_boxes_follow (test_detection_scale_training.DetectionScaleTrainingTests.test_only_bicycle_positive_views_selected_all_boxes_follow) ... ok
+test_policy_and_matrix_mismatch_refused (test_detection_scale_training.DetectionScaleTrainingTests.test_policy_and_matrix_mismatch_refused) ... ok
+test_rng_state_restores_geometry_and_targets (test_detection_scale_training.DetectionScaleTrainingTests.test_rng_state_restores_geometry_and_targets) ... ok
+test_false_positives_misses_and_semantic_support_bins (test_error_catalog.ErrorCatalogTests.test_false_positives_misses_and_semantic_support_bins) ... ok
+test_asymmetric_pixels_follow_horizontal_flip (test_experimental_detector_geometry.DetectorGeometryTests.test_asymmetric_pixels_follow_horizontal_flip) ... ok
+test_exact_boxes_flip_and_source_immutable (test_experimental_detector_geometry.DetectorGeometryTests.test_exact_boxes_flip_and_source_immutable) ... ok
+test_invalid_geometry_refused (test_experimental_detector_geometry.DetectorGeometryTests.test_invalid_geometry_refused) ... ok
+test_padding_exactly_covers_canvas_outside_paste (test_experimental_detector_geometry.DetectorGeometryTests.test_padding_exactly_covers_canvas_outside_paste) ... ok
+test_rng_resume_reproduces_all_training_geometry (test_experimental_detector_geometry.DetectorGeometryTests.test_rng_resume_reproduces_all_training_geometry) ... ok
+test_unit_geometry_is_exact_and_empty_targets_work (test_experimental_detector_geometry.DetectorGeometryTests.test_unit_geometry_is_exact_and_empty_targets_work) ... ok
+test_constant_bfloat16_features_and_backward_stay_finite (test_experimental_feature_style.FeatureStylePrototypeTests.test_constant_bfloat16_features_and_backward_stay_finite) ... ok
+test_epoch_cpu_rng_restore_reproduces_augmentation_exactly (test_experimental_feature_style.FeatureStylePrototypeTests.test_epoch_cpu_rng_restore_reproduces_augmentation_exactly) ... ok
+test_eval_probability_zero_and_single_sample_are_rng_neutral_identity (test_experimental_feature_style.FeatureStylePrototypeTests.test_eval_probability_zero_and_single_sample_are_rng_neutral_identity) ... ok
+test_invalid_settings_and_feature_schema_rejected (test_experimental_feature_style.FeatureStylePrototypeTests.test_invalid_settings_and_feature_schema_rejected) ... ok
+test_mobile_prototype_eval_exact_identity_and_training_gradient (test_experimental_feature_style.FeatureStylePrototypeTests.test_mobile_prototype_eval_exact_identity_and_training_gradient) ... ok
+test_preserves_within_channel_spatial_order_without_new_parameters (test_experimental_feature_style.FeatureStylePrototypeTests.test_preserves_within_channel_spatial_order_without_new_parameters) ... ok
+test_cannot_apply_twice_or_silently_use_incompatible_pyramid (test_experimental_p1_detector.P1PrototypeTests.test_cannot_apply_twice_or_silently_use_incompatible_pyramid) ... ok
+test_every_existing_parameter_preserved_with_explicit_fpn_index_shift (test_experimental_p1_detector.P1PrototypeTests.test_every_existing_parameter_preserved_with_explicit_fpn_index_shift) ... ok
+test_existing_coarse_features_exact_and_new_stride2_shape (test_experimental_p1_detector.P1PrototypeTests.test_existing_coarse_features_exact_and_new_stride2_shape) ... ok
+test_new_projection_participates_in_finite_cpu_training_and_eval (test_experimental_p1_detector.P1PrototypeTests.test_new_projection_participates_in_finite_cpu_training_and_eval) ... ok
+test_capture_pose_is_owned_and_validated_with_pixels (test_frames.OwnedFrameTests.test_capture_pose_is_owned_and_validated_with_pixels) ... ok
+test_malformed_sensor_payload_is_rejected (test_frames.OwnedFrameTests.test_malformed_sensor_payload_is_rejected) ... ok
+test_native_payload_is_copied_before_callback_returns (test_frames.OwnedFrameTests.test_native_payload_is_copied_before_callback_returns) ... ok
+test_png_encodes_actual_pixel_order_and_valid_crc (test_frames.OwnedFrameTests.test_png_encodes_actual_pixel_order_and_valid_crc) ... ok
+test_channel_order_and_actor_id_alias_guard (test_instance_labels.InstanceLabelTests.test_channel_order_and_actor_id_alias_guard) ... ok
+test_depth_axial_and_range_are_distinct_off_axis (test_instance_labels.InstanceLabelTests.test_depth_axial_and_range_are_distinct_off_axis) ... ok
+test_exclusive_mask_box_and_empty (test_instance_labels.InstanceLabelTests.test_exclusive_mask_box_and_empty) ... ok
+test_projection_near_plane_behind_and_outside (test_instance_labels.InstanceLabelTests.test_projection_near_plane_behind_and_outside) ... ok
+test_rider_union_and_no_visible_mask_means_no_box (test_instance_labels.InstanceLabelTests.test_rider_union_and_no_visible_mask_means_no_box) ... ok
+test_real_background_false_light_not_ignored (test_light_joint_ignore.LightJointIgnoreTests.test_real_background_false_light_not_ignored) ... ok
+test_unscorable_foreground_not_false_light (test_light_joint_ignore.LightJointIgnoreTests.test_unscorable_foreground_not_false_light) ... ok
+test_wrong_class_and_duplicate_known_positive_still_false_positive (test_light_joint_ignore.LightJointIgnoreTests.test_wrong_class_and_duplicate_known_positive_still_false_positive) ... ok
+test_hidden_phase_not_assigned_without_visible_lens (test_light_labels.ObservableLightLabelTests.test_hidden_phase_not_assigned_without_visible_lens) ... ok
+test_actual_frozen_camera_matrix_roundtrips (test_light_supplement.SupplementTests.test_actual_frozen_camera_matrix_roundtrips) ... ok
+test_dropped_frame_retries_whole_triplet_without_relabelling (test_light_supplement.SupplementTests.test_dropped_frame_retries_whole_triplet_without_relabelling) ... ok
+test_heldout_only_and_original_groups_count_once (test_light_supplement.SupplementTests.test_heldout_only_and_original_groups_count_once) ... ok
+test_joint_precision_counts_false_light_detections (test_light_supplement.SupplementTests.test_joint_precision_counts_false_light_detections) ... ok
+test_phase_quality_can_be_saved_at_completion (test_light_supplement.SupplementTests.test_phase_quality_can_be_saved_at_completion) ... ok
+test_red_green_joint_rate_cannot_hide_behind_detector_misses (test_light_supplement.SupplementTests.test_red_green_joint_rate_cannot_hide_behind_detector_misses) ... ok
+test_persistent_lock_is_bounded_and_retains_last_good_progress (test_material_survey_io.SurveyAtomicWriteTests.test_persistent_lock_is_bounded_and_retains_last_good_progress) ... ok
+test_temporary_windows_lock_retries_without_partial_json (test_material_survey_io.SurveyAtomicWriteTests.test_temporary_windows_lock_retries_without_partial_json) ... ok
+test_bad_cadence_identity_or_static_participant_rejected (test_motion.MotionAuditTests.test_bad_cadence_identity_or_static_participant_rejected) ... ok
+test_measured_motion_passes_but_stationary_ego_fails (test_motion.MotionAuditTests.test_measured_motion_passes_but_stationary_ego_fails) ... ok
+test_spawned_class_does_not_replace_pixel_coverage (test_motion.MotionAuditTests.test_spawned_class_does_not_replace_pixel_coverage) ... ok
+test_GT_fields_cannot_enter_fingerprinted_inference_manifest (test_perception_inputs.PerceptionInputTests.test_GT_fields_cannot_enter_fingerprinted_inference_manifest) ... ok
+test_RGB_change_is_detected_without_changing_frame_or_manifest (test_perception_inputs.PerceptionInputTests.test_RGB_change_is_detected_without_changing_frame_or_manifest) ... ok
+test_invalid_numbers_cannot_enter_report (test_phase0.AcceptanceTests.test_invalid_numbers_cannot_enter_report) ... ok
+test_known_projection (test_phase0.AcceptanceTests.test_known_projection) ... ok
+test_nominal_acceptance_and_failures (test_phase0.AcceptanceTests.test_nominal_acceptance_and_failures) ... ok
+test_future_frame_fails_instead_of_silent_misalignment (test_phase0.FrameSynchronizationTests.test_future_frame_fails_instead_of_silent_misalignment) ... ok
+test_missing_camera_times_out (test_phase0.FrameSynchronizationTests.test_missing_camera_times_out) ... ok
+test_stale_frames_are_not_used (test_phase0.FrameSynchronizationTests.test_stale_frames_are_not_used) ... ok
+test_absent_process_is_not_alive (test_phase3_continuation.ContinuationIdentityTests.test_absent_process_is_not_alive) ... ok
+test_current_process_only_matches_its_exact_creation (test_phase3_continuation.ContinuationIdentityTests.test_current_process_only_matches_its_exact_creation) ... ok
+test_exited_child_with_retained_process_handle_is_not_alive (test_phase3_continuation.ContinuationIdentityTests.test_exited_child_with_retained_process_handle_is_not_alive) ... ok
+test_empty_negative_and_ignored_boundary (test_road_boundaries.VisibleMarginTests.test_empty_negative_and_ignored_boundary) ... ok
+test_road_ground_interface_excludes_vehicle_occlusion (test_road_boundaries.VisibleMarginTests.test_road_ground_interface_excludes_vehicle_occlusion) ... ok
+test_batch_lock_rejects_duplicate_runner_and_releases_on_close (test_scenery_training.SceneryTrainingTests.test_batch_lock_rejects_duplicate_runner_and_releases_on_close) ... ok
+test_geometry_selection_preserves_train_anchor_separation (test_scenery_training.SceneryTrainingTests.test_geometry_selection_preserves_train_anchor_separation) ... ok
+test_project_initialization_binds_checkpoint_task_audit_and_inference_resize (test_scenery_training.SceneryTrainingTests.test_project_initialization_binds_checkpoint_task_audit_and_inference_resize) ... ok
+test_scenery_requires_audit_actual_review_and_exact_bytes (test_scenery_training.SceneryTrainingTests.test_scenery_requires_audit_actual_review_and_exact_bytes) ... ok
+test_selection_never_discards_a_qualified_model_for_higher_failing_mean (test_scenery_training.SceneryTrainingTests.test_selection_never_discards_a_qualified_model_for_higher_failing_mean) ... ok
+test_unknown_instance_pixels_are_reported_not_compared_as_a_class (test_scenery_training.SceneryTrainingTests.test_unknown_instance_pixels_are_reported_not_compared_as_a_class) ... ok
+test_absent_class_false_positive_is_not_perfect (test_segmentation.SegmentationTests.test_absent_class_false_positive_is_not_perfect) ... ok
+test_amp_overflow_skips_update_and_retries_same_batch (test_segmentation.SegmentationTests.test_amp_overflow_skips_update_and_retries_same_batch) ... skipped 'AMP overflow recovery requires GPU'
+test_baselines_use_training_prior_only (test_segmentation.SegmentationTests.test_baselines_use_training_prior_only) ... ok
+test_confusion_ignore_and_hand_computed_metrics (test_segmentation.SegmentationTests.test_confusion_ignore_and_hand_computed_metrics) ... ok
+test_deterministic_loss_matches_weighted_mean_and_ignores_unknown (test_segmentation.SegmentationTests.test_deterministic_loss_matches_weighted_mean_and_ignores_unknown) ... ok
+test_epoch_boundary_checkpoint_repeats_next_update_exactly (test_segmentation.SegmentationTests.test_epoch_boundary_checkpoint_repeats_next_update_exactly) ... skipped 'CUDA checkpoint RNG resume requires GPU'
+test_integrity_rejects_corruption_and_cross_split_duplicates (test_segmentation.SegmentationTests.test_integrity_rejects_corruption_and_cross_split_duplicates) ... ok
+test_mapping_keeps_single_pixel_small_objects_and_unknown (test_segmentation.SegmentationTests.test_mapping_keeps_single_pixel_small_objects_and_unknown) ... ok
+test_model_odd_size_and_gradient (test_segmentation.SegmentationTests.test_model_odd_size_and_gradient) ... ok
+test_prediction_runs_with_only_rgb_and_no_ground_truth (test_segmentation.SegmentationTests.test_prediction_runs_with_only_rgb_and_no_ground_truth) ... skipped 'RGB-only production inference uses CUDA'
+preflight: verifying image inventory and source fingerprints
+test_resume_rejects_changed_provenance_before_loading_samples (test_segmentation.SegmentationTests.test_resume_rejects_changed_provenance_before_loading_samples) ... ok
+test_test_started_receipt_prevents_reopening_run (test_segmentation.SegmentationTests.test_test_started_receipt_prevents_reopening_run) ... ok
+test_no_qualified_candidate_uses_mean_with_earliest_tie (test_segmentation_artifact_selection.ArtifactSelectionTests.test_no_qualified_candidate_uses_mean_with_earliest_tie) ... ok
+test_no_silent_policy_or_missing_qualification_fallback (test_segmentation_artifact_selection.ArtifactSelectionTests.test_no_silent_policy_or_missing_qualification_fallback) ... ok
+test_qualified_lower_mean_beats_failing_higher_mean (test_segmentation_artifact_selection.ArtifactSelectionTests.test_qualified_lower_mean_beats_failing_higher_mean) ... ok
+test_inference_decodes_actual_rgb_without_labels (test_segmentation_data.SegmentationInputTests.test_inference_decodes_actual_rgb_without_labels) ... ok
+test_partial_acquisition_cannot_enter_training (test_segmentation_data.SegmentationInputTests.test_partial_acquisition_cannot_enter_training) ... ok
+test_complete_provenance_then_changed_image_rejected (test_segmentation_expansion.SegmentationExpansionTests.test_complete_provenance_then_changed_image_rejected) ... ERROR
+test_original_map_alias_and_training_boundary_rejected (test_segmentation_expansion.SegmentationExpansionTests.test_original_map_alias_and_training_boundary_rejected) ... ERROR
+test_probe_and_unreviewed_acquisition_cannot_train (test_segmentation_expansion.SegmentationExpansionTests.test_probe_and_unreviewed_acquisition_cannot_train) ... ERROR
+test_alpha_zero_identity_and_no_input_mutation (test_segmentation_prior.PriorCalibrationTests.test_alpha_zero_identity_and_no_input_mutation) ... ok
+test_partial_alpha_is_linear (test_segmentation_prior.PriorCalibrationTests.test_partial_alpha_is_linear) ... ok
+test_reject_unbounded_duplicate_nonfinite_or_bool_grid (test_segmentation_prior.PriorCalibrationTests.test_reject_unbounded_duplicate_nonfinite_or_bool_grid) ... ok
+test_reject_wrong_or_invalid_support (test_segmentation_prior.PriorCalibrationTests.test_reject_wrong_or_invalid_support) ... ok
+test_train_weight_formula_and_cap (test_segmentation_prior.PriorCalibrationTests.test_train_weight_formula_and_cap) ... ok
+test_downscale_padding_is_ignored_and_reproducible (test_sunny_augmentation.AugmentationTests.test_downscale_padding_is_ignored_and_reproducible) ... ok
+test_flip_preserves_exact_rgb_label_correspondence (test_sunny_augmentation.AugmentationTests.test_flip_preserves_exact_rgb_label_correspondence) ... ok
+test_pretrained_encoder_decoder_support_odd_rgb_and_both_gradients (test_sunny_augmentation.AugmentationTests.test_pretrained_encoder_decoder_support_odd_rgb_and_both_gradients) ... ok
+test_dynamic_tag_requires_verified_instance_id (test_sunny_data.SunnyLabelBoundaryTests.test_dynamic_tag_requires_verified_instance_id) ... ok
+test_lockbox_blocked_before_any_file_access (test_sunny_data.SunnyLabelBoundaryTests.test_lockbox_blocked_before_any_file_access) ... ok
+test_static_labels_use_actual_carla_enum_not_legacy_guess (test_sunny_data.SunnyLabelBoundaryTests.test_static_labels_use_actual_carla_enum_not_legacy_guess) ... ok
+test_individual_task_cannot_reuse_other_models_hash (test_sunny_export.SunnyExportTests.test_individual_task_cannot_reuse_other_models_hash) ... ok
+test_integrated_benchmark_binds_every_model (test_sunny_export.SunnyExportTests.test_integrated_benchmark_binds_every_model) ... ok
+test_integrated_benchmark_rejects_other_bundle_and_partial_measurements (test_sunny_export.SunnyExportTests.test_integrated_benchmark_rejects_other_bundle_and_partial_measurements) ... ok
+test_same_frame_id_cannot_hide_different_RGB_bytes (test_sunny_export.SunnyExportTests.test_same_frame_id_cannot_hide_different_RGB_bytes) ... ok
+test_stale_final_or_unbound_pass_cannot_be_exported_as_passed (test_sunny_export.SunnyExportTests.test_stale_final_or_unbound_pass_cannot_be_exported_as_passed) ... ok
+test_wrong_integrated_model_fails_before_creating_export_directory (test_sunny_export.SunnyExportTests.test_wrong_integrated_model_fails_before_creating_export_directory) ... ok
+test_rgb_only_without_gt_or_training_indexes (test_sunny_inference.SunnyInferenceTests.test_rgb_only_without_gt_or_training_indexes) ... ok
+test_semantic_depth_association_not_trigger_volume (test_sunny_lamps.LampGeometryTests.test_semantic_depth_association_not_trigger_volume) ... ok
+test_correct_prediction_and_focus_empty_negative (test_sunny_losses.ForegroundDiceTests.test_correct_prediction_and_focus_empty_negative) ... ok
+test_ignored_pixels_have_zero_gradient (test_sunny_losses.ForegroundDiceTests.test_ignored_pixels_have_zero_gradient) ... ok
+test_development_or_validation_town_cannot_be_used_as_training_scout (test_training_scenery_scout.TrainingSceneryScoutTests.test_development_or_validation_town_cannot_be_used_as_training_scout) ... ok
+test_native_geometry_serializes_without_inventing_world_bbox_conversion (test_training_scenery_scout.TrainingSceneryScoutTests.test_native_geometry_serializes_without_inventing_world_bbox_conversion) ... ok
+test_hints_interleaved_and_native_poses_preserved (test_unused_scenery_preparation.UnusedSceneryPreparationTests.test_hints_interleaved_and_native_poses_preserved) ... ok
+test_impossible_geometry_refused (test_unused_scenery_preparation.UnusedSceneryPreparationTests.test_impossible_geometry_refused) ... ok
+test_nonfinite_native_poses_refused (test_unused_scenery_preparation.UnusedSceneryPreparationTests.test_nonfinite_native_poses_refused) ... ok
+test_added_original_split_blocks_candidate_and_family_normalizes_alias (test_unused_training_town.UnusedTownPolicyTests.test_added_original_split_blocks_candidate_and_family_normalizes_alias) ... ok
+test_explicit_unused_full_towns_allowed (test_unused_training_town.UnusedTownPolicyTests.test_explicit_unused_full_towns_allowed) ... ok
+test_native_opendrive_alias_rejected_for_every_original_map (test_unused_training_town.UnusedTownPolicyTests.test_native_opendrive_alias_rejected_for_every_original_map) ... ok
+test_original_splits_variants_and_unreserved_towns_rejected (test_unused_training_town.UnusedTownPolicyTests.test_original_splits_variants_and_unreserved_towns_rejected) ... ok
+test_policy_cannot_override_original_split_or_grant_training_approval (test_unused_training_town.UnusedTownPolicyTests.test_policy_cannot_override_original_split_or_grant_training_approval) ... ok
+test_hidden_actor_does_not_create_amodal_ignore_region (test_visibility_policy.VisibilityPolicyTests.test_hidden_actor_does_not_create_amodal_ignore_region) ... ok
+test_near_plane_bad_depth_and_geometry_are_explicit_ignore (test_visibility_policy.VisibilityPolicyTests.test_near_plane_bad_depth_and_geometry_are_explicit_ignore) ... ok
+test_positive_matches_take_precedence_over_ignore_for_samplers (test_visibility_policy.VisibilityPolicyTests.test_positive_matches_take_precedence_over_ignore_for_samplers) ... ok
+test_projection_and_depth_tolerance_are_consistent_in_revised_policy (test_visibility_policy.VisibilityPolicyTests.test_projection_and_depth_tolerance_are_consistent_in_revised_policy) ... ok
+test_rider_only_is_ignored_but_verified_body_and_rider_is_kept (test_visibility_policy.VisibilityPolicyTests.test_rider_only_is_ignored_but_verified_body_and_rider_is_kept) ... ok
+test_unknown_foreground_is_ignore_never_background (test_visibility_policy.VisibilityPolicyTests.test_unknown_foreground_is_ignore_never_background) ... ok
+
+======================================================================
+ERROR: test_complete_provenance_then_changed_image_rejected (test_segmentation_expansion.SegmentationExpansionTests.test_complete_provenance_then_changed_image_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\code\senior_AI\tests\test_segmentation_expansion.py", line 45, in test_complete_provenance_then_changed_image_rejected
+    root,main=self.fixture(Path(folder));self.assertEqual(self.verify(root,main)['views'],8)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\code\senior_AI\tests\test_segmentation_expansion.py", line 19, in fixture
+    write(main/'rig.json',rig);write(main/'plan.json',{'scenes':[{'town':'Town04_Opt'}],'maps':{'Town04':{'opendrive_sha256':'original'}}});write(main/'audit.json',{'status':'passed'})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\code\senior_AI\tests\test_segmentation_expansion.py", line 13, in write
+    path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(value),encoding='utf-8')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] �s���Q�ڡC: 'C:\\Users\\HP\\AppData\\Local\\Packages\\sandbox.{2d2cf436-19d8-4d39-b496-4824e05c455f}\\AC\\Temp\\tmpda09r66w\\main'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] �s���Q�ڡC: 'C:\\Users\\HP\\AppData\\Local\\Packages\\sandbox.{2d2cf436-19d8-4d39-b496-4824e05c455f}\\AC\\Temp\\tmpda09r66w'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\code\senior_AI\tests\test_segmentation_expansion.py", line 44, in test_complete_provenance_then_changed_image_rejected
+    with tempfile.TemporaryDirectory() as folder:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] �s���Q�ڡC: 'C:\\Users\\HP\\AppData\\Local\\Packages\\sandbox.{2d2cf436-19d8-4d39-b496-4824e05c455f}\\AC\\Temp\\tmpda09r66w'
+
+======================================================================
+ERROR: test_original_map_alias_and_training_boundary_rejected (test_segmentation_expansion.SegmentationExpansionTests.test_original_map_alias_and_training_boundary_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\code\senior_AI\tests\test_segmentation_expansion.py", line 59, in test_original_map_alias_and_training_boundary_rejected
+    root,main=self.fixture(Path(folder));p=root/'plan.json';r=json.loads(p.read_text());r['towns']['Town06']['opendrive_sha256']='original';write(p,r)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\code\senior_AI\tests\test_segmentation_expansion.py", line 19, in fixture
+    write(main/'rig.json',rig);write(main/'plan.json',{'scenes':[{'town':'Town04_Opt'}],'maps':{'Town04':{'opendrive_sha256':'original'}}});write(main/'audit.json',{'status':'passed'})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\code\senior_AI\tests\test_segmentation_expansion.py", line 13, in write
+    path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(value),encoding='utf-8')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] �s���Q�ڡC: 'C:\\Users\\HP\\AppData\\Local\\Packages\\sandbox.{2d2cf436-19d8-4d39-b496-4824e05c455f}\\AC\\Temp\\tmpdu_f7vo_\\main'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] �s���Q�ڡC: 'C:\\Users\\HP\\AppData\\Local\\Packages\\sandbox.{2d2cf436-19d8-4d39-b496-4824e05c455f}\\AC\\Temp\\tmpdu_f7vo_'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\code\senior_AI\tests\test_segmentation_expansion.py", line 58, in test_original_map_alias_and_training_boundary_rejected
+    with tempfile.TemporaryDirectory() as folder:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] �s���Q�ڡC: 'C:\\Users\\HP\\AppData\\Local\\Packages\\sandbox.{2d2cf436-19d8-4d39-b496-4824e05c455f}\\AC\\Temp\\tmpdu_f7vo_'
+
+======================================================================
+ERROR: test_probe_and_unreviewed_acquisition_cannot_train (test_segmentation_expansion.SegmentationExpansionTests.test_probe_and_unreviewed_acquisition_cannot_train)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\code\senior_AI\tests\test_segmentation_expansion.py", line 51, in test_probe_and_unreviewed_acquisition_cannot_train
+    root,main=self.fixture(Path(folder));p=root/'Town06/report.json';r=json.loads(p.read_text());r['probe_only']=True;write(p,r)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\code\senior_AI\tests\test_segmentation_expansion.py", line 19, in fixture
+    write(main/'rig.json',rig);write(main/'plan.json',{'scenes':[{'town':'Town04_Opt'}],'maps':{'Town04':{'opendrive_sha256':'original'}}});write(main/'audit.json',{'status':'passed'})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\code\senior_AI\tests\test_segmentation_expansion.py", line 13, in write
+    path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(value),encoding='utf-8')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] �s���Q�ڡC: 'C:\\Users\\HP\\AppData\\Local\\Packages\\sandbox.{2d2cf436-19d8-4d39-b496-4824e05c455f}\\AC\\Temp\\tmp7maqtd8o\\main'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] �s���Q�ڡC: 'C:\\Users\\HP\\AppData\\Local\\Packages\\sandbox.{2d2cf436-19d8-4d39-b496-4824e05c455f}\\AC\\Temp\\tmp7maqtd8o'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\code\senior_AI\tests\test_segmentation_expansion.py", line 50, in test_probe_and_unreviewed_acquisition_cannot_train
+    with tempfile.TemporaryDirectory() as folder:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] �s���Q�ڡC: 'C:\\Users\\HP\\AppData\\Local\\Packages\\sandbox.{2d2cf436-19d8-4d39-b496-4824e05c455f}\\AC\\Temp\\tmp7maqtd8o'
+
+----------------------------------------------------------------------
+Ran 151 tests in 14.627s
+
+FAILED (errors=3, skipped=3)

@@ -1,0 +1,5097 @@
+{
+  "checkpoint_sha256": "ec1427214d5fc3e51b9bbb2fed652fa762e97edeb34cfc23a989bdc879c8575f",
+  "validation_frames_sha256": "23fca48988331744cb57689f5b4d041cc54d7eb39cf224cf66dd1c432e4de550",
+  "integrity_report_sha256": "5ad0d9614df3f8a919b16f9cdd0b73fb3f120aadf8bbc05b5386dce338768899",
+  "tool_sha256": "5cc1fc4a6504d54483a920f1019ef5839344966141ebca6288dc962104c820cd",
+  "scope": "Saved original validation GPU predictions only; no new inference or heldout. Biased diagnostic selection; nearest-neighbor zooms are display only. Not yet human visual approval.",
+  "display_score_threshold": 0.5,
+  "cases": [
+    {
+      "rank": 0,
+      "index": 1510,
+      "sample": {
+        "scene_id": "town04-01",
+        "group_id": "town04-pedestrian-route-01",
+        "camera": "left",
+        "frame": 247005,
+        "rgb": "inputs/rgb/town04-01/left/00247005.png"
+      },
+      "selection_reasons": [
+        "worst supported class recall/car"
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "F1": 0.0,
+        "per_class": {
+          "car": {
+            "ground_truth_objects": 1,
+            "AP50": 0.0,
+            "AP50_95": 0.0,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "pedestrian": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bicycle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "motorcycle": {
+            "ground_truth_objects": 1,
+            "AP50": 0.0,
+            "AP50_95": 0.0,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "truck": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bus": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "traffic_light": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "temporary_obstacle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          }
+        }
+      },
+      "panel": "case-00.png",
+      "panel_sha256": "f813d5bc046394c2a40d79511d82c2f2b793bc143326552f5ef93e4e84ba90f9",
+      "display_only_zooms": []
+    },
+    {
+      "rank": 1,
+      "index": 1206,
+      "sample": {
+        "scene_id": "town04-01",
+        "group_id": "town04-pedestrian-route-01",
+        "camera": "left",
+        "frame": 246853,
+        "rgb": "inputs/rgb/town04-01/left/00246853.png"
+      },
+      "selection_reasons": [
+        "worst supported class recall/pedestrian"
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "F1": 0.0,
+        "per_class": {
+          "car": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "pedestrian": {
+            "ground_truth_objects": 1,
+            "AP50": 1.0,
+            "AP50_95": 0.7,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              }
+            }
+          },
+          "bicycle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "motorcycle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "truck": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bus": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "traffic_light": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 1,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "temporary_obstacle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 1,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          }
+        }
+      },
+      "panel": "case-01.png",
+      "panel_sha256": "3df6bea4be6e5cebd322daab28e2548bd121c44ad8b21ceab09dbe2379ba3e86",
+      "display_only_zooms": []
+    },
+    {
+      "rank": 2,
+      "index": 1382,
+      "sample": {
+        "scene_id": "town04-01",
+        "group_id": "town04-pedestrian-route-01",
+        "camera": "left",
+        "frame": 246941,
+        "rgb": "inputs/rgb/town04-01/left/00246941.png"
+      },
+      "selection_reasons": [
+        "worst supported class recall/bicycle",
+        "worst supported class recall/motorcycle"
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 3,
+        "F1": 0.0,
+        "per_class": {
+          "car": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "pedestrian": {
+            "ground_truth_objects": 1,
+            "AP50": 0.0,
+            "AP50_95": 0.0,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 1,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bicycle": {
+            "ground_truth_objects": 1,
+            "AP50": 0.0,
+            "AP50_95": 0.0,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              }
+            }
+          },
+          "motorcycle": {
+            "ground_truth_objects": 1,
+            "AP50": 1.0,
+            "AP50_95": 0.6,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              }
+            }
+          },
+          "truck": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bus": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "traffic_light": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "temporary_obstacle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 1,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          }
+        }
+      },
+      "panel": "case-02.png",
+      "panel_sha256": "ac0b4acb0842a2b6d714055ca124db87ab70e37f1f09824f85e6cf3494136c24",
+      "display_only_zooms": [
+        {
+          "path": "case-02-bike-0-display-zoom.png",
+          "sha256": "50bbeb0d0e258063dc7e45b681d196cae117182ac93c44584feb2b4d7c46d78b",
+          "GT_box": [
+            230.0,
+            189.0,
+            259.0,
+            246.0
+          ],
+          "source_crop_xyxy": [
+            212,
+            185,
+            276,
+            249
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "index": 2206,
+      "sample": {
+        "scene_id": "town04-01",
+        "group_id": "town04-pedestrian-route-01",
+        "camera": "left",
+        "frame": 247353,
+        "rgb": "inputs/rgb/town04-01/left/00247353.png"
+      },
+      "selection_reasons": [
+        "worst supported class recall/truck"
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 1,
+        "F1": 0.0,
+        "per_class": {
+          "car": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "pedestrian": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bicycle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "motorcycle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "truck": {
+            "ground_truth_objects": 1,
+            "AP50": 0.0,
+            "AP50_95": 0.0,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 2,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              }
+            }
+          },
+          "bus": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 1,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "traffic_light": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "temporary_obstacle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          }
+        }
+      },
+      "panel": "case-03.png",
+      "panel_sha256": "f581a9480921966f3bd83336ca1eb4de5987f5cb2d0aaf0461c0475b03bf0c99",
+      "display_only_zooms": []
+    },
+    {
+      "rank": 4,
+      "index": 2439,
+      "sample": {
+        "scene_id": "town04-02",
+        "group_id": "town04-route-02",
+        "camera": "front_left",
+        "frame": 247524,
+        "rgb": "inputs/rgb/town04-02/front_left/00247524.png"
+      },
+      "selection_reasons": [
+        "worst supported class recall/bus"
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 3,
+        "F1": 0.0,
+        "per_class": {
+          "car": {
+            "ground_truth_objects": 1,
+            "AP50": 1.0,
+            "AP50_95": 0.6,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "pedestrian": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bicycle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "motorcycle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "truck": {
+            "ground_truth_objects": 1,
+            "AP50": 0.0,
+            "AP50_95": 0.0,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 1,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bus": {
+            "ground_truth_objects": 1,
+            "AP50": 0.0,
+            "AP50_95": 0.0,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "traffic_light": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "temporary_obstacle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          }
+        }
+      },
+      "panel": "case-04.png",
+      "panel_sha256": "7e3cb48a0c8da4c8ddc25ac1f36ca1b2e3ac456f9e014623b1c019b794cc323e",
+      "display_only_zooms": []
+    },
+    {
+      "rank": 5,
+      "index": 1,
+      "sample": {
+        "scene_id": "town04-00",
+        "group_id": "town04-route-00",
+        "camera": "front_right",
+        "frame": 246198,
+        "rgb": "inputs/rgb/town04-00/front_right/00246198.png"
+      },
+      "selection_reasons": [
+        "worst supported class recall/traffic_light",
+        "worst whole-frame F1/town04-00"
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "F1": 0.0,
+        "per_class": {
+          "car": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "pedestrian": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bicycle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "motorcycle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "truck": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bus": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "traffic_light": {
+            "ground_truth_objects": 1,
+            "AP50": 0.0,
+            "AP50_95": 0.0,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              }
+            }
+          },
+          "temporary_obstacle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          }
+        }
+      },
+      "panel": "case-05.png",
+      "panel_sha256": "e0bd2904a1cc0d7c3f996ec27217b39f814646198fe2eb71778267397b042f73",
+      "display_only_zooms": []
+    },
+    {
+      "rank": 6,
+      "index": 1237,
+      "sample": {
+        "scene_id": "town04-01",
+        "group_id": "town04-pedestrian-route-01",
+        "camera": "rear_left",
+        "frame": 246869,
+        "rgb": "inputs/rgb/town04-01/rear_left/00246869.png"
+      },
+      "selection_reasons": [
+        "worst supported class recall/temporary_obstacle"
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "F1": 0.0,
+        "per_class": {
+          "car": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "pedestrian": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bicycle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "motorcycle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "truck": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bus": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "traffic_light": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "temporary_obstacle": {
+            "ground_truth_objects": 1,
+            "AP50": 1.0,
+            "AP50_95": 0.3,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          }
+        }
+      },
+      "panel": "case-06.png",
+      "panel_sha256": "176f1014d9a2384797b9d50b2beb11392ee6c485a1b89a7aaf84eff2ce3e94f8",
+      "display_only_zooms": []
+    },
+    {
+      "rank": 7,
+      "index": 209,
+      "sample": {
+        "scene_id": "town04-00",
+        "group_id": "town04-route-00",
+        "camera": "front_right",
+        "frame": 246302,
+        "rgb": "inputs/rgb/town04-00/front_right/00246302.png"
+      },
+      "selection_reasons": [
+        "most bicycle misses/town04-00",
+        "small bicycle missed/town04-00"
+      ],
+      "counts": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 4,
+        "F1": 0.4444444444444444,
+        "per_class": {
+          "car": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "pedestrian": {
+            "ground_truth_objects": 1,
+            "AP50": 1.0,
+            "AP50_95": 0.8,
+            "precision_at_score": 1.0,
+            "recall_at_score": 1.0,
+            "true_positives": 1,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              }
+            }
+          },
+          "bicycle": {
+            "ground_truth_objects": 1,
+            "AP50": 0.0,
+            "AP50_95": 0.0,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "motorcycle": {
+            "ground_truth_objects": 1,
+            "AP50": 0.0,
+            "AP50_95": 0.0,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "truck": {
+            "ground_truth_objects": 1,
+            "AP50": 1.0,
+            "AP50_95": 0.7,
+            "precision_at_score": 1.0,
+            "recall_at_score": 1.0,
+            "true_positives": 1,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bus": {
+            "ground_truth_objects": 1,
+            "AP50": 0.0,
+            "AP50_95": 0.0,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "traffic_light": {
+            "ground_truth_objects": 1,
+            "AP50": 0.0,
+            "AP50_95": 0.0,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 1,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              }
+            }
+          },
+          "temporary_obstacle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          }
+        }
+      },
+      "panel": "case-07.png",
+      "panel_sha256": "7d09a10fd3524b50e63d4cd103efc1172d00819a1f9c577a62ba6b2b00a12ffc",
+      "display_only_zooms": [
+        {
+          "path": "case-07-bike-0-display-zoom.png",
+          "sha256": "931938f1370318a19408a77f35640427e8b7f3b0d30fed6cd1b36cca1e668275",
+          "GT_box": [
+            0.0,
+            214.0,
+            6.0,
+            222.0
+          ],
+          "source_crop_xyxy": [
+            0,
+            186,
+            64,
+            250
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "index": 1203,
+      "sample": {
+        "scene_id": "town04-01",
+        "group_id": "town04-pedestrian-route-01",
+        "camera": "rear_right",
+        "frame": 246853,
+        "rgb": "inputs/rgb/town04-01/rear_right/00246853.png"
+      },
+      "selection_reasons": [
+        "worst whole-frame F1/town04-01"
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "F1": 0.0,
+        "per_class": {
+          "car": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "pedestrian": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bicycle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "motorcycle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "truck": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bus": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "traffic_light": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "temporary_obstacle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 1,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          }
+        }
+      },
+      "panel": "case-08.png",
+      "panel_sha256": "1a588d601b0ee44bb1e7e1b5a4d343ef377a60295dc58cc31592026f4fd0e7a9",
+      "display_only_zooms": []
+    },
+    {
+      "rank": 9,
+      "index": 1207,
+      "sample": {
+        "scene_id": "town04-01",
+        "group_id": "town04-pedestrian-route-01",
+        "camera": "front_left",
+        "frame": 246853,
+        "rgb": "inputs/rgb/town04-01/front_left/00246853.png"
+      },
+      "selection_reasons": [
+        "most bicycle misses/town04-01"
+      ],
+      "counts": {
+        "tp": 1,
+        "fp": 2,
+        "fn": 4,
+        "F1": 0.25,
+        "per_class": {
+          "car": {
+            "ground_truth_objects": 1,
+            "AP50": 0.0,
+            "AP50_95": 0.0,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              }
+            }
+          },
+          "pedestrian": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bicycle": {
+            "ground_truth_objects": 1,
+            "AP50": 1.0,
+            "AP50_95": 0.1,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              }
+            }
+          },
+          "motorcycle": {
+            "ground_truth_objects": 1,
+            "AP50": 0.0,
+            "AP50_95": 0.0,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 1,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              }
+            }
+          },
+          "truck": {
+            "ground_truth_objects": 1,
+            "AP50": 1.0,
+            "AP50_95": 0.3,
+            "precision_at_score": 0.5,
+            "recall_at_score": 1.0,
+            "true_positives": 1,
+            "false_positives": 1,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              }
+            }
+          },
+          "bus": {
+            "ground_truth_objects": 1,
+            "AP50": 1.0,
+            "AP50_95": 0.6,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              }
+            }
+          },
+          "traffic_light": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "temporary_obstacle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          }
+        }
+      },
+      "panel": "case-09.png",
+      "panel_sha256": "7d50b3f22daf847814fca7dd46230e8b399d810f2930ee733183878751f883dc",
+      "display_only_zooms": [
+        {
+          "path": "case-09-bike-0-display-zoom.png",
+          "sha256": "88902cda1d261af6fbba7224905991abb7e86987f52a421cecf411b53ea8cedb",
+          "GT_box": [
+            316.0,
+            183.0,
+            337.0,
+            241.0
+          ],
+          "source_crop_xyxy": [
+            294,
+            180,
+            358,
+            244
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "index": 2100,
+      "sample": {
+        "scene_id": "town04-01",
+        "group_id": "town04-pedestrian-route-01",
+        "camera": "rear",
+        "frame": 247301,
+        "rgb": "inputs/rgb/town04-01/rear/00247301.png"
+      },
+      "selection_reasons": [
+        "small bicycle missed/town04-01"
+      ],
+      "counts": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 2,
+        "F1": 0.6666666666666666,
+        "per_class": {
+          "car": {
+            "ground_truth_objects": 1,
+            "AP50": 1.0,
+            "AP50_95": 0.7,
+            "precision_at_score": 1.0,
+            "recall_at_score": 1.0,
+            "true_positives": 1,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              }
+            }
+          },
+          "pedestrian": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bicycle": {
+            "ground_truth_objects": 1,
+            "AP50": 0.0,
+            "AP50_95": 0.0,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              }
+            }
+          },
+          "motorcycle": {
+            "ground_truth_objects": 1,
+            "AP50": 0.0,
+            "AP50_95": 0.0,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              }
+            }
+          },
+          "truck": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bus": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "traffic_light": {
+            "ground_truth_objects": 1,
+            "AP50": 1.0,
+            "AP50_95": 0.7,
+            "precision_at_score": 1.0,
+            "recall_at_score": 1.0,
+            "true_positives": 1,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              }
+            }
+          },
+          "temporary_obstacle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          }
+        }
+      },
+      "panel": "case-10.png",
+      "panel_sha256": "65185a1b03048fc7934245f5f7a9f380ab89f1a662909903e86868ef3fe9f5ce",
+      "display_only_zooms": [
+        {
+          "path": "case-10-bike-0-display-zoom.png",
+          "sha256": "60a90e36dd1c7da8a3817a109f98d16a7f707285e7352e3062adf44d78c0241e",
+          "GT_box": [
+            381.0,
+            190.0,
+            392.0,
+            200.0
+          ],
+          "source_crop_xyxy": [
+            354,
+            163,
+            418,
+            227
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "index": 2429,
+      "sample": {
+        "scene_id": "town04-02",
+        "group_id": "town04-route-02",
+        "camera": "rear_left",
+        "frame": 247520,
+        "rgb": "inputs/rgb/town04-02/rear_left/00247520.png"
+      },
+      "selection_reasons": [
+        "worst whole-frame F1/town04-02"
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "F1": 0.0,
+        "per_class": {
+          "car": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 1,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "pedestrian": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bicycle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "motorcycle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "truck": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bus": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "traffic_light": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "temporary_obstacle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          }
+        }
+      },
+      "panel": "case-11.png",
+      "panel_sha256": "c5f45e579e44f95fac88e62aaaa71c22630d7425d30a8c9569d4f92833d0f507",
+      "display_only_zooms": []
+    },
+    {
+      "rank": 12,
+      "index": 2520,
+      "sample": {
+        "scene_id": "town04-02",
+        "group_id": "town04-route-02",
+        "camera": "front",
+        "frame": 247568,
+        "rgb": "inputs/rgb/town04-02/front/00247568.png"
+      },
+      "selection_reasons": [
+        "most bicycle misses/town04-02"
+      ],
+      "counts": {
+        "tp": 4,
+        "fp": 3,
+        "fn": 2,
+        "F1": 0.6153846153846154,
+        "per_class": {
+          "car": {
+            "ground_truth_objects": 1,
+            "AP50": 1.0,
+            "AP50_95": 0.7,
+            "precision_at_score": 1.0,
+            "recall_at_score": 1.0,
+            "true_positives": 1,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              }
+            }
+          },
+          "pedestrian": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 1,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bicycle": {
+            "ground_truth_objects": 1,
+            "AP50": 1.0,
+            "AP50_95": 0.3,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "motorcycle": {
+            "ground_truth_objects": 1,
+            "AP50": 1.0,
+            "AP50_95": 1.0,
+            "precision_at_score": 1.0,
+            "recall_at_score": 1.0,
+            "true_positives": 1,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              }
+            }
+          },
+          "truck": {
+            "ground_truth_objects": 1,
+            "AP50": 0.0,
+            "AP50_95": 0.0,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 1,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              }
+            }
+          },
+          "bus": {
+            "ground_truth_objects": 1,
+            "AP50": 1.0,
+            "AP50_95": 0.9,
+            "precision_at_score": 0.5,
+            "recall_at_score": 1.0,
+            "true_positives": 1,
+            "false_positives": 1,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              }
+            }
+          },
+          "traffic_light": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "temporary_obstacle": {
+            "ground_truth_objects": 1,
+            "AP50": 1.0,
+            "AP50_95": 0.4,
+            "precision_at_score": 1.0,
+            "recall_at_score": 1.0,
+            "true_positives": 1,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              }
+            }
+          }
+        }
+      },
+      "panel": "case-12.png",
+      "panel_sha256": "daa52c0fdd9e60f8ec2a873a1abd2f77a2918330f0ce87454eae3e12eb5d9ea2",
+      "display_only_zooms": [
+        {
+          "path": "case-12-bike-0-display-zoom.png",
+          "sha256": "de7f244bfff2d62a96570e88828dddbbbfc903c96fd6df5e5832dfa13eda9e02",
+          "GT_box": [
+            599.0,
+            213.0,
+            640.0,
+            340.0
+          ],
+          "source_crop_xyxy": [
+            576,
+            244,
+            640,
+            308
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "index": 3204,
+      "sample": {
+        "scene_id": "town04-02",
+        "group_id": "town04-route-02",
+        "camera": "rear",
+        "frame": 247908,
+        "rgb": "inputs/rgb/town04-02/rear/00247908.png"
+      },
+      "selection_reasons": [
+        "small bicycle missed/town04-02"
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "F1": 0.0,
+        "per_class": {
+          "car": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "pedestrian": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 1,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bicycle": {
+            "ground_truth_objects": 1,
+            "AP50": 0.0,
+            "AP50_95": 0.0,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              }
+            }
+          },
+          "motorcycle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "truck": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bus": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "traffic_light": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "temporary_obstacle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 1,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          }
+        }
+      },
+      "panel": "case-13.png",
+      "panel_sha256": "0ebb33850e23fddbbdf41e715c4a05b5172551f1ef544e285c20cc48661fba0b",
+      "display_only_zooms": [
+        {
+          "path": "case-13-bike-0-display-zoom.png",
+          "sha256": "ddb03b7807af4627b11cb56e277daeff76ce64dd64f1cf6a72637693353c8de4",
+          "GT_box": [
+            286.0,
+            181.0,
+            294.0,
+            191.0
+          ],
+          "source_crop_xyxy": [
+            258,
+            154,
+            322,
+            218
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "index": 2576,
+      "sample": {
+        "scene_id": "town04-02",
+        "group_id": "town04-route-02",
+        "camera": "front",
+        "frame": 247596,
+        "rgb": "inputs/rgb/town04-02/front/00247596.png"
+      },
+      "selection_reasons": [
+        "bicycle false positives without bicycle GT"
+      ],
+      "counts": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 1,
+        "F1": 0.8,
+        "per_class": {
+          "car": {
+            "ground_truth_objects": 1,
+            "AP50": 1.0,
+            "AP50_95": 0.9,
+            "precision_at_score": 1.0,
+            "recall_at_score": 1.0,
+            "true_positives": 1,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              }
+            }
+          },
+          "pedestrian": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "bicycle": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 1,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "motorcycle": {
+            "ground_truth_objects": 1,
+            "AP50": 1.0,
+            "AP50_95": 0.9,
+            "precision_at_score": 1.0,
+            "recall_at_score": 1.0,
+            "true_positives": 1,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "truck": {
+            "ground_truth_objects": 1,
+            "AP50": 1.0,
+            "AP50_95": 0.7,
+            "precision_at_score": 1.0,
+            "recall_at_score": 1.0,
+            "true_positives": 1,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              }
+            }
+          },
+          "bus": {
+            "ground_truth_objects": 1,
+            "AP50": 1.0,
+            "AP50_95": 0.7,
+            "precision_at_score": 1.0,
+            "recall_at_score": 1.0,
+            "true_positives": 1,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 1,
+                "recall": 1.0
+              }
+            }
+          },
+          "traffic_light": {
+            "ground_truth_objects": 0,
+            "AP50": null,
+            "AP50_95": null,
+            "precision_at_score": 0.0,
+            "recall_at_score": null,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          },
+          "temporary_obstacle": {
+            "ground_truth_objects": 1,
+            "AP50": 1.0,
+            "AP50_95": 0.1,
+            "precision_at_score": 0.0,
+            "recall_at_score": 0.0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 1,
+            "ignored_predictions_all_scores": 0,
+            "recall_strata_IoU50": {
+              "small_lt_32_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "medium_32_to_96_squared": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "large_ge_96_squared": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              },
+              "truncated": {
+                "ground_truth": 1,
+                "matched_at_score": 0,
+                "recall": 0.0
+              },
+              "not_truncated": {
+                "ground_truth": 0,
+                "matched_at_score": 0,
+                "recall": null
+              }
+            }
+          }
+        }
+      },
+      "panel": "case-14.png",
+      "panel_sha256": "761b889186e0c71d68fac1ef05b6589a3c83177f72d8f84a66d7fb9937bd8f2e",
+      "display_only_zooms": []
+    }
+  ],
+  "pages": [
+    {
+      "path": "page-00.png",
+      "sha256": "1246a9045c0c6b29feab54815a081a32d3051a1a9b2abaaa4255b17f776a626f",
+      "case_ranks": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "path": "page-01.png",
+      "sha256": "17a4e5fde2e368aa9ac96d732380f54cd289b236af6dece6349608e3b5183704",
+      "case_ranks": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "path": "page-02.png",
+      "sha256": "264feddbfb9f2ae5aa6f80b2a0b551a8f39100e24be23877735f50839be9ca97",
+      "case_ranks": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "path": "page-03.png",
+      "sha256": "52fda04ec28fd312f40f8609730c4453b13bf3e83fb75052b58efd6defb5b724",
+      "case_ranks": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "path": "page-04.png",
+      "sha256": "246af372bbfb0813889dbb4577b274deccde8fb8fa45147cbce04e6019d6a032",
+      "case_ranks": [
+        12,
+        13,
+        14
+      ]
+    }
+  ]
+}

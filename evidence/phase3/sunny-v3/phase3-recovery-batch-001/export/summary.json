@@ -1,0 +1,65 @@
+{
+  "scope": "ClearNoon ideal simulation only",
+  "models": {
+    "detection": {
+      "run": "C:/code/senior_AI/artifacts/runs/sunny-detection-v5-001",
+      "checkpoint": "C:/code/senior_AI/artifacts/runs/sunny-detection-v5-001/best.pt",
+      "checkpoint_sha256": "ec1427214d5fc3e51b9bbb2fed652fa762e97edeb34cfc23a989bdc879c8575f",
+      "training_status": "completed",
+      "heldout_status": "not_evaluated"
+    },
+    "segmentation": {
+      "run": "C:/code/senior_AI/artifacts/runs/sunny-segmentation-v5-001",
+      "checkpoint": "C:/code/senior_AI/artifacts/runs/sunny-segmentation-v5-001/best.pt",
+      "checkpoint_sha256": "3fe7bd08d885e481b7435fdf466945f142f8323447cca46bf31c32455835a53f",
+      "training_status": "completed",
+      "heldout_status": "not_evaluated",
+      "training_supplement": {
+        "root": "C:\\code\\senior_AI\\data\\segmentation-scenery-v1-003",
+        "audit_sha256": "06703e9bf4d88f3788f1cab169cd2eb04c9b2b4ee165300bdcbca7a0919ca68f",
+        "review_sha256": "607b9c5cc24710dfc582085abb22003d93eb6dd363c06babf2bd92e2d7c3dd54",
+        "plan_sha256": "8d2cab60f1287a195e77c4a84435db53070e99360c9ed10399d75dd25e657350",
+        "views": 1024,
+        "groups": 128,
+        "segmentation_pixels": [
+          120095787,
+          53649065,
+          29090967,
+          0,
+          0,
+          110748,
+          11482,
+          0,
+          0,
+          0,
+          1810512,
+          116028,
+          10162284,
+          2774763,
+          4485071,
+          0,
+          13078119
+        ],
+        "scope": "Stationary virtual rig anchors with no ego/NPC. Not dynamic episodes, collision-free routes, object detection or phase training. Nearby anchors/views are correlated.",
+        "sampling_repeats": 4
+      }
+    },
+    "light_state": {
+      "run": "C:/code/senior_AI/artifacts/runs/sunny-light-state-v1-003",
+      "checkpoint": "C:/code/senior_AI/artifacts/runs/sunny-light-state-v1-003/best.pt",
+      "checkpoint_sha256": "c2709f15f14b193b68d0cb35d5cec37713f5e1015dff60f42885b85afb5f0846",
+      "training_status": "completed",
+      "heldout_status": "not_evaluated"
+    }
+  },
+  "phase3_complete": false,
+  "source_sha256": "1681c29e6e20fa94e7f53735eb3df1a94a8cb144370de9dcb4e4b01b55678a63",
+  "data_audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+  "data_review_sha256": "2316ef3a7a5ed2c31a7e983957953c90846b26e670a41323532244af1f5976ee",
+  "rgb_only_demo": true,
+  "benchmark_files": [
+    "detection-benchmark.json",
+    "segmentation-benchmark.json",
+    "integrated-benchmark.json"
+  ]
+}

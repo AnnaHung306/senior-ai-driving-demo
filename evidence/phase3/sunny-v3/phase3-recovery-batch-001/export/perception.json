@@ -1,0 +1,675 @@
+{
+  "input_manifest_sha256": "e767160593c437acf7e4b33bb06eafce049d1a82d978e38cca17937f7229b7ac",
+  "input_RGB_sha256": {
+    "front": "d70901a2a22eb3417f0749887437a08a9e20fb4559a596357e38c19de3b0fed2",
+    "front_right": "ee41f02480dd0b76dcbc00eb944a0b1aa1171622fbcf13f3bb2e167d2cb155dd",
+    "right": "7758bd334c8d165b35de8af647582de3d8e8231b1b1f9fb87e3b559fcb647c36",
+    "rear_right": "6f40610355e33553c42de724556599e03526e5538ae3fd358f5e5801c3eeac87",
+    "rear": "2870ca2d3601b9d48f96aa0f3267a5d70af6d82f77595b3b1bc8d9a9034af64a",
+    "rear_left": "0921fa421cbc64742290b48c470831b51f6e29d0f8e7d618ff5584f1fdd0a737",
+    "left": "0d2cd609d105e2423fac4fe53f05fabae378f29fea359cdc8e1ed38035cb8f86",
+    "front_left": "78eded91256bcf66713cc10e0e203ed52ec248c564cc5527ea2ea224af0ad9f1"
+  },
+  "input_fingerprint_source_sha256": "71b41352e67811a1467bd8840cb6b72d06831c06f48e8a08532df21d723e388c",
+  "schema_version": 1,
+  "source": "learned_prediction",
+  "model_inputs": "RGB_only",
+  "frame": 246498,
+  "timestamp_s": 21.318775989115238,
+  "detector_sha256": "ec1427214d5fc3e51b9bbb2fed652fa762e97edeb34cfc23a989bdc879c8575f",
+  "segmentation_sha256": "3fe7bd08d885e481b7435fdf466945f142f8323447cca46bf31c32455835a53f",
+  "phase_sha256": "c2709f15f14b193b68d0cb35d5cec37713f5e1015dff60f42885b85afb5f0846",
+  "segmentation_classes": [
+    "other_annotated",
+    "road",
+    "sidewalk",
+    "pedestrian",
+    "rider",
+    "car",
+    "truck",
+    "bus",
+    "motorcycle",
+    "bicycle",
+    "road_line",
+    "traffic_light",
+    "wall",
+    "fence",
+    "pole",
+    "temporary_obstacle",
+    "terrain_or_ground"
+  ],
+  "display_detection_score_threshold": 0.5,
+  "confidence_definition": "Detector score and phase/semantic maximum softmax are uncalibrated",
+  "cameras": {
+    "front": {
+      "objects": [
+        {
+          "bbox_xyxy": [
+            315.38665771484375,
+            187.1679229736328,
+            360.5159912109375,
+            278.9857177734375
+          ],
+          "class_id": 3,
+          "class_name": "bicycle",
+          "score": 0.9999468326568604
+        },
+        {
+          "bbox_xyxy": [
+            244.7559814453125,
+            99.22224426269531,
+            250.55807495117188,
+            111.33615112304688
+          ],
+          "class_id": 7,
+          "class_name": "traffic_light",
+          "score": 0.9999219179153442,
+          "light_state": "unknown_or_unobservable",
+          "phase_softmax_uncalibrated": 0.9985595345497131
+        },
+        {
+          "bbox_xyxy": [
+            463.7071838378906,
+            172.48373413085938,
+            481.2666931152344,
+            220.39303588867188
+          ],
+          "class_id": 2,
+          "class_name": "pedestrian",
+          "score": 0.9988359808921814
+        },
+        {
+          "bbox_xyxy": [
+            284.175048828125,
+            165.75001525878906,
+            330.3612060546875,
+            191.2162628173828
+          ],
+          "class_id": 6,
+          "class_name": "bus",
+          "score": 0.980924665927887
+        },
+        {
+          "bbox_xyxy": [
+            322.416748046875,
+            135.3517608642578,
+            325.9901123046875,
+            145.2178192138672
+          ],
+          "class_id": 7,
+          "class_name": "traffic_light",
+          "score": 0.8681901693344116,
+          "light_state": "red",
+          "phase_softmax_uncalibrated": 0.9949924349784851
+        },
+        {
+          "bbox_xyxy": [
+            325.25347900390625,
+            168.59718322753906,
+            355.291259765625,
+            191.95045471191406
+          ],
+          "class_id": 5,
+          "class_name": "truck",
+          "score": 0.517317533493042
+        },
+        {
+          "bbox_xyxy": [
+            281.33966064453125,
+            166.4561767578125,
+            353.46356201171875,
+            193.07534790039062
+          ],
+          "class_id": 5,
+          "class_name": "truck",
+          "score": 0.4113190770149231
+        },
+        {
+          "bbox_xyxy": [
+            267.97991943359375,
+            178.49891662597656,
+            336.47015380859375,
+            194.5977020263672
+          ],
+          "class_id": 1,
+          "class_name": "car",
+          "score": 0.31402045488357544
+        },
+        {
+          "bbox_xyxy": [
+            327.7685241699219,
+            166.82675170898438,
+            339.2309875488281,
+            192.84967041015625
+          ],
+          "class_id": 5,
+          "class_name": "truck",
+          "score": 0.10060229152441025
+        },
+        {
+          "bbox_xyxy": [
+            423.22955322265625,
+            118.27155303955078,
+            428.020751953125,
+            130.32447814941406
+          ],
+          "class_id": 7,
+          "class_name": "traffic_light",
+          "score": 0.09740184247493744
+        },
+        {
+          "bbox_xyxy": [
+            279.88555908203125,
+            179.50021362304688,
+            333.9757080078125,
+            194.0963134765625
+          ],
+          "class_id": 5,
+          "class_name": "truck",
+          "score": 0.012234612368047237
+        },
+        {
+          "bbox_xyxy": [
+            283.904296875,
+            169.00466918945312,
+            333.700439453125,
+            195.87591552734375
+          ],
+          "class_id": 1,
+          "class_name": "car",
+          "score": 0.012144281528890133
+        }
+      ],
+      "semantic_ids": "front/semantic_ids.png",
+      "visible_margin": "front/visible_margin.png",
+      "confidence": "front/semantic_confidence_uncalibrated.npy"
+    },
+    "front_right": {
+      "objects": [
+        {
+          "bbox_xyxy": [
+            0.0,
+            161.2560272216797,
+            45.283592224121094,
+            199.9658660888672
+          ],
+          "class_id": 5,
+          "class_name": "truck",
+          "score": 0.9997482895851135
+        },
+        {
+          "bbox_xyxy": [
+            175.27345275878906,
+            172.74798583984375,
+            193.2158966064453,
+            218.88006591796875
+          ],
+          "class_id": 2,
+          "class_name": "pedestrian",
+          "score": 0.9971413016319275
+        },
+        {
+          "bbox_xyxy": [
+            144.10427856445312,
+            114.3602523803711,
+            149.74380493164062,
+            127.16730499267578
+          ],
+          "class_id": 7,
+          "class_name": "traffic_light",
+          "score": 0.9260103106498718,
+          "light_state": "red",
+          "phase_softmax_uncalibrated": 0.9441064596176147
+        },
+        {
+          "bbox_xyxy": [
+            0.21365737915039062,
+            200.4067840576172,
+            13.607521057128906,
+            245.19117736816406
+          ],
+          "class_id": 3,
+          "class_name": "bicycle",
+          "score": 0.5511343479156494
+        },
+        {
+          "bbox_xyxy": [
+            0.0,
+            202.38133239746094,
+            10.027965545654297,
+            232.89161682128906
+          ],
+          "class_id": 3,
+          "class_name": "bicycle",
+          "score": 0.34359174966812134
+        },
+        {
+          "bbox_xyxy": [
+            2.3751437664031982,
+            197.79185485839844,
+            8.418617248535156,
+            256.9227294921875
+          ],
+          "class_id": 3,
+          "class_name": "bicycle",
+          "score": 0.3121945559978485
+        },
+        {
+          "bbox_xyxy": [
+            0.009310722351074219,
+            206.5888214111328,
+            12.016048431396484,
+            231.87440490722656
+          ],
+          "class_id": 4,
+          "class_name": "motorcycle",
+          "score": 0.2602735459804535
+        },
+        {
+          "bbox_xyxy": [
+            0.0,
+            204.32177734375,
+            6.50432825088501,
+            232.7255859375
+          ],
+          "class_id": 7,
+          "class_name": "traffic_light",
+          "score": 0.17405028641223907
+        },
+        {
+          "bbox_xyxy": [
+            0.12260603904724121,
+            202.47023010253906,
+            7.719483375549316,
+            262.3255310058594
+          ],
+          "class_id": 2,
+          "class_name": "pedestrian",
+          "score": 0.16162584722042084
+        },
+        {
+          "bbox_xyxy": [
+            0.7369997501373291,
+            206.03286743164062,
+            7.857631683349609,
+            239.29156494140625
+          ],
+          "class_id": 4,
+          "class_name": "motorcycle",
+          "score": 0.14270271360874176
+        },
+        {
+          "bbox_xyxy": [
+            0.0,
+            206.8380889892578,
+            18.94721221923828,
+            223.48057556152344
+          ],
+          "class_id": 3,
+          "class_name": "bicycle",
+          "score": 0.12934067845344543
+        },
+        {
+          "bbox_xyxy": [
+            0.0825035572052002,
+            211.76718139648438,
+            6.839310646057129,
+            230.20132446289062
+          ],
+          "class_id": 2,
+          "class_name": "pedestrian",
+          "score": 0.07420393079519272
+        },
+        {
+          "bbox_xyxy": [
+            0.0,
+            203.6678466796875,
+            8.841493606567383,
+            233.92404174804688
+          ],
+          "class_id": 2,
+          "class_name": "pedestrian",
+          "score": 0.04236053302884102
+        },
+        {
+          "bbox_xyxy": [
+            0.0,
+            218.8419952392578,
+            6.441850662231445,
+            230.97447204589844
+          ],
+          "class_id": 3,
+          "class_name": "bicycle",
+          "score": 0.0374489352107048
+        },
+        {
+          "bbox_xyxy": [
+            2.895573139190674,
+            203.74490356445312,
+            9.484272003173828,
+            258.8761291503906
+          ],
+          "class_id": 2,
+          "class_name": "pedestrian",
+          "score": 0.03724036365747452
+        },
+        {
+          "bbox_xyxy": [
+            1.1457061767578125,
+            166.5525360107422,
+            17.181859970092773,
+            247.0532989501953
+          ],
+          "class_id": 3,
+          "class_name": "bicycle",
+          "score": 0.022702215239405632
+        },
+        {
+          "bbox_xyxy": [
+            3.785036087036133,
+            178.5765380859375,
+            41.26631164550781,
+            200.12567138671875
+          ],
+          "class_id": 5,
+          "class_name": "truck",
+          "score": 0.02173646353185177
+        },
+        {
+          "bbox_xyxy": [
+            0.2301473617553711,
+            205.31784057617188,
+            6.19924783706665,
+            235.86880493164062
+          ],
+          "class_id": 5,
+          "class_name": "truck",
+          "score": 0.02159597910940647
+        },
+        {
+          "bbox_xyxy": [
+            0.3354463577270508,
+            201.24899291992188,
+            12.641098976135254,
+            247.40713500976562
+          ],
+          "class_id": 2,
+          "class_name": "pedestrian",
+          "score": 0.02065172791481018
+        },
+        {
+          "bbox_xyxy": [
+            0.44684934616088867,
+            202.28237915039062,
+            10.336555480957031,
+            250.28872680664062
+          ],
+          "class_id": 4,
+          "class_name": "motorcycle",
+          "score": 0.016849316656589508
+        },
+        {
+          "bbox_xyxy": [
+            0.44174814224243164,
+            203.447998046875,
+            12.573299407958984,
+            230.06552124023438
+          ],
+          "class_id": 7,
+          "class_name": "traffic_light",
+          "score": 0.015168462879955769
+        },
+        {
+          "bbox_xyxy": [
+            0.3138704299926758,
+            204.11392211914062,
+            13.768397331237793,
+            244.89007568359375
+          ],
+          "class_id": 5,
+          "class_name": "truck",
+          "score": 0.011820968240499496
+        },
+        {
+          "bbox_xyxy": [
+            0.0,
+            204.25051879882812,
+            8.85354995727539,
+            231.85208129882812
+          ],
+          "class_id": 8,
+          "class_name": "temporary_obstacle",
+          "score": 0.010958574712276459
+        }
+      ],
+      "semantic_ids": "front_right/semantic_ids.png",
+      "visible_margin": "front_right/visible_margin.png",
+      "confidence": "front_right/semantic_confidence_uncalibrated.npy"
+    },
+    "right": {
+      "objects": [],
+      "semantic_ids": "right/semantic_ids.png",
+      "visible_margin": "right/visible_margin.png",
+      "confidence": "right/semantic_confidence_uncalibrated.npy"
+    },
+    "rear_right": {
+      "objects": [],
+      "semantic_ids": "rear_right/semantic_ids.png",
+      "visible_margin": "rear_right/visible_margin.png",
+      "confidence": "rear_right/semantic_confidence_uncalibrated.npy"
+    },
+    "rear": {
+      "objects": [
+        {
+          "bbox_xyxy": [
+            602.8659057617188,
+            169.47315979003906,
+            634.7025756835938,
+            243.3839569091797
+          ],
+          "class_id": 2,
+          "class_name": "pedestrian",
+          "score": 0.999707043170929
+        },
+        {
+          "bbox_xyxy": [
+            325.0590515136719,
+            105.63842010498047,
+            329.6033630371094,
+            117.52494049072266
+          ],
+          "class_id": 7,
+          "class_name": "traffic_light",
+          "score": 0.9934865236282349,
+          "light_state": "unknown_or_unobservable",
+          "phase_softmax_uncalibrated": 0.9981880784034729
+        },
+        {
+          "bbox_xyxy": [
+            354.83172607421875,
+            137.20327758789062,
+            358.56243896484375,
+            146.42462158203125
+          ],
+          "class_id": 7,
+          "class_name": "traffic_light",
+          "score": 0.03260280564427376
+        },
+        {
+          "bbox_xyxy": [
+            532.5431518554688,
+            199.88088989257812,
+            538.7044067382812,
+            219.28656005859375
+          ],
+          "class_id": 2,
+          "class_name": "pedestrian",
+          "score": 0.02970466949045658
+        }
+      ],
+      "semantic_ids": "rear/semantic_ids.png",
+      "visible_margin": "rear/visible_margin.png",
+      "confidence": "rear/semantic_confidence_uncalibrated.npy"
+    },
+    "rear_left": {
+      "objects": [
+        {
+          "bbox_xyxy": [
+            277.51239013671875,
+            168.98179626464844,
+            293.5626220703125,
+            226.44374084472656
+          ],
+          "class_id": 2,
+          "class_name": "pedestrian",
+          "score": 0.996711015701294
+        },
+        {
+          "bbox_xyxy": [
+            53.54700469970703,
+            124.9606704711914,
+            58.43128967285156,
+            137.01925659179688
+          ],
+          "class_id": 7,
+          "class_name": "traffic_light",
+          "score": 0.9261975288391113,
+          "light_state": "green",
+          "phase_softmax_uncalibrated": 0.9956963062286377
+        },
+        {
+          "bbox_xyxy": [
+            131.33998107910156,
+            121.63221740722656,
+            136.1917266845703,
+            133.0927734375
+          ],
+          "class_id": 7,
+          "class_name": "traffic_light",
+          "score": 0.2251262217760086
+        },
+        {
+          "bbox_xyxy": [
+            62.86817169189453,
+            173.99789428710938,
+            71.34529876708984,
+            190.112060546875
+          ],
+          "class_id": 2,
+          "class_name": "pedestrian",
+          "score": 0.020054752007126808
+        }
+      ],
+      "semantic_ids": "rear_left/semantic_ids.png",
+      "visible_margin": "rear_left/visible_margin.png",
+      "confidence": "rear_left/semantic_confidence_uncalibrated.npy"
+    },
+    "left": {
+      "objects": [
+        {
+          "bbox_xyxy": [
+            317.12933349609375,
+            202.5655517578125,
+            343.33740234375,
+            249.12747192382812
+          ],
+          "class_id": 8,
+          "class_name": "temporary_obstacle",
+          "score": 0.9996869564056396
+        },
+        {
+          "bbox_xyxy": [
+            75.97540283203125,
+            212.8542022705078,
+            86.47657775878906,
+            237.39353942871094
+          ],
+          "class_id": 2,
+          "class_name": "pedestrian",
+          "score": 0.07114119082689285
+        }
+      ],
+      "semantic_ids": "left/semantic_ids.png",
+      "visible_margin": "left/visible_margin.png",
+      "confidence": "left/semantic_confidence_uncalibrated.npy"
+    },
+    "front_left": {
+      "objects": [
+        {
+          "bbox_xyxy": [
+            536.7056884765625,
+            85.93843078613281,
+            544.46240234375,
+            99.94219970703125
+          ],
+          "class_id": 7,
+          "class_name": "traffic_light",
+          "score": 0.9999109506607056,
+          "light_state": "unknown_or_unobservable",
+          "phase_softmax_uncalibrated": 0.9984007477760315
+        },
+        {
+          "bbox_xyxy": [
+            585.3200073242188,
+            161.02098083496094,
+            640.0,
+            191.00709533691406
+          ],
+          "class_id": 6,
+          "class_name": "bus",
+          "score": 0.9935653805732727
+        },
+        {
+          "bbox_xyxy": [
+            560.37646484375,
+            165.8033447265625,
+            640.0,
+            199.37289428710938
+          ],
+          "class_id": 1,
+          "class_name": "car",
+          "score": 0.2482842057943344
+        },
+        {
+          "bbox_xyxy": [
+            560.0318603515625,
+            181.33641052246094,
+            600.5986328125,
+            199.28993225097656
+          ],
+          "class_id": 1,
+          "class_name": "car",
+          "score": 0.08498290926218033
+        },
+        {
+          "bbox_xyxy": [
+            560.1414794921875,
+            161.55758666992188,
+            640.0,
+            199.04483032226562
+          ],
+          "class_id": 5,
+          "class_name": "truck",
+          "score": 0.08033246546983719
+        },
+        {
+          "bbox_xyxy": [
+            406.3686828613281,
+            195.71774291992188,
+            412.3236389160156,
+            211.91476440429688
+          ],
+          "class_id": 2,
+          "class_name": "pedestrian",
+          "score": 0.027207862585783005
+        }
+      ],
+      "semantic_ids": "front_left/semantic_ids.png",
+      "visible_margin": "front_left/visible_margin.png",
+      "confidence": "front_left/semantic_confidence_uncalibrated.npy"
+    }
+  },
+  "source_sha256": "8464b30ab3ba230f2a24dd5ad4d7bbfd546419cc855864e49d75ea817a3d9a71",
+  "artifact_generation_wall_ms": 2189.9770999734756,
+  "timing_note": "Cold first inference plus PNG/npy writing; use benchmark_sunny.py for warmed timing. Excludes simulator sensors and controls."
+}

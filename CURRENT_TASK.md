@@ -1,4 +1,51 @@
+## 最新接續 15:54（優先於下方歷史）
+
+仍持續完成Phase3，勿結束。原v5批次完畢品質失敗；此刻CARLA PID8064 exact FILETIME134367812249032916仍活，沒有DL GPU。Town06第二preview exec80942已exit0、review57751exit0：64views，6pages全實看，1272073Wall pixels/54676Fence，多位置磚石高低牆，未證明木實心Wall/擋土牆；原raw4/5身份audit兩頁5案例實看確認木圍牆/擋土牆確為Wall，先前主要診斷未逆轉。Town06兩次probe review已寫，probe不可train。舊batch八RGB surround也已實看，收據寫並收入evidence。
+
+**正式capture exec99020仍進行Town06**，plan configs/segmentation_expansion_diverse_v2_2.json SHAaff1cc0dc406830104ae50c960f2bc77b9a8d8488ea873e8c43604459e1c44ff，64anchors/town、root data/segmentation-expansion-v2-001。**exec13481已啟動批次等待：Town06 passed/cleanup後才prepare Town07→capture Town07→audit**，log artifacts/runs/phase3-expansion-server-001/complete-acquisition.log。別重複切圖／capture／audit，等13481退出後實看QA並bound review批准。report預設statusfailed/cleanupfalse代表進行中，不是已失敗；只有cleanuptrue及error才是終局。所有源快照獨立保留，不改收過probe。
+
+正式v2 loader src/senior_ai/segmentation_expansion.py已接train/evaluate/export，綁main/unused-map-policy/plan/audit/review/allbytes/fullmatrix/F+1/probe排除，只分割train。原v1限制不變。src/senior_ai/detection_augmentation.py已接conditional bicycle-positive halfscale p2/3，同步所有GT/ignore、paddingignore、無flip，epoch記actualcounts。configs/sunny_detection_v6_1.json已凍結（從v5best ec142...、4epochs/19200newupdates），尚未CUDA finite/capacity/正式訓練。verify_sunny_capacity.py增加兩真實原train groups SHA-bound GPU geometry finite check與原3 synthetic/reload。**CARLA停後才跑GPU**。
+
+新增6項CPU tests；full006=151 total/148pass/3GPUskip/0fail（005三項因使用系統sandbox temp cleanup拒絕，改workspacefixtures後focused及full006過，非模型失敗）。還沒新fullGPU。新segconfig需audit/reviewSHA後才建：parent3fe7...、舊1024viewsrepeat2+新1024repeat2=4096static、main9600/13696=70.09%，6epochs/10272updates，同既有架構loss/aug，先data-first不加未用MixStyle。phase004需重跑帶jointfix。新batch002 sourcefreeze後不再改SRC；全val過才heldout，失敗不lowergates。
+
+最新README/registry已更新v5完成，batch原legacy precision的v2recount addendum保留。新sources/QA/evidence仍待commit；evidence/training-expansion-preflight-001只CPU/probe證據，非formaldata已批准。下步：等採集稽核→QA→訓練→統一驗證，不能只停在工具完成。
+
 # 目前任務：批量完成晴天 Phase3（2026-10-18）
+
+## 最新接續：v5全批完成，正在實際補景（優先於所有下文）
+
+**使用者要求持續盡量完成Phase3，勿在此結束。Phase3仍品質失敗。** 原exec32462已結束：所有11 stages return0、最終state=quality_failed（wrapper exec回1；Python設計quality failure回2，不是stage crash），無failure.json。原parent19772／det6608均已退出，awake4644 released/request_clearedtrue；functions monitors367/372都結束。現在**沒有DL GPU訓練，CARLA正在使用GPU，別啟任何CUDA訓練／benchmark。**
+
+### 正式v5結果與驗證
+
+- segv5 best SHA3fe7bd08d885e481b7435fdf466945f142f8323447cca46bf31c32455835a53f：6epochs/10272updates，mIoU .59002533、wall .09379872／margin .49446801未過，fence .61474629及其餘15類IoU過，selected reload exact。已實看3頁8情境，原證據保留。
+- detv5已4epochs/19200updates完成，selected第3輪（epoch2），mAP50 .7085198797911534／AP50:95 .4531501647391283，只有bike R .3374485596707819未過（P .6648648649、小框22/388），其餘7類P/R過。第4輪AP .4500293較低所以沒選。best SHA **ec1427214d5fc3e51b9bbb2fed652fa762e97edeb34cfc23a989bdc879c8575f**，last d9bfade775f0e38a58977c68fecf251ea1936df1cf6c025cdb264abb20448407。3409.32MiB allocated／4418reserved、reload exact、RPN/ROI ignore各19200。validation SHA30d8ebc4dbd4b2b7c230b3936817af498936a077286d86e52b4f55e4e095f59b；framesSHA23fca48988331744cb57689f5b4d041cc54d7eb39cf224cf66dd1c432e4de550。
+- det file-only全量checker exec54597已exit0：3600 canonical index/GT/ignore/float32 metadata、full/by-scene/size/truncation AP/PR全部重算exact，quality只bike R fail。artifacts/reports/detection-v5-artifact-check-001.json。scripts/review_saved_detection.py已用saved GPU predictions產生run/validation_errors（exec17516 exit0），**5pages/15contexts＋3小框zoom已實看**，visual_review.json/input_inventory_binding.json/tool_used.py保留；並非新CPU推論。近處bike→motor/person、遠小/遮擋/截斷漏檢、truck局部重框、barrel→bike均見，不能只說全是小框。初版gallery外接核對image_inventory SHA正確；目前tool已內建該check，tool_used.py才是此次exact source。
+- phasev1-003完成16epochs/832updates/7.516s，best SHA **c2709f15f14b193b68d0cb35d5cec37713f5e1015dff60f42885b85afb5f0846**，GTcrop macro .94381170398／所有crop gates過。actual-det-box joint macro **.46670520113725555**／matched red→green0，joint gates也過。**所有新heldout仍未開**（seg/det val fail）。
+- batch rgb-only demo＋3 benchmarks＋export完成：artifacts/runs/phase3-recovery-batch-001/export/summary.json，phase3_completefalse，SHA cccfe2c0b16db97b9281cd62f4a7917d815a939d7579084f8109b62d155722c2。8view integrated warm p50 699.08485ms／p95 741.78373，排除sim/render/control，不是20Hz。**surround.png還沒實看，需看並寫review；新det/phase完成證據、README/registry/modelcards尚需整理封存，不能只報工具完成。**
+
+### 發現並修正真的joint報表bug（canonical source已變，舊模型快照不改）
+
+原joint把ignored/unscorable區域也列false-light，331 vs detector FP42不一致。新增src/senior_ai/light_joint_policy.py，修evaluate_light_state.py（positive優先，wrong-class/duplicate over任何known正例仍FP；只有背景且ignore才排除），supplement也帶ignore_boxes，gallery不選ignored當FP。3 focused CPU tests過。**這使canonical source不再是8ec；不要用舊batch --resume，也別拿current evaluator去假裝匹配phase003 source。下一輪重跑phasev1-004（小網路7s＋資料檢查）凍結修正源，不盲用phase003舊frozen evaluator做最終heldout。**
+
+scripts/recount_light_joint_ignore.py已CPU重算既有saved records（exec5653 exit0）：289ignored移除後42FP，精確符合det AP50；原matrix/GTrecall/red→green全部不變，macro仍.4667052、quality仍pass。原run reports不覆寫。輸出artifacts/runs/phase3-joint-ignore-recount-001，**4張contact／32個修正後error contexts已全實看**，visual_review已寫。需把此addendum和original batch一起封存，precision改善不是模型改善。最新全CPU suite仍139 total/136pass/3skip；之後新增checker3＋ignore3，尚未完整145合跑；GPU完整仍只有先前94。
+
+### 現在native server與即時工作
+
+- 新隔離root artifacts/carla-phase3-expansion-v1內容驗證已完成（收據/manifest在002與Git6410f90），原root保持原bytes；native啟動也已成功。**shipping PID8064，creation FILETIME134367812249032916**，launcher31472，DX12/Epic port2000。identity與launch在artifacts/runs/phase3-expansion-server-001。awake nativehelper23744（launcher26436）綁此確切instance，最多2h至**17:14 Taipei**附近；有需要可另建有界helper，別改global power plan。操作/停止前重查CIM與creation，不能盲殺PID。
+- client/server都是0.9.16，ClearNoon cld5/sun45/rain0。Town07和Town06都已真正完整load成功（不是只看available_maps）。Town07 OpenDrive **be730652769e993e27f748ba5793dba9e49d299205146a7a8db0bcd17af877bf**，116spawns／279Fence／0Wall。Town06 **a90b613175fa837fdc128ddfaf5ddad25797b128fdbd8cd945974bc21a60496e**，436spawns／922Fence／618Wall。
+- metadata scoutruns train-expansion-scout-town07-001／town06-001都completed；prepare_reserved_world.py只load一次、fresh client實看after exception，今回兩次正常成功，source也待commit。
+- Town07 probe已完成：data/segmentation-expansion-v2-town07-probe-001，4anchors/32views/128PNG，plan configs/segmentation_expansion_town07_preview_v2_1.json SHAb3f585279663af8ec533a7ca8a1e34d9754d15377c783d81a456b13821b8869a。scripts/review_scenery_probe.py實檢CRC/frames/pose/classes，output artifacts/runs/town07-preview-review-001，**3pages/10contexts已實看**：0Wall pixels、105894Fence；木製兩道欄杆、白picket、岩坡/草地/林地。岩坡是terrain/ground，不能把Fence改Wall；可當後續negative來源但probe不可train。visual_review明確training_approvedfalse。成功F+1當時只source-method綁定，沒有explicit counter（報告0）。
+- **唯一active capture：exec48269**，collect_unused_scenery.py --town Town06 --probe-anchors4 --plan configs/segmentation_expansion_town06_preview_v2_1.json --output data/segmentation-expansion-v2-town06-probe-001。plan SHA89e8b81ea902aa9aa4ec107d1f13145740f4a7dfd8a911af8c464175ca5ed95d，64候選錨點。**先等此job退出，別改其source/config。** 本版collector已增加每筆成功readback_frame=F+1與report.explicit_success_readback_framesTrue；auditor新正式v2強制檢查（舊Town07 probe不供train，不修改）。
+
+### 接下來真正要做（不要再無限寫未用備案）
+
+1. 等48269完成，跑review_scenery_probe.py對Town06 root輸出new artifacts/runs/town06-preview-review-001，實看RGB/GT材質，決定是否有新Wall-positive＋rock negatives。Town07只有negative，若合收Town06+07，正式audit的Wall/Terrain quota按完整集合驗，不能單用Town07零牆冒稱補牆。
+2. 視preview再凍結正式新plan（目前兩個只是preview候選），完整capture另root（不重用probe）、audit_unused_scenery.py、實際QA/training_approved review，全都通過才train。原v1 Town01/03 collector/auditor/loader限制完全不放寬。新v2 train loader **尚未實作**，必須正確綁main＋所有static roots/SHA/倍率與sampling，main約70%，不當新動態路線或新的independent episodes。
+3. 關閉並核對此owned server、awake清除後才GPU tests/capacity/training。det下一輪優先對bike-positive train views 2/3機率scale.5、其餘原尺度（幾何prototype已CPU real finite，但未整合／GPU）；不先疊P1/flip/budget/score變更。parent為正式v5 ec142...。seg parent3fe7...，新data先於MixStyle備案；六epochs及data採樣待實收support後凍結。phase重跑004帶修正版joint源。所有原品質門檻不降低，全部val過才一次heldout。
+4. v6 batch需解決各模型source provenance／frozen evaluator相容，不能為重用run就刪source checks。原完成run不能resume。current source已有joint修正，與v5父代不同屬正常新實驗，initial inference/loader/reload須exact核對。
+
+最新Git6410f90；上述v5 QA／new sources／Town6/7 probes／joint修正等尚未commit。資料roots/artifacts/runs都ignored，本機證據要封存明確scope與SHA。所有scope仍只有理想晴天Phase3二維，不開Phase4。
 
 ## 最新接續：14:49（優先於全部歷史）
 

@@ -1,0 +1,23 @@
+{
+  "passed": false,
+  "checks": {
+    "all_classes_present": true,
+    "mAP50": true,
+    "car/recall": true,
+    "car/precision": true,
+    "pedestrian/recall": true,
+    "pedestrian/precision": true,
+    "bicycle/recall": false,
+    "bicycle/precision": true,
+    "motorcycle/recall": true,
+    "motorcycle/precision": true,
+    "truck/recall": true,
+    "truck/precision": true,
+    "bus/recall": true,
+    "bus/precision": true,
+    "traffic_light/recall": true,
+    "traffic_light/precision": true,
+    "temporary_obstacle/recall": true,
+    "temporary_obstacle/precision": true
+  }
+}

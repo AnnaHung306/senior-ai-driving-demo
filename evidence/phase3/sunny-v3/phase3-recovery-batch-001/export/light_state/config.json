@@ -1,0 +1,39 @@
+{
+  "version": "sunny-light-state-v1.1",
+  "scope": "ClearNoon observable lamp crops plus explicit unobservable class; not hidden actor phase from back-facing lamps",
+  "seed": 20261016,
+  "class_names": [
+    "unknown_or_unobservable",
+    "red",
+    "yellow",
+    "green"
+  ],
+  "crop_wh": [
+    32,
+    64
+  ],
+  "epochs": 16,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "augmentation": "training brightness/contrast 0.9 to 1.1; fixed GT box crops, no crop jitter or flips. Joint evaluation uses detector boxes to expose localization shift.",
+  "minimum_samples_per_class": {
+    "train": 20,
+    "validation": 10,
+    "development": 10,
+    "lockbox": 10
+  },
+  "minimum_groups_per_class": 2,
+  "minimum_emissive_pixels": 2,
+  "minimum_macro_recall": 0.8,
+  "minimum_per_class_recall": 0.5,
+  "minimum_unknown_recall": 0.8,
+  "max_red_as_green_rate": 0.02,
+  "minimum_joint_macro_correct_state_recall": 0.4,
+  "selection": "maximum validation macro recall, earliest tie",
+  "joint_evaluation": "At fixed detector score>=0.5 and IoU>=0.5, match each visible lamp once; report correct phase / all GT visible lamps including detector misses",
+  "frozen_before_model_scoring": true,
+  "confidence_note": "Maximum softmax is uncalibrated, not a safety probability",
+  "heldout_supplement_plan": "configs/light_lockbox_supplement_v1.json",
+  "heldout_supplement_plan_sha256": "daa805761dbe8f3b7acb00ebbe40786741cb9da7138d4f13eb5dac76bb2e5692",
+  "heldout_coverage_note": "Original main dynamic lockbox lacks yellow phase coverage; pre-score frozen stationary Town02 supplement repairs phase coverage. No supplementary training. Dynamic/controlled results separately retained; thresholds unchanged."
+}

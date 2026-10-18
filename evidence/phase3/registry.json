@@ -139,5 +139,35 @@
         "sampling_repeats": 4
       }
     }
+  },
+  {
+    "run": "sunny-detection-v5-001",
+    "task": "sunny-8-class-detection",
+    "status": "completed",
+    "quality_acceptance": "validation_failed",
+    "model_card": "evidence/phase3/sunny-v3/phase3-recovery-batch-001/export/detection/MODEL_CARD.md",
+    "checkpoint_sha256": "ec1427214d5fc3e51b9bbb2fed652fa762e97edeb34cfc23a989bdc879c8575f",
+    "updates": 19200,
+    "failed_gates": [
+      "bicycle_recall"
+    ],
+    "heldout_opened": false,
+    "validation_mAP50": 0.7085198797911534,
+    "validation_mAP50_95": 0.4531501647391283,
+    "validation_bicycle_recall": 0.3374485596707819
+  },
+  {
+    "run": "sunny-light-state-v1-003",
+    "task": "sunny-4-state-light-classification",
+    "status": "completed",
+    "quality_acceptance": "validation_passed_heldout_unopened",
+    "model_card": "evidence/phase3/sunny-v3/phase3-recovery-batch-001/export/light_state/MODEL_CARD.md",
+    "checkpoint_sha256": "c2709f15f14b193b68d0cb35d5cec37713f5e1015dff60f42885b85afb5f0846",
+    "updates": 832,
+    "failed_gates": [],
+    "heldout_opened": false,
+    "validation_GT_crop_macro_recall": 0.9438117039805592,
+    "validation_detector_box_joint_macro_recall": 0.46670520113725555,
+    "joint_precision_scoring_addendum": "evidence/phase3/sunny-v3/phase3-recovery-batch-001/joint-ignore-v2-addendum"
   }
 ]

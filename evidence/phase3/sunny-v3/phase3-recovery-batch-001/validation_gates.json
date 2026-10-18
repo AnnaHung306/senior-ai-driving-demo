@@ -1,0 +1,75 @@
+{
+  "segmentation": {
+    "passed": false,
+    "checks": {
+      "focus_mIoU": true,
+      "all_focus_present": true,
+      "road/IoU": true,
+      "sidewalk/IoU": true,
+      "pedestrian/IoU": true,
+      "rider/IoU": true,
+      "car/IoU": true,
+      "truck/IoU": true,
+      "bus/IoU": true,
+      "motorcycle/IoU": true,
+      "bicycle/IoU": true,
+      "road_line/IoU": true,
+      "traffic_light/IoU": true,
+      "wall/IoU": false,
+      "fence/IoU": true,
+      "pole/IoU": true,
+      "temporary_obstacle/IoU": true,
+      "terrain_or_ground/IoU": true,
+      "visible_margin_f1": false
+    }
+  },
+  "detection": {
+    "passed": false,
+    "checks": {
+      "all_classes_present": true,
+      "mAP50": true,
+      "car/recall": true,
+      "car/precision": true,
+      "pedestrian/recall": true,
+      "pedestrian/precision": true,
+      "bicycle/recall": false,
+      "bicycle/precision": true,
+      "motorcycle/recall": true,
+      "motorcycle/precision": true,
+      "truck/recall": true,
+      "truck/precision": true,
+      "bus/recall": true,
+      "bus/precision": true,
+      "traffic_light/recall": true,
+      "traffic_light/precision": true,
+      "temporary_obstacle/recall": true,
+      "temporary_obstacle/precision": true
+    }
+  },
+  "phase_crops": {
+    "passed": true,
+    "checks": {
+      "all_classes": true,
+      "macro_recall": true,
+      "unknown_or_unobservable": true,
+      "red": true,
+      "yellow": true,
+      "green": true,
+      "red_as_green": true
+    }
+  },
+  "phase_joint": {
+    "passed": true,
+    "checks": {
+      "all_classes": true,
+      "macro_correct_state_recall": true,
+      "red_as_green": true
+    },
+    "phase_sha256": "c2709f15f14b193b68d0cb35d5cec37713f5e1015dff60f42885b85afb5f0846",
+    "detector_sha256": "ec1427214d5fc3e51b9bbb2fed652fa762e97edeb34cfc23a989bdc879c8575f",
+    "joint_report_sha256": "6a746a19745898747c6ea445b1d18b6828e70bedf3264cc7b3b28adb70e34bc3",
+    "data_audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+    "source_sha256": "db8f4ae4a701b8b14585156d3bebe96dcef99d3561713742adbdd5d0d3cfe64c",
+    "lockbox_opened": false
+  }
+}

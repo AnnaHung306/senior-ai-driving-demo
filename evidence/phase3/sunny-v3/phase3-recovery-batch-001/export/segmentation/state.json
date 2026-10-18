@@ -1,0 +1,21 @@
+{
+  "status": "completed",
+  "task": "segmentation",
+  "best_epoch": 5,
+  "best_score": 0.5900253284664799,
+  "updates": 10272,
+  "last_sha256": "62be45ec5234411d44a8dcedb74b4cf4f0cb34f317e987952a2d00f68f1338e3",
+  "best_sha256": "3fe7bd08d885e481b7435fdf466945f142f8323447cca46bf31c32455835a53f",
+  "checkpoint_reload_identical": true,
+  "training_wall_s": 5252.766000000003,
+  "max_cuda_allocated_mib": 4046.5146484375,
+  "parameter_count": 3589953,
+  "selected_validation_qualified": false,
+  "selection_policy": "qualified_first_then_score",
+  "max_cuda_reserved_mib": 4662.0,
+  "rpn_ignore_calls": null,
+  "roi_ignore_calls": null,
+  "lockbox_opened": false,
+  "validation_sha256": "f33385596c75cb12e4022bbba972c33bdeba5d80943f5ceff4a15d40fc4a9350",
+  "validation_frames_sha256": "98c4ac93ac6595fb033a334b148775b8659b0a68b94e0c84adb7ee15c44316a0"
+}

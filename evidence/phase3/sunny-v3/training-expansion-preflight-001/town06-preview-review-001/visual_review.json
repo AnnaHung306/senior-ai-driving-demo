@@ -1,0 +1,20 @@
+{
+  "status": "reviewed_probe_only",
+  "training_approved": false,
+  "report_sha256": "4a9b86bd89a37626b76d67f9554a2b06aa7e9b005c2ddb76d7e9a4d458f2b878",
+  "reviewed_images": [
+    {
+      "path": "page-00.png",
+      "sha256": "b7b7f9de2187ec2ff8e17af40af46597f42695f6ca69748050559f1d58531cf0"
+    },
+    {
+      "path": "page-01.png",
+      "sha256": "e7ee25623a3abce1c61578b506eba07553b94d9d127642e72b72bcaf8d3d68d8"
+    },
+    {
+      "path": "page-02.png",
+      "sha256": "82916512e68892cf657b7db5788fc99da3e664488fae870f019ce9665f3e3e40"
+    }
+  ],
+  "observations": "Four nearby anchors show predominantly similar brick walls; not evidence of material diversity."
+}

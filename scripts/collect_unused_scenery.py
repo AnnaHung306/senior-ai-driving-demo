@@ -37,6 +37,7 @@ def collect(args):
     report={'status':'failed','town':args.town,'plan_sha256':sha(args.plan),'collector_sha256':sha(Path(__file__)),'records':0,'cleanup':False,'training_approved':False}
     report['version']=plan['version']
     report['runtime_provenance']=plan['runtime']
+    report['explicit_success_readback_frames']=True
     report['runtime_launch_sha256']=sha(launch_path)
     (town_root/'runtime_launch.json').write_bytes(launch_path.read_bytes())
     report['probe_only']=args.probe_anchors is not None
@@ -86,8 +87,11 @@ def collect(args):
                 for sensor in sensors:sensor.set_transform(camera_transform(expected))
                 for _ in range(12):world.tick(20);time.sleep(args.tick_wall_delay)
                 frame,snapshot,images,rejected=aligned_triplet(world,queues,max_attempts=24,wall_delay_s=args.tick_wall_delay)
+                readback_frame=world.get_snapshot().frame
+                if readback_frame!=frame+1:raise ValueError('Success readback must be exactly F+1')
                 row={'split':'train','task':'segmentation_only','town':args.town,'group_id':group,'scene_id':group,'camera':camera['name'],
                     'anchor_spawn_index':a['spawn_index'],'frame':frame,'timestamp_s':snapshot.timestamp.elapsed_seconds,
+                    'readback_frame':readback_frame,
                     'T_world_from_camera':expected.tolist(),'verified_obstacle_actor_ids':[],'images':{},'rejected_capture_attempts':rejected}
                 for modality,image in images.items():
                     p=root/f'raw/{group}/{camera["name"]}/{modality}.png';p.parent.mkdir(parents=True,exist_ok=True);image.save_to_disk(p)

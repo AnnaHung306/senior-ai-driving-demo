@@ -30,6 +30,14 @@ def audit(root):
     if sha(source/'audit.json')!=plan['source_audit_sha256'] or sha(source/'plan.json')!=plan['source_plan_sha256']:raise ValueError('Original source changed')
     main=json.loads((source/'plan.json').read_text(encoding='utf-8'))
     validate_expansion_plan(plan,archive_root=root,check_runtime=False)
+    # Keep the exact independent auditor and dependencies with the immutable
+    # image inventory, so later training does not rely on mutable workspace code.
+    sources=sorted((ROOT/'src').rglob('*.py'))+[ROOT/'scripts'/name for name in
+        ['audit_unused_scenery.py','prepare_unused_scenery.py','scout_unused_training_town.py','scout_training_scenery.py','predict_sunny.py','validate_dataset.py','collect_dataset.py']]
+    for source_file in sources:
+        destination=root/'audit_source'/source_file.relative_to(ROOT);destination.parent.mkdir(parents=True,exist_ok=True)
+        if destination.exists() and sha(destination)!=sha(source_file):raise ValueError('Existing audit source differs; preserve failed acquisition')
+        destination.write_bytes(source_file.read_bytes())
     cameras={c['name']:c for c in rig['cameras']};expected={};records=[]
     if len(cameras)!=8:raise ValueError('All eight rig cameras required')
     for town,entry in plan['towns'].items():
@@ -37,6 +45,7 @@ def audit(root):
         report=json.loads((root/town/'report.json').read_text(encoding='utf-8'));cal=json.loads((root/town/'calibration.json').read_text(encoding='utf-8'))
         if report['status']!='passed' or not report['cleanup'] or report['plan_sha256']!=sha(root/'plan.json'):raise ValueError('Capture incomplete')
         if report.get('probe_only'):raise ValueError('Probe capture cannot enter training audit')
+        if not report.get('explicit_success_readback_frames'):raise ValueError('Formal expansion requires recorded success F+1 counters')
         if report.get('version')!=plan['version'] or report.get('runtime_provenance')!=plan['runtime'] or not report.get('source_files'):
             raise ValueError('Expansion capture requires explicit runtime and source archive')
         if report['source_files'].get('scripts/collect_unused_scenery.py')!=report['collector_sha256']:
@@ -77,6 +86,7 @@ def audit(root):
         key=(row['town'],row['anchor_spawn_index'],row['camera']);matrix=expected[key]
         group=f'{row["town"].lower()}-static-anchor-{row["anchor_spawn_index"]:03}'
         if row['split']!='train' or row['task']!='segmentation_only' or row['group_id']!=group or row['scene_id']!=group or row['verified_obstacle_actor_ids']!=[]:raise ValueError('Scope/group mismatch')
+        if row.get('readback_frame')!=row['frame']+1:raise ValueError('Explicit success readback mismatch')
         if np.abs(np.asarray(row['T_world_from_camera'])-matrix).max()>=.0001:raise ValueError('Planned pose mismatch')
         if set(row['images'])!={'rgb','semantic','depth','instance'}:raise ValueError('Four modalities required')
         images={}
@@ -112,6 +122,22 @@ def audit(root):
             if group not in seen and entry['support'][c]>=512:
                 seen.add(group);selected.append(entry['index'])
                 if len(seen)>=8:break
+    # Fence negatives and low native-height candidates must remain visible in QA,
+    # rather than only the largest tall-wall positives dominating the gallery.
+    seen=set()
+    for entry in sorted(candidates,key=lambda r:(-r['support'][13],r['index'])):
+        group=training[entry['index']]['group_id']
+        if group not in seen and entry['support'][13]>=512:
+            selected.append(entry['index']);seen.add(group)
+            if len(seen)>=8:break
+    low={(town,a['spawn_index']) for town,e in plan['towns'].items() for a in e['anchors']
+        if 0<a['selection'].get('native_bbox_height_hint_m',99)<=1.6}
+    low_cases=[]
+    for town,anchor in sorted(low):
+        choices=[c for c in candidates if records[c['index']]['town']==town and records[c['index']]['anchor_spawn_index']==anchor]
+        best=max(choices,key=lambda c:c['support'][12])
+        if best['support'][12]>=512:low_cases.append(best)
+    selected.extend(c['index'] for c in sorted(low_cases,key=lambda c:(-c['support'][12],c['index']))[:8])
     picket_anchors={(town,a['spawn_index']) for town,entry in plan['towns'].items() for a in entry['anchors']
         if a['selection'].get('name_hint_not_material_GT')=='picket'}
     for town,anchor in sorted(picket_anchors):

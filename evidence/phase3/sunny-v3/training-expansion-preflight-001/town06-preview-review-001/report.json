@@ -1,0 +1,2466 @@
+{
+  "status": "probe_alignment_checked_not_training_approved",
+  "training_approved": false,
+  "eligible_for_training": false,
+  "town": "Town06",
+  "plan_sha256": "89e8b81ea902aa9aa4ec107d1f13145740f4a7dfd8a911af8c464175ca5ed95d",
+  "capture_report_sha256": "eaeafff3cb7c5128be86953eb5dedcba44d8679753af5bbcf57abc2cfad4283a",
+  "tool_sha256": "9e8260c09b456d20662bded7ab4721a61981fb866af41998527095e50e91d99d",
+  "views": 32,
+  "checked_PNGs": 128,
+  "segmentation_pixels": [
+    3666192,
+    1786602,
+    164165,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    37942,
+    52,
+    948841,
+    16781,
+    35139,
+    0,
+    717028
+  ],
+  "raw_class_pixels": [
+    0,
+    1786602,
+    164165,
+    924422,
+    948841,
+    16781,
+    35139,
+    52,
+    4091,
+    905814,
+    717017,
+    1614654,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    58,
+    45,
+    0,
+    37942,
+    11,
+    0,
+    0,
+    217166
+  ],
+  "max_pose_error": 4.512779412380041e-05,
+  "max_resolved_class_disagreement": 4.340277777777778e-06,
+  "explicit_success_readback_records": 32,
+  "scope": "Probe only. Exact frame/timestamp/camera/CRC/encoding checks. Legacy success readback is method-bound by captured callback source, not an explicit success counter. No material or human training approval before viewing pages.",
+  "files": [
+    {
+      "path": "raw/town06-static-anchor-057/front/rgb.png",
+      "sha256": "b8a13d46ffb97a208f3d7b123ea4ee39ebd043cbd907d62ffc07f1e9314f2494",
+      "bytes": 338114
+    },
+    {
+      "path": "raw/town06-static-anchor-057/front/semantic.png",
+      "sha256": "19af81023577c06046673909374a2343e87b75f24325afc384febeb2c2d137c1",
+      "bytes": 8646
+    },
+    {
+      "path": "raw/town06-static-anchor-057/front/depth.png",
+      "sha256": "db3012f3f9ba84c3ee33e6f972873cf4707c1efcf8a71b03c02bd8dc4ff6765b",
+      "bytes": 146356
+    },
+    {
+      "path": "raw/town06-static-anchor-057/front/instance.png",
+      "sha256": "23b2619f18473ef9bb77dddb3059b5f84293d523887b606eeb38fc20cd53e919",
+      "bytes": 9054
+    },
+    {
+      "path": "raw/town06-static-anchor-057/front_right/rgb.png",
+      "sha256": "0707ad2dd090ecd71f38a3e796193f7ce751f96848b59b323e8fde1a7c01ebf5",
+      "bytes": 363469
+    },
+    {
+      "path": "raw/town06-static-anchor-057/front_right/semantic.png",
+      "sha256": "55da878724401cc0b61cfd18851a202785b66cff01cf4b738262926757a3b3a3",
+      "bytes": 7623
+    },
+    {
+      "path": "raw/town06-static-anchor-057/front_right/depth.png",
+      "sha256": "544a13b706a6f1cc7ffd0ebed874cba56886423fa7551cdd63dab1d9bdc9798c",
+      "bytes": 139127
+    },
+    {
+      "path": "raw/town06-static-anchor-057/front_right/instance.png",
+      "sha256": "e745909a5c3adf8db4900b66dbafa03a783f20e616100d1db337a5495a8c97ff",
+      "bytes": 8279
+    },
+    {
+      "path": "raw/town06-static-anchor-057/right/rgb.png",
+      "sha256": "c79f6c84b3c10a2ab5d8a88a268eedc0cec9538ec85edd53aa8f40336358726d",
+      "bytes": 378483
+    },
+    {
+      "path": "raw/town06-static-anchor-057/right/semantic.png",
+      "sha256": "d661d8054c567d0b82cde8662b0637c74a03f09e366de5c370aa2bc67b6ba94b",
+      "bytes": 7892
+    },
+    {
+      "path": "raw/town06-static-anchor-057/right/depth.png",
+      "sha256": "581296e55735ddc3e9914738763cf96ffe4e0feaff776d061d05a799a902555b",
+      "bytes": 188893
+    },
+    {
+      "path": "raw/town06-static-anchor-057/right/instance.png",
+      "sha256": "dd6923d7b2039ee80b4c3efad69dfe5763021b2806e8424ebcf91a083a6522a8",
+      "bytes": 7457
+    },
+    {
+      "path": "raw/town06-static-anchor-057/rear_right/rgb.png",
+      "sha256": "e632c060b7d3d49e2be4f720787ec841799ff3059996fbff30adcd83217c61fe",
+      "bytes": 378820
+    },
+    {
+      "path": "raw/town06-static-anchor-057/rear_right/semantic.png",
+      "sha256": "80433caf8d5c9ab5609d44049ed0914f88014b5113042c2387d7e83430a4db6a",
+      "bytes": 10391
+    },
+    {
+      "path": "raw/town06-static-anchor-057/rear_right/depth.png",
+      "sha256": "d9e603ea694c09019908731d37e150cd2028ad78513a166b284051d73b0a0de8",
+      "bytes": 292137
+    },
+    {
+      "path": "raw/town06-static-anchor-057/rear_right/instance.png",
+      "sha256": "e825dababf52674dcfa5f15a2edd9a957233a4754743d5c8dbfc8568b84e9883",
+      "bytes": 10679
+    },
+    {
+      "path": "raw/town06-static-anchor-057/rear/rgb.png",
+      "sha256": "5c4fc031a83483edd208aa8a8dcf288acea90d99ab8368ad38d11171050c2354",
+      "bytes": 326427
+    },
+    {
+      "path": "raw/town06-static-anchor-057/rear/semantic.png",
+      "sha256": "9f3107c4d073f1cb1da53453aa88290fec6dfea88c0e55a54e480bfb310df0d1",
+      "bytes": 8566
+    },
+    {
+      "path": "raw/town06-static-anchor-057/rear/depth.png",
+      "sha256": "8f6c4863069aa8a0dcc7950a510ba83671eaddb767ccf9f65ca6ad1bcd61e678",
+      "bytes": 166123
+    },
+    {
+      "path": "raw/town06-static-anchor-057/rear/instance.png",
+      "sha256": "b45550bb0cc7a8da7aa5658df6d1ca5c17cffde68566c89b7c516c046a9e519f",
+      "bytes": 8850
+    },
+    {
+      "path": "raw/town06-static-anchor-057/rear_left/rgb.png",
+      "sha256": "5c857db2d5e0ccda2286e2e359ad322cd31524fb3434cc4d306e978bdc6bbb3d",
+      "bytes": 308873
+    },
+    {
+      "path": "raw/town06-static-anchor-057/rear_left/semantic.png",
+      "sha256": "f8e47bfffdc1179f4ed65050cbcabb592a6a7e49cd9d5e0b00186cbc9df00a33",
+      "bytes": 7719
+    },
+    {
+      "path": "raw/town06-static-anchor-057/rear_left/depth.png",
+      "sha256": "68531ec5d551074599ac94719207e7d3dab9a6495c2d66070ec67b38a339535e",
+      "bytes": 138949
+    },
+    {
+      "path": "raw/town06-static-anchor-057/rear_left/instance.png",
+      "sha256": "4c20c6982b113c73e90e99811621c3e62dd3fdfbe0d6b503c52f8225ed059cc3",
+      "bytes": 7896
+    },
+    {
+      "path": "raw/town06-static-anchor-057/left/rgb.png",
+      "sha256": "7373f671d6eaff2da77ec69f108a839ee740a10b137f2baa4b59b37f03b20284",
+      "bytes": 315767
+    },
+    {
+      "path": "raw/town06-static-anchor-057/left/semantic.png",
+      "sha256": "52ca485a1af8a15fe0da17a49ee33a5bf1fbd24d44740183d4595fb324274c93",
+      "bytes": 6311
+    },
+    {
+      "path": "raw/town06-static-anchor-057/left/depth.png",
+      "sha256": "ff1712f548cc07f8cdb7b8f9d61659525527dad4a75f050ee79a8a759bd07a45",
+      "bytes": 133171
+    },
+    {
+      "path": "raw/town06-static-anchor-057/left/instance.png",
+      "sha256": "a139c7e325403f286438e8e7ffa10c839af9377b3b4fc42a5e5e5b1912f77aaf",
+      "bytes": 6405
+    },
+    {
+      "path": "raw/town06-static-anchor-057/front_left/rgb.png",
+      "sha256": "36d12bd497d3a9b26fb1f9851e143b68e408db046c0c7250ced043d011301b96",
+      "bytes": 304880
+    },
+    {
+      "path": "raw/town06-static-anchor-057/front_left/semantic.png",
+      "sha256": "21fc0716fdd97e815870ae1428d974e6e584ad2ec59689c353ee8427259e6fe3",
+      "bytes": 7206
+    },
+    {
+      "path": "raw/town06-static-anchor-057/front_left/depth.png",
+      "sha256": "dacb1fdc6752dab79e10523d9e27bb420237e80ae131fb55af6f098fd5e1b1f3",
+      "bytes": 127121
+    },
+    {
+      "path": "raw/town06-static-anchor-057/front_left/instance.png",
+      "sha256": "2137b4cb9b37e45b1edd491d7097892756c3c68d1e11cb58f77b11ba33689be9",
+      "bytes": 7740
+    },
+    {
+      "path": "raw/town06-static-anchor-053/front/rgb.png",
+      "sha256": "21659e54ea2a301988dabaad632fe6b7c7f32259edb65134e7b9976eeefebdde",
+      "bytes": 337317
+    },
+    {
+      "path": "raw/town06-static-anchor-053/front/semantic.png",
+      "sha256": "4e98c7d8f94f5981b4ea5cc421a9bcb9997919fb433b16df0e5dfacd06217c84",
+      "bytes": 7886
+    },
+    {
+      "path": "raw/town06-static-anchor-053/front/depth.png",
+      "sha256": "a860acab8d78b71a0160335c70f9b6b961d2523e9e1ac0d01fa40cf9ead04925",
+      "bytes": 128121
+    },
+    {
+      "path": "raw/town06-static-anchor-053/front/instance.png",
+      "sha256": "807036ffd88f9cdc6eb8ceee3ac94477421356c675f1239edaa63b884d69c6e2",
+      "bytes": 8479
+    },
+    {
+      "path": "raw/town06-static-anchor-053/front_right/rgb.png",
+      "sha256": "4bb323ae735e11133c0776e7583e0d8a5f2b9dbe96bd48b2142a6359161a1d31",
+      "bytes": 372116
+    },
+    {
+      "path": "raw/town06-static-anchor-053/front_right/semantic.png",
+      "sha256": "fb5d1b506ad464f35cef2b2f875fe4988e1e9508efa2da653891075da1352d9e",
+      "bytes": 7358
+    },
+    {
+      "path": "raw/town06-static-anchor-053/front_right/depth.png",
+      "sha256": "1e3816002a39de29b6ae350dcd74a72cd4538e28a04dcd4ab80eaefc721d91d0",
+      "bytes": 150845
+    },
+    {
+      "path": "raw/town06-static-anchor-053/front_right/instance.png",
+      "sha256": "dffaaf3c875cdee928feb50a09d763973e94e46b61d69fed83e9a0acb2b81233",
+      "bytes": 7969
+    },
+    {
+      "path": "raw/town06-static-anchor-053/right/rgb.png",
+      "sha256": "24cea6a287e807a56f1c89039aa80030f08f0df7054fca84982c12b273ea1016",
+      "bytes": 354944
+    },
+    {
+      "path": "raw/town06-static-anchor-053/right/semantic.png",
+      "sha256": "53a3209c602500902c2b85b3e06f0bd3447b99ac0e1dcde8af22f466dbb3aec5",
+      "bytes": 3647
+    },
+    {
+      "path": "raw/town06-static-anchor-053/right/depth.png",
+      "sha256": "009ca4584021cc674b92d4bdebbc0f0f36600bdb8d8ff30af8c00641cb7fd359",
+      "bytes": 84768
+    },
+    {
+      "path": "raw/town06-static-anchor-053/right/instance.png",
+      "sha256": "978d8bf4512ec253eb18e25d5d6922faf0d76cf8e9df23b967c534ed4fb83776",
+      "bytes": 3621
+    },
+    {
+      "path": "raw/town06-static-anchor-053/rear_right/rgb.png",
+      "sha256": "b68542395d74ef12ce13deb8e95a82914bcbd57fcc9206b8dc22abff8aa14438",
+      "bytes": 373812
+    },
+    {
+      "path": "raw/town06-static-anchor-053/rear_right/semantic.png",
+      "sha256": "1e64f4a7217deb44fad5034defdcb6347a4f36ebf2fcac70616e34133f3ed7f9",
+      "bytes": 8602
+    },
+    {
+      "path": "raw/town06-static-anchor-053/rear_right/depth.png",
+      "sha256": "9716b4e9eebced6b89c293a99f3c1abfb835cba8a8c1c3c1a3cdd8304060bb00",
+      "bytes": 139682
+    },
+    {
+      "path": "raw/town06-static-anchor-053/rear_right/instance.png",
+      "sha256": "b297a8b9e68cce5516d85aa35d8eeaed4e718a7d1cf750c52cc29037c307b5db",
+      "bytes": 8966
+    },
+    {
+      "path": "raw/town06-static-anchor-053/rear/rgb.png",
+      "sha256": "22179f065ea6a368c066ea7e60f01504857a427d5dd24c6049309fb2ae3aae92",
+      "bytes": 340011
+    },
+    {
+      "path": "raw/town06-static-anchor-053/rear/semantic.png",
+      "sha256": "7a342c9a11b91da7f292155132a9c20fef852988602d28cc994fcb8cdc30c300",
+      "bytes": 9536
+    },
+    {
+      "path": "raw/town06-static-anchor-053/rear/depth.png",
+      "sha256": "792a446644392d11af5cf4ce78ce40dec9fa0c9da576b7ffd5b38b64898a9af7",
+      "bytes": 166317
+    },
+    {
+      "path": "raw/town06-static-anchor-053/rear/instance.png",
+      "sha256": "3abba505ba5fabdf1535239db4c57ce430f66f4bff06848693d4a8ea5be66c08",
+      "bytes": 9930
+    },
+    {
+      "path": "raw/town06-static-anchor-053/rear_left/rgb.png",
+      "sha256": "1d80c2685e7058c4c95b1bbac5a3467001bd2c352b23adb74469ffdac9402483",
+      "bytes": 309242
+    },
+    {
+      "path": "raw/town06-static-anchor-053/rear_left/semantic.png",
+      "sha256": "e158579068b3d64730c7720393496a2fc34b140e6144c67c3fde85bc8d9413a0",
+      "bytes": 7464
+    },
+    {
+      "path": "raw/town06-static-anchor-053/rear_left/depth.png",
+      "sha256": "015c2d0e2071d07831321bceaac1caf372b0076ad39b574af156c896bb8c1141",
+      "bytes": 144321
+    },
+    {
+      "path": "raw/town06-static-anchor-053/rear_left/instance.png",
+      "sha256": "d478e6fdae5ac44236cb073cdd92769f21315a5dc0035188050b4dcbe1b98b73",
+      "bytes": 8076
+    },
+    {
+      "path": "raw/town06-static-anchor-053/left/rgb.png",
+      "sha256": "8aded3d9786900fdfc2408c375cf268076e15bcc859ed998314a971d30f7a47b",
+      "bytes": 321723
+    },
+    {
+      "path": "raw/town06-static-anchor-053/left/semantic.png",
+      "sha256": "74e643854131792fa25f7ba9328b691eaf6170794ab259251d5b2d8050380d53",
+      "bytes": 7501
+    },
+    {
+      "path": "raw/town06-static-anchor-053/left/depth.png",
+      "sha256": "358c1847b45202f2d0b157d3ce60fe08eb380ec0cd5e51e4dd424f8d4171a501",
+      "bytes": 132061
+    },
+    {
+      "path": "raw/town06-static-anchor-053/left/instance.png",
+      "sha256": "71c0b4f79478433f8b0df243318629fc0b758641cd9940fa88ac52aefe30d88d",
+      "bytes": 8238
+    },
+    {
+      "path": "raw/town06-static-anchor-053/front_left/rgb.png",
+      "sha256": "e2420b0efd02ff01f5d0b609115aadc4986a73550e0e2eebd14473886bdbaa22",
+      "bytes": 308058
+    },
+    {
+      "path": "raw/town06-static-anchor-053/front_left/semantic.png",
+      "sha256": "d0499f758425126f5284a3c41cc7a5eed34be97e9bd5ec492f32447030f11d09",
+      "bytes": 8120
+    },
+    {
+      "path": "raw/town06-static-anchor-053/front_left/depth.png",
+      "sha256": "9fe056e7dd740fbb96fcc58e2a3755696988d3513cd17b50d8a9466062d4cfde",
+      "bytes": 132089
+    },
+    {
+      "path": "raw/town06-static-anchor-053/front_left/instance.png",
+      "sha256": "92b0c11fe7aea8820a2e212e29c443861394d5dee046a0cb1845582b4c5bf77e",
+      "bytes": 8776
+    },
+    {
+      "path": "raw/town06-static-anchor-049/front/rgb.png",
+      "sha256": "8b297c2fcbe333651fefb5b5cc2fcc03b284539ca8a7d0f1d2cc5be8318ad795",
+      "bytes": 338573
+    },
+    {
+      "path": "raw/town06-static-anchor-049/front/semantic.png",
+      "sha256": "5d577e9fcb1dcc58446ac41b185af76c9d192cd7e58366ce3412097eb30512be",
+      "bytes": 8835
+    },
+    {
+      "path": "raw/town06-static-anchor-049/front/depth.png",
+      "sha256": "990d55fffe3e8681e70770c442544b779d6f1faf00abf94efd8f2d7686965126",
+      "bytes": 141843
+    },
+    {
+      "path": "raw/town06-static-anchor-049/front/instance.png",
+      "sha256": "9422f8f7de6b2e898b355f69aada48afef5934db0b259b53b6df7b51cc6de9d9",
+      "bytes": 9274
+    },
+    {
+      "path": "raw/town06-static-anchor-049/front_right/rgb.png",
+      "sha256": "6dd0cb0ed35d4945915932e43a6d98b982d7afe0dfa3664497d50fb679b4e055",
+      "bytes": 366961
+    },
+    {
+      "path": "raw/town06-static-anchor-049/front_right/semantic.png",
+      "sha256": "11ea1a1f72b13857e32fb894ac6a1021e3ba1f18e8b499ac6e28e9451d0103b4",
+      "bytes": 6971
+    },
+    {
+      "path": "raw/town06-static-anchor-049/front_right/depth.png",
+      "sha256": "c2fb449773264230c8c1be30e90a83e64bc74b85519030005ce72eeca4204b27",
+      "bytes": 128974
+    },
+    {
+      "path": "raw/town06-static-anchor-049/front_right/instance.png",
+      "sha256": "1126b5072b426bce28e5b3754b752a62d288cf543328b213269089b2fd11880f",
+      "bytes": 7809
+    },
+    {
+      "path": "raw/town06-static-anchor-049/right/rgb.png",
+      "sha256": "d88f1c8f1ab46bd11b39dfd704b5fb1502c2415544ee8d6bc552ed98fbfad1ce",
+      "bytes": 351982
+    },
+    {
+      "path": "raw/town06-static-anchor-049/right/semantic.png",
+      "sha256": "26c95cdd956314ba922ec8cf13fa9aa8a772a887d153517e3b084c1e7fb291c2",
+      "bytes": 4510
+    },
+    {
+      "path": "raw/town06-static-anchor-049/right/depth.png",
+      "sha256": "6a7f9e49f15ae49428f66777e70455ded591deb38ade13245f0901c1368da158",
+      "bytes": 96347
+    },
+    {
+      "path": "raw/town06-static-anchor-049/right/instance.png",
+      "sha256": "af3c2669c5cade904ad02fede74463d70d607dbfa900ca5f1cf8cec429164519",
+      "bytes": 4230
+    },
+    {
+      "path": "raw/town06-static-anchor-049/rear_right/rgb.png",
+      "sha256": "8583208dc93526ae4e3d93be35012bef28222ad1a9a8fb0213b622f9485b7be1",
+      "bytes": 371226
+    },
+    {
+      "path": "raw/town06-static-anchor-049/rear_right/semantic.png",
+      "sha256": "1284bbd62937fdcfd0a2187a14a5d9fb398b9ea7d375131cbac822d39d527aca",
+      "bytes": 8638
+    },
+    {
+      "path": "raw/town06-static-anchor-049/rear_right/depth.png",
+      "sha256": "f865088b54ba1ec3b8084a45a12c6640f02a5838b8a04910443f37ace5014017",
+      "bytes": 189605
+    },
+    {
+      "path": "raw/town06-static-anchor-049/rear_right/instance.png",
+      "sha256": "638004c7a3c218adec4d37b37a327cfe8a252b51836870de596c704e21fd2a77",
+      "bytes": 8938
+    },
+    {
+      "path": "raw/town06-static-anchor-049/rear/rgb.png",
+      "sha256": "c5eeab75e2117410db87c8355727f961b3d411e9b58cb7a1db401b2fa1a1abd8",
+      "bytes": 343996
+    },
+    {
+      "path": "raw/town06-static-anchor-049/rear/semantic.png",
+      "sha256": "283ef9013b2ee241bbacf4f683b7f3812d0b6775b5ba9dc1e1044a9f0612a15b",
+      "bytes": 8167
+    },
+    {
+      "path": "raw/town06-static-anchor-049/rear/depth.png",
+      "sha256": "f13087a1b3f4f3ba9b9001e9944943ec9d389b3c6f08b8027421fe77b2a45cf8",
+      "bytes": 135730
+    },
+    {
+      "path": "raw/town06-static-anchor-049/rear/instance.png",
+      "sha256": "6bbe66106ddf04ed5374c9800c398a6923b28c58b16df70fb1feef7c396cfa75",
+      "bytes": 8450
+    },
+    {
+      "path": "raw/town06-static-anchor-049/rear_left/rgb.png",
+      "sha256": "d4af74ae4efd9354fa7ee276d1f35b7f7258a4482db396b5744d0b79bb84b135",
+      "bytes": 307731
+    },
+    {
+      "path": "raw/town06-static-anchor-049/rear_left/semantic.png",
+      "sha256": "ec4aefd82b2052c572d946dccf8432161984d7a4a22950347ae9ae28d64d55b6",
+      "bytes": 7478
+    },
+    {
+      "path": "raw/town06-static-anchor-049/rear_left/depth.png",
+      "sha256": "49d62b6acab457ce772ec9340d3b3927273870e8a40e733f0eec9c85e7a66fa2",
+      "bytes": 137375
+    },
+    {
+      "path": "raw/town06-static-anchor-049/rear_left/instance.png",
+      "sha256": "431ea86def2460e236cbefa858c10e42f722e7af8ed7a097c938e42ae28e7176",
+      "bytes": 7770
+    },
+    {
+      "path": "raw/town06-static-anchor-049/left/rgb.png",
+      "sha256": "e89e698669474fddd52a7dc7c5f8fc394d9ed46c12437b66c6b421bbeb195579",
+      "bytes": 324947
+    },
+    {
+      "path": "raw/town06-static-anchor-049/left/semantic.png",
+      "sha256": "8c8bfb4866234f61e486e49b2e0868b1ec6c1e48eaadf6838b4033789d618a95",
+      "bytes": 8067
+    },
+    {
+      "path": "raw/town06-static-anchor-049/left/depth.png",
+      "sha256": "e95712c5fd43cc5b2ffd986d6ec8b7c8af47a59f6dad6f89b1a72976d95367bd",
+      "bytes": 146834
+    },
+    {
+      "path": "raw/town06-static-anchor-049/left/instance.png",
+      "sha256": "8c56a5937060ad2ffa352023ebaeaa38614fc3901f56a10cd0ef915f07c3b1da",
+      "bytes": 8231
+    },
+    {
+      "path": "raw/town06-static-anchor-049/front_left/rgb.png",
+      "sha256": "bda19ac3988c7df65265805677b679b1f0915c29ef5d9acdca5ad369afcf4da8",
+      "bytes": 312635
+    },
+    {
+      "path": "raw/town06-static-anchor-049/front_left/semantic.png",
+      "sha256": "c474f85e23312aecad07702f0003e5200ce809c53dea18a23a088c0a41089eaa",
+      "bytes": 8312
+    },
+    {
+      "path": "raw/town06-static-anchor-049/front_left/depth.png",
+      "sha256": "01b19a009233a8ccf6ce7441fc8e5c0cc2bbf8ac2684ec2490da2cd67aef0631",
+      "bytes": 144064
+    },
+    {
+      "path": "raw/town06-static-anchor-049/front_left/instance.png",
+      "sha256": "a67088d43d5f81ce3b9ddb92599b435154b3510c73001694da7675a5909ff1b7",
+      "bytes": 8798
+    },
+    {
+      "path": "raw/town06-static-anchor-045/front/rgb.png",
+      "sha256": "3cc55f20147b70df56d69365bfc47cd1d44e1499879505eb1b4b6f47714cd282",
+      "bytes": 337556
+    },
+    {
+      "path": "raw/town06-static-anchor-045/front/semantic.png",
+      "sha256": "b88cb19b6a3d8557a2fefdb22561fa87679715c3ad622fc2711a88ab0822099f",
+      "bytes": 9143
+    },
+    {
+      "path": "raw/town06-static-anchor-045/front/depth.png",
+      "sha256": "d23bbab89308ee5e9321810eeea2a6afc65fe33455c57e7095e8e5652921beaa",
+      "bytes": 160198
+    },
+    {
+      "path": "raw/town06-static-anchor-045/front/instance.png",
+      "sha256": "5252a2a37ed5f906b258982ead3c2ef9c9c690a71020382076a311a5c3814032",
+      "bytes": 9766
+    },
+    {
+      "path": "raw/town06-static-anchor-045/front_right/rgb.png",
+      "sha256": "a51887856d0ed81aa8a9a446e31d62b53513eb30b7044665f9cfd8379d04ace2",
+      "bytes": 371483
+    },
+    {
+      "path": "raw/town06-static-anchor-045/front_right/semantic.png",
+      "sha256": "0fdef33bfea0b7aaa861e844f8e4a59b165ac72063e2ae09fee940d5dd23b7fa",
+      "bytes": 7891
+    },
+    {
+      "path": "raw/town06-static-anchor-045/front_right/depth.png",
+      "sha256": "93e67178b7662d87c74e199b1b1f9b5f8c5afdbf7d27f69e9681899d1e5e92a2",
+      "bytes": 142997
+    },
+    {
+      "path": "raw/town06-static-anchor-045/front_right/instance.png",
+      "sha256": "48682f5c50cbbaae67ad7163fdb26c9487ada017c79aac76c66e013fc769ab9b",
+      "bytes": 8578
+    },
+    {
+      "path": "raw/town06-static-anchor-045/right/rgb.png",
+      "sha256": "63d1d8c53447c0abaf6585ecae9683902f257ee74306b07f4891d734f0b9d422",
+      "bytes": 352820
+    },
+    {
+      "path": "raw/town06-static-anchor-045/right/semantic.png",
+      "sha256": "56052c05015cc3ce56c5137d7964451178465f1a3434185a2825c66a07ba96fb",
+      "bytes": 4439
+    },
+    {
+      "path": "raw/town06-static-anchor-045/right/depth.png",
+      "sha256": "aa870ba78c7a9501017a2f9070690ae9520453cce8664f9f574f6ee4badc8521",
+      "bytes": 86431
+    },
+    {
+      "path": "raw/town06-static-anchor-045/right/instance.png",
+      "sha256": "c253f587d9f74e99e338091ac0f29413687a2e792344429ca3a381395e479dce",
+      "bytes": 4299
+    },
+    {
+      "path": "raw/town06-static-anchor-045/rear_right/rgb.png",
+      "sha256": "cc1abcd717e61d85b15e17abef98f51d34ef156ce9ef95ab33fb8abd22b06a8d",
+      "bytes": 383783
+    },
+    {
+      "path": "raw/town06-static-anchor-045/rear_right/semantic.png",
+      "sha256": "88d6f63ad063238262e788db3603aae116fcf95e8dc8e804684dfc293b2e519a",
+      "bytes": 8513
+    },
+    {
+      "path": "raw/town06-static-anchor-045/rear_right/depth.png",
+      "sha256": "b91fdda63601d1d31729259905781704e6e495a14a4440022e4225d8cfead88c",
+      "bytes": 149152
+    },
+    {
+      "path": "raw/town06-static-anchor-045/rear_right/instance.png",
+      "sha256": "234f017aca31410abaab295dd2e0c1e0f292398c121e50ec5430278ebde96c60",
+      "bytes": 8658
+    },
+    {
+      "path": "raw/town06-static-anchor-045/rear/rgb.png",
+      "sha256": "89cd5b5705707af979c98ee4296495e1f6ead089fd0df0e74ebd7be21919eebc",
+      "bytes": 348841
+    },
+    {
+      "path": "raw/town06-static-anchor-045/rear/semantic.png",
+      "sha256": "7984a1a2ba48831851bb9e7127e48609f75f639c64ab60277642c7814e83df9d",
+      "bytes": 8476
+    },
+    {
+      "path": "raw/town06-static-anchor-045/rear/depth.png",
+      "sha256": "ca79e8a5adba62a1789fdfe3887d30fa74248f79ff031c88a1f01562fd65769a",
+      "bytes": 155044
+    },
+    {
+      "path": "raw/town06-static-anchor-045/rear/instance.png",
+      "sha256": "4cdd1fb9290a720203e7be03abe7a9695cb376bd5c8465f41b3864fad5616784",
+      "bytes": 8846
+    },
+    {
+      "path": "raw/town06-static-anchor-045/rear_left/rgb.png",
+      "sha256": "6188d3ab54f36754b48e39643e1dbb42cfffb372dcf389889bbb322bdb181151",
+      "bytes": 312632
+    },
+    {
+      "path": "raw/town06-static-anchor-045/rear_left/semantic.png",
+      "sha256": "221458b7e45a34b2191b71bf9c766f94e83526857e3372e3439bf441e87173cc",
+      "bytes": 7637
+    },
+    {
+      "path": "raw/town06-static-anchor-045/rear_left/depth.png",
+      "sha256": "aa303d3c758b13832e765f5e8d2044ea6e35e04bd4c527ad9c6629bbe5150e2c",
+      "bytes": 141603
+    },
+    {
+      "path": "raw/town06-static-anchor-045/rear_left/instance.png",
+      "sha256": "21ea158747f73aab72c2d17a68360d5a8c3d2a7998e58853b15beba092e750d7",
+      "bytes": 7888
+    },
+    {
+      "path": "raw/town06-static-anchor-045/left/rgb.png",
+      "sha256": "624f497d3a6163fbb51da022bbb188bb8efcc06cf3a651e0b06172fe9f84ba1f",
+      "bytes": 321870
+    },
+    {
+      "path": "raw/town06-static-anchor-045/left/semantic.png",
+      "sha256": "d83fde0ee86c3e6d21d2f27e3fc10b67589ff38b57f2588144fd5a7864df9e21",
+      "bytes": 7428
+    },
+    {
+      "path": "raw/town06-static-anchor-045/left/depth.png",
+      "sha256": "8f62cd76a047721c2417cf6f101384d4dbb342260d0ff3eb2d1b401df4252485",
+      "bytes": 137345
+    },
+    {
+      "path": "raw/town06-static-anchor-045/left/instance.png",
+      "sha256": "353ec44bd0afd13a2f8aed7461a5c137933d68d06a0e597945b093a9298f4235",
+      "bytes": 7595
+    },
+    {
+      "path": "raw/town06-static-anchor-045/front_left/rgb.png",
+      "sha256": "854fcf0321b2196b68b6df9b46d818ce6ad55aeab1339daee1d15bc3c123a75f",
+      "bytes": 303866
+    },
+    {
+      "path": "raw/town06-static-anchor-045/front_left/semantic.png",
+      "sha256": "d72f20f12ada666bb13841a600d34c21cbd8983f3afc78995b298c3eb79a56fd",
+      "bytes": 7443
+    },
+    {
+      "path": "raw/town06-static-anchor-045/front_left/depth.png",
+      "sha256": "fd63fb25e39e952a8deade94059eabb9b0823eee985aefa0bfb71a909c43e422",
+      "bytes": 124988
+    },
+    {
+      "path": "raw/town06-static-anchor-045/front_left/instance.png",
+      "sha256": "f1fda6fae448b51c1e66799bb64706982bee2af8c9215e0d8fc30e54e217cbad",
+      "bytes": 8082
+    }
+  ],
+  "catalog": [
+    {
+      "index": 1,
+      "sample": {
+        "split": "train",
+        "task": "segmentation_only",
+        "town": "Town06",
+        "group_id": "town06-static-anchor-057",
+        "scene_id": "town06-static-anchor-057",
+        "camera": "front_right",
+        "anchor_spawn_index": 57,
+        "frame": 128344,
+        "timestamp_s": 203.10819850116968,
+        "readback_frame": 128345,
+        "T_world_from_camera": [
+          [
+            -0.7096775328587406,
+            0.704526648710911,
+            0.0,
+            410.7281156552926
+          ],
+          [
+            -0.704526648710911,
+            -0.7096775328587406,
+            0.0,
+            -25.132930055872393
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            2.0000000298023224
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "verified_obstacle_actor_ids": [],
+        "images": {
+          "rgb": {
+            "path": "raw/town06-static-anchor-057/front_right/rgb.png",
+            "frame": 128344,
+            "timestamp_s": 203.10819850116968,
+            "T_world_from_camera": [
+              [
+                -0.7096775770187378,
+                0.7045266032218933,
+                0.0,
+                410.7281188964844
+              ],
+              [
+                -0.7045266032218933,
+                -0.7096775770187378,
+                0.0,
+                -25.1329288482666
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "semantic": {
+            "path": "raw/town06-static-anchor-057/front_right/semantic.png",
+            "frame": 128344,
+            "timestamp_s": 203.10819850116968,
+            "T_world_from_camera": [
+              [
+                -0.7096775770187378,
+                0.7045266032218933,
+                0.0,
+                410.7281188964844
+              ],
+              [
+                -0.7045266032218933,
+                -0.7096775770187378,
+                0.0,
+                -25.1329288482666
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "depth": {
+            "path": "raw/town06-static-anchor-057/front_right/depth.png",
+            "frame": 128344,
+            "timestamp_s": 203.10819850116968,
+            "T_world_from_camera": [
+              [
+                -0.7096775770187378,
+                0.7045266032218933,
+                0.0,
+                410.7281188964844
+              ],
+              [
+                -0.7045266032218933,
+                -0.7096775770187378,
+                0.0,
+                -25.1329288482666
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "instance": {
+            "path": "raw/town06-static-anchor-057/front_right/instance.png",
+            "frame": 128344,
+            "timestamp_s": 203.10819850116968,
+            "T_world_from_camera": [
+              [
+                -0.7096775770187378,
+                0.7045266032218933,
+                0.0,
+                410.7281188964844
+              ],
+              [
+                -0.7045266032218933,
+                -0.7096775770187378,
+                0.0,
+                -25.1329288482666
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "rejected_capture_attempts": []
+      },
+      "support": [
+        109704,
+        16323,
+        9339,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1431,
+        2,
+        50963,
+        48,
+        7597,
+        0,
+        34993
+      ],
+      "raw_wall_pixels": 50963,
+      "raw_fence_pixels": 48,
+      "non_sky_other_pixels": 89115,
+      "page": "page-00.png"
+    },
+    {
+      "index": 3,
+      "sample": {
+        "split": "train",
+        "task": "segmentation_only",
+        "town": "Town06",
+        "group_id": "town06-static-anchor-057",
+        "scene_id": "town06-static-anchor-057",
+        "camera": "rear_right",
+        "anchor_spawn_index": 57,
+        "frame": 128372,
+        "timestamp_s": 204.5081985220313,
+        "readback_frame": 128373,
+        "T_world_from_camera": [
+          [
+            0.704526648710911,
+            0.7096775328587406,
+            0.0,
+            413.0281005097518
+          ],
+          [
+            -0.7096775328587406,
+            0.704526648710911,
+            0.0,
+            -25.141307174029357
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            2.0000000298023224
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "verified_obstacle_actor_ids": [],
+        "images": {
+          "rgb": {
+            "path": "raw/town06-static-anchor-057/rear_right/rgb.png",
+            "frame": 128372,
+            "timestamp_s": 204.5081985220313,
+            "T_world_from_camera": [
+              [
+                0.7045261859893799,
+                0.7096779942512512,
+                0.0,
+                413.0281066894531
+              ],
+              [
+                -0.7096779942512512,
+                0.7045261859893799,
+                0.0,
+                -25.141307830810547
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "semantic": {
+            "path": "raw/town06-static-anchor-057/rear_right/semantic.png",
+            "frame": 128372,
+            "timestamp_s": 204.5081985220313,
+            "T_world_from_camera": [
+              [
+                0.7045261859893799,
+                0.7096779942512512,
+                0.0,
+                413.0281066894531
+              ],
+              [
+                -0.7096779942512512,
+                0.7045261859893799,
+                0.0,
+                -25.141307830810547
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "depth": {
+            "path": "raw/town06-static-anchor-057/rear_right/depth.png",
+            "frame": 128372,
+            "timestamp_s": 204.5081985220313,
+            "T_world_from_camera": [
+              [
+                0.7045261859893799,
+                0.7096779942512512,
+                0.0,
+                413.0281066894531
+              ],
+              [
+                -0.7096779942512512,
+                0.7045261859893799,
+                0.0,
+                -25.141307830810547
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "instance": {
+            "path": "raw/town06-static-anchor-057/rear_right/instance.png",
+            "frame": 128372,
+            "timestamp_s": 204.5081985220313,
+            "T_world_from_camera": [
+              [
+                0.7045261859893799,
+                0.7096779942512512,
+                0.0,
+                413.0281066894531
+              ],
+              [
+                -0.7096779942512512,
+                0.7045261859893799,
+                0.0,
+                -25.141307830810547
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "rejected_capture_attempts": []
+      },
+      "support": [
+        120832,
+        16278,
+        9336,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1431,
+        0,
+        157,
+        5697,
+        303,
+        0,
+        76366
+      ],
+      "raw_wall_pixels": 157,
+      "raw_fence_pixels": 5697,
+      "non_sky_other_pixels": 58753,
+      "page": "page-00.png"
+    },
+    {
+      "index": 2,
+      "sample": {
+        "split": "train",
+        "task": "segmentation_only",
+        "town": "Town06",
+        "group_id": "town06-static-anchor-057",
+        "scene_id": "town06-static-anchor-057",
+        "camera": "right",
+        "anchor_spawn_index": 57,
+        "frame": 128358,
+        "timestamp_s": 203.8081985116005,
+        "readback_frame": 128359,
+        "T_world_from_camera": [
+          [
+            -0.003642181461271585,
+            0.9999933840436367,
+            0.0,
+            411.8277441788031
+          ],
+          [
+            -0.9999933840436367,
+            -0.003642181461271585,
+            0.0,
+            -25.23693586587898
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            2.0000000298023224
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "verified_obstacle_actor_ids": [],
+        "images": {
+          "rgb": {
+            "path": "raw/town06-static-anchor-057/right/rgb.png",
+            "frame": 128358,
+            "timestamp_s": 203.8081985116005,
+            "T_world_from_camera": [
+              [
+                -0.003642117837443948,
+                0.9999933838844299,
+                0.0,
+                411.8277587890625
+              ],
+              [
+                -0.9999933838844299,
+                -0.003642117837443948,
+                0.0,
+                -25.236934661865234
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "semantic": {
+            "path": "raw/town06-static-anchor-057/right/semantic.png",
+            "frame": 128358,
+            "timestamp_s": 203.8081985116005,
+            "T_world_from_camera": [
+              [
+                -0.003642117837443948,
+                0.9999933838844299,
+                0.0,
+                411.8277587890625
+              ],
+              [
+                -0.9999933838844299,
+                -0.003642117837443948,
+                0.0,
+                -25.236934661865234
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "depth": {
+            "path": "raw/town06-static-anchor-057/right/depth.png",
+            "frame": 128358,
+            "timestamp_s": 203.8081985116005,
+            "T_world_from_camera": [
+              [
+                -0.003642117837443948,
+                0.9999933838844299,
+                0.0,
+                411.8277587890625
+              ],
+              [
+                -0.9999933838844299,
+                -0.003642117837443948,
+                0.0,
+                -25.236934661865234
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "instance": {
+            "path": "raw/town06-static-anchor-057/right/instance.png",
+            "frame": 128358,
+            "timestamp_s": 203.8081985116005,
+            "T_world_from_camera": [
+              [
+                -0.003642117837443948,
+                0.9999933838844299,
+                0.0,
+                411.8277587890625
+              ],
+              [
+                -0.9999933838844299,
+                -0.003642117837443948,
+                0.0,
+                -25.236934661865234
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "rejected_capture_attempts": []
+      },
+      "support": [
+        116808,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        31844,
+        2885,
+        10476,
+        0,
+        68387
+      ],
+      "raw_wall_pixels": 31844,
+      "raw_fence_pixels": 2885,
+      "non_sky_other_pixels": 99410,
+      "page": "page-00.png"
+    },
+    {
+      "index": 10,
+      "sample": {
+        "split": "train",
+        "task": "segmentation_only",
+        "town": "Town06",
+        "group_id": "town06-static-anchor-053",
+        "scene_id": "town06-static-anchor-053",
+        "camera": "right",
+        "anchor_spawn_index": 53,
+        "frame": 128470,
+        "timestamp_s": 209.408198595047,
+        "readback_frame": 128471,
+        "T_world_from_camera": [
+          [
+            -0.003642181461271585,
+            0.9999933840436367,
+            0.0,
+            397.38679569247495
+          ],
+          [
+            -0.9999933840436367,
+            -0.003642181461271585,
+            0.0,
+            -25.18433691263191
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            2.0000000298023224
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "verified_obstacle_actor_ids": [],
+        "images": {
+          "rgb": {
+            "path": "raw/town06-static-anchor-053/right/rgb.png",
+            "frame": 128470,
+            "timestamp_s": 209.408198595047,
+            "T_world_from_camera": [
+              [
+                -0.003642117837443948,
+                0.9999933838844299,
+                0.0,
+                397.38677978515625
+              ],
+              [
+                -0.9999933838844299,
+                -0.003642117837443948,
+                0.0,
+                -25.184337615966797
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "semantic": {
+            "path": "raw/town06-static-anchor-053/right/semantic.png",
+            "frame": 128470,
+            "timestamp_s": 209.408198595047,
+            "T_world_from_camera": [
+              [
+                -0.003642117837443948,
+                0.9999933838844299,
+                0.0,
+                397.38677978515625
+              ],
+              [
+                -0.9999933838844299,
+                -0.003642117837443948,
+                0.0,
+                -25.184337615966797
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "depth": {
+            "path": "raw/town06-static-anchor-053/right/depth.png",
+            "frame": 128470,
+            "timestamp_s": 209.408198595047,
+            "T_world_from_camera": [
+              [
+                -0.003642117837443948,
+                0.9999933838844299,
+                0.0,
+                397.38677978515625
+              ],
+              [
+                -0.9999933838844299,
+                -0.003642117837443948,
+                0.0,
+                -25.184337615966797
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "instance": {
+            "path": "raw/town06-static-anchor-053/right/instance.png",
+            "frame": 128470,
+            "timestamp_s": 209.408198595047,
+            "T_world_from_camera": [
+              [
+                -0.003642117837443948,
+                0.9999933838844299,
+                0.0,
+                397.38677978515625
+              ],
+              [
+                -0.9999933838844299,
+                -0.003642117837443948,
+                0.0,
+                -25.184337615966797
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "rejected_capture_attempts": []
+      },
+      "support": [
+        116299,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        75830,
+        0,
+        0,
+        0,
+        38271
+      ],
+      "raw_wall_pixels": 75830,
+      "raw_fence_pixels": 0,
+      "non_sky_other_pixels": 106697,
+      "page": "page-00.png"
+    },
+    {
+      "index": 11,
+      "sample": {
+        "split": "train",
+        "task": "segmentation_only",
+        "town": "Town06",
+        "group_id": "town06-static-anchor-053",
+        "scene_id": "town06-static-anchor-053",
+        "camera": "rear_right",
+        "anchor_spawn_index": 53,
+        "frame": 128484,
+        "timestamp_s": 210.1081986054778,
+        "readback_frame": 128485,
+        "T_world_from_camera": [
+          [
+            0.704526648710911,
+            0.7096775328587406,
+            0.0,
+            398.5871520234237
+          ],
+          [
+            -0.7096775328587406,
+            0.704526648710911,
+            0.0,
+            -25.088708220782287
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            2.0000000298023224
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "verified_obstacle_actor_ids": [],
+        "images": {
+          "rgb": {
+            "path": "raw/town06-static-anchor-053/rear_right/rgb.png",
+            "frame": 128484,
+            "timestamp_s": 210.1081986054778,
+            "T_world_from_camera": [
+              [
+                0.7045261859893799,
+                0.7096779942512512,
+                0.0,
+                398.5871276855469
+              ],
+              [
+                -0.7096779942512512,
+                0.7045261859893799,
+                0.0,
+                -25.088708877563477
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "semantic": {
+            "path": "raw/town06-static-anchor-053/rear_right/semantic.png",
+            "frame": 128484,
+            "timestamp_s": 210.1081986054778,
+            "T_world_from_camera": [
+              [
+                0.7045261859893799,
+                0.7096779942512512,
+                0.0,
+                398.5871276855469
+              ],
+              [
+                -0.7096779942512512,
+                0.7045261859893799,
+                0.0,
+                -25.088708877563477
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "depth": {
+            "path": "raw/town06-static-anchor-053/rear_right/depth.png",
+            "frame": 128484,
+            "timestamp_s": 210.1081986054778,
+            "T_world_from_camera": [
+              [
+                0.7045261859893799,
+                0.7096779942512512,
+                0.0,
+                398.5871276855469
+              ],
+              [
+                -0.7096779942512512,
+                0.7045261859893799,
+                0.0,
+                -25.088708877563477
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "instance": {
+            "path": "raw/town06-static-anchor-053/rear_right/instance.png",
+            "frame": 128484,
+            "timestamp_s": 210.1081986054778,
+            "T_world_from_camera": [
+              [
+                0.7045261859893799,
+                0.7096779942512512,
+                0.0,
+                398.5871276855469
+              ],
+              [
+                -0.7096779942512512,
+                0.7045261859893799,
+                0.0,
+                -25.088708877563477
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "rejected_capture_attempts": []
+      },
+      "support": [
+        112606,
+        16289,
+        9337,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1434,
+        0,
+        47450,
+        1250,
+        1966,
+        0,
+        40068
+      ],
+      "raw_wall_pixels": 47450,
+      "raw_fence_pixels": 1250,
+      "non_sky_other_pixels": 67027,
+      "page": "page-01.png"
+    },
+    {
+      "index": 18,
+      "sample": {
+        "split": "train",
+        "task": "segmentation_only",
+        "town": "Town06",
+        "group_id": "town06-static-anchor-049",
+        "scene_id": "town06-static-anchor-049",
+        "camera": "right",
+        "anchor_spawn_index": 49,
+        "frame": 128582,
+        "timestamp_s": 215.0081986784935,
+        "readback_frame": 128583,
+        "T_world_from_camera": [
+          [
+            -0.003642181461271585,
+            0.9999933840436367,
+            0.0,
+            380.09822147372495
+          ],
+          [
+            -0.9999933840436367,
+            -0.003642181461271585,
+            0.0,
+            -25.121365797519605
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            2.0000000298023224
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "verified_obstacle_actor_ids": [],
+        "images": {
+          "rgb": {
+            "path": "raw/town06-static-anchor-049/right/rgb.png",
+            "frame": 128582,
+            "timestamp_s": 215.0081986784935,
+            "T_world_from_camera": [
+              [
+                -0.003642117837443948,
+                0.9999933838844299,
+                0.0,
+                380.0982360839844
+              ],
+              [
+                -0.9999933838844299,
+                -0.003642117837443948,
+                0.0,
+                -25.121366500854492
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "semantic": {
+            "path": "raw/town06-static-anchor-049/right/semantic.png",
+            "frame": 128582,
+            "timestamp_s": 215.0081986784935,
+            "T_world_from_camera": [
+              [
+                -0.003642117837443948,
+                0.9999933838844299,
+                0.0,
+                380.0982360839844
+              ],
+              [
+                -0.9999933838844299,
+                -0.003642117837443948,
+                0.0,
+                -25.121366500854492
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "depth": {
+            "path": "raw/town06-static-anchor-049/right/depth.png",
+            "frame": 128582,
+            "timestamp_s": 215.0081986784935,
+            "T_world_from_camera": [
+              [
+                -0.003642117837443948,
+                0.9999933838844299,
+                0.0,
+                380.0982360839844
+              ],
+              [
+                -0.9999933838844299,
+                -0.003642117837443948,
+                0.0,
+                -25.121366500854492
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "instance": {
+            "path": "raw/town06-static-anchor-049/right/instance.png",
+            "frame": 128582,
+            "timestamp_s": 215.0081986784935,
+            "T_world_from_camera": [
+              [
+                -0.003642117837443948,
+                0.9999933838844299,
+                0.0,
+                380.0982360839844
+              ],
+              [
+                -0.9999933838844299,
+                -0.003642117837443948,
+                0.0,
+                -25.121366500854492
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "rejected_capture_attempts": []
+      },
+      "support": [
+        118133,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        75713,
+        0,
+        0,
+        0,
+        36554
+      ],
+      "raw_wall_pixels": 75713,
+      "raw_fence_pixels": 0,
+      "non_sky_other_pixels": 113692,
+      "page": "page-01.png"
+    },
+    {
+      "index": 19,
+      "sample": {
+        "split": "train",
+        "task": "segmentation_only",
+        "town": "Town06",
+        "group_id": "town06-static-anchor-049",
+        "scene_id": "town06-static-anchor-049",
+        "camera": "rear_right",
+        "anchor_spawn_index": 49,
+        "frame": 128596,
+        "timestamp_s": 215.7081986889243,
+        "readback_frame": 128597,
+        "T_world_from_camera": [
+          [
+            0.704526648710911,
+            0.7096775328587406,
+            0.0,
+            381.2985778046737
+          ],
+          [
+            -0.7096775328587406,
+            0.704526648710911,
+            0.0,
+            -25.025737105669982
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            2.0000000298023224
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "verified_obstacle_actor_ids": [],
+        "images": {
+          "rgb": {
+            "path": "raw/town06-static-anchor-049/rear_right/rgb.png",
+            "frame": 128596,
+            "timestamp_s": 215.7081986889243,
+            "T_world_from_camera": [
+              [
+                0.7045261859893799,
+                0.7096779942512512,
+                0.0,
+                381.298583984375
+              ],
+              [
+                -0.7096779942512512,
+                0.7045261859893799,
+                0.0,
+                -25.02573585510254
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "semantic": {
+            "path": "raw/town06-static-anchor-049/rear_right/semantic.png",
+            "frame": 128596,
+            "timestamp_s": 215.7081986889243,
+            "T_world_from_camera": [
+              [
+                0.7045261859893799,
+                0.7096779942512512,
+                0.0,
+                381.298583984375
+              ],
+              [
+                -0.7096779942512512,
+                0.7045261859893799,
+                0.0,
+                -25.02573585510254
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "depth": {
+            "path": "raw/town06-static-anchor-049/rear_right/depth.png",
+            "frame": 128596,
+            "timestamp_s": 215.7081986889243,
+            "T_world_from_camera": [
+              [
+                0.7045261859893799,
+                0.7096779942512512,
+                0.0,
+                381.298583984375
+              ],
+              [
+                -0.7096779942512512,
+                0.7045261859893799,
+                0.0,
+                -25.02573585510254
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "instance": {
+            "path": "raw/town06-static-anchor-049/rear_right/instance.png",
+            "frame": 128596,
+            "timestamp_s": 215.7081986889243,
+            "T_world_from_camera": [
+              [
+                0.7045261859893799,
+                0.7096779942512512,
+                0.0,
+                381.298583984375
+              ],
+              [
+                -0.7096779942512512,
+                0.7045261859893799,
+                0.0,
+                -25.02573585510254
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "rejected_capture_attempts": []
+      },
+      "support": [
+        113130,
+        16305,
+        9336,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1428,
+        0,
+        50287,
+        472,
+        1874,
+        0,
+        37568
+      ],
+      "raw_wall_pixels": 50287,
+      "raw_fence_pixels": 472,
+      "non_sky_other_pixels": 85338,
+      "page": "page-01.png"
+    },
+    {
+      "index": 26,
+      "sample": {
+        "split": "train",
+        "task": "segmentation_only",
+        "town": "Town06",
+        "group_id": "town06-static-anchor-045",
+        "scene_id": "town06-static-anchor-045",
+        "camera": "right",
+        "anchor_spawn_index": 45,
+        "frame": 128694,
+        "timestamp_s": 220.60819876194,
+        "readback_frame": 128695,
+        "T_world_from_camera": [
+          [
+            -0.003642181461271585,
+            0.9999933840436367,
+            0.0,
+            368.1384131241156
+          ],
+          [
+            -0.9999933840436367,
+            -0.003642181461271585,
+            0.0,
+            -25.07781721353523
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            2.0000000298023224
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "verified_obstacle_actor_ids": [],
+        "images": {
+          "rgb": {
+            "path": "raw/town06-static-anchor-045/right/rgb.png",
+            "frame": 128694,
+            "timestamp_s": 220.60819876194,
+            "T_world_from_camera": [
+              [
+                -0.003642117837443948,
+                0.9999933838844299,
+                0.0,
+                368.138427734375
+              ],
+              [
+                -0.9999933838844299,
+                -0.003642117837443948,
+                0.0,
+                -25.077816009521484
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "semantic": {
+            "path": "raw/town06-static-anchor-045/right/semantic.png",
+            "frame": 128694,
+            "timestamp_s": 220.60819876194,
+            "T_world_from_camera": [
+              [
+                -0.003642117837443948,
+                0.9999933838844299,
+                0.0,
+                368.138427734375
+              ],
+              [
+                -0.9999933838844299,
+                -0.003642117837443948,
+                0.0,
+                -25.077816009521484
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "depth": {
+            "path": "raw/town06-static-anchor-045/right/depth.png",
+            "frame": 128694,
+            "timestamp_s": 220.60819876194,
+            "T_world_from_camera": [
+              [
+                -0.003642117837443948,
+                0.9999933838844299,
+                0.0,
+                368.138427734375
+              ],
+              [
+                -0.9999933838844299,
+                -0.003642117837443948,
+                0.0,
+                -25.077816009521484
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "instance": {
+            "path": "raw/town06-static-anchor-045/right/instance.png",
+            "frame": 128694,
+            "timestamp_s": 220.60819876194,
+            "T_world_from_camera": [
+              [
+                -0.003642117837443948,
+                0.9999933838844299,
+                0.0,
+                368.138427734375
+              ],
+              [
+                -0.9999933838844299,
+                -0.003642117837443948,
+                0.0,
+                -25.077816009521484
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "rejected_capture_attempts": []
+      },
+      "support": [
+        117680,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        75363,
+        0,
+        0,
+        0,
+        37357
+      ],
+      "raw_wall_pixels": 75363,
+      "raw_fence_pixels": 0,
+      "non_sky_other_pixels": 107371,
+      "page": "page-01.png"
+    },
+    {
+      "index": 27,
+      "sample": {
+        "split": "train",
+        "task": "segmentation_only",
+        "town": "Town06",
+        "group_id": "town06-static-anchor-045",
+        "scene_id": "town06-static-anchor-045",
+        "camera": "rear_right",
+        "anchor_spawn_index": 45,
+        "frame": 128708,
+        "timestamp_s": 221.30819877237082,
+        "readback_frame": 128709,
+        "T_world_from_camera": [
+          [
+            0.704526648710911,
+            0.7096775328587406,
+            0.0,
+            369.3387694550643
+          ],
+          [
+            -0.7096775328587406,
+            0.704526648710911,
+            0.0,
+            -24.982188521685607
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            2.0000000298023224
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "verified_obstacle_actor_ids": [],
+        "images": {
+          "rgb": {
+            "path": "raw/town06-static-anchor-045/rear_right/rgb.png",
+            "frame": 128708,
+            "timestamp_s": 221.30819877237082,
+            "T_world_from_camera": [
+              [
+                0.7045261859893799,
+                0.7096779942512512,
+                0.0,
+                369.3387756347656
+              ],
+              [
+                -0.7096779942512512,
+                0.7045261859893799,
+                0.0,
+                -24.982189178466797
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "semantic": {
+            "path": "raw/town06-static-anchor-045/rear_right/semantic.png",
+            "frame": 128708,
+            "timestamp_s": 221.30819877237082,
+            "T_world_from_camera": [
+              [
+                0.7045261859893799,
+                0.7096779942512512,
+                0.0,
+                369.3387756347656
+              ],
+              [
+                -0.7096779942512512,
+                0.7045261859893799,
+                0.0,
+                -24.982189178466797
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "depth": {
+            "path": "raw/town06-static-anchor-045/rear_right/depth.png",
+            "frame": 128708,
+            "timestamp_s": 221.30819877237082,
+            "T_world_from_camera": [
+              [
+                0.7045261859893799,
+                0.7096779942512512,
+                0.0,
+                369.3387756347656
+              ],
+              [
+                -0.7096779942512512,
+                0.7045261859893799,
+                0.0,
+                -24.982189178466797
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "instance": {
+            "path": "raw/town06-static-anchor-045/rear_right/instance.png",
+            "frame": 128708,
+            "timestamp_s": 221.30819877237082,
+            "T_world_from_camera": [
+              [
+                0.7045261859893799,
+                0.7096779942512512,
+                0.0,
+                369.3387756347656
+              ],
+              [
+                -0.7096779942512512,
+                0.7045261859893799,
+                0.0,
+                -24.982189178466797
+              ],
+              [
+                0.0,
+                -0.0,
+                1.0,
+                2.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "rejected_capture_attempts": []
+      },
+      "support": [
+        113015,
+        16306,
+        9338,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1429,
+        0,
+        51616,
+        312,
+        709,
+        0,
+        37675
+      ],
+      "raw_wall_pixels": 51616,
+      "raw_fence_pixels": 312,
+      "non_sky_other_pixels": 87644,
+      "page": "page-02.png"
+    }
+  ],
+  "pages": [
+    {
+      "path": "page-00.png",
+      "sha256": "b7b7f9de2187ec2ff8e17af40af46597f42695f6ca69748050559f1d58531cf0",
+      "indices": [
+        1,
+        3,
+        2,
+        10
+      ]
+    },
+    {
+      "path": "page-01.png",
+      "sha256": "e7ee25623a3abce1c61578b506eba07553b94d9d127642e72b72bcaf8d3d68d8",
+      "indices": [
+        11,
+        18,
+        19,
+        26
+      ]
+    },
+    {
+      "path": "page-02.png",
+      "sha256": "82916512e68892cf657b7db5788fc99da3e664488fae870f019ce9665f3e3e40",
+      "indices": [
+        27
+      ]
+    }
+  ]
+}

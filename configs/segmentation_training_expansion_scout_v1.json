@@ -1,0 +1,37 @@
+{
+  "version": "unused-training-town-scout-v1",
+  "task": "segmentation_training_expansion_scout_only",
+  "training_approved": false,
+  "candidate_training_towns": [
+    "Town06",
+    "Town07"
+  ],
+  "native_map_availability_unverified": true,
+  "source_audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+  "source_plan_sha256": "691e434338f0ddacc3be57cac2f499f25a894470c84d98783a9a9d044eefda52",
+  "main_rig_sha256": "df872f550458d9e284927b8bf1ccac8def4851fb7ff7e02a9a0f838aac537f10",
+  "original_towns_by_split": {
+    "train": [
+      "Town01",
+      "Town03"
+    ],
+    "validation": [
+      "Town04"
+    ],
+    "development": [
+      "Town05"
+    ],
+    "lockbox": [
+      "Town02"
+    ]
+  },
+  "original_map_hashes": {
+    "Town01": "97a7f6ac67812567e5c8ee0599cd823b23f80f30f3f97c502212e38b72e2b709",
+    "Town03": "abf177bcd9b66cfefb7ac4919f6456815f1384f4229f1343c8a6a90bbb7713c9",
+    "Town04": "4dddd1560ab7812b0e89cd4a523d8b6f2b93947eafb496d9eeb83cc772116c85",
+    "Town05": "7edc53b0be840e177598da7a4ed9571146d7b2595ce280d154c90f92e8a48851",
+    "Town02": "953c05f17def231239ffcadba3307628a82d0d335b67b4e29c3098f7aed1dd7d"
+  },
+  "weather_for_any_future_capture": "ClearNoon",
+  "scope": "Metadata candidate reservation only. No new native inventory/RGB captured, no new train data or dynamics approved. New training towns must differ from all original map families and OpenDrive hashes. Original v1 data/training loader remains unchanged."
+}

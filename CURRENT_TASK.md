@@ -65,3 +65,12 @@ seg v5正式6epochs/10272updates已全走完，第6輪選定mIoU .59002532846647
 seg state已completed、exact reloadtrue，best SHA3fe7bd08d885e481b7435fdf466945f142f8323447cca46bf31c32455835a53f；validation SHA f33385596c75cb12e4022bbba972c33bdeba5d80943f5ceff4a15d40fc4a9350、frames SHA98c4ac93ac6595fb033a334b148775b8659b0a68b94e0c84adb7ee15c44316a0。完整file checker通過，wall/margin品質失敗；最終3頁8例已實看並封存sunny-segmentation-v5-001-completed-validation證據。峰值allocated4046.51MiB/reserved4662，training_wall5252.77s。
 
 原唯一batch於12:01:07接續train-detection，launcherPID27684。run尚未建立時先查原batch stages/native程序，不要再啟；完整86400PNG校驗在建立run之前。batch parent19772仍是唯一協調器。CPU研究與取消的接續器均已結束，沒有新GPU模型或CARLA。接下來持續完成det/phase、統一val/joint、RGB demo/bench/export，再按缺口補資料與新訓練；Phase3尚未通過。
+
+## 12:32偵測正式訓練與離線準備
+
+- det nativePID6608／launcher27684，exec仍32462，12:09完整86400PNG校驗完，overfit ratio .072984通過；重置後initial高解析val mAP50 .539253/AP50:95 .314878，不能當改善。12:14左右正式訓練起，12:32 epoch0/2000updates，規劃4epochs/19200updates；meanloss .19784、無failure。首輪約4800updates後才完整val，保持單一GPU job。
+- Completed seg v5模型卡已產生，README與evidence/phase3/registry.json更新。所有新模型heldout未開。原生server仍關，只有原batch awake helper4644（最晚16:26附近）有請求；若批次超時仍需查具體PID再補有界helper，別改電源計畫。
+- 新scripts/analyze_detector_operating_points.py已對舊v3全部3600val的原score=.5八類TP/FP/FN exact重現；固定探索grid內bike/light無同時P/R≥.5的點，證據detector-v3-operating-point-diagnostic-001。**未採用新閾值**，正式/display仍.5；待新v5完成可用同工具查confidence vs容量。
+- MixStyle-inspired prototype與6項CPU測試在scripts/experimental_feature_style.py/tests/test_experimental_feature_style.py；PHASE3_FEATURE_STYLE_EXPERIMENT.md及design JSON記錄。eval/RNG/statekeys/finite通過，但**未整合src/trainer、未GPU驗證、未訓練**，不能把design當train config。原始論文不是本專案seg品質證明。先按資料修復，保留為有界替代實驗。
+- 新scripts/scout_unused_training_town.py與configs/segmentation_training_expansion_scout_v1.json只預留Town06/07 metadata候選。5項split/Opt別名/OpenDrive重名保護CPU測試及真main policy兩次--dry-run通過；**無RPC/無新inventory/無RGB，native maps是否可用尚未查**。須先等GPU全部退出，再另client準備full map，scout自己不load/tick/render。原v1 Town01/03 collector/loader完全未放寬；若擴城資料須另凍結v2 capture/audit/review/train loader，不能直接匯入。
+- 現在完整suite預期116項：原94 GPU曾全部過、新11prior/selection/identity＋6feature prototype＋5unusedTown focused CPU已各自通過，**尚未整批合跑116GPU**。canonical active batch全部來源於12:28再核對仍完全不變。native監看functions cell234僅read-only loop，已停止；不影響exec32462。

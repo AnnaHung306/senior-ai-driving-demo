@@ -1,0 +1,15 @@
+{
+  "status": "CPU_policy_preflight_only_native_not_run",
+  "focused_tests": 5,
+  "actual_main_policy_dry_run_towns": [
+    "Town06",
+    "Town07"
+  ],
+  "RPC_calls": 0,
+  "native_map_availability_verified": false,
+  "rendered_images": 0,
+  "training_approved": false,
+  "tool_sha256": "f3be41b5eeeac63229fb23f61387d7abb1352f42d80e5daa69ea6cca86802684",
+  "policy_sha256": "31129735bd35f221c03bbc95a764cf54aa0e0b52d880e3607b41e118b7ac257b",
+  "limits": "Metadata-only tool; actual native inventory, capture, independent audit/review and versioned training integration are pending. Existing train-town-only v1 pipeline unchanged."
+}

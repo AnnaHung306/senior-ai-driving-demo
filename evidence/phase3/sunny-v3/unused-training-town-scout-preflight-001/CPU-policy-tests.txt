@@ -1,0 +1,10 @@
+test_added_original_split_blocks_candidate_and_family_normalizes_alias (test_unused_training_town.UnusedTownPolicyTests.test_added_original_split_blocks_candidate_and_family_normalizes_alias) ... ok
+test_explicit_unused_full_towns_allowed (test_unused_training_town.UnusedTownPolicyTests.test_explicit_unused_full_towns_allowed) ... ok
+test_native_opendrive_alias_rejected_for_every_original_map (test_unused_training_town.UnusedTownPolicyTests.test_native_opendrive_alias_rejected_for_every_original_map) ... ok
+test_original_splits_variants_and_unreserved_towns_rejected (test_unused_training_town.UnusedTownPolicyTests.test_original_splits_variants_and_unreserved_towns_rejected) ... ok
+test_policy_cannot_override_original_split_or_grant_training_approval (test_unused_training_town.UnusedTownPolicyTests.test_policy_cannot_override_original_split_or_grant_training_approval) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK

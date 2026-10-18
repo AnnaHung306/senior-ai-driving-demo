@@ -1,0 +1,36 @@
+{
+  "status": "completed_CPU_depth_branch_feasibility_only",
+  "mechanism_checks_passed": true,
+  "small_fit_sanity_passed": true,
+  "fit_depth_loss_ratio": 0.3654014581583219,
+  "updates": 24,
+  "training_wall_s": 23.90700000000652,
+  "base_parameters": 3589953,
+  "additional_depth_parameters": 6945,
+  "initial_RGB_segmentation_exact_parent": true,
+  "depth_only_gradient_norms_head_and_encoder": [
+    0.058320239186286926,
+    0.029494469985365868
+  ],
+  "checkpoint_reload_identical": true,
+  "segmentation_bypass_identical": true,
+  "parent_checkpoint_unchanged": true,
+  "network_forward_inputs": [
+    "RGB"
+  ],
+  "device": "CPU FP32",
+  "GPU_capacity_tested": false,
+  "prototype_checkpoint_sha256": "f70eecc8163f13a10ebf926edc4a38534e0c0bf8a38f9e355b351467cc5ce3d4",
+  "pages": [
+    {
+      "path": "depth-page-0.png",
+      "sha256": "d9c3f0d00ec343c28b1aebf62b75325b6effb1b3c7a6c9778c759965d609d0bf"
+    },
+    {
+      "path": "depth-page-1.png",
+      "sha256": "d22a39208e31970ffe9e991f884720ea520d72580d911474f76a1ff2e60604ea"
+    }
+  ],
+  "contract_sha256": "445e6e0da5f070419159b65fcfb73ae5af978f93f208033a2b5768a6c46c99e1",
+  "limits": "Only four train fit views and four unused train views, 24 updates without augmentation. No validation/heldout, no production integration, no evidence of improved cross-town Wall IoU or CUDA/BF16 capacity. Assistant visual review pending."
+}

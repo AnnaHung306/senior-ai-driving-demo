@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "main_batch_source_files_unchanged": 50,
+  "main_configs_unchanged": 3,
+  "queued_QA_tools_unchanged": 4,
+  "prototype_sources_unchanged": 3,
+  "differences": [],
+  "scope": "File provenance/isolation only. Not a new GPU or model-quality check."
+}

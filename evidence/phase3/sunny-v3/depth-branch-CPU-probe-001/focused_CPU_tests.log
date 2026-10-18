@@ -1,0 +1,11 @@
+test_RGB_identity_is_RNG_neutral_and_depth_reaches_shared_encoder (test_experimental_depth_branch.DepthBranchPrototypeTests.test_RGB_identity_is_RNG_neutral_and_depth_reaches_shared_encoder) ... ok
+test_ignored_pixels_and_empty_masks_have_no_loss_or_gradient (test_experimental_depth_branch.DepthBranchPrototypeTests.test_ignored_pixels_and_empty_masks_have_no_loss_or_gradient) ... C:\code\senior_AI\tests\test_experimental_depth_branch.py:24: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:837.)
+  self.assertEqual(float(loss),0.);self.assertEqual(float(prediction.grad[0,0,0,1]),0.)
+ok
+test_packed_RGB_order_metric_scale_and_invalid_masks (test_experimental_depth_branch.DepthBranchPrototypeTests.test_packed_RGB_order_metric_scale_and_invalid_masks) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.275s
+
+OK

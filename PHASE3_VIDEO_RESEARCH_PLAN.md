@@ -2,6 +2,8 @@
 
 2026-10-18。範圍仍為 ClearNoon、RGB-only 正式推論、Phase 3 二維感知。本文件是改進方案與可行性證據；沒有宣稱已訓練下列新模型，也沒有變更正在執行的 v6 批次。
 
+**最新小測：**使用者後續要求先只做有限深度分支可行性，不大量嘗試。已另跑一次CPU FP32原型：4張fit＋4張其他原train view、24updates、新增6945參數，深度fit loss .11706→.04277、其他train view .13544→.04399，depth-only梯度可回傳encoder、初始RGB語意與原模型exact、checkpoint重載exact。兩頁實看仍有條紋／模糊／遠景錯距，GPU/BF16及Wall跨城鎮改善未驗證；尚未正式整合，也未自動啟動下文的3424-update對照。收據與圖見[evidence](evidence/phase3/sunny-v3/depth-branch-CPU-probe-001/README.md)。
+
 ## 已實際檢視的內容與限制
 
 指定[影片](https://www.youtube.com/watch?v=--cGYatMESY)為大刘科普的18:45技術解說。已用瀏覽器檢視關鍵畫面及燒錄字幕：1:52 RegNet／BiFPN／多任務head、5:37影像到車體座標、7:30時間資訊、9:22 Spatial RNN、11:15離線標註流程、15:15 Depth CNN／Pose CNN重建圖。

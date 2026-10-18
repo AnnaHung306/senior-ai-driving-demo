@@ -1,0 +1,24 @@
+{
+  "status": "assistant_visually_reviewed_CPU_prototype_only",
+  "report_sha256": "d450e0fcc01c6320e220196ecb8426a95dbfabebd48c81efdda44c2084ae5a99",
+  "prototype_checkpoint_sha256": "f70eecc8163f13a10ebf926edc4a38534e0c0bf8a38f9e355b351467cc5ce3d4",
+  "pages_reviewed": [
+    {
+      "path": "depth-page-0.png",
+      "sha256": "d9c3f0d00ec343c28b1aebf62b75325b6effb1b3c7a6c9778c759965d609d0bf"
+    },
+    {
+      "path": "depth-page-1.png",
+      "sha256": "d22a39208e31970ffe9e991f884720ea520d72580d911474f76a1ff2e60604ea"
+    }
+  ],
+  "observations": [
+    "Both pages viewed, four original train contexts: two fitted and two from unused train scenes. After24 depth shows a clearer near-to-far road gradient and greater foreground/background separation than the random head.",
+    "Predicted depth still has texture imprint, road/sidewalk bands, blurred object boundaries, and incorrect building/distant-scene distances. The four unused train views retain RMSE14.29m and AbsRel.327; this is a mechanism/learning check, not accurate deployment depth."
+  ],
+  "display_limits": "GT validity mask (including sky exclusion) is applied to all depth display columns for comparison. The black sky/borders in the panels are not a learned sky mask or proof of correctly predicted depth boundaries. Network forward receives RGB only.",
+  "limits": [
+    "24 updates on4 train images, 4 other train images only. No validation/heldout or Wall-IoU improvement claim.",
+    "CPU FP32 only; CUDA/BF16 memory, augmentation alignment and production integration remain untested. No extra training or automatic queue created."
+  ]
+}

@@ -1,3 +1,17 @@
+## 最新接續 18:19：使用者要求有限depth分支小測，已完成，勿自動擴大
+
+最新授權範圍是「模擬器畫面為主、不考慮實際應用或擴及；先帶入depth分支看可不可用，不大量嘗試，再考慮正式納入」。已完成一次隔離CPU原型，**不要自動啟3424updates/B0B1/fullseg訓練或額外GPU排程**。既有原detector batch79387照舊在跑，18:19第一輪4200/19200updates，postQA45681/file checker59456依舊等原批次，不因小測而取消。CARLA關，所有50main frozen source/3configs/4queuedQAtools再核對0差異，三個prototype來源也exact。新code只scripts/experimental_depth_branch.py、scripts/probe_depth_branch.py、tests/test_experimental_depth_branch.py，不碰任何SRC或正式train/eval。
+
+CPU實跑exec76090已exit0：artifacts/runs/depth-branch-CPU-probe-001。completed v6 best0a3fe...初始化，4fitviews（Town01-00/Town03-00各front/front_left）＋4unused原TRAINviews（Town01-01/Town03-01），固定第一張、所有32PNG/index/manifests/calibs/SHA驗證。共用原MobileUNet dec4 stride4 feature，原forward不變，call期間temporary hook捕捉feature且finally移除；head48→16→1/sigmoid6945參數，FP32；head初始化fork_rng不消耗主RNG。原seg CE+.5Dice+.2depth normalized-log smoothL1，baseLR1e-5/head.003、batch1、無augmentation，24updates，CPU2threads僅23.907s。**只CPU，GPU/BF16容量／隨機幾何整合未測**；不搶現有GPU、不排自動後續。
+
+fit depth loss .117061818→.042774559（ratio .36540146），unused TRAIN .135440683→.043985286；fit AbsRel .80207→.36636/RMSE20.137→13.525m；unused TRAIN AbsRel .92671→.32700/RMSE21.021→14.290m。depth-only gradient head.0583202／shared encoder.0294945，finite非零；8張initial CPU RGB logits exact原父模型、depth bypass相同、checkpoint雙輸出reload bitwise exact、原parentbest bytes不變。proto checkpoint f70eecc8163f13a10ebf926edc4a38534e0c0bf8a38f9e355b351467cc5ce3d4保留ignored，不假稱在Git。沒有val/development/lockbox；所選TRAIN Wall分數雖存於report不可當depth改善因果或跨town品質。
+
+兩頁四個情境已實看並寫visual_review：道路遠近梯度／前背景有學習，但紋理印記／道路條紋／模糊邊緣及遠景錯距仍見。**depth顯示各欄套GT valid mask，黑sky不是模型預測遮罩**；forward仍只有RGB，GTdepth只loss。3項focused CPU tests已過，rawlog artifacts/reports/depth-branch-cpu-tests-001.log及evidence。原型report/contract/steps/before-after/32PNG SHA/sources/testslog/2pages/visualreview/sourceisolation已封存evidence/phase3/sunny-v3/depth-branch-CPU-probe-001；研究plan已加實測補充。可判接法能跑、能回傳梯度及短程學習；還不能判正式值得納入或Wall通過，依使用者小測要求停止擴大，後續若要納入才一次小GPU檢查。
+
+先前CPU Wall-only exec25474亦已completed全3600，alpha0 .153231→alpha1最高.161307，九候選全未過，不值得自動排GPU偏置校正／擴大搜尋。完整負結果contract/report/tool/parentGPU保存在evidence/phase3/sunny-v3/segmentation-v6-wall-only-CPU-study-001；CPU alpha0與GPU原.156453差異不能當模型改善。舊prior／calibration watcher繼續維持取消。
+
+本輪新prototype/test/CPUevidence/研究補充/CURRENT_TASK待本機commit。最新已commit d7e2410為前輪研究／64view depth資料可行性；655fbac為v6seenfit28及原GPUconfusion。最終回覆本輪要簡單說小原型可行，4fit+4其他train/24updates、loss降約63.5%、新增6945params，非正式Wall改善、GPU未測、不擴大訓練，提供小測README。後續接續原Phase3仍先查實際batch/stages及postQA，不能修改凍結來源或把user新scope當放行大實驗。
+
 ## 最新接續 18:09：使用者要求先看影片／文獻並提出Wall改進方向
 
 最新使用者明確要求參考 https://www.youtube.com/watch?v=--cGYatMESY 的深度影像處理、框架及訓練，先檢視後提出可行方案，避免Wall問題反覆。這一輪重點是研究與方案，不在進行中的v6改模型。原GPU batch exec79387持續，18:06 det第一輪2700/19200updates；segv6已完但Wallfail。postQA45681與file checker59456仍等待。CPU Wall-only study25474約3100/3600，還沒讀完整grid，不根據partial選alpha。**保持所有model／train／eval／frozen QA source不變，CARLA仍關。**

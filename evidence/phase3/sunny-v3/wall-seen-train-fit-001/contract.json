@@ -1,0 +1,39 @@
+{
+  "checkpoint_sha256": "4e1a0d7ff0e2dac78c006073221ee402c9615c20a7475999d22bbe64ac67fb94",
+  "tool_sha256": "52147a25512e57ad7b7ef6f67bc3e42feebf8e82e04124a0de474ddf22059834",
+  "selection_reports": {
+    "C:\\code\\senior_AI\\artifacts\\runs\\wall-training-appearance-survey-001\\report.json": "3dc15a5279130d42f726c81a0e27acd8bdb6ebe25b442d45eb66c8fe7436c7a9",
+    "C:\\code\\senior_AI\\artifacts\\runs\\wall-training-shape-survey-001\\report.json": "9ffca17c711b04beae71c2b7c973abbf951be6466df0007ee8908a643d96b361"
+  },
+  "indices": [
+    6,
+    201,
+    427,
+    434,
+    1066,
+    1650,
+    2200,
+    2578,
+    2894,
+    3158,
+    3399,
+    3620,
+    3695,
+    3735,
+    4063,
+    4142,
+    4469,
+    4830,
+    5630,
+    5750,
+    5999,
+    6158,
+    6312,
+    6594,
+    7446,
+    7602,
+    9031,
+    9186
+  ],
+  "scope": "Seen original train selected contexts only, CPU FP32, not official GPU gates, population fit or unseen generalization."
+}

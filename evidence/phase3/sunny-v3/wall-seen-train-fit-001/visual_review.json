@@ -1,0 +1,38 @@
+{
+  "status": "reviewed_diagnostic_only",
+  "training_approved": false,
+  "reviewed_images": [
+    {
+      "path": "page-0.png",
+      "sha256": "8a255d79cb3e7dc8640145fe9c373875fa1890114a5a236f560605f91dc23273"
+    },
+    {
+      "path": "page-1.png",
+      "sha256": "337988c674e5e9cb98226546225378fd54747236940395ee81f522c1733f2545"
+    }
+  ],
+  "files": [
+    {
+      "path": "contract.json",
+      "sha256": "c799960b03f7e5258f6547166244dfca143124a7e1cacf699e0ff9d186003971"
+    },
+    {
+      "path": "page-0.png",
+      "sha256": "8a255d79cb3e7dc8640145fe9c373875fa1890114a5a236f560605f91dc23273"
+    },
+    {
+      "path": "page-1.png",
+      "sha256": "337988c674e5e9cb98226546225378fd54747236940395ee81f522c1733f2545"
+    },
+    {
+      "path": "report.json",
+      "sha256": "38952c09c92c524a8cb6cdaae57780b4c8284d8830fa12b2dfccc9684ea404b7"
+    },
+    {
+      "path": "tool.py",
+      "sha256": "52147a25512e57ad7b7ef6f67bc3e42feebf8e82e04124a0de474ddf22059834"
+    }
+  ],
+  "observation": "Both pages actually inspected: selected seen concrete/brick/masonry walls mostly agree with GT, with smaller boundary/occlusion and neighbouring-class errors. Selected-train wall IoU .96965 is not complete train accuracy or unseen performance. Combined with poor full validation, this supports prioritizing appearance/context coverage rather than just more updates.",
+  "limits": "28 deliberately selected, correlated, seen train views; CPU FP32 only; no model changes, acceptance scoring or heldout."
+}

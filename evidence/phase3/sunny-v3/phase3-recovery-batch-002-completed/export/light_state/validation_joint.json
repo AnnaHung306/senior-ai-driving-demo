@@ -1,0 +1,71 @@
+{
+  "confusion_true_rows_phase_prediction_columns_plus_missed": [
+    [
+      629,
+      2,
+      2,
+      0,
+      796
+    ],
+    [
+      37,
+      307,
+      22,
+      0,
+      387
+    ],
+    [
+      10,
+      5,
+      8,
+      0,
+      8
+    ],
+    [
+      2,
+      0,
+      0,
+      76,
+      77
+    ]
+  ],
+  "classes": [
+    {
+      "name": "unknown_or_unobservable",
+      "gt_objects": 1429,
+      "correct_state_precision_including_false_light_detections": 0.9011461318051576,
+      "correct_state_recall_including_missed_detections": 0.44016794961511546
+    },
+    {
+      "name": "red",
+      "gt_objects": 753,
+      "correct_state_precision_including_false_light_detections": 0.956386292834891,
+      "correct_state_recall_including_missed_detections": 0.4077025232403719
+    },
+    {
+      "name": "yellow",
+      "gt_objects": 31,
+      "correct_state_precision_including_false_light_detections": 0.25,
+      "correct_state_recall_including_missed_detections": 0.25806451612903225
+    },
+    {
+      "name": "green",
+      "gt_objects": 155,
+      "correct_state_precision_including_false_light_detections": 0.8636363636363636,
+      "correct_state_recall_including_missed_detections": 0.49032258064516127
+    }
+  ],
+  "macro_correct_state_recall": 0.3990643924074202,
+  "all_phase_classes_present": true,
+  "unmatched_detector_light_predictions_by_phase": [
+    20,
+    7,
+    0,
+    12
+  ],
+  "red_as_green_rate_all_GT_red": 0.0,
+  "red_as_green_rate_matched_red": 0.0,
+  "unmatched_detector_light_predictions": 39,
+  "ignored_detector_light_predictions": 168,
+  "protocol": "RGB-phase-score0.5-IoU50-positive-first-ignore-v2"
+}

@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "full_validation_report_exact_equal_to_parent": true,
+  "parent_checkpoint_sha256": "3fe7bd08d885e481b7435fdf466945f142f8323447cca46bf31c32455835a53f",
+  "parent_validation_sha256": "f33385596c75cb12e4022bbba972c33bdeba5d80943f5ceff4a15d40fc4a9350",
+  "initial_validation_sha256": "f33385596c75cb12e4022bbba972c33bdeba5d80943f5ceff4a15d40fc4a9350",
+  "scope": "Complete original validation reports, including every class and scene, agree before any new formal optimizer update; not new quality improvement or heldout evaluation"
+}

@@ -1,0 +1,11 @@
+{
+  "batch_contract_sha256": "1416e8f7b58d67874b9f73f5463a2450c37e49e9339a4370f02f9d796aadc8f2",
+  "tools": {
+    "review_sunny_segmentation.py": "0b82cee94e4a110913d0bfd1e42e6be4693710817c79e94f5f630a698cc3d139",
+    "review_saved_detection.py": "938c19d3ca779fb6a8e64e918d6270007242dc69441958d444bc22f75300b916",
+    "run_phase3_final_qa.py": "3c2ae12afce7986d087bae4f5a91908f009effaa34992d4d12bd2796483c313d",
+    "hold_awake_for_training.py": "d2388536bd9a2229e4feb7fdce211d23fb9e5266787af2d8e194ba63a4bf3ce8"
+  },
+  "created_utc": "2026-10-18T08:50:39.068706+00:00",
+  "scope": "One-shot current-session wait then validation-only visual artifacts. No training, tuning, new heldout access or scheduling."
+}

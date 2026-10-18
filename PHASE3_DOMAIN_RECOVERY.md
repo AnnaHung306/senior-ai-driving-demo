@@ -1,13 +1,13 @@
 <!-- 最新實際進度優先於下方歷史準備紀錄。 -->
 ## 2026-10-18 實際進度
 
-v6分割六輪已完成，原Town01/03補景與新Town06/07各1024視圖、各重複2次；新資料完整audit、四頁32情境視覺批准及實際訓練loader核對均通過。mIoU .6065211771、Fence .6057671054、可見界面F1 .6222117517通過，只有Wall .1564529351未達.2。best SHA 0a3fe3f66fb93be373f2e82218632a4f8cc277bf6067f48bb4683a71f1b2af30；原門檻不變，新heldout仍未評分。detector v6四輪在同一GPU批次接續，CARLA已退出；全批與排隊GPU錯例QA完成前保持來源凍結。
+v6分割六輪已完成，原Town01/03補景與新Town06/07各1024視圖、各重複2次；新資料完整audit、四頁32情境視覺批准及實際訓練loader核對均通過。mIoU .6065211771、Fence .6057671054、可見界面F1 .6222117517通過，只有Wall .1564529351未達.2。best SHA 0a3fe3f66fb93be373f2e82218632a4f8cc277bf6067f48bb4683a71f1b2af30；原門檻不變，新heldout仍未評分。detector v6四輪及整批11階段已完成，bicycle／motorcycle／traffic-light Recall不足；phase004 GT crop通過、joint .399064未達.4。原GPU segmentation25／saved detection15／phase31情境共18頁，以及7張bike zoom與8鏡頭demo均實看，完整證據在evidence/phase3/sunny-v3/phase3-recovery-batch-002-completed。CARLA關；新增有界深度A/B尚在跑，來源繼續凍結。
 
 新資料Wall 8,191,123像素、Terrain 31,118,819像素，仍主要是磚石牆與木柵欄／草地／岩面negative，未證實補到實心木Wall或高速路擋土牆。低牆probe亦未補齊此缺口，維持排除train。已用原始semantic raw4/raw5疊圖核對五個validation極值案例：木圍牆與擋土牆確為Wall，不能把Fence重新標Wall。正式plan SHA aff1cc0dc406830104ae50c960f2bc77b9a8d8488ea873e8c43604459e1c44ff；完整來源證據見evidence/phase3/sunny-v3/segmentation-expansion-v2-001-approved。
 
 完成模型的原GPU混淆矩陣逐scene重算：Wall真值2,048,168、預測5,321,592、TP997,032、FP4,324,560、FN1,051,136像素。FP主要真值為other2,150,166、Fence973,196、Sidewalk578,319、Terrain499,916；Town04-00/01/02 Wall IoU .13663/.02127/.20896，不能由整體平均推定每條路線均可用。收據artifacts/reports/segmentation-v6-wall-confusion-diagnostic-001.json核對3600筆與原aggregate完全一致；這是原GPU結果的文件診斷，沒有新推論或材質標籤。
 
-對完成v6的Wall-only九候選CPU診斷正在跑全3600view，只查固定偏置能否降低誤報；其他16個logit不變。它不是正式GPU校正、調低IoU門檻或模型通過。必須等全grid與實際GPU錯例QA，再決定是否值得正式採用；若不足，按seen-train與val差異選擇後續泛化實驗，避免盲目加Wall權重或重複同材質。
+完成v6的Wall-only九候選CPU診斷已跑完3600view：alpha0 Wall .153231至alpha1最高.161307，九候選全未過原門檻；不排正式GPU偏置校正或擴大搜尋。CPU alpha0與GPU原值.156453差異不能當改善。完整負結果在evidence/phase3/sunny-v3/segmentation-v6-wall-only-CPU-study-001。原GPU錯例已實看，木Fence、站牌支柱與岩面仍有Wall誤報，高速擋土牆仍有漏分；後續改法依實際差異，不盲目重複Wall權重或同材質。
 
 完成v6另沿用原先固定28張train-only外觀／negative選例，CPU FP32 Wall IoU .97739、P .98703、R .99011；兩頁六個最高FP/FN案例實看，磚石／水泥Wall大致吻合，局部邊緣仍有誤差。這不是全train accuracy，亦不是獨立或GPU驗收，但與full-val .15645落差仍支持外觀／場景轉移為優先問題。exact選例、工具、收據與原GPU混淆診斷已封存於evidence/phase3/sunny-v3/segmentation-v6-wall-diagnostics-001。
 

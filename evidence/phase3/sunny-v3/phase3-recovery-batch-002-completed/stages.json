@@ -1,0 +1,292 @@
+[
+  {
+    "name": "gpu-regression",
+    "command": [
+      "C:\\code\\senior_AI\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "started_utc": "2026-10-18T08:07:15.531392+00:00",
+    "finished": true,
+    "pid": 5988,
+    "return_code": 0,
+    "wall_s": 17.96899999998277,
+    "finished_utc": "2026-10-18T08:07:33.515856+00:00",
+    "outputs": {
+      "C:\\code\\senior_AI\\artifacts\\runs\\phase3-recovery-batch-002\\gpu-regression.log": "1f4942b527c2e278aac2a3e20a1f6492f246d3dcea0583d88befa02270e10cfc"
+    },
+    "log_sha256": "1f4942b527c2e278aac2a3e20a1f6492f246d3dcea0583d88befa02270e10cfc"
+  },
+  {
+    "name": "detector-capacity",
+    "command": [
+      "C:\\code\\senior_AI\\.venv\\Scripts\\python.exe",
+      "C:\\code\\senior_AI\\scripts\\verify_sunny_capacity.py",
+      "--config",
+      "C:\\code\\senior_AI\\configs\\sunny_detection_v6_1.json",
+      "--output",
+      "C:\\code\\senior_AI\\artifacts\\runs\\phase3-recovery-batch-002\\detector-capacity.json"
+    ],
+    "started_utc": "2026-10-18T08:07:33.528418+00:00",
+    "finished": true,
+    "pid": 8692,
+    "return_code": 0,
+    "wall_s": 10.703999999997905,
+    "finished_utc": "2026-10-18T08:07:44.231176+00:00",
+    "outputs": {
+      "C:\\code\\senior_AI\\artifacts\\runs\\phase3-recovery-batch-002\\detector-capacity.json": "2ed86e970c853c7438acd56c43334a268f8ce9e1435d95ef8800aed5f9b04429"
+    },
+    "log_sha256": "b0c9e020d1e0e333a2d146f9f5f067bf5a4837642a7d31fc9b608177d5bda27a"
+  },
+  {
+    "name": "train-segmentation",
+    "command": [
+      "C:\\code\\senior_AI\\.venv\\Scripts\\python.exe",
+      "C:\\code\\senior_AI\\scripts\\train_sunny.py",
+      "--task",
+      "segmentation",
+      "--config",
+      "C:\\code\\senior_AI\\configs\\sunny_segmentation_v6_1.json",
+      "--run",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-segmentation-v6-001",
+      "--dataset-root",
+      "C:\\code\\senior_AI\\data\\sunny-cross-town-v3-007"
+    ],
+    "started_utc": "2026-10-18T08:07:44.249720+00:00",
+    "finished": true,
+    "pid": 31616,
+    "return_code": 0,
+    "wall_s": 5009.515000000014,
+    "finished_utc": "2026-10-18T09:31:13.777447+00:00",
+    "outputs": {
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-segmentation-v6-001\\state.json": "a7ba16c63da3df81dbff34fb35b133093e2fe7fa86f0a81e81d210f3c8268237",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-segmentation-v6-001\\best.pt": "0a3fe3f66fb93be373f2e82218632a4f8cc277bf6067f48bb4683a71f1b2af30",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-segmentation-v6-001\\validation.json": "0aad5062137087b317eae07504d30113a73182451a6b89041da71de1dba5eaf1",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-segmentation-v6-001\\validation_frames.jsonl": "f94c3d58e762caf62980cf63c52766249ae6d2ae39f019da3b9c8dad8145fb44"
+    },
+    "log_sha256": "bdba92d5e5511e094dbd91d83d0c454ad2c839142ed7811fa174521548dc64fe"
+  },
+  {
+    "name": "train-detection",
+    "command": [
+      "C:\\code\\senior_AI\\.venv\\Scripts\\python.exe",
+      "C:\\code\\senior_AI\\scripts\\train_sunny.py",
+      "--task",
+      "detection",
+      "--config",
+      "C:\\code\\senior_AI\\configs\\sunny_detection_v6_1.json",
+      "--run",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-detection-v6-001",
+      "--dataset-root",
+      "C:\\code\\senior_AI\\data\\sunny-cross-town-v3-007"
+    ],
+    "started_utc": "2026-10-18T09:31:13.841847+00:00",
+    "finished": true,
+    "pid": 8840,
+    "return_code": 0,
+    "wall_s": 10584.25,
+    "finished_utc": "2026-10-18T12:27:38.092246+00:00",
+    "outputs": {
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-detection-v6-001\\state.json": "28df75a2e7998d146ea1cbb583ec1710cc19979e6bd9e1ff12e8f65c67761af5",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-detection-v6-001\\best.pt": "ba6d2f4269a7f3f95e4b92d7daff1f330f4203a4619e1f5902c752aa371f7155",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-detection-v6-001\\validation.json": "0d262415c713ce18bb2afb99e2bf506de12fdb8809f01560af72b2872a971b0e",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-detection-v6-001\\validation_frames.jsonl": "ed611e3cf06583986f70ad4c1031d365964145ea7c9a2c3fa05d28e311104b32"
+    },
+    "log_sha256": "bed13852b1546518201a6d75ca486b2c0981d61d465e9f64d023d322611b1a9a"
+  },
+  {
+    "name": "train-phase",
+    "command": [
+      "C:\\code\\senior_AI\\.venv\\Scripts\\python.exe",
+      "C:\\code\\senior_AI\\scripts\\train_light_state.py",
+      "--root",
+      "C:\\code\\senior_AI\\data\\sunny-cross-town-v3-007",
+      "--config",
+      "C:\\code\\senior_AI\\configs\\light_state_v1_1.json",
+      "--run",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-light-state-v1-004"
+    ],
+    "started_utc": "2026-10-18T12:27:38.326584+00:00",
+    "finished": true,
+    "pid": 25796,
+    "return_code": 0,
+    "wall_s": 104.64100000000326,
+    "finished_utc": "2026-10-18T12:29:22.954597+00:00",
+    "outputs": {
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-light-state-v1-004\\state.json": "9df3652bb76a85ba057275c9e21ee19c58265d9695dafaaae62a58df82deb78a",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-light-state-v1-004\\best.pt": "f9836ef6474d74b607124cbb4887492105b3949f23d3c9065741d86c160b451e",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-light-state-v1-004\\validation.json": "3cda92e2ab47df3bb16e82036745d9124d59bed480cf28525b3484531b1b619a"
+    },
+    "log_sha256": "5c402dca6aa67d84c2695c3a01abb38e2fdbddca4fb0b88f4f2ecf8b05cb9847"
+  },
+  {
+    "name": "validation-joint",
+    "command": [
+      "C:\\code\\senior_AI\\.venv\\Scripts\\python.exe",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-light-state-v1-004\\source\\scripts\\validate_light_joint.py",
+      "--run",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-light-state-v1-004",
+      "--detector-run",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-detection-v6-001",
+      "--root",
+      "C:\\code\\senior_AI\\data\\sunny-cross-town-v3-007"
+    ],
+    "started_utc": "2026-10-18T12:29:22.976097+00:00",
+    "finished": true,
+    "pid": 27148,
+    "return_code": 2,
+    "wall_s": 17.60899999999674,
+    "finished_utc": "2026-10-18T12:29:40.588021+00:00",
+    "outputs": {
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-light-state-v1-004\\validation_joint.json": "d0445214e72a296054e83b94db110e0becc5e9feeddbb476788cf80ca756a120",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-light-state-v1-004\\validation_joint_quality.json": "f43f08c1987c0c3071d66b8490ba18da1fc16104c54ecda270c6e981091af8b3"
+    },
+    "log_sha256": "6a2e0fac40260139223373ed8f77d81651914e15299b21d59838cec82f239f85"
+  },
+  {
+    "name": "rgb-only-demo",
+    "command": [
+      "C:\\code\\senior_AI\\.venv\\Scripts\\python.exe",
+      "C:\\code\\senior_AI\\scripts\\predict_perception.py",
+      "--detector",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-detection-v6-001\\best.pt",
+      "--segmentation",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-segmentation-v6-001\\best.pt",
+      "--light-checkpoint",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-light-state-v1-004\\best.pt",
+      "--root",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-rgb-only-input-v1-001",
+      "--manifest",
+      "inputs/frames/frame.json",
+      "--output",
+      "C:\\code\\senior_AI\\artifacts\\runs\\phase3-recovery-batch-002\\rgb-only-demo"
+    ],
+    "started_utc": "2026-10-18T12:29:40.896637+00:00",
+    "finished": true,
+    "pid": 15236,
+    "return_code": 0,
+    "wall_s": 8.23499999998603,
+    "finished_utc": "2026-10-18T12:29:49.131690+00:00",
+    "outputs": {
+      "C:\\code\\senior_AI\\artifacts\\runs\\phase3-recovery-batch-002\\rgb-only-demo\\perception.json": "4a10fc3170a35ef0906d1bc52540c44f445a9b4e1e1abb4c16137f9b4bbae531",
+      "C:\\code\\senior_AI\\artifacts\\runs\\phase3-recovery-batch-002\\rgb-only-demo\\surround.png": "9ff9606ab3ce5cdc83723fa16a6be9d9190f410d05500941ecef9f1211ed2f5a"
+    },
+    "log_sha256": "7423333cb87e344d5d9b705cbb792a44f0a8c74b9b4e7248dfe38fb216f578f0"
+  },
+  {
+    "name": "benchmark-detection",
+    "command": [
+      "C:\\code\\senior_AI\\.venv\\Scripts\\python.exe",
+      "C:\\code\\senior_AI\\scripts\\benchmark_sunny.py",
+      "--checkpoint",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-detection-v6-001\\best.pt",
+      "--root",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-rgb-only-input-v1-001",
+      "--manifest",
+      "inputs/frames/frame.json",
+      "--output",
+      "C:\\code\\senior_AI\\artifacts\\runs\\phase3-recovery-batch-002\\detection-benchmark.json"
+    ],
+    "started_utc": "2026-10-18T12:29:49.161690+00:00",
+    "finished": true,
+    "pid": 18232,
+    "return_code": 0,
+    "wall_s": 12.078000000008615,
+    "finished_utc": "2026-10-18T12:30:01.244074+00:00",
+    "outputs": {
+      "C:\\code\\senior_AI\\artifacts\\runs\\phase3-recovery-batch-002\\detection-benchmark.json": "27ba97ceefbeaea7e7b63fc73f81df61dd15e5327a0fe82912cabf12d528ce95"
+    },
+    "log_sha256": "33daacdef2f92d20a41fe9576d7d8654f5965362b45aeed537e93d8bd11390cb"
+  },
+  {
+    "name": "benchmark-segmentation",
+    "command": [
+      "C:\\code\\senior_AI\\.venv\\Scripts\\python.exe",
+      "C:\\code\\senior_AI\\scripts\\benchmark_sunny.py",
+      "--checkpoint",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-segmentation-v6-001\\best.pt",
+      "--root",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-rgb-only-input-v1-001",
+      "--manifest",
+      "inputs/frames/frame.json",
+      "--output",
+      "C:\\code\\senior_AI\\artifacts\\runs\\phase3-recovery-batch-002\\segmentation-benchmark.json"
+    ],
+    "started_utc": "2026-10-18T12:30:01.259547+00:00",
+    "finished": true,
+    "pid": 32460,
+    "return_code": 0,
+    "wall_s": 9.828000000008615,
+    "finished_utc": "2026-10-18T12:30:11.080282+00:00",
+    "outputs": {
+      "C:\\code\\senior_AI\\artifacts\\runs\\phase3-recovery-batch-002\\segmentation-benchmark.json": "484201e1bf59356f98aa07f2360202696eb54cd2d31d548a273d1c45a50d13b9"
+    },
+    "log_sha256": "4ce6fec31dd996dcf654210c600768e65a14c14352b1d2434993f64c3e3be9e3"
+  },
+  {
+    "name": "benchmark-integrated",
+    "command": [
+      "C:\\code\\senior_AI\\.venv\\Scripts\\python.exe",
+      "C:\\code\\senior_AI\\scripts\\benchmark_perception.py",
+      "--detector",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-detection-v6-001\\best.pt",
+      "--segmentation",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-segmentation-v6-001\\best.pt",
+      "--light-checkpoint",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-light-state-v1-004\\best.pt",
+      "--root",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-rgb-only-input-v1-001",
+      "--manifest",
+      "inputs/frames/frame.json",
+      "--output",
+      "C:\\code\\senior_AI\\artifacts\\runs\\phase3-recovery-batch-002\\integrated-benchmark.json"
+    ],
+    "started_utc": "2026-10-18T12:30:11.102306+00:00",
+    "finished": true,
+    "pid": 19764,
+    "return_code": 0,
+    "wall_s": 16.59299999999348,
+    "finished_utc": "2026-10-18T12:30:27.703385+00:00",
+    "outputs": {
+      "C:\\code\\senior_AI\\artifacts\\runs\\phase3-recovery-batch-002\\integrated-benchmark.json": "516c21982bd90bb933593a9986fe576117ccc4a97144ca18a5f24a657a622d0b"
+    },
+    "log_sha256": "88a5d2a1db7dcd2b842414569dbe27fee464cea996a38df35033771245b2696f"
+  },
+  {
+    "name": "export",
+    "command": [
+      "C:\\code\\senior_AI\\.venv\\Scripts\\python.exe",
+      "C:\\code\\senior_AI\\scripts\\export_sunny_results.py",
+      "--detector-run",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-detection-v6-001",
+      "--segmentation-run",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-segmentation-v6-001",
+      "--light-run",
+      "C:\\code\\senior_AI\\artifacts\\runs\\sunny-light-state-v1-004",
+      "--root",
+      "C:\\code\\senior_AI\\data\\sunny-cross-town-v3-007",
+      "--demo",
+      "C:\\code\\senior_AI\\artifacts\\runs\\phase3-recovery-batch-002\\rgb-only-demo",
+      "--benchmark",
+      "C:\\code\\senior_AI\\artifacts\\runs\\phase3-recovery-batch-002\\detection-benchmark.json",
+      "C:\\code\\senior_AI\\artifacts\\runs\\phase3-recovery-batch-002\\segmentation-benchmark.json",
+      "C:\\code\\senior_AI\\artifacts\\runs\\phase3-recovery-batch-002\\integrated-benchmark.json",
+      "--output",
+      "C:\\code\\senior_AI\\artifacts\\runs\\phase3-recovery-batch-002\\export"
+    ],
+    "started_utc": "2026-10-18T12:30:27.720425+00:00",
+    "finished": true,
+    "pid": 10896,
+    "return_code": 0,
+    "wall_s": 0.46799999999348074,
+    "finished_utc": "2026-10-18T12:30:28.191464+00:00",
+    "outputs": {
+      "C:\\code\\senior_AI\\artifacts\\runs\\phase3-recovery-batch-002\\export\\summary.json": "61ab5c95922e9edf2fa35ed5b7c05505ad638cb615096a5b98eb530820f9f5a3"
+    },
+    "log_sha256": "61219f76946db5517eedc4d4e49fdea293594c2c968da2f81c29e156cfe103f5"
+  }
+]

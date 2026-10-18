@@ -1,0 +1,9 @@
+{"artifact_integrity_passed": true, "validation_frames": 3600, "validation_quality_passed": false, "failed_validation_checks": ["wall/IoU"]}
+usage: check_sunny_detection_artifacts.py [-h] --run RUN --root ROOT --output
+                                          OUTPUT
+check_sunny_detection_artifacts.py: error: the following arguments are required: --root
+Traceback (most recent call last):
+  File "<stdin>", line 17, in <module>
+  File "C:\Users\HP\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['C:\\code\\senior_AI\\.venv\\Scripts\\python.exe', 'scripts/check_sunny_detection_artifacts.py', '--run', 'artifacts/runs/sunny-detection-v6-001', '--output', 'artifacts/reports/detection-v6-artifact-check-001.json']' returned non-zero exit status 2.

@@ -1,0 +1,7 @@
+{
+  "initial_full_GPU_validation_exact_parent": true,
+  "parent_checkpoint_sha256": "ec1427214d5fc3e51b9bbb2fed652fa762e97edeb34cfc23a989bdc879c8575f",
+  "initial_sha256": "30d8ebc4dbd4b2b7c230b3936817af498936a077286d86e52b4f55e4e095f59b",
+  "parent_validation_sha256": "30d8ebc4dbd4b2b7c230b3936817af498936a077286d86e52b4f55e4e095f59b",
+  "note": "Initialization replay, no new training improvement or heldout use"
+}

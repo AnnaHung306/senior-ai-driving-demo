@@ -185,6 +185,42 @@
     "failed_gates": [
       "wall_IoU"
     ],
-    "heldout_opened": false
+    "heldout_opened": false,
+    "actual_GPU_visual_QA": "evidence/phase3/sunny-v3/phase3-recovery-batch-002-completed/visual_QA/visual_review.json"
+  },
+  {
+    "run": "sunny-detection-v6-001",
+    "task": "sunny-8-class-detection",
+    "status": "completed",
+    "quality_acceptance": "validation_failed",
+    "model_card": "evidence/phase3/sunny-v3/sunny-detection-v6-001-completed-validation/MODEL_CARD.md",
+    "checkpoint_sha256": "ba6d2f4269a7f3f95e4b92d7daff1f330f4203a4619e1f5902c752aa371f7155",
+    "updates": 19200,
+    "best_epoch_zero_based": 0,
+    "failed_gates": [
+      "bicycle_recall",
+      "motorcycle_recall",
+      "traffic_light_recall"
+    ],
+    "heldout_opened": false,
+    "validation_mAP50": 0.7046156222905349,
+    "validation_mAP50_95": 0.4510487365168493,
+    "validation_bicycle_recall": 0.41426611796982166,
+    "actual_GPU_visual_QA": "evidence/phase3/sunny-v3/phase3-recovery-batch-002-completed/visual_QA/visual_review.json"
+  },
+  {
+    "run": "sunny-light-state-v1-004",
+    "task": "sunny-4-state-light-classification",
+    "status": "completed",
+    "quality_acceptance": "crop_validation_passed_joint_failed_heldout_unopened",
+    "model_card": "evidence/phase3/sunny-v3/phase3-recovery-batch-002-completed/export/light_state/MODEL_CARD.md",
+    "checkpoint_sha256": "f9836ef6474d74b607124cbb4887492105b3949f23d3c9065741d86c160b451e",
+    "updates": 832,
+    "failed_gates": [
+      "joint_macro_correct_state_recall"
+    ],
+    "heldout_opened": false,
+    "validation_GT_crop_macro_recall": 0.9438117039805592,
+    "validation_detector_box_joint_macro_recall": 0.3990643924074202
   }
 ]

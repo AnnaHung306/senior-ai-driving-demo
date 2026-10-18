@@ -1,3 +1,13 @@
+## 最新接續 20:38：原v6全批與實看QA完成；深度A/B已接GPU，務必等實跑完
+
+原batch79387已exit1，**正常品質未過終局 quality_failed，不是工程failure**，11階段都完成；segWallfail、det bike/motor/light Recallfail、phase004 crop.9438117pass但joint.3990643924未達.4。det v6四輪19200updates completed、best epoch0 ba6d2f4269a7f3f95e4b92d7daff1f330f4203a4619e1f5902c752aa371f7155，mAP50 .7046156223／mAP50:95 .4510487365，checkpoint reload exact。det初輪metrics選例snapshot SHA不同於formal best bytes，正式用completed state，不混用。
+
+原file watcher59456漏帶det checker必要--root而argparse exit2→watcher exit1；原log保持，已用相同未改checker＋明確--root data/sunny-cross-town-v3-007、CUDA_VISIBLE_DEVICES=-1重跑exec3346，exit0，full3600canonical GT/ignore/AP/PR exact。recovery receipt artifacts/runs/phase3-artifact-checks-v6-001/recovery.json；原state waiting為失敗時殘留，不再活。不要再啟watcher。
+
+原postQA45681已完成artifact，**已實看seg9pages/25cases、det5pages/15cases、7bikezoom、phase4pages/31cases，以及3WallFP個別panel和8viewdemo**，visual_review.json已寫原QA root。seg原GPU每例confusion/boundary exact。主要Wall/Fence/Other／rock confusions、ped/bike/motor遺漏、det bike↔motor/ped誤判／小物漏檢、phase unknown顏色誤判。phase no_light_object代表IoU unmatched，不保證畫面真的沒燈。joint matched red→green0不表示GTcrop沒有red→green錯誤。原batch與QA awake均released/targetexit/cleared。整批rawreports/source/export/logs/QA/實看收據封存evidence/phase3/sunny-v3/phase3-recovery-batch-002-completed；det另完整modelcard與failure/recoverylog封存sunny-detection-v6-001-completed-validation。README/domain/registry已更新實際結果，待commit；不改rawQA/catalog/state或parent來源。
+
+**新depth A/B唯一GPU job exec78878／parent23304／ownawake22688持續，已自動通過前批來源守衛並於20:31接續，state verifying_and_loading_data（尚無GPU_preflight.json）**。現在全資料SHA／cache需數分鐘，沒有正式updates屬正常。不能只回覆排隊或等資料就結束；等32步GPU preflight→control/depth各1712updates完整val→exact aug digest/QA→實看並給實際結論。現在原GPU已退出，不要啟其他GPU、CARLA或額外tests，新增44與原50sources及config仍凍結。若實驗fail，保存查因，不盲目重啟。**未自動第二輪**。此前cell671監測已在20:28train-phase轉換時完成，無monitor執行。
+
 ## 最新授權與進度 18:40：已同意GPU小檢查＋一輪A/B，等待GPU但勿只排隊就結束
 
 使用者最新「照你建議的是看看吧」已授權先32步GPU/BF16檢查，再同parent的control／depth各1輪，視結果才考慮第二輪。此前「不自動擴大」的舊限制已由此明確授權更新，但**第一輪比較之前不擴到第二輪、不改原品質門檻、不開heldout**。本輪要等實際執行與完整val／QA後回覆，不能把排隊當完成。原det v6第二輪進行（18:37 updates6100，18:39 6500/19200），原batch79387／file checker59456／postQA45681仍活，CARLA關。

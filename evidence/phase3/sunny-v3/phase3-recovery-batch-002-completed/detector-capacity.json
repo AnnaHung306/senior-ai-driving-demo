@@ -1,0 +1,148 @@
+{
+  "status": "passed",
+  "scope": "Synthetic engineering capacity only, no quality metric or training update retained",
+  "config_sha256": "e64d745b228eb2c32aab314eedb314cb72070e0b3a24ad682cc4648de1345859",
+  "source_sha256": "e235cdb900b9217792510af004a0dfd5428e8518bc806cb4b58e8defb49d59fb",
+  "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "batch_size": 2,
+  "internal_min_size": 720,
+  "internal_max_size": 1280,
+  "input_wh": [
+    640,
+    360
+  ],
+  "strict_deterministic": true,
+  "steps": [
+    {
+      "step": 0,
+      "loss": 2.6629481315612793,
+      "gradient_norm": 43.41912078857422,
+      "wall_ms": 1329.4006999931298
+    },
+    {
+      "step": 1,
+      "loss": 1.0383780002593994,
+      "gradient_norm": 14.257766723632812,
+      "wall_ms": 608.7679000047501
+    },
+    {
+      "step": 2,
+      "loss": 0.5649213194847107,
+      "gradient_norm": 7.046264171600342,
+      "wall_ms": 616.1072999821045
+    }
+  ],
+  "checkpoint_reload_identical": true,
+  "training_geometry": [
+    {
+      "scale_xy": [
+        0.5,
+        0.5
+      ],
+      "offset_top_left": [
+        143,
+        263
+      ],
+      "horizontal_flip": false,
+      "padding_ignored": true,
+      "scope": "Training augmentation; raw provenance and eval targets unchanged",
+      "bicycle_positive": true,
+      "zoomed": true
+    },
+    {
+      "scale_xy": [
+        0.5,
+        0.5
+      ],
+      "offset_top_left": [
+        105,
+        280
+      ],
+      "horizontal_flip": false,
+      "padding_ignored": true,
+      "scope": "Training augmentation; raw provenance and eval targets unchanged",
+      "bicycle_positive": true,
+      "zoomed": true
+    }
+  ],
+  "real_train_geometry_preflight": {
+    "status": "finite_ephemeral_CUDA_update",
+    "records": [
+      {
+        "sample": {
+          "scene_id": "town01-00",
+          "group_id": "town01-route-00",
+          "split": "train",
+          "camera": "front",
+          "frame": 166909,
+          "input_manifest": "inputs/frames/town01-00/00166909.json",
+          "rgb": "inputs/rgb/town01-00/front/00166909.png",
+          "semantic": "labels/semantic_segmentation/town01-00/front/00166909.png",
+          "detection": "labels/visible/town01-00/front/00166909.json",
+          "instance": "labels/instance_segmentation/town01-00/front/00166909.png",
+          "verified_obstacle_actor_ids": []
+        },
+        "RGB_sha256": "6b5a3c25d24ef671eb3da83aa3b4a3fd39d030e1ae6717724abca2511c0e69a7",
+        "GT_sha256": "9fbb3b079b66980473652f830b4385ff70c7253c89aa5d39c381d842d07c05dc"
+      },
+      {
+        "sample": {
+          "scene_id": "town03-00",
+          "group_id": "town03-route-00",
+          "split": "train",
+          "camera": "front",
+          "frame": 167600,
+          "input_manifest": "inputs/frames/town03-00/00167600.json",
+          "rgb": "inputs/rgb/town03-00/front/00167600.png",
+          "semantic": "labels/semantic_segmentation/town03-00/front/00167600.png",
+          "detection": "labels/visible/town03-00/front/00167600.json",
+          "instance": "labels/instance_segmentation/town03-00/front/00167600.png",
+          "verified_obstacle_actor_ids": []
+        },
+        "RGB_sha256": "ea5176b7e9fc6a997c1925e3a51b044d7e3e41c2674bb0dc1baf1d52a8b30e27",
+        "GT_sha256": "1845786cbdea18aa93fe4c757dc2e5f34d5dd31b367ce96e86430133ce032d01"
+      }
+    ],
+    "geometry": [
+      {
+        "scale_xy": [
+          0.5,
+          0.5
+        ],
+        "offset_top_left": [
+          44,
+          50
+        ],
+        "horizontal_flip": false,
+        "padding_ignored": true,
+        "scope": "Training augmentation; raw provenance and eval targets unchanged",
+        "bicycle_positive": true,
+        "zoomed": true
+      },
+      {
+        "scale_xy": [
+          1.0,
+          1.0
+        ],
+        "offset_top_left": [
+          0,
+          0
+        ],
+        "horizontal_flip": false,
+        "padding_ignored": true,
+        "scope": "Training augmentation; raw provenance and eval targets unchanged",
+        "bicycle_positive": true,
+        "zoomed": false
+      }
+    ],
+    "loss": 0.4594408869743347,
+    "gradient_norm": 5.671139717102051,
+    "formal_training_updates_retained": 0,
+    "scope": "Engineering preflight only; separate model is reset by formal trainer"
+  },
+  "synthetic_checkpoint_sha256": "1b452bd0a3edeb9abf82f741a752679da2fe926647b5b21dbd21212fc0fbc869",
+  "synthetic_checkpoint_scope": "Capacity-only dummy updates, never a selected trained model",
+  "max_cuda_allocated_mib": 3377.49853515625,
+  "max_cuda_reserved_mib": 4226.0,
+  "device_total_mib": 8187.5
+}

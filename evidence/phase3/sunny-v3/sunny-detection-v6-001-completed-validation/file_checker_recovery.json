@@ -1,0 +1,8 @@
+{
+  "status": "completed_file_integrity_checks_after_corrected_CLI",
+  "original_failure": "detector checker invocation omitted required --root; argparse exit2, watcher exit1; original log preserved",
+  "repair": "Same unchanged checker, explicit --root data/sunny-cross-town-v3-007, CUDA_VISIBLE_DEVICES=-1, no model inference",
+  "detector_report_sha256": "9fc65a1f6e743e093bd2bcc4d58bb676fa6bfacb95254f598f9859c4f50c778a",
+  "segmentation_report_sha256": "d3cf649d88572979c9adccb3209966e8523c26e9692264e48d9cb30a44debbe0",
+  "quality_passed": false
+}

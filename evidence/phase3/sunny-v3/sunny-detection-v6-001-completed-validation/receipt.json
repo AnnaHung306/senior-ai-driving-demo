@@ -1,0 +1,66 @@
+{
+  "status": "completed_GPU_training_validation_quality_failed",
+  "created_utc": "2026-10-18T12:29:51.346802+00:00",
+  "checkpoint_sha256": "ba6d2f4269a7f3f95e4b92d7daff1f330f4203a4619e1f5902c752aa371f7155",
+  "validation_frames_local_only_sha256": "ed611e3cf06583986f70ad4c1031d365964145ea7c9a2c3fa05d28e311104b32",
+  "actual_GPU_visual_QA_pending": true,
+  "heldout_model_evaluation_opened": false,
+  "files": [
+    {
+      "path": "artifact_check.json",
+      "sha256": "9fc65a1f6e743e093bd2bcc4d58bb676fa6bfacb95254f598f9859c4f50c778a"
+    },
+    {
+      "path": "best_validation.json",
+      "sha256": "0d262415c713ce18bb2afb99e2bf506de12fdb8809f01560af72b2872a971b0e"
+    },
+    {
+      "path": "config.json",
+      "sha256": "e64d745b228eb2c32aab314eedb314cb72070e0b3a24ad682cc4648de1345859"
+    },
+    {
+      "path": "dataset_statistics.json",
+      "sha256": "d9702ec44fcba9ece5882d8f013cbe6cbf66f571dabaad59e02cc1b842b07766"
+    },
+    {
+      "path": "epochs.jsonl",
+      "sha256": "526ee782902c14f88b9d47bd0c7e8ba20c06dc0f2c0263118214764ee999229c"
+    },
+    {
+      "path": "file_checker_recovery.json",
+      "sha256": "36fe94f583701668ded33b2c80c92e3a75e78ccfacd9d43c8b67653a7d2c15e2"
+    },
+    {
+      "path": "initial_validation.json",
+      "sha256": "30d8ebc4dbd4b2b7c230b3936817af498936a077286d86e52b4f55e4e095f59b"
+    },
+    {
+      "path": "MODEL_CARD.md",
+      "sha256": "c3a060bb592c0bde00ddf26258548234b9aa8aaf45e8d3ed122cbb0e0ec0ee88"
+    },
+    {
+      "path": "original_file_checker.log",
+      "sha256": "2afd7a50d122175015c5878079f2841f3b7c028145f5848af77038d933a8c0e2"
+    },
+    {
+      "path": "overfit.json",
+      "sha256": "9f371fc9c7953a5916527a6c61adf44c966bb31f6eb56bb22be89455162468a9"
+    },
+    {
+      "path": "provenance.json",
+      "sha256": "0bacedd82b2b55e28045d2c7118649d84bca18b72f259d8bc51dccb92823f812"
+    },
+    {
+      "path": "source_snapshot.tar.gz",
+      "sha256": "f16bd7e8f768b67bd4043f4a066045a48fd085486eb5ee9be5137cabe5316973"
+    },
+    {
+      "path": "state.json",
+      "sha256": "28df75a2e7998d146ea1cbb583ec1710cc19979e6bd9e1ff12e8f65c67761af5"
+    },
+    {
+      "path": "validation.json",
+      "sha256": "0d262415c713ce18bb2afb99e2bf506de12fdb8809f01560af72b2872a971b0e"
+    }
+  ]
+}

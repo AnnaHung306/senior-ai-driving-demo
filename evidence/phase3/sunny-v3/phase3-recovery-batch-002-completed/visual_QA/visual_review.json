@@ -1,0 +1,154 @@
+{
+  "status": "assistant_visual_review_completed_quality_failed",
+  "reviewed_utc": "2026-10-18T12:35:03.215794+00:00",
+  "scope": "Actual saved GPU outputs; all contact pages, all detector display-only bike zooms, three full Wall-FP panels and eight-view RGB-only demo inspected. Deliberately selected errors, not representative accuracy or new heldout scoring.",
+  "catalog_bindings": {
+    "segmentation": "f9be18bc376d90a306dce01911570a0ba2e775f989b2a231706b0dce54d0682f",
+    "detection": "17b241c2909d77e03b49781cf21ddb2716ab30cbc5225b9c174b894ffbf8ed29",
+    "phase": "702350a21f1545f07ce1cc10ff10ebd5cd10acc07cd6c19b9b40f9722cab8296"
+  },
+  "viewed_images": [
+    {
+      "path": "segmentation\\page-00.png",
+      "sha256": "91dc5454ea98375ddca732f34672f3afbb84d9c3b61591e81caef31f200b9a2d"
+    },
+    {
+      "path": "segmentation\\page-01.png",
+      "sha256": "518afefa8c7df900a896f137fbbd846fd89188923078e28bd41936b7df1a1d4b"
+    },
+    {
+      "path": "segmentation\\page-02.png",
+      "sha256": "ad00deda3651828b56958f593e518f8930a4015a9cf3b1adcff72c089435e954"
+    },
+    {
+      "path": "segmentation\\page-03.png",
+      "sha256": "6509206a12f84b0557a96a03852292b2c50dff42aeefc1ec669e14b6d2c073cf"
+    },
+    {
+      "path": "segmentation\\page-04.png",
+      "sha256": "a4fae24873d60196708a7a36779ef21770403d69d088e7569d6e255b2aba7bc7"
+    },
+    {
+      "path": "segmentation\\page-05.png",
+      "sha256": "90840a2b6607ef6b55c4d2d3b92432cf8b5f6b9921dc3cfc60ec0b95509af50c"
+    },
+    {
+      "path": "segmentation\\page-06.png",
+      "sha256": "df2a024a853a8ec26df9592d469aea4fb01090611eeeb3fca99bc7c21f8972d9"
+    },
+    {
+      "path": "segmentation\\page-07.png",
+      "sha256": "5cc5251910a959d883fc8036dacf3a2d966bd5cf650c29ac3999091c4583b2bb"
+    },
+    {
+      "path": "segmentation\\page-08.png",
+      "sha256": "ba4a9e8746a2d193e573b97452d4ef62c8ff182a7240575260320320ad52bccd"
+    },
+    {
+      "path": "segmentation\\town04-00-wall-false-positive.png",
+      "sha256": "ad8145beadacb82cb60136aee4147ffe76ced93843252731aeed11e6e2bef8a9"
+    },
+    {
+      "path": "segmentation\\town04-01-wall-false-positive.png",
+      "sha256": "e53166505a6d752f67687f09127256ac86c039cd224edb10f37b9f9bbe9dbf65"
+    },
+    {
+      "path": "segmentation\\town04-02-wall-false-positive.png",
+      "sha256": "ba4a9e8746a2d193e573b97452d4ef62c8ff182a7240575260320320ad52bccd"
+    },
+    {
+      "path": "detection\\page-00.png",
+      "sha256": "6686138f82135800975d7d1c4c015d415bd147208f4820e05d73f134757bb41a"
+    },
+    {
+      "path": "detection\\page-01.png",
+      "sha256": "b307a0824280290e1e9aa6b044a6764449c88f85073b1f7fda1184d844be6643"
+    },
+    {
+      "path": "detection\\page-02.png",
+      "sha256": "ac685979ce6b1096d1a5b4423cca31b7182a89407de2ff6d510288b5f26ff655"
+    },
+    {
+      "path": "detection\\page-03.png",
+      "sha256": "c32993731fb5f1447fc2f3ff0d45fb347f2c05e2ab3ce2ffa9a78eab261931cc"
+    },
+    {
+      "path": "detection\\page-04.png",
+      "sha256": "11b66a0c2c6a84912efffcab3765161834775766ffc5bd90e0bfd6ee4daee226"
+    },
+    {
+      "path": "detection\\case-02-bike-0-display-zoom.png",
+      "sha256": "1088c7906a1d42df4566fee37f82185ff0fad3eefc05e7f0f347d65831be29d0"
+    },
+    {
+      "path": "detection\\case-06-bike-0-display-zoom.png",
+      "sha256": "ad2886a51ce83be1c821b5d46b74f02c4a728fb1f147da27d5213df2a90498a1"
+    },
+    {
+      "path": "detection\\case-07-bike-0-display-zoom.png",
+      "sha256": "d66813c4306f46eaaaa8a08f73747dc00417a016dc4c22a53c37859d64fba2ce"
+    },
+    {
+      "path": "detection\\case-09-bike-0-display-zoom.png",
+      "sha256": "7461df03b613301d872aff15542e26e01af43bc527a8d1fb599b26ef8a551883"
+    },
+    {
+      "path": "detection\\case-10-bike-0-display-zoom.png",
+      "sha256": "382600748ae1ff717e15e60749f3e5aa98ca122f4ab64372369394deb947d19f"
+    },
+    {
+      "path": "detection\\case-12-bike-0-display-zoom.png",
+      "sha256": "6a3d1bac2286bd97d12f3e338b058f447767c1673c879b1d2fd7b08b770bc6f0"
+    },
+    {
+      "path": "detection\\case-13-bike-0-display-zoom.png",
+      "sha256": "ddb03b7807af4627b11cb56e277daeff76ce64dd64f1cf6a72637693353c8de4"
+    },
+    {
+      "path": "phase\\page-00.png",
+      "sha256": "ed14c38670ab64fc63e4698e86f57751a61b228d8bfd1626fdc25680cf7a94ae"
+    },
+    {
+      "path": "phase\\page-01.png",
+      "sha256": "6d3e8159356ae0bdb57744eb4a779832bb16469fdc9923723ab9521dbb6c4792"
+    },
+    {
+      "path": "phase\\page-02.png",
+      "sha256": "e86d449f9a9542f5aa567d4c52bdcd8fa1fe8add10c839110cd7469cd8de1ed6"
+    },
+    {
+      "path": "phase\\page-03.png",
+      "sha256": "6527998a9f7d02ebf05495c1073e6c2a3791139d6ec46b9a32a6ba7b2aedadbc"
+    },
+    {
+      "path": "C:\\code\\senior_AI\\artifacts\\runs\\phase3-recovery-batch-002\\rgb-only-demo\\surround.png",
+      "sha256": "9ff9606ab3ce5cdc83723fa16a6be9d9190f410d05500941ecef9f1211ed2f5a"
+    }
+  ],
+  "observations": {
+    "segmentation": [
+      "Bus-stop supports/tree silhouettes and wooden fence edges produce Wall/Fence/Other confusion; road-adjacent rock/terrain can become Wall. Solid highway retaining wall remains undersegmented.",
+      "Small pedestrian hidden against fence, bicycle wheels and motorcycle against hedge remain missing or confused. Large bus/road regions generally coherent but these error selections include road/sidewalk/terrain leakage.",
+      "Road margin overlays follow many visible curbs but extra pink sidewalk islands and distant/occluded edges create false/displaced margins. This is a visible 2D interface, not traversable free-space."
+    ],
+    "detection": [
+      "Bicycle mistaken for motorcycle or pedestrian; hedge-background rider missed, distant tiny and clipped border bicycles missed. Seven zooms only enlarge the same 64px source crops; they add no image detail or model evidence.",
+      "Traffic lights missed, small car/motorcycle missed, background rock false car and poorly localized distant truck examples remain. Gray ignore regions and incorrect-class overlap are visible; displayed boxes use original score0.5."
+    ],
+    "phase": [
+      "Unknown/unobservable crops can be classified as visible colors; red/green/yellow crops can be missed by detector. A red-as-green GT-crop error is visible even though the joint matched-red subset rate is zero.",
+      "no_light_object means unmatched canonical GT under the IoU policy, and does not prove every shown patch contains no visible traffic-light structure."
+    ],
+    "demo": [
+      "All eight views render RGB with learned overlays and detections; cyan visible road margins follow many curbs but are fragmented at some distant regions.",
+      "Front bicycle, several pedestrians, truck and left barrel detected in this example; different views yield visible phase/unknown predictions. One bundle is an integration demo, not proof of quality or 20Hz."
+    ]
+  },
+  "quality_passed": false,
+  "heldout_model_evaluation_opened": false,
+  "contact_page_count": 18,
+  "segmentation_cases": 25,
+  "detector_cases": 15,
+  "phase_cases": 31,
+  "detector_display_zooms": 7
+}

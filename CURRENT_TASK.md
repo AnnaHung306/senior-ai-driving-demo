@@ -1,5 +1,19 @@
 # 目前任務：批量完成晴天 Phase3（2026-10-18）
 
+## 最新接續：14:18（優先於全部歷史）
+
+**持續完成整個Phase3，不要結束為完成。** 原唯一GPU batch exec32462/native19772（det native6608）仍活；det第三輪約14300/19200updates，14400後才完整val。第二輪仍只有bikeR .327846未過，其餘七類P/R過。seg v5完成但wall/margin未過；phase003／joint／統一val／RGB demo／3種bench／export待原batch串接，全部新heldout仍未開。
+
+官方額外地圖curl exec46320已exit0，完整檔仍命名AdditionalMaps_0.9.16.zip.partial，size7250055782／SHA709a5cb4d870668519dc27f0e0104e0419cd76adb75da2c232d74ddcc311423f；inspect exec85244已exit0、22592files／23647entries／19.116GB展開。源與manifest gzip在additional-maps-inspection-001。**11744共用路徑，2686size不同，517個Engine/plugin assets，不得覆蓋原artifacts/carla。**
+
+**新的唯一磁碟準備job exec3278**：scripts/prepare_additional_map_runtime.py --destination artifacts/carla-phase3-expansion-v1 --output artifacts/runs/additional-maps-isolated-runtime-002。14:17已hash凍結contract並開始clone，6001/31427base files附近。它不啟CARLA／不碰GPU；完成後還要overlay CRC/SHA、重驗新runtime與原base全部bytes，state必須completed_content_not_native_validated；僅內容完成仍不代表native可啟動。**此job運行中別改prepare_additional_map_runtime.py／install_additional_maps.py／src/senior_ai/core.py／sunny_data.py**（自身contract凍結）；原GPU source全部SRC仍保持8ec5771 bytes。
+
+舊準備exec71660/native30868已exit1；001在preflight拒絕Engine/plugin，尚無contract、未建立destination，狀態／exact tool保存；**不要重啟舊PID或用--resume001**。002現先驗所有實際22592 paths，再做hash/clone；sourceSHA3ae833b7d700c2f5de5087ff8a1380bba09d18868a648bd5d23300449e4e5d73。原stockpatched binary b037...不變，原CARLA仍關；下一次須等原GPU批次所有工作退出，再用start_carla.ps1 -CarlaRoot C:/code/senior_AI/artifacts/carla-phase3-expansion-v1啟DX12/Epic，只先native availability／scout，若runtime實際載入不相容保存失敗回原root，不可說已有新資料。
+
+新v2備妥prepare_unused_scenery.py／collect_unused_scenery.py／audit_unused_scenery.py，原v1 collector/auditor/loader bytes完全不變。新plan只unused Town06/07，排除所有原split家族/Opt/OpenDrive別名，保留rig/ClearNoon/4模態/F+1actual frames、pose及raw class規則；source/runtime metadata隨data保存。capture核對新root launch／binary／DX12/Epic；probe不能train audit。**仍無新native inventories、RGB、正式plan、audit/review批准，v2 train loader未整合。** 下一步先probe實看木質實心Wall／水泥分隔與岩面negative，不以asset名稱斷言材質。PHASE3_DOMAIN_RECOVERY.md更新完整路徑。
+
+最新完整CPU suite exec60663已exit0：**139 total／136pass／3GPU skipped／0fail**，14.969s；active batch source差異0，證據cpu-regression-20261018-004。包含4 runtime與3 anchor tests；source guard其後只加rig==immutable config，正式使用前focused/最終檢查。原94 GPU preflight才是目前實跑完整GPU證據。139CPU≠139GPU。Native工具新source/preflight證據已保存，不要為等待訓練繼續無限寫未用備案；完成實際data／training與品質恢復。
+
 ## 13:55歸檔與地圖準備補充（仍在同一批次）
 
 commit ac713fd修正真正的Git可恢復性問題：411/573個舊evidence檔案因CRLF normalization，Git blob和實際SHA-bound bytes不同。`.gitattributes`新增evidence/** -text，重新存原始bytes；573全部對committed object核對exact，證據git-evidence-byte-preservation-001與scripts/check_evidence_git_bytes.py。只保留原bytes，沒有重算模型分數；active source contract再次全部exact。

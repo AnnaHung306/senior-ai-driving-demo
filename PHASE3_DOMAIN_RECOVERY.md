@@ -14,6 +14,16 @@
 4. 找到可用外觀後才凍結正式新版本：每個希望補齊的外觀至少2個不同原生位置，記位置間距與相關性；原八方向rig、640x360、四模態、ClearNoon、逐frame/time/pose驗證、F+1 readback、CRC/SHA、ignore規則均沿用。保留岩面、建築、植被、草路邊界negative，不能只收正例牆面。
 5. 新資料另建root及audit/review；不得改原86400PNG或假稱新動態路線。既有T1/T3補景的verify契約不放寬；新增城鎮用明確新版本驗證器，從原plan派生保留城鎮與地圖hash排除表，捕捉／審核／實看批准後才允許新版訓練載入。
 
+## 額外地圖與 v2 工具準備（尚未產生新訓練資料）
+
+官方0.9.16額外地圖包已完整下載並inspect：7250055782 bytes，SHA709a5cb4d870668519dc27f0e0104e0419cd76adb75da2c232d74ddcc311423f，22592檔／23647 entries，展開19116493167 bytes。官方release連結及文件在additional-maps-preparation-001；未取得獨立publisher checksum。實際有Town06/Town07完整與Opt maps，但尚未用native server確認可載入。
+
+共有11744路徑與原模擬器重疊，其中2686僅檔案大小就不同，還包含517個Engine／plugin內容檔。故**不覆蓋原 artifacts/carla**。prepare_additional_map_runtime.py 在新artifacts/carla-phase3-expansion-v1複製原分發檔（排除Saved輸出）並只在新副本覆蓋已凍結官方包的內容資產；最終重驗全新副本及全部原來源，server binary必須exact。新source/config/archive/baseline完整契約與逐檔恢復；第一個001因content-only守衛拒絕Engine/plugin，未建立副本，失敗保留；002已先逐一驗證全部真22592 paths後再執行。**仍在準備，未native驗證、未啟CARLA**。不得因state檔存在當可用；等completed_content_not_native_validated、source資料全驗後，原GPU所有工作退出，才啟新root的DX12/Epic。
+
+新增prepare_unused_scenery.py、collect_unused_scenery.py、audit_unused_scenery.py是明確v2流程，原collector/auditor/loader保持原Town01/03限制。plan排除所有原split map家族和OpenDrive hash；只Town06/07，rig/ClearNoon/模態/timing/pose/GT規則不變，native name與高度仍只hint。capture另綁新runtime manifests與launch root／binary／DX12/Epic收據，原native metadata與runtime provenance原bytes收入資料root，日後訓練不需live CARLA。probe-only仍拒絕train audit。新Town native inventory、實際RGB/GT、正式plan、full audit、視覺批准與v2 training loader**都還沒完成**；這些工具不是已訓練資料。
+
+139項CPU整批回歸（136pass／3GPU skipped）已通過，其中4項isolated-runtime和3項native anchor選擇測試；原94項GPU preflight才是已執行GPU證據。後續v2 plan額外rig equality小守衛需在正式使用前隨focused／最後統一檢查再核對；不把CPU工具通過當模型品質。
+
 ## 訓練與驗收
 
 重點是新增外觀及誤報negative，不預設要加高wall權重。先實測新資料支持量及取樣比例，再凍結新config；class weights只由train決定，主動態train維持約70% optimization samples，保留人、rider、兩輪車、號誌與交通桶的支持。新checkpoint須綁原main＋每個supplement及取樣倍率、initializer SHA、source/config/runtime，不能只記舊main。

@@ -1,0 +1,17 @@
+{
+  "status": "inspected_archive_only_not_installed",
+  "source": "https://downloads.carlasim.com/Windows/AdditionalMaps_0.9.16.zip",
+  "release_page": "https://github.com/carla-simulator/carla/releases/tag/0.9.16",
+  "archive": "C:\\code\\senior_AI\\artifacts\\downloads\\AdditionalMaps_0.9.16.zip.partial",
+  "bytes": 7250055782,
+  "publisher_checksum_verified": false,
+  "tool_sha256": "85b7404857be750260cc986b7867f1b2693cb5b765b8436ca0f1772553e1bc8b",
+  "started_utc": "2026-10-18T06:00:26.348992+00:00",
+  "scope": "CARLA content assets only; no map/data approval or model-quality claim",
+  "installed_new_files": [],
+  "shipping_binary_before_sha256": "b0370d6dcd57b95299d12005cebad1dc6187804e83aeb51a184ccbc4b581fea8",
+  "archive_sha256": "709a5cb4d870668519dc27f0e0104e0419cd76adb75da2c232d74ddcc311423f",
+  "archive_entries": 23647,
+  "uncompressed_bytes": 19116493167,
+  "finished_utc": "2026-10-18T06:00:32.742861+00:00"
+}

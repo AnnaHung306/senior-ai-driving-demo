@@ -1,0 +1,8 @@
+{
+  "raw_inventory_sha256": "00b24d8dccc34bd3c271ebfc9579c8878ec11b4370180ce3d8b6892550baa977",
+  "gzip_sha256": "fa4aac47f90c3448e0439f061054b7009d693c27611f55586d9fd7fa087c09f8",
+  "overlapping_paths": 11744,
+  "existing_size_differences": 2686,
+  "outside_main_Carla_content_but_cooked_Engine_plugin_assets": 517,
+  "scope": "Downloaded and inspected, not native availability or data/model approval"
+}

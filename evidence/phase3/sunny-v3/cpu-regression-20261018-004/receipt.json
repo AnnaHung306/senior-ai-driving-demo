@@ -1,0 +1,6 @@
+{
+  "return_code": 0,
+  "scope": "CPU full suite only, CUDA hidden only in independent subprocess; no native simulator or new GPU verification",
+  "active_batch_source_differences": [],
+  "tests_log_sha256": "5f68be7ee4c4283fce72f0133113da9d52a0201177647a11771419c6fa67e9ba"
+}

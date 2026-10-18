@@ -1,0 +1,1 @@
+Prepared explicit v2 unused-town scenery pipeline. Original v1 sources and active GPU contract unchanged.3 anchor CPU tests passed in full139 suite; collector/auditor compile. No native inventory, RGB capture, new plan, audit/review approval, training loader or model training yet. Current helper additionally enforces equality to the immutable camera rig config.

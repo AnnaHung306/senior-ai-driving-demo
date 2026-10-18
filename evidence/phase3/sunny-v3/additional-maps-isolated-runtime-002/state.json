@@ -1,0 +1,18 @@
+{
+  "status": "completed_content_not_native_validated",
+  "started_utc": "2026-10-18T06:14:28.547930+00:00",
+  "baseline": "C:\\code\\senior_AI\\artifacts\\carla",
+  "runtime": "C:\\code\\senior_AI\\artifacts\\carla-phase3-expansion-v1",
+  "tool_sha256": "3ae833b7d700c2f5de5087ff8a1380bba09d18868a648bd5d23300449e4e5d73",
+  "scope": "Isolated runtime content only. No native startup/availability, new data, or model-quality claim.",
+  "contract_sha256": "a13ec3ecdad270ae52be4adf8cca411742486d4afa048de8bec2c9dbe9c8a080",
+  "runtime_inventory_sha256": "d36ae28ee4609509067fa430426600f5d66aa13b98bca97b956f47f009270bf7",
+  "baseline_unchanged": true,
+  "shipping_binary_sha256": "b0370d6dcd57b95299d12005cebad1dc6187804e83aeb51a184ccbc4b581fea8",
+  "baseline_files": 31427,
+  "addon_files": 22592,
+  "replaced_only_in_new_clone": 5724,
+  "new_assets": 10848,
+  "zip_crc_verified": true,
+  "finished_utc": "2026-10-18T06:46:52.106873+00:00"
+}

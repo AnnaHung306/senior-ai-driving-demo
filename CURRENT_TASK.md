@@ -1,6 +1,10 @@
 # 目前任務：批量完成晴天 Phase3（2026-10-18）
 
-## 最新接續：14:33（優先於全部歷史）
+## 最新接續：14:49（優先於全部歷史）
+
+**補景runtime準備exec3278已exit0！** 002 state=completed_content_not_native_validated，31427原base檔全部clone、22592 addon CRC/SHA、42275新runtime檔final驗證，原base所有來源重新hash完全未變。只新clone替換5724共用不同assets、新增10848；patched shipping SHA仍b0370d6dcd57b95299d12005cebad1dc6187804e83aeb51a184ccbc4b581fea8。contractSHAa13ec3ecdad270ae52be4adf8cca411742486d4afa048de8bec2c9dbe9c8a080，runtime_inventorySHAd36ae28ee4609509067fa430426600f5d66aa13b98bca97b956f47f009270bf7。來源／全manifest壓縮原bytes與完成收據已封存evidence/phase3/sunny-v3/additional-maps-isolated-runtime-002。**native尚未啟，仍等GPU批次全退出才開新root；此時不要重跑prepare job或把content完成當map可用／新資料已收。**
+
+原GPU exec32462仍最後第4輪，約17700/19200updates（14:47），source contract再次0差異；後續phase003／joint／demo／bench／export還沒完，不結束本回合。monitor cell372活，主要nativeIDs仍19772／det6608（執行前重查）。PHASE3_DETECTOR_GEOMETRY.md另記純GT尺度投影備案：只bike-positive views，2/3的.5縮小／其餘原尺度，小框期望52.99%，未整合或正式訓練；不先加P1／flip／proposal數。待現有全批結果與實際補景後才凍結下一輪。
 
 **原GPU仍執行、不要結束回合。** 第三輪14400已正式驗完AP50:95 .4531501647391283／mAP50 .7085198797911534；七類P/R通過，bike P .6648649／R .33744856、小框22/388，仍唯一bike recall失敗。最後第4輪約15800/19200updates（14:32）；phase003及其後全批步驟仍待接續。磁碟job exec3278已完成31427base clone，正overlay22592addon（約16512），尚未final hash／原base不變核對；仍不能啟CARLA。
 

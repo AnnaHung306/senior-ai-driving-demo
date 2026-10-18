@@ -1,0 +1,22 @@
+{
+  "contract.json": {
+    "raw_sha256": "a13ec3ecdad270ae52be4adf8cca411742486d4afa048de8bec2c9dbe9c8a080",
+    "gzip_sha256": "448e61e86f92aaf82154d4e28b31fdf9256def63e7617373aaff59bc8c996dc2",
+    "raw_bytes": 6958037
+  },
+  "runtime_inventory.json": {
+    "raw_sha256": "d36ae28ee4609509067fa430426600f5d66aa13b98bca97b956f47f009270bf7",
+    "gzip_sha256": "acdca8ebd38cb2daab9e3c5635c27b8fb777c48327fb6979ebaf810ebd5271de",
+    "raw_bytes": 8422059
+  },
+  "overlay_progress.json": {
+    "raw_sha256": "78b67dc805302decd94dcd1b069a3ad063ff4f55be178b90b648d7e10208a40a",
+    "gzip_sha256": "c97675c9f97782b3aa5dc4131bb2364655775e81ee582a4bec14d8054bb817bb",
+    "raw_bytes": 5846630
+  },
+  "base_clone_complete.json": {
+    "raw_sha256": "bcf5c0b205de4a4b64421e85375dcae089f8d948b59e810619d2100afd9651bb",
+    "gzip_sha256": "1d20ef10cd4cb0767637faf7147157b9b4d8755a1fe41d416b30dae8eedf2d19",
+    "raw_bytes": 112
+  }
+}

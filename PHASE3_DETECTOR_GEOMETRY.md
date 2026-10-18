@@ -9,3 +9,5 @@
 若 v5最終自行通過，就不用新增實驗。若仍是小框漏檢，優先比較這個保留現有架構的尺寸增強與 P1 備案；不要同時加 P1／proposal budget／score 變更，讓結果無法解釋。待全部目前 GPU 工作結束，再凍結具體尺度、比例、warm-start initializer SHA、新 source/config 及正式 update 數，做真 loss／finite／reload 檢查後另開版本。候選尺度 .5/.75/1 是待凍結政策，不是已執行訓練；水平翻轉雖有測試，也可不採用以保持主要改動單一。
 
 仍使用全部八類原 gates 與原 score=.5；不挪用 development／lockbox、不降低召回門檻。牆面外觀資料修復仍須另做實際 RGB／GT 審查。
+
+第三輪v5完整GPU結果仍只有bike recall失敗：P .6648649、R .3374486、小框22/388，其餘七類P/R過。既有完整GT-only尺寸診斷chunks的純幾何投影顯示：train bike小框原10.9524%，scale .75時12.2449%，scale .5時74.0136%。因此原型預設三尺度均勻抽取不一定足以補足尺寸支持；可考慮只對含bike正例的train views，以2/3機率scale .5、其餘原尺度（bike小框期望52.9932%，接近原val53.2236%），其他影像維持原樣。這是使用train／validation診斷提出的政策候選，未正式凍結或訓練，prototype也尚未接入這個class-conditioned採樣。先不疊加flip、P1或proposal budget改動；仍須真GPU finite/overfit/reload與全部逐類val。改過的二維影像不能搭配原相機外參冒稱Phase4幾何樣本。

@@ -59,3 +59,9 @@
 CPU研究exec30015已exit0，完整3600val×5固定alpha完畢。alpha0 mIoU .569206/wall .074063/margin .503958；alpha1 mIoU .579824/wall .074656/margin .501732；全部候選只有wall門檻失敗。這是第一輪snapshot的CPU診斷，不能代替GPU或外推成第6輪校正結果；但改善幅度不足以優先再花GPU測同一先驗法，因此取消閒置watcher，工具仍可供另一次有依據的實驗。證據segmentation-prior-CPU-study-001，full report SHA ee6b85c0be4427c2a6a54d8f20b18ad1a3382744341522999f7cb677fe0ea78b。
 
 seg v5正式6epochs/10272updates已全走完，第6輪選定mIoU .5900253284664799、wall .09379871927291071、fence .6147462883597083、margin .49446801091434905；仍wall/margin兩項失敗。此刻state仍training，正做最終selected reload及full val輸出，等completed再跑artifact check與新錯例。只有原batch等待接續det/phase；無GPU校正watcher或CARLA。後續資料修復按PHASE3_DOMAIN_RECOVERY.md，主train不能當新獨立驗收。
+
+## 12:03正式完成分割，已接續偵測
+
+seg state已completed、exact reloadtrue，best SHA3fe7bd08d885e481b7435fdf466945f142f8323447cca46bf31c32455835a53f；validation SHA f33385596c75cb12e4022bbba972c33bdeba5d80943f5ceff4a15d40fc4a9350、frames SHA98c4ac93ac6595fb033a334b148775b8659b0a68b94e0c84adb7ee15c44316a0。完整file checker通過，wall/margin品質失敗；最終3頁8例已實看並封存sunny-segmentation-v5-001-completed-validation證據。峰值allocated4046.51MiB/reserved4662，training_wall5252.77s。
+
+原唯一batch於12:01:07接續train-detection，launcherPID27684。run尚未建立時先查原batch stages/native程序，不要再啟；完整86400PNG校驗在建立run之前。batch parent19772仍是唯一協調器。CPU研究與取消的接續器均已結束，沒有新GPU模型或CARLA。接下來持續完成det/phase、統一val/joint、RGB demo/bench/export，再按缺口補資料與新訓練；Phase3尚未通過。

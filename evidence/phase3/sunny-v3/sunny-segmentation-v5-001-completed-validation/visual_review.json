@@ -1,0 +1,25 @@
+{
+  "status": "reviewed_diagnostic_only",
+  "training_approved": false,
+  "checkpoint_sha256": "3fe7bd08d885e481b7435fdf466945f142f8323447cca46bf31c32455835a53f",
+  "reviewed_images": [
+    {
+      "path": "validation_review/page-00.png",
+      "sha256": "4c00db77e2038525db0d7a07cad39d96f5844863674736ea0d853d852235a559"
+    },
+    {
+      "path": "validation_review/page-01.png",
+      "sha256": "fb78d6b774ce079eeade4d002c6fc1ee6274a8b31bb44ae16af0702dee215743"
+    },
+    {
+      "path": "validation_review/page-02.png",
+      "sha256": "122d8caf71877e5d7368619c01469e1c9af10a174c15fb4d5821e4bbff0967fe"
+    }
+  ],
+  "observations": [
+    "All3 contact pages/8 selected contexts actually viewed. Some solid wooden Wall GT still predicted as Fence/background; highway wall detection incomplete.",
+    "White picket/metal-fence segmentation improved but gaps/occlusions remain. Grass/rock contexts sometimes become sidewalk, creating false visible margins.",
+    "Panels use CPU FP32 for diagnosis; the frozen full3600 GPU BF16 validation, exact checkpoint reload and all original gates remain authoritative."
+  ],
+  "limits": "Selected worst validation examples, not exhaustive QA or heldout. Whole Phase3 remains unqualified."
+}

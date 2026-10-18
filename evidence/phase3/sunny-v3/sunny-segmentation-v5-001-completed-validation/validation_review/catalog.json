@@ -1,0 +1,2456 @@
+{
+  "identity": {
+    "checkpoint_sha256": "3fe7bd08d885e481b7435fdf466945f142f8323447cca46bf31c32455835a53f",
+    "tool_sha256": "bbbb1c3fc45eaec93884f33d27c594b8fbbe9bf03c3b82ea3745e5e7bb44797a",
+    "source_manifest_sha256": "edbdf26f4a4acd63f71b8034163ebf5eebf72e607c039e71a054a73217677132",
+    "validation_frames_sha256": "98c4ac93ac6595fb033a334b148775b8659b0a68b94e0c84adb7ee15c44316a0",
+    "selected_raw_sha256": {
+      "inputs/rgb/town04-00/right/00246258.png": "7f226f7bc6892adf792ebed09f888d7f3852fa4d719dab0b5fbba2b77c8061bb",
+      "labels/semantic_segmentation/town04-00/right/00246258.png": "adda65a257cd3da8f863ac36a4a5c12740c1217975e5ca74fbf38597ba451eab",
+      "labels/instance_segmentation/town04-00/right/00246258.png": "098d193a9b45f5963a1a8790e565483f5affd4b4162b1dbf850269ed30605b71",
+      "inputs/rgb/town04-00/rear_right/00246282.png": "2212d5aeae2218cd2deff1421c7fed6c595d0e370e3b9a68c4b82be1fa5fbc81",
+      "labels/semantic_segmentation/town04-00/rear_right/00246282.png": "b121aefd8de0fd44ad6362515d36dd4c2a00013ec13e245a82e3ffe3b1d850d4",
+      "labels/instance_segmentation/town04-00/rear_right/00246282.png": "5f4ab82517b83d6c1953363ec6352884e9ba99460e47bc8ee402352138bc962c",
+      "inputs/rgb/town04-00/front_left/00246402.png": "ee51f2d662409149b9e75c9211295bef65bd92ef376aa5bf0dd8a256d9ea9930",
+      "labels/semantic_segmentation/town04-00/front_left/00246402.png": "2e56ba581c532ab4e85937c795d097d9686263a22b9b6ba536e875b24907d543",
+      "labels/instance_segmentation/town04-00/front_left/00246402.png": "f9793cb098d73fbecf4b674e9317e79528784c9bbb5dab8de4c5c186df4474b3",
+      "inputs/rgb/town04-01/front/00247157.png": "020e674e3330a60a923d3598e8eaac9908330727db92fb8a2e46923b43688727",
+      "labels/semantic_segmentation/town04-01/front/00247157.png": "466fa44f2a3b68d49807a38a0ad035f696d2f125ea19fa744c9f384e499e66a1",
+      "labels/instance_segmentation/town04-01/front/00247157.png": "124ff8d670a22fc75b6d929c4585e82f533d9ca30bb9825cbd5a382f08ea138e",
+      "inputs/rgb/town04-01/right/00247205.png": "e8341b7e4d52d23fd4eec67da957bc6dd74c5fb32976dfc4a4e53a8f74be6fa6",
+      "labels/semantic_segmentation/town04-01/right/00247205.png": "de936c1eff7c4dcc25921153c24a931ffc69b4fe44101f5b5936025687a3f688",
+      "labels/instance_segmentation/town04-01/right/00247205.png": "741603b89baf2e07818efae60d5a67fd9316e05da050d57c409f7ab2fb541f08",
+      "inputs/rgb/town04-01/front_left/00247345.png": "9300f624e40dca99cbcdecc04bfd52c2df8df6db85e1ea3c356ae31577562ab7",
+      "labels/semantic_segmentation/town04-01/front_left/00247345.png": "dd1580da48ed3c1b945eb59c589bc830b7378155b08f8084d2f620d65dedd43b",
+      "labels/instance_segmentation/town04-01/front_left/00247345.png": "f69974954b60b1ba1a0b53330bac7c8d3129b7e76fac5f6db5acff8a68304968",
+      "inputs/rgb/town04-02/front_left/00247568.png": "4d972b2285ab4d18a1936a0f4515f9252a9d6b59670270a2a5c7308cd6949e22",
+      "labels/semantic_segmentation/town04-02/front_left/00247568.png": "f23599f67b6b0378699523c3c0a40005fc2c9c7adb0590d7b4423b30d5b1587d",
+      "labels/instance_segmentation/town04-02/front_left/00247568.png": "a41da6271b26d4d71bb38e184abba2f8ee399bab135ee0f8cfd384d27abb9dbf",
+      "inputs/rgb/town04-02/right/00247928.png": "394d27ae30c612a3bafd6a1256cfaacd14197d2030c7a862a5528ce749336500",
+      "labels/semantic_segmentation/town04-02/right/00247928.png": "f71217f1c21f88b574854bcb45d6fc63e78ffda851d0103f63ca2aa2df19e780",
+      "labels/instance_segmentation/town04-02/right/00247928.png": "acf2f5bae5e4678e233746f61baf0174abb312e2ce01c893e694a79fba06eafa"
+    },
+    "case_ids": [
+      "town04-00-wall",
+      "town04-00-fence",
+      "town04-00-margin",
+      "town04-01-wall",
+      "town04-01-fence",
+      "town04-01-margin",
+      "town04-02-wall",
+      "town04-02-margin"
+    ]
+  },
+  "status": "completed",
+  "cases": [
+    {
+      "id": "town04-00-wall",
+      "reason": "wall",
+      "sample_index": 171,
+      "scene_id": "town04-00",
+      "group_id": "town04-route-00",
+      "camera": "rear_right",
+      "frame": 246282,
+      "RGB": "inputs/rgb/town04-00/rear_right/00246282.png",
+      "original_GPU_classes": [
+        {
+          "name": "other_annotated",
+          "support_pixels": 111568,
+          "predicted_pixels": 116566,
+          "iou": 0.9179788978099122,
+          "precision": 0.9367139646209015,
+          "recall": 0.9786766814857307
+        },
+        {
+          "name": "road",
+          "support_pixels": 20663,
+          "predicted_pixels": 25022,
+          "iou": 0.7889728629048048,
+          "precision": 0.8052114139557189,
+          "recall": 0.9750762232008905
+        },
+        {
+          "name": "sidewalk",
+          "support_pixels": 17091,
+          "predicted_pixels": 24391,
+          "iou": 0.6826349734312254,
+          "precision": 0.6899676110040589,
+          "recall": 0.9846702943069452
+        },
+        {
+          "name": "pedestrian",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "rider",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "car",
+          "support_pixels": 451,
+          "predicted_pixels": 0,
+          "iou": 0.0,
+          "precision": null,
+          "recall": 0.0
+        },
+        {
+          "name": "truck",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bus",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "motorcycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bicycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "road_line",
+          "support_pixels": 1800,
+          "predicted_pixels": 1531,
+          "iou": 0.817239498090562,
+          "precision": 0.9784454604833442,
+          "recall": 0.8322222222222222
+        },
+        {
+          "name": "traffic_light",
+          "support_pixels": 47,
+          "predicted_pixels": 0,
+          "iou": 0.0,
+          "precision": null,
+          "recall": 0.0
+        },
+        {
+          "name": "wall",
+          "support_pixels": 3839,
+          "predicted_pixels": 13,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "name": "fence",
+          "support_pixels": 0,
+          "predicted_pixels": 3640,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "pole",
+          "support_pixels": 6520,
+          "predicted_pixels": 5894,
+          "iou": 0.7263245723821443,
+          "precision": 0.8861554122836783,
+          "recall": 0.8010736196319018
+        },
+        {
+          "name": "temporary_obstacle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "terrain_or_ground",
+          "support_pixels": 68369,
+          "predicted_pixels": 53291,
+          "iou": 0.7327275575748081,
+          "precision": 0.9653975342928449,
+          "recall": 0.7524901636706695
+        }
+      ],
+      "original_GPU_visible_margin": {
+        "gt_pixels": 778,
+        "predicted_pixels": 791,
+        "matched_gt_within_2px": 416,
+        "matched_prediction_within_2px": 424,
+        "precision": 0.5360303413400759,
+        "recall": 0.5347043701799485,
+        "f1": 0.5353665347352062,
+        "tolerance_pixels": 2,
+        "definition": "Visible road/road-line side adjacent to sidewalk or terrain/ground; no inferred boundary behind occluders and no drivable-free-space claim"
+      },
+      "CPU_diagnostic_classes": [
+        {
+          "name": "other_annotated",
+          "support_pixels": 111568,
+          "predicted_pixels": 116748,
+          "iou": 0.9186057260023025,
+          "precision": 0.9363329564532155,
+          "recall": 0.9798060375734978
+        },
+        {
+          "name": "road",
+          "support_pixels": 20663,
+          "predicted_pixels": 25295,
+          "iou": 0.7804896947156361,
+          "precision": 0.7964419845819332,
+          "recall": 0.9749794318346804
+        },
+        {
+          "name": "sidewalk",
+          "support_pixels": 17091,
+          "predicted_pixels": 24120,
+          "iou": 0.6903609515996718,
+          "precision": 0.6978026533996683,
+          "recall": 0.9847873149610906
+        },
+        {
+          "name": "pedestrian",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "rider",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "car",
+          "support_pixels": 451,
+          "predicted_pixels": 0,
+          "iou": 0.0,
+          "precision": null,
+          "recall": 0.0
+        },
+        {
+          "name": "truck",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bus",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "motorcycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bicycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "road_line",
+          "support_pixels": 1800,
+          "predicted_pixels": 1541,
+          "iou": 0.8157608695652174,
+          "precision": 0.9740428293316029,
+          "recall": 0.8338888888888889
+        },
+        {
+          "name": "traffic_light",
+          "support_pixels": 47,
+          "predicted_pixels": 0,
+          "iou": 0.0,
+          "precision": null,
+          "recall": 0.0
+        },
+        {
+          "name": "wall",
+          "support_pixels": 3839,
+          "predicted_pixels": 11,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "name": "fence",
+          "support_pixels": 0,
+          "predicted_pixels": 3631,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "pole",
+          "support_pixels": 6520,
+          "predicted_pixels": 5903,
+          "iou": 0.7299818966717727,
+          "precision": 0.8880230391326445,
+          "recall": 0.8039877300613497
+        },
+        {
+          "name": "temporary_obstacle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "terrain_or_ground",
+          "support_pixels": 68369,
+          "predicted_pixels": 53099,
+          "iou": 0.7333751926479822,
+          "precision": 0.9678525019303565,
+          "recall": 0.7516857055098071
+        }
+      ],
+      "panel": "town04-00-wall.png",
+      "panel_sha256": "713660c09bde0812d22777746f90018a3fd531828046428a1378a1ef992926d7"
+    },
+    {
+      "id": "town04-00-fence",
+      "reason": "fence",
+      "sample_index": 415,
+      "scene_id": "town04-00",
+      "group_id": "town04-route-00",
+      "camera": "front_left",
+      "frame": 246402,
+      "RGB": "inputs/rgb/town04-00/front_left/00246402.png",
+      "original_GPU_classes": [
+        {
+          "name": "other_annotated",
+          "support_pixels": 122825,
+          "predicted_pixels": 124118,
+          "iou": 0.9288202580685475,
+          "precision": 0.9580802139899128,
+          "recall": 0.9681660899653979
+        },
+        {
+          "name": "road",
+          "support_pixels": 64585,
+          "predicted_pixels": 64392,
+          "iou": 0.9832241596703263,
+          "precision": 0.9930270841098273,
+          "recall": 0.990059611364868
+        },
+        {
+          "name": "sidewalk",
+          "support_pixels": 30858,
+          "predicted_pixels": 31200,
+          "iou": 0.8900529938478406,
+          "precision": 0.9366666666666666,
+          "recall": 0.9470477671916521
+        },
+        {
+          "name": "pedestrian",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "rider",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "car",
+          "support_pixels": 660,
+          "predicted_pixels": 290,
+          "iou": 0.424287856071964,
+          "precision": 0.9758620689655172,
+          "recall": 0.4287878787878788
+        },
+        {
+          "name": "truck",
+          "support_pixels": 492,
+          "predicted_pixels": 118,
+          "iou": 0.021775544388609715,
+          "precision": 0.11016949152542373,
+          "recall": 0.026422764227642278
+        },
+        {
+          "name": "bus",
+          "support_pixels": 983,
+          "predicted_pixels": 1713,
+          "iou": 0.5683536940081443,
+          "precision": 0.5703444249854057,
+          "recall": 0.9938962360122076
+        },
+        {
+          "name": "motorcycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bicycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "road_line",
+          "support_pixels": 2174,
+          "predicted_pixels": 2253,
+          "iou": 0.7700919632147141,
+          "precision": 0.8548601864181092,
+          "recall": 0.8859245630174793
+        },
+        {
+          "name": "traffic_light",
+          "support_pixels": 145,
+          "predicted_pixels": 101,
+          "iou": 0.6291390728476821,
+          "precision": 0.9405940594059405,
+          "recall": 0.6551724137931034
+        },
+        {
+          "name": "wall",
+          "support_pixels": 0,
+          "predicted_pixels": 119,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "fence",
+          "support_pixels": 2264,
+          "predicted_pixels": 34,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "name": "pole",
+          "support_pixels": 3708,
+          "predicted_pixels": 5232,
+          "iou": 0.4691865242399343,
+          "precision": 0.5456804281345565,
+          "recall": 0.7699568500539374
+        },
+        {
+          "name": "temporary_obstacle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "terrain_or_ground",
+          "support_pixels": 1512,
+          "predicted_pixels": 636,
+          "iou": 0.36989795918367346,
+          "precision": 0.9119496855345912,
+          "recall": 0.3835978835978836
+        }
+      ],
+      "original_GPU_visible_margin": {
+        "gt_pixels": 778,
+        "predicted_pixels": 830,
+        "matched_gt_within_2px": 730,
+        "matched_prediction_within_2px": 727,
+        "precision": 0.8759036144578313,
+        "recall": 0.9383033419023136,
+        "f1": 0.906030357505638,
+        "tolerance_pixels": 2,
+        "definition": "Visible road/road-line side adjacent to sidewalk or terrain/ground; no inferred boundary behind occluders and no drivable-free-space claim"
+      },
+      "CPU_diagnostic_classes": [
+        {
+          "name": "other_annotated",
+          "support_pixels": 122825,
+          "predicted_pixels": 123900,
+          "iou": 0.9290762951727157,
+          "precision": 0.9590556900726392,
+          "recall": 0.9674496234479951
+        },
+        {
+          "name": "road",
+          "support_pixels": 64585,
+          "predicted_pixels": 64465,
+          "iou": 0.9830964271993853,
+          "precision": 0.9923989761886295,
+          "recall": 0.9905550824494852
+        },
+        {
+          "name": "sidewalk",
+          "support_pixels": 30858,
+          "predicted_pixels": 31319,
+          "iou": 0.8931007185482889,
+          "precision": 0.9365880136658259,
+          "recall": 0.950580076479357
+        },
+        {
+          "name": "pedestrian",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "rider",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "car",
+          "support_pixels": 660,
+          "predicted_pixels": 271,
+          "iou": 0.3978978978978979,
+          "precision": 0.977859778597786,
+          "recall": 0.4015151515151515
+        },
+        {
+          "name": "truck",
+          "support_pixels": 492,
+          "predicted_pixels": 94,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "name": "bus",
+          "support_pixels": 983,
+          "predicted_pixels": 1765,
+          "iou": 0.5525423728813559,
+          "precision": 0.5541076487252125,
+          "recall": 0.9949135300101729
+        },
+        {
+          "name": "motorcycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bicycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "road_line",
+          "support_pixels": 2174,
+          "predicted_pixels": 2286,
+          "iou": 0.765637371338084,
+          "precision": 0.8460192475940508,
+          "recall": 0.889604415823367
+        },
+        {
+          "name": "traffic_light",
+          "support_pixels": 145,
+          "predicted_pixels": 103,
+          "iou": 0.6209150326797386,
+          "precision": 0.9223300970873787,
+          "recall": 0.6551724137931034
+        },
+        {
+          "name": "wall",
+          "support_pixels": 0,
+          "predicted_pixels": 93,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "fence",
+          "support_pixels": 2264,
+          "predicted_pixels": 33,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "name": "pole",
+          "support_pixels": 3708,
+          "predicted_pixels": 5265,
+          "iou": 0.4666557698594312,
+          "precision": 0.5422602089268755,
+          "recall": 0.7699568500539374
+        },
+        {
+          "name": "temporary_obstacle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "terrain_or_ground",
+          "support_pixels": 1512,
+          "predicted_pixels": 612,
+          "iou": 0.35459183673469385,
+          "precision": 0.9084967320261438,
+          "recall": 0.36772486772486773
+        }
+      ],
+      "panel": "town04-00-fence.png",
+      "panel_sha256": "c1bbc535756c0ac7491f839b713ec6a9e9ebe9ddcd8c3d50c6943e2704ae20de"
+    },
+    {
+      "id": "town04-00-margin",
+      "reason": "visible_margin",
+      "sample_index": 122,
+      "scene_id": "town04-00",
+      "group_id": "town04-route-00",
+      "camera": "right",
+      "frame": 246258,
+      "RGB": "inputs/rgb/town04-00/right/00246258.png",
+      "original_GPU_classes": [
+        {
+          "name": "other_annotated",
+          "support_pixels": 124085,
+          "predicted_pixels": 122406,
+          "iou": 0.9504419316806064,
+          "precision": 0.981275427675114,
+          "recall": 0.9679977434822904
+        },
+        {
+          "name": "road",
+          "support_pixels": 195,
+          "predicted_pixels": 0,
+          "iou": 0.0,
+          "precision": null,
+          "recall": 0.0
+        },
+        {
+          "name": "sidewalk",
+          "support_pixels": 23475,
+          "predicted_pixels": 24201,
+          "iou": 0.9590729783037475,
+          "precision": 0.9644229577290194,
+          "recall": 0.9942492012779552
+        },
+        {
+          "name": "pedestrian",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "rider",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "car",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "truck",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bus",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "motorcycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bicycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "road_line",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "traffic_light",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "wall",
+          "support_pixels": 1090,
+          "predicted_pixels": 491,
+          "iou": 0.0019011406844106464,
+          "precision": 0.006109979633401222,
+          "recall": 0.0027522935779816515
+        },
+        {
+          "name": "fence",
+          "support_pixels": 8337,
+          "predicted_pixels": 8720,
+          "iou": 0.8424065672931519,
+          "precision": 0.8943807339449541,
+          "recall": 0.935468393906681
+        },
+        {
+          "name": "pole",
+          "support_pixels": 7077,
+          "predicted_pixels": 8883,
+          "iou": 0.7592592592592593,
+          "precision": 0.7754137115839244,
+          "recall": 0.973293768545994
+        },
+        {
+          "name": "temporary_obstacle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "terrain_or_ground",
+          "support_pixels": 66090,
+          "predicted_pixels": 65648,
+          "iou": 0.9581140937602188,
+          "precision": 0.9819034852546917,
+          "recall": 0.975336662127402
+        }
+      ],
+      "original_GPU_visible_margin": {
+        "gt_pixels": 121,
+        "predicted_pixels": 0,
+        "matched_gt_within_2px": 0,
+        "matched_prediction_within_2px": 0,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tolerance_pixels": 2,
+        "definition": "Visible road/road-line side adjacent to sidewalk or terrain/ground; no inferred boundary behind occluders and no drivable-free-space claim"
+      },
+      "CPU_diagnostic_classes": [
+        {
+          "name": "other_annotated",
+          "support_pixels": 124085,
+          "predicted_pixels": 122578,
+          "iou": 0.9508304334071497,
+          "precision": 0.980787743314461,
+          "recall": 0.9688761735906838
+        },
+        {
+          "name": "road",
+          "support_pixels": 195,
+          "predicted_pixels": 0,
+          "iou": 0.0,
+          "precision": null,
+          "recall": 0.0
+        },
+        {
+          "name": "sidewalk",
+          "support_pixels": 23475,
+          "predicted_pixels": 24135,
+          "iou": 0.9578090303478904,
+          "precision": 0.9650714729645743,
+          "recall": 0.9922044728434505
+        },
+        {
+          "name": "pedestrian",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "rider",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "car",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "truck",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bus",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "motorcycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bicycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "road_line",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "traffic_light",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "wall",
+          "support_pixels": 1090,
+          "predicted_pixels": 494,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "name": "fence",
+          "support_pixels": 8337,
+          "predicted_pixels": 8698,
+          "iou": 0.8434152148035927,
+          "precision": 0.8960680616233617,
+          "recall": 0.9348686577905722
+        },
+        {
+          "name": "pole",
+          "support_pixels": 7077,
+          "predicted_pixels": 8878,
+          "iou": 0.7594838994265549,
+          "precision": 0.7757377787790043,
+          "recall": 0.9731524657340681
+        },
+        {
+          "name": "temporary_obstacle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "terrain_or_ground",
+          "support_pixels": 66090,
+          "predicted_pixels": 65566,
+          "iou": 0.9593999285629241,
+          "precision": 0.983192508312235,
+          "recall": 0.9753971856559237
+        }
+      ],
+      "panel": "town04-00-margin.png",
+      "panel_sha256": "719c1a862884c8be81b625429b007f70012d0ae2bb4bea03f790472235ab2755"
+    },
+    {
+      "id": "town04-01-wall",
+      "reason": "wall",
+      "sample_index": 1906,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "right",
+      "frame": 247205,
+      "RGB": "inputs/rgb/town04-01/right/00247205.png",
+      "original_GPU_classes": [
+        {
+          "name": "other_annotated",
+          "support_pixels": 151227,
+          "predicted_pixels": 135014,
+          "iou": 0.750484647231854,
+          "precision": 0.9089427763046796,
+          "recall": 0.8114953017648965
+        },
+        {
+          "name": "road",
+          "support_pixels": 3766,
+          "predicted_pixels": 1778,
+          "iou": 0.09630215542811944,
+          "precision": 0.2739032620922385,
+          "recall": 0.1293149229952204
+        },
+        {
+          "name": "sidewalk",
+          "support_pixels": 0,
+          "predicted_pixels": 23577,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "pedestrian",
+          "support_pixels": 0,
+          "predicted_pixels": 1,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "rider",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "car",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "truck",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bus",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "motorcycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bicycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "road_line",
+          "support_pixels": 126,
+          "predicted_pixels": 129,
+          "iou": 0.003937007874015748,
+          "precision": 0.007751937984496124,
+          "recall": 0.007936507936507936
+        },
+        {
+          "name": "traffic_light",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "wall",
+          "support_pixels": 686,
+          "predicted_pixels": 880,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "name": "fence",
+          "support_pixels": 0,
+          "predicted_pixels": 1908,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "pole",
+          "support_pixels": 15799,
+          "predicted_pixels": 14645,
+          "iou": 0.7702058378881266,
+          "precision": 0.904472516217139,
+          "recall": 0.8384074941451991
+        },
+        {
+          "name": "temporary_obstacle",
+          "support_pixels": 0,
+          "predicted_pixels": 30,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "terrain_or_ground",
+          "support_pixels": 58796,
+          "predicted_pixels": 52438,
+          "iou": 0.7499528034736643,
+          "precision": 0.9090735726000229,
+          "recall": 0.8107694400979658
+        }
+      ],
+      "original_GPU_visible_margin": {
+        "gt_pixels": 258,
+        "predicted_pixels": 631,
+        "matched_gt_within_2px": 54,
+        "matched_prediction_within_2px": 51,
+        "precision": 0.08082408874801902,
+        "recall": 0.20930232558139536,
+        "f1": 0.11661585365853659,
+        "tolerance_pixels": 2,
+        "definition": "Visible road/road-line side adjacent to sidewalk or terrain/ground; no inferred boundary behind occluders and no drivable-free-space claim"
+      },
+      "CPU_diagnostic_classes": [
+        {
+          "name": "other_annotated",
+          "support_pixels": 151227,
+          "predicted_pixels": 136497,
+          "iou": 0.7565889485155406,
+          "precision": 0.9079100639574497,
+          "recall": 0.8194766807514531
+        },
+        {
+          "name": "road",
+          "support_pixels": 3766,
+          "predicted_pixels": 2160,
+          "iou": 0.124051593323217,
+          "precision": 0.30277777777777776,
+          "recall": 0.17365905469994689
+        },
+        {
+          "name": "sidewalk",
+          "support_pixels": 0,
+          "predicted_pixels": 23129,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "pedestrian",
+          "support_pixels": 0,
+          "predicted_pixels": 1,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "rider",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "car",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "truck",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bus",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "motorcycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bicycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "road_line",
+          "support_pixels": 126,
+          "predicted_pixels": 143,
+          "iou": 0.0037313432835820895,
+          "precision": 0.006993006993006993,
+          "recall": 0.007936507936507936
+        },
+        {
+          "name": "traffic_light",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "wall",
+          "support_pixels": 686,
+          "predicted_pixels": 725,
+          "iou": 0.0007092198581560284,
+          "precision": 0.001379310344827586,
+          "recall": 0.0014577259475218659
+        },
+        {
+          "name": "fence",
+          "support_pixels": 0,
+          "predicted_pixels": 1908,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "pole",
+          "support_pixels": 15799,
+          "predicted_pixels": 14575,
+          "iou": 0.7682948128311113,
+          "precision": 0.9054545454545454,
+          "recall": 0.8353060320273435
+        },
+        {
+          "name": "temporary_obstacle",
+          "support_pixels": 0,
+          "predicted_pixels": 42,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "terrain_or_ground",
+          "support_pixels": 58796,
+          "predicted_pixels": 51220,
+          "iou": 0.7616089156472171,
+          "precision": 0.9286216321749317,
+          "recall": 0.8089665963670998
+        }
+      ],
+      "panel": "town04-01-wall.png",
+      "panel_sha256": "0dc7f04ab14c1ae485b7ab5410e8f7c77067c667989a919d07f2182fb38b12b9"
+    },
+    {
+      "id": "town04-01-fence",
+      "reason": "fence",
+      "sample_index": 1808,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "front",
+      "frame": 247157,
+      "RGB": "inputs/rgb/town04-01/front/00247157.png",
+      "original_GPU_classes": [
+        {
+          "name": "other_annotated",
+          "support_pixels": 101114,
+          "predicted_pixels": 111144,
+          "iou": 0.797669258261768,
+          "precision": 0.8474051680702512,
+          "recall": 0.9314634966473485
+        },
+        {
+          "name": "road",
+          "support_pixels": 68469,
+          "predicted_pixels": 63976,
+          "iou": 0.910990231866911,
+          "precision": 0.9869013380017506,
+          "recall": 0.9221399465451519
+        },
+        {
+          "name": "sidewalk",
+          "support_pixels": 3987,
+          "predicted_pixels": 9473,
+          "iou": 0.3633140889294034,
+          "precision": 0.37865512509236776,
+          "recall": 0.8996739403059945
+        },
+        {
+          "name": "pedestrian",
+          "support_pixels": 0,
+          "predicted_pixels": 3,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "rider",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "car",
+          "support_pixels": 925,
+          "predicted_pixels": 2131,
+          "iou": 0.3734831460674157,
+          "precision": 0.38995776630689816,
+          "recall": 0.8983783783783784
+        },
+        {
+          "name": "truck",
+          "support_pixels": 1185,
+          "predicted_pixels": 1,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "name": "bus",
+          "support_pixels": 1810,
+          "predicted_pixels": 1733,
+          "iou": 0.8956661316211878,
+          "precision": 0.9659549913444894,
+          "recall": 0.9248618784530387
+        },
+        {
+          "name": "motorcycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bicycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "road_line",
+          "support_pixels": 2369,
+          "predicted_pixels": 2274,
+          "iou": 0.8024068322981367,
+          "precision": 0.9089709762532981,
+          "recall": 0.8725200506542845
+        },
+        {
+          "name": "traffic_light",
+          "support_pixels": 568,
+          "predicted_pixels": 641,
+          "iou": 0.8125937031484258,
+          "precision": 0.8455538221528861,
+          "recall": 0.954225352112676
+        },
+        {
+          "name": "wall",
+          "support_pixels": 987,
+          "predicted_pixels": 2467,
+          "iou": 0.004946173988943846,
+          "precision": 0.006890960680989056,
+          "recall": 0.017223910840932118
+        },
+        {
+          "name": "fence",
+          "support_pixels": 581,
+          "predicted_pixels": 140,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "name": "pole",
+          "support_pixels": 12393,
+          "predicted_pixels": 15293,
+          "iou": 0.709856719367589,
+          "precision": 0.7515856928006277,
+          "recall": 0.9274590494634067
+        },
+        {
+          "name": "temporary_obstacle",
+          "support_pixels": 0,
+          "predicted_pixels": 1,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "terrain_or_ground",
+          "support_pixels": 36012,
+          "predicted_pixels": 21123,
+          "iou": 0.5275104266923324,
+          "precision": 0.934100269848033,
+          "recall": 0.5479006997667444
+        }
+      ],
+      "original_GPU_visible_margin": {
+        "gt_pixels": 1090,
+        "predicted_pixels": 913,
+        "matched_gt_within_2px": 458,
+        "matched_prediction_within_2px": 458,
+        "precision": 0.5016429353778752,
+        "recall": 0.42018348623853213,
+        "f1": 0.45731402895656514,
+        "tolerance_pixels": 2,
+        "definition": "Visible road/road-line side adjacent to sidewalk or terrain/ground; no inferred boundary behind occluders and no drivable-free-space claim"
+      },
+      "CPU_diagnostic_classes": [
+        {
+          "name": "other_annotated",
+          "support_pixels": 101114,
+          "predicted_pixels": 110968,
+          "iou": 0.7951296310403494,
+          "precision": 0.8465413452526854,
+          "recall": 0.9290404889530629
+        },
+        {
+          "name": "road",
+          "support_pixels": 68469,
+          "predicted_pixels": 64339,
+          "iou": 0.9141012337138246,
+          "precision": 0.9857784547475092,
+          "recall": 0.9263170193810337
+        },
+        {
+          "name": "sidewalk",
+          "support_pixels": 3987,
+          "predicted_pixels": 9430,
+          "iou": 0.3508860249697946,
+          "precision": 0.3695652173913043,
+          "recall": 0.8740907950840231
+        },
+        {
+          "name": "pedestrian",
+          "support_pixels": 0,
+          "predicted_pixels": 4,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "rider",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "car",
+          "support_pixels": 925,
+          "predicted_pixels": 2222,
+          "iou": 0.36057068741893644,
+          "precision": 0.37533753375337536,
+          "recall": 0.9016216216216216
+        },
+        {
+          "name": "truck",
+          "support_pixels": 1185,
+          "predicted_pixels": 4,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "name": "bus",
+          "support_pixels": 1810,
+          "predicted_pixels": 1771,
+          "iou": 0.9068157614483493,
+          "precision": 0.9616036137775268,
+          "recall": 0.9408839779005524
+        },
+        {
+          "name": "motorcycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bicycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "road_line",
+          "support_pixels": 2369,
+          "predicted_pixels": 2321,
+          "iou": 0.7990026850786345,
+          "precision": 0.8974579922447221,
+          "recall": 0.879273955255382
+        },
+        {
+          "name": "traffic_light",
+          "support_pixels": 568,
+          "predicted_pixels": 644,
+          "iou": 0.8116591928251121,
+          "precision": 0.843167701863354,
+          "recall": 0.9559859154929577
+        },
+        {
+          "name": "wall",
+          "support_pixels": 987,
+          "predicted_pixels": 2436,
+          "iou": 0.002929973630237328,
+          "precision": 0.004105090311986864,
+          "recall": 0.010131712259371834
+        },
+        {
+          "name": "fence",
+          "support_pixels": 581,
+          "predicted_pixels": 128,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "name": "pole",
+          "support_pixels": 12393,
+          "predicted_pixels": 15282,
+          "iou": 0.7121380846325167,
+          "precision": 0.7532391048292109,
+          "recall": 0.9288307915758897
+        },
+        {
+          "name": "temporary_obstacle",
+          "support_pixels": 0,
+          "predicted_pixels": 3,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "terrain_or_ground",
+          "support_pixels": 36012,
+          "predicted_pixels": 20848,
+          "iou": 0.5241924674976545,
+          "precision": 0.9379796623177283,
+          "recall": 0.5430134399644563
+        }
+      ],
+      "panel": "town04-01-fence.png",
+      "panel_sha256": "30d1e7a59711aaafd101b3e608f23e6e0fb651d1340d8bd72a9b5f24a99c5687"
+    },
+    {
+      "id": "town04-01-margin",
+      "reason": "visible_margin",
+      "sample_index": 2191,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "front_left",
+      "frame": 247345,
+      "RGB": "inputs/rgb/town04-01/front_left/00247345.png",
+      "original_GPU_classes": [
+        {
+          "name": "other_annotated",
+          "support_pixels": 78294,
+          "predicted_pixels": 82211,
+          "iou": 0.9269001284560068,
+          "precision": 0.9391443967352301,
+          "recall": 0.9861292053030883
+        },
+        {
+          "name": "road",
+          "support_pixels": 56316,
+          "predicted_pixels": 64011,
+          "iou": 0.8715994462677513,
+          "precision": 0.8754120385558732,
+          "recall": 0.9950280559698842
+        },
+        {
+          "name": "sidewalk",
+          "support_pixels": 142,
+          "predicted_pixels": 2267,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "name": "pedestrian",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "rider",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "car",
+          "support_pixels": 4662,
+          "predicted_pixels": 94,
+          "iou": 0.01972555746140652,
+          "precision": 0.9787234042553191,
+          "recall": 0.019734019734019732
+        },
+        {
+          "name": "truck",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bus",
+          "support_pixels": 63879,
+          "predicted_pixels": 62896,
+          "iou": 0.9714947748196069,
+          "precision": 0.993242813533452,
+          "recall": 0.9779583274628595
+        },
+        {
+          "name": "motorcycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bicycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "road_line",
+          "support_pixels": 1300,
+          "predicted_pixels": 1058,
+          "iou": 0.7211678832116788,
+          "precision": 0.9338374291115312,
+          "recall": 0.76
+        },
+        {
+          "name": "traffic_light",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "wall",
+          "support_pixels": 5,
+          "predicted_pixels": 384,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "name": "fence",
+          "support_pixels": 12420,
+          "predicted_pixels": 16492,
+          "iou": 0.5922458420530895,
+          "precision": 0.652073732718894,
+          "recall": 0.8658615136876007
+        },
+        {
+          "name": "pole",
+          "support_pixels": 195,
+          "predicted_pixels": 808,
+          "iou": 0.06588735387885228,
+          "precision": 0.07673267326732673,
+          "recall": 0.31794871794871793
+        },
+        {
+          "name": "temporary_obstacle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "terrain_or_ground",
+          "support_pixels": 13168,
+          "predicted_pixels": 160,
+          "iou": 0.005886792452830188,
+          "precision": 0.4875,
+          "recall": 0.005923450789793438
+        }
+      ],
+      "original_GPU_visible_margin": {
+        "gt_pixels": 388,
+        "predicted_pixels": 332,
+        "matched_gt_within_2px": 0,
+        "matched_prediction_within_2px": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tolerance_pixels": 2,
+        "definition": "Visible road/road-line side adjacent to sidewalk or terrain/ground; no inferred boundary behind occluders and no drivable-free-space claim"
+      },
+      "CPU_diagnostic_classes": [
+        {
+          "name": "other_annotated",
+          "support_pixels": 78294,
+          "predicted_pixels": 82310,
+          "iou": 0.925084205353183,
+          "precision": 0.9376381970598955,
+          "recall": 0.9857332618080568
+        },
+        {
+          "name": "road",
+          "support_pixels": 56316,
+          "predicted_pixels": 64110,
+          "iou": 0.8699689440993789,
+          "precision": 0.8739042271096553,
+          "recall": 0.9948504865402372
+        },
+        {
+          "name": "sidewalk",
+          "support_pixels": 142,
+          "predicted_pixels": 2172,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "name": "pedestrian",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "rider",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "car",
+          "support_pixels": 4662,
+          "predicted_pixels": 103,
+          "iou": 0.02187432983058117,
+          "precision": 0.9902912621359223,
+          "recall": 0.021879021879021878
+        },
+        {
+          "name": "truck",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bus",
+          "support_pixels": 63879,
+          "predicted_pixels": 62902,
+          "iou": 0.9714654475337439,
+          "precision": 0.993179867094846,
+          "recall": 0.9779896366568043
+        },
+        {
+          "name": "motorcycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bicycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "road_line",
+          "support_pixels": 1300,
+          "predicted_pixels": 1102,
+          "iou": 0.7405797101449275,
+          "precision": 0.9274047186932849,
+          "recall": 0.7861538461538462
+        },
+        {
+          "name": "traffic_light",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "wall",
+          "support_pixels": 5,
+          "predicted_pixels": 308,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "name": "fence",
+          "support_pixels": 12420,
+          "predicted_pixels": 16356,
+          "iou": 0.5948567311422712,
+          "precision": 0.6562117877231597,
+          "recall": 0.864170692431562
+        },
+        {
+          "name": "pole",
+          "support_pixels": 195,
+          "predicted_pixels": 886,
+          "iou": 0.06293018682399214,
+          "precision": 0.07223476297968397,
+          "recall": 0.3282051282051282
+        },
+        {
+          "name": "temporary_obstacle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "terrain_or_ground",
+          "support_pixels": 13168,
+          "predicted_pixels": 132,
+          "iou": 0.005063099826192095,
+          "precision": 0.5075757575757576,
+          "recall": 0.005088092345078979
+        }
+      ],
+      "panel": "town04-01-margin.png",
+      "panel_sha256": "817a6c473f29d8b9595c7f482d580ece992fd393878b0249c9d21f14402a3409"
+    },
+    {
+      "id": "town04-02-wall",
+      "reason": "wall",
+      "sample_index": 2527,
+      "scene_id": "town04-02",
+      "group_id": "town04-route-02",
+      "camera": "front_left",
+      "frame": 247568,
+      "RGB": "inputs/rgb/town04-02/front_left/00247568.png",
+      "original_GPU_classes": [
+        {
+          "name": "other_annotated",
+          "support_pixels": 90042,
+          "predicted_pixels": 85700,
+          "iou": 0.7586686547448689,
+          "precision": 0.8846324387397899,
+          "recall": 0.8419737455853935
+        },
+        {
+          "name": "road",
+          "support_pixels": 95785,
+          "predicted_pixels": 94354,
+          "iou": 0.9752238681930564,
+          "precision": 0.9949445704474638,
+          "recall": 0.9800803883697865
+        },
+        {
+          "name": "sidewalk",
+          "support_pixels": 0,
+          "predicted_pixels": 7059,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "pedestrian",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "rider",
+          "support_pixels": 307,
+          "predicted_pixels": 419,
+          "iou": 0.5921052631578947,
+          "precision": 0.6443914081145584,
+          "recall": 0.8794788273615635
+        },
+        {
+          "name": "car",
+          "support_pixels": 825,
+          "predicted_pixels": 319,
+          "iou": 0.14514514514514515,
+          "precision": 0.45454545454545453,
+          "recall": 0.17575757575757575
+        },
+        {
+          "name": "truck",
+          "support_pixels": 880,
+          "predicted_pixels": 1379,
+          "iou": 0.5242914979757085,
+          "precision": 0.5634517766497462,
+          "recall": 0.8829545454545454
+        },
+        {
+          "name": "bus",
+          "support_pixels": 92,
+          "predicted_pixels": 10,
+          "iou": 0.10869565217391304,
+          "precision": 1.0,
+          "recall": 0.10869565217391304
+        },
+        {
+          "name": "motorcycle",
+          "support_pixels": 1012,
+          "predicted_pixels": 1285,
+          "iou": 0.7257700976709242,
+          "precision": 0.7517509727626459,
+          "recall": 0.9545454545454546
+        },
+        {
+          "name": "bicycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "road_line",
+          "support_pixels": 1248,
+          "predicted_pixels": 1627,
+          "iou": 0.5919158361018826,
+          "precision": 0.6570374923171481,
+          "recall": 0.8565705128205128
+        },
+        {
+          "name": "traffic_light",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "wall",
+          "support_pixels": 1283,
+          "predicted_pixels": 7741,
+          "iou": 0.025804251449357735,
+          "precision": 0.029324376695517376,
+          "recall": 0.17692907248636008
+        },
+        {
+          "name": "fence",
+          "support_pixels": 0,
+          "predicted_pixels": 13,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "pole",
+          "support_pixels": 1200,
+          "predicted_pixels": 1356,
+          "iou": 0.5585365853658537,
+          "precision": 0.6755162241887905,
+          "recall": 0.7633333333333333
+        },
+        {
+          "name": "temporary_obstacle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "terrain_or_ground",
+          "support_pixels": 37726,
+          "predicted_pixels": 29138,
+          "iou": 0.7256561798332775,
+          "precision": 0.9649598462488846,
+          "recall": 0.7452950220007422
+        }
+      ],
+      "original_GPU_visible_margin": {
+        "gt_pixels": 0,
+        "predicted_pixels": 595,
+        "matched_gt_within_2px": 0,
+        "matched_prediction_within_2px": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": 0.0,
+        "tolerance_pixels": 2,
+        "definition": "Visible road/road-line side adjacent to sidewalk or terrain/ground; no inferred boundary behind occluders and no drivable-free-space claim"
+      },
+      "CPU_diagnostic_classes": [
+        {
+          "name": "other_annotated",
+          "support_pixels": 90042,
+          "predicted_pixels": 86457,
+          "iou": 0.7580632308703708,
+          "precision": 0.8802641775680397,
+          "recall": 0.8452166766620022
+        },
+        {
+          "name": "road",
+          "support_pixels": 95785,
+          "predicted_pixels": 94565,
+          "iou": 0.9741959572283471,
+          "precision": 0.9932956167715328,
+          "recall": 0.9806441509630944
+        },
+        {
+          "name": "sidewalk",
+          "support_pixels": 0,
+          "predicted_pixels": 7017,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "pedestrian",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "rider",
+          "support_pixels": 307,
+          "predicted_pixels": 425,
+          "iou": 0.5844155844155844,
+          "precision": 0.6352941176470588,
+          "recall": 0.8794788273615635
+        },
+        {
+          "name": "car",
+          "support_pixels": 825,
+          "predicted_pixels": 291,
+          "iou": 0.1364562118126273,
+          "precision": 0.46048109965635736,
+          "recall": 0.16242424242424242
+        },
+        {
+          "name": "truck",
+          "support_pixels": 880,
+          "predicted_pixels": 1407,
+          "iou": 0.5236508994003998,
+          "precision": 0.55863539445629,
+          "recall": 0.8931818181818182
+        },
+        {
+          "name": "bus",
+          "support_pixels": 92,
+          "predicted_pixels": 11,
+          "iou": 0.11956521739130435,
+          "precision": 1.0,
+          "recall": 0.11956521739130435
+        },
+        {
+          "name": "motorcycle",
+          "support_pixels": 1012,
+          "predicted_pixels": 1288,
+          "iou": 0.7215568862275449,
+          "precision": 0.7484472049689441,
+          "recall": 0.9525691699604744
+        },
+        {
+          "name": "bicycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "road_line",
+          "support_pixels": 1248,
+          "predicted_pixels": 1661,
+          "iou": 0.5861504907306434,
+          "precision": 0.6472004816375677,
+          "recall": 0.8613782051282052
+        },
+        {
+          "name": "traffic_light",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "wall",
+          "support_pixels": 1283,
+          "predicted_pixels": 7334,
+          "iou": 0.021940227703984818,
+          "precision": 0.02522497954731388,
+          "recall": 0.1441932969602494
+        },
+        {
+          "name": "fence",
+          "support_pixels": 0,
+          "predicted_pixels": 36,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "pole",
+          "support_pixels": 1200,
+          "predicted_pixels": 1438,
+          "iou": 0.5581807442409923,
+          "precision": 0.6571627260083449,
+          "recall": 0.7875
+        },
+        {
+          "name": "temporary_obstacle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "terrain_or_ground",
+          "support_pixels": 37726,
+          "predicted_pixels": 28470,
+          "iou": 0.7223740015091198,
+          "precision": 0.97516684229013,
+          "recall": 0.7359115729205322
+        }
+      ],
+      "panel": "town04-02-wall.png",
+      "panel_sha256": "254cda926c5578a67886215ef7773f1e07b008824a37d2a276b5db2919cf3cab"
+    },
+    {
+      "id": "town04-02-margin",
+      "reason": "visible_margin",
+      "sample_index": 3242,
+      "scene_id": "town04-02",
+      "group_id": "town04-route-02",
+      "camera": "right",
+      "frame": 247928,
+      "RGB": "inputs/rgb/town04-02/right/00247928.png",
+      "original_GPU_classes": [
+        {
+          "name": "other_annotated",
+          "support_pixels": 120464,
+          "predicted_pixels": 112644,
+          "iou": 0.8887835549397571,
+          "precision": 0.9737846667376868,
+          "recall": 0.9105707929339886
+        },
+        {
+          "name": "road",
+          "support_pixels": 37872,
+          "predicted_pixels": 295,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "name": "sidewalk",
+          "support_pixels": 0,
+          "predicted_pixels": 43693,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "pedestrian",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "rider",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "car",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "truck",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bus",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "motorcycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bicycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "road_line",
+          "support_pixels": 27,
+          "predicted_pixels": 0,
+          "iou": 0.0,
+          "precision": null,
+          "recall": 0.0
+        },
+        {
+          "name": "traffic_light",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "wall",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "fence",
+          "support_pixels": 0,
+          "predicted_pixels": 207,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "pole",
+          "support_pixels": 276,
+          "predicted_pixels": 76,
+          "iou": 0.0764525993883792,
+          "precision": 0.32894736842105265,
+          "recall": 0.09057971014492754
+        },
+        {
+          "name": "temporary_obstacle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "terrain_or_ground",
+          "support_pixels": 71761,
+          "predicted_pixels": 73485,
+          "iou": 0.8741903016852047,
+          "precision": 0.9219296455058855,
+          "recall": 0.9440782597789886
+        }
+      ],
+      "original_GPU_visible_margin": {
+        "gt_pixels": 817,
+        "predicted_pixels": 148,
+        "matched_gt_within_2px": 0,
+        "matched_prediction_within_2px": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tolerance_pixels": 2,
+        "definition": "Visible road/road-line side adjacent to sidewalk or terrain/ground; no inferred boundary behind occluders and no drivable-free-space claim"
+      },
+      "CPU_diagnostic_classes": [
+        {
+          "name": "other_annotated",
+          "support_pixels": 120464,
+          "predicted_pixels": 112535,
+          "iou": 0.885044173327724,
+          "precision": 0.9720975696449994,
+          "recall": 0.9081136273077434
+        },
+        {
+          "name": "road",
+          "support_pixels": 37872,
+          "predicted_pixels": 515,
+          "iou": 0.005579713941426101,
+          "precision": 0.41359223300970877,
+          "recall": 0.005624207858048162
+        },
+        {
+          "name": "sidewalk",
+          "support_pixels": 0,
+          "predicted_pixels": 44220,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "pedestrian",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "rider",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "car",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "truck",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bus",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "motorcycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "bicycle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "road_line",
+          "support_pixels": 27,
+          "predicted_pixels": 0,
+          "iou": 0.0,
+          "precision": null,
+          "recall": 0.0
+        },
+        {
+          "name": "traffic_light",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "wall",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "fence",
+          "support_pixels": 0,
+          "predicted_pixels": 212,
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null
+        },
+        {
+          "name": "pole",
+          "support_pixels": 276,
+          "predicted_pixels": 78,
+          "iou": 0.07926829268292683,
+          "precision": 0.3333333333333333,
+          "recall": 0.09420289855072464
+        },
+        {
+          "name": "temporary_obstacle",
+          "support_pixels": 0,
+          "predicted_pixels": 0,
+          "iou": null,
+          "precision": null,
+          "recall": null
+        },
+        {
+          "name": "terrain_or_ground",
+          "support_pixels": 71761,
+          "predicted_pixels": 72840,
+          "iou": 0.8739923796687489,
+          "precision": 0.9258511806699615,
+          "recall": 0.9397722997171165
+        }
+      ],
+      "panel": "town04-02-margin.png",
+      "panel_sha256": "71a737683d28abf6fa83a402dad98113452548eb9a6bb50c87896f970b2ce63b"
+    }
+  ],
+  "scope": "Validation-only selected error renders, CPU float32; original GPU BF16 metrics retained separately. Not exhaustive visual review or new acceptance scoring.",
+  "selection": "Per validation scene: lowest original IoU with >=512 GT wall/fence pixels; lowest margin F1 with >=50 GT margin pixels; ties by support then index.",
+  "raw_verification": "Selected RGB/semantic/instance bytes plus bound inventory/index signatures only; not a full raw-data re-audit.",
+  "pages": [
+    {
+      "path": "page-00.png",
+      "sha256": "4c00db77e2038525db0d7a07cad39d96f5844863674736ea0d853d852235a559"
+    },
+    {
+      "path": "page-01.png",
+      "sha256": "fb78d6b774ce079eeade4d002c6fc1ee6274a8b31bb44ae16af0702dee215743"
+    },
+    {
+      "path": "page-02.png",
+      "sha256": "122d8caf71877e5d7368619c01469e1c9af10a174c15fb4d5821e4bbff0967fe"
+    }
+  ]
+}

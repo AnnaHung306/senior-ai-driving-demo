@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "initial_validation_matches_parent_full_report": true,
+  "new_initial_sha256": "f68d0df2b0f8724c2864925999b88130ef2125a63c7ea9963cee9eb575357a36",
+  "parent_validation_sha256": "f68d0df2b0f8724c2864925999b88130ef2125a63c7ea9963cee9eb575357a36",
+  "initial_checkpoint_sha256": "a7031897c0ce35cc97f4ab035277c51e0a35558dccc225b69455a16cc6f9eb67",
+  "main_audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+  "scope": "Warm-start initial model only; not an improved v5 quality result"
+}

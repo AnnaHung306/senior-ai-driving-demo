@@ -1,0 +1,406 @@
+{
+  "scope": "Offline training-town geometry hints only; no new capture or training approval",
+  "training_approved": false,
+  "towns": {
+    "Town01": {
+      "wall_objects": 869,
+      "reachable_low_height_hints": 690,
+      "distinct_road_spawns": 73,
+      "new_road_spawns": 48,
+      "examples": [
+        {
+          "native_id": 15077003164253548727,
+          "native_name": "BP_RepSpline27_4_Inst_36_36",
+          "reported_bbox_height_m_hint": 0.783696711063385,
+          "nearest_spawn_index": 209,
+          "origin_distance_m": 5.776599627918627,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 1656446749060469514,
+          "native_name": "BP_RepSpline27_4_Inst_47_47",
+          "reported_bbox_height_m_hint": 0.783696711063385,
+          "nearest_spawn_index": 244,
+          "origin_distance_m": 5.7972076082337125,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 10606797939508408362,
+          "native_name": "BP_RepSpline27_4_Inst_26_26",
+          "reported_bbox_height_m_hint": 0.783696711063385,
+          "nearest_spawn_index": 222,
+          "origin_distance_m": 5.8076404865651305,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 252912846792809029,
+          "native_name": "BP_RepSpline27_4_Inst_17_17",
+          "reported_bbox_height_m_hint": 0.783696711063385,
+          "nearest_spawn_index": 200,
+          "origin_distance_m": 5.833704071667201,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 9721928783803941647,
+          "native_name": "BP_RepSpline11_Inst_0_0",
+          "reported_bbox_height_m_hint": 1.429455041885376,
+          "nearest_spawn_index": 96,
+          "origin_distance_m": 5.859900284606532,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 4397726665386045837,
+          "native_name": "BP_RepSpline27_4_Inst_48_48",
+          "reported_bbox_height_m_hint": 0.783696711063385,
+          "nearest_spawn_index": 244,
+          "origin_distance_m": 5.891850540136385,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 18248861573236220589,
+          "native_name": "BP_RepSpline27_4_Inst_37_37",
+          "reported_bbox_height_m_hint": 0.783696711063385,
+          "nearest_spawn_index": 209,
+          "origin_distance_m": 6.068180608387649,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 3606381138947061991,
+          "native_name": "BP_RepSpline233_Inst_0_0",
+          "reported_bbox_height_m_hint": 1.4588521718978882,
+          "nearest_spawn_index": 205,
+          "origin_distance_m": 6.128911131525744,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 17655425877687289744,
+          "native_name": "BP_RepSpline27_4_Inst_27_27",
+          "reported_bbox_height_m_hint": 0.783696711063385,
+          "nearest_spawn_index": 222,
+          "origin_distance_m": 6.131285480064167,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 4454866491988577981,
+          "native_name": "BP_RepSpline190_Inst_2_2",
+          "reported_bbox_height_m_hint": 0.4377852976322174,
+          "nearest_spawn_index": 201,
+          "origin_distance_m": 6.212908887248248,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 11538991092103862099,
+          "native_name": "BP_RepSpline27_4_Inst_16_16",
+          "reported_bbox_height_m_hint": 0.783696711063385,
+          "nearest_spawn_index": 200,
+          "origin_distance_m": 6.214846885031192,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 13333044475640075605,
+          "native_name": "BP_RepSpline190_Inst_3_3",
+          "reported_bbox_height_m_hint": 0.4377852976322174,
+          "nearest_spawn_index": 201,
+          "origin_distance_m": 6.291833147532427,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 4803469907503886997,
+          "native_name": "BP_RepSpline177_16_Inst_0_0",
+          "reported_bbox_height_m_hint": 2.411526679992676,
+          "nearest_spawn_index": 60,
+          "origin_distance_m": 6.3238917017643494,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 5425063465318308041,
+          "native_name": "RepeatedMeshesAlongSpline57_Inst_8_8",
+          "reported_bbox_height_m_hint": 0.4377852976322174,
+          "nearest_spawn_index": 61,
+          "origin_distance_m": 6.330006126921043,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 11602646778328439904,
+          "native_name": "BP_RepSpline237_Inst_3_3",
+          "reported_bbox_height_m_hint": 1.4588521718978882,
+          "nearest_spawn_index": 238,
+          "origin_distance_m": 6.3530155217663085,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 3891055074200651333,
+          "native_name": "BP_RepSpline22_Inst_3_3",
+          "reported_bbox_height_m_hint": 1.376530408859253,
+          "nearest_spawn_index": 254,
+          "origin_distance_m": 6.358586831932317,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 1545313465982167235,
+          "native_name": "BP_RepSpline22_Inst_2_2",
+          "reported_bbox_height_m_hint": 1.376530408859253,
+          "nearest_spawn_index": 254,
+          "origin_distance_m": 6.377446797348881,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 11149809371980913147,
+          "native_name": "BP_RepSpline9_26_Inst_0_0",
+          "reported_bbox_height_m_hint": 1.429455041885376,
+          "nearest_spawn_index": 13,
+          "origin_distance_m": 6.414212388266802,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 6274182131738652877,
+          "native_name": "BP_RepSpline27_4_Inst_18_18",
+          "reported_bbox_height_m_hint": 0.783696711063385,
+          "nearest_spawn_index": 200,
+          "origin_distance_m": 6.431083845823379,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 13792637239904814994,
+          "native_name": "BP_RepSpline27_4_Inst_25_25",
+          "reported_bbox_height_m_hint": 0.783696711063385,
+          "nearest_spawn_index": 222,
+          "origin_distance_m": 6.46405177489312,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 7970020446829061010,
+          "native_name": "BP_RepSpline27_4_Inst_35_35",
+          "reported_bbox_height_m_hint": 0.783696711063385,
+          "nearest_spawn_index": 209,
+          "origin_distance_m": 6.467931967100932,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 17853701371251298395,
+          "native_name": "RepeatedMeshesAlongSpline57_Inst_9_9",
+          "reported_bbox_height_m_hint": 0.4377852976322174,
+          "nearest_spawn_index": 61,
+          "origin_distance_m": 6.476933476458474,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 702249015459991489,
+          "native_name": "BP_RepSpline198_50_Inst_4_4",
+          "reported_bbox_height_m_hint": 1.4588524103164673,
+          "nearest_spawn_index": 218,
+          "origin_distance_m": 6.5087926083656065,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 18315463612304515421,
+          "native_name": "BP_RepSpline198_50_Inst_3_3",
+          "reported_bbox_height_m_hint": 1.4588524103164673,
+          "nearest_spawn_index": 218,
+          "origin_distance_m": 6.5188934754044245,
+          "spawn_not_in_current_static_plan": true
+        }
+      ]
+    },
+    "Town03": {
+      "wall_objects": 1050,
+      "reachable_low_height_hints": 209,
+      "distinct_road_spawns": 47,
+      "new_road_spawns": 36,
+      "examples": [
+        {
+          "native_id": 4782422286668731620,
+          "native_name": "BP_RepSpline41_Inst_9_9",
+          "reported_bbox_height_m_hint": 2.4378907680511475,
+          "nearest_spawn_index": 24,
+          "origin_distance_m": 6.197962071029832,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 3671546431345096972,
+          "native_name": "BP_RepSpline63_4174_Inst_6_6",
+          "reported_bbox_height_m_hint": 1.429455041885376,
+          "nearest_spawn_index": 250,
+          "origin_distance_m": 6.330078538356509,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 8056907229095178513,
+          "native_name": "BP_RepSpline41_Inst_19_19",
+          "reported_bbox_height_m_hint": 2.4378907680511475,
+          "nearest_spawn_index": 20,
+          "origin_distance_m": 6.492630515951357,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 6301090630580493050,
+          "native_name": "BP_RepSpline63_4174_Inst_5_5",
+          "reported_bbox_height_m_hint": 1.429455041885376,
+          "nearest_spawn_index": 250,
+          "origin_distance_m": 6.640582429830731,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 8930029490367720608,
+          "native_name": "BP_RepSpline41_Inst_2_2",
+          "reported_bbox_height_m_hint": 2.4378907680511475,
+          "nearest_spawn_index": 191,
+          "origin_distance_m": 6.666776156757583,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 9656740068517263428,
+          "native_name": "BP_RepSpline41_Inst_5_5",
+          "reported_bbox_height_m_hint": 2.4378907680511475,
+          "nearest_spawn_index": 22,
+          "origin_distance_m": 6.823164405990608,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 5763298710429622675,
+          "native_name": "BP_RepSpline63_4174_Inst_7_7",
+          "reported_bbox_height_m_hint": 1.429455041885376,
+          "nearest_spawn_index": 250,
+          "origin_distance_m": 6.824332551000659,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 9207168169296027270,
+          "native_name": "BP_RepSpline41_Inst_15_15",
+          "reported_bbox_height_m_hint": 2.4378907680511475,
+          "nearest_spawn_index": 18,
+          "origin_distance_m": 6.866659849379929,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 10037892699478089586,
+          "native_name": "BP_RepSpline41_Inst_12_12",
+          "reported_bbox_height_m_hint": 2.4378907680511475,
+          "nearest_spawn_index": 186,
+          "origin_distance_m": 6.909576803707942,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 13158091441898489637,
+          "native_name": "BP_RepSpline41_Inst_6_6",
+          "reported_bbox_height_m_hint": 2.4378907680511475,
+          "nearest_spawn_index": 22,
+          "origin_distance_m": 7.009847995835223,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 6084265149063231047,
+          "native_name": "BP_RepSpline41_Inst_26_26",
+          "reported_bbox_height_m_hint": 2.4378907680511475,
+          "nearest_spawn_index": 147,
+          "origin_distance_m": 7.11917804413619,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 17151821987342751073,
+          "native_name": "BP_RepSpline14_7904_Inst_6_6",
+          "reported_bbox_height_m_hint": 2.3615336418151855,
+          "nearest_spawn_index": 96,
+          "origin_distance_m": 7.254759708652454,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 8882990502205921892,
+          "native_name": "BP_RepSpline14_7904_Inst_10_10",
+          "reported_bbox_height_m_hint": 2.3615336418151855,
+          "nearest_spawn_index": 70,
+          "origin_distance_m": 7.335623764906277,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 13205274113785291617,
+          "native_name": "BP_RepSpline41_Inst_16_16",
+          "reported_bbox_height_m_hint": 2.4378907680511475,
+          "nearest_spawn_index": 18,
+          "origin_distance_m": 7.463142092763508,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 7675649026770907875,
+          "native_name": "BP_RepSpline41_Inst_20_20",
+          "reported_bbox_height_m_hint": 2.4378907680511475,
+          "nearest_spawn_index": 20,
+          "origin_distance_m": 7.476257132463815,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 14553966943343837405,
+          "native_name": "BP_RepSpline41_Inst_29_29",
+          "reported_bbox_height_m_hint": 2.4378907680511475,
+          "nearest_spawn_index": 1,
+          "origin_distance_m": 7.503967451271637,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 5514415667765832975,
+          "native_name": "BP_RepSpline63_4174_Inst_4_4",
+          "reported_bbox_height_m_hint": 1.429455041885376,
+          "nearest_spawn_index": 250,
+          "origin_distance_m": 7.658583474860469,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 17500289389878517335,
+          "native_name": "BP_RepSpline41_Inst_8_8",
+          "reported_bbox_height_m_hint": 2.4378907680511475,
+          "nearest_spawn_index": 24,
+          "origin_distance_m": 7.681736384755097,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 2974208956153671640,
+          "native_name": "BP_RepSpline14_7904_Inst_3_3",
+          "reported_bbox_height_m_hint": 2.3615336418151855,
+          "nearest_spawn_index": 138,
+          "origin_distance_m": 7.8354980396158105,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 7915692928923759116,
+          "native_name": "BP_RepSpline41_Inst_25_25",
+          "reported_bbox_height_m_hint": 2.4378907680511475,
+          "nearest_spawn_index": 147,
+          "origin_distance_m": 7.890857321052309,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 469236513992856504,
+          "native_name": "BP_RepSpline63_4174_Inst_8_8",
+          "reported_bbox_height_m_hint": 1.429455041885376,
+          "nearest_spawn_index": 250,
+          "origin_distance_m": 7.97509891561289,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 13533220366206059375,
+          "native_name": "BP_RepSpline63_4174_Inst_13_13",
+          "reported_bbox_height_m_hint": 1.429455041885376,
+          "nearest_spawn_index": 1,
+          "origin_distance_m": 8.053479031634714,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 9880095299139026044,
+          "native_name": "BP_RepSpline41_Inst_3_3",
+          "reported_bbox_height_m_hint": 2.4378907680511475,
+          "nearest_spawn_index": 191,
+          "origin_distance_m": 8.157895811694116,
+          "spawn_not_in_current_static_plan": true
+        },
+        {
+          "native_id": 18184533292003013453,
+          "native_name": "BP_RepSpline41_Inst_13_13",
+          "reported_bbox_height_m_hint": 2.4378907680511475,
+          "nearest_spawn_index": 186,
+          "origin_distance_m": 8.2064600284398,
+          "spawn_not_in_current_static_plan": true
+        }
+      ]
+    }
+  }
+}

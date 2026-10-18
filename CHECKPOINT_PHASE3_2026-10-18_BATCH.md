@@ -67,3 +67,11 @@ full source/data/classpairs/intrinsics/weather/path/timing/pose檢查通過，20
 凍結來源commit8ec5771。native parent19772/launcher31940、exec32462，awake helper4644綁parent確切FILETIME最多6h，沒有第二個batch。GPU regression94/94無skip，det容量allocated3350.97/reserved3924MiB，3steps finite且production loader重建720resize後exactRGB輸出一致。dummy synthetic.pt只是工程權重，不是正式best。封存proof在evidence/recovery-batch-001-preflight。
 
 10:27開始分割child native26248/launcher23100，10:29 GPU197MiB、root尚未建立，正在全部86400PNG的verify前置，不能只看run不存在就再啟。後續source/config不得更改；只改文件/非contract狀態reader可以。新status_phase3_batch.ps1用ReadWrite|Delete共享讀state/progress/stages避免WinError5，讀檔不推定process活著。要查native CIM/nvidia-smi。
+
+## 11:26訓練中段更新
+
+完整主checksum與靜態補景verify均通過。overfit ratio .423368；新初始完整val與原v4 best JSON精確相同，SHA f68d0df2b0f8724c2864925999b88130ef2125a63c7ea9963cee9eb575357a36。前三輪mIoU .568366/.583960/.587430，wall .075309/.078031/.080723均失敗；fence第1輪已.584425，margin第1輪.502724但第3輪.487057。不是Phase3完成。
+
+第一輪best SHA4e1a0d7ff0e2dac78c006073221ee402c9615c20a7475999d22bbe64ac67fb94已另存immutable中間snapshot；CPU實看val九例，不假裝正式GPU測試。漏檢有木質實心圍牆及水泥道路分隔，岩面被判Wall；低水泥牆不是全部問題。全9600原train shape survey完成，4688低牆hint/7805中性非牆hint，hint非真材質或物體高度。補充1374個每秒去重候選的外觀QA，16代表主要磚/水泥/隧道。三種QA共17頁已全部view_image，bound diagnostic-only review/evidence存wall-diagnosis-001；不將16圖樣本當全train木牆絕對不存在的證明。
+
+CPU診斷exec30015/native21608，scripts/study_segmentation_prior.py；明確保存contract後才運算完整3600val，alpha0/.25/.5/.75/1固定，按train CEweight log偏置更正，不改任何正式來源或參數，並非GPU acceptance。output segmentation-train-prior-study-001。nativeCIM查到venv22188/native21608，可能退出，後續重查不可盲用。原GPU批次保持運行，尚未作任何停止或訓練策略變更。

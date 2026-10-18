@@ -1,0 +1,316 @@
+{
+  "status": "completed_diagnostic_only",
+  "checkpoint_sha256": "4e1a0d7ff0e2dac78c006073221ee402c9615c20a7475999d22bbe64ac67fb94",
+  "epoch": 0,
+  "updates": 1712,
+  "selection_run": "artifacts\\runs\\sunny-segmentation-v4-001",
+  "selection_frames_sha256": "3abe9776737742e68e59dbb986dd6cf10ed9079b164c62318d6458ab5400e4af",
+  "selected_raw_sha256": {
+    "inputs/rgb/town04-00/rear_right/00246198.png": "67d03ceaef281a99653617fa9ddf6d1c1d9e3347c21b26fd5a6a92951b5af7d9",
+    "labels/semantic_segmentation/town04-00/rear_right/00246198.png": "50f9196e4b5d70c9240256092299e2c25225e26ab7f9dfd21cfc442c063d50ac",
+    "labels/instance_segmentation/town04-00/rear_right/00246198.png": "7d12aa3b9b954619a268af8046f03d79bbbef79eef17a86862900eca8d9063b2",
+    "inputs/rgb/town04-00/rear_right/00246230.png": "3007c6c473738338c14b8700ad13838e8ae43126d8c6d419e2d63eea3b4f3728",
+    "labels/semantic_segmentation/town04-00/rear_right/00246230.png": "c3a4138a5942364ad1b324cc085ead759e8d7c440e6e1dd9b9025ca43b8b0b78",
+    "labels/instance_segmentation/town04-00/rear_right/00246230.png": "3c8b3994ea3d82cd8dde9fb5c81762ddf50e3f76f6cdc6d76848bd12e6c1687b",
+    "inputs/rgb/town04-00/front_right/00246294.png": "aadb921eee2b1d3a1f4843ff71694df2892094982807c511462be8defa55844f",
+    "labels/semantic_segmentation/town04-00/front_right/00246294.png": "85cc31709fad06fe78a2e1d1910413ad7961892156173e947b6972287f4c620b",
+    "labels/instance_segmentation/town04-00/front_right/00246294.png": "3ea60e6a0c87dd99b9602c14b03eb95a0f0ad3e0b15dc7ed1ec77743201f4e28",
+    "inputs/rgb/town04-01/front_right/00247161.png": "9b6fba02c118a15e09d4a58e3f0ab0e302c58831cbb340d6682d5b1a9bab9fbb",
+    "labels/semantic_segmentation/town04-01/front_right/00247161.png": "3b789699efec73c2a64ada0c4d3cd347f0af90e7ca28c99326266a473bb55999",
+    "labels/instance_segmentation/town04-01/front_right/00247161.png": "df57c4e4a5ee99b3c26e0892056ed06eebfdc228ba1f80db64d83bd1a9e3975f",
+    "inputs/rgb/town04-01/right/00247225.png": "4bcf2ab4dc0d71b2d62db97e381e701619488473ef31a805fca2f82ff52c49bc",
+    "labels/semantic_segmentation/town04-01/right/00247225.png": "220e4172ae7708de454b0a907cfb154026d0fa82e30e8a95b5e69b955717c6a1",
+    "labels/instance_segmentation/town04-01/right/00247225.png": "32d7b70a375031f54641d20aef0e3b6b18233a1d8f1110cb473d8436ce086597",
+    "inputs/rgb/town04-01/front_right/00247381.png": "2c8d86eb4f32d09b0f448cee2ff3876d185d9954d6396afc05e9e8e72b7d4855",
+    "labels/semantic_segmentation/town04-01/front_right/00247381.png": "d9be8093527e658fe023a4e1c10a4f34bdb28405d509711899aca8746fdaffab",
+    "labels/instance_segmentation/town04-01/front_right/00247381.png": "8cbcc5a95db43bffd265b22a8568528cbc4bea01d1e9f076a48a9c805618aa7a",
+    "inputs/rgb/town04-02/left/00247536.png": "92e54f19757bf5714cd76bcc97c128a1c0868831376a612da1ea40f912cb014f",
+    "labels/semantic_segmentation/town04-02/left/00247536.png": "c909218bec840d9d6795b82a474a5b616da4a9400db2496fec6c26204e48fa88",
+    "labels/instance_segmentation/town04-02/left/00247536.png": "e847073bed52c14764cabb682322971df3d25a5ca3e9bbfe1e7fb0c7a452e3b3",
+    "inputs/rgb/town04-02/front/00247968.png": "e11e914516334cc4121b5634523c39ffbe890474bd39809bc485075774eccbc0",
+    "labels/semantic_segmentation/town04-02/front/00247968.png": "8ae17079e09d4654917f771fc912816277f94df0b2deffa446b03e2766575727",
+    "labels/instance_segmentation/town04-02/front/00247968.png": "9b34093e26b980c873cafde54bb0570fa690f978b29b6082a75aa3ea1d36dd57",
+    "inputs/rgb/town04-02/front/00248104.png": "4a6cf003c3fa12dcff99af85b998ab424acf0a189fbc1e279f2d952dda375f2f",
+    "labels/semantic_segmentation/town04-02/front/00248104.png": "c2f2f262bcfc9f691e5ebdb68f54bc914a1c1b90f5f8fec771624207ffdd73a0",
+    "labels/instance_segmentation/town04-02/front/00248104.png": "a6a8c84475ef1545269c7c9b005e87ffb950b6c4c5f94826137389cdce4ed2c6"
+  },
+  "tool_sha256": "6b7724ba5f64ddfce8e2b0acce0d71309b99407ef9ac0fefe6a41c193f941529",
+  "scope": "CPU FP32 selected validation examples; never substitutes for full GPU BF16 gates, no heldout opened. Selection fixed from the completed v4 baseline, not new model scores.",
+  "records": [
+    {
+      "index": 3,
+      "sample": {
+        "scene_id": "town04-00",
+        "group_id": "town04-route-00",
+        "split": "validation",
+        "camera": "rear_right",
+        "frame": 246198,
+        "input_manifest": "inputs/frames/town04-00/00246198.json",
+        "rgb": "inputs/rgb/town04-00/rear_right/00246198.png",
+        "semantic": "labels/semantic_segmentation/town04-00/rear_right/00246198.png",
+        "detection": "labels/visible/town04-00/rear_right/00246198.json",
+        "instance": "labels/instance_segmentation/town04-00/rear_right/00246198.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "reasons": [
+        "wall_GT_support"
+      ],
+      "CPU_wall": {
+        "name": "wall",
+        "support_pixels": 4415,
+        "predicted_pixels": 897,
+        "iou": 0.0358814352574103,
+        "precision": 0.20512820512820512,
+        "recall": 0.04167610419026047
+      },
+      "panel": "00.png",
+      "sha256": "838e511ea79774f0a0b8aa6b058caa53c778a788c80750f28908393f32646d97"
+    },
+    {
+      "index": 67,
+      "sample": {
+        "scene_id": "town04-00",
+        "group_id": "town04-route-00",
+        "split": "validation",
+        "camera": "rear_right",
+        "frame": 246230,
+        "input_manifest": "inputs/frames/town04-00/00246230.json",
+        "rgb": "inputs/rgb/town04-00/rear_right/00246230.png",
+        "semantic": "labels/semantic_segmentation/town04-00/rear_right/00246230.png",
+        "detection": "labels/visible/town04-00/rear_right/00246230.json",
+        "instance": "labels/instance_segmentation/town04-00/rear_right/00246230.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "reasons": [
+        "wall_as_fence"
+      ],
+      "CPU_wall": {
+        "name": "wall",
+        "support_pixels": 4256,
+        "predicted_pixels": 1589,
+        "iou": 0.06641123882503193,
+        "precision": 0.2290748898678414,
+        "recall": 0.08552631578947369
+      },
+      "panel": "01.png",
+      "sha256": "e7c6001404778145e71baf47d9d0a3049dde8c830f3d5341a51559eb5b093b5c"
+    },
+    {
+      "index": 193,
+      "sample": {
+        "scene_id": "town04-00",
+        "group_id": "town04-route-00",
+        "split": "validation",
+        "camera": "front_right",
+        "frame": 246294,
+        "input_manifest": "inputs/frames/town04-00/00246294.json",
+        "rgb": "inputs/rgb/town04-00/front_right/00246294.png",
+        "semantic": "labels/semantic_segmentation/town04-00/front_right/00246294.png",
+        "detection": "labels/visible/town04-00/front_right/00246294.json",
+        "instance": "labels/instance_segmentation/town04-00/front_right/00246294.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "reasons": [
+        "wall_false_positive"
+      ],
+      "CPU_wall": {
+        "name": "wall",
+        "support_pixels": 81,
+        "predicted_pixels": 503,
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "panel": "02.png",
+      "sha256": "f13c8a8db7443a6a457aac8077397c4c1175209a80378778147c4bd008d93781"
+    },
+    {
+      "index": 1817,
+      "sample": {
+        "scene_id": "town04-01",
+        "group_id": "town04-pedestrian-route-01",
+        "split": "validation",
+        "camera": "front_right",
+        "frame": 247161,
+        "input_manifest": "inputs/frames/town04-01/00247161.json",
+        "rgb": "inputs/rgb/town04-01/front_right/00247161.png",
+        "semantic": "labels/semantic_segmentation/town04-01/front_right/00247161.png",
+        "detection": "labels/visible/town04-01/front_right/00247161.json",
+        "instance": "labels/instance_segmentation/town04-01/front_right/00247161.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "reasons": [
+        "wall_as_fence"
+      ],
+      "CPU_wall": {
+        "name": "wall",
+        "support_pixels": 503,
+        "predicted_pixels": 437,
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "panel": "03.png",
+      "sha256": "246a06003cdc9376025f392215679a6c9dc4ca63c0acd124a7b93648dd0b0ad5"
+    },
+    {
+      "index": 1946,
+      "sample": {
+        "scene_id": "town04-01",
+        "group_id": "town04-pedestrian-route-01",
+        "split": "validation",
+        "camera": "right",
+        "frame": 247225,
+        "input_manifest": "inputs/frames/town04-01/00247225.json",
+        "rgb": "inputs/rgb/town04-01/right/00247225.png",
+        "semantic": "labels/semantic_segmentation/town04-01/right/00247225.png",
+        "detection": "labels/visible/town04-01/right/00247225.json",
+        "instance": "labels/instance_segmentation/town04-01/right/00247225.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "reasons": [
+        "wall_GT_support"
+      ],
+      "CPU_wall": {
+        "name": "wall",
+        "support_pixels": 1356,
+        "predicted_pixels": 1203,
+        "iou": 0.3245341614906832,
+        "precision": 0.5211970074812967,
+        "recall": 0.46238938053097345
+      },
+      "panel": "04.png",
+      "sha256": "23be630d7fb642ed17210f1d2666d960ed95a2232b8917d44f4c820e7628a105"
+    },
+    {
+      "index": 2257,
+      "sample": {
+        "scene_id": "town04-01",
+        "group_id": "town04-pedestrian-route-01",
+        "split": "validation",
+        "camera": "front_right",
+        "frame": 247381,
+        "input_manifest": "inputs/frames/town04-01/00247381.json",
+        "rgb": "inputs/rgb/town04-01/front_right/00247381.png",
+        "semantic": "labels/semantic_segmentation/town04-01/front_right/00247381.png",
+        "detection": "labels/visible/town04-01/front_right/00247381.json",
+        "instance": "labels/instance_segmentation/town04-01/front_right/00247381.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "reasons": [
+        "wall_false_positive"
+      ],
+      "CPU_wall": {
+        "name": "wall",
+        "support_pixels": 0,
+        "predicted_pixels": 23990,
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": null
+      },
+      "panel": "05.png",
+      "sha256": "355e5ce98a005d9c882a18446fa3f6be5e11ab82ee66775e4a0daad4b0080f67"
+    },
+    {
+      "index": 2462,
+      "sample": {
+        "scene_id": "town04-02",
+        "group_id": "town04-route-02",
+        "split": "validation",
+        "camera": "left",
+        "frame": 247536,
+        "input_manifest": "inputs/frames/town04-02/00247536.json",
+        "rgb": "inputs/rgb/town04-02/left/00247536.png",
+        "semantic": "labels/semantic_segmentation/town04-02/left/00247536.png",
+        "detection": "labels/visible/town04-02/left/00247536.json",
+        "instance": "labels/instance_segmentation/town04-02/left/00247536.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "reasons": [
+        "wall_false_positive"
+      ],
+      "CPU_wall": {
+        "name": "wall",
+        "support_pixels": 0,
+        "predicted_pixels": 23815,
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": null
+      },
+      "panel": "06.png",
+      "sha256": "b4dbbb0ed6ade3a4e8a53a09718028aad4e4164232dbaca0a6ea46dcda6546cc"
+    },
+    {
+      "index": 3320,
+      "sample": {
+        "scene_id": "town04-02",
+        "group_id": "town04-route-02",
+        "split": "validation",
+        "camera": "front",
+        "frame": 247968,
+        "input_manifest": "inputs/frames/town04-02/00247968.json",
+        "rgb": "inputs/rgb/town04-02/front/00247968.png",
+        "semantic": "labels/semantic_segmentation/town04-02/front/00247968.png",
+        "detection": "labels/visible/town04-02/front/00247968.json",
+        "instance": "labels/instance_segmentation/town04-02/front/00247968.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "reasons": [
+        "wall_as_fence"
+      ],
+      "CPU_wall": {
+        "name": "wall",
+        "support_pixels": 6687,
+        "predicted_pixels": 7581,
+        "iou": 0.5146496815286624,
+        "precision": 0.6394934705184012,
+        "recall": 0.7249887842081651
+      },
+      "panel": "07.png",
+      "sha256": "f987aea4f4912ec2d537a3f767c7fbf4345bd25ab1d425297e9b2f5a30cbe3d8"
+    },
+    {
+      "index": 3592,
+      "sample": {
+        "scene_id": "town04-02",
+        "group_id": "town04-route-02",
+        "split": "validation",
+        "camera": "front",
+        "frame": 248104,
+        "input_manifest": "inputs/frames/town04-02/00248104.json",
+        "rgb": "inputs/rgb/town04-02/front/00248104.png",
+        "semantic": "labels/semantic_segmentation/town04-02/front/00248104.png",
+        "detection": "labels/visible/town04-02/front/00248104.json",
+        "instance": "labels/instance_segmentation/town04-02/front/00248104.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "reasons": [
+        "wall_GT_support"
+      ],
+      "CPU_wall": {
+        "name": "wall",
+        "support_pixels": 9172,
+        "predicted_pixels": 5992,
+        "iou": 0.4358488779471641,
+        "precision": 0.7681909212283045,
+        "recall": 0.5018534670737026
+      },
+      "panel": "08.png",
+      "sha256": "b57ddd6d7dc4e845ae94dcb70e14c5702c7a2967c84fbfb8fb9dddcbf524f05e"
+    }
+  ],
+  "pages": [
+    {
+      "path": "page-0.png",
+      "sha256": "ccff571c6ace127b3e7f90e79db907d5028ae89f9411cc8484f0691a7539226c"
+    },
+    {
+      "path": "page-1.png",
+      "sha256": "c0ea3e5bd60c6b26272d808caf178df4dcc33e022fb08b10787ac64348b1c548"
+    },
+    {
+      "path": "page-2.png",
+      "sha256": "fb5bc2271ff29f2dea9f732919ede3b337b6adeedf819f1620a6604ee4b6cc6c"
+    }
+  ]
+}

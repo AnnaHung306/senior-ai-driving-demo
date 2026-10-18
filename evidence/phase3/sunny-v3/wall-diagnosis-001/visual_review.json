@@ -1,0 +1,169 @@
+{
+  "status": "reviewed_diagnostic_only",
+  "training_approved": false,
+  "reviewed_by": "Codex actual view_image inspection in active task",
+  "reviewed_images": [
+    {
+      "path": "sunny-segmentation-v5-first-wall-review-001/page-0.png",
+      "sha256": "ccff571c6ace127b3e7f90e79db907d5028ae89f9411cc8484f0691a7539226c"
+    },
+    {
+      "path": "sunny-segmentation-v5-first-wall-review-001/page-1.png",
+      "sha256": "c0ea3e5bd60c6b26272d808caf178df4dcc33e022fb08b10787ac64348b1c548"
+    },
+    {
+      "path": "sunny-segmentation-v5-first-wall-review-001/page-2.png",
+      "sha256": "fb5bc2271ff29f2dea9f732919ede3b337b6adeedf819f1620a6604ee4b6cc6c"
+    },
+    {
+      "path": "wall-training-shape-survey-001/low_wall_hint-0.png",
+      "sha256": "5b2b46a8647d0bfaf204cd5bbe11bed5fcfa5475df76174202d7e914ddc7b27a"
+    },
+    {
+      "path": "wall-training-shape-survey-001/low_wall_hint-1.png",
+      "sha256": "d7416fb2b5e839b334ce3babcaab234e87eaf578a420c27e656f050f6f8385df"
+    },
+    {
+      "path": "wall-training-shape-survey-001/low_wall_hint-2.png",
+      "sha256": "4303e975cdd5b5cb5b37a078ac3eb0b1c2824783beb9fd6acc77404fcbfc172a"
+    },
+    {
+      "path": "wall-training-shape-survey-001/low_wall_hint-3.png",
+      "sha256": "f445f80227c2944148f92142f566ef2c77e70e2d49c016b218a4e1fb252a2305"
+    },
+    {
+      "path": "wall-training-shape-survey-001/neutral_nonwall_hint-0.png",
+      "sha256": "f35348cf4f4ead97df893fb73ceabdd18a1965a89b0fcb10c66db3019480f4f8"
+    },
+    {
+      "path": "wall-training-shape-survey-001/neutral_nonwall_hint-1.png",
+      "sha256": "a19d880e0a8f3963eb1fc67bd44dc6f82f9ba73b8f8d2ad3a10ce7a0b643317d"
+    },
+    {
+      "path": "wall-training-shape-survey-001/neutral_nonwall_hint-2.png",
+      "sha256": "f29934833eba8210e0686a840547c73275d1d552c5c09fe0880b8f7055808564"
+    },
+    {
+      "path": "wall-training-shape-survey-001/neutral_nonwall_hint-3.png",
+      "sha256": "5603a8801940ee11cd29f7f27a8f205413a5cf7ceabd71ad1a6f2fb0f0c39586"
+    },
+    {
+      "path": "wall-training-appearance-survey-001/page-0.png",
+      "sha256": "fd6719932e98c00dc3b7e613c6fe58671b2ef2a99edf77353a217aa5d431e52a"
+    },
+    {
+      "path": "wall-training-appearance-survey-001/page-1.png",
+      "sha256": "947f4403c4c7894a8e2b1ca59853def45eb0c80aa51e2adfcaee2771458f3fd9"
+    },
+    {
+      "path": "wall-training-appearance-survey-001/page-2.png",
+      "sha256": "83bc2951a41e43feb73152533120aa45eae2c015bd615facf2f6ff1fbc2ef0c9"
+    },
+    {
+      "path": "wall-training-appearance-survey-001/page-3.png",
+      "sha256": "035f5fbeca44089f427623b4b85608c0cd8d97f855eadc58103bc89445d8bfde"
+    },
+    {
+      "path": "wall-training-appearance-survey-001/page-4.png",
+      "sha256": "252f481f25761bf1cc267f37e0eae512e40fe43cf0b67cbf8dd1edce25e33713"
+    },
+    {
+      "path": "wall-training-appearance-survey-001/page-5.png",
+      "sha256": "53183f062ca6248c5f5d246b0863c854f95531b381483942014ac53d8b3f0d0a"
+    }
+  ],
+  "files": [
+    {
+      "path": "sunny-segmentation-v5-first-wall-review-001/catalog.json",
+      "sha256": "fbb5c9cc613d382f2de05e03a662116799df862014a6e7985f3167dc695c4696"
+    },
+    {
+      "path": "sunny-segmentation-v5-first-wall-review-001/page-0.png",
+      "sha256": "ccff571c6ace127b3e7f90e79db907d5028ae89f9411cc8484f0691a7539226c"
+    },
+    {
+      "path": "sunny-segmentation-v5-first-wall-review-001/page-1.png",
+      "sha256": "c0ea3e5bd60c6b26272d808caf178df4dcc33e022fb08b10787ac64348b1c548"
+    },
+    {
+      "path": "sunny-segmentation-v5-first-wall-review-001/page-2.png",
+      "sha256": "fb5bc2271ff29f2dea9f732919ede3b337b6adeedf819f1620a6604ee4b6cc6c"
+    },
+    {
+      "path": "wall-training-shape-survey-001/report.json",
+      "sha256": "9ffca17c711b04beae71c2b7c973abbf951be6466df0007ee8908a643d96b361"
+    },
+    {
+      "path": "wall-training-shape-survey-001/low_wall_hint-0.png",
+      "sha256": "5b2b46a8647d0bfaf204cd5bbe11bed5fcfa5475df76174202d7e914ddc7b27a"
+    },
+    {
+      "path": "wall-training-shape-survey-001/low_wall_hint-1.png",
+      "sha256": "d7416fb2b5e839b334ce3babcaab234e87eaf578a420c27e656f050f6f8385df"
+    },
+    {
+      "path": "wall-training-shape-survey-001/low_wall_hint-2.png",
+      "sha256": "4303e975cdd5b5cb5b37a078ac3eb0b1c2824783beb9fd6acc77404fcbfc172a"
+    },
+    {
+      "path": "wall-training-shape-survey-001/low_wall_hint-3.png",
+      "sha256": "f445f80227c2944148f92142f566ef2c77e70e2d49c016b218a4e1fb252a2305"
+    },
+    {
+      "path": "wall-training-shape-survey-001/neutral_nonwall_hint-0.png",
+      "sha256": "f35348cf4f4ead97df893fb73ceabdd18a1965a89b0fcb10c66db3019480f4f8"
+    },
+    {
+      "path": "wall-training-shape-survey-001/neutral_nonwall_hint-1.png",
+      "sha256": "a19d880e0a8f3963eb1fc67bd44dc6f82f9ba73b8f8d2ad3a10ce7a0b643317d"
+    },
+    {
+      "path": "wall-training-shape-survey-001/neutral_nonwall_hint-2.png",
+      "sha256": "f29934833eba8210e0686a840547c73275d1d552c5c09fe0880b8f7055808564"
+    },
+    {
+      "path": "wall-training-shape-survey-001/neutral_nonwall_hint-3.png",
+      "sha256": "5603a8801940ee11cd29f7f27a8f205413a5cf7ceabd71ad1a6f2fb0f0c39586"
+    },
+    {
+      "path": "wall-training-shape-survey-001/records.jsonl.gz",
+      "sha256": "5d6bf71e8e9c626c42d0ac971502c1a5c3cd58ca008f9a24cc7ba8d1de8650e2"
+    },
+    {
+      "path": "wall-training-appearance-survey-001/report.json",
+      "sha256": "3dc15a5279130d42f726c81a0e27acd8bdb6ebe25b442d45eb66c8fe7436c7a9"
+    },
+    {
+      "path": "wall-training-appearance-survey-001/page-0.png",
+      "sha256": "fd6719932e98c00dc3b7e613c6fe58671b2ef2a99edf77353a217aa5d431e52a"
+    },
+    {
+      "path": "wall-training-appearance-survey-001/page-1.png",
+      "sha256": "947f4403c4c7894a8e2b1ca59853def45eb0c80aa51e2adfcaee2771458f3fd9"
+    },
+    {
+      "path": "wall-training-appearance-survey-001/page-2.png",
+      "sha256": "83bc2951a41e43feb73152533120aa45eae2c015bd615facf2f6ff1fbc2ef0c9"
+    },
+    {
+      "path": "wall-training-appearance-survey-001/page-3.png",
+      "sha256": "035f5fbeca44089f427623b4b85608c0cd8d97f855eadc58103bc89445d8bfde"
+    },
+    {
+      "path": "wall-training-appearance-survey-001/page-4.png",
+      "sha256": "252f481f25761bf1cc267f37e0eae512e40fe43cf0b67cbf8dd1edce25e33713"
+    },
+    {
+      "path": "wall-training-appearance-survey-001/page-5.png",
+      "sha256": "53183f062ca6248c5f5d246b0863c854f95531b381483942014ac53d8b3f0d0a"
+    }
+  ],
+  "observations": [
+    "First-epoch validation QA: some missed Wall GT is solid wooden perimeter fencing; highway concrete barriers also missed. Rocks/cliffs create Wall false positives. Earlier low-concrete-only diagnosis was incomplete.",
+    "Train shape survey: 24 inspected examples include low concrete walls, red-brick walls and building/vegetation/rock nonwall context. Neutral colour is not a material label.",
+    "Train appearance survey: all 16 selected contexts on 6 pages inspected. They show concrete block walls, brick compound walls, tunnel walls, masonry and low retaining walls. Inspected pages do not establish coverage of the solid wooden Wall GT appearance.",
+    "Current static supplement does contain visually wooden Fence GT. Similar material alone does not justify merging or relabelling Wall and Fence.",
+    "Geometry inventory is offline train-town metadata hints only; no new captures, physical-height proof, or material labels."
+  ],
+  "limits": "Selected QA is not exhaustive, nor a new acceptance set. CPU FP32 checkpoint diagnostics do not replace completed GPU BF16 validation. No heldout opened, gates changed, or training samples approved."
+}

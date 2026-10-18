@@ -19,7 +19,7 @@
 .venv/Scripts/python.exe -u scripts/run_phase3_recovery_batch.py --segmentation-config configs/sunny_segmentation_v5_1.json --output artifacts/runs/phase3-recovery-batch-001
 ```
 
-**已啟動唯一批次：exec32462；native parentPID19772（venv launcher31940）、awake helper4644，6h綁parent確切creation。** 10:27起跑分割child native26248（launcher23100）；10:29尚在完整主資料checksum前置，run目錄未建，這不等於未啟動。不要重複啟動。用scripts/status_phase3_batch.ps1共享讀取落盤狀態；程序/GPU實況另查native CIM/nvidia-smi。
+**已啟動唯一批次：exec32462；native parentPID19772（venv launcher31940）、awake helper4644，6h綁parent確切creation。** 10:27起跑分割child native26248（launcher23100）。11:26已完成3輪，正進第4輪；不要重複啟動。用scripts/status_phase3_batch.ps1共享讀取落盤狀態；程序/GPU實況另查native CIM/nvidia-smi，PID可能退出，使用前重查身分。
 
 - v5 seg：從v4 best SHAa703...微調6epochs/batch8，decoderLR.00015/encoder.00005；9600main +1024unique static各重複4次=13696sampledviews/epoch、10272updates；70.09%main/29.91%static，不把重複算新場景。
 - v5 det：從v3 best SHA9cbed...微調4epochs/batch2/LR5e-5，內部720x1280、輸入及框仍640x360；min/max resize必須由checkpoint config重建。
@@ -33,3 +33,12 @@
 **batch完整GPU suite已94/94通過、零skip；高解析det容量/finite正反向、真正production loader重載exact一致已通過。** batch2峰值allocated3350.97MiB/reserved3924MiB；dummy3updates僅容量測試，不是正式模型。新模型品質尚未測，不可假裝通過。主門檻不降低，只有ClearNoon，不進Phase4。
 
 舊run要從自己的source快照執行evaluator，dataset-root用絕對路徑；sourcesha比文件Git revision更具體。Native CARLA RPC需escalation；不用過去DX11/Low。status讀檔用ReadWrite|Delete共享，避免Windows atomic replace鎖；不要用舊log當程序仍活著。
+
+## 11:26中間結果與診斷（不是完成）
+
+- seg第1/2/3輪 best mIoU .568366/.583960/.587430；wall .075309/.078031/.080723，始終未過.2。第1輪fence .584425、margin .502724；第3輪margin .487057未過.5。其餘15類IoU通過。後續仍按預先凍結6epochs完成，不把中間結果當驗收。
+- 初始完整val與v4選定best的JSON逐bytes一致，兩者SHA f68d0df2b0f8724c2864925999b88130ef2125a63c7ea9963cee9eb575357a36；overfit ratio .423368通過，非新成績。
+- 第一輪best另存不可變diagnostic snapshot：sunny-segmentation-v5-first-epoch-snapshot-001/best.pt，SHA4e1a0d7ff0e2dac78c006073221ee402c9615c20a7475999d22bbe64ac67fb94，不偽裝completed。
+- evidence/phase3/sunny-v3/wall-diagnosis-001保存實看17頁：9個val錯例3頁、24個train形狀候選8頁、16個train外觀分層6頁。val漏檢含木質實心圍牆及水泥道路分隔，岩面誤報明顯；先前「只是低水泥牆不足」推論不完整。train實看主要磚牆/水泥/隧道；沒有憑這16例就斷言全train沒有木牆，亦不可把木質Fence重新標Wall。
+- 全9600train掃描：4688低牆形狀hint、7805中性非牆hint；形狀是depth×pixel高度proxy，不是物體高度，顏色不是材質GT。外觀QA在每秒/相機/group去重候選1374張上分層，非新獨立資料。
+- 新CPU研究exec30015：scripts/study_segmentation_prior.py，output segmentation-train-prior-study-001；不碰GPU/source contract。只第一輪immutable checkpoint，完整3600validation，事先凍結alpha0/.25/.5/.75/1、logits-alpha*log(train頻率CEweights)。探索類別偏置；沒有改任何正式推論、訓練、品質門檻或heldout。CPU FP32不能代替正式GPU BF16驗收。先查progress/report再決定，不要重啟重複研究。

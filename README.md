@@ -8,7 +8,7 @@
 
 目前協議見 [PHASE3_TRAINING_PROTOCOL.md](PHASE3_TRAINING_PROTOCOL.md)，逐類成績見 [v6 MobileUNet模型卡](evidence/phase3/sunny-v3/sunny-segmentation-v6-001-completed-validation/MODEL_CARD.md)、[v6 detector模型卡](evidence/phase3/sunny-v3/sunny-detection-v6-001-completed-validation/MODEL_CARD.md)及[號誌模型卡](evidence/phase3/sunny-v3/phase3-recovery-batch-002-completed/export/light_state/MODEL_CARD.md)，泛化缺口依據見 [PHASE3_DOMAIN_RECOVERY.md](PHASE3_DOMAIN_RECOVERY.md)，中斷接續見 [CURRENT_TASK.md](CURRENT_TASK.md)。權重與完整逐幀結果保留於本機artifacts/runs（ignored）；可追溯數值、凍結source及實際檢視圖存於evidence/phase3。最新分割錯例已重播原GPU batch並核對confusion／boundary exact，CPU診斷不取代GPU驗證。
 
-深度輔助分支已完成有限CPU原型，尚未證明其他類別IoU獲益。使用者另已授權一次32步GPU檢查及control／depth各一輪的研究對照，目前執行中；兩組用同parent、同訓練資料／增強與更新次數，完整3600張validation比較，不開heldout、不自動增加輪數或正式採用。
+深度輔助分支已完成32步GPU可行性檢查及control／depth各一輪（各1712更新）的完整3600張validation對照。其他15類mIoU **64.0694%→64.1508%**，只有+0.0814個百分點，未達事前0.2pp研究篩選值；行人／人行道改善，但bike／motor／rider退步，Wall仍17.53%未過。兩組實際增強影像bytes一致，3頁比較圖已實看；這版先停、不追加第二輪或正式納入。詳見[深度A/B完整結果](evidence/phase3/sunny-v3/depth-auxiliary-AB-v1-001-completed/README.md)。
 
 歷史首輪Tiny U-Net為8類，validation focus mIoU27.50%、test26.22%，其模型卡與 [PHASE3.md](PHASE3.md)保留原始範圍與失敗。早期instance／ignore工程採集與同幾何晴天／夜雨診斷另見[圖文證據](evidence/phase3/visibility-v1/REPORT.md)及[執行規格](PHASE3_VISIBILITY.md)；不與目前17類、跨城鎮的新資料成績混算。
 

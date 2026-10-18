@@ -1,0 +1,119 @@
+{
+  "nonwall_mIoU_gain": 0.0008136948256725063,
+  "visible_margin_f1_change": 0.0011865545222773388,
+  "new_nonwall_class_gate_regressions": [],
+  "positive_signal_for_assistant_review": false,
+  "automatic_extra_epochs": false,
+  "limits": "Predeclared one-run screening rule, not statistical significance or changed original quality gates.",
+  "parent_nonwall_focus_mIoU": 0.6365257265343901,
+  "control_nonwall_focus_mIoU": 0.6406940277337431,
+  "depth_nonwall_focus_mIoU": 0.6415077225594156,
+  "per_class": [
+    {
+      "name": "other_annotated",
+      "control_IoU": 0.9014004282541395,
+      "depth_IoU": 0.9015608362983699,
+      "difference": 0.0001604080442304534
+    },
+    {
+      "name": "road",
+      "control_IoU": 0.9516583463091616,
+      "depth_IoU": 0.9509387471054888,
+      "difference": -0.000719599203672816
+    },
+    {
+      "name": "sidewalk",
+      "control_IoU": 0.6058553668109896,
+      "depth_IoU": 0.6139894482790946,
+      "difference": 0.008134081468105014
+    },
+    {
+      "name": "pedestrian",
+      "control_IoU": 0.31503506448923546,
+      "depth_IoU": 0.3259838708748101,
+      "difference": 0.010948806385574661
+    },
+    {
+      "name": "rider",
+      "control_IoU": 0.5518326397833714,
+      "depth_IoU": 0.546605167142031,
+      "difference": -0.0052274726413403805
+    },
+    {
+      "name": "car",
+      "control_IoU": 0.6871741440600364,
+      "depth_IoU": 0.6899835615874736,
+      "difference": 0.0028094175274372413
+    },
+    {
+      "name": "truck",
+      "control_IoU": 0.7066487100364863,
+      "depth_IoU": 0.7075440588920414,
+      "difference": 0.0008953488555550893
+    },
+    {
+      "name": "bus",
+      "control_IoU": 0.9568595802250016,
+      "depth_IoU": 0.9569139127169591,
+      "difference": 5.4332491957520546e-05
+    },
+    {
+      "name": "motorcycle",
+      "control_IoU": 0.5541868117916322,
+      "depth_IoU": 0.5485497326755688,
+      "difference": -0.00563707911606337
+    },
+    {
+      "name": "bicycle",
+      "control_IoU": 0.3981958346787213,
+      "depth_IoU": 0.3948596155781423,
+      "difference": -0.0033362191005790187
+    },
+    {
+      "name": "road_line",
+      "control_IoU": 0.7541656249714056,
+      "depth_IoU": 0.7593098601848862,
+      "difference": 0.005144235213480619
+    },
+    {
+      "name": "traffic_light",
+      "control_IoU": 0.5869657333823693,
+      "depth_IoU": 0.5846186571626953,
+      "difference": -0.0023470762196740047
+    },
+    {
+      "name": "wall",
+      "control_IoU": 0.1650826077301518,
+      "depth_IoU": 0.17530463799598897,
+      "difference": 0.010222030265837179
+    },
+    {
+      "name": "fence",
+      "control_IoU": 0.6414842460345941,
+      "depth_IoU": 0.6456263376217329,
+      "difference": 0.004142091587138852
+    },
+    {
+      "name": "pole",
+      "control_IoU": 0.45052100984261856,
+      "depth_IoU": 0.45054529560396434,
+      "difference": 2.428576134577698e-05
+    },
+    {
+      "name": "temporary_obstacle",
+      "control_IoU": 0.6593580299538659,
+      "depth_IoU": 0.6569557462441543,
+      "difference": -0.002402283709711628
+    },
+    {
+      "name": "terrain_or_ground",
+      "control_IoU": 0.7904692736366573,
+      "depth_IoU": 0.7901918267221921,
+      "difference": -0.00027744691446518477
+    }
+  ],
+  "equal_augmentation_bytes": true,
+  "updates_per_arm": 1712,
+  "total_research_epochs": 2,
+  "new_heldout_opened": false
+}

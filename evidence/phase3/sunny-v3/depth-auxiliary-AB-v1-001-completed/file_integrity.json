@@ -1,0 +1,73 @@
+{
+  "status": "passed_artifact_consistency_not_quality",
+  "checked_utc": "2026-10-18T13:31:26.804156+00:00",
+  "tool_sha256": "6a68f2d8036cafb7cc03e5582aa71a4af5d85c9a08ed2657ea7f76d1ed4fda3c",
+  "sources_verified": 44,
+  "arms": {
+    "control": {
+      "validation_frames": 3600,
+      "full_and_scene_confusion_metrics_exact": true,
+      "boundary_counts_exact": true,
+      "canonical_index_and_parent_GT_support_exact": true,
+      "original_quality": {
+        "passed": false,
+        "checks": {
+          "focus_mIoU": true,
+          "all_focus_present": true,
+          "road/IoU": true,
+          "sidewalk/IoU": true,
+          "pedestrian/IoU": true,
+          "rider/IoU": true,
+          "car/IoU": true,
+          "truck/IoU": true,
+          "bus/IoU": true,
+          "motorcycle/IoU": true,
+          "bicycle/IoU": true,
+          "road_line/IoU": true,
+          "traffic_light/IoU": true,
+          "wall/IoU": false,
+          "fence/IoU": true,
+          "pole/IoU": true,
+          "temporary_obstacle/IoU": true,
+          "terrain_or_ground/IoU": true,
+          "visible_margin_f1": true
+        }
+      },
+      "checkpoint_sha256": "eaf4c4cad9679aeb0e38a9a1910cc0cd3cd2d3775a575fa89cb4d8ac5641158d"
+    },
+    "depth": {
+      "validation_frames": 3600,
+      "full_and_scene_confusion_metrics_exact": true,
+      "boundary_counts_exact": true,
+      "canonical_index_and_parent_GT_support_exact": true,
+      "original_quality": {
+        "passed": false,
+        "checks": {
+          "focus_mIoU": true,
+          "all_focus_present": true,
+          "road/IoU": true,
+          "sidewalk/IoU": true,
+          "pedestrian/IoU": true,
+          "rider/IoU": true,
+          "car/IoU": true,
+          "truck/IoU": true,
+          "bus/IoU": true,
+          "motorcycle/IoU": true,
+          "bicycle/IoU": true,
+          "road_line/IoU": true,
+          "traffic_light/IoU": true,
+          "wall/IoU": false,
+          "fence/IoU": true,
+          "pole/IoU": true,
+          "temporary_obstacle/IoU": true,
+          "terrain_or_ground/IoU": true,
+          "visible_margin_f1": true
+        }
+      },
+      "checkpoint_sha256": "12cd9e8bbaceb495b91a1b91c0e810e446b57d157845f55bb4ef30eb374fef88"
+    }
+  },
+  "equal_augmentation_sha256": "ee0473be0181ac1789eb5086557fcb437f1f57d4343b0852c62ec4b2b634b7e1",
+  "QA_pages_verified": 3,
+  "limits": "CPU stored-artifact verification only, no model inference or heldout scoring. Uses stored per-frame counts and original parent GT supports; no independent full pixel-level prediction replay or new depth-quality evaluation."
+}

@@ -1,0 +1,23 @@
+{
+  "scope": "Fixed15 class scene diagnostic; scene-level class support differs. Does not average to the globally pixel-aggregated class IoUs. No independent trials.",
+  "scenes": [
+    {
+      "scene": "town04-00",
+      "control_fixed15class_mIoU": 0.6261232032873588,
+      "depth_fixed15class_mIoU": 0.6275942943202332,
+      "change": 0.0014710910328743498
+    },
+    {
+      "scene": "town04-01",
+      "control_fixed15class_mIoU": 0.577361816940172,
+      "depth_fixed15class_mIoU": 0.5747266619763401,
+      "change": -0.0026351549638318206
+    },
+    {
+      "scene": "town04-02",
+      "control_fixed15class_mIoU": 0.4964992569819822,
+      "depth_fixed15class_mIoU": 0.49789472268383683,
+      "change": 0.0013954657018546146
+    }
+  ]
+}

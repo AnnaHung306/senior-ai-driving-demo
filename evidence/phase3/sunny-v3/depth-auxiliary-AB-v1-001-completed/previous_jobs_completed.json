@@ -1,0 +1,5 @@
+{
+  "batch_state_sha256": "9e8dfb70d938e4152aa9105dbe71ca22ae8667266a8fa8221e4c26e56fb8193e",
+  "QA_state_sha256": "d021c3305b25669031e851e1588cd08a48adbf2c6f86a1ecc0e76a3533cd5694",
+  "scope": "GPU work finished; prior visual artifacts still require assistant review, not a Phase3 quality pass."
+}

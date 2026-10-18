@@ -1,3 +1,13 @@
+## 2026-10-18 實際GPU A/B結果：本版暫不納入
+
+以下原方案保留實驗前背景；使用者只授權有限小測，實際執行的是32步GPU檢查＋兩組各一輪，不是下文兩輪提案。GPU容量／BF16／depth-only encoder梯度與重載皆過，兩組各1712更新、13696採樣train views、相同parent及實際增強RGB／semantic bytes，完整3600張validation比較。
+
+其他15類focus mIoU control64.069403%、depth64.150772%，只多0.081369個百分點，未達事先0.2pp研究篩選值。全部16類mIoU61.096831%→61.237003%，Wall16.5083%→17.5305%仍低於原20%；margin F1 .614658→.615844。ped+1.0949pp、sidewalk+.8134pp，但bike−.3336pp、motor−.5637pp、rider−.5227pp，Town04-01場景退步。三頁六情境均實看，原GPU batch confusion/boundary重播exact。
+
+工程可行已通過，這版整體實益不足，完成首輪篩選後停止，不開第二輪或係數搜尋。單seed單epoch無統計顯著性／穩定性證據，也不能推論深度方法永遠無用。parent至depth增益含對照續訓效益，不能全部歸因depth。nearest loss與先前CPU toy bilinear不同；本輪評segmentation IoU，沒有完整val depth RMSE／AbsRel benchmark。原門檻維持，heldout未開，獨立detector未改。
+
+[完整報告與原圖](evidence/phase3/sunny-v3/depth-auxiliary-AB-v1-001-completed/README.md)包含44個source、GPU檢查、兩臂指標與實看收據。
+
 # 影片與原始文獻對照：Wall 泛化及深度輔助訓練
 
 2026-10-18。範圍仍為 ClearNoon、RGB-only 正式推論、Phase 3 二維感知。本文件是改進方案與可行性證據；沒有宣稱已訓練下列新模型，也沒有變更正在執行的 v6 批次。

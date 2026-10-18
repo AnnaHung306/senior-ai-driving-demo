@@ -1,0 +1,30 @@
+{
+  "torch": "2.10.0+cu128",
+  "cuda": "12.8",
+  "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "python": "3.12.14",
+  "train_sampled_views": 13696,
+  "validation_views": 3600,
+  "updates_per_arm": 1712,
+  "training_support": [
+    1483859644,
+    696716065,
+    374603233,
+    2360924,
+    2996157,
+    7120551,
+    13520438,
+    44150535,
+    1229175,
+    922143,
+    20847001,
+    730811,
+    229448571,
+    38051372,
+    50201330,
+    897030,
+    184819177
+  ],
+  "depth_cache_entries": 128,
+  "depth_loss_resampling": "nearest, to avoid CUDA bilinear backward nondeterminism; differs from prior CPU prototype display/loss interpolation"
+}

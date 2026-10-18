@@ -1,0 +1,89 @@
+{
+  "status": "completed_screening_no_adoption",
+  "reviewed_utc": "2026-10-18T13:32:45.495500+00:00",
+  "comparison_sha256": "a91dbe639dc47ebe9ab8d9876da7cea9fc1660193eecfe7827944a65bd285c9e",
+  "file_integrity_sha256": "197fe6379de67f9c48040d18e9a15b97e7ededa064b945d5ab354aa1d9c11877",
+  "GPU_QA_catalog_sha256": "d2632b5c0710083dac2b168c13aec768a6212a93d8af18b369a19791af117bbb",
+  "viewed_pages": [
+    {
+      "path": "page-0.png",
+      "sha256": "0786d3f67787147d5eedf5dcb1c9aaf4a3099b6d18faa7ad59e0354d2028e891"
+    },
+    {
+      "path": "page-1.png",
+      "sha256": "9e17f2d2c77c1ec40ae160d10afd448b72e1f3a0e79ff4fd79fc92251b87edc3"
+    },
+    {
+      "path": "page-2.png",
+      "sha256": "5cd50c350c6722247c3a49173572c41882eafe451613d4d65b8327851553a3d2"
+    }
+  ],
+  "viewed_individual_panels": [
+    {
+      "index": 525,
+      "sample": {
+        "scene_id": "town04-00",
+        "group_id": "town04-route-00",
+        "split": "validation",
+        "camera": "rear_left",
+        "frame": 246458,
+        "input_manifest": "inputs/frames/town04-00/00246458.json",
+        "rgb": "inputs/rgb/town04-00/rear_left/00246458.png",
+        "semantic": "labels/semantic_segmentation/town04-00/rear_left/00246458.png",
+        "detection": "labels/visible/town04-00/rear_left/00246458.json",
+        "instance": "labels/instance_segmentation/town04-00/rear_left/00246458.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "reasons": [
+        "largest_nonwall_gain"
+      ],
+      "path": "case-01.png",
+      "sha256": "20256d3834ef2497c1f3f4847b45d2afbbc6036eb7cafcf0b37b6f101dcbee77"
+    },
+    {
+      "index": 2578,
+      "sample": {
+        "scene_id": "town04-02",
+        "group_id": "town04-route-02",
+        "split": "validation",
+        "camera": "right",
+        "frame": 247596,
+        "input_manifest": "inputs/frames/town04-02/00247596.json",
+        "rgb": "inputs/rgb/town04-02/right/00247596.png",
+        "semantic": "labels/semantic_segmentation/town04-02/right/00247596.png",
+        "detection": "labels/visible/town04-02/right/00247596.json",
+        "instance": "labels/instance_segmentation/town04-02/right/00247596.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "reasons": [
+        "largest_nonwall_loss"
+      ],
+      "path": "case-04.png",
+      "sha256": "29734f4fae5491053e0efdc12158818a8ccc9d4fb0705b2391a4e846d90e2e61"
+    }
+  ],
+  "observations": [
+    "All three pages/six per-scene extreme-gain/loss contexts inspected; case01 and case04 individually inspected. These were selected from validation after scores, not representative independent tests.",
+    "Town04-00 pedestrian silhouette is somewhat more recovered with depth; sidewalk/pole boundary differences remain small and imperfect.",
+    "Grass guardrail scene still contains false sidewalk patches. Rock-face scene still contains Wall/Other confusion in both arms.",
+    "Bicycle/rider scene retains substantial motorcycle/rider/bicycle confusion in both arms. Highway scene changes distant masks modestly but does not resolve all retaining-wall segmentation."
+  ],
+  "decision": "Engineering feasibility passed, no compelling overall non-Wall benefit in this one-epoch/one-seed screen. Stop this depth variant here; no second epoch, parameter search or formal model adoption. Preserve code/weights/evidence for future explicitly scoped work.",
+  "reasons": [
+    "non-Wall gain 0.081369 percentage points below predeclared 0.2pp screening rule",
+    "pedestrian/sidewalk improve while bicycle/motorcycle/rider regress",
+    "Town04-01 non-Wall scene score decreases; gains are not consistent across scenes",
+    "Wall17.5305% remains below original20% gate; neither arm qualifies"
+  ],
+  "limits": [
+    "One seed and one epoch per arm do not establish statistical significance or impossibility of other depth designs.",
+    "Same samples/augmentation/order and optimizer updates, not equal GPU FLOPs.",
+    "Nearest depth-loss upsampling differs from earlier bilinear CPU toy. This screen evaluates segmentation IoU, not full validation depth accuracy.",
+    "Independent detector unchanged; segmentation depth training cannot be credited with detector Recall improvement."
+  ],
+  "original_gates_unchanged": true,
+  "new_heldout_opened": false,
+  "automatic_extra_epochs": false,
+  "training_jobs_finished": true,
+  "awake_request_cleared": true
+}

@@ -1,3 +1,17 @@
+## 最新終局 21:35：深度A/B完整完成，首輪收益不足，本版停止不納入
+
+最新使用者「照你建議的是看看吧」授權的小GPU檢查＋兩臂各一輪已完整完成。**exec78878 exit0、parent23304已退出、awake22688 released/request_clearedtrue。沒有剩餘GPU job、watcher、automation或CARLA。不要重啟舊queue或自動第二輪。** 原batch79387正常quality_failed、postQA45681 exit0且18pages/7bikezooms/8viewdemo全實看，file watcher59456漏--root已補明確root執行3346核對通過；monitor cells671/709/713皆結束。原批證據已commit d15238d（前5f3d28c）。
+
+新32步CUDA preflight真實2原train groups/batch8：depth-only head梯度.04453888／encoder.01972393有限非零、eligible conv BF16/head FP32、peak4184.33MiB/reserved4870、8view雙輸出reload exact。32步更新丟棄。control/depth各從parent0a3fe重新初始化，初始完整3600GPU報告exactparent；各1712updates/13696採樣views，RGB/semantic/order/geometry整輪SHA ee0473be0181ac1789eb5086557fcb437f1f57d4343b0852c62ec4b2b634b7e1 exact。
+
+完整val其他15類mIoU control.6406940277337431、depth.6415077225594156，額外+.00081369482567＝+0.081369pp，未達事前.002＝0.2pp研究篩選值，positive_signalfalse。all16 .610968314→.612370030；Wall .165082608→.175304638仍fail；margin .614657502→.615844057。ped+1.0949pp/sidewalk+.8134pp，但bike−.3336pp/motor−.5637pp/rider−.5227pp；Town04-01 fixed15scene−.2635pp，另外兩scene略增。parent nonWall.636525727→control已+.4168pp，不能把parent→depth+.4982pp全算深度。
+
+兩臂原gates都僅Wallfail，未開heldout。control final SHA eaf4c4cad9679aeb0e38a9a1910cc0cd3cd2d3775a575fa89cb4d8ac5641158d；depth final12cd9e8bbaceb495b91a1b91c0e810e446b57d157845f55bb4ef30eb374fef88，RGBseg checkpoint reload exact。權重與完整逐幀結果本機ignored沒入Git。nearest loss不同於CPU toy bilinear；depth trainloss.035774087不是val depth RMSE證明，獨立detector沒改。
+
+file_check.py CPU實跑exit0：兩臂各3600筆matrix／逐類／scene／boundary重算exact、canonical index/parent GTsupport exact、44sources/parent files/weights/reports及3pages SHA核對過。不是GPU新增tests或品質pass。原GPU batch6QA cases confusion/boundary exact，3pages全部實看＋case01/04個別panel實看；ped silhouette稍改善、rock Wall/Other及bike/rider/motor混淆仍在。assistant_review.json completed_screening_no_adoption。完整工具／GPU／指標／44source／圖與實看收據封存 **evidence/phase3/sunny-v3/depth-auxiliary-AB-v1-001-completed**；README/研究plan/domain/registry已更新，待Git bytecheck與commit。
+
+決策：工程可用，但此版整體收益太小且類別／scene有退步，按有限小測範圍停下，不加第二輪、不搜尋係數、不正式採用；不是深度方法永遠無用或統計顯著性證明。Phase3仍qualityfail。最終回覆簡報64.069→64.151%/+0.081pp、部分改善/兩輪類退步、Wall17.53仍未過、已停止額外訓練及完整報告連結。所有實跑/實看/封存已做完，保存後即可結束本次有限實驗。
+
 ## 最新接續 20:38：原v6全批與實看QA完成；深度A/B已接GPU，務必等實跑完
 
 原batch79387已exit1，**正常品質未過終局 quality_failed，不是工程failure**，11階段都完成；segWallfail、det bike/motor/light Recallfail、phase004 crop.9438117pass但joint.3990643924未達.4。det v6四輪19200updates completed、best epoch0 ba6d2f4269a7f3f95e4b92d7daff1f330f4203a4619e1f5902c752aa371f7155，mAP50 .7046156223／mAP50:95 .4510487365，checkpoint reload exact。det初輪metrics選例snapshot SHA不同於formal best bytes，正式用completed state，不混用。

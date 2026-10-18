@@ -1,0 +1,146 @@
+{
+  "status": "GPU_same_batch_replay_exact_pending_visual_review",
+  "cases": [
+    {
+      "index": 439,
+      "sample": {
+        "scene_id": "town04-00",
+        "group_id": "town04-route-00",
+        "split": "validation",
+        "camera": "front_left",
+        "frame": 246414,
+        "input_manifest": "inputs/frames/town04-00/00246414.json",
+        "rgb": "inputs/rgb/town04-00/front_left/00246414.png",
+        "semantic": "labels/semantic_segmentation/town04-00/front_left/00246414.png",
+        "detection": "labels/visible/town04-00/front_left/00246414.json",
+        "instance": "labels/instance_segmentation/town04-00/front_left/00246414.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "reasons": [
+        "largest_nonwall_loss"
+      ],
+      "path": "case-00.png",
+      "sha256": "a6b66eadedecde1051c5067f6dcf356ace0ea853c419232be7d10c133f4d0422"
+    },
+    {
+      "index": 525,
+      "sample": {
+        "scene_id": "town04-00",
+        "group_id": "town04-route-00",
+        "split": "validation",
+        "camera": "rear_left",
+        "frame": 246458,
+        "input_manifest": "inputs/frames/town04-00/00246458.json",
+        "rgb": "inputs/rgb/town04-00/rear_left/00246458.png",
+        "semantic": "labels/semantic_segmentation/town04-00/rear_left/00246458.png",
+        "detection": "labels/visible/town04-00/rear_left/00246458.json",
+        "instance": "labels/instance_segmentation/town04-00/rear_left/00246458.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "reasons": [
+        "largest_nonwall_gain"
+      ],
+      "path": "case-01.png",
+      "sha256": "20256d3834ef2497c1f3f4847b45d2afbbc6036eb7cafcf0b37b6f101dcbee77"
+    },
+    {
+      "index": 1201,
+      "sample": {
+        "scene_id": "town04-01",
+        "group_id": "town04-pedestrian-route-01",
+        "split": "validation",
+        "camera": "front_right",
+        "frame": 246853,
+        "input_manifest": "inputs/frames/town04-01/00246853.json",
+        "rgb": "inputs/rgb/town04-01/front_right/00246853.png",
+        "semantic": "labels/semantic_segmentation/town04-01/front_right/00246853.png",
+        "detection": "labels/visible/town04-01/front_right/00246853.json",
+        "instance": "labels/instance_segmentation/town04-01/front_right/00246853.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "reasons": [
+        "largest_nonwall_loss"
+      ],
+      "path": "case-02.png",
+      "sha256": "8fac817e4b78df7cb659c967ad647459281b9e5a71ee0343c880dfbc485e5b7d"
+    },
+    {
+      "index": 2370,
+      "sample": {
+        "scene_id": "town04-01",
+        "group_id": "town04-pedestrian-route-01",
+        "split": "validation",
+        "camera": "right",
+        "frame": 247437,
+        "input_manifest": "inputs/frames/town04-01/00247437.json",
+        "rgb": "inputs/rgb/town04-01/right/00247437.png",
+        "semantic": "labels/semantic_segmentation/town04-01/right/00247437.png",
+        "detection": "labels/visible/town04-01/right/00247437.json",
+        "instance": "labels/instance_segmentation/town04-01/right/00247437.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "reasons": [
+        "largest_nonwall_gain"
+      ],
+      "path": "case-03.png",
+      "sha256": "94f39747c67a5318d53d2ba34540e825e5e88b7e2a541061f38e454b54fc2e48"
+    },
+    {
+      "index": 2578,
+      "sample": {
+        "scene_id": "town04-02",
+        "group_id": "town04-route-02",
+        "split": "validation",
+        "camera": "right",
+        "frame": 247596,
+        "input_manifest": "inputs/frames/town04-02/00247596.json",
+        "rgb": "inputs/rgb/town04-02/right/00247596.png",
+        "semantic": "labels/semantic_segmentation/town04-02/right/00247596.png",
+        "detection": "labels/visible/town04-02/right/00247596.json",
+        "instance": "labels/instance_segmentation/town04-02/right/00247596.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "reasons": [
+        "largest_nonwall_loss"
+      ],
+      "path": "case-04.png",
+      "sha256": "29734f4fae5491053e0efdc12158818a8ccc9d4fb0705b2391a4e846d90e2e61"
+    },
+    {
+      "index": 2928,
+      "sample": {
+        "scene_id": "town04-02",
+        "group_id": "town04-route-02",
+        "split": "validation",
+        "camera": "front",
+        "frame": 247772,
+        "input_manifest": "inputs/frames/town04-02/00247772.json",
+        "rgb": "inputs/rgb/town04-02/front/00247772.png",
+        "semantic": "labels/semantic_segmentation/town04-02/front/00247772.png",
+        "detection": "labels/visible/town04-02/front/00247772.json",
+        "instance": "labels/instance_segmentation/town04-02/front/00247772.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "reasons": [
+        "largest_nonwall_gain"
+      ],
+      "path": "case-05.png",
+      "sha256": "f25a149f4ef836ba203787bbd0deccc761f4677277b43d76c8fb91579257c37d"
+    }
+  ],
+  "pages": [
+    {
+      "path": "page-0.png",
+      "sha256": "0786d3f67787147d5eedf5dcb1c9aaf4a3099b6d18faa7ad59e0354d2028e891"
+    },
+    {
+      "path": "page-1.png",
+      "sha256": "9e17f2d2c77c1ec40ae160d10afd448b72e1f3a0e79ff4fd79fc92251b87edc3"
+    },
+    {
+      "path": "page-2.png",
+      "sha256": "5cd50c350c6722247c3a49173572c41882eafe451613d4d65b8327851553a3d2"
+    }
+  ],
+  "scope": "Full validation used for comparison; per-scene extreme improvements and regressions, not independent trials. No heldout."
+}

@@ -222,5 +222,24 @@
     "heldout_opened": false,
     "validation_GT_crop_macro_recall": 0.9438117039805592,
     "validation_detector_box_joint_macro_recall": 0.3990643924074202
+  },
+  {
+    "run": "depth-auxiliary-AB-v1-001",
+    "task": "bounded_segmentation_depth_auxiliary_research",
+    "status": "completed_screening_no_adoption",
+    "quality_acceptance": "both_arms_original_validation_failed",
+    "model_card": "evidence/phase3/sunny-v3/depth-auxiliary-AB-v1-001-completed/README.md",
+    "epochs_per_arm": 1,
+    "updates_per_arm": 1712,
+    "control_nonwall_focus_mIoU": 0.6406940277337431,
+    "depth_nonwall_focus_mIoU": 0.6415077225594156,
+    "nonwall_mIoU_gain": 0.0008136948256725063,
+    "passed_predeclared_research_screen": false,
+    "heldout_opened": false,
+    "extra_epochs_started": false,
+    "checkpoints_local_only": {
+      "control": "eaf4c4cad9679aeb0e38a9a1910cc0cd3cd2d3775a575fa89cb4d8ac5641158d",
+      "depth": "12cd9e8bbaceb495b91a1b91c0e810e446b57d157845f55bb4ef30eb374fef88"
+    }
   }
 ]

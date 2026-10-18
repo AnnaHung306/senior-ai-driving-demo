@@ -1,7 +1,7 @@
 <!-- 最新實際進度優先於下方歷史準備紀錄。 -->
 ## 2026-10-18 實際進度
 
-v6分割六輪已完成，原Town01/03補景與新Town06/07各1024視圖、各重複2次；新資料完整audit、四頁32情境視覺批准及實際訓練loader核對均通過。mIoU .6065211771、Fence .6057671054、可見界面F1 .6222117517通過，只有Wall .1564529351未達.2。best SHA 0a3fe3f66fb93be373f2e82218632a4f8cc277bf6067f48bb4683a71f1b2af30；原門檻不變，新heldout仍未評分。detector v6四輪及整批11階段已完成，bicycle／motorcycle／traffic-light Recall不足；phase004 GT crop通過、joint .399064未達.4。原GPU segmentation25／saved detection15／phase31情境共18頁，以及7張bike zoom與8鏡頭demo均實看，完整證據在evidence/phase3/sunny-v3/phase3-recovery-batch-002-completed。CARLA關；新增有界深度A/B尚在跑，來源繼續凍結。
+v6分割六輪已完成，原Town01/03補景與新Town06/07各1024視圖、各重複2次；新資料完整audit、四頁32情境視覺批准及實際訓練loader核對均通過。mIoU .6065211771、Fence .6057671054、可見界面F1 .6222117517通過，只有Wall .1564529351未達.2。best SHA 0a3fe3f66fb93be373f2e82218632a4f8cc277bf6067f48bb4683a71f1b2af30；原門檻不變，新heldout仍未評分。detector v6四輪及整批11階段已完成，bicycle／motorcycle／traffic-light Recall不足；phase004 GT crop通過、joint .399064未達.4。原GPU segmentation25／saved detection15／phase31情境共18頁，以及7張bike zoom與8鏡頭demo均實看，完整證據在evidence/phase3/sunny-v3/phase3-recovery-batch-002-completed。CARLA關；新增有界深度A/B也已完成GPU檢查與兩臂各一輪，nonWall mIoU64.0694%→64.1508%（+0.0814pp），未達事前0.2pp研究篩選值，Wall17.53%仍未過。已實看三頁六情境，這版先停不納入、不追加第二輪；完整結果見evidence/phase3/sunny-v3/depth-auxiliary-AB-v1-001-completed。
 
 新資料Wall 8,191,123像素、Terrain 31,118,819像素，仍主要是磚石牆與木柵欄／草地／岩面negative，未證實補到實心木Wall或高速路擋土牆。低牆probe亦未補齊此缺口，維持排除train。已用原始semantic raw4/raw5疊圖核對五個validation極值案例：木圍牆與擋土牆確為Wall，不能把Fence重新標Wall。正式plan SHA aff1cc0dc406830104ae50c960f2bc77b9a8d8488ea873e8c43604459e1c44ff；完整來源證據見evidence/phase3/sunny-v3/segmentation-expansion-v2-001-approved。
 

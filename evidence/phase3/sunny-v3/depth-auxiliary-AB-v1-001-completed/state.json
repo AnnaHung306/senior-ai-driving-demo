@@ -1,0 +1,9 @@
+{
+  "status": "completed_first_epoch_AB_pending_assistant_review",
+  "GPU_preflight_sha256": "babb910c3abc2313451727952965d01e3b81523e8f97a0628520e93392beedff",
+  "comparison_sha256": "a91dbe639dc47ebe9ab8d9876da7cea9fc1660193eecfe7827944a65bd285c9e",
+  "QA_catalog_sha256": "d2632b5c0710083dac2b168c13aec768a6212a93d8af18b369a19791af117bbb",
+  "automatic_second_epoch": false,
+  "heldout_opened": false,
+  "positive_signal": false
+}

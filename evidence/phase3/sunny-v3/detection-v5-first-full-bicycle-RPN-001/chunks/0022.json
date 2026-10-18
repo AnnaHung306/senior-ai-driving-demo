@@ -1,0 +1,548 @@
+{
+  "contract_sha256": "f143ae0cb6f5c41deb0c5d3deec922866a5465cce290750fafdbef3bd39d1936",
+  "indices": [
+    1909,
+    1916,
+    1917,
+    1924,
+    1925,
+    1932,
+    1933,
+    1940,
+    1941,
+    1948,
+    1949,
+    1956,
+    1957,
+    1964,
+    1965,
+    1972,
+    1973,
+    1980,
+    1981,
+    1988
+  ],
+  "real_RPN_forward_exact_verified": true,
+  "records": [
+    {
+      "index": 1909,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "rear_left",
+      "frame": 247205,
+      "RGB": "inputs/rgb/town04-01/rear_left/00247205.png",
+      "targets": [
+        {
+          "box": [
+            139,
+            183,
+            163,
+            201
+          ],
+          "visible_pixels": 143,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.6869726873826676,
+            "1000_500": 0.7981796313733035,
+            "2000_1000": 0.7981796313733035
+          }
+        }
+      ]
+    },
+    {
+      "index": 1916,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "rear",
+      "frame": 247209,
+      "RGB": "inputs/rgb/town04-01/rear/00247209.png",
+      "targets": [
+        {
+          "box": [
+            416,
+            183,
+            437,
+            199
+          ],
+          "visible_pixels": 116,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.7183014623449185,
+            "1000_500": 0.7508763349466898,
+            "2000_1000": 0.7508763349466898
+          }
+        }
+      ]
+    },
+    {
+      "index": 1917,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "rear_left",
+      "frame": 247209,
+      "RGB": "inputs/rgb/town04-01/rear_left/00247209.png",
+      "targets": [
+        {
+          "box": [
+            136,
+            183,
+            160,
+            201
+          ],
+          "visible_pixels": 123,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.683844944944128,
+            "1000_500": 0.683844944944128,
+            "2000_1000": 0.683844944944128
+          }
+        }
+      ]
+    },
+    {
+      "index": 1924,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "rear",
+      "frame": 247213,
+      "RGB": "inputs/rgb/town04-01/rear/00247213.png",
+      "targets": [
+        {
+          "box": [
+            414,
+            184,
+            433,
+            199
+          ],
+          "visible_pixels": 112,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.5344445765167627,
+            "1000_500": 0.5344445765167627,
+            "2000_1000": 0.5344445765167627
+          }
+        }
+      ]
+    },
+    {
+      "index": 1925,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "rear_left",
+      "frame": 247213,
+      "RGB": "inputs/rgb/town04-01/rear_left/00247213.png",
+      "targets": [
+        {
+          "box": [
+            134,
+            185,
+            156,
+            200
+          ],
+          "visible_pixels": 125,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.6834577158882005,
+            "1000_500": 0.6834577158882005,
+            "2000_1000": 0.6834577158882005
+          }
+        }
+      ]
+    },
+    {
+      "index": 1932,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "rear",
+      "frame": 247217,
+      "RGB": "inputs/rgb/town04-01/rear/00247217.png",
+      "targets": [
+        {
+          "box": [
+            412,
+            180,
+            431,
+            196
+          ],
+          "visible_pixels": 113,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.47529347605777544,
+            "1000_500": 0.6588743454531825,
+            "2000_1000": 0.6588743454531825
+          }
+        }
+      ]
+    },
+    {
+      "index": 1933,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "rear_left",
+      "frame": 247217,
+      "RGB": "inputs/rgb/town04-01/rear_left/00247217.png",
+      "targets": [
+        {
+          "box": [
+            132,
+            180,
+            154,
+            197
+          ],
+          "visible_pixels": 113,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.7066049717774529,
+            "1000_500": 0.7509791902911438,
+            "2000_1000": 0.7509791902911438
+          }
+        }
+      ]
+    },
+    {
+      "index": 1940,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "rear",
+      "frame": 247221,
+      "RGB": "inputs/rgb/town04-01/rear/00247221.png",
+      "targets": [
+        {
+          "box": [
+            410,
+            172,
+            428,
+            190
+          ],
+          "visible_pixels": 106,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.4684663976339108,
+            "1000_500": 0.8877006012477047,
+            "2000_1000": 0.8877006012477047
+          }
+        }
+      ]
+    },
+    {
+      "index": 1941,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "rear_left",
+      "frame": 247221,
+      "RGB": "inputs/rgb/town04-01/rear_left/00247221.png",
+      "targets": [
+        {
+          "box": [
+            129,
+            171,
+            149,
+            191
+          ],
+          "visible_pixels": 141,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.4687718623467101,
+            "1000_500": 0.493325931184742,
+            "2000_1000": 0.493325931184742
+          }
+        }
+      ]
+    },
+    {
+      "index": 1948,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "rear",
+      "frame": 247225,
+      "RGB": "inputs/rgb/town04-01/rear/00247225.png",
+      "targets": [
+        {
+          "box": [
+            409,
+            167,
+            426,
+            182
+          ],
+          "visible_pixels": 101,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.7852034199622495,
+            "1000_500": 0.7852034199622495,
+            "2000_1000": 0.7852034199622495
+          }
+        }
+      ]
+    },
+    {
+      "index": 1949,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "rear_left",
+      "frame": 247225,
+      "RGB": "inputs/rgb/town04-01/rear_left/00247225.png",
+      "targets": [
+        {
+          "box": [
+            128,
+            165,
+            148,
+            183
+          ],
+          "visible_pixels": 120,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.728111406108279,
+            "1000_500": 0.728111406108279,
+            "2000_1000": 0.728111406108279
+          }
+        }
+      ]
+    },
+    {
+      "index": 1956,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "rear",
+      "frame": 247229,
+      "RGB": "inputs/rgb/town04-01/rear/00247229.png",
+      "targets": [
+        {
+          "box": [
+            408,
+            169,
+            423,
+            184
+          ],
+          "visible_pixels": 88,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.871823975255217,
+            "1000_500": 0.871823975255217,
+            "2000_1000": 0.871823975255217
+          }
+        }
+      ]
+    },
+    {
+      "index": 1957,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "rear_left",
+      "frame": 247229,
+      "RGB": "inputs/rgb/town04-01/rear_left/00247229.png",
+      "targets": [
+        {
+          "box": [
+            126,
+            167,
+            145,
+            184
+          ],
+          "visible_pixels": 117,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.7741239116215075,
+            "1000_500": 0.7741239116215075,
+            "2000_1000": 0.7741239116215075
+          }
+        }
+      ]
+    },
+    {
+      "index": 1964,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "rear",
+      "frame": 247233,
+      "RGB": "inputs/rgb/town04-01/rear/00247233.png",
+      "targets": [
+        {
+          "box": [
+            403,
+            171,
+            421,
+            185
+          ],
+          "visible_pixels": 88,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.851687295607458,
+            "1000_500": 0.851687295607458,
+            "2000_1000": 0.851687295607458
+          }
+        }
+      ]
+    },
+    {
+      "index": 1965,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "rear_left",
+      "frame": 247233,
+      "RGB": "inputs/rgb/town04-01/rear_left/00247233.png",
+      "targets": [
+        {
+          "box": [
+            120,
+            170,
+            143,
+            185
+          ],
+          "visible_pixels": 121,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.6779898268475484,
+            "1000_500": 0.6779898268475484,
+            "2000_1000": 0.6779898268475484
+          }
+        }
+      ]
+    },
+    {
+      "index": 1972,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "rear",
+      "frame": 247237,
+      "RGB": "inputs/rgb/town04-01/rear/00247237.png",
+      "targets": [
+        {
+          "box": [
+            401,
+            175,
+            419,
+            188
+          ],
+          "visible_pixels": 81,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.6008828777406667,
+            "1000_500": 0.6008828777406667,
+            "2000_1000": 0.6008828777406667
+          }
+        }
+      ]
+    },
+    {
+      "index": 1973,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "rear_left",
+      "frame": 247237,
+      "RGB": "inputs/rgb/town04-01/rear_left/00247237.png",
+      "targets": [
+        {
+          "box": [
+            118,
+            175,
+            140,
+            189
+          ],
+          "visible_pixels": 101,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.6622844429216379,
+            "1000_500": 0.6622844429216379,
+            "2000_1000": 0.6622844429216379
+          }
+        }
+      ]
+    },
+    {
+      "index": 1980,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "rear",
+      "frame": 247241,
+      "RGB": "inputs/rgb/town04-01/rear/00247241.png",
+      "targets": [
+        {
+          "box": [
+            402,
+            181,
+            416,
+            194
+          ],
+          "visible_pixels": 67,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.8142480277529253,
+            "1000_500": 0.8142480277529253,
+            "2000_1000": 0.8142480277529253
+          }
+        }
+      ]
+    },
+    {
+      "index": 1981,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "rear_left",
+      "frame": 247241,
+      "RGB": "inputs/rgb/town04-01/rear_left/00247241.png",
+      "targets": [
+        {
+          "box": [
+            119,
+            181,
+            138,
+            195
+          ],
+          "visible_pixels": 86,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.7920748912685742,
+            "1000_500": 0.7920748912685742,
+            "2000_1000": 0.7920748912685742
+          }
+        }
+      ]
+    },
+    {
+      "index": 1988,
+      "scene_id": "town04-01",
+      "group_id": "town04-pedestrian-route-01",
+      "camera": "rear",
+      "frame": 247245,
+      "RGB": "inputs/rgb/town04-01/rear/00247245.png",
+      "targets": [
+        {
+          "box": [
+            401,
+            184,
+            414,
+            198
+          ],
+          "visible_pixels": 59,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.43226754600441186,
+            "1000_500": 0.6586578495910214,
+            "2000_1000": 0.6586578495910214
+          }
+        }
+      ]
+    }
+  ]
+}

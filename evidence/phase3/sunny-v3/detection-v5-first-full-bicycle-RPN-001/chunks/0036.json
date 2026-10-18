@@ -1,0 +1,251 @@
+{
+  "contract_sha256": "f143ae0cb6f5c41deb0c5d3deec922866a5465cce290750fafdbef3bd39d1936",
+  "indices": [
+    3531,
+    3539,
+    3547,
+    3555,
+    3563,
+    3571,
+    3579,
+    3587,
+    3595
+  ],
+  "real_RPN_forward_exact_verified": true,
+  "records": [
+    {
+      "index": 3531,
+      "scene_id": "town04-02",
+      "group_id": "town04-route-02",
+      "camera": "rear_right",
+      "frame": 248072,
+      "RGB": "inputs/rgb/town04-02/rear_right/00248072.png",
+      "targets": [
+        {
+          "box": [
+            598,
+            180,
+            612,
+            191
+          ],
+          "visible_pixels": 45,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.7911845141435343,
+            "1000_500": 0.7911845141435343,
+            "2000_1000": 0.7911845141435343
+          }
+        }
+      ]
+    },
+    {
+      "index": 3539,
+      "scene_id": "town04-02",
+      "group_id": "town04-route-02",
+      "camera": "rear_right",
+      "frame": 248076,
+      "RGB": "inputs/rgb/town04-02/rear_right/00248076.png",
+      "targets": [
+        {
+          "box": [
+            599,
+            179,
+            612,
+            191
+          ],
+          "visible_pixels": 45,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.7688671876113198,
+            "1000_500": 0.7688671876113198,
+            "2000_1000": 0.7688671876113198
+          }
+        }
+      ]
+    },
+    {
+      "index": 3547,
+      "scene_id": "town04-02",
+      "group_id": "town04-route-02",
+      "camera": "rear_right",
+      "frame": 248080,
+      "RGB": "inputs/rgb/town04-02/rear_right/00248080.png",
+      "targets": [
+        {
+          "box": [
+            598,
+            179,
+            611,
+            191
+          ],
+          "visible_pixels": 49,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.6269101963480364,
+            "1000_500": 0.6269101963480364,
+            "2000_1000": 0.6269101963480364
+          }
+        }
+      ]
+    },
+    {
+      "index": 3555,
+      "scene_id": "town04-02",
+      "group_id": "town04-route-02",
+      "camera": "rear_right",
+      "frame": 248084,
+      "RGB": "inputs/rgb/town04-02/rear_right/00248084.png",
+      "targets": [
+        {
+          "box": [
+            598,
+            180,
+            611,
+            191
+          ],
+          "visible_pixels": 43,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.6592213809726274,
+            "1000_500": 0.6592213809726274,
+            "2000_1000": 0.6592213809726274
+          }
+        }
+      ]
+    },
+    {
+      "index": 3563,
+      "scene_id": "town04-02",
+      "group_id": "town04-route-02",
+      "camera": "rear_right",
+      "frame": 248088,
+      "RGB": "inputs/rgb/town04-02/rear_right/00248088.png",
+      "targets": [
+        {
+          "box": [
+            599,
+            179,
+            611,
+            191
+          ],
+          "visible_pixels": 47,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.7150028690151948,
+            "1000_500": 0.7150028690151948,
+            "2000_1000": 0.7150028690151948
+          }
+        }
+      ]
+    },
+    {
+      "index": 3571,
+      "scene_id": "town04-02",
+      "group_id": "town04-route-02",
+      "camera": "rear_right",
+      "frame": 248092,
+      "RGB": "inputs/rgb/town04-02/rear_right/00248092.png",
+      "targets": [
+        {
+          "box": [
+            598,
+            180,
+            611,
+            191
+          ],
+          "visible_pixels": 43,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.6012333309816348,
+            "1000_500": 0.7211463892791561,
+            "2000_1000": 0.7211463892791561
+          }
+        }
+      ]
+    },
+    {
+      "index": 3579,
+      "scene_id": "town04-02",
+      "group_id": "town04-route-02",
+      "camera": "rear_right",
+      "frame": 248096,
+      "RGB": "inputs/rgb/town04-02/rear_right/00248096.png",
+      "targets": [
+        {
+          "box": [
+            598,
+            180,
+            611,
+            191
+          ],
+          "visible_pixels": 45,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.5957902030039198,
+            "1000_500": 0.5957902030039198,
+            "2000_1000": 0.5957902030039198
+          }
+        }
+      ]
+    },
+    {
+      "index": 3587,
+      "scene_id": "town04-02",
+      "group_id": "town04-route-02",
+      "camera": "rear_right",
+      "frame": 248100,
+      "RGB": "inputs/rgb/town04-02/rear_right/00248100.png",
+      "targets": [
+        {
+          "box": [
+            598,
+            180,
+            611,
+            191
+          ],
+          "visible_pixels": 44,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.668811798741239,
+            "1000_500": 0.668811798741239,
+            "2000_1000": 0.668811798741239
+          }
+        }
+      ]
+    },
+    {
+      "index": 3595,
+      "scene_id": "town04-02",
+      "group_id": "town04-route-02",
+      "camera": "rear_right",
+      "frame": 248104,
+      "RGB": "inputs/rgb/town04-02/rear_right/00248104.png",
+      "targets": [
+        {
+          "box": [
+            598,
+            180,
+            611,
+            191
+          ],
+          "visible_pixels": 48,
+          "truncated": false,
+          "size": "small_lt_32_squared",
+          "max_proposal_IoU": {
+            "500_150": 0.5703869730372396,
+            "1000_500": 0.5703869730372396,
+            "2000_1000": 0.5703869730372396
+          }
+        }
+      ]
+    }
+  ]
+}

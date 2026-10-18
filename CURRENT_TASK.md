@@ -1,5 +1,17 @@
 # 目前任務：批量完成晴天 Phase3（2026-10-18）
 
+## 最新接續點：13:48（優先於下方歷史）
+
+唯一原GPU batch exec32462/native parent19772仍跑；det native6608已進第3輪（epoch2，約10400/19200updates），第2輪9600驗證完成AP50:95 .44521858、mAP50 .71195058，仍只有bicycle recall失敗（P .959839/R .327846、小框9/388）。其餘七類P/R仍過。所有SRC／原batch contract檔案hash再核對完全未變。seg v5已完成但wall/margin未過；phase003/joint/demo/bench/export尚待原batch自動接續，全部新heldout仍未開。不要提前結束。
+
+CPU完整729自行車RPN調查exec25563已exit0：原budget覆蓋651/729=.893004、較高budget686/729=.941015；小框352/388→371/388。這是第一輪CPU候選存在率，不是最終P/R；完整證據detection-v5-first-full-bicycle-RPN-001。先前6選例不能概括全體。CPU survey無須重啟。
+
+GT-only全train小自行車比例10.95% vs val53.22%，故新增experimental_detector_geometry.py備案（未整合SRC／trainer）：成對zoom-out/flip，padding全ignore、loss只帶boxes/labels/ignore。6項CPU幾何檢查全過；verify_detector_geometry.py對真2個train groups＋immutable firstepoch parent做1次ephemeral CPU optimizer finite、兩頁實看對齊，沒有正式checkpoint。exec71390已exit0。證據detector-geometry-preflight-001，PHASE3_DETECTOR_GEOMETRY.md記限制；可考慮先於P1處理尺寸落差，不可把備案當改善。
+
+完整129項CPU suite：126pass/3GPU skipped、0failure，13.993s（cpu-regression-20261018-003）；原94GPU preflight仍是唯一已整批實跑GPU結果。新installer3項＋geometry6項包含其中；安裝器後續新增fullmap／binary守衛不影響active sources。
+
+**官方AdditionalMaps_0.9.16.zip正在下載，exec46320**，檔案artifacts/downloads/AdditionalMaps_0.9.16.zip.partial，HEAD7250055782bytes，13:45約2.75GB／尚未安裝。官方release及文件證實Town06/07為額外內容，本機Content/Carla/Maps當時沒有它們；這不是server availability查詢。下載不要重啟或盲resume，先查session/size。新install_additional_maps.py只inspect或content-only新檔合併，拒絕現有不同bytes、路徑逃逸與executables，不能覆蓋patched server。先inspect實際archive內容再決定install。shippingSHA b0370d6dcd57b95299d12005cebad1dc6187804e83aeb51a184ccbc4b581fea8，官方未驗publisherchecksum，來源證據additional-maps-preparation-001。可在CARLA關閉時準備assets；**仍須等原GPU批次全退出才啟CARLA／RPC採集**。
+
 使用者要求token恢復後盡量一次完成Phase3，允許批量執行及統一驗證；持續工作，不按小段落結束。**Phase3尚未通過，全部新模型heldout未開。** 詳細歷史與恢復見CHECKPOINT_PHASE3_2026-10-18_BATCH.md。
 
 ## 已完成且批准

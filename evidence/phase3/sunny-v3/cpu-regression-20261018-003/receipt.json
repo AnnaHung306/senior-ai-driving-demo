@@ -1,0 +1,6 @@
+{
+  "return_code": 0,
+  "scope": "CPU full suite only, CUDA hidden in independent subprocess; not GPU acceptance",
+  "active_source_differences": [],
+  "tests_log_sha256": "1731d84aa11c58ab3d957f12d5d1a3190e1c9e5f52b8b067b21c6bc3457eefa6"
+}

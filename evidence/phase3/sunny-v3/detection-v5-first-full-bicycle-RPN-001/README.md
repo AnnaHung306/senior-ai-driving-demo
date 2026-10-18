@@ -1,0 +1,1 @@
+All729 original validation bicycle-positive views, first-epoch v5 snapshot, CPU FP32 RPN-only coverage. Baseline real RPN.forward exact verified; learned tensors unchanged. Larger proposal budgets improve coverage but are not adopted or final detector acceptance. Source, exact contract and all37 chunks preserved. No heldout inference.

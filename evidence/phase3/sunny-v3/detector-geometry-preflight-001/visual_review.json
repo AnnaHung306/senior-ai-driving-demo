@@ -1,0 +1,16 @@
+{
+  "status": "reviewed_engineering_panels_only",
+  "training_approved": false,
+  "scope": "Two original train examples; no model performance estimate or data supplement approval",
+  "panels": [
+    {
+      "path": "geometry-0.png",
+      "sha256": "f8c5c1c14f79cc0ecbb08354fd13026d7fd096d1c2f62ff92658a1c860e87358"
+    },
+    {
+      "path": "geometry-1.png",
+      "sha256": "37dd3126b8a4f9d51235a2abdff50020458c9cf307c4551851d2871330e0e085"
+    }
+  ],
+  "observed": "Scaled boxes align with visible vehicles/riders/pedestrians; optional mirror is paired. Yellow padding-ignore rectangles cover the inserted blank canvas. Two original groups, not new data."
+}

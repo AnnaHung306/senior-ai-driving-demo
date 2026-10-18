@@ -1,0 +1,12 @@
+{
+  "source": "https://downloads.carlasim.com/Windows/AdditionalMaps_0.9.16.zip",
+  "release_page": "https://github.com/carla-simulator/carla/releases/tag/0.9.16",
+  "instructions": "https://carla.readthedocs.io/en/0.9.16/core_map/#additional-maps",
+  "observed_HEAD_bytes": 7250055782,
+  "observed_HEAD_ETag": "7d967c0a0755b73d00e8c4cdfc1cf71d-109",
+  "observed_HEAD_Last_Modified": "Mon, 31 Aug 2026 17:35:34 GMT",
+  "publisher_checksum_verified": false,
+  "status": "download_in_progress_no_install_or_RPC",
+  "scope": "Existing local directory has no Town06/07 map files. Download for later training-only scenery preview. Does not prove model quality or new material support.",
+  "shipping_binary_before_sha256": "b0370d6dcd57b95299d12005cebad1dc6187804e83aeb51a184ccbc4b581fea8"
+}

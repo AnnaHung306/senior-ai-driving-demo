@@ -1,0 +1,217 @@
+{
+  "status": "completed_all_bicycle_positive_validation_CPU_RPN_survey",
+  "views": 729,
+  "GT_targets": 729,
+  "results": {
+    "500_150": {
+      "pre_per_level": 500,
+      "post_total": 150,
+      "groups": {
+        "all": {
+          "GT_targets": 729,
+          "covered_IoU0.5": 651,
+          "covered_IoU0.7": 331,
+          "coverage_IoU50": 0.8930041152263375,
+          "coverage_IoU70": 0.4540466392318244
+        },
+        "medium_32_to_96_squared": {
+          "GT_targets": 308,
+          "covered_IoU0.5": 266,
+          "covered_IoU0.7": 208,
+          "coverage_IoU50": 0.8636363636363636,
+          "coverage_IoU70": 0.6753246753246753
+        },
+        "not_truncated": {
+          "GT_targets": 575,
+          "covered_IoU0.5": 501,
+          "covered_IoU0.7": 304,
+          "coverage_IoU50": 0.871304347826087,
+          "coverage_IoU70": 0.528695652173913
+        },
+        "scene/town04-00": {
+          "GT_targets": 274,
+          "covered_IoU0.5": 272,
+          "covered_IoU0.7": 154,
+          "coverage_IoU50": 0.9927007299270073,
+          "coverage_IoU70": 0.5620437956204379
+        },
+        "small_lt_32_squared": {
+          "GT_targets": 388,
+          "covered_IoU0.5": 352,
+          "covered_IoU0.7": 92,
+          "coverage_IoU50": 0.9072164948453608,
+          "coverage_IoU70": 0.23711340206185566
+        },
+        "truncated": {
+          "GT_targets": 154,
+          "covered_IoU0.5": 150,
+          "covered_IoU0.7": 27,
+          "coverage_IoU50": 0.974025974025974,
+          "coverage_IoU70": 0.17532467532467533
+        },
+        "scene/town04-01": {
+          "GT_targets": 215,
+          "covered_IoU0.5": 156,
+          "covered_IoU0.7": 57,
+          "coverage_IoU50": 0.7255813953488373,
+          "coverage_IoU70": 0.2651162790697674
+        },
+        "large_ge_96_squared": {
+          "GT_targets": 33,
+          "covered_IoU0.5": 33,
+          "covered_IoU0.7": 31,
+          "coverage_IoU50": 1.0,
+          "coverage_IoU70": 0.9393939393939394
+        },
+        "scene/town04-02": {
+          "GT_targets": 240,
+          "covered_IoU0.5": 223,
+          "covered_IoU0.7": 120,
+          "coverage_IoU50": 0.9291666666666667,
+          "coverage_IoU70": 0.5
+        }
+      }
+    },
+    "1000_500": {
+      "pre_per_level": 1000,
+      "post_total": 500,
+      "groups": {
+        "all": {
+          "GT_targets": 729,
+          "covered_IoU0.5": 686,
+          "covered_IoU0.7": 392,
+          "coverage_IoU50": 0.9410150891632373,
+          "coverage_IoU70": 0.5377229080932785
+        },
+        "medium_32_to_96_squared": {
+          "GT_targets": 308,
+          "covered_IoU0.5": 282,
+          "covered_IoU0.7": 213,
+          "coverage_IoU50": 0.9155844155844156,
+          "coverage_IoU70": 0.6915584415584416
+        },
+        "not_truncated": {
+          "GT_targets": 575,
+          "covered_IoU0.5": 534,
+          "covered_IoU0.7": 322,
+          "coverage_IoU50": 0.928695652173913,
+          "coverage_IoU70": 0.56
+        },
+        "scene/town04-00": {
+          "GT_targets": 274,
+          "covered_IoU0.5": 274,
+          "covered_IoU0.7": 196,
+          "coverage_IoU50": 1.0,
+          "coverage_IoU70": 0.7153284671532847
+        },
+        "small_lt_32_squared": {
+          "GT_targets": 388,
+          "covered_IoU0.5": 371,
+          "covered_IoU0.7": 147,
+          "coverage_IoU50": 0.9561855670103093,
+          "coverage_IoU70": 0.3788659793814433
+        },
+        "truncated": {
+          "GT_targets": 154,
+          "covered_IoU0.5": 152,
+          "covered_IoU0.7": 70,
+          "coverage_IoU50": 0.987012987012987,
+          "coverage_IoU70": 0.45454545454545453
+        },
+        "scene/town04-01": {
+          "GT_targets": 215,
+          "covered_IoU0.5": 183,
+          "covered_IoU0.7": 68,
+          "coverage_IoU50": 0.8511627906976744,
+          "coverage_IoU70": 0.31627906976744186
+        },
+        "large_ge_96_squared": {
+          "GT_targets": 33,
+          "covered_IoU0.5": 33,
+          "covered_IoU0.7": 32,
+          "coverage_IoU50": 1.0,
+          "coverage_IoU70": 0.9696969696969697
+        },
+        "scene/town04-02": {
+          "GT_targets": 240,
+          "covered_IoU0.5": 229,
+          "covered_IoU0.7": 128,
+          "coverage_IoU50": 0.9541666666666667,
+          "coverage_IoU70": 0.5333333333333333
+        }
+      }
+    },
+    "2000_1000": {
+      "pre_per_level": 2000,
+      "post_total": 1000,
+      "groups": {
+        "all": {
+          "GT_targets": 729,
+          "covered_IoU0.5": 686,
+          "covered_IoU0.7": 392,
+          "coverage_IoU50": 0.9410150891632373,
+          "coverage_IoU70": 0.5377229080932785
+        },
+        "medium_32_to_96_squared": {
+          "GT_targets": 308,
+          "covered_IoU0.5": 282,
+          "covered_IoU0.7": 213,
+          "coverage_IoU50": 0.9155844155844156,
+          "coverage_IoU70": 0.6915584415584416
+        },
+        "not_truncated": {
+          "GT_targets": 575,
+          "covered_IoU0.5": 534,
+          "covered_IoU0.7": 322,
+          "coverage_IoU50": 0.928695652173913,
+          "coverage_IoU70": 0.56
+        },
+        "scene/town04-00": {
+          "GT_targets": 274,
+          "covered_IoU0.5": 274,
+          "covered_IoU0.7": 196,
+          "coverage_IoU50": 1.0,
+          "coverage_IoU70": 0.7153284671532847
+        },
+        "small_lt_32_squared": {
+          "GT_targets": 388,
+          "covered_IoU0.5": 371,
+          "covered_IoU0.7": 147,
+          "coverage_IoU50": 0.9561855670103093,
+          "coverage_IoU70": 0.3788659793814433
+        },
+        "truncated": {
+          "GT_targets": 154,
+          "covered_IoU0.5": 152,
+          "covered_IoU0.7": 70,
+          "coverage_IoU50": 0.987012987012987,
+          "coverage_IoU70": 0.45454545454545453
+        },
+        "scene/town04-01": {
+          "GT_targets": 215,
+          "covered_IoU0.5": 183,
+          "covered_IoU0.7": 68,
+          "coverage_IoU50": 0.8511627906976744,
+          "coverage_IoU70": 0.31627906976744186
+        },
+        "large_ge_96_squared": {
+          "GT_targets": 33,
+          "covered_IoU0.5": 33,
+          "covered_IoU0.7": 32,
+          "coverage_IoU50": 1.0,
+          "coverage_IoU70": 0.9696969696969697
+        },
+        "scene/town04-02": {
+          "GT_targets": 240,
+          "covered_IoU0.5": 229,
+          "covered_IoU0.7": 128,
+          "coverage_IoU50": 0.9541666666666667,
+          "coverage_IoU70": 0.5333333333333333
+        }
+      }
+    }
+  },
+  "real_RPN_forward_exact_verified": true,
+  "learned_tensors_identical": true,
+  "limits": "Proposal coverage uses per-target independent IoU existence, not one-to-one detector AP/PR. Positive-only validation, not unseen data or full-system recall. Higher proposal coverage does not guarantee ROI classification/regression success."
+}

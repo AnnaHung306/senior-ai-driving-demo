@@ -10,6 +10,10 @@
 
 ## 有界備案：P1 CPU原型，未整合／未訓練
 
+第二輪完整 GPU val 仍只有 bicycle recall 失敗：P .959839、R .327846、小框9/388。舊完整GT診斷顯示train small比例10.95%對val53.22%；因此另備PHASE3_DETECTOR_GEOMETRY.md的尺寸增強，考慮先處理資料尺度落差，再決定是否付出P1算力。所有備案目前均未接入正式訓練。
+
+完整729-target CPU RPN調查已完成（第一輪immutable checkpoint）：原pre/post500/150的IoU50存在覆蓋651/729=.893004，小框352/388=.907216；提高至1000/500或2000/1000，皆686/729=.941015、小框371/388=.956186。原Town04-01覆蓋156/215=.725581，較高budget183/215=.851163，故六選例「都有proposal」不能概括全體。所有learned tensors exact未變，首圖組件baseline逐tensor等於真RPN.forward。這是positive-only獨立IoU存在性，不是一對一AP、正式GPU品質或最終分類／回歸召回；更大budget改善候選覆蓋，仍不能宣稱已修復最終自行車漏檢。完整37chunks／tool／contract／report封存detection-v5-first-full-bicycle-RPN-001。
+
 scripts/experimental_p1_detector.py新增stride2 feature，原P2/P3/P4/P5各層權重明確平移index，原body/RPN/ROI所有參數保持；新增P1 projection/output seeded初始化。六層含pool anchors為8/16/32/64/128/256、仍三aspect channels；ROI涵蓋stride2..32。這是本專案待驗假說，不是新的訓練成果。
 
 4項CPU工程測試通過：全部既有參數依映射exact、原較粗features與pool exact、新stride2 shape、新projection有finite非零梯度及CPU完整train/eval路徑、拒絕重複套用。不代表720 GPU容量或品質已通過。若v5最終自己過關，就不執行這個備案。

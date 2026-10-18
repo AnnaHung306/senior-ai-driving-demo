@@ -1,0 +1,29 @@
+{
+  "checkpoint_sha256": "b2b69ebac6652c43054148cf132d78fbbb504f4b41af5fa608cd0a2b8a2b8237",
+  "reference_sha256": "c08b5ba856748f4fa64d8bafa1676c6e287597f265aa61f053d4077d3c80d2ef",
+  "tool_sha256": "ee47e8f5ca73988554ecc64f71d92db306fd40c63cb808ef5dc038e15e26949d",
+  "RPN_dependency_sha256": "00ff7ea77fe9ba37038ad6b6c1289185b2e753ca124c50cf64d8f0d30edecd43",
+  "main_audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+  "selection_sha256": "179a8a947b55284d2cfca846b238ac472187d44f31143f71ef3a0eea089c3d6f",
+  "budgets": [
+    [
+      500,
+      150
+    ],
+    [
+      1000,
+      500
+    ],
+    [
+      2000,
+      1000
+    ]
+  ],
+  "torch": "2.10.0+cu128",
+  "torchvision": "0.25.0+cu128",
+  "numpy": "2.3.5",
+  "CPU_threads": 2,
+  "GT_targets": 729,
+  "views": 729,
+  "scope": "All original validation bicycle-positive images only, CPU FP32 RPN coverage. No bicycle-negative images, final detector PR, model/gate changes, or heldout."
+}

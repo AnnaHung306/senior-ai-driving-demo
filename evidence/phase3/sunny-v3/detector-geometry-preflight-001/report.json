@@ -1,0 +1,87 @@
+{
+  "status": "CPU_real_train_geometry_finite_step_only",
+  "checkpoint_sha256": "b2b69ebac6652c43054148cf132d78fbbb504f4b41af5fa608cd0a2b8a2b8237",
+  "tool_sha256": "121d7d4edabc55359e25b0c73ebcd77fb1018c0c12df42e883dd275c783c64ac",
+  "geometry_source_sha256": "7f75ca920c00e3f93692e61d38b3a33ef1040eef9b5800ccca4d163a5d390d3d",
+  "main_audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+  "records": [
+    {
+      "sample": {
+        "scene_id": "town01-00",
+        "group_id": "town01-route-00",
+        "split": "train",
+        "camera": "front",
+        "frame": 166909,
+        "input_manifest": "inputs/frames/town01-00/00166909.json",
+        "rgb": "inputs/rgb/town01-00/front/00166909.png",
+        "semantic": "labels/semantic_segmentation/town01-00/front/00166909.png",
+        "detection": "labels/visible/town01-00/front/00166909.json",
+        "instance": "labels/instance_segmentation/town01-00/front/00166909.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "rgb_sha256": "6b5a3c25d24ef671eb3da83aa3b4a3fd39d030e1ae6717724abca2511c0e69a7",
+      "GT_sha256": "9fbb3b079b66980473652f830b4385ff70c7253c89aa5d39c381d842d07c05dc",
+      "transform": {
+        "scale_xy": [
+          0.5,
+          0.5
+        ],
+        "offset_top_left": [
+          40,
+          80
+        ],
+        "horizontal_flip": false,
+        "padding_ignored": true,
+        "scope": "Training augmentation; raw provenance and eval targets unchanged"
+      },
+      "panel": "geometry-0.png",
+      "panel_sha256": "f8c5c1c14f79cc0ecbb08354fd13026d7fd096d1c2f62ff92658a1c860e87358"
+    },
+    {
+      "sample": {
+        "scene_id": "town03-00",
+        "group_id": "town03-route-00",
+        "split": "train",
+        "camera": "front",
+        "frame": 167600,
+        "input_manifest": "inputs/frames/town03-00/00167600.json",
+        "rgb": "inputs/rgb/town03-00/front/00167600.png",
+        "semantic": "labels/semantic_segmentation/town03-00/front/00167600.png",
+        "detection": "labels/visible/town03-00/front/00167600.json",
+        "instance": "labels/instance_segmentation/town03-00/front/00167600.png",
+        "verified_obstacle_actor_ids": []
+      },
+      "rgb_sha256": "ea5176b7e9fc6a997c1925e3a51b044d7e3e41c2674bb0dc1baf1d52a8b30e27",
+      "GT_sha256": "1845786cbdea18aa93fe4c757dc2e5f34d5dd31b367ce96e86430133ce032d01",
+      "transform": {
+        "scale_xy": [
+          0.5,
+          0.5
+        ],
+        "offset_top_left": [
+          40,
+          80
+        ],
+        "horizontal_flip": true,
+        "padding_ignored": true,
+        "scope": "Training augmentation; raw provenance and eval targets unchanged"
+      },
+      "panel": "geometry-1.png",
+      "panel_sha256": "37dd3126b8a4f9d51235a2abdff50020458c9cf307c4551851d2871330e0e085"
+    }
+  ],
+  "device": "cpu",
+  "threads": 2,
+  "loss": 0.9214284420013428,
+  "parts": {
+    "loss_classifier": 0.32441776990890503,
+    "loss_box_reg": 0.5024002194404602,
+    "loss_objectness": 0.07112165540456772,
+    "loss_rpn_box_reg": 0.02348879538476467
+  },
+  "preclip_gradient_norm": 8.719962120056152,
+  "RPN_supervised_samples": 124765,
+  "ROI_supervised_samples": 256,
+  "formal_checkpoints_written": 0,
+  "limits": "One ephemeral CPU optimizer step with real train bytes; not CUDA capacity, quality, or formal training. Original checkpoint and active v5 implementation untouched."
+}

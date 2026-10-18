@@ -1,0 +1,1 @@
+Real training bytes + immutable first-epoch v5 weights; one CPU finite optimizer smoke step, no formal checkpoint. Both geometry panels actually viewed. Original v5 batch/source/gates/heldout unchanged. See report.json and PHASE3_DETECTOR_GEOMETRY.md.

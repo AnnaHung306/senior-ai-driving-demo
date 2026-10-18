@@ -75,3 +75,13 @@ v5分割從v4 best再微調6輪，batch8/10272新updates，encoderLR5e-5、decod
 遮擋的專項說明：現有動態畫面包含遮擋，偵測報告按實際可見框評分，另列小框及影像邊界截斷recall，錯例須實看遮擋／小物件情境。`visible_pixels_per_projected_bbox_area_not_visibility`只是投影矩形填充比例；細長自行車、空隙與視角同樣影響它，不能命名為物理遮擋率。若要量化25%/50%/75%遮擋的性能，須另外凍結同target/camera pose的無遮擋reference與受控occluder配對，驗證真實mask與depth前後關係，另行報告static controlled範圍，不能由目前bbox填充率捏造此結果。尚無這種受控遮擋率驗收或廣泛遮擋魯棒性保證。
 
 號誌v1-003同超參數重跑，是為凍結正確的720 detector production loader；舊phase/source的360硬編碼不能拿來做新det controlled補收推論。新phase保存config原bytes與data SHA。統一batch先完成94項實際GPU回歸/容量，再順序訓練與joint；任何val失敗整個tuple不開heldout。正式模型還必須實際RGB-only8view、3種暖機效能與final QA，code工具或資料批准不代表Phase3通過。
+
+## 2026-10-18 v6批次補充
+
+v6分割從completed v5 best再微調六輪，原Town01/03靜態1024view與新Town06/07靜態1024view各重複2次，main9600/13696=70.09%。新增資料須完整CRC/SHA、F+1實際frame、pose、semantic/instance、保留map家族及OpenDrive排除、四頁RGB/GT實看批准，且實際loader重新計算support；probe不進train。架構、loss、增強與encoder/decoder LR不變。六輪共10272新updates，onlyWallfail，並未打開新heldout。
+
+v6偵測以completed v5 best初始化，720內部resize維持，四輪/batch2共19200目標更新。只對含bicycle正例的train view以2/3概率縮半、否則原比例；RGB、全部positive boxes及ignore boxes同步變換，padding進ignore，無flip。epoch記actual bicycle-positive/zoomed views；不以框填充率推測遮擋率，不保留已失效的augmentation visibility metadata。原圖、val影像與score .5不變；初始完整GPU validation與父代逐項完全一致已保存收據。這是有小框分布診斷依據的微調，不能宣稱已證明對所有遮擋情境有效。
+
+此批次已實跑151項GPU回歸、零skip，以及720容量／兩個真train groups成對幾何／finite loss與梯度／checkpoint reload。之後新增的三項QA、兩項偏置CPU測試只記focused CPU，不能合稱156項GPU全測。號誌v1-004重跑用以凍結positive-first ignore修正：正例重疊優先，錯類／duplicate仍FP，僅背景且符合ignore規則者排除。歷史joint報告與修正addendum分開保存，不將報表修正冒充模型提升。
+
+整批訓練、joint、conditional heldout、RGB demo、三benchmark及export順序完成後，才執行分割原GPU batch重播QA，要求selected confusion與boundary integer counts精確吻合；偵測圖讀取保存GPU predictions並重算文件一致性。最後須assistant實看所有選例及八方向demo，產圖／單元測試／訓練結束都不等於品質批准。

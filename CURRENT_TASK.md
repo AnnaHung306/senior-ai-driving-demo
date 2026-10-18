@@ -1,3 +1,13 @@
+## 最新接續 17:50：狀態問答後仍繼續原Phase3任務
+
+使用者最新只問「現在做什麼／六輪做什麼」，已在commentary簡短解釋六epochs是同樣train+val循環、不是六獨立測試；沒有停止原完成Phase3目標。主GPU exec79387與原postQA exec45681、file checker59456持續，不另啟GPU。detv6初始完整3600val已與v5正式validation整份JSON／bytes SHA30d8...完全一致，receipt batch002/detection_initialization_replay.json；sanity ratio .19087849通過並重設。17:49實際第一輪700/19200updates，loss約.208、lr約4.98e-5，無錯誤。全部batch凍結source與config再查零差異。不要以初始化重播當新改善。
+
+新增文件診斷 artifacts/reports/segmentation-v6-wall-confusion-diagnostic-001.json：3600個原GPUframes按scene重聚合exact，Wall TP997032/FP4324560/FN1051136，FP主要other2150166/Fence973196/sidewalk578319/terrain499916；這只是既有GPU輸出的檔案重算。
+
+新增有限CPU fit已完成，exec83605退出0，artifacts/runs/wall-training-fit-v6-001。沿用原train-only外觀／negative選例固定28個indices，原選例兩reports SHA與oldcontract exact；v6completed checkpoint 0a3fe...，CPU FP32 Wall IoU .97738998/P .98702681/R .99010945。兩頁六個最高FP/FN情境已實看，磚石／水泥Wall大致吻合，少量邊界誤差。這是biased seen-train選例，不是全train accuracy或GPU驗收。report/tool/contract/oldselectionreports/2pages/visualreview與原GPUconfusion已封存evidence/phase3/sunny-v3/segmentation-v6-wall-diagnostics-001。高seenfit低val支持外觀／場景泛化優先，不證明單一原因或某方法必成。
+
+Wall-only CPU study exec25474仍跑全3600，17:49約1600，未根據partialgrid決策；別改script、別把CPU當正式通過。PHASE3_DOMAIN_RECOVERY.md與TRAINING_PROTOCOL已補真實v6／各種檢查範圍，歷史準備狀態清楚標時間。沒有更動任何SRC/model/training/frozenQA code。後續仍待det4輪→phase004/joint→conditionalheldout/demo/bench/export→queuedGPUQA實看；不要因問答／此存檔而結束。
+
 ## 最新接續 17:36：segv6完成、detv6進行中，仍勿結束
 
 **目標仍盡量完成整個Phase3，不是回報完六輪就結束。** 唯一GPU主批 **exec79387 / parent25188**（FILETIME134367844292432653）不變，batch002所有model source/config依然凍結、CARLA關。segv6 **六輪10272更新已正式completed**、best_epoch5，bestSHA **0a3fe3f66fb93be373f2e82218632a4f8cc277bf6067f48bb4683a71f1b2af30**；last3b32c59a56283da92614566f5fed539f268bfdf3342cc4f88403ade66dcd60e6。mIoU **.6065211770678386**／Wall **.15645293506956517**（P.18735596/R.48679210）／Fence.6057671054／margin **.6222117516687405**，**onlyWallfail**，其餘15focus類及margin都過。selected reloadexact，GPU allocated4046.51MiB/reserved4662，trainingwall4922.844s。validationSHA0aad5062137087b317eae07504d30113a73182451a6b89041da71de1dba5eaf1，framesSHAf94c3d58e762caf62980cf63c52766249ae6d2ae39f019da3b9c8dad8145fb44。3600frame文件一致性checker已passed（不是品質pass），artifacts/reports/segmentation-v6-artifact-check-001.json。完整modelcard/config/provenance/epochs/reports/source_raw_tar在evidence/phase3/sunny-v3/sunny-segmentation-v6-001-completed-validation，README/registry已更新但尚未commit。GPU錯例仍等整批結束postQA，不假稱CPU圖是原GPU。

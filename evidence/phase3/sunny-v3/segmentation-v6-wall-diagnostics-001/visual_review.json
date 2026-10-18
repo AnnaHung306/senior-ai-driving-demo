@@ -1,0 +1,24 @@
+{
+  "status": "assistant_visually_reviewed_CPU_train_diagnostic_only",
+  "checkpoint_sha256": "0a3fe3f66fb93be373f2e82218632a4f8cc277bf6067f48bb4683a71f1b2af30",
+  "report_sha256": "0edf38ee35ba853d46cb3c7da2a6770e0a38f3411e69d1c14526ae31124942a9",
+  "views_scored": 28,
+  "pages_reviewed": [
+    {
+      "path": "page-0.png",
+      "sha256": "5af32d6b53a299ee230113dc50ff9f437902e7250ccb146a2959ea9e5755274b"
+    },
+    {
+      "path": "page-1.png",
+      "sha256": "427e6d1cbaf42fe89b5f73880dd27a9ef6ff8ad69d2c4a2c7043d01e6bb1f105"
+    }
+  ],
+  "observations": [
+    "Both pages viewed: six selected high-FP/FN contexts. Train brick perimeter walls and white/grey masonry surfaces broadly match raw-semantic GT.",
+    "Small wall/background and grass/sidewalk discrepancies remain. These are CPU FP32 selected seen-train examples, not original GPU validation replay."
+  ],
+  "limits": [
+    "Biased fixed selection from earlier train-only surveys; does not estimate full-train accuracy or independent generalization.",
+    "High selected train Wall IoU with low full validation Wall IoU supports prioritizing domain/appearance generalization; does not prove a single causal mechanism or promise a particular remedy."
+  ]
+}

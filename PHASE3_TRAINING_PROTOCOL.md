@@ -62,3 +62,14 @@ visible-box AP用101 recall點、IoU .5:.95、max100，不冒稱完整COCO evalu
 最終三模型必須在只有八RGB與輸入manifest的獨立根目錄完成真實推論；本機保留權重、SHA與來源快照。demo預選validation Town04-00中間frame，不宣稱其為獨立測試。個別模型與八鏡頭整套warm timing分別量測；不包含simulator/render/sensor delivery、圖檔輸出與車輛控制，不能宣稱20Hz閉環。
 
 完整交付需正式權重、保留測試逐類指標、錯例庫、模型卡、來源/資料收據、RGB-only八方向圖與實測效能。road只是語意道路，可見邊界不補遮擋區；沒有Phase4的跨鏡頭融合/BEV/深度/3D occupancy或AI駕駛控制。
+
+
+## 2026-10-18 v5修復批次
+
+原v3 detector與v4 segmentation皆完整訓練但val失敗，final detector-box phase joint也失敗；凍結紀錄不覆寫。新增train-only靜態seg補景003：Town01/03、128虛擬道路錨點、1024獨特view、4096PNG，full audit及5頁38情境實看通過。只是static2D補景，main007不改，不能算新動態groups或送進detector/phase/heldout。每輪9600main+1024static各重複4次=13696sampledviews，主資料70.09%；資料與重複量、原始support、audit/review/planSHA都進provenance。
+
+v5分割從v4 best再微調6輪，batch8/10272新updates，encoderLR5e-5、decoder.00015；架構、loss與映射不變。v5 detector從v3 best再微調4輪、batch2/LR5e-5，原640x360RGB/GT不變，內部resize720x1280以改善小框表示；load_model按checkpoint config重建resize，輸出仍原始座標。optimizer/scheduler重設，80步sanity後再次重建；不是嚴格matched-compute或純資料因果ablation。
+
+新配置在任何v5評分前凍結qualified_first_then_score：只用val，先選所有既定門檻通過的epoch，再最大原AP50:95/mIoU；若都沒過則最大均分並記失敗，同分最早。每epoch記全部gate、checkpoint/resume帶best_qualified，避免低於單類門檻的高均分蓋掉合格模型。所有門檻數值不變。
+
+號誌v1-003同超參數重跑，是為凍結正確的720 detector production loader；舊phase/source的360硬編碼不能拿來做新det controlled補收推論。新phase保存config原bytes與data SHA。統一batch先完成94項實際GPU回歸/容量，再順序訓練與joint；任何val失敗整個tuple不開heldout。正式模型還必須實際RGB-only8view、3種暖機效能與final QA，code工具或資料批准不代表Phase3通過。

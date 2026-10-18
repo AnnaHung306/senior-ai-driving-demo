@@ -60,3 +60,10 @@ Native完成後才能full audit（不可先寫不完整audit，因immutable）�
 root003 Town01完成512、exit0/cleanuptrue；完整1024view/4096PNG audit passed，auditSHA06703e9bf4d88f3788f1cab169cd2eb04c9b2b4ee165300bdcbca7a0919ca68f。5頁38contexts已實際看過，reviewSHA607b9c5cc24710dfc582085abb22003d93eb6dd363c06babf2bd92e2d7c3dd54，verify_scenery全檔再核對通過。資料與QA摘要壓縮證據在evidence/phase3/sunny-v3/segmentation-scenery-v1-003；full audit原bytes gzip可還原。static原生木板斜撐圍欄真的出現在Town03 anchor114，原主train四Town03 routes完全沒有Fence，這次補到新context；不宣稱有兩個獨立木板地點。
 
 full source/data/classpairs/intrinsics/weather/path/timing/pose檢查通過，207不完整候選被拒，maxresolved8.7097e-6；完整raw差異及unknown支持仍保存。原生server27540/30584已taskkill自有程序樹退出，awake23920已releasedtrue。不要重啟CARLA，進GPU batch。最新完整批次命令與狀態以CURRENT_TASK.md為準。
+
+
+## 唯一GPU批次已啟動（10:26起）
+
+凍結來源commit8ec5771。native parent19772/launcher31940、exec32462，awake helper4644綁parent確切FILETIME最多6h，沒有第二個batch。GPU regression94/94無skip，det容量allocated3350.97/reserved3924MiB，3steps finite且production loader重建720resize後exactRGB輸出一致。dummy synthetic.pt只是工程權重，不是正式best。封存proof在evidence/recovery-batch-001-preflight。
+
+10:27開始分割child native26248/launcher23100，10:29 GPU197MiB、root尚未建立，正在全部86400PNG的verify前置，不能只看run不存在就再啟。後續source/config不得更改；只改文件/非contract狀態reader可以。新status_phase3_batch.ps1用ReadWrite|Delete共享讀state/progress/stages避免WinError5，讀檔不推定process活著。要查native CIM/nvidia-smi。

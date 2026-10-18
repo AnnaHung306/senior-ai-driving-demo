@@ -19,7 +19,7 @@
 .venv/Scripts/python.exe -u scripts/run_phase3_recovery_batch.py --segmentation-config configs/sunny_segmentation_v5_1.json --output artifacts/runs/phase3-recovery-batch-001
 ```
 
-目前尚未啟動（commit來源後立即啟動，實際session/PID另更新）。三個新run都未建立，不要重複啟動。
+**已啟動唯一批次：exec32462；native parentPID19772（venv launcher31940）、awake helper4644，6h綁parent確切creation。** 10:27起跑分割child native26248（launcher23100）；10:29尚在完整主資料checksum前置，run目錄未建，這不等於未啟動。不要重複啟動。用scripts/status_phase3_batch.ps1共享讀取落盤狀態；程序/GPU實況另查native CIM/nvidia-smi。
 
 - v5 seg：從v4 best SHAa703...微調6epochs/batch8，decoderLR.00015/encoder.00005；9600main +1024unique static各重複4次=13696sampledviews/epoch、10272updates；70.09%main/29.91%static，不把重複算新場景。
 - v5 det：從v3 best SHA9cbed...微調4epochs/batch2/LR5e-5，內部720x1280、輸入及框仍640x360；min/max resize必須由checkpoint config重建。
@@ -30,6 +30,6 @@
 
 ## 驗證與限制
 
-最新全CPU suite012=92項/89pass/3CUDA skip；其後同步6項、scenery6項focused及export6項通過；目前總數應94，GPU全套在batch中實跑。GPU容量與新模型品質尚未測，不可假裝通過。主門檻不降低，只有ClearNoon，不進Phase4。
+**batch完整GPU suite已94/94通過、零skip；高解析det容量/finite正反向、真正production loader重載exact一致已通過。** batch2峰值allocated3350.97MiB/reserved3924MiB；dummy3updates僅容量測試，不是正式模型。新模型品質尚未測，不可假裝通過。主門檻不降低，只有ClearNoon，不進Phase4。
 
 舊run要從自己的source快照執行evaluator，dataset-root用絕對路徑；sourcesha比文件Git revision更具體。Native CARLA RPC需escalation；不用過去DX11/Low。status讀檔用ReadWrite|Delete共享，避免Windows atomic replace鎖；不要用舊log當程序仍活著。

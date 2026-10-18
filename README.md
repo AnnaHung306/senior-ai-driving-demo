@@ -2,6 +2,8 @@
 
 長期需求見 [PROJECT_SPEC.md](PROJECT_SPEC.md)，當前任務見 [CURRENT_TASK.md](CURRENT_TASK.md)。
 
+**最新決定：Phase 3 依目前成果收尾，深度分支不納入，不再追補 Wall。** 後續以晴天、無近牆路線及道路／車道線跟隨為預設。歷史驗證未達項目保留，下一步重心轉向道路 BEV 與行駛整合；見 [階段收尾與後續工作](PHASE3_CLOSEOUT.md)。以下「未通過」描述原門檻結果，不表示要重啟 Phase 3。
+
 實測已通過：CARLA 車輛加速／煞停與單鏡頭、五條固定規則導航路線、八鏡頭同步擷取，以及六場景資料 pilot；本輪另完成含移動自車、行人與兩輪車的 Phase 2 v2 基礎資料驗收。使用本地修正 CARLA 0.9.16 與 DX12／Epic；官方原樣 binary 的失敗紀錄保留。
 
 目前以 **ClearNoon理想晴天** 為範圍。Phase 3主資料007已完成18場、86,400 PNG的獨立audit與assistant視覺抽查。最新v6批次11階段、GPU錯例重播與18頁實際視覺檢查均完成。17類MobileUNet v6微調6輪，使用原Town01/03與新Town06/07各1024個核准靜態分割視角；完整validation focus mIoU **60.65%**、fence IoU **60.58%**、可見邊界F1 **.6222**通過，僅wall IoU **15.65%**未達20%。偵測v6微調4輪後最佳為第一輪：mAP50 **70.46%**，自行車／機車／紅綠燈Recall未達50%。號誌v1-004 GT crop macro **94.38%**通過，但搭配v6 detector的joint macro **39.9064%**未達40%。八RGB展示與三種benchmark已保存，8view暖機推論p50 **688ms**（排除模擬器與控制）。development/lockbox未開模型評分，**整個Phase 3未通過**；完整結果見[v6批次證據](evidence/phase3/sunny-v3/phase3-recovery-batch-002-completed/README.md)。BEV／occupancy、3D導航與AI駕駛閉環仍未完成。

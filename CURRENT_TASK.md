@@ -1,4 +1,16 @@
-## 最新終局 21:35：深度A/B完整完成，首輪收益不足，本版停止不納入
+## 最新使用者決定：Phase 3 至此收尾，停止 Wall／深度迭代
+
+使用者明確決定：「那就不納入了，就先這樣。phase3就先到這為止，不要再糾結Wall。未來行駛路線預設附近不要有牆壁，跟著道路繪製線行駛就好。phase還有什麼要做的?」
+
+**本決定優先於下方全部歷史「繼續 Phase3／未過門檻不能往下／務必等完」指示。Phase3依現有成果與縮小範圍收尾，不再補Wall、不納入depth、不重啟任何實驗／watcher，不再為Phase3另開heldout推論。** 這是使用者決定結束該階段，不把歷史品質未過數值改成pass。深度A/B及原v6批次、實際GPU驗證與所有視覺QA早已完成，本機commit f3bb72e／d15238d；所有專案GPU程序與awake helper均退出。
+
+現有分割沿用原v6 parent0a3fe，不採depth或control研究checkpoint；原v6 batch baseline tuple與數值保留。後續預設ClearNoon、道路線清楚且沿線附近無牆；路線在將來選景時實際確認，不宣稱現有場景已改成無牆。將辨識道路／車道線轉成車道中央目標軌跡，再接控制；不把GT路徑或GT物件位置冒充視覺成果。偵測／phase既有不足仍記錄，往後看行駛影響，不在本階段重訓。
+
+新增 PHASE3_CLOSEOUT.md，PROJECT_SPEC／README／PHASE3_TRAINING_PROTOCOL同步最新範圍；原「未修好Wall不能進Phase4」不再阻擋後續規劃。原研究計畫與raw model/evidence均保留，不重寫舊收據。
+
+目前使用者是在詢問後續工作，**未啟動Phase4實作、模擬器或訓練**。建議下一個里程碑為Phase4道路／車道BEV＋簡單循線，將Phase8/9的基礎軌跡追蹤提前小型整合；Phase5/6的3D世界／介面、Phase7追蹤預測與完整Phase8–10依序保留。後續接手先依最新使用者要求做，不因舊長任務文字自行恢復Wall試驗。
+
+## 歷史終局 21:35：深度A/B完整完成，首輪收益不足，本版停止不納入
 
 最新使用者「照你建議的是看看吧」授權的小GPU檢查＋兩臂各一輪已完整完成。**exec78878 exit0、parent23304已退出、awake22688 released/request_clearedtrue。沒有剩餘GPU job、watcher、automation或CARLA。不要重啟舊queue或自動第二輪。** 原batch79387正常quality_failed、postQA45681 exit0且18pages/7bikezooms/8viewdemo全實看，file watcher59456漏--root已補明確root執行3346核對通過；monitor cells671/709/713皆結束。原批證據已commit d15238d（前5f3d28c）。
 

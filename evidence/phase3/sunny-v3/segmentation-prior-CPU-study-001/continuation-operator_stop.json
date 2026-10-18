@@ -1,0 +1,11 @@
+{
+  "status": "operator_stopped_waiting_continuation",
+  "target_pid": 32944,
+  "creation_filetime": "134367682905851523",
+  "reason": "Full3600 CPU validation: all5 train-prior correction candidates wall IoU .07406..07466, far below .2. Cancel idle watcher before its redundant GPU experiment; original training batch untouched.",
+  "study_sha256": "ee6b85c0be4427c2a6a54d8f20b18ad1a3382744341522999f7cb677fe0ea78b",
+  "best_CPU_wall_IoU": 0.07465595532720078,
+  "requested_utc": "2026-10-18T03:58:25.272906+00:00",
+  "process_exit_confirmed": true,
+  "no_calibration_run_created": true
+}

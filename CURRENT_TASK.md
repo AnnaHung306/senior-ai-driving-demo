@@ -47,9 +47,15 @@
 
 - seg已進最後第6輪，9900/10272updates，最新selected仍第4輪 mIoU .589854、wall .075970、fence .591737、margin .489201，wall/margin失敗。未完成final reload/完整val，不可先用completed checker。
 - CPU研究到3200/3600；尚無report.json。完整結果要實讀，不把先前半批結果當結論。
-- **另有一次性等待接續器exec67677，native32944（creation FILETIME134367682905851523）、awake helper29360。** 它等精確原batch19772退出且state為quality_failed，若seg還不合格，才會啟動calibrate_segmentation_prior.py至sunny-segmentation-v5-prior-001；不開heldout。output phase3-prior-continuation-001有contract/state/awake。不要在它尚活動時啟CARLA，避免等候器剛啟GPU校正時競爭。若CPU完整研究證明效果不足，可查明此owned watcher身分後停止並記operator receipt；原GPU batch保持不動。
+- **一次性等待接續器exec67677/native32944已於11:58有意取消，未啟GPU校正。** 先查CIM命令列，再以同一native process handle核對creation FILETIME134367682905851523並停止；operator_stop.json證實退出，沒有sunny-segmentation-v5-prior-001，awake29360已released/request_clearedtrue。不要重啟此舊PID或只看遺留waiting state；原GPU batch19772完全保持運行。
 - 正式校正工具尚未GPU執行；新5項prior/3項artifact selection/3項native process identity focused測試都通過，證據prior-calibration-preflight-001。原batch先前GPU94全過，新增11項尚未與完整GPU suite合跑。canonical batch sources及model fingerprint於11:46再核對仍完全相同，無中途改SRC。
 - 修正file-only segmentation artifact checker尊重qualified-first，避免高平均但不合格epoch蓋過低平均已合格epoch；舊v4完整3600frame artifacts重檢通過，模型品質仍原3項失敗。此checker不在active source contract。
 - 見evidence/wall-seen-train-fit-001：第一輪snapshot對28個已選seen train contexts CPU wallIoU .969654/P.981587/R.987617；2頁highest FP/FN已實看。這是有偏樣本非完整train accuracy，支持優先修復外觀泛化，不能當新驗收。
 - candidate configs/segmentation_low_wall_preview_v1_1.json僅預覽表：Town01/03各新增24 native道路pose、原128anchors不變、min8m；未採集/未批准train。舊candidate v1及其exact source在artifacts/runs/low-wall-preview-v1-superseded，v1_1才是目前候選。PHASE3_DOMAIN_RECOVERY.md有先preview原train、若必要才新增未使用城鎮的資料路線，不能只重複既有磚/隧道牆。
 - 最新工具/證據commit e500b16；phase3未通過，不可結束為已完成。繼續等目前批次→統一val/joint/demo/bench/export，按實際結果處理缺口。
+
+## 11:59覆蓋更新
+
+CPU研究exec30015已exit0，完整3600val×5固定alpha完畢。alpha0 mIoU .569206/wall .074063/margin .503958；alpha1 mIoU .579824/wall .074656/margin .501732；全部候選只有wall門檻失敗。這是第一輪snapshot的CPU診斷，不能代替GPU或外推成第6輪校正結果；但改善幅度不足以優先再花GPU測同一先驗法，因此取消閒置watcher，工具仍可供另一次有依據的實驗。證據segmentation-prior-CPU-study-001，full report SHA ee6b85c0be4427c2a6a54d8f20b18ad1a3382744341522999f7cb677fe0ea78b。
+
+seg v5正式6epochs/10272updates已全走完，第6輪選定mIoU .5900253284664799、wall .09379871927291071、fence .6147462883597083、margin .49446801091434905；仍wall/margin兩項失敗。此刻state仍training，正做最終selected reload及full val輸出，等completed再跑artifact check與新錯例。只有原batch等待接續det/phase；無GPU校正watcher或CARLA。後續資料修復按PHASE3_DOMAIN_RECOVERY.md，主train不能當新獨立驗收。

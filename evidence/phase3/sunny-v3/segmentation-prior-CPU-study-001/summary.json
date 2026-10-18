@@ -1,0 +1,53 @@
+{
+  "scope": "Complete3600 original validation views, immutable first-epoch checkpoint, CPU FP32 diagnostic only, not formal GPU acceptance. No final model/checkpoint or gate changed; no heldout opened.",
+  "checkpoint_sha256": "4e1a0d7ff0e2dac78c006073221ee402c9615c20a7475999d22bbe64ac67fb94",
+  "views": 3600,
+  "candidates": [
+    {
+      "alpha": 0.0,
+      "focus_mIoU": 0.5692062443166075,
+      "wall_IoU": 0.07406318290239561,
+      "margin_F1": 0.5039577844504629,
+      "diagnostic_gate_failures": [
+        "wall/IoU"
+      ]
+    },
+    {
+      "alpha": 0.25,
+      "focus_mIoU": 0.574000556670921,
+      "wall_IoU": 0.07433315693298884,
+      "margin_F1": 0.5039297286113918,
+      "diagnostic_gate_failures": [
+        "wall/IoU"
+      ]
+    },
+    {
+      "alpha": 0.5,
+      "focus_mIoU": 0.5773705090035076,
+      "wall_IoU": 0.07448452579661197,
+      "margin_F1": 0.503436815245155,
+      "diagnostic_gate_failures": [
+        "wall/IoU"
+      ]
+    },
+    {
+      "alpha": 0.75,
+      "focus_mIoU": 0.5793067478437655,
+      "wall_IoU": 0.07458813179738266,
+      "margin_F1": 0.5028592146800529,
+      "diagnostic_gate_failures": [
+        "wall/IoU"
+      ]
+    },
+    {
+      "alpha": 1.0,
+      "focus_mIoU": 0.5798240556764999,
+      "wall_IoU": 0.07465595532720078,
+      "margin_F1": 0.501731821644247,
+      "diagnostic_gate_failures": [
+        "wall/IoU"
+      ]
+    }
+  ],
+  "decision": "Train-prior correction improves average score but barely changes Wall IoU; stop idle GPU-calibration continuation, prioritize appearance/context coverage. This study is not the later epoch6 selected checkpoint."
+}

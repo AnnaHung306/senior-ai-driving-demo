@@ -1,0 +1,14 @@
+{
+  "status": "immutable_intermediate_checkpoint_only",
+  "parent_run": "C:\\code\\senior_AI\\artifacts\\runs\\sunny-detection-v5-001",
+  "epoch_zero_based": 0,
+  "updates": 4800,
+  "best_sha256": "b2b69ebac6652c43054148cf132d78fbbb504f4b41af5fa608cd0a2b8a2b8237",
+  "copied_metadata": {
+    "config.json": "08e0240296f163c20f13e205ecce744e6f6a3c9fc10a2fe9ed25a97c6ccc1ee1",
+    "provenance.json": "ad3ff4f1078ac93167277b2c4b566a1202332d9f3119f13068f09a9f6e70e2de",
+    "dataset_statistics.json": "b84c7f67570fae792e9250862575cea8442dadb86bcfb57ba4d901b6ec280e1f",
+    "best_validation.json": "c08b5ba856748f4fa64d8bafa1676c6e287597f265aa61f053d4077d3c80d2ef"
+  },
+  "scope": "Completed first epoch only; parent training continues, not a completed training run or final acceptance."
+}

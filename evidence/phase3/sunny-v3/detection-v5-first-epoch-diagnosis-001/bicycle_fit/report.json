@@ -1,0 +1,5287 @@
+{
+  "status": "completed_selected_CPU_diagnostic_only",
+  "checkpoint_sha256": "b2b69ebac6652c43054148cf132d78fbbb504f4b41af5fa608cd0a2b8a2b8237",
+  "views": 22,
+  "results": {
+    "train": {
+      "protocol": "visible-tight-xyxy-101recall-IoU50:95-max100-allarea-ignore-v1",
+      "score_threshold": 0.5,
+      "images": 16,
+      "per_class": {
+        "car": {
+          "ground_truth_objects": 8,
+          "AP50": 1.0,
+          "AP50_95": 0.8913896746817539,
+          "precision_at_score": 1.0,
+          "recall_at_score": 1.0,
+          "true_positives": 8,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "ignored_predictions_all_scores": 0,
+          "recall_strata_IoU50": {
+            "small_lt_32_squared": {
+              "ground_truth": 4,
+              "matched_at_score": 4,
+              "recall": 1.0
+            },
+            "medium_32_to_96_squared": {
+              "ground_truth": 4,
+              "matched_at_score": 4,
+              "recall": 1.0
+            },
+            "large_ge_96_squared": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "truncated": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "not_truncated": {
+              "ground_truth": 8,
+              "matched_at_score": 8,
+              "recall": 1.0
+            }
+          }
+        },
+        "pedestrian": {
+          "ground_truth_objects": 8,
+          "AP50": 1.0,
+          "AP50_95": 0.8051980198019801,
+          "precision_at_score": 1.0,
+          "recall_at_score": 1.0,
+          "true_positives": 8,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "ignored_predictions_all_scores": 4,
+          "recall_strata_IoU50": {
+            "small_lt_32_squared": {
+              "ground_truth": 4,
+              "matched_at_score": 4,
+              "recall": 1.0
+            },
+            "medium_32_to_96_squared": {
+              "ground_truth": 4,
+              "matched_at_score": 4,
+              "recall": 1.0
+            },
+            "large_ge_96_squared": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "truncated": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "not_truncated": {
+              "ground_truth": 8,
+              "matched_at_score": 8,
+              "recall": 1.0
+            }
+          }
+        },
+        "bicycle": {
+          "ground_truth_objects": 16,
+          "AP50": 1.0,
+          "AP50_95": 0.8231031564694933,
+          "precision_at_score": 0.9411764705882353,
+          "recall_at_score": 1.0,
+          "true_positives": 16,
+          "false_positives": 1,
+          "false_negatives": 0,
+          "ignored_predictions_all_scores": 0,
+          "recall_strata_IoU50": {
+            "small_lt_32_squared": {
+              "ground_truth": 5,
+              "matched_at_score": 5,
+              "recall": 1.0
+            },
+            "medium_32_to_96_squared": {
+              "ground_truth": 9,
+              "matched_at_score": 9,
+              "recall": 1.0
+            },
+            "large_ge_96_squared": {
+              "ground_truth": 2,
+              "matched_at_score": 2,
+              "recall": 1.0
+            },
+            "truncated": {
+              "ground_truth": 6,
+              "matched_at_score": 6,
+              "recall": 1.0
+            },
+            "not_truncated": {
+              "ground_truth": 10,
+              "matched_at_score": 10,
+              "recall": 1.0
+            }
+          }
+        },
+        "motorcycle": {
+          "ground_truth_objects": 8,
+          "AP50": 1.0,
+          "AP50_95": 0.8476072607260727,
+          "precision_at_score": 0.8888888888888888,
+          "recall_at_score": 1.0,
+          "true_positives": 8,
+          "false_positives": 1,
+          "false_negatives": 0,
+          "ignored_predictions_all_scores": 0,
+          "recall_strata_IoU50": {
+            "small_lt_32_squared": {
+              "ground_truth": 4,
+              "matched_at_score": 4,
+              "recall": 1.0
+            },
+            "medium_32_to_96_squared": {
+              "ground_truth": 4,
+              "matched_at_score": 4,
+              "recall": 1.0
+            },
+            "large_ge_96_squared": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "truncated": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "not_truncated": {
+              "ground_truth": 8,
+              "matched_at_score": 8,
+              "recall": 1.0
+            }
+          }
+        },
+        "truck": {
+          "ground_truth_objects": 8,
+          "AP50": 1.0,
+          "AP50_95": 0.8216171617161716,
+          "precision_at_score": 1.0,
+          "recall_at_score": 1.0,
+          "true_positives": 8,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "ignored_predictions_all_scores": 1,
+          "recall_strata_IoU50": {
+            "small_lt_32_squared": {
+              "ground_truth": 5,
+              "matched_at_score": 5,
+              "recall": 1.0
+            },
+            "medium_32_to_96_squared": {
+              "ground_truth": 3,
+              "matched_at_score": 3,
+              "recall": 1.0
+            },
+            "large_ge_96_squared": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "truncated": {
+              "ground_truth": 1,
+              "matched_at_score": 1,
+              "recall": 1.0
+            },
+            "not_truncated": {
+              "ground_truth": 7,
+              "matched_at_score": 7,
+              "recall": 1.0
+            }
+          }
+        },
+        "bus": {
+          "ground_truth_objects": 10,
+          "AP50": 1.0,
+          "AP50_95": 0.8869542668552569,
+          "precision_at_score": 1.0,
+          "recall_at_score": 1.0,
+          "true_positives": 10,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "ignored_predictions_all_scores": 1,
+          "recall_strata_IoU50": {
+            "small_lt_32_squared": {
+              "ground_truth": 6,
+              "matched_at_score": 6,
+              "recall": 1.0
+            },
+            "medium_32_to_96_squared": {
+              "ground_truth": 3,
+              "matched_at_score": 3,
+              "recall": 1.0
+            },
+            "large_ge_96_squared": {
+              "ground_truth": 1,
+              "matched_at_score": 1,
+              "recall": 1.0
+            },
+            "truncated": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "not_truncated": {
+              "ground_truth": 10,
+              "matched_at_score": 10,
+              "recall": 1.0
+            }
+          }
+        },
+        "traffic_light": {
+          "ground_truth_objects": 4,
+          "AP50": 1.0,
+          "AP50_95": 0.7943069306930692,
+          "precision_at_score": 1.0,
+          "recall_at_score": 1.0,
+          "true_positives": 4,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "ignored_predictions_all_scores": 1,
+          "recall_strata_IoU50": {
+            "small_lt_32_squared": {
+              "ground_truth": 4,
+              "matched_at_score": 4,
+              "recall": 1.0
+            },
+            "medium_32_to_96_squared": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "large_ge_96_squared": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "truncated": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "not_truncated": {
+              "ground_truth": 4,
+              "matched_at_score": 4,
+              "recall": 1.0
+            }
+          }
+        },
+        "temporary_obstacle": {
+          "ground_truth_objects": 2,
+          "AP50": 1.0,
+          "AP50_95": 0.5,
+          "precision_at_score": 1.0,
+          "recall_at_score": 1.0,
+          "true_positives": 2,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "ignored_predictions_all_scores": 2,
+          "recall_strata_IoU50": {
+            "small_lt_32_squared": {
+              "ground_truth": 2,
+              "matched_at_score": 2,
+              "recall": 1.0
+            },
+            "medium_32_to_96_squared": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "large_ge_96_squared": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "truncated": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "not_truncated": {
+              "ground_truth": 2,
+              "matched_at_score": 2,
+              "recall": 1.0
+            }
+          }
+        }
+      },
+      "all_classes_present": true,
+      "mAP50": 1.0,
+      "mAP50_95": 0.7962720588679748
+    },
+    "validation": {
+      "protocol": "visible-tight-xyxy-101recall-IoU50:95-max100-allarea-ignore-v1",
+      "score_threshold": 0.5,
+      "images": 6,
+      "per_class": {
+        "car": {
+          "ground_truth_objects": 2,
+          "AP50": 0.504950495049505,
+          "AP50_95": 0.403960396039604,
+          "precision_at_score": 1.0,
+          "recall_at_score": 0.5,
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 1,
+          "ignored_predictions_all_scores": 0,
+          "recall_strata_IoU50": {
+            "small_lt_32_squared": {
+              "ground_truth": 1,
+              "matched_at_score": 0,
+              "recall": 0.0
+            },
+            "medium_32_to_96_squared": {
+              "ground_truth": 1,
+              "matched_at_score": 1,
+              "recall": 1.0
+            },
+            "large_ge_96_squared": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "truncated": {
+              "ground_truth": 1,
+              "matched_at_score": 1,
+              "recall": 1.0
+            },
+            "not_truncated": {
+              "ground_truth": 1,
+              "matched_at_score": 0,
+              "recall": 0.0
+            }
+          }
+        },
+        "pedestrian": {
+          "ground_truth_objects": 3,
+          "AP50": 0.865346534653465,
+          "AP50_95": 0.5659405940594058,
+          "precision_at_score": 0.6666666666666666,
+          "recall_at_score": 0.6666666666666666,
+          "true_positives": 2,
+          "false_positives": 1,
+          "false_negatives": 1,
+          "ignored_predictions_all_scores": 0,
+          "recall_strata_IoU50": {
+            "small_lt_32_squared": {
+              "ground_truth": 1,
+              "matched_at_score": 1,
+              "recall": 1.0
+            },
+            "medium_32_to_96_squared": {
+              "ground_truth": 2,
+              "matched_at_score": 1,
+              "recall": 0.5
+            },
+            "large_ge_96_squared": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "truncated": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "not_truncated": {
+              "ground_truth": 3,
+              "matched_at_score": 2,
+              "recall": 0.6666666666666666
+            }
+          }
+        },
+        "bicycle": {
+          "ground_truth_objects": 6,
+          "AP50": 0.5684818481848185,
+          "AP50_95": 0.3892739273927393,
+          "precision_at_score": 0.75,
+          "recall_at_score": 0.5,
+          "true_positives": 3,
+          "false_positives": 1,
+          "false_negatives": 3,
+          "ignored_predictions_all_scores": 0,
+          "recall_strata_IoU50": {
+            "small_lt_32_squared": {
+              "ground_truth": 3,
+              "matched_at_score": 0,
+              "recall": 0.0
+            },
+            "medium_32_to_96_squared": {
+              "ground_truth": 1,
+              "matched_at_score": 1,
+              "recall": 1.0
+            },
+            "large_ge_96_squared": {
+              "ground_truth": 2,
+              "matched_at_score": 2,
+              "recall": 1.0
+            },
+            "truncated": {
+              "ground_truth": 3,
+              "matched_at_score": 2,
+              "recall": 0.6666666666666666
+            },
+            "not_truncated": {
+              "ground_truth": 3,
+              "matched_at_score": 1,
+              "recall": 0.3333333333333333
+            }
+          }
+        },
+        "motorcycle": {
+          "ground_truth_objects": 3,
+          "AP50": 0.2653465346534653,
+          "AP50_95": 0.06653465346534652,
+          "precision_at_score": 0.0,
+          "recall_at_score": 0.0,
+          "true_positives": 0,
+          "false_positives": 1,
+          "false_negatives": 3,
+          "ignored_predictions_all_scores": 0,
+          "recall_strata_IoU50": {
+            "small_lt_32_squared": {
+              "ground_truth": 2,
+              "matched_at_score": 0,
+              "recall": 0.0
+            },
+            "medium_32_to_96_squared": {
+              "ground_truth": 1,
+              "matched_at_score": 0,
+              "recall": 0.0
+            },
+            "large_ge_96_squared": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "truncated": {
+              "ground_truth": 1,
+              "matched_at_score": 0,
+              "recall": 0.0
+            },
+            "not_truncated": {
+              "ground_truth": 2,
+              "matched_at_score": 0,
+              "recall": 0.0
+            }
+          }
+        },
+        "truck": {
+          "ground_truth_objects": 2,
+          "AP50": 0.8349834983498351,
+          "AP50_95": 0.6369636963696369,
+          "precision_at_score": 0.6666666666666666,
+          "recall_at_score": 1.0,
+          "true_positives": 2,
+          "false_positives": 1,
+          "false_negatives": 0,
+          "ignored_predictions_all_scores": 0,
+          "recall_strata_IoU50": {
+            "small_lt_32_squared": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "medium_32_to_96_squared": {
+              "ground_truth": 2,
+              "matched_at_score": 2,
+              "recall": 1.0
+            },
+            "large_ge_96_squared": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "truncated": {
+              "ground_truth": 1,
+              "matched_at_score": 1,
+              "recall": 1.0
+            },
+            "not_truncated": {
+              "ground_truth": 1,
+              "matched_at_score": 1,
+              "recall": 1.0
+            }
+          }
+        },
+        "bus": {
+          "ground_truth_objects": 2,
+          "AP50": 0.504950495049505,
+          "AP50_95": 0.201980198019802,
+          "precision_at_score": 1.0,
+          "recall_at_score": 0.5,
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 1,
+          "ignored_predictions_all_scores": 0,
+          "recall_strata_IoU50": {
+            "small_lt_32_squared": {
+              "ground_truth": 2,
+              "matched_at_score": 1,
+              "recall": 0.5
+            },
+            "medium_32_to_96_squared": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "large_ge_96_squared": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "truncated": {
+              "ground_truth": 1,
+              "matched_at_score": 0,
+              "recall": 0.0
+            },
+            "not_truncated": {
+              "ground_truth": 1,
+              "matched_at_score": 1,
+              "recall": 1.0
+            }
+          }
+        },
+        "traffic_light": {
+          "ground_truth_objects": 6,
+          "AP50": 0.16831683168316833,
+          "AP50_95": 0.13465346534653466,
+          "precision_at_score": 0.3333333333333333,
+          "recall_at_score": 0.16666666666666666,
+          "true_positives": 1,
+          "false_positives": 2,
+          "false_negatives": 5,
+          "ignored_predictions_all_scores": 1,
+          "recall_strata_IoU50": {
+            "small_lt_32_squared": {
+              "ground_truth": 6,
+              "matched_at_score": 1,
+              "recall": 0.16666666666666666
+            },
+            "medium_32_to_96_squared": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "large_ge_96_squared": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "truncated": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "not_truncated": {
+              "ground_truth": 6,
+              "matched_at_score": 1,
+              "recall": 0.16666666666666666
+            }
+          }
+        },
+        "temporary_obstacle": {
+          "ground_truth_objects": 1,
+          "AP50": 1.0,
+          "AP50_95": 0.4,
+          "precision_at_score": 1.0,
+          "recall_at_score": 1.0,
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "ignored_predictions_all_scores": 2,
+          "recall_strata_IoU50": {
+            "small_lt_32_squared": {
+              "ground_truth": 1,
+              "matched_at_score": 1,
+              "recall": 1.0
+            },
+            "medium_32_to_96_squared": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "large_ge_96_squared": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "truncated": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "recall": null
+            },
+            "not_truncated": {
+              "ground_truth": 1,
+              "matched_at_score": 1,
+              "recall": 1.0
+            }
+          }
+        }
+      },
+      "all_classes_present": true,
+      "mAP50": 0.5890470297029703,
+      "mAP50_95": 0.34991336633663367
+    }
+  },
+  "records": [
+    {
+      "sample": {
+        "scene_id": "town01-00",
+        "group_id": "town01-route-00",
+        "split": "train",
+        "camera": "front_right",
+        "frame": 166909,
+        "input_manifest": "inputs/frames/town01-00/00166909.json",
+        "rgb": "inputs/rgb/town01-00/front_right/00166909.png",
+        "semantic": "labels/semantic_segmentation/town01-00/front_right/00166909.png",
+        "detection": "labels/visible/town01-00/front_right/00166909.json",
+        "instance": "labels/instance_segmentation/town01-00/front_right/00166909.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 1
+      },
+      "selection_reasons": [
+        "max_visible_bicycle_support"
+      ],
+      "selected_bicycle_box": [
+        0,
+        186,
+        41,
+        299
+      ],
+      "selected_bicycle_visible_pixels": 2277,
+      "selected_bicycle_diagnostic": "detected",
+      "wrong_class_overlaps": [],
+      "highest_matching_bicycle_score": 0.9929994344711304,
+      "evaluation_frame": {
+        "split": "train",
+        "group_id": "town01-route-00",
+        "predictions": [
+          {
+            "box": [
+              35.42971420288086,
+              164.405029296875,
+              39.166805267333984,
+              177.1429443359375
+            ],
+            "label": 7,
+            "score": 0.9997521042823792
+          },
+          {
+            "box": [
+              200.82669067382812,
+              171.3173828125,
+              220.58709716796875,
+              235.67108154296875
+            ],
+            "label": 2,
+            "score": 0.9995125532150269
+          },
+          {
+            "box": [
+              0.0,
+              182.34197998046875,
+              37.852073669433594,
+              299.9622497558594
+            ],
+            "label": 3,
+            "score": 0.9929994344711304
+          },
+          {
+            "box": [
+              21.95993995666504,
+              167.71884155273438,
+              85.25727844238281,
+              194.34967041015625
+            ],
+            "label": 5,
+            "score": 0.9695261716842651
+          },
+          {
+            "box": [
+              0.0,
+              184.10635375976562,
+              40.954498291015625,
+              304.941650390625
+            ],
+            "label": 4,
+            "score": 0.030566630885004997
+          },
+          {
+            "box": [
+              0.0,
+              173.26742553710938,
+              37.57882308959961,
+              302.01318359375
+            ],
+            "label": 2,
+            "score": 0.024432038888335228
+          }
+        ],
+        "targets": [
+          {
+            "box": [
+              0,
+              186,
+              41,
+              299
+            ],
+            "label": 3,
+            "visible_pixels": 2277,
+            "truncated": true,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              0,
+              166,
+              78,
+              195
+            ],
+            "label": 5,
+            "visible_pixels": 751,
+            "truncated": true,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              201,
+              172,
+              220,
+              234
+            ],
+            "label": 2,
+            "visible_pixels": 727,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              35,
+              164,
+              39,
+              177
+            ],
+            "label": 7,
+            "visible_pixels": 40,
+            "truncated": false,
+            "light_state_class": 1
+          }
+        ],
+        "ignore_boxes": [
+          [
+            93,
+            171,
+            96,
+            177
+          ],
+          [
+            110,
+            189,
+            111,
+            190
+          ]
+        ]
+      }
+    },
+    {
+      "sample": {
+        "scene_id": "town01-00",
+        "group_id": "town01-route-00",
+        "split": "train",
+        "camera": "front_right",
+        "frame": 167477,
+        "input_manifest": "inputs/frames/town01-00/00167477.json",
+        "rgb": "inputs/rgb/town01-00/front_right/00167477.png",
+        "semantic": "labels/semantic_segmentation/town01-00/front_right/00167477.png",
+        "detection": "labels/visible/town01-00/front_right/00167477.json",
+        "instance": "labels/instance_segmentation/town01-00/front_right/00167477.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 1137
+      },
+      "selection_reasons": [
+        "near_16x16_box_area"
+      ],
+      "selected_bicycle_box": [
+        251,
+        181,
+        265,
+        199
+      ],
+      "selected_bicycle_visible_pixels": 107,
+      "selected_bicycle_diagnostic": "detected",
+      "wrong_class_overlaps": [],
+      "highest_matching_bicycle_score": 0.9992406368255615,
+      "evaluation_frame": {
+        "split": "train",
+        "group_id": "town01-route-00",
+        "predictions": [
+          {
+            "box": [
+              69.1353759765625,
+              136.66587829589844,
+              80.11320495605469,
+              170.4865264892578
+            ],
+            "label": 7,
+            "score": 0.9998641014099121
+          },
+          {
+            "box": [
+              251.83436584472656,
+              180.91583251953125,
+              264.2672119140625,
+              199.00302124023438
+            ],
+            "label": 3,
+            "score": 0.9992406368255615
+          },
+          {
+            "box": [
+              282.94818115234375,
+              165.60772705078125,
+              332.831298828125,
+              281.51678466796875
+            ],
+            "label": 2,
+            "score": 0.9984394907951355
+          },
+          {
+            "box": [
+              147.21620178222656,
+              163.88861083984375,
+              152.03309631347656,
+              176.68258666992188
+            ],
+            "label": 7,
+            "score": 0.9970508813858032
+          },
+          {
+            "box": [
+              345.0746154785156,
+              166.25601196289062,
+              387.3666076660156,
+              201.41708374023438
+            ],
+            "label": 5,
+            "score": 0.10126547515392303
+          },
+          {
+            "box": [
+              255.00965881347656,
+              181.5810546875,
+              260.714111328125,
+              193.26913452148438
+            ],
+            "label": 2,
+            "score": 0.04796247184276581
+          },
+          {
+            "box": [
+              149.31190490722656,
+              163.69717407226562,
+              153.35667419433594,
+              176.60897827148438
+            ],
+            "label": 7,
+            "score": 0.039564698934555054
+          },
+          {
+            "box": [
+              139.87054443359375,
+              189.99085998535156,
+              148.90792846679688,
+              216.8724822998047
+            ],
+            "label": 2,
+            "score": 0.01910839043557644
+          },
+          {
+            "box": [
+              285.06298828125,
+              210.3323974609375,
+              334.64752197265625,
+              272.70001220703125
+            ],
+            "label": 8,
+            "score": 0.017118996009230614
+          }
+        ],
+        "targets": [
+          {
+            "box": [
+              251,
+              181,
+              265,
+              199
+            ],
+            "label": 3,
+            "visible_pixels": 107,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              69,
+              136,
+              80,
+              171
+            ],
+            "label": 7,
+            "visible_pixels": 302,
+            "truncated": false,
+            "light_state_class": 1
+          },
+          {
+            "box": [
+              147,
+              164,
+              152,
+              177
+            ],
+            "label": 7,
+            "visible_pixels": 45,
+            "truncated": false,
+            "light_state_class": 0
+          }
+        ],
+        "ignore_boxes": [
+          [
+            285,
+            167,
+            331,
+            280
+          ],
+          [
+            318,
+            176,
+            322,
+            180
+          ],
+          [
+            224,
+            199,
+            225,
+            201
+          ]
+        ]
+      }
+    },
+    {
+      "sample": {
+        "scene_id": "town01-01",
+        "group_id": "town01-route-01",
+        "split": "train",
+        "camera": "front",
+        "frame": 168284,
+        "input_manifest": "inputs/frames/town01-01/00168284.json",
+        "rgb": "inputs/rgb/town01-01/front/00168284.png",
+        "semantic": "labels/semantic_segmentation/town01-01/front/00168284.png",
+        "detection": "labels/visible/town01-01/front/00168284.json",
+        "instance": "labels/instance_segmentation/town01-01/front/00168284.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 2440
+      },
+      "selection_reasons": [
+        "max_visible_bicycle_support"
+      ],
+      "selected_bicycle_box": [
+        298,
+        185,
+        343,
+        280
+      ],
+      "selected_bicycle_visible_pixels": 1687,
+      "selected_bicycle_diagnostic": "detected",
+      "wrong_class_overlaps": [],
+      "highest_matching_bicycle_score": 0.9998722076416016,
+      "evaluation_frame": {
+        "split": "train",
+        "group_id": "town01-route-01",
+        "predictions": [
+          {
+            "box": [
+              298.4640808105469,
+              185.33470153808594,
+              342.8899841308594,
+              280.8563537597656
+            ],
+            "label": 3,
+            "score": 0.9998722076416016
+          },
+          {
+            "box": [
+              249.4871063232422,
+              182.10025024414062,
+              278.1146240234375,
+              201.96514892578125
+            ],
+            "label": 1,
+            "score": 0.9998452663421631
+          },
+          {
+            "box": [
+              467.257080078125,
+              170.44033813476562,
+              486.519287109375,
+              241.01553344726562
+            ],
+            "label": 2,
+            "score": 0.9997944235801697
+          },
+          {
+            "box": [
+              269.8045349121094,
+              167.42410278320312,
+              295.4604797363281,
+              192.90277099609375
+            ],
+            "label": 5,
+            "score": 0.9994397759437561
+          },
+          {
+            "box": [
+              212.5083770751953,
+              184.7430419921875,
+              233.01869201660156,
+              220.14971923828125
+            ],
+            "label": 4,
+            "score": 0.9993290901184082
+          },
+          {
+            "box": [
+              292.14837646484375,
+              168.42996215820312,
+              303.05816650390625,
+              188.0751953125
+            ],
+            "label": 6,
+            "score": 0.9988903403282166
+          },
+          {
+            "box": [
+              371.8435363769531,
+              161.23390197753906,
+              389.0232238769531,
+              195.87132263183594
+            ],
+            "label": 2,
+            "score": 0.053844597190618515
+          },
+          {
+            "box": [
+              66.92898559570312,
+              201.5406036376953,
+              74.02613830566406,
+              214.2258758544922
+            ],
+            "label": 8,
+            "score": 0.01933363266289234
+          },
+          {
+            "box": [
+              289.6449890136719,
+              172.84872436523438,
+              301.2090759277344,
+              191.92401123046875
+            ],
+            "label": 2,
+            "score": 0.016266198828816414
+          },
+          {
+            "box": [
+              251.14407348632812,
+              173.61671447753906,
+              295.8045349121094,
+              196.55723571777344
+            ],
+            "label": 1,
+            "score": 0.014092640951275826
+          },
+          {
+            "box": [
+              370.8103942871094,
+              164.1379852294922,
+              387.2054138183594,
+              179.63462829589844
+            ],
+            "label": 6,
+            "score": 0.012502748519182205
+          }
+        ],
+        "targets": [
+          {
+            "box": [
+              298,
+              185,
+              343,
+              280
+            ],
+            "label": 3,
+            "visible_pixels": 1687,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              212,
+              184,
+              234,
+              220
+            ],
+            "label": 4,
+            "visible_pixels": 425,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              249,
+              182,
+              278,
+              202
+            ],
+            "label": 1,
+            "visible_pixels": 463,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              270,
+              167,
+              295,
+              193
+            ],
+            "label": 5,
+            "visible_pixels": 500,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              293,
+              168,
+              303,
+              188
+            ],
+            "label": 6,
+            "visible_pixels": 140,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              466,
+              171,
+              487,
+              239
+            ],
+            "label": 2,
+            "visible_pixels": 790,
+            "truncated": false,
+            "light_state_class": -1
+          }
+        ],
+        "ignore_boxes": [
+          [
+            371,
+            163,
+            390,
+            182
+          ],
+          [
+            304,
+            179,
+            305,
+            180
+          ],
+          [
+            268,
+            181,
+            271,
+            183
+          ]
+        ]
+      }
+    },
+    {
+      "sample": {
+        "scene_id": "town01-01",
+        "group_id": "town01-route-01",
+        "split": "train",
+        "camera": "front_left",
+        "frame": 168324,
+        "input_manifest": "inputs/frames/town01-01/00168324.json",
+        "rgb": "inputs/rgb/town01-01/front_left/00168324.png",
+        "semantic": "labels/semantic_segmentation/town01-01/front_left/00168324.png",
+        "detection": "labels/visible/town01-01/front_left/00168324.json",
+        "instance": "labels/instance_segmentation/town01-01/front_left/00168324.png",
+        "verified_obstacle_actor_ids": [
+          3043
+        ],
+        "split_index": 2527
+      },
+      "selection_reasons": [
+        "near_16x16_box_area"
+      ],
+      "selected_bicycle_box": [
+        626,
+        205,
+        640,
+        233
+      ],
+      "selected_bicycle_visible_pixels": 139,
+      "selected_bicycle_diagnostic": "detected",
+      "wrong_class_overlaps": [],
+      "highest_matching_bicycle_score": 0.8683831095695496,
+      "evaluation_frame": {
+        "split": "train",
+        "group_id": "town01-route-01",
+        "predictions": [
+          {
+            "box": [
+              497.8117980957031,
+              183.45985412597656,
+              548.6539306640625,
+              215.6331024169922
+            ],
+            "label": 1,
+            "score": 0.9999617338180542
+          },
+          {
+            "box": [
+              537.645751953125,
+              161.78164672851562,
+              582.9833984375,
+              198.25906372070312
+            ],
+            "label": 5,
+            "score": 0.9999047517776489
+          },
+          {
+            "box": [
+              577.5802001953125,
+              162.57086181640625,
+              595.22314453125,
+              193.00445556640625
+            ],
+            "label": 6,
+            "score": 0.999868631362915
+          },
+          {
+            "box": [
+              410.5332946777344,
+              187.85293579101562,
+              453.7213439941406,
+              251.81179809570312
+            ],
+            "label": 4,
+            "score": 0.9988664388656616
+          },
+          {
+            "box": [
+              199.43081665039062,
+              169.46835327148438,
+              220.01644897460938,
+              238.8095703125
+            ],
+            "label": 2,
+            "score": 0.9958861470222473
+          },
+          {
+            "box": [
+              626.1256103515625,
+              202.65521240234375,
+              639.4552001953125,
+              232.41683959960938
+            ],
+            "label": 3,
+            "score": 0.8683831095695496
+          },
+          {
+            "box": [
+              632.44189453125,
+              202.28038024902344,
+              640.0,
+              234.71836853027344
+            ],
+            "label": 3,
+            "score": 0.7726560235023499
+          },
+          {
+            "box": [
+              189.89776611328125,
+              200.59410095214844,
+              208.93508911132812,
+              241.2007293701172
+            ],
+            "label": 8,
+            "score": 0.620290994644165
+          },
+          {
+            "box": [
+              548.7991333007812,
+              160.5220184326172,
+              598.0701293945312,
+              190.6961212158203
+            ],
+            "label": 6,
+            "score": 0.2806176245212555
+          },
+          {
+            "box": [
+              626.9166259765625,
+              193.7330780029297,
+              639.89306640625,
+              234.9588165283203
+            ],
+            "label": 4,
+            "score": 0.24901726841926575
+          },
+          {
+            "box": [
+              196.46714782714844,
+              198.68251037597656,
+              217.7421112060547,
+              235.5096893310547
+            ],
+            "label": 8,
+            "score": 0.14308573305606842
+          },
+          {
+            "box": [
+              202.7490234375,
+              203.154052734375,
+              220.08441162109375,
+              230.58193969726562
+            ],
+            "label": 8,
+            "score": 0.12875019013881683
+          },
+          {
+            "box": [
+              634.1559448242188,
+              200.58367919921875,
+              640.0,
+              238.2916259765625
+            ],
+            "label": 4,
+            "score": 0.07185955345630646
+          },
+          {
+            "box": [
+              533.9636840820312,
+              158.57008361816406,
+              541.0029907226562,
+              172.8987579345703
+            ],
+            "label": 7,
+            "score": 0.07025685161352158
+          },
+          {
+            "box": [
+              636.0367431640625,
+              208.7085418701172,
+              640.0,
+              236.2112274169922
+            ],
+            "label": 1,
+            "score": 0.05337680131196976
+          },
+          {
+            "box": [
+              622.3536376953125,
+              189.28524780273438,
+              640.0,
+              240.9749755859375
+            ],
+            "label": 3,
+            "score": 0.04676990956068039
+          },
+          {
+            "box": [
+              626.9937133789062,
+              195.04244995117188,
+              639.5895385742188,
+              234.60562133789062
+            ],
+            "label": 5,
+            "score": 0.044622957706451416
+          },
+          {
+            "box": [
+              191.76283264160156,
+              204.88490295410156,
+              202.1053924560547,
+              238.6766815185547
+            ],
+            "label": 8,
+            "score": 0.04378759488463402
+          },
+          {
+            "box": [
+              188.0692138671875,
+              193.88949584960938,
+              206.06243896484375,
+              234.8087158203125
+            ],
+            "label": 2,
+            "score": 0.0371905080974102
+          },
+          {
+            "box": [
+              624.7608642578125,
+              206.5292205810547,
+              638.2056884765625,
+              232.1385040283203
+            ],
+            "label": 1,
+            "score": 0.026749441400170326
+          },
+          {
+            "box": [
+              622.9674072265625,
+              193.43389892578125,
+              638.3092041015625,
+              241.47509765625
+            ],
+            "label": 2,
+            "score": 0.023807508870959282
+          },
+          {
+            "box": [
+              634.7378540039062,
+              187.84445190429688,
+              639.8522338867188,
+              240.44796752929688
+            ],
+            "label": 5,
+            "score": 0.020744996145367622
+          },
+          {
+            "box": [
+              624.9346313476562,
+              201.48915100097656,
+              640.0,
+              222.7743377685547
+            ],
+            "label": 5,
+            "score": 0.015597518533468246
+          },
+          {
+            "box": [
+              625.5028076171875,
+              202.3953857421875,
+              637.432373046875,
+              227.46060180664062
+            ],
+            "label": 4,
+            "score": 0.013855383731424809
+          },
+          {
+            "box": [
+              205.4348907470703,
+              224.6995086669922,
+              213.3783416748047,
+              237.83912658691406
+            ],
+            "label": 8,
+            "score": 0.013497496955096722
+          },
+          {
+            "box": [
+              575.953125,
+              161.6217041015625,
+              584.9151611328125,
+              191.93023681640625
+            ],
+            "label": 6,
+            "score": 0.01273267064243555
+          },
+          {
+            "box": [
+              200.04995727539062,
+              208.90892028808594,
+              215.83499145507812,
+              233.52818298339844
+            ],
+            "label": 8,
+            "score": 0.011766851879656315
+          }
+        ],
+        "targets": [
+          {
+            "box": [
+              626,
+              205,
+              640,
+              233
+            ],
+            "label": 3,
+            "visible_pixels": 139,
+            "truncated": true,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              411,
+              187,
+              455,
+              251
+            ],
+            "label": 4,
+            "visible_pixels": 1552,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              495,
+              184,
+              549,
+              216
+            ],
+            "label": 1,
+            "visible_pixels": 1313,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              536,
+              162,
+              582,
+              199
+            ],
+            "label": 5,
+            "visible_pixels": 1348,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              577,
+              163,
+              595,
+              192
+            ],
+            "label": 6,
+            "visible_pixels": 336,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              201,
+              171,
+              222,
+              234
+            ],
+            "label": 2,
+            "visible_pixels": 692,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              188,
+              199,
+              212,
+              239
+            ],
+            "label": 8,
+            "visible_pixels": 314,
+            "truncated": false,
+            "light_state_class": -1
+          }
+        ],
+        "ignore_boxes": [
+          [
+            535,
+            183,
+            538,
+            185
+          ]
+        ]
+      }
+    },
+    {
+      "sample": {
+        "scene_id": "town01-02",
+        "group_id": "town01-route-02",
+        "split": "train",
+        "camera": "front",
+        "frame": 169485,
+        "input_manifest": "inputs/frames/town01-02/00169485.json",
+        "rgb": "inputs/rgb/town01-02/front/00169485.png",
+        "semantic": "labels/semantic_segmentation/town01-02/front/00169485.png",
+        "detection": "labels/visible/town01-02/front/00169485.json",
+        "instance": "labels/instance_segmentation/town01-02/front/00169485.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 4736
+      },
+      "selection_reasons": [
+        "max_visible_bicycle_support"
+      ],
+      "selected_bicycle_box": [
+        295,
+        185,
+        341,
+        282
+      ],
+      "selected_bicycle_visible_pixels": 1709,
+      "selected_bicycle_diagnostic": "detected",
+      "wrong_class_overlaps": [],
+      "highest_matching_bicycle_score": 0.9997921586036682,
+      "evaluation_frame": {
+        "split": "train",
+        "group_id": "town01-route-02",
+        "predictions": [
+          {
+            "box": [
+              369.3326721191406,
+              148.74887084960938,
+              375.2518615722656,
+              173.75653076171875
+            ],
+            "label": 7,
+            "score": 0.9998739957809448
+          },
+          {
+            "box": [
+              295.7841491699219,
+              185.98387145996094,
+              337.2933044433594,
+              284.8515625
+            ],
+            "label": 3,
+            "score": 0.9997921586036682
+          }
+        ],
+        "targets": [
+          {
+            "box": [
+              295,
+              185,
+              341,
+              282
+            ],
+            "label": 3,
+            "visible_pixels": 1709,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              369,
+              149,
+              375,
+              174
+            ],
+            "label": 7,
+            "visible_pixels": 120,
+            "truncated": false,
+            "light_state_class": 1
+          }
+        ],
+        "ignore_boxes": [
+          [
+            276,
+            171,
+            277,
+            177
+          ],
+          [
+            335,
+            176,
+            339,
+            180
+          ],
+          [
+            323,
+            179,
+            324,
+            180
+          ],
+          [
+            322,
+            179,
+            323,
+            180
+          ],
+          [
+            330,
+            180,
+            333,
+            184
+          ],
+          [
+            173,
+            179,
+            179,
+            191
+          ],
+          [
+            302,
+            180,
+            305,
+            183
+          ],
+          [
+            305,
+            180,
+            307,
+            183
+          ]
+        ]
+      }
+    },
+    {
+      "sample": {
+        "scene_id": "town01-02",
+        "group_id": "town01-route-02",
+        "split": "train",
+        "camera": "front",
+        "frame": 169153,
+        "input_manifest": "inputs/frames/town01-02/00169153.json",
+        "rgb": "inputs/rgb/town01-02/front/00169153.png",
+        "semantic": "labels/semantic_segmentation/town01-02/front/00169153.png",
+        "detection": "labels/visible/town01-02/front/00169153.json",
+        "instance": "labels/instance_segmentation/town01-02/front/00169153.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 4072
+      },
+      "selection_reasons": [
+        "near_16x16_box_area"
+      ],
+      "selected_bicycle_box": [
+        305,
+        183,
+        334,
+        244
+      ],
+      "selected_bicycle_visible_pixels": 678,
+      "selected_bicycle_diagnostic": "detected",
+      "wrong_class_overlaps": [],
+      "highest_matching_bicycle_score": 0.9997404217720032,
+      "evaluation_frame": {
+        "split": "train",
+        "group_id": "town01-route-02",
+        "predictions": [
+          {
+            "box": [
+              171.58413696289062,
+              124.52627563476562,
+              286.03924560546875,
+              218.17575073242188
+            ],
+            "label": 6,
+            "score": 0.9998397827148438
+          },
+          {
+            "box": [
+              305.2046203613281,
+              183.0897216796875,
+              333.7288513183594,
+              244.08602905273438
+            ],
+            "label": 3,
+            "score": 0.9997404217720032
+          },
+          {
+            "box": [
+              342.5480041503906,
+              166.66050720214844,
+              345.2556457519531,
+              177.0466766357422
+            ],
+            "label": 7,
+            "score": 0.9461666941642761
+          },
+          {
+            "box": [
+              357.3561096191406,
+              169.34494018554688,
+              372.6502990722656,
+              183.28482055664062
+            ],
+            "label": 5,
+            "score": 0.09358851611614227
+          },
+          {
+            "box": [
+              357.3158264160156,
+              168.84033203125,
+              370.8054504394531,
+              184.0394287109375
+            ],
+            "label": 8,
+            "score": 0.09122416377067566
+          },
+          {
+            "box": [
+              358.1289367675781,
+              167.9935760498047,
+              370.8168640136719,
+              184.89878845214844
+            ],
+            "label": 2,
+            "score": 0.03792891651391983
+          }
+        ],
+        "targets": [
+          {
+            "box": [
+              305,
+              183,
+              334,
+              244
+            ],
+            "label": 3,
+            "visible_pixels": 678,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              170,
+              124,
+              286,
+              219
+            ],
+            "label": 6,
+            "visible_pixels": 8505,
+            "truncated": false,
+            "light_state_class": -1
+          }
+        ],
+        "ignore_boxes": [
+          [
+            288,
+            173,
+            290,
+            178
+          ],
+          [
+            343,
+            167,
+            345,
+            176
+          ],
+          [
+            331,
+            177,
+            334,
+            180
+          ],
+          [
+            323,
+            179,
+            324,
+            180
+          ],
+          [
+            359,
+            170,
+            370,
+            181
+          ],
+          [
+            322,
+            179,
+            323,
+            180
+          ],
+          [
+            329,
+            180,
+            332,
+            183
+          ],
+          [
+            304,
+            180,
+            306,
+            182
+          ],
+          [
+            306,
+            180,
+            309,
+            182
+          ]
+        ]
+      }
+    },
+    {
+      "sample": {
+        "scene_id": "town01-03",
+        "group_id": "town01-route-03",
+        "split": "train",
+        "camera": "front",
+        "frame": 169588,
+        "input_manifest": "inputs/frames/town01-03/00169588.json",
+        "rgb": "inputs/rgb/town01-03/front/00169588.png",
+        "semantic": "labels/semantic_segmentation/town01-03/front/00169588.png",
+        "detection": "labels/visible/town01-03/front/00169588.json",
+        "instance": "labels/instance_segmentation/town01-03/front/00169588.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 4840
+      },
+      "selection_reasons": [
+        "max_visible_bicycle_support"
+      ],
+      "selected_bicycle_box": [
+        296,
+        184,
+        339,
+        276
+      ],
+      "selected_bicycle_visible_pixels": 1552,
+      "selected_bicycle_diagnostic": "detected",
+      "wrong_class_overlaps": [],
+      "highest_matching_bicycle_score": 0.9997267127037048,
+      "evaluation_frame": {
+        "split": "train",
+        "group_id": "town01-route-03",
+        "predictions": [
+          {
+            "box": [
+              272.3304748535156,
+              166.76902770996094,
+              298.1858825683594,
+              192.88136291503906
+            ],
+            "label": 5,
+            "score": 0.9999198913574219
+          },
+          {
+            "box": [
+              462.9918212890625,
+              193.17832946777344,
+              480.05035400390625,
+              239.30970764160156
+            ],
+            "label": 2,
+            "score": 0.9998716115951538
+          },
+          {
+            "box": [
+              248.9262237548828,
+              182.09683227539062,
+              280.0230407714844,
+              203.11898803710938
+            ],
+            "label": 1,
+            "score": 0.9997779726982117
+          },
+          {
+            "box": [
+              295.42620849609375,
+              184.43292236328125,
+              338.31134033203125,
+              281.1563720703125
+            ],
+            "label": 3,
+            "score": 0.9997267127037048
+          },
+          {
+            "box": [
+              295.417236328125,
+              167.9595947265625,
+              305.916748046875,
+              187.7969970703125
+            ],
+            "label": 6,
+            "score": 0.9994219541549683
+          },
+          {
+            "box": [
+              206.56930541992188,
+              184.8241424560547,
+              228.69830322265625,
+              222.24790954589844
+            ],
+            "label": 4,
+            "score": 0.9989025592803955
+          },
+          {
+            "box": [
+              281.7389831542969,
+              163.6333465576172,
+              307.3180847167969,
+              188.5371551513672
+            ],
+            "label": 6,
+            "score": 0.01823090761899948
+          }
+        ],
+        "targets": [
+          {
+            "box": [
+              296,
+              184,
+              339,
+              276
+            ],
+            "label": 3,
+            "visible_pixels": 1552,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              205,
+              184,
+              230,
+              223
+            ],
+            "label": 4,
+            "visible_pixels": 519,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              249,
+              182,
+              279,
+              203
+            ],
+            "label": 1,
+            "visible_pixels": 490,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              272,
+              167,
+              299,
+              193
+            ],
+            "label": 5,
+            "visible_pixels": 539,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              295,
+              168,
+              306,
+              188
+            ],
+            "label": 6,
+            "visible_pixels": 149,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              463,
+              193,
+              481,
+              238
+            ],
+            "label": 2,
+            "visible_pixels": 425,
+            "truncated": false,
+            "light_state_class": -1
+          }
+        ],
+        "ignore_boxes": [
+          [
+            319,
+            177,
+            320,
+            179
+          ],
+          [
+            322,
+            178,
+            324,
+            180
+          ]
+        ]
+      }
+    },
+    {
+      "sample": {
+        "scene_id": "town01-03",
+        "group_id": "town01-route-03",
+        "split": "train",
+        "camera": "front",
+        "frame": 169628,
+        "input_manifest": "inputs/frames/town01-03/00169628.json",
+        "rgb": "inputs/rgb/town01-03/front/00169628.png",
+        "semantic": "labels/semantic_segmentation/town01-03/front/00169628.png",
+        "detection": "labels/visible/town01-03/front/00169628.json",
+        "instance": "labels/instance_segmentation/town01-03/front/00169628.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 4920
+      },
+      "selection_reasons": [
+        "near_16x16_box_area"
+      ],
+      "selected_bicycle_box": [
+        300,
+        184,
+        331,
+        248
+      ],
+      "selected_bicycle_visible_pixels": 747,
+      "selected_bicycle_diagnostic": "detected",
+      "wrong_class_overlaps": [],
+      "highest_matching_bicycle_score": 0.9997768998146057,
+      "evaluation_frame": {
+        "split": "train",
+        "group_id": "town01-route-03",
+        "predictions": [
+          {
+            "box": [
+              220.33169555664062,
+              183.364501953125,
+              267.3976745605469,
+              213.19036865234375
+            ],
+            "label": 1,
+            "score": 0.9998787641525269
+          },
+          {
+            "box": [
+              300.26739501953125,
+              182.9073944091797,
+              330.3583984375,
+              247.42323303222656
+            ],
+            "label": 3,
+            "score": 0.9997768998146057
+          },
+          {
+            "box": [
+              261.60198974609375,
+              165.38938903808594,
+              295.1971435546875,
+              195.15440368652344
+            ],
+            "label": 5,
+            "score": 0.9997311234474182
+          },
+          {
+            "box": [
+              470.2906188964844,
+              196.6910400390625,
+              487.3015441894531,
+              242.81732177734375
+            ],
+            "label": 2,
+            "score": 0.9993821382522583
+          },
+          {
+            "box": [
+              291.13177490234375,
+              166.84762573242188,
+              304.30792236328125,
+              188.81732177734375
+            ],
+            "label": 6,
+            "score": 0.9993234872817993
+          },
+          {
+            "box": [
+              78.51559448242188,
+              188.41258239746094,
+              150.35165405273438,
+              274.5807800292969
+            ],
+            "label": 4,
+            "score": 0.9990277290344238
+          },
+          {
+            "box": [
+              278.2469787597656,
+              164.2537841796875,
+              302.6570739746094,
+              189.802001953125
+            ],
+            "label": 6,
+            "score": 0.014737123623490334
+          }
+        ],
+        "targets": [
+          {
+            "box": [
+              300,
+              184,
+              331,
+              248
+            ],
+            "label": 3,
+            "visible_pixels": 747,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              78,
+              189,
+              151,
+              274
+            ],
+            "label": 4,
+            "visible_pixels": 3343,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              220,
+              183,
+              266,
+              213
+            ],
+            "label": 1,
+            "visible_pixels": 1051,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              262,
+              165,
+              295,
+              196
+            ],
+            "label": 5,
+            "visible_pixels": 842,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              291,
+              167,
+              305,
+              190
+            ],
+            "label": 6,
+            "visible_pixels": 223,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              469,
+              196,
+              488,
+              243
+            ],
+            "label": 2,
+            "visible_pixels": 485,
+            "truncated": false,
+            "light_state_class": -1
+          }
+        ],
+        "ignore_boxes": [
+          [
+            321,
+            176,
+            322,
+            179
+          ],
+          [
+            304,
+            178,
+            305,
+            180
+          ],
+          [
+            322,
+            178,
+            324,
+            180
+          ]
+        ]
+      }
+    },
+    {
+      "sample": {
+        "scene_id": "town03-00",
+        "group_id": "town03-route-00",
+        "split": "train",
+        "camera": "front",
+        "frame": 167836,
+        "input_manifest": "inputs/frames/town03-00/00167836.json",
+        "rgb": "inputs/rgb/town03-00/front/00167836.png",
+        "semantic": "labels/semantic_segmentation/town03-00/front/00167836.png",
+        "detection": "labels/visible/town03-00/front/00167836.json",
+        "instance": "labels/instance_segmentation/town03-00/front/00167836.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 1672
+      },
+      "selection_reasons": [
+        "max_visible_bicycle_support"
+      ],
+      "selected_bicycle_box": [
+        503,
+        192,
+        640,
+        360
+      ],
+      "selected_bicycle_visible_pixels": 12847,
+      "selected_bicycle_diagnostic": "detected",
+      "wrong_class_overlaps": [],
+      "highest_matching_bicycle_score": 0.999584972858429,
+      "evaluation_frame": {
+        "split": "train",
+        "group_id": "town03-route-00",
+        "predictions": [
+          {
+            "box": [
+              392.57281494140625,
+              163.5605926513672,
+              423.72637939453125,
+              187.0093536376953
+            ],
+            "label": 6,
+            "score": 0.9999780654907227
+          },
+          {
+            "box": [
+              489.5890808105469,
+              165.1731414794922,
+              547.9317016601562,
+              193.11573791503906
+            ],
+            "label": 5,
+            "score": 0.9999711513519287
+          },
+          {
+            "box": [
+              498.4385070800781,
+              188.64926147460938,
+              640.0,
+              360.0
+            ],
+            "label": 3,
+            "score": 0.999584972858429
+          },
+          {
+            "box": [
+              492.6396179199219,
+              200.75599670410156,
+              512.595947265625,
+              247.4256134033203
+            ],
+            "label": 2,
+            "score": 0.9993879795074463
+          },
+          {
+            "box": [
+              422.0097351074219,
+              179.5900421142578,
+              440.3030090332031,
+              195.3036346435547
+            ],
+            "label": 1,
+            "score": 0.9987154006958008
+          },
+          {
+            "box": [
+              415.2192687988281,
+              182.0197296142578,
+              426.4287414550781,
+              202.8594207763672
+            ],
+            "label": 4,
+            "score": 0.998658299446106
+          },
+          {
+            "box": [
+              626.2828369140625,
+              235.46337890625,
+              639.3162841796875,
+              315.78857421875
+            ],
+            "label": 2,
+            "score": 0.04955686628818512
+          },
+          {
+            "box": [
+              527.0723266601562,
+              172.31472778320312,
+              635.3967895507812,
+              360.0
+            ],
+            "label": 4,
+            "score": 0.022331470623612404
+          }
+        ],
+        "targets": [
+          {
+            "box": [
+              503,
+              192,
+              640,
+              360
+            ],
+            "label": 3,
+            "visible_pixels": 12847,
+            "truncated": true,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              415,
+              182,
+              426,
+              203
+            ],
+            "label": 4,
+            "visible_pixels": 124,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              422,
+              180,
+              440,
+              195
+            ],
+            "label": 1,
+            "visible_pixels": 173,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              491,
+              165,
+              547,
+              194
+            ],
+            "label": 5,
+            "visible_pixels": 916,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              392,
+              163,
+              424,
+              187
+            ],
+            "label": 6,
+            "visible_pixels": 638,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              491,
+              200,
+              512,
+              247
+            ],
+            "label": 2,
+            "visible_pixels": 423,
+            "truncated": false,
+            "light_state_class": -1
+          }
+        ],
+        "ignore_boxes": []
+      }
+    },
+    {
+      "sample": {
+        "scene_id": "town03-00",
+        "group_id": "town03-route-00",
+        "split": "train",
+        "camera": "front_right",
+        "frame": 167636,
+        "input_manifest": "inputs/frames/town03-00/00167636.json",
+        "rgb": "inputs/rgb/town03-00/front_right/00167636.png",
+        "semantic": "labels/semantic_segmentation/town03-00/front_right/00167636.png",
+        "detection": "labels/visible/town03-00/front_right/00167636.json",
+        "instance": "labels/instance_segmentation/town03-00/front_right/00167636.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 1273
+      },
+      "selection_reasons": [
+        "near_16x16_box_area"
+      ],
+      "selected_bicycle_box": [
+        0,
+        216,
+        7,
+        224
+      ],
+      "selected_bicycle_visible_pixels": 37,
+      "selected_bicycle_diagnostic": "detected",
+      "wrong_class_overlaps": [],
+      "highest_matching_bicycle_score": 0.99842369556427,
+      "evaluation_frame": {
+        "split": "train",
+        "group_id": "town03-route-00",
+        "predictions": [
+          {
+            "box": [
+              70.01885986328125,
+              181.5012969970703,
+              106.87825012207031,
+              200.8582305908203
+            ],
+            "label": 1,
+            "score": 0.9999066591262817
+          },
+          {
+            "box": [
+              145.6803436279297,
+              197.7757110595703,
+              159.8590545654297,
+              238.37062072753906
+            ],
+            "label": 2,
+            "score": 0.9995984435081482
+          },
+          {
+            "box": [
+              102.56979370117188,
+              164.83233642578125,
+              163.70034790039062,
+              190.52291870117188
+            ],
+            "label": 6,
+            "score": 0.9994439482688904
+          },
+          {
+            "box": [
+              0.0,
+              215.5166015625,
+              7.308392524719238,
+              222.96636962890625
+            ],
+            "label": 3,
+            "score": 0.99842369556427
+          },
+          {
+            "box": [
+              180.68527221679688,
+              170.02816772460938,
+              186.3968505859375,
+              191.85028076171875
+            ],
+            "label": 5,
+            "score": 0.9963712692260742
+          },
+          {
+            "box": [
+              0.4846477508544922,
+              217.7487030029297,
+              8.610472679138184,
+              226.63951110839844
+            ],
+            "label": 3,
+            "score": 0.4144180715084076
+          },
+          {
+            "box": [
+              165.90945434570312,
+              171.9008026123047,
+              188.7005615234375,
+              187.27366638183594
+            ],
+            "label": 5,
+            "score": 0.31442204117774963
+          },
+          {
+            "box": [
+              106.53015899658203,
+              175.8469696044922,
+              149.83551025390625,
+              191.34349060058594
+            ],
+            "label": 6,
+            "score": 0.09316416084766388
+          },
+          {
+            "box": [
+              176.63754272460938,
+              169.62692260742188,
+              186.05694580078125,
+              188.491943359375
+            ],
+            "label": 5,
+            "score": 0.09220027923583984
+          },
+          {
+            "box": [
+              136.22610473632812,
+              165.3944091796875,
+              167.21487426757812,
+              190.41506958007812
+            ],
+            "label": 6,
+            "score": 0.08966991305351257
+          },
+          {
+            "box": [
+              0.7458536624908447,
+              211.841796875,
+              6.629068374633789,
+              229.42034912109375
+            ],
+            "label": 3,
+            "score": 0.07588449120521545
+          },
+          {
+            "box": [
+              159.25987243652344,
+              163.56353759765625,
+              168.9591827392578,
+              176.91082763671875
+            ],
+            "label": 1,
+            "score": 0.02041168324649334
+          },
+          {
+            "box": [
+              182.44744873046875,
+              168.58218383789062,
+              186.671630859375,
+              185.65948486328125
+            ],
+            "label": 5,
+            "score": 0.010585006326436996
+          }
+        ],
+        "targets": [
+          {
+            "box": [
+              0,
+              216,
+              7,
+              224
+            ],
+            "label": 3,
+            "visible_pixels": 37,
+            "truncated": true,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              69,
+              182,
+              106,
+              201
+            ],
+            "label": 1,
+            "visible_pixels": 522,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              181,
+              170,
+              186,
+              192
+            ],
+            "label": 5,
+            "visible_pixels": 77,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              102,
+              165,
+              168,
+              190
+            ],
+            "label": 6,
+            "visible_pixels": 1184,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              145,
+              198,
+              159,
+              238
+            ],
+            "label": 2,
+            "visible_pixels": 320,
+            "truncated": false,
+            "light_state_class": -1
+          }
+        ],
+        "ignore_boxes": []
+      }
+    },
+    {
+      "sample": {
+        "scene_id": "town03-01",
+        "group_id": "town03-route-01",
+        "split": "train",
+        "camera": "left",
+        "frame": 170330,
+        "input_manifest": "inputs/frames/town03-01/00170330.json",
+        "rgb": "inputs/rgb/town03-01/left/00170330.png",
+        "semantic": "labels/semantic_segmentation/town03-01/left/00170330.png",
+        "detection": "labels/visible/town03-01/left/00170330.json",
+        "instance": "labels/instance_segmentation/town03-01/left/00170330.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 6134
+      },
+      "selection_reasons": [
+        "max_visible_bicycle_support"
+      ],
+      "selected_bicycle_box": [
+        504,
+        188,
+        640,
+        349
+      ],
+      "selected_bicycle_visible_pixels": 7315,
+      "selected_bicycle_diagnostic": "detected",
+      "wrong_class_overlaps": [
+        {
+          "box": [
+            501.7987365722656,
+            185.84503173828125,
+            640.0,
+            352.94281005859375
+          ],
+          "label": 4,
+          "score": 0.5052345991134644
+        }
+      ],
+      "highest_matching_bicycle_score": 0.9805106520652771,
+      "evaluation_frame": {
+        "split": "train",
+        "group_id": "town03-route-01",
+        "predictions": [
+          {
+            "box": [
+              500.6628723144531,
+              185.19813537597656,
+              564.5206298828125,
+              229.2573699951172
+            ],
+            "label": 4,
+            "score": 0.9895707368850708
+          },
+          {
+            "box": [
+              500.76239013671875,
+              184.48179626464844,
+              633.5565795898438,
+              343.39227294921875
+            ],
+            "label": 3,
+            "score": 0.9805106520652771
+          },
+          {
+            "box": [
+              501.7987365722656,
+              185.84503173828125,
+              640.0,
+              352.94281005859375
+            ],
+            "label": 4,
+            "score": 0.5052345991134644
+          },
+          {
+            "box": [
+              500.7201232910156,
+              180.6695556640625,
+              585.4922485351562,
+              256.84625244140625
+            ],
+            "label": 4,
+            "score": 0.046462710946798325
+          },
+          {
+            "box": [
+              504.1240234375,
+              206.69839477539062,
+              632.8590087890625,
+              353.9230041503906
+            ],
+            "label": 1,
+            "score": 0.04499037191271782
+          },
+          {
+            "box": [
+              507.17059326171875,
+              212.69528198242188,
+              640.0,
+              353.4445495605469
+            ],
+            "label": 5,
+            "score": 0.025483865290880203
+          },
+          {
+            "box": [
+              594.1784057617188,
+              215.0292510986328,
+              636.5335083007812,
+              327.550048828125
+            ],
+            "label": 3,
+            "score": 0.015621313825249672
+          }
+        ],
+        "targets": [
+          {
+            "box": [
+              504,
+              188,
+              640,
+              349
+            ],
+            "label": 3,
+            "visible_pixels": 7315,
+            "truncated": true,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              499,
+              185,
+              569,
+              230
+            ],
+            "label": 4,
+            "visible_pixels": 1584,
+            "truncated": false,
+            "light_state_class": -1
+          }
+        ],
+        "ignore_boxes": [
+          [
+            109,
+            169,
+            114,
+            171
+          ]
+        ]
+      }
+    },
+    {
+      "sample": {
+        "scene_id": "town03-01",
+        "group_id": "town03-route-01",
+        "split": "train",
+        "camera": "rear_left",
+        "frame": 170454,
+        "input_manifest": "inputs/frames/town03-01/00170454.json",
+        "rgb": "inputs/rgb/town03-01/rear_left/00170454.png",
+        "semantic": "labels/semantic_segmentation/town03-01/rear_left/00170454.png",
+        "detection": "labels/visible/town03-01/rear_left/00170454.json",
+        "instance": "labels/instance_segmentation/town03-01/rear_left/00170454.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 6381
+      },
+      "selection_reasons": [
+        "near_16x16_box_area"
+      ],
+      "selected_bicycle_box": [
+        244,
+        181,
+        256,
+        202
+      ],
+      "selected_bicycle_visible_pixels": 118,
+      "selected_bicycle_diagnostic": "detected",
+      "wrong_class_overlaps": [],
+      "highest_matching_bicycle_score": 0.9992831349372864,
+      "evaluation_frame": {
+        "split": "train",
+        "group_id": "town03-route-01",
+        "predictions": [
+          {
+            "box": [
+              276.2514953613281,
+              182.57421875,
+              333.2516784667969,
+              208.43283081054688
+            ],
+            "label": 1,
+            "score": 0.9999626874923706
+          },
+          {
+            "box": [
+              244.34292602539062,
+              181.32159423828125,
+              255.47946166992188,
+              202.03924560546875
+            ],
+            "label": 3,
+            "score": 0.9992831349372864
+          },
+          {
+            "box": [
+              260.32672119140625,
+              182.31369018554688,
+              276.5355224609375,
+              197.063720703125
+            ],
+            "label": 4,
+            "score": 0.9982854723930359
+          },
+          {
+            "box": [
+              262.6271057128906,
+              183.5430145263672,
+              271.2964172363281,
+              196.05335998535156
+            ],
+            "label": 4,
+            "score": 0.10370118916034698
+          },
+          {
+            "box": [
+              246.91177368164062,
+              180.7073974609375,
+              279.8736877441406,
+              199.28274536132812
+            ],
+            "label": 4,
+            "score": 0.07433474808931351
+          },
+          {
+            "box": [
+              253.82069396972656,
+              181.70509338378906,
+              276.2503662109375,
+              198.2588653564453
+            ],
+            "label": 5,
+            "score": 0.010370681062340736
+          }
+        ],
+        "targets": [
+          {
+            "box": [
+              244,
+              181,
+              256,
+              202
+            ],
+            "label": 3,
+            "visible_pixels": 118,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              261,
+              181,
+              277,
+              198
+            ],
+            "label": 4,
+            "visible_pixels": 158,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              275,
+              183,
+              332,
+              208
+            ],
+            "label": 1,
+            "visible_pixels": 1040,
+            "truncated": false,
+            "light_state_class": -1
+          }
+        ],
+        "ignore_boxes": [
+          [
+            17,
+            175,
+            20,
+            180
+          ]
+        ]
+      }
+    },
+    {
+      "sample": {
+        "scene_id": "town03-02",
+        "group_id": "town03-route-02",
+        "split": "train",
+        "camera": "front_right",
+        "frame": 245026,
+        "input_manifest": "inputs/frames/town03-02/00245026.json",
+        "rgb": "inputs/rgb/town03-02/front_right/00245026.png",
+        "semantic": "labels/semantic_segmentation/town03-02/front_right/00245026.png",
+        "detection": "labels/visible/town03-02/front_right/00245026.json",
+        "instance": "labels/instance_segmentation/town03-02/front_right/00245026.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 7569
+      },
+      "selection_reasons": [
+        "max_visible_bicycle_support"
+      ],
+      "selected_bicycle_box": [
+        3,
+        184,
+        59,
+        272
+      ],
+      "selected_bicycle_visible_pixels": 2002,
+      "selected_bicycle_diagnostic": "detected",
+      "wrong_class_overlaps": [],
+      "highest_matching_bicycle_score": 0.9999057054519653,
+      "evaluation_frame": {
+        "split": "train",
+        "group_id": "town03-route-02",
+        "predictions": [
+          {
+            "box": [
+              1.5974311828613281,
+              185.82217407226562,
+              60.45805358886719,
+              275.56829833984375
+            ],
+            "label": 3,
+            "score": 0.9999057054519653
+          },
+          {
+            "box": [
+              28.701438903808594,
+              153.8470001220703,
+              153.28240966796875,
+              197.9431610107422
+            ],
+            "label": 6,
+            "score": 0.9990703463554382
+          },
+          {
+            "box": [
+              105.69898223876953,
+              148.1282958984375,
+              148.73538208007812,
+              189.85208129882812
+            ],
+            "label": 6,
+            "score": 0.06819513440132141
+          },
+          {
+            "box": [
+              3.1003074645996094,
+              160.4091033935547,
+              118.96522521972656,
+              283.8099365234375
+            ],
+            "label": 3,
+            "score": 0.029915450140833855
+          },
+          {
+            "box": [
+              4.817169189453125,
+              146.822021484375,
+              152.36512756347656,
+              275.5184326171875
+            ],
+            "label": 6,
+            "score": 0.02176716737449169
+          },
+          {
+            "box": [
+              9.4425048828125,
+              156.60745239257812,
+              149.07806396484375,
+              275.0930480957031
+            ],
+            "label": 1,
+            "score": 0.014185267500579357
+          },
+          {
+            "box": [
+              21.23704719543457,
+              183.65469360351562,
+              37.084190368652344,
+              195.1678466796875
+            ],
+            "label": 1,
+            "score": 0.011600763536989689
+          }
+        ],
+        "targets": [
+          {
+            "box": [
+              3,
+              184,
+              59,
+              272
+            ],
+            "label": 3,
+            "visible_pixels": 2002,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              32,
+              152,
+              148,
+              197
+            ],
+            "label": 6,
+            "visible_pixels": 1779,
+            "truncated": false,
+            "light_state_class": -1
+          }
+        ],
+        "ignore_boxes": []
+      }
+    },
+    {
+      "sample": {
+        "scene_id": "town03-02",
+        "group_id": "town03-route-02",
+        "split": "train",
+        "camera": "front_right",
+        "frame": 244994,
+        "input_manifest": "inputs/frames/town03-02/00244994.json",
+        "rgb": "inputs/rgb/town03-02/front_right/00244994.png",
+        "semantic": "labels/semantic_segmentation/town03-02/front_right/00244994.png",
+        "detection": "labels/visible/town03-02/front_right/00244994.json",
+        "instance": "labels/instance_segmentation/town03-02/front_right/00244994.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 7505
+      },
+      "selection_reasons": [
+        "near_16x16_box_area"
+      ],
+      "selected_bicycle_box": [
+        0,
+        209,
+        12,
+        218
+      ],
+      "selected_bicycle_visible_pixels": 66,
+      "selected_bicycle_diagnostic": "detected",
+      "wrong_class_overlaps": [],
+      "highest_matching_bicycle_score": 0.990921139717102,
+      "evaluation_frame": {
+        "split": "train",
+        "group_id": "town03-route-02",
+        "predictions": [
+          {
+            "box": [
+              26.075881958007812,
+              154.80401611328125,
+              136.95565795898438,
+              196.28680419921875
+            ],
+            "label": 6,
+            "score": 0.9987755417823792
+          },
+          {
+            "box": [
+              0.9339532852172852,
+              209.10581970214844,
+              11.47680950164795,
+              218.9895477294922
+            ],
+            "label": 3,
+            "score": 0.990921139717102
+          },
+          {
+            "box": [
+              494.7518310546875,
+              159.64987182617188,
+              556.78955078125,
+              294.03143310546875
+            ],
+            "label": 2,
+            "score": 0.986358106136322
+          },
+          {
+            "box": [
+              0.7586126327514648,
+              209.56039428710938,
+              12.113797187805176,
+              226.670654296875
+            ],
+            "label": 3,
+            "score": 0.48528215289115906
+          },
+          {
+            "box": [
+              0.9034786224365234,
+              214.98715209960938,
+              10.58580493927002,
+              222.142333984375
+            ],
+            "label": 3,
+            "score": 0.031023910269141197
+          },
+          {
+            "box": [
+              0.09892106056213379,
+              208.88807678222656,
+              6.6332550048828125,
+              219.0012969970703
+            ],
+            "label": 3,
+            "score": 0.02543194778263569
+          },
+          {
+            "box": [
+              320.2265930175781,
+              47.35435485839844,
+              593.893310546875,
+              319.92230224609375
+            ],
+            "label": 6,
+            "score": 0.023642245680093765
+          },
+          {
+            "box": [
+              1.061211109161377,
+              211.0146942138672,
+              8.319887161254883,
+              220.26609802246094
+            ],
+            "label": 7,
+            "score": 0.01097723376005888
+          }
+        ],
+        "targets": [
+          {
+            "box": [
+              0,
+              209,
+              12,
+              218
+            ],
+            "label": 3,
+            "visible_pixels": 66,
+            "truncated": true,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              30,
+              154,
+              136,
+              196
+            ],
+            "label": 6,
+            "visible_pixels": 1567,
+            "truncated": false,
+            "light_state_class": -1
+          }
+        ],
+        "ignore_boxes": [
+          [
+            490,
+            159,
+            555,
+            294
+          ]
+        ]
+      }
+    },
+    {
+      "sample": {
+        "scene_id": "town03-03",
+        "group_id": "town03-route-03",
+        "split": "train",
+        "camera": "front",
+        "frame": 245528,
+        "input_manifest": "inputs/frames/town03-03/00245528.json",
+        "rgb": "inputs/rgb/town03-03/front/00245528.png",
+        "semantic": "labels/semantic_segmentation/town03-03/front/00245528.png",
+        "detection": "labels/visible/town03-03/front/00245528.json",
+        "instance": "labels/instance_segmentation/town03-03/front/00245528.png",
+        "verified_obstacle_actor_ids": [
+          3879
+        ],
+        "split_index": 8440
+      },
+      "selection_reasons": [
+        "max_visible_bicycle_support"
+      ],
+      "selected_bicycle_box": [
+        295,
+        184,
+        338,
+        276
+      ],
+      "selected_bicycle_visible_pixels": 1550,
+      "selected_bicycle_diagnostic": "detected",
+      "wrong_class_overlaps": [],
+      "highest_matching_bicycle_score": 0.9997742772102356,
+      "evaluation_frame": {
+        "split": "train",
+        "group_id": "town03-route-03",
+        "predictions": [
+          {
+            "box": [
+              41.9061279296875,
+              182.5706329345703,
+              84.14801025390625,
+              221.64195251464844
+            ],
+            "label": 4,
+            "score": 0.9999629259109497
+          },
+          {
+            "box": [
+              224.58534240722656,
+              163.044677734375,
+              257.708984375,
+              188.263671875
+            ],
+            "label": 5,
+            "score": 0.9999325275421143
+          },
+          {
+            "box": [
+              142.38153076171875,
+              179.2053985595703,
+              198.85906982421875,
+              200.70396423339844
+            ],
+            "label": 1,
+            "score": 0.9998059868812561
+          },
+          {
+            "box": [
+              294.8062438964844,
+              184.4463348388672,
+              337.4253845214844,
+              275.8233947753906
+            ],
+            "label": 3,
+            "score": 0.9997742772102356
+          },
+          {
+            "box": [
+              515.7236328125,
+              169.45474243164062,
+              542.0899658203125,
+              236.71881103515625
+            ],
+            "label": 2,
+            "score": 0.9995169639587402
+          },
+          {
+            "box": [
+              256.8388366699219,
+              162.98016357421875,
+              280.3349304199219,
+              183.01812744140625
+            ],
+            "label": 6,
+            "score": 0.99907386302948
+          },
+          {
+            "box": [
+              518.0404052734375,
+              201.08045959472656,
+              536.462158203125,
+              226.92518615722656
+            ],
+            "label": 8,
+            "score": 0.9704558849334717
+          },
+          {
+            "box": [
+              515.231689453125,
+              199.5847930908203,
+              529.5064697265625,
+              230.5031280517578
+            ],
+            "label": 8,
+            "score": 0.17185787856578827
+          },
+          {
+            "box": [
+              236.30850219726562,
+              160.07846069335938,
+              259.917236328125,
+              186.36727905273438
+            ],
+            "label": 6,
+            "score": 0.012092065066099167
+          }
+        ],
+        "targets": [
+          {
+            "box": [
+              295,
+              184,
+              338,
+              276
+            ],
+            "label": 3,
+            "visible_pixels": 1550,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              42,
+              183,
+              85,
+              222
+            ],
+            "label": 4,
+            "visible_pixels": 964,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              141,
+              180,
+              197,
+              201
+            ],
+            "label": 1,
+            "visible_pixels": 835,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              224,
+              163,
+              257,
+              188
+            ],
+            "label": 5,
+            "visible_pixels": 657,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              257,
+              163,
+              280,
+              183
+            ],
+            "label": 6,
+            "visible_pixels": 394,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              516,
+              170,
+              542,
+              237
+            ],
+            "label": 2,
+            "visible_pixels": 844,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              517,
+              195,
+              536,
+              229
+            ],
+            "label": 8,
+            "visible_pixels": 283,
+            "truncated": false,
+            "light_state_class": -1
+          }
+        ],
+        "ignore_boxes": [
+          [
+            2,
+            168,
+            8,
+            179
+          ]
+        ]
+      }
+    },
+    {
+      "sample": {
+        "scene_id": "town03-03",
+        "group_id": "town03-route-03",
+        "split": "train",
+        "camera": "front",
+        "frame": 245852,
+        "input_manifest": "inputs/frames/town03-03/00245852.json",
+        "rgb": "inputs/rgb/town03-03/front/00245852.png",
+        "semantic": "labels/semantic_segmentation/town03-03/front/00245852.png",
+        "detection": "labels/visible/town03-03/front/00245852.json",
+        "instance": "labels/instance_segmentation/town03-03/front/00245852.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 9088
+      },
+      "selection_reasons": [
+        "near_16x16_box_area"
+      ],
+      "selected_bicycle_box": [
+        306,
+        183,
+        336,
+        246
+      ],
+      "selected_bicycle_visible_pixels": 708,
+      "selected_bicycle_diagnostic": "detected",
+      "wrong_class_overlaps": [],
+      "highest_matching_bicycle_score": 0.9993844032287598,
+      "evaluation_frame": {
+        "split": "train",
+        "group_id": "town03-route-03",
+        "predictions": [
+          {
+            "box": [
+              305.7073974609375,
+              184.35543823242188,
+              335.81097412109375,
+              246.13137817382812
+            ],
+            "label": 3,
+            "score": 0.9993844032287598
+          }
+        ],
+        "targets": [
+          {
+            "box": [
+              306,
+              183,
+              336,
+              246
+            ],
+            "label": 3,
+            "visible_pixels": 708,
+            "truncated": false,
+            "light_state_class": -1
+          }
+        ],
+        "ignore_boxes": [
+          [
+            133,
+            174,
+            136,
+            180
+          ],
+          [
+            217,
+            177,
+            218,
+            178
+          ]
+        ]
+      }
+    },
+    {
+      "sample": {
+        "scene_id": "town04-01",
+        "group_id": "town04-pedestrian-route-01",
+        "split": "validation",
+        "camera": "left",
+        "frame": 246889,
+        "input_manifest": "inputs/frames/town04-01/00246889.json",
+        "rgb": "inputs/rgb/town04-01/left/00246889.png",
+        "semantic": "labels/semantic_segmentation/town04-01/left/00246889.png",
+        "detection": "labels/visible/town04-01/left/00246889.json",
+        "instance": "labels/instance_segmentation/town04-01/left/00246889.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 1278
+      },
+      "selection_reasons": [
+        "max_visible_bicycle_support"
+      ],
+      "selected_bicycle_box": [
+        543,
+        185,
+        640,
+        288
+      ],
+      "selected_bicycle_visible_pixels": 3295,
+      "selected_bicycle_diagnostic": "detected",
+      "wrong_class_overlaps": [],
+      "highest_matching_bicycle_score": 0.9708779454231262,
+      "evaluation_frame": {
+        "split": "validation",
+        "group_id": "town04-pedestrian-route-01",
+        "predictions": [
+          {
+            "box": [
+              199.7675018310547,
+              201.10472106933594,
+              227.44081115722656,
+              250.62388610839844
+            ],
+            "label": 8,
+            "score": 0.999963641166687
+          },
+          {
+            "box": [
+              541.4151611328125,
+              190.94354248046875,
+              640.0,
+              285.96112060546875
+            ],
+            "label": 3,
+            "score": 0.9708779454231262
+          },
+          {
+            "box": [
+              542.1451416015625,
+              192.83792114257812,
+              638.087158203125,
+              291.7006530761719
+            ],
+            "label": 4,
+            "score": 0.44729480147361755
+          },
+          {
+            "box": [
+              547.594482421875,
+              214.6996307373047,
+              634.4296875,
+              287.22479248046875
+            ],
+            "label": 1,
+            "score": 0.3087245523929596
+          },
+          {
+            "box": [
+              159.89549255371094,
+              166.79542541503906,
+              191.2542266845703,
+              250.4556427001953
+            ],
+            "label": 2,
+            "score": 0.2798091173171997
+          },
+          {
+            "box": [
+              545.572021484375,
+              211.84703063964844,
+              639.4385986328125,
+              291.5442199707031
+            ],
+            "label": 5,
+            "score": 0.08778518438339233
+          },
+          {
+            "box": [
+              144.39695739746094,
+              187.5819549560547,
+              213.3852081298828,
+              250.9408721923828
+            ],
+            "label": 2,
+            "score": 0.05900626629590988
+          },
+          {
+            "box": [
+              142.3399658203125,
+              189.26527404785156,
+              218.53335571289062,
+              249.2377166748047
+            ],
+            "label": 8,
+            "score": 0.03846665471792221
+          },
+          {
+            "box": [
+              539.9158325195312,
+              187.61419677734375,
+              631.4707641601562,
+              290.8197021484375
+            ],
+            "label": 2,
+            "score": 0.03734944015741348
+          },
+          {
+            "box": [
+              529.9616088867188,
+              70.7034912109375,
+              634.0678100585938,
+              283.1488342285156
+            ],
+            "label": 6,
+            "score": 0.025971319526433945
+          },
+          {
+            "box": [
+              185.8018341064453,
+              212.29364013671875,
+              230.67176818847656,
+              246.96688842773438
+            ],
+            "label": 8,
+            "score": 0.021791065111756325
+          },
+          {
+            "box": [
+              142.71180725097656,
+              190.6598358154297,
+              218.3301544189453,
+              251.4546356201172
+            ],
+            "label": 4,
+            "score": 0.021221984177827835
+          },
+          {
+            "box": [
+              153.7132110595703,
+              172.8609619140625,
+              196.51963806152344,
+              248.826904296875
+            ],
+            "label": 8,
+            "score": 0.013275334611535072
+          },
+          {
+            "box": [
+              525.0401611328125,
+              91.940673828125,
+              640.0,
+              324.43914794921875
+            ],
+            "label": 5,
+            "score": 0.010852445848286152
+          }
+        ],
+        "targets": [
+          {
+            "box": [
+              543,
+              185,
+              640,
+              288
+            ],
+            "label": 3,
+            "visible_pixels": 3295,
+            "truncated": true,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              162,
+              166,
+              189,
+              250
+            ],
+            "label": 2,
+            "visible_pixels": 1181,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              30,
+              129,
+              36,
+              138
+            ],
+            "label": 7,
+            "visible_pixels": 41,
+            "truncated": false,
+            "light_state_class": 0
+          },
+          {
+            "box": [
+              52,
+              117,
+              57,
+              127
+            ],
+            "label": 7,
+            "visible_pixels": 47,
+            "truncated": false,
+            "light_state_class": 0
+          }
+        ],
+        "ignore_boxes": [
+          [
+            202,
+            202,
+            226,
+            248
+          ],
+          [
+            146,
+            143,
+            148,
+            145
+          ],
+          [
+            174,
+            165,
+            175,
+            166
+          ]
+        ]
+      }
+    },
+    {
+      "sample": {
+        "scene_id": "town04-01",
+        "group_id": "town04-pedestrian-route-01",
+        "split": "validation",
+        "camera": "rear",
+        "frame": 247225,
+        "input_manifest": "inputs/frames/town04-01/00247225.json",
+        "rgb": "inputs/rgb/town04-01/rear/00247225.png",
+        "semantic": "labels/semantic_segmentation/town04-01/rear/00247225.png",
+        "detection": "labels/visible/town04-01/rear/00247225.json",
+        "instance": "labels/instance_segmentation/town04-01/rear/00247225.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 1948
+      },
+      "selection_reasons": [
+        "near_16x16_box_area"
+      ],
+      "selected_bicycle_box": [
+        409,
+        167,
+        426,
+        182
+      ],
+      "selected_bicycle_visible_pixels": 101,
+      "selected_bicycle_diagnostic": "no_matching_bicycle_box",
+      "wrong_class_overlaps": [],
+      "highest_matching_bicycle_score": null,
+      "evaluation_frame": {
+        "split": "validation",
+        "group_id": "town04-pedestrian-route-01",
+        "predictions": [
+          {
+            "box": [
+              574.89013671875,
+              183.97459411621094,
+              640.0,
+              259.52020263671875
+            ],
+            "label": 1,
+            "score": 0.9983317255973816
+          },
+          {
+            "box": [
+              561.81494140625,
+              153.93760681152344,
+              567.0185546875,
+              161.5206756591797
+            ],
+            "label": 7,
+            "score": 0.5659956336021423
+          },
+          {
+            "box": [
+              426.6737060546875,
+              166.71572875976562,
+              441.14154052734375,
+              187.89828491210938
+            ],
+            "label": 4,
+            "score": 0.2855507731437683
+          },
+          {
+            "box": [
+              432.3611145019531,
+              104.05513000488281,
+              636.6759033203125,
+              215.8962860107422
+            ],
+            "label": 5,
+            "score": 0.20976264774799347
+          },
+          {
+            "box": [
+              557.567138671875,
+              75.51329040527344,
+              635.5816650390625,
+              261.5511474609375
+            ],
+            "label": 6,
+            "score": 0.1899646669626236
+          },
+          {
+            "box": [
+              440.6793212890625,
+              85.4001235961914,
+              638.7645263671875,
+              231.46237182617188
+            ],
+            "label": 1,
+            "score": 0.14142578840255737
+          },
+          {
+            "box": [
+              424.34271240234375,
+              99.39450073242188,
+              633.1207885742188,
+              214.57431030273438
+            ],
+            "label": 6,
+            "score": 0.07962322980165482
+          },
+          {
+            "box": [
+              504.251220703125,
+              79.61729431152344,
+              633.8944091796875,
+              244.7159881591797
+            ],
+            "label": 5,
+            "score": 0.028806235641241074
+          },
+          {
+            "box": [
+              554.912841796875,
+              90.92759704589844,
+              636.91845703125,
+              266.77716064453125
+            ],
+            "label": 1,
+            "score": 0.016279755160212517
+          },
+          {
+            "box": [
+              447.9873352050781,
+              111.03591918945312,
+              622.2296142578125,
+              206.38803100585938
+            ],
+            "label": 7,
+            "score": 0.014436970464885235
+          },
+          {
+            "box": [
+              567.9686889648438,
+              167.63087463378906,
+              636.9855346679688,
+              257.3684997558594
+            ],
+            "label": 4,
+            "score": 0.012347454205155373
+          }
+        ],
+        "targets": [
+          {
+            "box": [
+              409,
+              167,
+              426,
+              182
+            ],
+            "label": 3,
+            "visible_pixels": 101,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              421,
+              167,
+              446,
+              187
+            ],
+            "label": 4,
+            "visible_pixels": 294,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              575,
+              176,
+              640,
+              257
+            ],
+            "label": 1,
+            "visible_pixels": 3877,
+            "truncated": true,
+            "light_state_class": -1
+          }
+        ],
+        "ignore_boxes": [
+          [
+            407,
+            171,
+            411,
+            181
+          ]
+        ]
+      }
+    },
+    {
+      "sample": {
+        "scene_id": "town04-00",
+        "group_id": "town04-route-00",
+        "split": "validation",
+        "camera": "front",
+        "frame": 246686,
+        "input_manifest": "inputs/frames/town04-00/00246686.json",
+        "rgb": "inputs/rgb/town04-00/front/00246686.png",
+        "semantic": "labels/semantic_segmentation/town04-00/front/00246686.png",
+        "detection": "labels/visible/town04-00/front/00246686.json",
+        "instance": "labels/instance_segmentation/town04-00/front/00246686.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 976
+      },
+      "selection_reasons": [
+        "max_visible_bicycle_support"
+      ],
+      "selected_bicycle_box": [
+        315,
+        185,
+        361,
+        283
+      ],
+      "selected_bicycle_visible_pixels": 1745,
+      "selected_bicycle_diagnostic": "detected",
+      "wrong_class_overlaps": [],
+      "highest_matching_bicycle_score": 0.9998915195465088,
+      "evaluation_frame": {
+        "split": "validation",
+        "group_id": "town04-route-00",
+        "predictions": [
+          {
+            "box": [
+              314.08319091796875,
+              186.2988739013672,
+              361.90582275390625,
+              281.89984130859375
+            ],
+            "label": 3,
+            "score": 0.9998915195465088
+          },
+          {
+            "box": [
+              244.70370483398438,
+              98.56990051269531,
+              250.21701049804688,
+              111.0345458984375
+            ],
+            "label": 7,
+            "score": 0.9998475313186646
+          },
+          {
+            "box": [
+              435.1612243652344,
+              172.10328674316406,
+              449.5431823730469,
+              211.65354919433594
+            ],
+            "label": 2,
+            "score": 0.9803195595741272
+          },
+          {
+            "box": [
+              322.5706481933594,
+              135.1492919921875,
+              325.8086242675781,
+              145.52484130859375
+            ],
+            "label": 7,
+            "score": 0.9782304763793945
+          },
+          {
+            "box": [
+              286.3835754394531,
+              164.2797088623047,
+              329.4824523925781,
+              190.6463165283203
+            ],
+            "label": 6,
+            "score": 0.9665646553039551
+          },
+          {
+            "box": [
+              325.7717590332031,
+              165.510986328125,
+              352.2124938964844,
+              194.50222778320312
+            ],
+            "label": 5,
+            "score": 0.701391875743866
+          },
+          {
+            "box": [
+              273.0354919433594,
+              165.996337890625,
+              350.5323181152344,
+              194.38912963867188
+            ],
+            "label": 5,
+            "score": 0.6695692539215088
+          },
+          {
+            "box": [
+              320.8201599121094,
+              167.81224060058594,
+              328.2480773925781,
+              177.7149200439453
+            ],
+            "label": 7,
+            "score": 0.38345664739608765
+          },
+          {
+            "box": [
+              327.1681213378906,
+              166.1276397705078,
+              338.9879455566406,
+              194.16249084472656
+            ],
+            "label": 5,
+            "score": 0.33820831775665283
+          },
+          {
+            "box": [
+              110.9861831665039,
+              200.35055541992188,
+              117.26322174072266,
+              217.471435546875
+            ],
+            "label": 7,
+            "score": 0.17666642367839813
+          },
+          {
+            "box": [
+              274.4820556640625,
+              168.9933624267578,
+              334.52392578125,
+              195.0393524169922
+            ],
+            "label": 1,
+            "score": 0.12343723326921463
+          },
+          {
+            "box": [
+              270.64013671875,
+              171.6620330810547,
+              290.931640625,
+              192.8606414794922
+            ],
+            "label": 5,
+            "score": 0.01552755106240511
+          },
+          {
+            "box": [
+              321.22735595703125,
+              165.39231872558594,
+              329.54425048828125,
+              181.6129913330078
+            ],
+            "label": 6,
+            "score": 0.013378778472542763
+          }
+        ],
+        "targets": [
+          {
+            "box": [
+              315,
+              185,
+              361,
+              283
+            ],
+            "label": 3,
+            "visible_pixels": 1745,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              324,
+              186,
+              351,
+              240
+            ],
+            "label": 4,
+            "visible_pixels": 168,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              269,
+              182,
+              297,
+              195
+            ],
+            "label": 1,
+            "visible_pixels": 273,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              294,
+              165,
+              355,
+              194
+            ],
+            "label": 5,
+            "visible_pixels": 862,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              289,
+              166,
+              328,
+              185
+            ],
+            "label": 6,
+            "visible_pixels": 652,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              434,
+              174,
+              448,
+              212
+            ],
+            "label": 2,
+            "visible_pixels": 278,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              219,
+              124,
+              223,
+              134
+            ],
+            "label": 7,
+            "visible_pixels": 33,
+            "truncated": false,
+            "light_state_class": 0
+          },
+          {
+            "box": [
+              245,
+              99,
+              250,
+              111
+            ],
+            "label": 7,
+            "visible_pixels": 60,
+            "truncated": false,
+            "light_state_class": 0
+          },
+          {
+            "box": [
+              423,
+              119,
+              429,
+              130
+            ],
+            "label": 7,
+            "visible_pixels": 48,
+            "truncated": false,
+            "light_state_class": 1
+          }
+        ],
+        "ignore_boxes": [
+          [
+            323,
+            136,
+            325,
+            144
+          ],
+          [
+            199,
+            183,
+            202,
+            189
+          ],
+          [
+            171,
+            183,
+            172,
+            184
+          ],
+          [
+            176,
+            183,
+            177,
+            184
+          ],
+          [
+            179,
+            183,
+            180,
+            184
+          ],
+          [
+            37,
+            184,
+            49,
+            191
+          ],
+          [
+            31,
+            183,
+            44,
+            191
+          ],
+          [
+            28,
+            184,
+            37,
+            191
+          ],
+          [
+            184,
+            183,
+            185,
+            185
+          ],
+          [
+            22,
+            184,
+            35,
+            191
+          ],
+          [
+            18,
+            184,
+            28,
+            191
+          ],
+          [
+            13,
+            184,
+            21,
+            190
+          ],
+          [
+            9,
+            183,
+            18,
+            185
+          ],
+          [
+            40,
+            183,
+            51,
+            191
+          ],
+          [
+            38,
+            183,
+            46,
+            187
+          ],
+          [
+            31,
+            183,
+            41,
+            191
+          ],
+          [
+            27,
+            183,
+            38,
+            190
+          ],
+          [
+            26,
+            183,
+            34,
+            191
+          ],
+          [
+            22,
+            183,
+            30,
+            190
+          ],
+          [
+            190,
+            183,
+            191,
+            184
+          ],
+          [
+            47,
+            183,
+            59,
+            191
+          ],
+          [
+            44,
+            183,
+            55,
+            191
+          ],
+          [
+            38,
+            184,
+            50,
+            190
+          ],
+          [
+            42,
+            183,
+            43,
+            191
+          ],
+          [
+            35,
+            188,
+            38,
+            190
+          ],
+          [
+            30,
+            183,
+            35,
+            188
+          ],
+          [
+            165,
+            183,
+            168,
+            185
+          ],
+          [
+            172,
+            184,
+            173,
+            185
+          ],
+          [
+            181,
+            183,
+            182,
+            187
+          ],
+          [
+            193,
+            183,
+            194,
+            184
+          ],
+          [
+            183,
+            184,
+            192,
+            185
+          ],
+          [
+            188,
+            183,
+            189,
+            184
+          ],
+          [
+            192,
+            184,
+            202,
+            187
+          ],
+          [
+            29,
+            187,
+            30,
+            188
+          ],
+          [
+            21,
+            186,
+            22,
+            187
+          ],
+          [
+            173,
+            183,
+            183,
+            185
+          ],
+          [
+            177,
+            183,
+            182,
+            189
+          ],
+          [
+            182,
+            183,
+            184,
+            184
+          ],
+          [
+            185,
+            183,
+            188,
+            185
+          ],
+          [
+            191,
+            183,
+            199,
+            185
+          ],
+          [
+            136,
+            168,
+            170,
+            174
+          ],
+          [
+            165,
+            171,
+            170,
+            176
+          ],
+          [
+            156,
+            171,
+            168,
+            176
+          ],
+          [
+            377,
+            178,
+            396,
+            193
+          ],
+          [
+            354,
+            179,
+            355,
+            180
+          ],
+          [
+            358,
+            188,
+            359,
+            190
+          ],
+          [
+            354,
+            183,
+            355,
+            184
+          ]
+        ]
+      }
+    },
+    {
+      "sample": {
+        "scene_id": "town04-00",
+        "group_id": "town04-route-00",
+        "split": "validation",
+        "camera": "front_right",
+        "frame": 246314,
+        "input_manifest": "inputs/frames/town04-00/00246314.json",
+        "rgb": "inputs/rgb/town04-00/front_right/00246314.png",
+        "semantic": "labels/semantic_segmentation/town04-00/front_right/00246314.png",
+        "detection": "labels/visible/town04-00/front_right/00246314.json",
+        "instance": "labels/instance_segmentation/town04-00/front_right/00246314.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 233
+      },
+      "selection_reasons": [
+        "near_16x16_box_area"
+      ],
+      "selected_bicycle_box": [
+        0,
+        216,
+        8,
+        254
+      ],
+      "selected_bicycle_visible_pixels": 44,
+      "selected_bicycle_diagnostic": "correct_box_low_score",
+      "wrong_class_overlaps": [],
+      "highest_matching_bicycle_score": 0.43646475672721863,
+      "evaluation_frame": {
+        "split": "validation",
+        "group_id": "town04-route-00",
+        "predictions": [
+          {
+            "box": [
+              0.0,
+              160.44277954101562,
+              52.488800048828125,
+              198.79220581054688
+            ],
+            "label": 5,
+            "score": 0.9992227554321289
+          },
+          {
+            "box": [
+              270.034912109375,
+              168.13238525390625,
+              293.88055419921875,
+              240.8004150390625
+            ],
+            "label": 2,
+            "score": 0.9989445805549622
+          },
+          {
+            "box": [
+              0.0,
+              202.1820068359375,
+              6.024020195007324,
+              219.07870483398438
+            ],
+            "label": 7,
+            "score": 0.9246156811714172
+          },
+          {
+            "box": [
+              0.0,
+              193.8374786376953,
+              13.69036865234375,
+              234.5918426513672
+            ],
+            "label": 3,
+            "score": 0.8569077253341675
+          },
+          {
+            "box": [
+              1.0238275527954102,
+              172.1417236328125,
+              17.22565460205078,
+              251.62130737304688
+            ],
+            "label": 3,
+            "score": 0.4891091287136078
+          },
+          {
+            "box": [
+              1.7500638961791992,
+              197.8948211669922,
+              8.03754711151123,
+              249.59873962402344
+            ],
+            "label": 3,
+            "score": 0.43646475672721863
+          },
+          {
+            "box": [
+              0.0,
+              213.0425567626953,
+              6.331475257873535,
+              230.88148498535156
+            ],
+            "label": 3,
+            "score": 0.4351666271686554
+          },
+          {
+            "box": [
+              0.11215782165527344,
+              208.62252807617188,
+              3.9794631004333496,
+              253.50250244140625
+            ],
+            "label": 2,
+            "score": 0.4260600805282593
+          },
+          {
+            "box": [
+              0.0,
+              199.6301727294922,
+              10.910238265991211,
+              226.0933074951172
+            ],
+            "label": 4,
+            "score": 0.22653186321258545
+          },
+          {
+            "box": [
+              1.514751672744751,
+              200.01248168945312,
+              7.465703010559082,
+              250.74551391601562
+            ],
+            "label": 2,
+            "score": 0.17612192034721375
+          },
+          {
+            "box": [
+              6.654630661010742,
+              180.5723419189453,
+              40.71138000488281,
+              199.05137634277344
+            ],
+            "label": 5,
+            "score": 0.16772137582302094
+          },
+          {
+            "box": [
+              1.5213866233825684,
+              195.19728088378906,
+              14.255155563354492,
+              243.38682556152344
+            ],
+            "label": 4,
+            "score": 0.07856416702270508
+          },
+          {
+            "box": [
+              0.0,
+              198.7267303466797,
+              6.858311653137207,
+              233.4104766845703
+            ],
+            "label": 3,
+            "score": 0.06108682602643967
+          },
+          {
+            "box": [
+              0.07160568237304688,
+              200.94644165039062,
+              6.08495569229126,
+              243.3944091796875
+            ],
+            "label": 4,
+            "score": 0.06082116439938545
+          },
+          {
+            "box": [
+              0.06069755554199219,
+              198.3595733642578,
+              12.578132629394531,
+              251.95921325683594
+            ],
+            "label": 2,
+            "score": 0.041571930050849915
+          },
+          {
+            "box": [
+              0.0,
+              198.40333557128906,
+              7.403282165527344,
+              230.11537170410156
+            ],
+            "label": 2,
+            "score": 0.030531344935297966
+          },
+          {
+            "box": [
+              0.5243444442749023,
+              200.7335205078125,
+              9.856266021728516,
+              249.57452392578125
+            ],
+            "label": 4,
+            "score": 0.029710758477449417
+          },
+          {
+            "box": [
+              0.15709257125854492,
+              208.73617553710938,
+              4.393613338470459,
+              250.29705810546875
+            ],
+            "label": 3,
+            "score": 0.025079429149627686
+          },
+          {
+            "box": [
+              0.36225199699401855,
+              198.58236694335938,
+              8.045513153076172,
+              226.31582641601562
+            ],
+            "label": 7,
+            "score": 0.01833723485469818
+          },
+          {
+            "box": [
+              0.7263450622558594,
+              173.7305908203125,
+              39.26080322265625,
+              205.14886474609375
+            ],
+            "label": 5,
+            "score": 0.014654825441539288
+          }
+        ],
+        "targets": [
+          {
+            "box": [
+              0,
+              216,
+              8,
+              254
+            ],
+            "label": 3,
+            "visible_pixels": 44,
+            "truncated": true,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              0,
+              199,
+              16,
+              250
+            ],
+            "label": 4,
+            "visible_pixels": 186,
+            "truncated": true,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              0,
+              160,
+              53,
+              199
+            ],
+            "label": 5,
+            "visible_pixels": 1522,
+            "truncated": true,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              0,
+              161,
+              6,
+              185
+            ],
+            "label": 6,
+            "visible_pixels": 139,
+            "truncated": true,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              273,
+              170,
+              295,
+              240
+            ],
+            "label": 2,
+            "visible_pixels": 874,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              141,
+              117,
+              147,
+              128
+            ],
+            "label": 7,
+            "visible_pixels": 57,
+            "truncated": false,
+            "light_state_class": 1
+          }
+        ],
+        "ignore_boxes": [
+          [
+            53,
+            186,
+            57,
+            193
+          ],
+          [
+            86,
+            178,
+            111,
+            196
+          ],
+          [
+            51,
+            179,
+            54,
+            186
+          ],
+          [
+            51,
+            179,
+            52,
+            180
+          ],
+          [
+            59,
+            190,
+            62,
+            193
+          ]
+        ]
+      }
+    },
+    {
+      "sample": {
+        "scene_id": "town04-02",
+        "group_id": "town04-route-02",
+        "split": "validation",
+        "camera": "rear_right",
+        "frame": 247608,
+        "input_manifest": "inputs/frames/town04-02/00247608.json",
+        "rgb": "inputs/rgb/town04-02/rear_right/00247608.png",
+        "semantic": "labels/semantic_segmentation/town04-02/rear_right/00247608.png",
+        "detection": "labels/visible/town04-02/rear_right/00247608.json",
+        "instance": "labels/instance_segmentation/town04-02/rear_right/00247608.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 2603
+      },
+      "selection_reasons": [
+        "max_visible_bicycle_support"
+      ],
+      "selected_bicycle_box": [
+        49,
+        223,
+        191,
+        360
+      ],
+      "selected_bicycle_visible_pixels": 9126,
+      "selected_bicycle_diagnostic": "detected",
+      "wrong_class_overlaps": [
+        {
+          "box": [
+            47.466854095458984,
+            224.09329223632812,
+            144.63568115234375,
+            358.0581970214844
+          ],
+          "label": 2,
+          "score": 0.7970829010009766
+        },
+        {
+          "box": [
+            29.604904174804688,
+            231.4599609375,
+            154.32705688476562,
+            358.09954833984375
+          ],
+          "label": 4,
+          "score": 0.5422296524047852
+        }
+      ],
+      "highest_matching_bicycle_score": 0.804015576839447,
+      "evaluation_frame": {
+        "split": "validation",
+        "group_id": "town04-route-02",
+        "predictions": [
+          {
+            "box": [
+              44.09468078613281,
+              220.47494506835938,
+              166.4456024169922,
+              355.1820983886719
+            ],
+            "label": 3,
+            "score": 0.804015576839447
+          },
+          {
+            "box": [
+              47.466854095458984,
+              224.09329223632812,
+              144.63568115234375,
+              358.0581970214844
+            ],
+            "label": 2,
+            "score": 0.7970829010009766
+          },
+          {
+            "box": [
+              29.604904174804688,
+              231.4599609375,
+              154.32705688476562,
+              358.09954833984375
+            ],
+            "label": 4,
+            "score": 0.5422296524047852
+          },
+          {
+            "box": [
+              128.40017700195312,
+              241.38870239257812,
+              134.95693969726562,
+              253.99099731445312
+            ],
+            "label": 8,
+            "score": 0.07624910026788712
+          },
+          {
+            "box": [
+              401.35003662109375,
+              234.4420623779297,
+              408.64453125,
+              247.3993682861328
+            ],
+            "label": 8,
+            "score": 0.06329520791769028
+          },
+          {
+            "box": [
+              40.427059173583984,
+              243.87567138671875,
+              151.11573791503906,
+              360.0
+            ],
+            "label": 1,
+            "score": 0.051649484783411026
+          },
+          {
+            "box": [
+              39.232181549072266,
+              243.51416015625,
+              157.7392578125,
+              353.60345458984375
+            ],
+            "label": 5,
+            "score": 0.03231934830546379
+          },
+          {
+            "box": [
+              400.9544982910156,
+              233.84152221679688,
+              408.6971740722656,
+              246.705078125
+            ],
+            "label": 5,
+            "score": 0.029954055324196815
+          },
+          {
+            "box": [
+              127.74021911621094,
+              239.12986755371094,
+              134.39060974121094,
+              254.9893035888672
+            ],
+            "label": 2,
+            "score": 0.02312394604086876
+          },
+          {
+            "box": [
+              401.9590148925781,
+              232.2990264892578,
+              408.0877990722656,
+              248.27516174316406
+            ],
+            "label": 2,
+            "score": 0.018373379483819008
+          },
+          {
+            "box": [
+              244.645263671875,
+              264.02801513671875,
+              257.6311950683594,
+              293.941650390625
+            ],
+            "label": 7,
+            "score": 0.015362901613116264
+          },
+          {
+            "box": [
+              363.7398681640625,
+              245.98403930664062,
+              370.96881103515625,
+              257.6407165527344
+            ],
+            "label": 8,
+            "score": 0.013898548670113087
+          },
+          {
+            "box": [
+              401.3306579589844,
+              233.5233154296875,
+              408.4787292480469,
+              248.13784790039062
+            ],
+            "label": 7,
+            "score": 0.010236773639917374
+          },
+          {
+            "box": [
+              53.593902587890625,
+              242.06063842773438,
+              145.97918701171875,
+              345.0071716308594
+            ],
+            "label": 8,
+            "score": 0.010228974744677544
+          }
+        ],
+        "targets": [
+          {
+            "box": [
+              49,
+              223,
+              191,
+              360
+            ],
+            "label": 3,
+            "visible_pixels": 9126,
+            "truncated": true,
+            "light_state_class": -1
+          }
+        ],
+        "ignore_boxes": []
+      }
+    },
+    {
+      "sample": {
+        "scene_id": "town04-02",
+        "group_id": "town04-route-02",
+        "split": "validation",
+        "camera": "rear",
+        "frame": 247796,
+        "input_manifest": "inputs/frames/town04-02/00247796.json",
+        "rgb": "inputs/rgb/town04-02/rear/00247796.png",
+        "semantic": "labels/semantic_segmentation/town04-02/rear/00247796.png",
+        "detection": "labels/visible/town04-02/rear/00247796.json",
+        "instance": "labels/instance_segmentation/town04-02/rear/00247796.png",
+        "verified_obstacle_actor_ids": [
+          4125
+        ],
+        "split_index": 2980
+      },
+      "selection_reasons": [
+        "near_16x16_box_area"
+      ],
+      "selected_bicycle_box": [
+        266,
+        183,
+        283,
+        198
+      ],
+      "selected_bicycle_visible_pixels": 85,
+      "selected_bicycle_diagnostic": "no_matching_bicycle_box",
+      "wrong_class_overlaps": [],
+      "highest_matching_bicycle_score": null,
+      "evaluation_frame": {
+        "split": "validation",
+        "group_id": "town04-route-02",
+        "predictions": [
+          {
+            "box": [
+              286.4311828613281,
+              186.69911193847656,
+              294.4081115722656,
+              200.08949279785156
+            ],
+            "label": 8,
+            "score": 0.9300353527069092
+          },
+          {
+            "box": [
+              14.617780685424805,
+              257.2267150878906,
+              30.83326530456543,
+              279.7503967285156
+            ],
+            "label": 5,
+            "score": 0.025137491524219513
+          },
+          {
+            "box": [
+              285.39630126953125,
+              186.3412322998047,
+              292.94317626953125,
+              201.44810485839844
+            ],
+            "label": 2,
+            "score": 0.012632600031793118
+          }
+        ],
+        "targets": [
+          {
+            "box": [
+              266,
+              183,
+              283,
+              198
+            ],
+            "label": 3,
+            "visible_pixels": 85,
+            "truncated": false,
+            "light_state_class": -1
+          },
+          {
+            "box": [
+              285,
+              186,
+              296,
+              200
+            ],
+            "label": 8,
+            "visible_pixels": 85,
+            "truncated": false,
+            "light_state_class": -1
+          }
+        ],
+        "ignore_boxes": [
+          [
+            465,
+            179,
+            467,
+            180
+          ],
+          [
+            329,
+            179,
+            330,
+            180
+          ]
+        ]
+      }
+    }
+  ],
+  "pages": [
+    {
+      "path": "page-00.png",
+      "sha256": "9ed1d29c8ddb4dbcb6c4fe0d85712f5f76286d1a51f5228a1f764f067932da48",
+      "record_indices": [
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "path": "page-01.png",
+      "sha256": "e002830a15ca10955c6f67b48318f7e0c71dc392e5d80280cd05bed67443a34a",
+      "record_indices": [
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "path": "page-02.png",
+      "sha256": "3bdcbaa8f16c3014fa80deb93d86a51e4dc1117a8e82395108c71ccbe008fef3",
+      "record_indices": [
+        3,
+        10,
+        13
+      ]
+    }
+  ],
+  "limits": "Deliberately GT-selected seen train and validation views; CPU outputs can differ numerically from CUDA. No new model/gates/heldout or full-split train generalization estimate."
+}

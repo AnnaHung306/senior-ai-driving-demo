@@ -1,0 +1,28 @@
+{
+  "checkpoint_sha256": "b2b69ebac6652c43054148cf132d78fbbb504f4b41af5fa608cd0a2b8a2b8237",
+  "selection_sha256": "616ba191b0ef319f2e810b7f026c313d1e85a1b2ed2411a9877827ccd4a97953",
+  "tool_sha256": "10e45554c5a615bd282b4dbc4d9cb5991af069650726d78d1ae1380fcf91e8d0",
+  "fixed_budgets_before_inference": [
+    {
+      "pre_per_level": 500,
+      "post_total": 150
+    },
+    {
+      "pre_per_level": 1000,
+      "post_total": 500
+    },
+    {
+      "pre_per_level": 2000,
+      "post_total": 1000
+    }
+  ],
+  "record_indices": [
+    1278,
+    1948,
+    976,
+    233,
+    2603,
+    2980
+  ],
+  "scope": "Selected validation CPU only. Original trained weights, score=.5 and max100 final detections unchanged; these runtime proposal budgets are exploratory and not adopted."
+}

@@ -1,0 +1,27 @@
+{
+  "status": "reviewed_diagnostic_only",
+  "training_approved": false,
+  "checkpoint_sha256": "b2b69ebac6652c43054148cf132d78fbbb504f4b41af5fa608cd0a2b8a2b8237",
+  "reviewed_images": [
+    {
+      "path": "bicycle_fit/page-00.png",
+      "sha256": "9ed1d29c8ddb4dbcb6c4fe0d85712f5f76286d1a51f5228a1f764f067932da48"
+    },
+    {
+      "path": "bicycle_fit/page-01.png",
+      "sha256": "e002830a15ca10955c6f67b48318f7e0c71dc392e5d80280cd05bed67443a34a"
+    },
+    {
+      "path": "bicycle_fit/page-02.png",
+      "sha256": "3bdcbaa8f16c3014fa80deb93d86a51e4dc1117a8e82395108c71ccbe008fef3"
+    }
+  ],
+  "inspection": "All3 original001 pages actually viewed with view_image; corrected002 page SHA256 verified identical for each, so reviewed pixels are exact. Six validation selections and3 selected seen-train contexts shown.",
+  "observations": [
+    "Selected seen-train16 targets detected; selected validation3/6 detected, all3 small targets missed. Biased selection is not complete split performance.",
+    "Viewed partial image-boundary clipping, distant small bicycles and a strongly leaned close bicycle with duplicate class hypotheses. No physical occlusion fraction assigned.",
+    "RPN study on6 selected validation targets: all covered by IoU50 proposals under all3 budgets, final bicycle3/6 unchanged; original configuration predictions exact. Component diagnosis only, not proof that all failures share one cause."
+  ],
+  "known_issue_corrected": "Original diagnostic omitted truncation metadata; corrected002 preserves canonical bbox-edge truncation. All class AP/P/R/TP/FP/FN and rendered pixels unchanged. Official GPU validation unaffected.",
+  "limits": "Intermediate first epoch, parent still training. CPU FP32 diagnosis, not completed model acceptance or heldout."
+}

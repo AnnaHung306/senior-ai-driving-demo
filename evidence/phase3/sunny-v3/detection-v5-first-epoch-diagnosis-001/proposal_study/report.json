@@ -1,0 +1,632 @@
+{
+  "status": "completed_selected_CPU_proposal_study_only",
+  "results": [
+    {
+      "budget": {
+        "pre_per_level": 500,
+        "post_total": 150
+      },
+      "cases": [
+        {
+          "sample": {
+            "scene_id": "town04-01",
+            "group_id": "town04-pedestrian-route-01",
+            "split": "validation",
+            "camera": "left",
+            "frame": 246889,
+            "input_manifest": "inputs/frames/town04-01/00246889.json",
+            "rgb": "inputs/rgb/town04-01/left/00246889.png",
+            "semantic": "labels/semantic_segmentation/town04-01/left/00246889.png",
+            "detection": "labels/visible/town04-01/left/00246889.json",
+            "instance": "labels/instance_segmentation/town04-01/left/00246889.png",
+            "verified_obstacle_actor_ids": [],
+            "split_index": 1278
+          },
+          "selected_GT_box": [
+            543,
+            185,
+            640,
+            288
+          ],
+          "RPN_proposals": 150,
+          "max_RPN_proposal_IoU": 0.9173568008255804,
+          "RPN_has_IoU50_proposal": true,
+          "highest_matching_bicycle_score": 0.9708779454231262,
+          "bicycle_detected_at_original_score_half": true,
+          "CPU_baseline_predictions_identical": true,
+          "wrong_class_matches_at_score_half": []
+        },
+        {
+          "sample": {
+            "scene_id": "town04-01",
+            "group_id": "town04-pedestrian-route-01",
+            "split": "validation",
+            "camera": "rear",
+            "frame": 247225,
+            "input_manifest": "inputs/frames/town04-01/00247225.json",
+            "rgb": "inputs/rgb/town04-01/rear/00247225.png",
+            "semantic": "labels/semantic_segmentation/town04-01/rear/00247225.png",
+            "detection": "labels/visible/town04-01/rear/00247225.json",
+            "instance": "labels/instance_segmentation/town04-01/rear/00247225.png",
+            "verified_obstacle_actor_ids": [],
+            "split_index": 1948
+          },
+          "selected_GT_box": [
+            409,
+            167,
+            426,
+            182
+          ],
+          "RPN_proposals": 150,
+          "max_RPN_proposal_IoU": 0.7852034199622495,
+          "RPN_has_IoU50_proposal": true,
+          "highest_matching_bicycle_score": null,
+          "bicycle_detected_at_original_score_half": false,
+          "CPU_baseline_predictions_identical": true,
+          "wrong_class_matches_at_score_half": []
+        },
+        {
+          "sample": {
+            "scene_id": "town04-00",
+            "group_id": "town04-route-00",
+            "split": "validation",
+            "camera": "front",
+            "frame": 246686,
+            "input_manifest": "inputs/frames/town04-00/00246686.json",
+            "rgb": "inputs/rgb/town04-00/front/00246686.png",
+            "semantic": "labels/semantic_segmentation/town04-00/front/00246686.png",
+            "detection": "labels/visible/town04-00/front/00246686.json",
+            "instance": "labels/instance_segmentation/town04-00/front/00246686.png",
+            "verified_obstacle_actor_ids": [],
+            "split_index": 976
+          },
+          "selected_GT_box": [
+            315,
+            185,
+            361,
+            283
+          ],
+          "RPN_proposals": 150,
+          "max_RPN_proposal_IoU": 0.9432032318156277,
+          "RPN_has_IoU50_proposal": true,
+          "highest_matching_bicycle_score": 0.9998915195465088,
+          "bicycle_detected_at_original_score_half": true,
+          "CPU_baseline_predictions_identical": true,
+          "wrong_class_matches_at_score_half": []
+        },
+        {
+          "sample": {
+            "scene_id": "town04-00",
+            "group_id": "town04-route-00",
+            "split": "validation",
+            "camera": "front_right",
+            "frame": 246314,
+            "input_manifest": "inputs/frames/town04-00/00246314.json",
+            "rgb": "inputs/rgb/town04-00/front_right/00246314.png",
+            "semantic": "labels/semantic_segmentation/town04-00/front_right/00246314.png",
+            "detection": "labels/visible/town04-00/front_right/00246314.json",
+            "instance": "labels/instance_segmentation/town04-00/front_right/00246314.png",
+            "verified_obstacle_actor_ids": [],
+            "split_index": 233
+          },
+          "selected_GT_box": [
+            0,
+            216,
+            8,
+            254
+          ],
+          "RPN_proposals": 150,
+          "max_RPN_proposal_IoU": 0.7261399028549045,
+          "RPN_has_IoU50_proposal": true,
+          "highest_matching_bicycle_score": 0.43646475672721863,
+          "bicycle_detected_at_original_score_half": false,
+          "CPU_baseline_predictions_identical": true,
+          "wrong_class_matches_at_score_half": []
+        },
+        {
+          "sample": {
+            "scene_id": "town04-02",
+            "group_id": "town04-route-02",
+            "split": "validation",
+            "camera": "rear_right",
+            "frame": 247608,
+            "input_manifest": "inputs/frames/town04-02/00247608.json",
+            "rgb": "inputs/rgb/town04-02/rear_right/00247608.png",
+            "semantic": "labels/semantic_segmentation/town04-02/rear_right/00247608.png",
+            "detection": "labels/visible/town04-02/rear_right/00247608.json",
+            "instance": "labels/instance_segmentation/town04-02/rear_right/00247608.png",
+            "verified_obstacle_actor_ids": [],
+            "split_index": 2603
+          },
+          "selected_GT_box": [
+            49,
+            223,
+            191,
+            360
+          ],
+          "RPN_proposals": 150,
+          "max_RPN_proposal_IoU": 0.7628919349503027,
+          "RPN_has_IoU50_proposal": true,
+          "highest_matching_bicycle_score": 0.804015576839447,
+          "bicycle_detected_at_original_score_half": true,
+          "CPU_baseline_predictions_identical": true,
+          "wrong_class_matches_at_score_half": [
+            {
+              "box": [
+                47.466854095458984,
+                224.09329223632812,
+                144.63568115234375,
+                358.0581970214844
+              ],
+              "label": 2,
+              "score": 0.7970829010009766
+            },
+            {
+              "box": [
+                29.604904174804688,
+                231.4599609375,
+                154.32705688476562,
+                358.09954833984375
+              ],
+              "label": 4,
+              "score": 0.5422296524047852
+            }
+          ]
+        },
+        {
+          "sample": {
+            "scene_id": "town04-02",
+            "group_id": "town04-route-02",
+            "split": "validation",
+            "camera": "rear",
+            "frame": 247796,
+            "input_manifest": "inputs/frames/town04-02/00247796.json",
+            "rgb": "inputs/rgb/town04-02/rear/00247796.png",
+            "semantic": "labels/semantic_segmentation/town04-02/rear/00247796.png",
+            "detection": "labels/visible/town04-02/rear/00247796.json",
+            "instance": "labels/instance_segmentation/town04-02/rear/00247796.png",
+            "verified_obstacle_actor_ids": [
+              4125
+            ],
+            "split_index": 2980
+          },
+          "selected_GT_box": [
+            266,
+            183,
+            283,
+            198
+          ],
+          "RPN_proposals": 150,
+          "max_RPN_proposal_IoU": 0.5270908598660254,
+          "RPN_has_IoU50_proposal": true,
+          "highest_matching_bicycle_score": null,
+          "bicycle_detected_at_original_score_half": false,
+          "CPU_baseline_predictions_identical": true,
+          "wrong_class_matches_at_score_half": []
+        }
+      ],
+      "selected_targets": 6,
+      "detected": 3,
+      "RPN_IoU50_covered": 6
+    },
+    {
+      "budget": {
+        "pre_per_level": 1000,
+        "post_total": 500
+      },
+      "cases": [
+        {
+          "sample": {
+            "scene_id": "town04-01",
+            "group_id": "town04-pedestrian-route-01",
+            "split": "validation",
+            "camera": "left",
+            "frame": 246889,
+            "input_manifest": "inputs/frames/town04-01/00246889.json",
+            "rgb": "inputs/rgb/town04-01/left/00246889.png",
+            "semantic": "labels/semantic_segmentation/town04-01/left/00246889.png",
+            "detection": "labels/visible/town04-01/left/00246889.json",
+            "instance": "labels/instance_segmentation/town04-01/left/00246889.png",
+            "verified_obstacle_actor_ids": [],
+            "split_index": 1278
+          },
+          "selected_GT_box": [
+            543,
+            185,
+            640,
+            288
+          ],
+          "RPN_proposals": 232,
+          "max_RPN_proposal_IoU": 0.9173568008255804,
+          "RPN_has_IoU50_proposal": true,
+          "highest_matching_bicycle_score": 0.9708779454231262,
+          "bicycle_detected_at_original_score_half": true,
+          "CPU_baseline_predictions_identical": null,
+          "wrong_class_matches_at_score_half": []
+        },
+        {
+          "sample": {
+            "scene_id": "town04-01",
+            "group_id": "town04-pedestrian-route-01",
+            "split": "validation",
+            "camera": "rear",
+            "frame": 247225,
+            "input_manifest": "inputs/frames/town04-01/00247225.json",
+            "rgb": "inputs/rgb/town04-01/rear/00247225.png",
+            "semantic": "labels/semantic_segmentation/town04-01/rear/00247225.png",
+            "detection": "labels/visible/town04-01/rear/00247225.json",
+            "instance": "labels/instance_segmentation/town04-01/rear/00247225.png",
+            "verified_obstacle_actor_ids": [],
+            "split_index": 1948
+          },
+          "selected_GT_box": [
+            409,
+            167,
+            426,
+            182
+          ],
+          "RPN_proposals": 343,
+          "max_RPN_proposal_IoU": 0.7852034199622495,
+          "RPN_has_IoU50_proposal": true,
+          "highest_matching_bicycle_score": null,
+          "bicycle_detected_at_original_score_half": false,
+          "CPU_baseline_predictions_identical": null,
+          "wrong_class_matches_at_score_half": []
+        },
+        {
+          "sample": {
+            "scene_id": "town04-00",
+            "group_id": "town04-route-00",
+            "split": "validation",
+            "camera": "front",
+            "frame": 246686,
+            "input_manifest": "inputs/frames/town04-00/00246686.json",
+            "rgb": "inputs/rgb/town04-00/front/00246686.png",
+            "semantic": "labels/semantic_segmentation/town04-00/front/00246686.png",
+            "detection": "labels/visible/town04-00/front/00246686.json",
+            "instance": "labels/instance_segmentation/town04-00/front/00246686.png",
+            "verified_obstacle_actor_ids": [],
+            "split_index": 976
+          },
+          "selected_GT_box": [
+            315,
+            185,
+            361,
+            283
+          ],
+          "RPN_proposals": 500,
+          "max_RPN_proposal_IoU": 0.9432032318156277,
+          "RPN_has_IoU50_proposal": true,
+          "highest_matching_bicycle_score": 0.9998915195465088,
+          "bicycle_detected_at_original_score_half": true,
+          "CPU_baseline_predictions_identical": null,
+          "wrong_class_matches_at_score_half": []
+        },
+        {
+          "sample": {
+            "scene_id": "town04-00",
+            "group_id": "town04-route-00",
+            "split": "validation",
+            "camera": "front_right",
+            "frame": 246314,
+            "input_manifest": "inputs/frames/town04-00/00246314.json",
+            "rgb": "inputs/rgb/town04-00/front_right/00246314.png",
+            "semantic": "labels/semantic_segmentation/town04-00/front_right/00246314.png",
+            "detection": "labels/visible/town04-00/front_right/00246314.json",
+            "instance": "labels/instance_segmentation/town04-00/front_right/00246314.png",
+            "verified_obstacle_actor_ids": [],
+            "split_index": 233
+          },
+          "selected_GT_box": [
+            0,
+            216,
+            8,
+            254
+          ],
+          "RPN_proposals": 310,
+          "max_RPN_proposal_IoU": 0.7261399028549045,
+          "RPN_has_IoU50_proposal": true,
+          "highest_matching_bicycle_score": 0.43646475672721863,
+          "bicycle_detected_at_original_score_half": false,
+          "CPU_baseline_predictions_identical": null,
+          "wrong_class_matches_at_score_half": []
+        },
+        {
+          "sample": {
+            "scene_id": "town04-02",
+            "group_id": "town04-route-02",
+            "split": "validation",
+            "camera": "rear_right",
+            "frame": 247608,
+            "input_manifest": "inputs/frames/town04-02/00247608.json",
+            "rgb": "inputs/rgb/town04-02/rear_right/00247608.png",
+            "semantic": "labels/semantic_segmentation/town04-02/rear_right/00247608.png",
+            "detection": "labels/visible/town04-02/rear_right/00247608.json",
+            "instance": "labels/instance_segmentation/town04-02/rear_right/00247608.png",
+            "verified_obstacle_actor_ids": [],
+            "split_index": 2603
+          },
+          "selected_GT_box": [
+            49,
+            223,
+            191,
+            360
+          ],
+          "RPN_proposals": 196,
+          "max_RPN_proposal_IoU": 0.7628919349503027,
+          "RPN_has_IoU50_proposal": true,
+          "highest_matching_bicycle_score": 0.804015576839447,
+          "bicycle_detected_at_original_score_half": true,
+          "CPU_baseline_predictions_identical": null,
+          "wrong_class_matches_at_score_half": [
+            {
+              "box": [
+                47.466854095458984,
+                224.09329223632812,
+                144.63568115234375,
+                358.0581970214844
+              ],
+              "label": 2,
+              "score": 0.7970829010009766
+            },
+            {
+              "box": [
+                29.604904174804688,
+                231.4599609375,
+                154.32705688476562,
+                358.09954833984375
+              ],
+              "label": 4,
+              "score": 0.5422296524047852
+            }
+          ]
+        },
+        {
+          "sample": {
+            "scene_id": "town04-02",
+            "group_id": "town04-route-02",
+            "split": "validation",
+            "camera": "rear",
+            "frame": 247796,
+            "input_manifest": "inputs/frames/town04-02/00247796.json",
+            "rgb": "inputs/rgb/town04-02/rear/00247796.png",
+            "semantic": "labels/semantic_segmentation/town04-02/rear/00247796.png",
+            "detection": "labels/visible/town04-02/rear/00247796.json",
+            "instance": "labels/instance_segmentation/town04-02/rear/00247796.png",
+            "verified_obstacle_actor_ids": [
+              4125
+            ],
+            "split_index": 2980
+          },
+          "selected_GT_box": [
+            266,
+            183,
+            283,
+            198
+          ],
+          "RPN_proposals": 235,
+          "max_RPN_proposal_IoU": 0.5270908598660254,
+          "RPN_has_IoU50_proposal": true,
+          "highest_matching_bicycle_score": null,
+          "bicycle_detected_at_original_score_half": false,
+          "CPU_baseline_predictions_identical": null,
+          "wrong_class_matches_at_score_half": []
+        }
+      ],
+      "selected_targets": 6,
+      "detected": 3,
+      "RPN_IoU50_covered": 6
+    },
+    {
+      "budget": {
+        "pre_per_level": 2000,
+        "post_total": 1000
+      },
+      "cases": [
+        {
+          "sample": {
+            "scene_id": "town04-01",
+            "group_id": "town04-pedestrian-route-01",
+            "split": "validation",
+            "camera": "left",
+            "frame": 246889,
+            "input_manifest": "inputs/frames/town04-01/00246889.json",
+            "rgb": "inputs/rgb/town04-01/left/00246889.png",
+            "semantic": "labels/semantic_segmentation/town04-01/left/00246889.png",
+            "detection": "labels/visible/town04-01/left/00246889.json",
+            "instance": "labels/instance_segmentation/town04-01/left/00246889.png",
+            "verified_obstacle_actor_ids": [],
+            "split_index": 1278
+          },
+          "selected_GT_box": [
+            543,
+            185,
+            640,
+            288
+          ],
+          "RPN_proposals": 232,
+          "max_RPN_proposal_IoU": 0.9173568008255804,
+          "RPN_has_IoU50_proposal": true,
+          "highest_matching_bicycle_score": 0.9708779454231262,
+          "bicycle_detected_at_original_score_half": true,
+          "CPU_baseline_predictions_identical": null,
+          "wrong_class_matches_at_score_half": []
+        },
+        {
+          "sample": {
+            "scene_id": "town04-01",
+            "group_id": "town04-pedestrian-route-01",
+            "split": "validation",
+            "camera": "rear",
+            "frame": 247225,
+            "input_manifest": "inputs/frames/town04-01/00247225.json",
+            "rgb": "inputs/rgb/town04-01/rear/00247225.png",
+            "semantic": "labels/semantic_segmentation/town04-01/rear/00247225.png",
+            "detection": "labels/visible/town04-01/rear/00247225.json",
+            "instance": "labels/instance_segmentation/town04-01/rear/00247225.png",
+            "verified_obstacle_actor_ids": [],
+            "split_index": 1948
+          },
+          "selected_GT_box": [
+            409,
+            167,
+            426,
+            182
+          ],
+          "RPN_proposals": 343,
+          "max_RPN_proposal_IoU": 0.7852034199622495,
+          "RPN_has_IoU50_proposal": true,
+          "highest_matching_bicycle_score": null,
+          "bicycle_detected_at_original_score_half": false,
+          "CPU_baseline_predictions_identical": null,
+          "wrong_class_matches_at_score_half": []
+        },
+        {
+          "sample": {
+            "scene_id": "town04-00",
+            "group_id": "town04-route-00",
+            "split": "validation",
+            "camera": "front",
+            "frame": 246686,
+            "input_manifest": "inputs/frames/town04-00/00246686.json",
+            "rgb": "inputs/rgb/town04-00/front/00246686.png",
+            "semantic": "labels/semantic_segmentation/town04-00/front/00246686.png",
+            "detection": "labels/visible/town04-00/front/00246686.json",
+            "instance": "labels/instance_segmentation/town04-00/front/00246686.png",
+            "verified_obstacle_actor_ids": [],
+            "split_index": 976
+          },
+          "selected_GT_box": [
+            315,
+            185,
+            361,
+            283
+          ],
+          "RPN_proposals": 519,
+          "max_RPN_proposal_IoU": 0.9432032318156277,
+          "RPN_has_IoU50_proposal": true,
+          "highest_matching_bicycle_score": 0.9998915195465088,
+          "bicycle_detected_at_original_score_half": true,
+          "CPU_baseline_predictions_identical": null,
+          "wrong_class_matches_at_score_half": []
+        },
+        {
+          "sample": {
+            "scene_id": "town04-00",
+            "group_id": "town04-route-00",
+            "split": "validation",
+            "camera": "front_right",
+            "frame": 246314,
+            "input_manifest": "inputs/frames/town04-00/00246314.json",
+            "rgb": "inputs/rgb/town04-00/front_right/00246314.png",
+            "semantic": "labels/semantic_segmentation/town04-00/front_right/00246314.png",
+            "detection": "labels/visible/town04-00/front_right/00246314.json",
+            "instance": "labels/instance_segmentation/town04-00/front_right/00246314.png",
+            "verified_obstacle_actor_ids": [],
+            "split_index": 233
+          },
+          "selected_GT_box": [
+            0,
+            216,
+            8,
+            254
+          ],
+          "RPN_proposals": 310,
+          "max_RPN_proposal_IoU": 0.7261399028549045,
+          "RPN_has_IoU50_proposal": true,
+          "highest_matching_bicycle_score": 0.43646475672721863,
+          "bicycle_detected_at_original_score_half": false,
+          "CPU_baseline_predictions_identical": null,
+          "wrong_class_matches_at_score_half": []
+        },
+        {
+          "sample": {
+            "scene_id": "town04-02",
+            "group_id": "town04-route-02",
+            "split": "validation",
+            "camera": "rear_right",
+            "frame": 247608,
+            "input_manifest": "inputs/frames/town04-02/00247608.json",
+            "rgb": "inputs/rgb/town04-02/rear_right/00247608.png",
+            "semantic": "labels/semantic_segmentation/town04-02/rear_right/00247608.png",
+            "detection": "labels/visible/town04-02/rear_right/00247608.json",
+            "instance": "labels/instance_segmentation/town04-02/rear_right/00247608.png",
+            "verified_obstacle_actor_ids": [],
+            "split_index": 2603
+          },
+          "selected_GT_box": [
+            49,
+            223,
+            191,
+            360
+          ],
+          "RPN_proposals": 196,
+          "max_RPN_proposal_IoU": 0.7628919349503027,
+          "RPN_has_IoU50_proposal": true,
+          "highest_matching_bicycle_score": 0.804015576839447,
+          "bicycle_detected_at_original_score_half": true,
+          "CPU_baseline_predictions_identical": null,
+          "wrong_class_matches_at_score_half": [
+            {
+              "box": [
+                47.466854095458984,
+                224.09329223632812,
+                144.63568115234375,
+                358.0581970214844
+              ],
+              "label": 2,
+              "score": 0.7970829010009766
+            },
+            {
+              "box": [
+                29.604904174804688,
+                231.4599609375,
+                154.32705688476562,
+                358.09954833984375
+              ],
+              "label": 4,
+              "score": 0.5422296524047852
+            }
+          ]
+        },
+        {
+          "sample": {
+            "scene_id": "town04-02",
+            "group_id": "town04-route-02",
+            "split": "validation",
+            "camera": "rear",
+            "frame": 247796,
+            "input_manifest": "inputs/frames/town04-02/00247796.json",
+            "rgb": "inputs/rgb/town04-02/rear/00247796.png",
+            "semantic": "labels/semantic_segmentation/town04-02/rear/00247796.png",
+            "detection": "labels/visible/town04-02/rear/00247796.json",
+            "instance": "labels/instance_segmentation/town04-02/rear/00247796.png",
+            "verified_obstacle_actor_ids": [
+              4125
+            ],
+            "split_index": 2980
+          },
+          "selected_GT_box": [
+            266,
+            183,
+            283,
+            198
+          ],
+          "RPN_proposals": 235,
+          "max_RPN_proposal_IoU": 0.5270908598660254,
+          "RPN_has_IoU50_proposal": true,
+          "highest_matching_bicycle_score": null,
+          "bicycle_detected_at_original_score_half": false,
+          "CPU_baseline_predictions_identical": null,
+          "wrong_class_matches_at_score_half": []
+        }
+      ],
+      "selected_targets": 6,
+      "detected": 3,
+      "RPN_IoU50_covered": 6
+    }
+  ],
+  "weights_identical": true,
+  "no_trained_model_or_gate_changed": true,
+  "limits": "Six biased GT-selected validation contexts, not full validation, GPU acceptance, physical occlusion rates or unseen-test performance. Proposal IoU50 alone is not a causal proof about all ROI classification/regression failures."
+}

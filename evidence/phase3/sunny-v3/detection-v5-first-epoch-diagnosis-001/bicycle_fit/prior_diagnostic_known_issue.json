@@ -1,0 +1,5 @@
+{
+  "issue": "Diagnostic evaluation targets omitted truncated/visible_pixels metadata, so truncation strata defaulted to not_truncated. Global AP/P/R unaffected; corrected version will explicitly carry canonical bbox-edge truncation and visible_pixels.",
+  "status": "superseded_by_corrected_diagnostic_002",
+  "official_model_metrics_unchanged": true
+}

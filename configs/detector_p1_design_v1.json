@@ -1,0 +1,16 @@
+{
+  "task": "experimental_design_only_not_a_training_config",
+  "status": "CPU_construction_and_transfer_only_not_integrated_or_trained",
+  "hypothesis": "Retain more low-level spatial detail for small-object ROI classification/regression by adding a stride2 feature level; selected RPN study already covered all6 targets and larger proposal budgets did not help.",
+  "feature_strides_with_pool": [2, 4, 8, 16, 32, 64],
+  "feature_channels": 256,
+  "anchor_sizes_per_level": [8, 16, 32, 64, 128, 256],
+  "anchor_aspect_ratios": [0.5, 1.0, 2.0],
+  "roi_feature_names": ["0", "1", "2", "3", "4"],
+  "transfer": "Preserve every old parameter; shift four FPN blocks i->i+1, seed only new lowest projection/output. RPN channels and learned head stay unchanged.",
+  "diagnostic_parent_snapshot": "artifacts/runs/sunny-detection-v5-first-epoch-snapshot-001/best.pt",
+  "diagnostic_parent_sha256": "b2b69ebac6652c43054148cf132d78fbbb504f4b41af5fa608cd0a2b8a2b8237",
+  "formal_initializer": "If needed after v5 finishes, freeze its actual selected completed checkpoint separately; do not call the first-epoch snapshot a completed run.",
+  "unchanged_quality": "Original eight categories, visible-box/ignore protocol, score=.5, max100 final detections and original gates remain fixed.",
+  "activation_policy": "Only if completed v5 still fails and after its whole batch exits. Requires versioned production loader/config/source integration, real720 GPU capacity/finite/exact reload validation, new run and complete original validation before heldout. No current GPU/production model change."
+}

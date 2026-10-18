@@ -1,0 +1,9 @@
+test_cannot_apply_twice_or_silently_use_incompatible_pyramid (test_experimental_p1_detector.P1PrototypeTests.test_cannot_apply_twice_or_silently_use_incompatible_pyramid) ... ok
+test_every_existing_parameter_preserved_with_explicit_fpn_index_shift (test_experimental_p1_detector.P1PrototypeTests.test_every_existing_parameter_preserved_with_explicit_fpn_index_shift) ... ok
+test_existing_coarse_features_exact_and_new_stride2_shape (test_experimental_p1_detector.P1PrototypeTests.test_existing_coarse_features_exact_and_new_stride2_shape) ... ok
+test_new_projection_participates_in_finite_cpu_training_and_eval (test_experimental_p1_detector.P1PrototypeTests.test_new_projection_participates_in_finite_cpu_training_and_eval) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.457s
+
+OK

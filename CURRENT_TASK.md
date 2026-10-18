@@ -76,3 +76,12 @@ seg state已completed、exact reloadtrue，best SHA3fe7bd08d885e481b7435fdf46694
 - 現在完整suite預期116項：原94 GPU曾全部過、新11prior/selection/identity＋6feature prototype＋5unusedTown focused CPU已各自通過，**尚未整批合跑116GPU**。canonical active batch全部來源於12:28再核對仍完全不變。native監看functions cell234僅read-only loop，已停止；不影響exec32462。
 
 12:35已另外整批跑完116項CPU回歸：113passed、3明確GPU skipped、0failure，10.506s；只在獨立測試shell/subprocess設定CUDA_VISIBLE_DEVICES=-1，原native GPU訓練不受影響。證據cpu-regression-20261018-001；仍不是116項GPU全過。det epoch0/2400updates仍正常，Phase3及全部新模型heldout狀態不變。
+
+## 13:20偵測第一輪成果及查錯（批次仍繼續）
+
+- det第1輪完成4800updates，mAP50 .7120289789350768、AP50:95 .4396834044368154；7類全部P/R合格，只有bicycle recall .3484224965706447失敗（P .5497835497835498）。pedestrianR .90909、traffic_lightR .53167、motorcycleR .50651。首輪2638.531s，maxgrad34.09是clip前；無fully-ignored skip。第2輪於13:20已到7600totalupdates，仍exec32462/native6608，不改4epoch設計。
+- 第一輪checkpoint已存sunny-detection-v5-first-epoch-snapshot-001，SHAb2b69ebac6652c43054148cf132d78fbbb504f4b41af5fa608cd0a2b8a2b8237，只有immutable intermediate snapshot，不是completed。完整GPU bicycle size-strata：small31/388=.07990、medium196/308=.63636、large27/33=.81818；truncated37/154=.24026。
+- CPU GT固定選例16train＋6val：train16/16找到、val3/6，3個val small全漏，3頁9contexts已實看。原001診斷漏truncation metadata已保留known_issue及原tool，修正另跑002；全部類AP/P/R/TP/FP/FN exact一致、PNG逐頁SHA相同，只有truncation分層修正。**正式GPU報告沒受影響**。現用sunny-detection-v5-first-bicycle-fit-002，不用001的truncation統計。
+- 6val CPU proposal study：pre/post500/150、1000/500、2000/1000，都6/6有IoU50 proposal，最終Bike仍3/6；baseline所有prediction逐欄exact重現，weights/buffers一致。只支持在這些有偏樣本先查ROI分類/回歸/feature，非完整split因果證明。兩診斷及firstepoch metadata封存detection-v5-first-epoch-diagnosis-001。
+- PHASE3_BICYCLE_RECOVERY.md與scripts/experimental_p1_detector.py準備stride2備案；4項CPU測試及**真firstepoch訓練參數**完整transfer通過：20,151,660→20,746,092（新P1 594,432params），原coarse features exact。**未整合production loader、未720 CUDA驗證、未訓練／評分P1**；若v5本身通過就不必用。原batch source contract仍完全不變。
+- 最新整批CPU suite120項於13:19完成：117pass/3GPU skip/0fail，12.049s，證據cpu-regression-20261018-002。這不是120項GPU全過；原94 GPU preflight仍是已實跑的GPU證據。兩個診斷CPU jobs已exit0，目前只有原batch GPU工作。

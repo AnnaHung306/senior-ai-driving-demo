@@ -1,0 +1,435 @@
+{
+  "checkpoint_sha256": "b2b69ebac6652c43054148cf132d78fbbb504f4b41af5fa608cd0a2b8a2b8237",
+  "checkpoint_epoch": 0,
+  "checkpoint_updates": 4800,
+  "tool_sha256": "134bb934270d258b887f0184b281741d6217c29fc56d69f2a79be0dcf9846344",
+  "main_audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+  "selection": "Per original train/validation group: maximum GT bicycle visible support and nearest256px box area, deterministic earliest index tie. Before inference, no model-score selection.",
+  "selected": [
+    {
+      "sample": {
+        "scene_id": "town01-00",
+        "group_id": "town01-route-00",
+        "split": "train",
+        "camera": "front_right",
+        "frame": 166909,
+        "input_manifest": "inputs/frames/town01-00/00166909.json",
+        "rgb": "inputs/rgb/town01-00/front_right/00166909.png",
+        "semantic": "labels/semantic_segmentation/town01-00/front_right/00166909.png",
+        "detection": "labels/visible/town01-00/front_right/00166909.json",
+        "instance": "labels/instance_segmentation/town01-00/front_right/00166909.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 1
+      },
+      "reasons": [
+        "max_visible_bicycle_support"
+      ]
+    },
+    {
+      "sample": {
+        "scene_id": "town01-00",
+        "group_id": "town01-route-00",
+        "split": "train",
+        "camera": "front_right",
+        "frame": 167477,
+        "input_manifest": "inputs/frames/town01-00/00167477.json",
+        "rgb": "inputs/rgb/town01-00/front_right/00167477.png",
+        "semantic": "labels/semantic_segmentation/town01-00/front_right/00167477.png",
+        "detection": "labels/visible/town01-00/front_right/00167477.json",
+        "instance": "labels/instance_segmentation/town01-00/front_right/00167477.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 1137
+      },
+      "reasons": [
+        "near_16x16_box_area"
+      ]
+    },
+    {
+      "sample": {
+        "scene_id": "town01-01",
+        "group_id": "town01-route-01",
+        "split": "train",
+        "camera": "front",
+        "frame": 168284,
+        "input_manifest": "inputs/frames/town01-01/00168284.json",
+        "rgb": "inputs/rgb/town01-01/front/00168284.png",
+        "semantic": "labels/semantic_segmentation/town01-01/front/00168284.png",
+        "detection": "labels/visible/town01-01/front/00168284.json",
+        "instance": "labels/instance_segmentation/town01-01/front/00168284.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 2440
+      },
+      "reasons": [
+        "max_visible_bicycle_support"
+      ]
+    },
+    {
+      "sample": {
+        "scene_id": "town01-01",
+        "group_id": "town01-route-01",
+        "split": "train",
+        "camera": "front_left",
+        "frame": 168324,
+        "input_manifest": "inputs/frames/town01-01/00168324.json",
+        "rgb": "inputs/rgb/town01-01/front_left/00168324.png",
+        "semantic": "labels/semantic_segmentation/town01-01/front_left/00168324.png",
+        "detection": "labels/visible/town01-01/front_left/00168324.json",
+        "instance": "labels/instance_segmentation/town01-01/front_left/00168324.png",
+        "verified_obstacle_actor_ids": [
+          3043
+        ],
+        "split_index": 2527
+      },
+      "reasons": [
+        "near_16x16_box_area"
+      ]
+    },
+    {
+      "sample": {
+        "scene_id": "town01-02",
+        "group_id": "town01-route-02",
+        "split": "train",
+        "camera": "front",
+        "frame": 169485,
+        "input_manifest": "inputs/frames/town01-02/00169485.json",
+        "rgb": "inputs/rgb/town01-02/front/00169485.png",
+        "semantic": "labels/semantic_segmentation/town01-02/front/00169485.png",
+        "detection": "labels/visible/town01-02/front/00169485.json",
+        "instance": "labels/instance_segmentation/town01-02/front/00169485.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 4736
+      },
+      "reasons": [
+        "max_visible_bicycle_support"
+      ]
+    },
+    {
+      "sample": {
+        "scene_id": "town01-02",
+        "group_id": "town01-route-02",
+        "split": "train",
+        "camera": "front",
+        "frame": 169153,
+        "input_manifest": "inputs/frames/town01-02/00169153.json",
+        "rgb": "inputs/rgb/town01-02/front/00169153.png",
+        "semantic": "labels/semantic_segmentation/town01-02/front/00169153.png",
+        "detection": "labels/visible/town01-02/front/00169153.json",
+        "instance": "labels/instance_segmentation/town01-02/front/00169153.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 4072
+      },
+      "reasons": [
+        "near_16x16_box_area"
+      ]
+    },
+    {
+      "sample": {
+        "scene_id": "town01-03",
+        "group_id": "town01-route-03",
+        "split": "train",
+        "camera": "front",
+        "frame": 169588,
+        "input_manifest": "inputs/frames/town01-03/00169588.json",
+        "rgb": "inputs/rgb/town01-03/front/00169588.png",
+        "semantic": "labels/semantic_segmentation/town01-03/front/00169588.png",
+        "detection": "labels/visible/town01-03/front/00169588.json",
+        "instance": "labels/instance_segmentation/town01-03/front/00169588.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 4840
+      },
+      "reasons": [
+        "max_visible_bicycle_support"
+      ]
+    },
+    {
+      "sample": {
+        "scene_id": "town01-03",
+        "group_id": "town01-route-03",
+        "split": "train",
+        "camera": "front",
+        "frame": 169628,
+        "input_manifest": "inputs/frames/town01-03/00169628.json",
+        "rgb": "inputs/rgb/town01-03/front/00169628.png",
+        "semantic": "labels/semantic_segmentation/town01-03/front/00169628.png",
+        "detection": "labels/visible/town01-03/front/00169628.json",
+        "instance": "labels/instance_segmentation/town01-03/front/00169628.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 4920
+      },
+      "reasons": [
+        "near_16x16_box_area"
+      ]
+    },
+    {
+      "sample": {
+        "scene_id": "town03-00",
+        "group_id": "town03-route-00",
+        "split": "train",
+        "camera": "front",
+        "frame": 167836,
+        "input_manifest": "inputs/frames/town03-00/00167836.json",
+        "rgb": "inputs/rgb/town03-00/front/00167836.png",
+        "semantic": "labels/semantic_segmentation/town03-00/front/00167836.png",
+        "detection": "labels/visible/town03-00/front/00167836.json",
+        "instance": "labels/instance_segmentation/town03-00/front/00167836.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 1672
+      },
+      "reasons": [
+        "max_visible_bicycle_support"
+      ]
+    },
+    {
+      "sample": {
+        "scene_id": "town03-00",
+        "group_id": "town03-route-00",
+        "split": "train",
+        "camera": "front_right",
+        "frame": 167636,
+        "input_manifest": "inputs/frames/town03-00/00167636.json",
+        "rgb": "inputs/rgb/town03-00/front_right/00167636.png",
+        "semantic": "labels/semantic_segmentation/town03-00/front_right/00167636.png",
+        "detection": "labels/visible/town03-00/front_right/00167636.json",
+        "instance": "labels/instance_segmentation/town03-00/front_right/00167636.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 1273
+      },
+      "reasons": [
+        "near_16x16_box_area"
+      ]
+    },
+    {
+      "sample": {
+        "scene_id": "town03-01",
+        "group_id": "town03-route-01",
+        "split": "train",
+        "camera": "left",
+        "frame": 170330,
+        "input_manifest": "inputs/frames/town03-01/00170330.json",
+        "rgb": "inputs/rgb/town03-01/left/00170330.png",
+        "semantic": "labels/semantic_segmentation/town03-01/left/00170330.png",
+        "detection": "labels/visible/town03-01/left/00170330.json",
+        "instance": "labels/instance_segmentation/town03-01/left/00170330.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 6134
+      },
+      "reasons": [
+        "max_visible_bicycle_support"
+      ]
+    },
+    {
+      "sample": {
+        "scene_id": "town03-01",
+        "group_id": "town03-route-01",
+        "split": "train",
+        "camera": "rear_left",
+        "frame": 170454,
+        "input_manifest": "inputs/frames/town03-01/00170454.json",
+        "rgb": "inputs/rgb/town03-01/rear_left/00170454.png",
+        "semantic": "labels/semantic_segmentation/town03-01/rear_left/00170454.png",
+        "detection": "labels/visible/town03-01/rear_left/00170454.json",
+        "instance": "labels/instance_segmentation/town03-01/rear_left/00170454.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 6381
+      },
+      "reasons": [
+        "near_16x16_box_area"
+      ]
+    },
+    {
+      "sample": {
+        "scene_id": "town03-02",
+        "group_id": "town03-route-02",
+        "split": "train",
+        "camera": "front_right",
+        "frame": 245026,
+        "input_manifest": "inputs/frames/town03-02/00245026.json",
+        "rgb": "inputs/rgb/town03-02/front_right/00245026.png",
+        "semantic": "labels/semantic_segmentation/town03-02/front_right/00245026.png",
+        "detection": "labels/visible/town03-02/front_right/00245026.json",
+        "instance": "labels/instance_segmentation/town03-02/front_right/00245026.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 7569
+      },
+      "reasons": [
+        "max_visible_bicycle_support"
+      ]
+    },
+    {
+      "sample": {
+        "scene_id": "town03-02",
+        "group_id": "town03-route-02",
+        "split": "train",
+        "camera": "front_right",
+        "frame": 244994,
+        "input_manifest": "inputs/frames/town03-02/00244994.json",
+        "rgb": "inputs/rgb/town03-02/front_right/00244994.png",
+        "semantic": "labels/semantic_segmentation/town03-02/front_right/00244994.png",
+        "detection": "labels/visible/town03-02/front_right/00244994.json",
+        "instance": "labels/instance_segmentation/town03-02/front_right/00244994.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 7505
+      },
+      "reasons": [
+        "near_16x16_box_area"
+      ]
+    },
+    {
+      "sample": {
+        "scene_id": "town03-03",
+        "group_id": "town03-route-03",
+        "split": "train",
+        "camera": "front",
+        "frame": 245528,
+        "input_manifest": "inputs/frames/town03-03/00245528.json",
+        "rgb": "inputs/rgb/town03-03/front/00245528.png",
+        "semantic": "labels/semantic_segmentation/town03-03/front/00245528.png",
+        "detection": "labels/visible/town03-03/front/00245528.json",
+        "instance": "labels/instance_segmentation/town03-03/front/00245528.png",
+        "verified_obstacle_actor_ids": [
+          3879
+        ],
+        "split_index": 8440
+      },
+      "reasons": [
+        "max_visible_bicycle_support"
+      ]
+    },
+    {
+      "sample": {
+        "scene_id": "town03-03",
+        "group_id": "town03-route-03",
+        "split": "train",
+        "camera": "front",
+        "frame": 245852,
+        "input_manifest": "inputs/frames/town03-03/00245852.json",
+        "rgb": "inputs/rgb/town03-03/front/00245852.png",
+        "semantic": "labels/semantic_segmentation/town03-03/front/00245852.png",
+        "detection": "labels/visible/town03-03/front/00245852.json",
+        "instance": "labels/instance_segmentation/town03-03/front/00245852.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 9088
+      },
+      "reasons": [
+        "near_16x16_box_area"
+      ]
+    },
+    {
+      "sample": {
+        "scene_id": "town04-01",
+        "group_id": "town04-pedestrian-route-01",
+        "split": "validation",
+        "camera": "left",
+        "frame": 246889,
+        "input_manifest": "inputs/frames/town04-01/00246889.json",
+        "rgb": "inputs/rgb/town04-01/left/00246889.png",
+        "semantic": "labels/semantic_segmentation/town04-01/left/00246889.png",
+        "detection": "labels/visible/town04-01/left/00246889.json",
+        "instance": "labels/instance_segmentation/town04-01/left/00246889.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 1278
+      },
+      "reasons": [
+        "max_visible_bicycle_support"
+      ]
+    },
+    {
+      "sample": {
+        "scene_id": "town04-01",
+        "group_id": "town04-pedestrian-route-01",
+        "split": "validation",
+        "camera": "rear",
+        "frame": 247225,
+        "input_manifest": "inputs/frames/town04-01/00247225.json",
+        "rgb": "inputs/rgb/town04-01/rear/00247225.png",
+        "semantic": "labels/semantic_segmentation/town04-01/rear/00247225.png",
+        "detection": "labels/visible/town04-01/rear/00247225.json",
+        "instance": "labels/instance_segmentation/town04-01/rear/00247225.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 1948
+      },
+      "reasons": [
+        "near_16x16_box_area"
+      ]
+    },
+    {
+      "sample": {
+        "scene_id": "town04-00",
+        "group_id": "town04-route-00",
+        "split": "validation",
+        "camera": "front",
+        "frame": 246686,
+        "input_manifest": "inputs/frames/town04-00/00246686.json",
+        "rgb": "inputs/rgb/town04-00/front/00246686.png",
+        "semantic": "labels/semantic_segmentation/town04-00/front/00246686.png",
+        "detection": "labels/visible/town04-00/front/00246686.json",
+        "instance": "labels/instance_segmentation/town04-00/front/00246686.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 976
+      },
+      "reasons": [
+        "max_visible_bicycle_support"
+      ]
+    },
+    {
+      "sample": {
+        "scene_id": "town04-00",
+        "group_id": "town04-route-00",
+        "split": "validation",
+        "camera": "front_right",
+        "frame": 246314,
+        "input_manifest": "inputs/frames/town04-00/00246314.json",
+        "rgb": "inputs/rgb/town04-00/front_right/00246314.png",
+        "semantic": "labels/semantic_segmentation/town04-00/front_right/00246314.png",
+        "detection": "labels/visible/town04-00/front_right/00246314.json",
+        "instance": "labels/instance_segmentation/town04-00/front_right/00246314.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 233
+      },
+      "reasons": [
+        "near_16x16_box_area"
+      ]
+    },
+    {
+      "sample": {
+        "scene_id": "town04-02",
+        "group_id": "town04-route-02",
+        "split": "validation",
+        "camera": "rear_right",
+        "frame": 247608,
+        "input_manifest": "inputs/frames/town04-02/00247608.json",
+        "rgb": "inputs/rgb/town04-02/rear_right/00247608.png",
+        "semantic": "labels/semantic_segmentation/town04-02/rear_right/00247608.png",
+        "detection": "labels/visible/town04-02/rear_right/00247608.json",
+        "instance": "labels/instance_segmentation/town04-02/rear_right/00247608.png",
+        "verified_obstacle_actor_ids": [],
+        "split_index": 2603
+      },
+      "reasons": [
+        "max_visible_bicycle_support"
+      ]
+    },
+    {
+      "sample": {
+        "scene_id": "town04-02",
+        "group_id": "town04-route-02",
+        "split": "validation",
+        "camera": "rear",
+        "frame": 247796,
+        "input_manifest": "inputs/frames/town04-02/00247796.json",
+        "rgb": "inputs/rgb/town04-02/rear/00247796.png",
+        "semantic": "labels/semantic_segmentation/town04-02/rear/00247796.png",
+        "detection": "labels/visible/town04-02/rear/00247796.json",
+        "instance": "labels/instance_segmentation/town04-02/rear/00247796.png",
+        "verified_obstacle_actor_ids": [
+          4125
+        ],
+        "split_index": 2980
+      },
+      "reasons": [
+        "near_16x16_box_area"
+      ]
+    }
+  ],
+  "scope": "Biased selected seen-train/validation CPU FP32 only; no full-split accuracy, official GPU acceptance, physical occlusion fractions, or heldout."
+}

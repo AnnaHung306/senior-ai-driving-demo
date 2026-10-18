@@ -1,0 +1,14 @@
+{
+  "status": "CPU_only_trained_parent_transfer_verified_P1_untrained",
+  "diagnostic_parent_sha256": "b2b69ebac6652c43054148cf132d78fbbb504f4b41af5fa608cd0a2b8a2b8237",
+  "seed": 20261018,
+  "original_parameter_count": 20151660,
+  "prototype_parameter_count": 20746092,
+  "new_P1_parameter_count": 594432,
+  "all_original_trained_tensors_preserved_under_explicit_FPN_index_mapping": true,
+  "CPU_focused_tests": 4,
+  "source_sha256": "a855a9e54262c1a35b4746a8406ae32558dfa8ad51288f2c2d93955959ceb047",
+  "design_sha256": "5bad154c2a2d850d6eae18e35c560a57d7c8e651678a08592726f0c00ecfd63c",
+  "active_batch_contract_unchanged": true,
+  "limits": "New P1 is seeded and untrained. No actual720 CUDA capacity/backward/production-loader test, formal run, trained P1 checkpoint or quality scoring. Current models unchanged."
+}

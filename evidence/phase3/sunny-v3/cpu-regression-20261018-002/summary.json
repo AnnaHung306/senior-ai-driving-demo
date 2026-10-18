@@ -1,0 +1,10 @@
+{
+  "status": "passed_CPU_regression_with_explicit_GPU_skips",
+  "total": 120,
+  "passed": 117,
+  "skipped": 3,
+  "failures": 0,
+  "wall_s": 12.049,
+  "log_sha256": "e9765a3a20fd7ab973527fbec0e549f6b60129df332fd50b64c0aad0474d4292",
+  "scope": "GPU hidden only from isolated CPU test process. Full120 GPU suite and actual720 P1 CUDA capacity remain unverified; original94 GPU batch preflight passed0skip."
+}

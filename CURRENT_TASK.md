@@ -1,6 +1,12 @@
 # 目前任務：批量完成晴天 Phase3（2026-10-18）
 
-## 最新接續：14:18（優先於全部歷史）
+## 最新接續：14:33（優先於全部歷史）
+
+**原GPU仍執行、不要結束回合。** 第三輪14400已正式驗完AP50:95 .4531501647391283／mAP50 .7085198797911534；七類P/R通過，bike P .6648649／R .33744856、小框22/388，仍唯一bike recall失敗。最後第4輪約15800/19200updates（14:32）；phase003及其後全批步驟仍待接續。磁碟job exec3278已完成31427base clone，正overlay22592addon（約16512），尚未final hash／原base不變核對；仍不能啟CARLA。
+
+新增scripts/check_sunny_detection_artifacts.py：對completed run做weights/source/config SHA、全部3600 canonical index/GT/ignore/float32序列化欄位、逐類/逐scene/size/truncation完整AP/PR重算exact、選模與update counts。已在舊detv3完成全量CPU/file-onlyrecheck exit0（exec76394），結果只有舊ped/bike/light R品質失敗，沒有新推論／heldout。證據detection-artifact-recheck-v3-001，3項focused tests全過；最新全suite仍139，不是142。**v5 completed後務必用此工具再查新run**，不能在training state先跑。原legacy v3尚未抽出perception_quality.py，checker允許該舊模組缺席但metric/data source仍exact、門檻照原config，不放鬆品質。
+
+目前read-only monitor **functions cell372**（每45s讀磁碟status）；舊367已terminate，只停監看不影響nativejobs。沒有校正watcher／新GPU模型。git最新e1581a2後還有上述新checker/recheck待commit。
 
 **持續完成整個Phase3，不要結束為完成。** 原唯一GPU batch exec32462/native19772（det native6608）仍活；det第三輪約14300/19200updates，14400後才完整val。第二輪仍只有bikeR .327846未過，其餘七類P/R過。seg v5完成但wall/margin未過；phase003／joint／統一val／RGB demo／3種bench／export待原batch串接，全部新heldout仍未開。
 

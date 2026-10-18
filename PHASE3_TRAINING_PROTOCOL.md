@@ -72,4 +72,6 @@ v5分割從v4 best再微調6輪，batch8/10272新updates，encoderLR5e-5、decod
 
 新配置在任何v5評分前凍結qualified_first_then_score：只用val，先選所有既定門檻通過的epoch，再最大原AP50:95/mIoU；若都沒過則最大均分並記失敗，同分最早。每epoch記全部gate、checkpoint/resume帶best_qualified，避免低於單類門檻的高均分蓋掉合格模型。所有門檻數值不變。
 
+遮擋的專項說明：現有動態畫面包含遮擋，偵測報告按實際可見框評分，另列小框及影像邊界截斷recall，錯例須實看遮擋／小物件情境。`visible_pixels_per_projected_bbox_area_not_visibility`只是投影矩形填充比例；細長自行車、空隙與視角同樣影響它，不能命名為物理遮擋率。若要量化25%/50%/75%遮擋的性能，須另外凍結同target/camera pose的無遮擋reference與受控occluder配對，驗證真實mask與depth前後關係，另行報告static controlled範圍，不能由目前bbox填充率捏造此結果。尚無這種受控遮擋率驗收或廣泛遮擋魯棒性保證。
+
 號誌v1-003同超參數重跑，是為凍結正確的720 detector production loader；舊phase/source的360硬編碼不能拿來做新det controlled補收推論。新phase保存config原bytes與data SHA。統一batch先完成94項實際GPU回歸/容量，再順序訓練與joint；任何val失敗整個tuple不開heldout。正式模型還必須實際RGB-only8view、3種暖機效能與final QA，code工具或資料批准不代表Phase3通過。

@@ -4,9 +4,9 @@
 
 實測已通過：CARLA 車輛加速／煞停與單鏡頭、五條固定規則導航路線、八鏡頭同步擷取，以及六場景資料 pilot；本輪另完成含移動自車、行人與兩輪車的 Phase 2 v2 基礎資料驗收。使用本地修正 CARLA 0.9.16 與 DX12／Epic；官方原樣 binary 的失敗紀錄保留。
 
-目前以 **ClearNoon理想晴天** 為範圍。Phase 3主資料007已完成18場、86,400 PNG的獨立audit與assistant視覺抽查。17類MobileUNet分割完成8輪，validation focus mIoU **50.85%**，但wall IoU6.19%、fence IoU0.73%、路緣F1 .4073仍不合格。四類號誌head完成16輪，GT crop macro recall **94.38%**、紅→綠1.33%，GT crop門檻通過；actual detector-box聯合macro recall36.02%未達40%。偵測v3-001已完成8輪，mAP50 60.21%，行人／自行車／號誌recall仍未達50%。這一輪尚未對development/lockbox評分，**整個Phase 3未通過**，BEV／occupancy、3D導航與AI駕駛閉環仍未完成。
+目前以 **ClearNoon理想晴天** 為範圍。Phase 3主資料007已完成18場、86,400 PNG的獨立audit與assistant視覺抽查。17類MobileUNet v5從v4微調6輪，另用核准的1024個train-only靜態視角，完整validation focus mIoU **59.00%**、fence IoU **61.47%**；wall IoU9.38%、可見邊界F1 .4945仍未達標。新高解析偵測v5正在訓練，號誌v1-003將依唯一批次接續。前一輪detector v3的mAP50 60.21%，行人／自行車／號誌recall未達50%；phase v1-002的GT crop macro recall94.38%通過，但actual detector-box joint macro36.02%未達40%。新模型尚未對development/lockbox評分，**整個Phase 3未通過**，BEV／occupancy、3D導航與AI駕駛閉環仍未完成。
 
-目前協議見 [PHASE3_TRAINING_PROTOCOL.md](PHASE3_TRAINING_PROTOCOL.md)，逐類成績見 [MobileUNet模型卡](evidence/phase3/sunny-v3/segmentation-v4-001/MODEL_CARD.md)與[號誌模型卡](evidence/phase3/sunny-v3/light-state-v1-002-validation/MODEL_CARD.md)，中斷接續見 [CURRENT_TASK.md](CURRENT_TASK.md)。權重與凍結source保留於本機artifacts/runs（ignored）；可追溯數值與實際檢視圖存於evidence/phase3。分割錯例工具逐張atomic保存並能重跑，CPU重建只作診斷，不取代完整GPU驗證成績。
+目前協議見 [PHASE3_TRAINING_PROTOCOL.md](PHASE3_TRAINING_PROTOCOL.md)，逐類成績見 [v5 MobileUNet模型卡](evidence/phase3/sunny-v3/sunny-segmentation-v5-001-completed-validation/MODEL_CARD.md)與[號誌模型卡](evidence/phase3/sunny-v3/light-state-v1-002-validation/MODEL_CARD.md)，泛化缺口依據見 [PHASE3_DOMAIN_RECOVERY.md](PHASE3_DOMAIN_RECOVERY.md)，中斷接續見 [CURRENT_TASK.md](CURRENT_TASK.md)。權重與凍結source保留於本機artifacts/runs（ignored）；可追溯數值與實際檢視圖存於evidence/phase3。分割錯例工具逐張atomic保存並能重跑，CPU重建只作診斷，不取代完整GPU驗證成績。
 
 歷史首輪Tiny U-Net為8類，validation focus mIoU27.50%、test26.22%，其模型卡與 [PHASE3.md](PHASE3.md)保留原始範圍與失敗。早期instance／ignore工程採集與同幾何晴天／夜雨診斷另見[圖文證據](evidence/phase3/visibility-v1/REPORT.md)及[執行規格](PHASE3_VISIBILITY.md)；不與目前17類、跨城鎮的新資料成績混算。
 

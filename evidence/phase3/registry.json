@@ -62,9 +62,9 @@
     "validation_red_as_green_rate": 0.013280212483399735,
     "heldout_opened": false,
     "limits": [
-      "actual detector-box joint validation pending",
+      "Actual detector-v3 boxes joint validation failed .360204<.4; evidence preserved",
       "yellow validation31crops/2groups",
-      "main heldout yellow coverage insufficient; frozen controlled supplement pending"
+      "Controlled heldout phase supplement captured/audited/reviewed, no model heldout scoring yet"
     ],
     "validation_joint_macro_correct_state_recall": 0.36020447731935823,
     "validation_joint_matched_red_as_green": 0.0,
@@ -86,5 +86,58 @@
       "traffic_light_recall"
     ],
     "heldout_opened": false
+  },
+  {
+    "run": "sunny-segmentation-v5-001",
+    "task": "sunny-17-class-segmentation",
+    "status": "completed",
+    "quality_acceptance": "validation_failed",
+    "model_card": "evidence/phase3/sunny-v3/sunny-segmentation-v5-001-completed-validation/MODEL_CARD.md",
+    "checkpoint_sha256": "3fe7bd08d885e481b7435fdf466945f142f8323447cca46bf31c32455835a53f",
+    "best_epoch_zero_based": 5,
+    "updates": 10272,
+    "validation_focus_macro_iou": 0.5900253284664799,
+    "validation_wall_iou": 0.09379871927291071,
+    "validation_fence_iou": 0.6147462883597083,
+    "validation_visible_margin_f1": 0.49446801091434905,
+    "failed_gates": [
+      "wall_IoU",
+      "visible_margin_F1"
+    ],
+    "heldout_opened": false,
+    "provenance": {
+      "data_audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+      "source_sha256": "edbdf26f4a4acd63f71b8034163ebf5eebf72e607c039e71a054a73217677132",
+      "config_sha256": "db034d5d761b8aeb3fcc40aa1cb8c3ea6f565f83a4db4c0d1f8bb72f0fc18d04",
+      "training_supplement": {
+        "root": "C:\\code\\senior_AI\\data\\segmentation-scenery-v1-003",
+        "audit_sha256": "06703e9bf4d88f3788f1cab169cd2eb04c9b2b4ee165300bdcbca7a0919ca68f",
+        "review_sha256": "607b9c5cc24710dfc582085abb22003d93eb6dd363c06babf2bd92e2d7c3dd54",
+        "plan_sha256": "8d2cab60f1287a195e77c4a84435db53070e99360c9ed10399d75dd25e657350",
+        "views": 1024,
+        "groups": 128,
+        "segmentation_pixels": [
+          120095787,
+          53649065,
+          29090967,
+          0,
+          0,
+          110748,
+          11482,
+          0,
+          0,
+          0,
+          1810512,
+          116028,
+          10162284,
+          2774763,
+          4485071,
+          0,
+          13078119
+        ],
+        "scope": "Stationary virtual rig anchors with no ego/NPC. Not dynamic episodes, collision-free routes, object detection or phase training. Nearby anchors/views are correlated.",
+        "sampling_repeats": 4
+      }
+    }
   }
 ]

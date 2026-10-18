@@ -1,0 +1,9 @@
+test_RGB_semantic_and_post_RNG_exact_production_for_all_scales (test_depth_ablation_components.DepthAblationTests.test_RGB_semantic_and_post_RNG_exact_production_for_all_scales) ... ok
+test_nonwall_summary_is_diagnostic_and_requires_all15_classes (test_depth_ablation_components.DepthAblationTests.test_nonwall_summary_is_diagnostic_and_requires_all15_classes) ... ok
+test_scale_keeps_metric_values_and_ignore_pixels_do_not_backpropagate (test_depth_ablation_components.DepthAblationTests.test_scale_keeps_metric_values_and_ignore_pixels_do_not_backpropagate) ... ok
+test_screening_keeps_wall_gate_separate_and_never_automatically_expands (test_depth_ablation_components.DepthAblationTests.test_screening_keeps_wall_gate_separate_and_never_automatically_expands) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.034s
+
+OK

@@ -1,0 +1,192 @@
+{
+  "status": "passed_CPU_real_three_root_loader_and_paired_RGB_semantic_identity",
+  "rows": [
+    {
+      "scene_id": "town01-00",
+      "group_id": "town01-route-00",
+      "split": "train",
+      "camera": "front",
+      "frame": 166909,
+      "input_manifest": "inputs/frames/town01-00/00166909.json",
+      "rgb": "inputs/rgb/town01-00/front/00166909.png",
+      "semantic": "labels/semantic_segmentation/town01-00/front/00166909.png",
+      "detection": "labels/visible/town01-00/front/00166909.json",
+      "instance": "labels/instance_segmentation/town01-00/front/00166909.png",
+      "verified_obstacle_actor_ids": [],
+      "data_root": "C:\\code\\senior_AI\\data\\sunny-cross-town-v3-007"
+    },
+    {
+      "scene_id": "town03-03",
+      "group_id": "town03-route-03",
+      "split": "train",
+      "camera": "front_left",
+      "frame": 246104,
+      "input_manifest": "inputs/frames/town03-03/00246104.json",
+      "rgb": "inputs/rgb/town03-03/front_left/00246104.png",
+      "semantic": "labels/semantic_segmentation/town03-03/front_left/00246104.png",
+      "detection": "labels/visible/town03-03/front_left/00246104.json",
+      "instance": "labels/instance_segmentation/town03-03/front_left/00246104.png",
+      "verified_obstacle_actor_ids": [],
+      "data_root": "C:\\code\\senior_AI\\data\\sunny-cross-town-v3-007"
+    },
+    {
+      "split": "train",
+      "town": "Town01",
+      "group_id": "town01-static-anchor-003",
+      "scene_id": "town01-static-anchor-003",
+      "camera": "front",
+      "frame": 135340,
+      "verified_obstacle_actor_ids": [],
+      "rgb": "raw/town01-static-anchor-003/front/rgb.png",
+      "semantic": "raw/town01-static-anchor-003/front/semantic.png",
+      "depth": "raw/town01-static-anchor-003/front/depth.png",
+      "instance": "raw/town01-static-anchor-003/front/instance.png",
+      "data_root": "C:\\code\\senior_AI\\data\\segmentation-scenery-v1-003"
+    },
+    {
+      "split": "train",
+      "town": "Town03",
+      "group_id": "town03-static-anchor-090",
+      "scene_id": "town03-static-anchor-090",
+      "camera": "front_left",
+      "frame": 60101,
+      "verified_obstacle_actor_ids": [],
+      "rgb": "raw/town03-static-anchor-090/front_left/rgb.png",
+      "semantic": "raw/town03-static-anchor-090/front_left/semantic.png",
+      "depth": "raw/town03-static-anchor-090/front_left/depth.png",
+      "instance": "raw/town03-static-anchor-090/front_left/instance.png",
+      "data_root": "C:\\code\\senior_AI\\data\\segmentation-scenery-v1-003"
+    },
+    {
+      "split": "train",
+      "town": "Town06",
+      "group_id": "town06-static-anchor-057",
+      "scene_id": "town06-static-anchor-057",
+      "camera": "front",
+      "frame": 278110,
+      "verified_obstacle_actor_ids": [],
+      "rgb": "raw/town06-static-anchor-057/front/rgb.png",
+      "semantic": "raw/town06-static-anchor-057/front/semantic.png",
+      "depth": "raw/town06-static-anchor-057/front/depth.png",
+      "instance": "raw/town06-static-anchor-057/front/instance.png",
+      "data_root": "C:\\code\\senior_AI\\data\\segmentation-expansion-v2-001"
+    },
+    {
+      "split": "train",
+      "town": "Town07",
+      "group_id": "town07-static-anchor-037",
+      "scene_id": "town07-static-anchor-037",
+      "camera": "front_left",
+      "frame": 293641,
+      "verified_obstacle_actor_ids": [],
+      "rgb": "raw/town07-static-anchor-037/front_left/rgb.png",
+      "semantic": "raw/town07-static-anchor-037/front_left/semantic.png",
+      "depth": "raw/town07-static-anchor-037/front_left/depth.png",
+      "instance": "raw/town07-static-anchor-037/front_left/instance.png",
+      "data_root": "C:\\code\\senior_AI\\data\\segmentation-expansion-v2-001"
+    }
+  ],
+  "valid_depth_pixels_per_view": [
+    173573,
+    143968,
+    212464,
+    211864,
+    176408,
+    155807
+  ],
+  "cache_bound_entries": 2,
+  "cache_misses": 6,
+  "post_RNG_exact_production": true,
+  "RGB_and_semantic_exact_production": true,
+  "geometry": [
+    {
+      "scale": 0.75,
+      "padding_lrtb": [
+        131,
+        29,
+        71,
+        19
+      ],
+      "crop_top_left": [
+        0,
+        0
+      ],
+      "flipped": true
+    },
+    {
+      "scale": 0.75,
+      "padding_lrtb": [
+        150,
+        10,
+        90,
+        0
+      ],
+      "crop_top_left": [
+        0,
+        0
+      ],
+      "flipped": true
+    },
+    {
+      "scale": 1.25,
+      "padding_lrtb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "crop_top_left": [
+        80,
+        15
+      ],
+      "flipped": false
+    },
+    {
+      "scale": 1.25,
+      "padding_lrtb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "crop_top_left": [
+        77,
+        120
+      ],
+      "flipped": true
+    },
+    {
+      "scale": 1.0,
+      "padding_lrtb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "crop_top_left": [
+        0,
+        0
+      ],
+      "flipped": true
+    },
+    {
+      "scale": 1.0,
+      "padding_lrtb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "crop_top_left": [
+        0,
+        0
+      ],
+      "flipped": true
+    }
+  ],
+  "sources": {
+    "scripts/depth_ablation_components.py": "6bd73fd7ae43d999e0d7dcafb5071c2dd7686377726b34f7fa231064f81f9e52",
+    "scripts/experimental_depth_branch.py": "93e51cd7a4c476f63f6ccea1cd209316825c044454b219b3003e3d606e6b3479"
+  },
+  "scope": "Six actual TRAIN views, including both approved supplemental roots. No GPU, training, full-data support or validation-quality claim."
+}

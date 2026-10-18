@@ -1,3 +1,23 @@
+## 最新授權與進度 18:40：已同意GPU小檢查＋一輪A/B，等待GPU但勿只排隊就結束
+
+使用者最新「照你建議的是看看吧」已授權先32步GPU/BF16檢查，再同parent的control／depth各1輪，視結果才考慮第二輪。此前「不自動擴大」的舊限制已由此明確授權更新，但**第一輪比較之前不擴到第二輪、不改原品質門檻、不開heldout**。本輪要等實際執行與完整val／QA後回覆，不能把排隊當完成。原det v6第二輪進行（18:37 updates6100，18:39 6500/19200），原batch79387／file checker59456／postQA45681仍活，CARLA關。
+
+新增唯一有界深度對照job **exec78878**：scripts/run_depth_ablation.py --config configs/depth_ablation_v1_1.json --output artifacts/runs/depth-auxiliary-AB-v1-001 --wait-for-batch artifacts/runs/phase3-recovery-batch-002 --wait-for-qa artifacts/runs/phase3-v6-final-qa-001。state waiting_for_existing_batch_and_QA、GPU_work_startedfalse。原生parent23304 creationFILETIME134367935912441472，ownawake22688開始18:39:51，6h至約00:39，parent退自清；不是automation／永久powerplan。**勿重複啟、別改它的config或frozen source**。它會等整個main terminal＋postQA completed_artifacts_pending_assistant_visual_review（GPU subprocess已退出）＋所有舊source/QA/output SHA守衛，才require_idle_gpu開始；最多等6h。若前批failure或任何source/config改動會raise保留，不自動retry。
+
+新增scripts/depth_ablation_components.py：DepthStream依三audited roots讀rawdepth+semantic，SHA核對、train-only、128LRU約141MiB；不把整split floatdepth塞RAM。paired_depth_geometry與原paired_geometry相同Python draws及RGB／semantic運算，另同步nearest depth／valid；padding255/0/false，不縮放公尺。nearest depth loss避免CUDA bilinear backward依賴；**這與先前CPU probe bilinear不同，明記於新design**。4項focused CPU tests過、log artifacts/reports/depth-ablation-components-CPU-tests-002.log；6個真train views跨main/oldscenery/newexpansion的CPU loader／aug/RNGexact也過，artifacts/reports/depth-ablation-real-loader-CPU-001.json。沒有新GPU預檢已跑，不混稱新增GPU tests。
+
+新runner凍結本身／component／原experimental_depth_branch／test／holdawake＋parent所有source，parentbest/config/state/prov/val/frames/stats皆SHA綁定。**queued之後這些都不能再改**（所有SRC、原train/eval/tools及兩套QA source照舊凍結）。深度head constructor原CPU fork會manual_seed_all；runner另包全CUDA+CPU fork並assert RNG無改，再每arm training前seedreset，防GPU公平性錯誤。初始完整3600GPU report需每arm exact parentv6。32 preflight使用兩個原dynamic train groups各4view、batch8，depth-only gradient到encoder、eligible conv BF16（GroupNorm輸出可FP32）、peak≤6144MiB、8view reloadexact；32updates丟棄，重新base0a3fe與隨機head作真正兩臂。
+
+兩組各1epoch/1712updates，與parent同encoder5e-5/decoder.00015、cosine1epoch/warmup100、CE+.5Dice；depth另head.003、aux.2 normalizedlog／.1..120m。全epochhash indices/geometry/actualaugRGB/semantic，必須兩組exact；相同更新量不是等FLOPs。state進度每100，arm train_progress.jsonl，control/depth final.pt包含base/aux/optimizer/schedule/RNG但status **completed_research_arm**，不冒充正式採用。完整val、原gates、nonWall15研究mIoU、每類/scene/margin、checkpointreload後比較。篩選gain≥.002且margin≥control-.01／無新nonwallgatefail只是review訊號，不是quality waiver。選每scene最大gain/loss共最多6contexts，原GPU batch重播matrix/boundaryexact後3pages；需實看。終局completed_first_epoch_AB_pending_assistant_review。**第二輪不自動啟**；有CANCEL marker可按使用者明示停止，無自動budget增長。
+
+CPU準備/新design/contract/rawsources tar封存evidence/phase3/sunny-v3/depth-auxiliary-AB-preparation-001，明確標GPU尚未跑。新codes/config/test＋上輪nonWall解讀README/CURRENT_TASK待本機commit。下一步持續原批與新queue，舊postQA完成後務必看其seg/det/phase全部pages與RGBdemo；新AB在GPU時可看圖片但不能再啟GPU。若新GPUpreflight失敗，保留failure查實際原因，不大量換設定或假稱通過；若比較無收益就停本分支並回報。
+
+## 最新分析：depth對其他IoU仍未證實，不自動擴大
+
+使用者只問研究價值／還需多少輪／假設不考慮Wall是否幫其他IoU，這不是移除原Wall品質門檻的操作指示。重算CPU小測unused_train_probe4張（原模型曾見過、只未參與24步）的15類non-Wall focus mIoU：.7734519193→.7677747363（-0.5677pp）；全部16focus .7792070685→.7739737309。pole .655033→.671695與barrel .788752→.797571升；ped .791086→.772237、bike .731573→.719956降，road .989766→.989628近不變。depthloss下降≠其他IoU提升，而且沒有no-depth續訓控制，不能歸因。已補prototype evidence README解讀，不改rawreports。
+
+回覆方向：工程接法已驗證；對當前IoU的實益未知，無可靠成功百分比。目前正式segv6其他15類及margin都過，若假設不要求Wall則depth對當前Phase3不是必要項目；depth也不會自動幫另一獨立detector的bike Recall。若後續要試，先一次GPU小檢查，再兩組各1輪／最多事前固定各2輪（總2–4）判斷方向，不保證成功、不自動啟動或排程。使用者仍要求少量可行性，不擴大到完整訓練。原batch／postQA仍保持來源凍結、GPU只detector。
+
 ## 最新接續 18:19：使用者要求有限depth分支小測，已完成，勿自動擴大
 
 最新授權範圍是「模擬器畫面為主、不考慮實際應用或擴及；先帶入depth分支看可不可用，不大量嘗試，再考慮正式納入」。已完成一次隔離CPU原型，**不要自動啟3424updates/B0B1/fullseg訓練或額外GPU排程**。既有原detector batch79387照舊在跑，18:19第一輪4200/19200updates，postQA45681/file checker59456依舊等原批次，不因小測而取消。CARLA關，所有50main frozen source/3configs/4queuedQAtools再核對0差異，三個prototype來源也exact。新code只scripts/experimental_depth_branch.py、scripts/probe_depth_branch.py、tests/test_experimental_depth_branch.py，不碰任何SRC或正式train/eval。

@@ -26,3 +26,9 @@
 ![其他原train情境](depth-page-1.png)
 
 GPU仍由原detector批次使用，本次未跑CUDA/BF16容量、現有隨機幾何增強整合或正式品質驗收。依使用者的小測範圍停在24updates；可保留此方向，待考慮採用後再做一次小型GPU檢查。exact source/config／selected bytes／完整before-after及steps保留，原型權重在本機ignored artifacts/runs/depth-branch-CPU-probe-001/prototype.pt，沒有宣稱已加入Git。
+
+## 對其他類IoU的解讀
+
+另外4張未參與24步更新、但仍屬原模型曾見過的train資料：排除other與Wall後15類mIoU **77.3452%→76.7775%**（-0.5677百分點）；全部16類為77.9207%→77.3974%。pole65.5033%→67.1695%，temporary obstacle78.8752%→79.7571%；pedestrian79.1086%→77.2237%，bicycle73.1573%→71.9956%，road98.9766%→98.9628%。完整逐類數值在initial/final.json。
+
+所以本小測尚無證據支持「其他IoU整體改善」。depth loss下降只證明深度分支能學習；語意權重也同時續訓、沒有不加depth的等更新對照，以上升降不可歸因於depth，也不能當獨立val結果。若決定往下試，先做一次小GPU檢查，再兩組同初始化／同資料／同更新各1輪，最多預先設定各2輪做方向判斷；這是建議，尚未啟動或排程，更不能保證第幾輪會成功。

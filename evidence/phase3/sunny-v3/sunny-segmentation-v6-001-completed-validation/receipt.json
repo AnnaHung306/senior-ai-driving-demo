@@ -1,0 +1,57 @@
+{
+  "status": "completed_GPU_training_validation_quality_failed",
+  "checkpoint_sha256": "0a3fe3f66fb93be373f2e82218632a4f8cc277bf6067f48bb4683a71f1b2af30",
+  "source_archive_sha256": "fe507a23d7b29d7d1b096fcf31d46105b41d1b7443b6f9530b43fb5f96bc154a",
+  "actual_GPU_visual_QA_pending": true,
+  "heldout_model_evaluation_opened": false,
+  "files": [
+    {
+      "path": "artifact_check.json",
+      "sha256": "d3cf649d88572979c9adccb3209966e8523c26e9692264e48d9cb30a44debbe0"
+    },
+    {
+      "path": "best_validation.json",
+      "sha256": "0aad5062137087b317eae07504d30113a73182451a6b89041da71de1dba5eaf1"
+    },
+    {
+      "path": "config.json",
+      "sha256": "b2a3ca820bc73bd26267b2be09cde25d630bfd41a99aaf227cc473bcec6d770d"
+    },
+    {
+      "path": "dataset_statistics.json",
+      "sha256": "ee9d6cd78e2d080957d4b96b6adab74c1b1af20403fb4f6b0d19981e95d74d96"
+    },
+    {
+      "path": "epochs.jsonl",
+      "sha256": "f3a1c3691a5907f4e8dc284e2553d2d28427ccfc256fc63888cfbffeeca35b6c"
+    },
+    {
+      "path": "initial_validation.json",
+      "sha256": "f33385596c75cb12e4022bbba972c33bdeba5d80943f5ceff4a15d40fc4a9350"
+    },
+    {
+      "path": "MODEL_CARD.md",
+      "sha256": "46581d94083b852bbda310bd9e1e93239cd4148072587dadee6e16ac0902d9f2"
+    },
+    {
+      "path": "overfit.json",
+      "sha256": "f7167a64c27b26a23da4f521624dc41e4257a566bed5a78b6cde76465432e9fa"
+    },
+    {
+      "path": "provenance.json",
+      "sha256": "97103bf2a9d1a0d1986411eeeede7193354f64b14ea5fa12bc3ba64572ef6bc0"
+    },
+    {
+      "path": "source_snapshot.tar.gz",
+      "sha256": "fe507a23d7b29d7d1b096fcf31d46105b41d1b7443b6f9530b43fb5f96bc154a"
+    },
+    {
+      "path": "state.json",
+      "sha256": "a7ba16c63da3df81dbff34fb35b133093e2fe7fa86f0a81e81d210f3c8268237"
+    },
+    {
+      "path": "validation.json",
+      "sha256": "0aad5062137087b317eae07504d30113a73182451a6b89041da71de1dba5eaf1"
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "checked_at_utc": "2026-10-18T09:31:13.605479+00:00",
+  "run": "C:\\code\\senior_AI\\artifacts\\runs\\sunny-segmentation-v6-001",
+  "checker_sha256": "74488214300b9e8e177a79d0095c3b9f54f28271e25e40f5549e184ccf5a0fa7",
+  "scope": "Stored-artifact consistency only; no model inference, GPU access, raw dataset re-audit, or heldout evaluation",
+  "artifact_integrity_passed": true,
+  "hashes": {
+    "best.pt": "0a3fe3f66fb93be373f2e82218632a4f8cc277bf6067f48bb4683a71f1b2af30",
+    "last.pt": "3b32c59a56283da92614566f5fed539f268bfdf3342cc4f88403ade66dcd60e6",
+    "validation.json": "0aad5062137087b317eae07504d30113a73182451a6b89041da71de1dba5eaf1",
+    "validation_frames.jsonl": "f94c3d58e762caf62980cf63c52766249ae6d2ae39f019da3b9c8dad8145fb44",
+    "config.json": "b2a3ca820bc73bd26267b2be09cde25d630bfd41a99aaf227cc473bcec6d770d"
+  },
+  "source_snapshot_files_verified": 39,
+  "data_signature_recorded_at_training": {
+    "audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+    "review_sha256": "2316ef3a7a5ed2c31a7e983957953c90846b26e670a41323532244af1f5976ee",
+    "image_inventory_sha256": "dfa830811b91994fbce03d7b321a533cd9dbd40227779b8dbe2511ec9163df59",
+    "metadata_inventory_sha256": "dc0f3d5a091f66eb4f481a9c8c0fadd255dce2eb36574498846a360faf6aae25",
+    "verified_images": 86400
+  },
+  "validation_frames": 3600,
+  "validation_groups": [
+    "town04-pedestrian-route-01",
+    "town04-route-00",
+    "town04-route-02"
+  ],
+  "updates": 10272,
+  "best_epoch_zero_based": 5,
+  "focus_macro_iou": 0.6065211770678386,
+  "visible_margin_f1": 0.6222117516687405,
+  "classes": [
+    {
+      "name": "other_annotated",
+      "support_pixels": 413857841,
+      "predicted_pixels": 394401266,
+      "iou": 0.8999062372458552,
+      "precision": 0.9706829465400347,
+      "recall": 0.9250485192571234
+    },
+    {
+      "name": "road",
+      "support_pixels": 198638171,
+      "predicted_pixels": 198219824,
+      "iou": 0.9522591421196936,
+      "precision": 0.9765752945073748,
+      "recall": 0.974518553133476
+    },
+    {
+      "name": "sidewalk",
+      "support_pixels": 31957757,
+      "predicted_pixels": 46441472,
+      "iou": 0.597929751586129,
+      "precision": 0.6316817003560955,
+      "recall": 0.9179689300472496
+    },
+    {
+      "name": "pedestrian",
+      "support_pixels": 399691,
+      "predicted_pixels": 254221,
+      "iou": 0.30416971645449453,
+      "precision": 0.5999150345565473,
+      "recall": 0.3815722645743837
+    },
+    {
+      "name": "rider",
+      "support_pixels": 604233,
+      "predicted_pixels": 509358,
+      "iou": 0.5537192734741031,
+      "precision": 0.7791474758421385,
+      "recall": 0.6568078870237144
+    },
+    {
+      "name": "car",
+      "support_pixels": 2651790,
+      "predicted_pixels": 2681971,
+      "iou": 0.6856783294665919,
+      "precision": 0.808956547255731,
+      "recall": 0.8181635800723285
+    },
+    {
+      "name": "truck",
+      "support_pixels": 1342377,
+      "predicted_pixels": 1179694,
+      "iou": 0.6931321324204194,
+      "precision": 0.8752117074427775,
+      "recall": 0.7691445845690145
+    },
+    {
+      "name": "bus",
+      "support_pixels": 17321696,
+      "predicted_pixels": 17326903,
+      "iou": 0.9564968740804728,
+      "precision": 0.9776178697370211,
+      "recall": 0.977911747209973
+    },
+    {
+      "name": "motorcycle",
+      "support_pixels": 446570,
+      "predicted_pixels": 455576,
+      "iou": 0.5612762319452569,
+      "precision": 0.7118900029852319,
+      "recall": 0.7262467250375081
+    },
+    {
+      "name": "bicycle",
+      "support_pixels": 201966,
+      "predicted_pixels": 143119,
+      "iou": 0.3971731420149967,
+      "precision": 0.6854226203369225,
+      "recall": 0.48571046611805946
+    },
+    {
+      "name": "road_line",
+      "support_pixels": 5694147,
+      "predicted_pixels": 6122693,
+      "iou": 0.7644572253314207,
+      "precision": 0.8361822158974818,
+      "recall": 0.899113949815486
+    },
+    {
+      "name": "traffic_light",
+      "support_pixels": 212553,
+      "predicted_pixels": 176782,
+      "iou": 0.574559381394935,
+      "precision": 0.8036395108099241,
+      "recall": 0.6683932948488142
+    },
+    {
+      "name": "wall",
+      "support_pixels": 2048168,
+      "predicted_pixels": 5321592,
+      "iou": 0.15645293506956517,
+      "precision": 0.18735596415508743,
+      "recall": 0.4867920990856219
+    },
+    {
+      "name": "fence",
+      "support_pixels": 8168548,
+      "predicted_pixels": 8714725,
+      "iou": 0.6057671054278483,
+      "precision": 0.7308463548763731,
+      "recall": 0.7797132366731517
+    },
+    {
+      "name": "pole",
+      "support_pixels": 8926242,
+      "predicted_pixels": 14800341,
+      "iou": 0.4434319498117063,
+      "precision": 0.49248628798485117,
+      "recall": 0.8165771217047443
+    },
+    {
+      "name": "temporary_obstacle",
+      "support_pixels": 432081,
+      "predicted_pixels": 325712,
+      "iou": 0.6705016400959368,
+      "precision": 0.9338341848012969,
+      "recall": 0.7039443993140175
+    },
+    {
+      "name": "terrain_or_ground",
+      "support_pixels": 136292335,
+      "predicted_pixels": 132120917,
+      "iou": 0.7873340023918463,
+      "precision": 0.8949229893704114,
+      "recall": 0.8675326165627729
+    }
+  ],
+  "gates": {
+    "detection_mAP50": 0.5,
+    "detection_per_class_recall_at_score_0_5": 0.5,
+    "segmentation_focus_mIoU": 0.5,
+    "segmentation_per_focus_class_IoU": 0.2,
+    "detection_per_class_precision_at_score_0_5": 0.5,
+    "minimum_visible_margin_f1": 0.5
+  },
+  "validation_quality_passed": false,
+  "validation_checks": {
+    "focus_mIoU": true,
+    "all_focus_present": true,
+    "visible_margin_f1": true,
+    "road/IoU": true,
+    "sidewalk/IoU": true,
+    "pedestrian/IoU": true,
+    "rider/IoU": true,
+    "car/IoU": true,
+    "truck/IoU": true,
+    "bus/IoU": true,
+    "motorcycle/IoU": true,
+    "bicycle/IoU": true,
+    "road_line/IoU": true,
+    "traffic_light/IoU": true,
+    "wall/IoU": false,
+    "fence/IoU": true,
+    "pole/IoU": true,
+    "temporary_obstacle/IoU": true,
+    "terrain_or_ground/IoU": true
+  },
+  "failed_validation_checks": [
+    "wall/IoU"
+  ],
+  "lockbox_opened_recorded": false,
+  "lockbox_marker_exists": false
+}

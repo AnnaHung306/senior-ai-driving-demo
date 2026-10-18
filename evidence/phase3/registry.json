@@ -169,5 +169,22 @@
     "validation_GT_crop_macro_recall": 0.9438117039805592,
     "validation_detector_box_joint_macro_recall": 0.46670520113725555,
     "joint_precision_scoring_addendum": "evidence/phase3/sunny-v3/phase3-recovery-batch-001/joint-ignore-v2-addendum"
+  },
+  {
+    "run": "sunny-segmentation-v6-001",
+    "task": "sunny-17-class-segmentation",
+    "status": "completed",
+    "quality_acceptance": "validation_failed",
+    "model_card": "evidence/phase3/sunny-v3/sunny-segmentation-v6-001-completed-validation/MODEL_CARD.md",
+    "checkpoint_sha256": "0a3fe3f66fb93be373f2e82218632a4f8cc277bf6067f48bb4683a71f1b2af30",
+    "updates": 10272,
+    "best_epoch_zero_based": 5,
+    "validation_focus_macro_iou": 0.6065211770678386,
+    "validation_wall_iou": 0.15645293506956517,
+    "validation_visible_margin_f1": 0.6222117516687405,
+    "failed_gates": [
+      "wall_IoU"
+    ],
+    "heldout_opened": false
   }
 ]

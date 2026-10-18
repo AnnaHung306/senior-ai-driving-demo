@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "training_approved": true,
+  "audit_sha256": "326cd9fda7d36d598b4cad880b483a3bb962fbed2bf192e003687eb23afcc18c",
+  "reviewer": "assistant_actual_image_review",
+  "reviewed_images": [
+    {
+      "path": "qa/review-0.png",
+      "sha256": "54129f6b32a46405796069484d828039292c060fe7c0270ee7e9eab28dac74ad"
+    },
+    {
+      "path": "qa/review-1.png",
+      "sha256": "e045ab53bd32eb6259f896f216397f723f4538363286bbaf2fb44f31612a45fb"
+    },
+    {
+      "path": "qa/review-2.png",
+      "sha256": "2f5dae942a7270a9022f07fcf7b041768e08802dab7f181d51401df40acd8498"
+    },
+    {
+      "path": "qa/review-3.png",
+      "sha256": "82a8c95654b142395a3ac6b43ed768b125946b76449a6274991a4fda370b0375"
+    }
+  ],
+  "reviewed_contexts": 32,
+  "observations": "Four pages actually viewed: eight large brick/stone/composite Wall contexts, eight rock/grass Terrain negatives, eight rough rail/picket/chain-link Fence contexts, and eight road/general scene views across Town06/07. Raw Wall/Fence separation aligns visible structures; rocky slopes/grass remain Terrain; roofs/buildings/vegetation other. No visible timing/pose mismatch in sampled panels. Main audit exhaustively checks all4096PNG; this is visual sampling, not all1024RGB inspected. Solid wood wall and highway-retaining-wall coverage not established.",
+  "scope": "Training-only static segmentation expansion. No new dynamic routes, detector/phase labels, heldout evaluation or model quality approval."
+}

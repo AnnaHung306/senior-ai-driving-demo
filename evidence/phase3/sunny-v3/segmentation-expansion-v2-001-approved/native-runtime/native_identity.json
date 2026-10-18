@@ -1,0 +1,8 @@
+{
+  "native_pid": 8064,
+  "parent_pid": 31472,
+  "creation_utc": "2026-10-18T07:13:44.9032916Z",
+  "start_filetime": 134367812249032916,
+  "executable": "C:\\code\\senior_AI\\artifacts\\carla-phase3-expansion-v1\\CarlaUE4\\Binaries\\Win64\\CarlaUE4-Win64-Shipping.exe",
+  "command_line": "\"C:\\code\\senior_AI\\artifacts\\carla-phase3-expansion-v1\\CarlaUE4\\Binaries\\Win64\\CarlaUE4-Win64-Shipping.exe\" CarlaUE4 -dx12 -RenderOffScreen -quality-level=Epic -carla-rpc-port=2000 -nosound -unattended"
+}

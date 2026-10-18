@@ -1,3 +1,15 @@
+## 最新接續 16:05（優先於全部歷史）
+
+**勿結束，使用者要盡量完成整個Phase3。** 新formal `data/segmentation-expansion-v2-001` 已1024views/128anchors/4096PNG，全auditpassed，4頁32contexts實看批准。auditSHA326cd9fda7d36d598b4cad880b483a3bb962fbed2bf192e003687eb23afcc18c，reviewSHA30ab42a79ae6ff032aaceadb9091130c1f3b93c7f973a688e1646f644d01956f；Wall8191123pixels（349views>=512）、Terrain31118819（1021views），0retry、maxpose7.9699e-5、maxresolvedclassdisagree4.34e-6。RGB/GT實看含磚石牆、岩面/草地、woodrail/picket/meshFence、路界；仍沒有確證新木實心Wall/高速擋土牆。Audit exact source隨root/audit_source保存。
+
+新plan v2_3把nativehint距離40→80m，因49個1.4m矮牆距native roadspawn47..69m，全被原40m略過。低牆probe `data/segmentation-expansion-v2-town06-low-probe-001` 4anchors32views完成，2pages8contexts實看只是前景woodFence+遠處薄磚石Wall，不是新木實心Wall，因此不加新formaltrain。review在artifacts/runs/town06-low-preview-review-001。exec13481/57290/99020都exit0、所有capturecleanuptrue。
+
+**CARLA已關**：exact handle核對PID8064、creation134367812249032916、fullimagepath後TerminateProcess/Wait；stopreceipt artifacts/runs/phase3-expansion-server-001/stop.json。沒有CarlaUE4 process，VRAM316MiB。nativeawake應自動released，待核對。下一步可GPU。
+
+新seg配置 `configs/sunny_segmentation_v6_1.json` SHA b2a3ca820bc73bd26267b2be09cde25d630bfd41a99aaf227cc473bcec6d770d，從v5best3fe7...，原scenery1024repeat2+新1024repeat2、main9600/13696=70.09%，6epochs/10272updates，架構/loss/幾何/photometry不改，encoder5e-5/decoder.00015。det v6配置前述ec142parent+conditionalbikehalfscale2/3，4epochs/19200updates。phase004重跑以凍結jointignorefix。**尚未啟GPUbatch002**，先等real-loader exec70869完成（002預期actual1024讀入repeat2=2048，support exact）；舊001wrapper SimpleNamespace無__len__錯誤非loader錯誤，已改fixture。
+
+原commit a396669已保存v5全批與修正/新source，815evidence raw bytes對Git全部exact。之後newlow-preparer/config、新segconfig和實際formaldata證據待封存commit。然後`run_phase3_recovery_batch.py`用segv6/detv6/light004/newoutput phase3-recovery-batch-002，一次full151 GPU檢查+720capacity（含2真實train groups成對縮放finiteCUDA）+兩主要模型+phase+joint+heldout conditional+RGBdemo+3bench+export。**不能在只啟動batch時結束**；繼續等完成、看QA與quality。全部SRC凍結直到此batch退出，不再新增未用備案。6h awake由batch自己綁parent，舊prior/calibrationwatcher已取消，不重跑。
+
 ## 最新接續 15:54（優先於下方歷史）
 
 仍持續完成Phase3，勿結束。原v5批次完畢品質失敗；此刻CARLA PID8064 exact FILETIME134367812249032916仍活，沒有DL GPU。Town06第二preview exec80942已exit0、review57751exit0：64views，6pages全實看，1272073Wall pixels/54676Fence，多位置磚石高低牆，未證明木實心Wall/擋土牆；原raw4/5身份audit兩頁5案例實看確認木圍牆/擋土牆確為Wall，先前主要診斷未逆轉。Town06兩次probe review已寫，probe不可train。舊batch八RGB surround也已實看，收據寫並收入evidence。

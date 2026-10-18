@@ -1,0 +1,8 @@
+{
+  "graphics_api": "dx12",
+  "quality_level": "Epic",
+  "launcher_pid": 31472,
+  "executable": "C:\\code\\senior_AI\\artifacts\\carla-phase3-expansion-v1\\CarlaUE4.exe",
+  "port": 2000,
+  "server_binary_sha256": "b0370d6dcd57b95299d12005cebad1dc6187804e83aeb51a184ccbc4b581fea8"
+}

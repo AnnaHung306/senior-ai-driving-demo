@@ -1,0 +1,652 @@
+{
+  "version": "sunny-static-segmentation-expansion-v2",
+  "split": "train",
+  "task": "segmentation_only",
+  "training_approved": false,
+  "source_audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+  "source_plan_sha256": "691e434338f0ddacc3be57cac2f499f25a894470c84d98783a9a9d044eefda52",
+  "policy_sha256": "31129735bd35f221c03bbc95a764cf54aa0e0b52d880e3607b41e118b7ac257b",
+  "weather": "ClearNoon",
+  "fixed_delta_s": 0.05,
+  "rig": {
+    "version": "surround-eight-v1",
+    "coordinate_system": "CARLA: x forward, y right, z up, meters; yaw degrees",
+    "width": 640,
+    "height": 360,
+    "horizontal_fov_deg": 90,
+    "sensor_tick_s": 0.0,
+    "cameras": [
+      {
+        "name": "front",
+        "position_m": [
+          1.6,
+          0.0,
+          1.7
+        ],
+        "yaw_deg": 0
+      },
+      {
+        "name": "front_right",
+        "position_m": [
+          1.1,
+          0.7,
+          1.7
+        ],
+        "yaw_deg": 45
+      },
+      {
+        "name": "right",
+        "position_m": [
+          0.0,
+          0.8,
+          1.7
+        ],
+        "yaw_deg": 90
+      },
+      {
+        "name": "rear_right",
+        "position_m": [
+          -1.2,
+          0.7,
+          1.7
+        ],
+        "yaw_deg": 135
+      },
+      {
+        "name": "rear",
+        "position_m": [
+          -1.6,
+          0.0,
+          1.7
+        ],
+        "yaw_deg": 180
+      },
+      {
+        "name": "rear_left",
+        "position_m": [
+          -1.2,
+          -0.7,
+          1.7
+        ],
+        "yaw_deg": -135
+      },
+      {
+        "name": "left",
+        "position_m": [
+          0.0,
+          -0.8,
+          1.7
+        ],
+        "yaw_deg": -90
+      },
+      {
+        "name": "front_left",
+        "position_m": [
+          1.1,
+          -0.7,
+          1.7
+        ],
+        "yaw_deg": -45
+      }
+    ]
+  },
+  "towns": {
+    "Town06": {
+      "opendrive_sha256": "a90b613175fa837fdc128ddfaf5ddad25797b128fdbd8cd945974bc21a60496e",
+      "inventory_root": "artifacts/runs/train-expansion-scout-town06-001",
+      "inventory_files": {
+        "report.json": "2fca4229bf5c316235694ffe3280bfa116663c09bb32c7ac973d92731337d147",
+        "policy.json": "31129735bd35f221c03bbc95a764cf54aa0e0b52d880e3607b41e118b7ac257b",
+        "walls.json": "c283ec4675b377453e00a75618eeaba319f2c1e8a1da75ed515a4060d578f749",
+        "fences.json": "acbe959fedc7c2ed96d0840405c0765bd57c445d6ff9d1e3926dbab7dbe2c7b5",
+        "road_spawn_points.json": "f9ab89d3f7d90c3ad9932f21c21e5e1bb963c1fa60967eebd78abe1de0fb8070",
+        "available_maps.json": "e267846df7f7c1fe702c3792393c9a6ad452ce7e9ee6fb47894ec6c56eff67f3"
+      },
+      "anchors": [
+        {
+          "spawn_index": 265,
+          "native_transform_matrix": [
+            [
+              -0.9999731779098511,
+              0.00732048973441124,
+              0.0,
+              600.9996337890625
+            ],
+            [
+              -0.00732048973441124,
+              -0.9999731779098511,
+              0.0,
+              -23.95966911315918
+            ],
+            [
+              0.0,
+              -0.0,
+              1.0,
+              0.29999998211860657
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "selection": {
+            "native_wall_id": 12437137005209153494,
+            "name_hint_not_material_GT": "other",
+            "native_origin_distance_m": 68.5098352036412,
+            "native_bbox_height_hint_m": 1.376530408859253
+          }
+        },
+        {
+          "spawn_index": 22,
+          "native_transform_matrix": [
+            [
+              -0.9999731779098511,
+              0.00732048973441124,
+              0.0,
+              551.4555053710938
+            ],
+            [
+              -0.00732048973441124,
+              -0.9999731779098511,
+              0.0,
+              -24.32238006591797
+            ],
+            [
+              0.0,
+              -0.0,
+              1.0,
+              0.29999998211860657
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "selection": {
+            "native_wall_id": 10462581327479344540,
+            "name_hint_not_material_GT": "other",
+            "native_origin_distance_m": 48.27115912161938,
+            "native_bbox_height_hint_m": 1.376530408859253
+          }
+        },
+        {
+          "spawn_index": 17,
+          "native_transform_matrix": [
+            [
+              -0.9999731779098511,
+              0.00732048973441124,
+              0.0,
+              570.9971923828125
+            ],
+            [
+              -0.00732048973441124,
+              -0.9999731779098511,
+              0.0,
+              -24.179317474365234
+            ],
+            [
+              0.0,
+              -0.0,
+              1.0,
+              0.29999998211860657
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "selection": {
+            "native_wall_id": 11711713552428250789,
+            "name_hint_not_material_GT": "other",
+            "native_origin_distance_m": 47.85129462269341,
+            "native_bbox_height_hint_m": 1.376530408859253
+          }
+        },
+        {
+          "spawn_index": 4,
+          "native_transform_matrix": [
+            [
+              -0.9999731779098511,
+              0.00732048973441124,
+              0.0,
+              586.9081420898438
+            ],
+            [
+              -0.00732048973441124,
+              -0.9999731779098511,
+              0.0,
+              -24.062835693359375
+            ],
+            [
+              0.0,
+              -0.0,
+              1.0,
+              0.29999998211860657
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "selection": {
+            "native_wall_id": 945882359457388478,
+            "name_hint_not_material_GT": "other",
+            "native_origin_distance_m": 48.01895574662966,
+            "native_bbox_height_hint_m": 1.376530408859253
+          }
+        },
+        {
+          "spawn_index": 270,
+          "native_transform_matrix": [
+            [
+              0.927374005317688,
+              -0.3741356432437897,
+              -0.0,
+              -340.9747314453125
+            ],
+            [
+              0.3741356432437897,
+              0.927374005317688,
+              0.0,
+              243.7528839111328
+            ],
+            [
+              0.0,
+              -0.0,
+              1.0,
+              0.29999998211860657
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "selection": {
+            "farthest_geometry_only": true
+          }
+        },
+        {
+          "spawn_index": 370,
+          "native_transform_matrix": [
+            [
+              -0.00667225755751133,
+              -0.9999777674674988,
+              0.0,
+              -4.87654447555542
+            ],
+            [
+              0.9999777674674988,
+              -0.00667225755751133,
+              -0.0,
+              -98.48838806152344
+            ],
+            [
+              0.0,
+              -0.0,
+              1.0,
+              0.29999998211860657
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "selection": {
+            "farthest_geometry_only": true
+          }
+        },
+        {
+          "spawn_index": 380,
+          "native_transform_matrix": [
+            [
+              0.010528087615966797,
+              0.9999445676803589,
+              0.0,
+              12.64985179901123
+            ],
+            [
+              -0.9999445676803589,
+              0.010528087615966797,
+              0.0,
+              346.2723083496094
+            ],
+            [
+              0.0,
+              -0.0,
+              1.0,
+              0.29999998211860657
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "selection": {
+            "farthest_geometry_only": true
+          }
+        },
+        {
+          "spawn_index": 191,
+          "native_transform_matrix": [
+            [
+              0.9999915957450867,
+              -0.004097271710634232,
+              -0.0,
+              269.2082214355469
+            ],
+            [
+              0.004097271710634232,
+              0.9999915957450867,
+              0.0,
+              144.03253173828125
+            ],
+            [
+              0.0,
+              -0.0,
+              1.0,
+              0.29999998211860657
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "selection": {
+            "farthest_geometry_only": true
+          }
+        },
+        {
+          "spawn_index": 227,
+          "native_transform_matrix": [
+            [
+              0.9999999403953552,
+              -0.0003411420329939574,
+              -0.0,
+              535.09765625
+            ],
+            [
+              0.0003411420329939574,
+              0.9999999403953552,
+              0.0,
+              251.70851135253906
+            ],
+            [
+              0.0,
+              -0.0,
+              1.0,
+              0.29999998211860657
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "selection": {
+            "farthest_geometry_only": true
+          }
+        },
+        {
+          "spawn_index": 414,
+          "native_transform_matrix": [
+            [
+              -0.9999972581863403,
+              0.0023452339228242636,
+              0.0,
+              -122.85398864746094
+            ],
+            [
+              -0.0023452339228242636,
+              -0.9999972581863403,
+              0.0,
+              135.35165405273438
+            ],
+            [
+              0.0,
+              -0.0,
+              1.0,
+              0.29999998211860657
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "selection": {
+            "farthest_geometry_only": true
+          }
+        },
+        {
+          "spawn_index": 316,
+          "native_transform_matrix": [
+            [
+              -0.9999591112136841,
+              -0.009042052552103996,
+              0.0,
+              -229.6258087158203
+            ],
+            [
+              0.009042052552103996,
+              -0.9999591112136841,
+              -0.0,
+              -22.149927139282227
+            ],
+            [
+              0.0,
+              -0.0,
+              1.0,
+              0.29999998211860657
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "selection": {
+            "farthest_geometry_only": true
+          }
+        },
+        {
+          "spawn_index": 41,
+          "native_transform_matrix": [
+            [
+              -0.9999933838844299,
+              -0.0036422251723706722,
+              0.0,
+              351.4617004394531
+            ],
+            [
+              0.0036422251723706722,
+              -0.9999933838844299,
+              -0.0,
+              -24.217079162597656
+            ],
+            [
+              0.0,
+              -0.0,
+              1.0,
+              0.29999998211860657
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "selection": {
+            "farthest_geometry_only": true
+          }
+        },
+        {
+          "spawn_index": 11,
+          "native_transform_matrix": [
+            [
+              0.9999995827674866,
+              0.0009416935499757528,
+              0.0,
+              120.26351165771484
+            ],
+            [
+              -0.0009416935499757528,
+              0.9999995827674866,
+              0.0,
+              41.76091384887695
+            ],
+            [
+              0.0,
+              -0.0,
+              1.0,
+              0.29999998211860657
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "selection": {
+            "farthest_geometry_only": true
+          }
+        },
+        {
+          "spawn_index": 318,
+          "native_transform_matrix": [
+            [
+              0.010845405049622059,
+              0.9999411702156067,
+              0.0,
+              671.6892700195312
+            ],
+            [
+              -0.9999411702156067,
+              0.010845405049622059,
+              0.0,
+              178.6830596923828
+            ],
+            [
+              0.0,
+              -0.0,
+              1.0,
+              0.29999998211860657
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "selection": {
+            "farthest_geometry_only": true
+          }
+        },
+        {
+          "spawn_index": 430,
+          "native_transform_matrix": [
+            [
+              0.9418079257011414,
+              0.3361515402793884,
+              0.0,
+              108.23493957519531
+            ],
+            [
+              -0.3361515402793884,
+              0.9418079257011414,
+              0.0,
+              232.3944854736328
+            ],
+            [
+              0.0,
+              -0.0,
+              1.0,
+              0.6248040795326233
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "selection": {
+            "farthest_geometry_only": true
+          }
+        },
+        {
+          "spawn_index": 222,
+          "native_transform_matrix": [
+            [
+              0.9999915957450867,
+              -0.004097271710634232,
+              -0.0,
+              411.7331848144531
+            ],
+            [
+              0.004097271710634232,
+              0.9999915957450867,
+              0.0,
+              141.11668395996094
+            ],
+            [
+              0.0,
+              -0.0,
+              1.0,
+              0.29999998211860657
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "selection": {
+            "farthest_geometry_only": true
+          }
+        }
+      ]
+    }
+  },
+  "runtime": {
+    "receipt_root": "artifacts/runs/additional-maps-isolated-runtime-002",
+    "files": {
+      "state.json": "0f4f1d832f308e731cd2ee833182b50313467fb00360865b99333203c8888d5a",
+      "contract.json": "a13ec3ecdad270ae52be4adf8cca411742486d4afa048de8bec2c9dbe9c8a080",
+      "runtime_inventory.json": "d36ae28ee4609509067fa430426600f5d66aa13b98bca97b956f47f009270bf7"
+    },
+    "capture_integrity_scope": "Full distribution verified at preparation. Capture rechecks manifest, binary and main maps; no claim of continuously rehashing every asset."
+  },
+  "minimum_anchor_separation_m": 8,
+  "minimum_pixels_per_target_class": 100000,
+  "minimum_views_per_target_class": 16,
+  "target_classes": [
+    12,
+    16
+  ],
+  "scope": "Previously unused Town06/07 static virtual road rig, sunny train-only segmentation. No ego/NPC, dynamics, new route independence, or detection/phase training. Preview probe cannot pass training audit.",
+  "selection": "Native Walls origins within80m; low-only=True; height/name strata with farthest separation, then farthest road geometry. Before RGB; hints are not material GT.",
+  "preparer_sha256": "f90d8edcbeca7586e3bb875ebbbd9bc7b941fbb4dd5af03f549f4d5b26510e45"
+}

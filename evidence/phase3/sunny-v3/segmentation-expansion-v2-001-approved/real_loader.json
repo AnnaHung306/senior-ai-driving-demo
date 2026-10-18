@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "data": {
+    "root": "C:\\code\\senior_AI\\data\\segmentation-expansion-v2-001",
+    "plan_sha256": "aff1cc0dc406830104ae50c960f2bc77b9a8d8488ea873e8c43604459e1c44ff",
+    "audit_sha256": "326cd9fda7d36d598b4cad880b483a3bb962fbed2bf192e003687eb23afcc18c",
+    "review_sha256": "30ab42a79ae6ff032aaceadb9091130c1f3b93c7f973a688e1646f644d01956f",
+    "views": 1024,
+    "groups": 128,
+    "segmentation_pixels": [
+      132756453,
+      50414065,
+      7358226,
+      0,
+      0,
+      180250,
+      0,
+      0,
+      0,
+      0,
+      1664942,
+      34453,
+      8191123,
+      2102182,
+      1721925,
+      0,
+      31118819
+    ],
+    "scope": "Previously unused Town06/07 static virtual road rig, sunny train-only segmentation. No ego/NPC, dynamics, new route independence, or detection/phase training. Preview probe cannot pass training audit."
+  },
+  "sampling": {
+    "unique_views": 1024,
+    "sampling_repeats": 2,
+    "sampled_views_per_epoch": 2048,
+    "unique_groups": 128
+  },
+  "loaded_samples": 2048,
+  "loaded_support": [
+    265512906,
+    100828130,
+    14716452,
+    0,
+    0,
+    360500,
+    0,
+    0,
+    0,
+    0,
+    3329884,
+    68906,
+    16382246,
+    4204364,
+    3443850,
+    0,
+    62237638
+  ],
+  "prior_probe_failure": "001 wrapper fixture SimpleNamespace lacked __len__; no dataset/module mutation or successful loader receipt was produced",
+  "scope": "Actual1024 SHA-approved expansion RGB/semantic/instance views loaded and support recomputed; no model inference or GPU/heldout"
+}

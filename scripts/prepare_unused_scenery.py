@@ -22,7 +22,8 @@ RUNTIME_FILES=['state.json','contract.json','runtime_inventory.json']
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 
 
-def select_anchors(spawns,walls,count):
+def select_anchors(spawns,walls,count,maximum_hint_distance_m=40):
+    if maximum_hint_distance_m not in [40,80]:raise ValueError('Explicit40m or80m preview distance required')
     if not 4<=count<=96 or len(spawns)<count:raise ValueError('4..96 available native poses required')
     positions=np.asarray([s['native_transform_matrix'] for s in spawns],dtype=float)[:,:2,3]
     if not np.isfinite(positions).all():raise ValueError('Nonfinite native poses')
@@ -35,7 +36,7 @@ def select_anchors(spawns,walls,count):
         height=2*float(obj['bounding_box_as_returned']['extent_m'][2])
         if not .2<=height<=6:continue
         origin=np.asarray(obj['native_transform_matrix'])[:2,3];dist=np.linalg.norm(positions-origin,axis=1)
-        valid=np.flatnonzero((dist>=3)&(dist<=40))
+        valid=np.flatnonzero((dist>=3)&(dist<=maximum_hint_distance_m))
         if not len(valid):continue
         index=min(valid,key=lambda i:(dist[i],int(i)));hint=next((k for k in ['wood','concrete','stone'] if k in obj['native_name'].casefold()),'other')
         buckets[('low' if height<=1.6 else 'tall',hint)].append((int(index),{'native_wall_id':obj['native_id'],'name_hint_not_material_GT':hint,
@@ -136,7 +137,7 @@ def main(args):
         if town in towns:raise ValueError('Duplicate native town inventory')
         towns[town]={'opendrive_sha256':report['opendrive_sha256'],'inventory_root':scout.resolve().relative_to(ROOT).as_posix(),
             'inventory_files':{name:sha(scout/name) for name in INVENTORY_FILES},
-            'anchors':select_anchors(read(scout/'road_spawn_points.json'),read(scout/'walls.json'),args.anchors)}
+            'anchors':select_anchors(read(scout/'road_spawn_points.json'),[o for o in read(scout/'walls.json') if not args.low_only or .2<=2*float(o['bounding_box_as_returned']['extent_m'][2])<=1.6],args.anchors,args.maximum_hint_distance_m)}
     plan={'version':VERSION,'split':'train','task':'segmentation_only','training_approved':False,
         'source_audit_sha256':sha(MAIN/'audit.json'),'source_plan_sha256':sha(MAIN/'plan.json'),'policy_sha256':sha(POLICY),
         'weather':'ClearNoon','fixed_delta_s':.05,'rig':read(MAIN/'rig.json'),'towns':towns,
@@ -144,7 +145,7 @@ def main(args):
             'capture_integrity_scope':'Full distribution verified at preparation. Capture rechecks manifest, binary and main maps; no claim of continuously rehashing every asset.'},
         'minimum_anchor_separation_m':8,'minimum_pixels_per_target_class':100000,'minimum_views_per_target_class':16,'target_classes':[12,16],
         'scope':'Previously unused Town06/07 static virtual road rig, sunny train-only segmentation. No ego/NPC, dynamics, new route independence, or detection/phase training. Preview probe cannot pass training audit.',
-        'selection':'Native Walls origins and low/tall height plus name-hint strata; farthest separation within each stratum, then farthest road geometry. Before RGB; hints are not material GT.',
+        'selection':f'Native Walls origins within{args.maximum_hint_distance_m}m; low-only={args.low_only}; height/name strata with farthest separation, then farthest road geometry. Before RGB; hints are not material GT.',
         'preparer_sha256':sha(Path(__file__))}
     validate_expansion_plan(plan);write_json(args.output,plan)
     print(json.dumps({'plan_sha256':sha(args.output),'towns':list(towns),'training_approved':False}),flush=True)
@@ -152,4 +153,5 @@ def main(args):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--scout',nargs='+',type=Path,required=True);p.add_argument('--runtime-receipt',type=Path,required=True)
+    p.add_argument('--maximum-hint-distance-m',type=int,choices=[40,80],default=40);p.add_argument('--low-only',action='store_true')
     p.add_argument('--anchors',type=int,default=64);p.add_argument('--output',type=Path,required=True);main(p.parse_args())

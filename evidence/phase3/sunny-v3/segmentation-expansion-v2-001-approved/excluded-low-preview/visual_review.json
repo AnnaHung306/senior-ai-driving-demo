@@ -1,0 +1,16 @@
+{
+  "status": "reviewed_probe_only_not_added_to_training",
+  "training_approved": false,
+  "report_sha256": "254fff5e17befe3096b5ff961268ac66c30898bb8c332a1583250f038c6df8aa",
+  "reviewed_images": [
+    {
+      "path": "page-00.png",
+      "sha256": "5c0254a5ea73edf5b53475f643845ddeda3c3ae4de089144223b9a7241e8801b"
+    },
+    {
+      "path": "page-01.png",
+      "sha256": "02540be59adc2a24afcdd3d041138c576beacb340f2ee3fc566b7fd3563cc57f"
+    }
+  ],
+  "observations": "Both pages/eight contexts actually viewed. Foreground rough wood rails are raw5 Fence. Wall is distant thin masonry boundary behind a field/buildings, not evidence of new solid wood or highway-retaining-wall material coverage. Additional capture not justified by this preview; keep probe excluded from training."
+}

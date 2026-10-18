@@ -1,0 +1,15 @@
+{
+  "status": "native_requested_full_map_observed",
+  "requested_map": "Town06",
+  "tool_sha256": "8143612c563f68cda3ae8ecafd89361d2ad82874fa8ba6c21b0cf650c94ae2a3",
+  "started_utc": "2026-10-18T08:02:56.210223+00:00",
+  "scope": "Native map preparation only; no image capture or training approval",
+  "load_RPC_called": true,
+  "initial_map": "Carla/Maps/Town07",
+  "observed_map": "Carla/Maps/Town06",
+  "opendrive_sha256": "a90b613175fa837fdc128ddfaf5ddad25797b128fdbd8cd945974bc21a60496e",
+  "road_spawns": 436,
+  "weather": "WeatherParameters(cloudiness=10.000000, precipitation=0.000000, precipitation_deposits=40.000000, wind_intensity=20.000000, sun_azimuth_angle=285.000000, sun_altitude_angle=25.000000, fog_density=10.000000, fog_distance=60.000000, fog_falloff=1.000000, wetness=50.000000, scattering_intensity=1.000000, mie_scattering_scale=0.030000, rayleigh_scattering_scale=0.033100, dust_storm=0.000000)",
+  "server_version": "0.9.16",
+  "finished_utc": "2026-10-18T08:03:01.613829+00:00"
+}

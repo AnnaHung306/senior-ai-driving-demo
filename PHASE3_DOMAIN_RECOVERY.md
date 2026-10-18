@@ -13,6 +13,8 @@ v6分割六輪已完成，原Town01/03補景與新Town06/07各1024視圖、各�
 
 下文保留先前診斷與規劃的時間背景；其中「尚未採集／尚未native驗證」描述準備當時的狀態，以本節及實測收據為準。
 
+使用者要求先參考指定影片及相關文獻後提出改進。已實看關鍵架構／Spatial RNN／Depth-Pose CNN畫面並對照原文，具體方案見[PHASE3_VIDEO_RESEARCH_PLAN.md](PHASE3_VIDEO_RESEARCH_PLAN.md)。64個原train視角／256PNG的depth可行性檢查通過，並非新模型；建議下一個主要方法先以同初始權重、等更新量B0續訓對照B1 depth輔助，GT depth只在train loss，正式仍RGB-only。外觀泛化、輕量context及時序各分支另做，不一次移植整套Tesla／BEV。現有GPU批次與排隊QA的50個source、3個config及4個QA工具已重查零變動。
+
 # Phase3 牆面泛化缺口：資料恢復依據
 
 這是後續實驗的決策依據，並非新資料已採集或模型已通過。已完成但品質未過的 v5 批次、原主資料及品質門檻不變。

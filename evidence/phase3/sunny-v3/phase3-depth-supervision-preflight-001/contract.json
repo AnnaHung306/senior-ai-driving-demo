@@ -1,0 +1,15 @@
+{
+  "scope": "64 fixed first train views, one per original train group/camera. No model inference, parameter changes or heldout scoring. Not a complete depth-training pipeline or full-data depth-quality claim.",
+  "main_data": {
+    "audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+    "review_sha256": "2316ef3a7a5ed2c31a7e983957953c90846b26e670a41323532244af1f5976ee",
+    "image_inventory_sha256": "dfa830811b91994fbce03d7b321a533cd9dbd40227779b8dbe2511ec9163df59",
+    "metadata_inventory_sha256": "dc0f3d5a091f66eb4f481a9c8c0fadd255dce2eb36574498846a360faf6aae25",
+    "verified_images": 86400
+  },
+  "parent_config_sha256": "b2a3ca820bc73bd26267b2be09cde25d630bfd41a99aaf227cc473bcec6d770d",
+  "tool_sha256": "4e7ccd42afaead8afed69fd8241750aba1258f66e59b2c4f7fb150d387e52145",
+  "selection": "First canonical training-index view for each of eight train groups and eight cameras, before reading depth values.",
+  "tentative_valid_mask": "semantic != raw0 and raw11/sky, finite, depth > .1 and < 120 metres; proposed pilot mask, not frozen production range or semantic quality gate.",
+  "packed_RGB_formula": "(R + 256*G + 65536*B)*1000/16777215; geometry convention remains axial as in original audited native object checks."
+}

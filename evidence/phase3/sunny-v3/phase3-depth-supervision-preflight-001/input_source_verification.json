@@ -1,0 +1,12 @@
+{
+  "status": "passed_selected_import_source_bytes_match_completed_parent",
+  "parent_provenance_sha256": "97103bf2a9d1a0d1986411eeeede7193354f64b14ea5fa12bc3ba64572ef6bc0",
+  "source": {
+    "src/senior_ai/sunny_data.py": "bc9e5a0a3b66dc6fe4865f1bf3d591740d7617aeddbbd52baff318ff87004483",
+    "src/senior_ai/instance_labels.py": "53439db03595dc6119813ee859897eb1affbcf5a8d5a701a21effa787b3196c8",
+    "src/senior_ai/dataset.py": "5623aee9fd60b7a378e810f1ee558237985bc93c278f86607f29d517722045bd"
+  },
+  "tool_sha256": "4e7ccd42afaead8afed69fd8241750aba1258f66e59b2c4f7fb150d387e52145",
+  "report_sha256": "623767fb37da49435bacd4b7533eb769198b05b5e5c54de3fca4ad45b98bb75b",
+  "scope": "Additional source attribution for the CPU-only 64-view train depth feasibility check; no production target compiler or training result."
+}

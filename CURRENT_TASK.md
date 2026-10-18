@@ -1,3 +1,15 @@
+## 最新接續 18:09：使用者要求先看影片／文獻並提出Wall改進方向
+
+最新使用者明確要求參考 https://www.youtube.com/watch?v=--cGYatMESY 的深度影像處理、框架及訓練，先檢視後提出可行方案，避免Wall問題反覆。這一輪重點是研究與方案，不在進行中的v6改模型。原GPU batch exec79387持續，18:06 det第一輪2700/19200updates；segv6已完但Wallfail。postQA45681與file checker59456仍等待。CPU Wall-only study25474約3100/3600，還沒讀完整grid，不根據partial選alpha。**保持所有model／train／eval／frozen QA source不變，CARLA仍關。**
+
+已用computer-use技能／CUA背景browser實際檢視影片關鍵畫面與燒錄字幕，沒有可擷取CC，不假稱完整逐字觀看。1:52 RegNet/BiFPN/multihead、5:37車體座標warp、7:30時間、9:22 SpatialRNN、11:15離線標註、15:15 DepthCNN/PoseCNN；後者Figure2/3與Zhou CVPR2017原文實核對。primary web另讀PAD-Net、Monodepth2、MixStyle、TLDR、SegFormer官方、RegNet/BiFPN、NetWarp、單目depth捷徑研究，沒有用二手文章作技術依據。瀏覽器tab1暫停，agent-created會turn結束清理，非user原tab。
+
+新增 PHASE3_VIDEO_RESEARCH_PLAN.md 完整改進與對照設計：保留RGB-only、優先小型train-only depth auxiliary；B0同v6init續訓 vs B1只加depth、各3424updates提案，head初始化RNG要隔離、不能假稱equalGPUcompute。depth有助ground/vertical幾何但不能單憑距離或法向判Wall/Fence，反覆相同磚牆不等於外觀缺口補齊。style-only、context/SegFormer與因果時序後續另分支，BEV是Phase4，不能用GT depth/ego pose作弊。depth正確packed米解碼、resize不縮放米、valid masks/K/normal方向、動態遮擋／低視差／5Hz與序列邊界、原gates/heldout隔離、全部GPU驗證寫清楚。**尚未整合新depth loader/head、沒有新GPU訓練，不要把提案說已完成。**
+
+有限可行性實測已完成CPU/file-only（未載模型/GPU），artifacts/runs/phase3-depth-supervision-preflight-001/tool.py/contract/report/input_source_verification.json。原8train groups×8cams固定第一張64view，256PNG及index/manifests/calibs/原inventory與audit綁SHA；.1..120m/排sky/raw0提案mask有效75.8883%，selected Wall1268814px/Fence198575/Terrain485910，距離分位重疊不能threshold直接分類。只是選定train子集，不是full-depth audit或depth模型品質。exacttool與原bytes已封存evidence/phase3/sunny-v3/phase3-depth-supervision-preflight-001。依賴3source追加核對與v6parentexact。主batch50source/3config、queuedQA4tools、CPUstudytool再次0變動，receipt artifacts/reports/phase3-video-research-source-freeze-001.json。
+
+此新plan／depthpreflight evidence／domain doc／CURRENT_TASK待本機commit。上一個655fbac已保存v6seenfit28例與原GPU混淆診斷。完成本輪研究答覆時需清楚說「已檢視關鍵片段與原文」，提供可行優先順序與方案連結，不誇大成影片完整逐字觀看／新模型已訓練。原背景批次繼續，下一次接續先讀當時實際stages/results，再QA與合理恢復；不要直接修改凍結source或重複啟watchers。
+
 ## 最新接續 17:50：狀態問答後仍繼續原Phase3任務
 
 使用者最新只問「現在做什麼／六輪做什麼」，已在commentary簡短解釋六epochs是同樣train+val循環、不是六獨立測試；沒有停止原完成Phase3目標。主GPU exec79387與原postQA exec45681、file checker59456持續，不另啟GPU。detv6初始完整3600val已與v5正式validation整份JSON／bytes SHA30d8...完全一致，receipt batch002/detection_initialization_replay.json；sanity ratio .19087849通過並重設。17:49實際第一輪700/19200updates，loss約.208、lr約4.98e-5，無錯誤。全部batch凍結source與config再查零差異。不要以初始化重播當新改善。

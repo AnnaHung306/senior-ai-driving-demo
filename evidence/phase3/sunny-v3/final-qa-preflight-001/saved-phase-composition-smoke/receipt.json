@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "source": "Existing corrected validation-only phase images; no inference/GPU/heldout",
+  "phase_panels_verified": 32,
+  "contact_pages": 4,
+  "tool_sha256": "3c2ae12afce7986d087bae4f5a91908f009effaa34992d4d12bd2796483c313d",
+  "GPU_segmentation_replay_not_yet_executed": true,
+  "focused_CPU_tests": {
+    "count": 3,
+    "log_sha256": "538ade7e50d558b8294815bd2d61d27410a6be6c3e822458c997a1a7b7c1ac70"
+  }
+}

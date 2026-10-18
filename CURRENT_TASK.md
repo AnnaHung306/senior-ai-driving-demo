@@ -1,3 +1,37 @@
+## 最新接續 16:52：三輪過半，最終QA已串接（仍不要結束）
+
+**GPU批次 exec79387/parent25188不變，只有segv6在GPU，CARLA關。** segv6第三輪更新5100/10272，16:51進入第三輪fullval（progress5100停住正常）；已完成第一/二輪，第二輪selected mIoU.6013262154、Wall.1383076656、margin.5801831016，onlyWallfail。SRC/batch sources再次0差異。det v6/phase004/joint/demo/bench/export後續待同批自動跑，全部val過才heldout，勿手動開。CPU/file checker exec59456仍等待seg/det completed，沒有GPU。
+
+新增**一次性post-batch QA exec45681**，script scripts/run_phase3_final_qa.py，output artifacts/runs/phase3-v6-final-qa-001，目前statuswaiting_for_entire_GPU_batch_to_finish。原生parent **23100** creation **134367870389417172**，ownboundedawakehelper30184最多6h至22:50，parent退自清；和原batch6h awake重疊確保交接，未改powerplan。**別重複啟動、別再改review_sunny_segmentation.py/run_phase3_final_qa.py/review_saved_detection.py/holdawake或其contract工具，否則post-QA sourceguard拒絕。** 此job必須等整個batch terminalstate+exportSHA、allbatchsourcesexact才啟GPU，然後分割GPU原batch重播→savedGPUdetgallery→savedphasecontact4pages，輸出只pendingassistantreview，沒有training/新heldout/排程或calibration。完成後務必實看pages與demo，不把code/圖片產生當通過。
+
+review_sunny_segmentation.py新增 --device cuda --all-classes（defaultCPU保留）。CUDA取原batchsize與index分界，核對每個replaybatch RGB SHA／selectedGT SHA，模型源/權重/config/validation來源全綁；selected confusion及boundary counts需exact符合savedGPU才產圖，否則raise不假稱原輸出。選worstWall/Fence/margin各scene＋16focus各類＋Wall最大FP；margin overlay改用同metric的ignore鄰域。新增3項focusedCPU tests全過（batch界線/短尾、ignore鄰域、類別與Other-only FP選例）；**151actualGPU是此前整批，新增3只CPUfocused，不能說154GPU已跑**。phase_contacts對既有corrected32張phasepng hash/尺寸與4contact試做通過，證據artifacts/runs/phase3-final-QA-preflight-001；真正v6 GPUreview尚未跑，不新增prototype模型。
+
+CURRENT_TASK與上述QA工具/3tests/evidence尚待本機commit；模型training source完全未變且baselineinit與v5報告exact已保存。第一輪c148...immutable中間checkpoint在下文指示root保存，非v6final。繼續等整批結果，不回答狀態就結束。先前取消的prior/calibrationwatcher不要重啟；若v6完成仍fail再看實際結果，任何新GPU恢復要等post-QA全退出才做。
+
+## 最新模型進度 16:42（active batch不變，仍勿結束）
+
+使用者剛要求簡單說明目前工作及六輪內容，已在commentary解釋6epochs不是6個不同測試；每輪13696sampled train views/1712updates、固定3600val，繼續原工作未停止。**唯一GPU exec79387/parent25188，file-checkwaiter exec59456；全部source/config仍凍結、CARLA關，不啟其他GPU。**
+
+segv6已完成2/6epochs、正式3424updates，目前第三輪progress3600。第一輪mIoU .586257621／Wall .134311121（P.15259/R.52857）／marginF1 .594962337，onlyWallfail；第一輪immutable模型copy保存在artifacts/runs/segmentation-v6-first-epoch-diagnostic-001/first-best.pt，SHA c148af6a2cd691b629211afcdc9b6dc53e31499e73d762acad324b52f94cca6d，config/provenance/first-report/receipt齊；它只是中間checkpoint，非完成模型。FP主來Other2787678、Fence1097228、Sidewalk1003640、Terrain918583。不要混成v6final。
+
+第二輪mIoU **.6013262154438384**／Wall **.13830766560271235**（P .1659045103/R .4539896141）／margin **.5801831016244913**，目前selected，仍onlyWallfail，其餘15focus IoU及aggregate/margin過。每輪約715秒；首次完整initial_validation與v5父代validation整份JSON exact，收據phase3-recovery-batch-002/segmentation_initialization_replay.json（非新改善）。80步sanity ratio .4250342 pass/reset，151/151GPU tests全過、actual2train-groups CUDAfinite及720capacity exactreload已過。後續det v6/phase004/joint/demo/bench/export仍待同一批自動接續；不能只回答狀態就結束，等整批與QA。
+
+## 最新接續 16:16：正式 v6 批次已啟動，務必等完（優先於全部歷史）
+
+**使用者要盡量一次完成Phase3，不要在此結束。** 唯一GPU batch **exec session79387**：`scripts/run_phase3_recovery_batch.py --segmentation-config configs/sunny_segmentation_v6_1.json --detection-config configs/sunny_detection_v6_1.json --segmentation-run artifacts/runs/sunny-segmentation-v6-001 --detector-run artifacts/runs/sunny-detection-v6-001 --light-run artifacts/runs/sunny-light-state-v1-004 --output artifacts/runs/phase3-recovery-batch-002`。原生parent **25188**、creation FILETIME **134367844292432653**；awakehelper23960綁parent6h至約22:07，active，parent退自清。**所有SRC與batch contract來源/config已凍結（最新0差異），訓練中不要改SRC／train/eval/export/batch／config，不啟CARLA、不加其他GPU任務或舊calibrationwatcher。** Git **0fe1a6e**（前a396669）。
+
+已完成**151/151實際GPU tests、0skip、0fail**，12.126s；720det容量也passed，allocated3377.50MiB/reserved4226MiB，exact production reload；含兩真實原train groups一個halfzoom/一個unitzoom，GPUfinite loss.4594409/norm5.67114，dummy更新不帶正式train。此容量report根scope仍legacy稱Synthetic，nested real_train_geometry_preflight才是實際真資料補充；別在activebatch改源。
+
+**當前stage train-segmentation**：子啟動器31616、實際Python **26368**（nativeCPUmemory讀取看後者，前者0CPU正常）。主資料＋supplement完整SHA驗證後，快取decoder約6min，16:15已完成13696train/3600val載入；old1024repeat2/new1024repeat2均2048sampled、各128staticanchors。80步overfitratio **.42503420364 PASS**；sanity已重置。初始GPUvalidation還在跑，16:16尚無initial_validation.json／正式updates；不要把快取階段當hang，也別把sanity當正式模型品質。接著6epochs/10272newupdates，預估約1.5h，再det4epochs/19200updates約3h；時長是前輪估算，不是保證。**不能僅啟動就結束**，等兩model＋phase004/joint＋conditionalheldout＋demo/bench/export，再看實際QA及逐類結果。任何valfail仍不開heldout、不降低gate。
+
+另有**exec session59456**一次性CPU file-check等待程序：artifacts/runs/phase3-artifact-checks-v6-001/contract.json/state.json，log artifacts/reports/phase3-v6-artifact-checks.log。先等seg completed跑scripts/check_sunny_segmentation_artifacts.py→artifacts/reports/segmentation-v6-artifact-check-001.json，再等det completed跑check_sunny_detection_artifacts.py→detection-v6-artifact-check-001.json；CUDA_VISIBLE_DEVICES=-1、6h bound、無inference/heldout或排程。不要重複啟動。
+
+新formaldata v2-001已audit＋4pages32contexts實看批准、實際loader exec70869exit0讀入1024/repeat2=2048且supportexact。auditSHA326cd9fda7d36d598b4cad880b483a3bb962fbed2bf192e003687eb23afcc18c；reviewSHA30ab42a79ae6ff032aaceadb9091130c1f3b93c7f973a688e1646f644d01956f。資料meta/source原bytes tar.gz、audit/review/plan/QA/nativecleanup與actualLoader收據已Git封存 `evidence/phase3/sunny-v3/segmentation-expansion-v2-001-approved`。Wall8191123pix、Terrain31118819pix；外觀仍主要磚石牆，不能說補到木實心Wall或高速擋土牆。
+
+低牆距離漏選已實查：49native低牆距道路spawn47..69m，故newCLI80m候選；4anchors32views probe的2pages8contexts實看仍前景woodFence＋遠薄Wall，**不加入新train**。native-server所有capture/extra-probe/audit exec13481/57290/99020已exit0，server exacthandle停止，awake23744released/requestclearedtrue，GPU閒置讀數316MiB後才啟此batch。
+
+下一步：持續監看進度，適時把初始val與父代selected做exact aggregate核對；各模型completed後統一checker、val錯例需actualGPU QA（不要用CPU BF16差異圖冒稱原GPU），最後phase004 jointfix結果／RGBdemo／3bench／modelcards／README/registry更新。若全val過batch會按凍結規則一次heldout；若fail繼續根據真結果恢復，別宣稱Phase3完成。原v5各結果與legacy jointprecision→v2addendum均已a396669保存，不覆寫。
+
 ## 最新接續 16:05（優先於全部歷史）
 
 **勿結束，使用者要盡量完成整個Phase3。** 新formal `data/segmentation-expansion-v2-001` 已1024views/128anchors/4096PNG，全auditpassed，4頁32contexts實看批准。auditSHA326cd9fda7d36d598b4cad880b483a3bb962fbed2bf192e003687eb23afcc18c，reviewSHA30ab42a79ae6ff032aaceadb9091130c1f3b93c7f973a688e1646f644d01956f；Wall8191123pixels（349views>=512）、Terrain31118819（1021views），0retry、maxpose7.9699e-5、maxresolvedclassdisagree4.34e-6。RGB/GT實看含磚石牆、岩面/草地、woodrail/picket/meshFence、路界；仍沒有確證新木實心Wall/高速擋土牆。Audit exact source隨root/audit_source保存。

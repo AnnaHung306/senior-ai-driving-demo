@@ -1,0 +1,153 @@
+{
+  "status": "contact_sheets_from_saved_GPU_phase_decisions",
+  "source_catalog_sha256": "6b8d30cab253fd41515fc420fef3af9d2acae10eacb3f2db3b51440d34e27db1",
+  "source_images": [
+    {
+      "path": "00.png",
+      "sha256": "a65bf6feae28a859cd4634049b2247ed6eb5dc2ece6d4e26c1bb88a3847132d8"
+    },
+    {
+      "path": "01.png",
+      "sha256": "35bf42b99a19f37dd586a001c8d2946cb174ff67ded4345af5dbba603cb4c9da"
+    },
+    {
+      "path": "02.png",
+      "sha256": "7136b9658e4aa370c7c65d0e1657596f88f7094f3669849e869c005ff523dc60"
+    },
+    {
+      "path": "03.png",
+      "sha256": "d702292be46472fb60aabf32849b40f61c4a3aba7b188f9638328822dd64ec25"
+    },
+    {
+      "path": "04.png",
+      "sha256": "78a9636c1e200a97fcd979ee544f7321614ae415cb38e0b88e4e93d66a2b61bc"
+    },
+    {
+      "path": "05.png",
+      "sha256": "a11f0198635702d7cf78379f74ebbbe53c84226290781776d4bfaf83b56df0b9"
+    },
+    {
+      "path": "06.png",
+      "sha256": "32b2a39e76fd941075f2aab31e885e9c9ab0ad806edcf0234f959dfd10360e90"
+    },
+    {
+      "path": "07.png",
+      "sha256": "457a72d3875b97b791249957946c539d9db07397a9184b61a94fe2f92fd87b60"
+    },
+    {
+      "path": "08.png",
+      "sha256": "cc5b9557e3c344bdb61aa52d87e2b7922ae1dc8fc9c84578a5d4a5b491ff63c7"
+    },
+    {
+      "path": "09.png",
+      "sha256": "b144d877cb656483ce8fd27afec2f4645727618c13ba72b2f0e08287ddefaa01"
+    },
+    {
+      "path": "10.png",
+      "sha256": "5ed03768d649d61d6315fe1ff92d8a2cae08a56c4e0fd97ce749b22f8abb65e6"
+    },
+    {
+      "path": "11.png",
+      "sha256": "33a1828720f492abaa553ed97bd5dfbfcd057e5b17850ab7cfbb67bec350c059"
+    },
+    {
+      "path": "12.png",
+      "sha256": "feafb4f97a289a46eab425a9b0b3143fff6ed045a0c89b9cebc3458bc66aa169"
+    },
+    {
+      "path": "13.png",
+      "sha256": "e347ac980a623469b8a4f3d5a4a8ade8e8de9146b1021edeabbde1547fbcb209"
+    },
+    {
+      "path": "14.png",
+      "sha256": "b09f08e9f7de88c0dc93b9b066d53eb562c574fe50baf9986e3112c288d0269f"
+    },
+    {
+      "path": "15.png",
+      "sha256": "5d349685b4e2b51c2c7f08590642eab1038b0d211cc9f724cf150ad2567717c6"
+    },
+    {
+      "path": "16.png",
+      "sha256": "a856bb954b43d3dab269ca96f3a71f1cbef4fc06dd27b300c5baa38d737f6c9a"
+    },
+    {
+      "path": "17.png",
+      "sha256": "b12e78dc22a6891589e25f0e265a1b33530fe9c48c37a1e8b71e9eb3d2700752"
+    },
+    {
+      "path": "18.png",
+      "sha256": "c2dbd62ff1e02dc9404ee378f18cfb6a30db1d76e75374d0cf5b26b506faf65a"
+    },
+    {
+      "path": "19.png",
+      "sha256": "5abead1af88181fc5c57ab910421bf1fa0642f0f6b13afff6c80cc86c85b5353"
+    },
+    {
+      "path": "20.png",
+      "sha256": "878e238409c9be8dae2895c40157905aee012812aa94b1410421eb20b61535af"
+    },
+    {
+      "path": "21.png",
+      "sha256": "47d3548ee83a8a7e1cb3788bff14dc8cfe57de7d447ab6173ab82900054ed8c9"
+    },
+    {
+      "path": "22.png",
+      "sha256": "8861bbc457bab776fb27ea9445943087012e9603da767e9c2bbc776a025b052b"
+    },
+    {
+      "path": "23.png",
+      "sha256": "4737fc95b892016c154b39ec270dea6885ad26098c1060d62737c2577ce69c4a"
+    },
+    {
+      "path": "24.png",
+      "sha256": "d4d10f8880613f879ea2ae5a2d503c360b288e60caf2caeb0e3f92e9f537e665"
+    },
+    {
+      "path": "25.png",
+      "sha256": "dff801648dccec210aad3159948910fc44a2df838a427fbba712b22741b43947"
+    },
+    {
+      "path": "26.png",
+      "sha256": "7ff3f96250fb5567e85df9cdaa70bc167f1d276d464c8cd728ddbd7591c2a07d"
+    },
+    {
+      "path": "27.png",
+      "sha256": "794db09804c5be920daaa3405a9979a4145241b2dc7fe83a396520a79db1d9df"
+    },
+    {
+      "path": "28.png",
+      "sha256": "060350507b023267fac8568bd227a1dbd6f9480fb2b4914924fe05fd5fe411e9"
+    },
+    {
+      "path": "29.png",
+      "sha256": "ead0a42c0df24c6b2f3eceb3171faaafc853c5580febba457082ec8f80218efc"
+    },
+    {
+      "path": "30.png",
+      "sha256": "04423628ab4e26fc2f0abf8093d95124f306961e3b9525b5eb8e5015a3da8802"
+    },
+    {
+      "path": "31.png",
+      "sha256": "7f89df48d69a17e3ad14fb60ce87a85187820b298bd14a419342f4e2509411fa"
+    }
+  ],
+  "pages": [
+    {
+      "path": "page-00.png",
+      "sha256": "104c6abd6a6f34fe61517ec1b3ecd370b796c5bf5f7b4165e1c15e9a8cba13b8"
+    },
+    {
+      "path": "page-01.png",
+      "sha256": "f6ac325bb0ea255dffb0d103f34a0bb5c23f5171e040cece825f078ed4b23ff1"
+    },
+    {
+      "path": "page-02.png",
+      "sha256": "3797bfdf6acd8406f230fa675608aeb39dc306717899b154291dadb21e4b3c99"
+    },
+    {
+      "path": "page-03.png",
+      "sha256": "e6111388ea3bb1c1114a33ed0a72863560da3cf83c91fd2fc372e781ea982232"
+    }
+  ],
+  "scope": "No new inference; actual saved phase wrong/missed cases. Assistant visual review still pending."
+}

@@ -1,0 +1,54 @@
+{
+  "status": "CPU_selection_margin_and_saved_image_composition_preflight_passed",
+  "focused_CPU_tests": 3,
+  "all_current_GPU_tests_not_claimed": 154,
+  "prior_actual_GPU_regression_tests": 151,
+  "segmentation_CUDA_replay_pending_after_active_training": true,
+  "scope": "QA tool only; main active training source contract unchanged. Saved corrected phase decisions used only to test tiling/hash checks, not new phase results.",
+  "files": [
+    {
+      "path": "focused_CPU_tests.log",
+      "sha256": "538ade7e50d558b8294815bd2d61d27410a6be6c3e822458c997a1a7b7c1ac70"
+    },
+    {
+      "path": "saved-phase-composition-smoke/receipt.json",
+      "sha256": "d73dff69a96caeb01f14af947ff7b8f80b59fbea586223381dd1a2a7f26cb736"
+    },
+    {
+      "path": "saved-phase-composition-smoke/phase/page-00.png",
+      "sha256": "104c6abd6a6f34fe61517ec1b3ecd370b796c5bf5f7b4165e1c15e9a8cba13b8"
+    },
+    {
+      "path": "saved-phase-composition-smoke/phase/page-01.png",
+      "sha256": "f6ac325bb0ea255dffb0d103f34a0bb5c23f5171e040cece825f078ed4b23ff1"
+    },
+    {
+      "path": "saved-phase-composition-smoke/phase/page-02.png",
+      "sha256": "3797bfdf6acd8406f230fa675608aeb39dc306717899b154291dadb21e4b3c99"
+    },
+    {
+      "path": "saved-phase-composition-smoke/phase/page-03.png",
+      "sha256": "e6111388ea3bb1c1114a33ed0a72863560da3cf83c91fd2fc372e781ea982232"
+    },
+    {
+      "path": "saved-phase-composition-smoke/phase/receipt.json",
+      "sha256": "68da46628428104907ec07c129ee5e6fcd358f64e7554a20bd66d4f2a4cf141f"
+    },
+    {
+      "path": "saved-phase-composition-smoke/phase/source_catalog.json",
+      "sha256": "6b8d30cab253fd41515fc420fef3af9d2acae10eacb3f2db3b51440d34e27db1"
+    },
+    {
+      "path": "source/scripts/review_sunny_segmentation.py",
+      "sha256": "0b82cee94e4a110913d0bfd1e42e6be4693710817c79e94f5f630a698cc3d139"
+    },
+    {
+      "path": "source/scripts/run_phase3_final_qa.py",
+      "sha256": "3c2ae12afce7986d087bae4f5a91908f009effaa34992d4d12bd2796483c313d"
+    },
+    {
+      "path": "source/tests/test_segmentation_review.py",
+      "sha256": "fd7b9a6b5398c83525f1717f8556166fb3391a1b7b67cc1d3cfb5b9dab821250"
+    }
+  ]
+}

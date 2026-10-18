@@ -1,0 +1,8 @@
+test_all_focus_classes_and_other_only_wall_false_positive_included (test_segmentation_review.SegmentationReviewTests.test_all_focus_classes_and_other_only_wall_false_positive_included) ... ok
+test_display_margin_uses_same_ignore_neighborhood_as_metric (test_segmentation_review.SegmentationReviewTests.test_display_margin_uses_same_ignore_neighborhood_as_metric) ... ok
+test_original_batch_boundaries_and_short_last_batch (test_segmentation_review.SegmentationReviewTests.test_original_batch_boundaries_and_short_last_batch) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+OK

@@ -74,3 +74,5 @@ seg state已completed、exact reloadtrue，best SHA3fe7bd08d885e481b7435fdf46694
 - MixStyle-inspired prototype與6項CPU測試在scripts/experimental_feature_style.py/tests/test_experimental_feature_style.py；PHASE3_FEATURE_STYLE_EXPERIMENT.md及design JSON記錄。eval/RNG/statekeys/finite通過，但**未整合src/trainer、未GPU驗證、未訓練**，不能把design當train config。原始論文不是本專案seg品質證明。先按資料修復，保留為有界替代實驗。
 - 新scripts/scout_unused_training_town.py與configs/segmentation_training_expansion_scout_v1.json只預留Town06/07 metadata候選。5項split/Opt別名/OpenDrive重名保護CPU測試及真main policy兩次--dry-run通過；**無RPC/無新inventory/無RGB，native maps是否可用尚未查**。須先等GPU全部退出，再另client準備full map，scout自己不load/tick/render。原v1 Town01/03 collector/loader完全未放寬；若擴城資料須另凍結v2 capture/audit/review/train loader，不能直接匯入。
 - 現在完整suite預期116項：原94 GPU曾全部過、新11prior/selection/identity＋6feature prototype＋5unusedTown focused CPU已各自通過，**尚未整批合跑116GPU**。canonical active batch全部來源於12:28再核對仍完全不變。native監看functions cell234僅read-only loop，已停止；不影響exec32462。
+
+12:35已另外整批跑完116項CPU回歸：113passed、3明確GPU skipped、0failure，10.506s；只在獨立測試shell/subprocess設定CUDA_VISIBLE_DEVICES=-1，原native GPU訓練不受影響。證據cpu-regression-20261018-001；仍不是116項GPU全過。det epoch0/2400updates仍正常，Phase3及全部新模型heldout狀態不變。

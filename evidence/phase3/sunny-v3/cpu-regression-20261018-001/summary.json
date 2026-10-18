@@ -1,0 +1,15 @@
+{
+  "status": "passed_CPU_regression_with_explicit_GPU_skips",
+  "tests_total": 116,
+  "passed": 113,
+  "skipped": 3,
+  "failures": 0,
+  "wall_s": 10.506,
+  "skipped_tests": [
+    "test_amp_overflow_skips_update_and_retries_same_batch (test_segmentation.SegmentationTests.test_amp_overflow_skips_update_and_retries_same_batch) ... skipped 'AMP overflow recovery requires GPU'",
+    "test_epoch_boundary_checkpoint_repeats_next_update_exactly (test_segmentation.SegmentationTests.test_epoch_boundary_checkpoint_repeats_next_update_exactly) ... skipped 'CUDA checkpoint RNG resume requires GPU'",
+    "test_prediction_runs_with_only_rgb_and_no_ground_truth (test_segmentation.SegmentationTests.test_prediction_runs_with_only_rgb_and_no_ground_truth) ... skipped 'RGB-only production inference uses CUDA'"
+  ],
+  "log_sha256": "b60ad4dafeb6cbaaf6630137484d1e83ad8f7fb67326e53c7f91d52349d70ba9",
+  "scope": "CUDA_VISIBLE_DEVICES=-1 only in isolated test subprocess, restored in its shell; existing native GPU training untouched. Original94 GPU regression separately passed0skip before batch; full116 GPU suite pending when GPU idle."
+}

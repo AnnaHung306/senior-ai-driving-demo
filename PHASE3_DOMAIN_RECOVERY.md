@@ -8,7 +8,7 @@
 
 ## 執行次序
 
-1. 完成現有批次及完整val、joint、RGB-only demo/benchmark。CPU prior研究完成後仍不能代替GPU；預先固定的bias校正只作一次獨立補充實驗。若依然失敗，保存全候選，不開heldout。
+1. 完成現有批次及完整val、joint、RGB-only demo/benchmark。完整CPU prior研究的5候選wall只有.07406..07466，原GPU校正候補已取消，不默認重跑。CPU不能代替GPU驗收，這裡只是基於改善幅度調整實驗優先順序；保存全候選，不開heldout。
 2. GPU工作退出後才啟CARLA。`configs/segmentation_low_wall_preview_v1_1.json`只是候選預覽表：原128錨點原樣保留，另加Town01/03各24個相隔至少8m的道路pose，按native Walls語意及bbox高度hint取候選。不是材質GT或採集批准。先只用新位置前幾個錨點做probe-only RGB/GT，不能把probe計入正式train。
 3. 若原train城鎮仍缺木質實心Wall或岩面negative，檢查伺服器實際可用、尚未劃入任何保留split的城鎮；可優先調查Town06/07（以實際可用地圖為準）。先原生inventory及RGB/GT預覽，保存真實OpenDrive/pose，不憑資產名稱斷言材質。新城鎮只供segmentation train擴充，既有Town04 val、Town05 development、Town02 lockbox及其Opt/同圖別名均排除。
 4. 找到可用外觀後才凍結正式新版本：每個希望補齊的外觀至少2個不同原生位置，記位置間距與相關性；原八方向rig、640x360、四模態、ClearNoon、逐frame/time/pose驗證、F+1 readback、CRC/SHA、ignore規則均沿用。保留岩面、建築、植被、草路邊界negative，不能只收正例牆面。

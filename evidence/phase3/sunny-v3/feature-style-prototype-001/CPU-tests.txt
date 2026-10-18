@@ -1,0 +1,11 @@
+test_constant_bfloat16_features_and_backward_stay_finite (test_experimental_feature_style.FeatureStylePrototypeTests.test_constant_bfloat16_features_and_backward_stay_finite) ... ok
+test_epoch_cpu_rng_restore_reproduces_augmentation_exactly (test_experimental_feature_style.FeatureStylePrototypeTests.test_epoch_cpu_rng_restore_reproduces_augmentation_exactly) ... ok
+test_eval_probability_zero_and_single_sample_are_rng_neutral_identity (test_experimental_feature_style.FeatureStylePrototypeTests.test_eval_probability_zero_and_single_sample_are_rng_neutral_identity) ... ok
+test_invalid_settings_and_feature_schema_rejected (test_experimental_feature_style.FeatureStylePrototypeTests.test_invalid_settings_and_feature_schema_rejected) ... ok
+test_mobile_prototype_eval_exact_identity_and_training_gradient (test_experimental_feature_style.FeatureStylePrototypeTests.test_mobile_prototype_eval_exact_identity_and_training_gradient) ... ok
+test_preserves_within_channel_spatial_order_without_new_parameters (test_experimental_feature_style.FeatureStylePrototypeTests.test_preserves_within_channel_spatial_order_without_new_parameters) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.561s
+
+OK

@@ -1,0 +1,12 @@
+{
+  "status": "CPU_prototype_passed_not_integrated_not_trained",
+  "CPU_focused_tests": 6,
+  "active_batch_source_contract_unchanged": true,
+  "active_model_source": "edbdf26f4a4acd63f71b8034163ebf5eebf72e607c039e71a054a73217677132",
+  "files": {
+    "scripts/experimental_feature_style.py": "6260dfd5100aef160f18598685ee7f64baa703e0d987862163c01485e9c84de8",
+    "tests/test_experimental_feature_style.py": "5151dde92441869f9d38259a4bf3ab8752ea159dfdb4970436f282a8ac766dde",
+    "configs/segmentation_feature_style_design_v1.json": "f0c4f6f4787015b63ec373cc0465d621b7177a2f15104af4e17fc98d7732488c"
+  },
+  "limits": "No CUDA capacity/finite/determinism or quality result, no formal train source/config changes, no heldout, no deployed model change."
+}

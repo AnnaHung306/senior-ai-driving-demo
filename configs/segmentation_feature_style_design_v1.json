@@ -1,0 +1,20 @@
+{
+  "task": "experimental_design_only_not_a_training_config",
+  "method": "MixStyle-inspired train-only feature-statistic interpolation",
+  "status": "CPU_prototype_only_not_integrated_or_GPU_verified",
+  "candidate_encoder_stage_indices": [3, 6],
+  "probability_per_stage": 0.5,
+  "beta_alpha": 0.1,
+  "epsilon": 0.000001,
+  "variance_correction": 0,
+  "statistics_precision": "float32",
+  "output_precision": "preserve_input_feature_dtype",
+  "sampling_rng": "existing captured CPU torch RNG; no private generator",
+  "inference": "identity, no random sampling, unchanged parameter keys",
+  "candidate_initializer": "artifacts/runs/sunny-segmentation-v5-001/best.pt",
+  "candidate_initializer_sha256": "3fe7bd08d885e481b7435fdf466945f142f8323447cca46bf31c32455835a53f",
+  "unchanged": ["17-class targets", "RGB-only inference", "original validation and heldout boundaries", "original quality gates", "CE plus foreground Dice"],
+  "activation_policy": "Only after active batch exits, source/config integration, full GPU finite/capacity/production-reload checks, and explicit new run. Prefer confirmed appearance data recovery; retain as a bounded alternative if coverage remains weak or native recovery is insufficient.",
+  "method_reference": "https://openreview.net/forum?id=6xHJ37MVxxp",
+  "official_reference": "https://github.com/KaiyangZhou/mixstyle-release"
+}

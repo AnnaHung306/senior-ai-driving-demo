@@ -1,0 +1,9 @@
+* text=auto
+*.py text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.ps1 text eol=lf
+*.patch text eol=lf whitespace=-blank-at-eol
+# Receipts bind exact captured bytes, including Windows newlines. Never filter
+# archived sources/reports on add or checkout, or their recorded SHA256 changes.
+evidence/** -text

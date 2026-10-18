@@ -1,0 +1,7 @@
+{
+  "return_code": 1,
+  "scope": "5 CPU tests, including miniature ZIP and existing-content failure-before-install; not real addon installation",
+  "atomic_publication": "Exclusive hardlink from verified staged file, no partially copied target after interruption",
+  "installer_sha256": "b02eb205c4392239adf432afeebb2cea15d2d786482324d41b730ce1a5dd1023",
+  "test_sha256": "c3f3f3b6af388c579b684525102fe491ef085245f6667aad44f7494fc096ef71"
+}

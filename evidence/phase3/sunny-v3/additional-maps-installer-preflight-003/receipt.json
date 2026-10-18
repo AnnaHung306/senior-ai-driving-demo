@@ -1,0 +1,7 @@
+{
+  "return_code": 0,
+  "scope": "6 CPU tests including miniature ZIP, existing-content failure-before-install and interrupted-publication recovery in a new receipt run; not actual addon installation",
+  "installer_sha256": "85b7404857be750260cc986b7867f1b2693cb5b765b8436ca0f1772553e1bc8b",
+  "test_sha256": "d0b8f68290f1db39a1da9b70891da491d647d9d540673b37773016747efae24c",
+  "supersedes": "002, adding a real filesystem interruption/recovery test; 001 failed hardlink test preserved"
+}

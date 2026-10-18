@@ -7,6 +7,7 @@ import argparse
 from datetime import datetime, timezone
 import hashlib
 import json
+import os
 from pathlib import Path, PurePosixPath
 import shutil
 import stat
@@ -102,19 +103,28 @@ def main(args):
                 with (output/'installed_files.jsonl').open('x',encoding='utf-8') as log:
                     for relative,target,stage,digest in staged:
                         target.parent.mkdir(parents=True,exist_ok=True)
-                        with stage.open('rb') as src, target.open('xb') as dst: shutil.copyfileobj(src,dst,4*1024*1024)
+                        # A same-directory temporary file cannot be mistaken
+                        # for a complete engine asset after interruption.
+                        pending=target.with_name(target.name+'.'+output.name+'.partial')
+                        with stage.open('rb') as src,pending.open('xb') as dst:shutil.copyfileobj(src,dst,4*1024*1024)
+                        if sha(pending)!=digest:raise ValueError('Pending asset digest differs')
+                        if os.name=='nt':os.rename(pending,target)  # Windows rename refuses an existing target.
+                        else:
+                            os.link(pending,target)  # Exclusive atomic publication on POSIX too.
+                            pending.unlink()
                         if sha(target)!=digest: raise ValueError('Installed asset digest differs')
                         record={'path':relative.as_posix(),'sha256':digest,'bytes':target.stat().st_size}
                         report['installed_new_files'].append(record)
                         log.write(json.dumps(record)+'\n');log.flush()
                         if len(report['installed_new_files'])%100==0:write_json(output/'report.json',report)
                 report.update(status='installed_content_only_existing_bytes_preserved',zip_crc_verified=True,
-                    existing_exact_files=len(files)-len(staged),new_files=len(staged))
+                    existing_exact_files=len(files)-len(staged),new_files=len(staged),
+                    publication='Verified sibling .partial copy then exclusive atomic publication; no partially copied asset target')
                 report['shipping_binary_after_sha256']=sha(binary)
                 if report['shipping_binary_after_sha256']!=report['shipping_binary_before_sha256']:
                     raise ValueError('Existing server binary changed')
     except Exception as exc:
-        report.update(error=type(exc).__name__,message=str(exc));raise
+        report.update(status='failed',error=type(exc).__name__,message=str(exc));raise
     finally:
         report['finished_utc']=datetime.now(timezone.utc).isoformat();write_json(output/'report.json',report)
     print(json.dumps({k:v for k,v in report.items() if k!='installed_new_files'}),flush=True)

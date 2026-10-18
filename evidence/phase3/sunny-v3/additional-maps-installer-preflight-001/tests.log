@@ -1,0 +1,24 @@
+test_escape_executable_and_windows_aliases_rejected (test_additional_map_install.AdditionalMapInstallTests.test_escape_executable_and_windows_aliases_rejected) ... ok
+test_existing_asset_comparison_is_byte_exact (test_additional_map_install.AdditionalMapInstallTests.test_existing_asset_comparison_is_byte_exact) ... ok
+test_existing_different_asset_aborts_before_any_install (test_additional_map_install.AdditionalMapInstallTests.test_existing_different_asset_aborts_before_any_install) ... ok
+test_map_assets_allowed (test_additional_map_install.AdditionalMapInstallTests.test_map_assets_allowed) ... ok
+test_new_assets_installed_and_old_binary_preserved (test_additional_map_install.AdditionalMapInstallTests.test_new_assets_installed_and_old_binary_preserved) ... ERROR
+
+======================================================================
+ERROR: test_new_assets_installed_and_old_binary_preserved (test_additional_map_install.AdditionalMapInstallTests.test_new_assets_installed_and_old_binary_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\code\senior_AI\tests\test_additional_map_install.py", line 63, in test_new_assets_installed_and_old_binary_preserved
+    def test_new_assets_installed_and_old_binary_preserved(self):self.exercise_install(False)
+                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\code\senior_AI\tests\test_additional_map_install.py", line 50, in exercise_install
+    else:installer.main(args)
+         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\code\senior_AI\scripts\install_additional_maps.py", line 110, in main
+    os.link(stage,target)
+PermissionError: [WinError 5] �s���Q�ڡC: 'C:\\code\\senior_AI\\artifacts\\runs\\additional-map-test-gihm0nwn\\artifacts\\runs\\install-test\\staged\\CarlaUE4\\Content\\Carla\\Maps\\Town06.umap' -> 'C:\\code\\senior_AI\\artifacts\\runs\\additional-map-test-gihm0nwn\\artifacts\\carla\\CarlaUE4\\Content\\Carla\\Maps\\Town06.umap'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.142s
+
+FAILED (errors=1)

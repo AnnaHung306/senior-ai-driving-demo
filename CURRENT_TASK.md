@@ -1,5 +1,13 @@
 # 目前任務：批量完成晴天 Phase3（2026-10-18）
 
+## 13:55歸檔與地圖準備補充（仍在同一批次）
+
+commit ac713fd修正真正的Git可恢復性問題：411/573個舊evidence檔案因CRLF normalization，Git blob和實際SHA-bound bytes不同。`.gitattributes`新增evidence/** -text，重新存原始bytes；573全部對committed object核對exact，證據git-evidence-byte-preservation-001與scripts/check_evidence_git_bytes.py。只保留原bytes，沒有重算模型分數；active source contract再次全部exact。
+
+installer最新使用staged已驗CRC/SHA檔案→同目錄.pending副本（實際suffix.partial）→Windows non-overwriting rename，防中斷留下半份.umap。6項CPU工程測試全過，包括現有不同檔必須在任何安裝前失敗、保留原binary及模擬第二檔發布中斷後用新receipt run恢復；最新證據additional-maps-installer-preflight-003。001硬連結受sandbox拒絕的失敗已保留，002是5項版本，勿用001當成功或實際安裝。未做132項整批suite；最新完整仍129 CPU／3GPU skipped。
+
+額外地圖curl exec46320仍下載（13:53約5.26/7.25GB），原batch exec32462det第三輪11300updates附近；不要重複下載／重開訓練。尚無native Town06/07 availability或RGB預覽。Phase3尚未通過，繼續原batch與必要修復。
+
 ## 最新接續點：13:48（優先於下方歷史）
 
 唯一原GPU batch exec32462/native parent19772仍跑；det native6608已進第3輪（epoch2，約10400/19200updates），第2輪9600驗證完成AP50:95 .44521858、mAP50 .71195058，仍只有bicycle recall失敗（P .959839/R .327846、小框9/388）。其餘七類P/R仍過。所有SRC／原batch contract檔案hash再核對完全未變。seg v5已完成但wall/margin未過；phase003/joint/demo/bench/export尚待原batch自動接續，全部新heldout仍未開。不要提前結束。

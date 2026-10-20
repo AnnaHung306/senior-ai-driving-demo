@@ -1,3 +1,31 @@
+## 2026-10-20 Phase 5 首版工程基準已完成；品質未通過
+
+最新使用者：「很好，繼續phase5」。已先寫 PHASE5.md，再新增從零訓練RGB crop 3D head、八鏡頭cuboid融合、基本因果ID、0.5m三維semantic occupancy、WorldFrame契約及真正推論圖。**訓練20945、兩次GPU replay97562／9188、GT評估74345／46143、回歸25531與CPU核對都已退出，沒有CARLA／控制／watcher／automation。不要重啟舊jobs。** 本次只固定一次12epochs，不追加調參；Phase3收尾／不採depth／不補Wall／不開dev或lockbox持續有效。
+
+目前為研究基準，**不能宣稱Phase5正式通過、穩定ID、精細重建或即時world model**。Phase4也仍保留完整新無近牆路線與延遲驗收限制。使用者授權直接開始Phase5，不把這些不足改成pass。
+
+程式 cuboid.py（94224params／CNN＋14維geometry輸入，輸出中心殘差、logLWH、cos/sin）、world_tracking.py（RGB SE2補償＋class-gated nearest one-to-one）、semantic_occupancy.py（ground rays＋cuboid volume）、world_schema.py（離線/API契約檢查）。推論不import phase5_gt.py。新增requirements-phase5僅繼承Phase4，沒裝新套件。2D/seg/light沿用Phase4凍結權重，沒有修改既有source或模型。
+
+固定資料 artifacts/runs/phase5-crops-v1-002：原train8scenes stride8／659 eligible crops、原Town04 val3scenes／232，class1..6都有支持，GT僅targets。初001因indexes/train未被parent metadata inventory綁定而在訓練前拒絕；改用已綁定canonical training index按frame去重，不放寬資料守衛。模型 artifacts/runs/phase5-cuboid-v1-001，12epochs／132updates／best epoch11，FP32、batch64、AdamW.001、seed20261020，encoder/head梯度.0478117/.3272012，peak92.7446MiB，232val reloadexact。bestSHA **1ad8ccbf8e5409b476219b8ecaf0924922a756c19b845043b9cbeae99fd32f6f**。權重與cropNPZ在本機ignored，不在Git。
+
+條件232GT crop驗證：中心3D先驗1.2036→學習.93065m、IoU3D.1953→.2313，但yaw53.03→72.05°、行人中心.6509→1.2393m退步；相同資產使L/W類別先驗原本0誤差，不可當尺寸泛化。模型卡明確未接受為可靠3D。
+
+真CUDA WorldFrame權威run **artifacts/runs/phase5-world-v1-002**；最終GT **phase5-world-v1-002-evaluation/report.json**。沿用Phase4固定32bundles與hash-bound RGB predictions，不再重跑2D模型。32混合train/val嚴格@2m TP107/FP35/FN29，P.75352/R.78676；IoU3D>=.25 TP60/FP82/FN76，P.42254/R.44118。**val16組才是該split結果：TP33/FP21/FN26，P.61111/R.55932，3D P.27778/R.25424**；train16組TP74/FP14/FN3。這些仍是已知1.4s／model-selection validation，不是heldout。
+
+同GT共同25個val actor-frame（checks/phase5-supplement-v1-001.json）：先驗→學習中心.64876→.83113m、yaw29.702→49.112°、IoU3D.24788→.21141，明確退步。原主分數不ignore；另按原2D ignore政策、全部source都ignored且無known2D/3D positive才略過的補充，val各排5例，learned P.67347/R.55932，原strict report不改。卡車／公車在本32actor域無positive，背景卡車表面可在depth中出現，不能把所有未匹配卡車說場景不存在。
+
+基本追蹤11ID switches／86連續成功配對transitions，5gap reacquisitions改ID0；近鄰與重複行人競爭仍在。移除44重複觀測，39GT-supported merges、mixedactor0只限支持群。occupancy road.89672/sidewalk.79706/car.65220/ped.04773/bike.51119/motor.18846/truck surface.07384；bus無support、terrain/otherstatic0。GT已知域coverage.193116、GToccupied->free4873/.0423419，非可靠free-space。stage sum含上游p50 1213.67695ms／p95 1366.88618ms，不含寫檔/啟動/控制，非liveFPS。
+
+第一次world001的ray ground slab歧義已修正：final預測與GT都不把endpoint voxel／z下緣<=0slab carve free，舊report/source保留。32組所有objects、prior、tracking對001 **exact**，只修occupancy，不加訓。原modelconfig仍v1、兩次sourcehash區別版本；不能說較高roadIoU是神經網路新收益。
+
+完整 **223 tests 0fail/0skip** 最終log artifacts/reports/phase5-regression-final-002.log（此前220/215 logs也保留），含geometry／yaw／IoU／IDreset／遮擋／unknown／GT與unsafepath拒絕／ignore positive override。2種CPU真CLI在刻意不存在的checkpoint開啟前拒絕GT污染，phase5-boundary-v1-001。32×objects／occupancy各scene／232conditional重算exact，3572原RGB/GT檔重核，tracker全objects/IDs重播exact，report artifacts/reports/phase5-integrity-v1-002.json；此proof只核對工程，不品質pass。
+
+已實看 phase5-QA-v1-002 全16pages（32 prediction＋GT）及6完整prediction＋6完整GT代表/高FP/yaw案例，visual_review.json completed_actual_visual_review_research_baseline_only，原pending report/catalog不改bytes。右側岩石／植被的巨大truck錯例、行人／rider誤判、yaw偏移、ground面外推至斜坡與已知資料形狀限制都寫入。
+
+封存目標 evidence/phase5/rgb-cuboid-world-v1-001：README／MODEL_CARD、32WorldFrames/occupancy/GTreference/圖、16QA頁與實看收據、train/data/contracts/GTtargets/hash、兩版inference與GT工具snapshot、223log／污染／檔案核對／共同配對／ignore補充與歷史failure。原RGB/訓練cropNPZ/weights不進Git；模型registry標research only。後續先讀PHASE5.md和報告，不重啟訓練；若繼續Phase5則事前固定新的方向對稱／行人／多視角配對／free證據實驗與新路線；若使用者轉Phase6，可接WorldFrame展示低可信研究結果，不改寫品質或宣稱AI駕駛。
+
+以下保留 Phase4 與更早歷史供追溯；遇到「正在執行」字樣以本節最新狀態為準。
+
 ## 2026-10-20 Phase 4 首版實測已完成並封存
 
 最新使用者：「做Phase 4，規劃完成後立刻開始」。已先寫 PHASE4.md 再實作並完成第一個可檢查里程碑。**兩次 CUDA replay、所有 CPU 評估／檔案核對都已退出，沒有訓練、CARLA、watcher 或 automation。不要重啟舊 exec51907、23804 或 Phase3 任務。** Phase4 幾何 BEV 原型完成；完整新路線正式驗收尚未完成，不宣稱閉環或整個 Phase4 已通過。

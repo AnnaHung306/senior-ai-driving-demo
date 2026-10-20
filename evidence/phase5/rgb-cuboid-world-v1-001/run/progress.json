@@ -1,0 +1,11 @@
+{
+  "bundles": 32,
+  "latest": {
+    "scene_id": "town04-01",
+    "frame": 246961,
+    "folder": "town04-01\\246961",
+    "objects": 3,
+    "object_ms": 35.70780000882223,
+    "occupancy_ms": 69.09070000983775
+  }
+}

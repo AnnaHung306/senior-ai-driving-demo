@@ -1,0 +1,529 @@
+{
+  "schema_version": 1,
+  "source": "learned_RGB_3D_head_plus_geometric_occupancy",
+  "scene_id": "town04-00",
+  "frame": 246294,
+  "timestamp_s": 11.118775837123394,
+  "coordinate_frame": "current_ego",
+  "axes": "x_forward_y_right_z_up",
+  "units": {
+    "position": "meters",
+    "size": "full_LWH_meters",
+    "angle": "radians"
+  },
+  "objects": [
+    {
+      "class_id": 2,
+      "class_name": "pedestrian",
+      "center_ego_m": [
+        8.516965213387547,
+        6.669514180863054,
+        0.8806473612785339
+      ],
+      "size_lwh_m": [
+        0.4088513268131461,
+        0.3831979483874436,
+        1.446772708497792
+      ],
+      "yaw_rad": -1.106139490149723,
+      "orientation_reliable": true,
+      "score_uncalibrated": 0.999971866607666,
+      "sources": [
+        {
+          "class_id": 2,
+          "class_name": "pedestrian",
+          "center_ego_m": [
+            8.516965213387547,
+            6.669514180863054,
+            0.8806473612785339
+          ],
+          "size_lwh_m": [
+            0.4088513268131461,
+            0.3831979483874436,
+            1.446772708497792
+          ],
+          "yaw_rad": -1.106139490149723,
+          "orientation_reliable": true,
+          "output_clipped": false,
+          "geometry": "learned_RGB_cuboid_with_flat_ground_anchor",
+          "pitch_roll": "upright_assumption_not_predicted",
+          "camera": "front_right",
+          "detection_index": 0,
+          "bbox_xyxy": [
+            269.2382507324219,
+            168.06759643554688,
+            290.5716857910156,
+            240.77017211914062
+          ],
+          "score_uncalibrated": 0.999971866607666
+        }
+      ],
+      "geometry": "fused_learned_RGB_upright_cuboid",
+      "output_clipped": false,
+      "track_id": "town04-00:T000019",
+      "track_age_measurements": 5,
+      "measurement_current": true
+    },
+    {
+      "class_id": 2,
+      "class_name": "pedestrian",
+      "center_ego_m": [
+        0.9704562260898936,
+        -8.46137111927699,
+        0.9599974751472473
+      ],
+      "size_lwh_m": [
+        0.41427737231609557,
+        0.3980422124975365,
+        1.377342547723453
+      ],
+      "yaw_rad": -2.8871830763147375,
+      "orientation_reliable": true,
+      "score_uncalibrated": 0.9999713897705078,
+      "sources": [
+        {
+          "class_id": 2,
+          "class_name": "pedestrian",
+          "center_ego_m": [
+            0.9704562260898936,
+            -8.46137111927699,
+            0.9599974751472473
+          ],
+          "size_lwh_m": [
+            0.41427737231609557,
+            0.3980422124975365,
+            1.377342547723453
+          ],
+          "yaw_rad": -2.8871830763147375,
+          "orientation_reliable": true,
+          "output_clipped": false,
+          "geometry": "learned_RGB_cuboid_with_flat_ground_anchor",
+          "pitch_roll": "upright_assumption_not_predicted",
+          "camera": "left",
+          "detection_index": 0,
+          "bbox_xyxy": [
+            332.95819091796875,
+            167.04066467285156,
+            354.87542724609375,
+            250.86256408691406
+          ],
+          "score_uncalibrated": 0.9999713897705078
+        }
+      ],
+      "geometry": "fused_learned_RGB_upright_cuboid",
+      "output_clipped": false,
+      "track_id": "town04-00:T000018",
+      "track_age_measurements": 5,
+      "measurement_current": true
+    },
+    {
+      "class_id": 3,
+      "class_name": "bicycle",
+      "center_ego_m": [
+        9.32337572472885,
+        0.15818011797252868,
+        0.7848435044288635
+      ],
+      "size_lwh_m": [
+        1.5031175710643052,
+        0.9064196108923177,
+        1.587582019170908
+      ],
+      "yaw_rad": 0.0011299464970171067,
+      "orientation_reliable": true,
+      "score_uncalibrated": 0.9988189339637756,
+      "sources": [
+        {
+          "class_id": 3,
+          "class_name": "bicycle",
+          "center_ego_m": [
+            9.32337572472885,
+            0.15818011797252868,
+            0.7848435044288635
+          ],
+          "size_lwh_m": [
+            1.5031175710643052,
+            0.9064196108923177,
+            1.587582019170908
+          ],
+          "yaw_rad": 0.0011299464970171065,
+          "orientation_reliable": true,
+          "output_clipped": false,
+          "geometry": "learned_RGB_cuboid_with_flat_ground_anchor",
+          "pitch_roll": "upright_assumption_not_predicted",
+          "camera": "front",
+          "detection_index": 2,
+          "bbox_xyxy": [
+            316.9859924316406,
+            184.14010620117188,
+            350.4678039550781,
+            253.09768676757812
+          ],
+          "score_uncalibrated": 0.9988189339637756
+        }
+      ],
+      "geometry": "fused_learned_RGB_upright_cuboid",
+      "output_clipped": false,
+      "track_id": "town04-00:T000017",
+      "track_age_measurements": 5,
+      "measurement_current": true
+    }
+  ],
+  "prior_baseline_objects": [
+    {
+      "class_id": 2,
+      "class_name": "pedestrian",
+      "center_ego_m": [
+        7.932011391479903,
+        6.027464946217161,
+        0.6499999761581421
+      ],
+      "size_lwh_m": [
+        0.3753577768802643,
+        0.3753577768802643,
+        1.2999999523162842
+      ],
+      "yaw_rad": 0.7853981633974483,
+      "orientation_reliable": true,
+      "score_uncalibrated": 0.999971866607666,
+      "sources": [
+        {
+          "class_id": 2,
+          "class_name": "pedestrian",
+          "center_ego_m": [
+            7.932011391479903,
+            6.027464946217161,
+            0.6499999761581421
+          ],
+          "size_lwh_m": [
+            0.3753577768802643,
+            0.3753577768802643,
+            1.2999999523162842
+          ],
+          "yaw_rad": 0.7853981633974483,
+          "orientation_reliable": true,
+          "output_clipped": false,
+          "geometry": "train_class_size_and_camera_heading_prior_baseline",
+          "pitch_roll": "upright_assumption_not_predicted",
+          "camera": "front_right",
+          "detection_index": 0,
+          "bbox_xyxy": [
+            269.2382507324219,
+            168.06759643554688,
+            290.5716857910156,
+            240.77017211914062
+          ],
+          "score_uncalibrated": 0.999971866607666
+        }
+      ],
+      "geometry": "fused_learned_RGB_upright_cuboid",
+      "output_clipped": false
+    },
+    {
+      "class_id": 2,
+      "class_name": "pedestrian",
+      "center_ego_m": [
+        0.5658001917103866,
+        -8.215226344914146,
+        0.6499999761581421
+      ],
+      "size_lwh_m": [
+        0.3753577768802643,
+        0.3753577768802643,
+        1.2999999523162842
+      ],
+      "yaw_rad": -1.5707963705062848,
+      "orientation_reliable": true,
+      "score_uncalibrated": 0.9999713897705078,
+      "sources": [
+        {
+          "class_id": 2,
+          "class_name": "pedestrian",
+          "center_ego_m": [
+            0.5658001917103866,
+            -8.215226344914146,
+            0.6499999761581421
+          ],
+          "size_lwh_m": [
+            0.3753577768802643,
+            0.3753577768802643,
+            1.2999999523162842
+          ],
+          "yaw_rad": -1.5707963705062848,
+          "orientation_reliable": true,
+          "output_clipped": false,
+          "geometry": "train_class_size_and_camera_heading_prior_baseline",
+          "pitch_roll": "upright_assumption_not_predicted",
+          "camera": "left",
+          "detection_index": 0,
+          "bbox_xyxy": [
+            332.95819091796875,
+            167.04066467285156,
+            354.87542724609375,
+            250.86256408691406
+          ],
+          "score_uncalibrated": 0.9999713897705078
+        }
+      ],
+      "geometry": "fused_learned_RGB_upright_cuboid",
+      "output_clipped": false
+    },
+    {
+      "class_id": 3,
+      "class_name": "bicycle",
+      "center_ego_m": [
+        8.795987606521395,
+        0.3199268210608122,
+        0.8061768412590027
+      ],
+      "size_lwh_m": [
+        1.5093227624893188,
+        0.8659406304359436,
+        1.6123536825180054
+      ],
+      "yaw_rad": 0.0,
+      "orientation_reliable": true,
+      "score_uncalibrated": 0.9988189339637756,
+      "sources": [
+        {
+          "class_id": 3,
+          "class_name": "bicycle",
+          "center_ego_m": [
+            8.795987606521395,
+            0.3199268210608122,
+            0.8061768412590027
+          ],
+          "size_lwh_m": [
+            1.5093227624893188,
+            0.8659406304359436,
+            1.6123536825180054
+          ],
+          "yaw_rad": 0.0,
+          "orientation_reliable": true,
+          "output_clipped": false,
+          "geometry": "train_class_size_and_camera_heading_prior_baseline",
+          "pitch_roll": "upright_assumption_not_predicted",
+          "camera": "front",
+          "detection_index": 2,
+          "bbox_xyxy": [
+            316.9859924316406,
+            184.14010620117188,
+            350.4678039550781,
+            253.09768676757812
+          ],
+          "score_uncalibrated": 0.9988189339637756
+        }
+      ],
+      "geometry": "fused_learned_RGB_upright_cuboid",
+      "output_clipped": false
+    }
+  ],
+  "tracking": {
+    "reset_reason": null,
+    "held_unobserved_tracks": [],
+    "association": "causal_class_gated_greedy_nearest_one_to_one",
+    "GT_identity_used": false,
+    "held_tracks_used_for_occupancy": false,
+    "velocity_predicted": false
+  },
+  "rejected": [
+    {
+      "camera": "front",
+      "detection_index": 1,
+      "reason": "truncated_small_or_ground_anchor_unavailable"
+    },
+    {
+      "camera": "front",
+      "detection_index": 3,
+      "reason": "truncated_small_or_ground_anchor_unavailable"
+    },
+    {
+      "camera": "front",
+      "detection_index": 5,
+      "reason": "truncated_small_or_ground_anchor_unavailable"
+    },
+    {
+      "camera": "front",
+      "detection_index": 6,
+      "reason": "truncated_small_or_ground_anchor_unavailable"
+    },
+    {
+      "camera": "front_right",
+      "detection_index": 1,
+      "reason": "truncated_small_or_ground_anchor_unavailable"
+    },
+    {
+      "camera": "front_left",
+      "detection_index": 2,
+      "reason": "truncated_small_or_ground_anchor_unavailable"
+    },
+    {
+      "camera": "front",
+      "detection_index": 4,
+      "bbox_xyxy": [
+        225.9651336669922,
+        181.42103576660156,
+        263.7530517578125,
+        196.8541717529297
+      ],
+      "score_uncalibrated": 0.9917940497398376,
+      "reason": "learned_center_outside_30m"
+    },
+    {
+      "camera": "front_left",
+      "detection_index": 3,
+      "bbox_xyxy": [
+        506.1407775878906,
+        180.25758361816406,
+        555.216552734375,
+        199.82444763183594
+      ],
+      "score_uncalibrated": 0.8586934208869934,
+      "reason": "learned_center_outside_30m"
+    }
+  ],
+  "single_camera_cuboids": 3,
+  "occupancy": {
+    "source": "predicted_ground_rays_and_learned_cuboid_volume",
+    "ray_endpoints": 2321,
+    "unknown_fraction": 0.879475,
+    "free_is_ray_supported_only": true,
+    "free_requires_voxel_lower_face_above_ground": true,
+    "ray_endpoint_voxel_never_carved": true,
+    "curb_height": "not_estimated",
+    "fine_geometry_reconstructed": false,
+    "semantic_labels": {
+      "0": "free",
+      "1": "road",
+      "2": "sidewalk",
+      "3": "car",
+      "4": "pedestrian",
+      "5": "bicycle",
+      "6": "motorcycle",
+      "7": "truck",
+      "8": "bus",
+      "9": "terrain",
+      "255": "unknown"
+    },
+    "axes": "row:-x,column:+y,layer:+z",
+    "resolution_m": 0.5,
+    "file": "occupancy.npz",
+    "sha256": "4e596034a7a48719368490762c7957ac801ddd1408025bcb23c5b455d84d87d8"
+  },
+  "occupancy_grid": {
+    "x_min": -15.0,
+    "x_max": 35.0,
+    "y_min": -20.0,
+    "y_max": 20.0,
+    "z_min": -0.5,
+    "z_max": 4.5,
+    "resolution_m": 0.5
+  },
+  "road_path": {
+    "status": "candidate",
+    "source": "paired_predicted_lane_marks_ground_plane",
+    "points_ego_m": [
+      [
+        8.0,
+        -0.0036647350721336416
+      ],
+      [
+        8.5,
+        -0.001481010855634353
+      ],
+      [
+        9.0,
+        0.0006420087122581339
+      ],
+      [
+        9.5,
+        0.002704323631543812
+      ],
+      [
+        10.0,
+        0.004705933902222681
+      ],
+      [
+        10.5,
+        0.006646839524294741
+      ],
+      [
+        11.0,
+        0.008527040497759993
+      ],
+      [
+        11.5,
+        0.010346536822618435
+      ],
+      [
+        12.0,
+        0.012105328498870076
+      ],
+      [
+        12.5,
+        0.013803415526514914
+      ],
+      [
+        13.0,
+        0.01544079790555293
+      ],
+      [
+        13.5,
+        0.01701747563598415
+      ],
+      [
+        14.0,
+        0.018533448717808564
+      ],
+      [
+        14.5,
+        0.01998871715102616
+      ],
+      [
+        15.0,
+        0.021383280935636968
+      ],
+      [
+        15.5,
+        0.02271714007164096
+      ],
+      [
+        16.0,
+        0.023990294559038138
+      ],
+      [
+        16.5,
+        0.025202744397828512
+      ],
+      [
+        17.0,
+        0.02635448958801207
+      ],
+      [
+        17.5,
+        0.02744553012958883
+      ]
+    ],
+    "observed_pairs": 11,
+    "span_m": 9.5,
+    "fit_rmse_m": 0.002570161083675121,
+    "median_width_m": 3.5500000000000007,
+    "control_issued": false,
+    "limits": "Visible local center candidate; no destination routing, traffic rules or closed-loop proof"
+  },
+  "parent_manifest": "inputs/frames/town04-00/00246294.json",
+  "parent_frame_sha256": "2f497f0ddc6be05dd07635a87f84eb6380d11e45c0bf538ebd8121c73f6bc240",
+  "timing_ms": {
+    "decode_crops_3D_fusion_tracking": 43.784999987110496,
+    "occupancy": 63.91950004035607,
+    "upstream_Phase4_compute": 1077.5778000243008
+  },
+  "limitations": [
+    "upright cuboids and flat ground",
+    "Orientation vector norm/consensus is a validity heuristic, not calibrated accuracy",
+    "No velocity/future prediction, fine surfaces or obstacle-clear path",
+    "Known short train/validation pilot, no formal quality pass"
+  ],
+  "control_issued": false,
+  "GT_used_in_inference": false
+}

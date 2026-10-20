@@ -1,0 +1,34 @@
+[
+  {
+    "path": "configs/phase5_world_v1.json",
+    "sha256": "620721dc5106b9df141036e7b8805b6e56f13f9c8cbbeca025409e2e23e0d14a"
+  },
+  {
+    "path": "scripts/phase5_gt.py",
+    "sha256": "19d43c632f9c8da3b370251edef6763f0f0295c830954aac0a7d79020d681681"
+  },
+  {
+    "path": "scripts/prepare_phase5_crops.py",
+    "sha256": "538d77aa7d53284ec3e0f10d522650793d837a5c70e91ff55c5370b1faa7bd41"
+  },
+  {
+    "path": "scripts/train_phase5_cuboids.py",
+    "sha256": "faa8ff6736a405aa7a43befb1f8ab1c0e77aedbbf6a77a912cbe68eba1de2f52"
+  },
+  {
+    "path": "src/senior_ai/bev_geometry.py",
+    "sha256": "34e797f9ce6909bb341798e66e21ee93447c37036a03c0ef8044cace5ea7f449"
+  },
+  {
+    "path": "src/senior_ai/cuboid.py",
+    "sha256": "5b07987265524db0ff749efdbec75f408de154f8b6f7756dedb6b668467d988c"
+  },
+  {
+    "path": "src/senior_ai/dataset.py",
+    "sha256": "5623aee9fd60b7a378e810f1ee558237985bc93c278f86607f29d517722045bd"
+  },
+  {
+    "path": "src/senior_ai/segmentation_training.py",
+    "sha256": "ccac2aeb158ed861cfd8325195c836230b9c4d76ca29b2662c1f0f53fe95efb8"
+  }
+]

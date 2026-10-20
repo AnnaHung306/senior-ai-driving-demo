@@ -1,0 +1,27 @@
+{
+  "status": "completed_Phase5_engineering_baseline",
+  "formal_phase5_complete": false,
+  "quality_passed": false,
+  "tests": {
+    "total": 223,
+    "failed": 0,
+    "skipped": 0
+  },
+  "control_issued": false,
+  "checkpoint_sha256": "1ad8ccbf8e5409b476219b8ecaf0924922a756c19b845043b9cbeae99fd32f6f",
+  "run_contract_sha256": "c6669144a0c921274a52458c1451a262a546401bbf183b6f24cf3f6b4582409d",
+  "evaluation_report_sha256": "384c424c1b3d7aeb927acf31f857fbda1cfa2357bff0804a40633a8282b7ac6f",
+  "visual_review_sha256": "bfa683484e08f4e57dae95cbba8ef1c02ad24de1bb3f9ad1d926fb534576e536",
+  "all32_3D_objects_and_tracking_exact_between001_002": true,
+  "training_budget": "One fixed12-epoch scratch run,132updates, no extra search/retraining",
+  "remaining": [
+    "Orientation symmetry and pedestrian geometry",
+    "Duplicate hypotheses and stable long-term ID",
+    "Sparse free evidence/unknown and fine geometry",
+    "Fresh predefined full routes and latency acceptance"
+  ],
+  "local_only": [
+    "Original corpus/RGB, resized crop NPZ packages, model/optimizer weights"
+  ],
+  "original_pending_statuses_preserved": true
+}

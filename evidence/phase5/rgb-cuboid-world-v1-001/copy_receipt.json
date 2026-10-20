@@ -1,0 +1,1307 @@
+{
+  "status": "exact_raw_copies",
+  "files": [
+    {
+      "archive": "README.md",
+      "source": "artifacts/reports/phase5-report-v1-001.md",
+      "sha256": "a8eea606441ed58f0ad8d4a268e38aa89fae53a3d843288a9b74b648a33778fd",
+      "bytes": 11563
+    },
+    {
+      "archive": "MODEL_CARD.md",
+      "source": "artifacts/reports/phase5-model-card-v1-001.md",
+      "sha256": "734e6feba9532280148ad50aa0c5e7884575c38ebb7b9c7def9113661f5d9d1c",
+      "bytes": 3189
+    },
+    {
+      "archive": "run/config.json",
+      "source": "artifacts/runs/phase5-world-v1-002/config.json",
+      "sha256": "adba925c27728059dcbbb06a73331fefec6e95ed603398065c0fead76fad496d",
+      "bytes": 966
+    },
+    {
+      "archive": "run/contract.json",
+      "source": "artifacts/runs/phase5-world-v1-002/contract.json",
+      "sha256": "c6669144a0c921274a52458c1451a262a546401bbf183b6f24cf3f6b4582409d",
+      "bytes": 7157
+    },
+    {
+      "archive": "run/progress.json",
+      "source": "artifacts/runs/phase5-world-v1-002/progress.json",
+      "sha256": "afdf86432fbd1448f06331d02180108ad6d3f243e51998da4aa61b5ddce97211",
+      "bytes": 225
+    },
+    {
+      "archive": "run/state.json",
+      "source": "artifacts/runs/phase5-world-v1-002/state.json",
+      "sha256": "16bd24bee3a65fb4da35b0d9304a2950162f1df053e68b515b268fc8e2d1cf07",
+      "bytes": 6936
+    },
+    {
+      "archive": "run/town01-00/166989/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/166989/occupancy.npz",
+      "sha256": "c1ae6816373182f2ea9799c5640428fc7b289e09aa65b1fcd5f2bb8f2192228d",
+      "bytes": 1656
+    },
+    {
+      "archive": "run/town01-00/166989/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/166989/prediction.png",
+      "sha256": "5432b0ddd84a335c4232dd80a3b0c6db4ac154845b9c2eb7be6e1cab27acd78a",
+      "bytes": 691329
+    },
+    {
+      "archive": "run/town01-00/166989/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/166989/world.json",
+      "sha256": "91fc4433fcb4628f787883b6e9701e22d41cd9b5f8cbc6e3b48cec565080105e",
+      "bytes": 26975
+    },
+    {
+      "archive": "run/town01-00/166993/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/166993/occupancy.npz",
+      "sha256": "9f9c9b0a372c1099ddad8fadd3d998c30861bb16da1b8ad97eebaf5993c9a0d1",
+      "bytes": 1760
+    },
+    {
+      "archive": "run/town01-00/166993/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/166993/prediction.png",
+      "sha256": "6e0a2118dcf1c0a72d3c2d4dff80e3974b38049b78352d5f144c3547d9e52b3a",
+      "bytes": 696961
+    },
+    {
+      "archive": "run/town01-00/166993/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/166993/world.json",
+      "sha256": "3f63dee03aecd787fea57af7126c538ec3f551ba369091566fff1968bfe2c318",
+      "bytes": 27168
+    },
+    {
+      "archive": "run/town01-00/166997/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/166997/occupancy.npz",
+      "sha256": "e59d558b3b76b6c806cb61f842b71c3e08563e10cbe3f2c2863ffec6328f6d27",
+      "bytes": 1657
+    },
+    {
+      "archive": "run/town01-00/166997/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/166997/prediction.png",
+      "sha256": "f391fd0805de58783e796018c5023fc0773ef59115bd45d56c2480b02fb52eef",
+      "bytes": 693331
+    },
+    {
+      "archive": "run/town01-00/166997/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/166997/world.json",
+      "sha256": "6f150c29181458228041c4e2daf53854116555bc8b5e793981faf3fa9fb04bd4",
+      "bytes": 24178
+    },
+    {
+      "archive": "run/town01-00/167001/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/167001/occupancy.npz",
+      "sha256": "fb7a760b87d3760dc9344c72db5fa9210f6bc0840a234f7e860a495b67fb133a",
+      "bytes": 1634
+    },
+    {
+      "archive": "run/town01-00/167001/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/167001/prediction.png",
+      "sha256": "36c85ed5e66818ea0728c667ee7668cebfdaa81857ed0e4a258acb441fd89f96",
+      "bytes": 693926
+    },
+    {
+      "archive": "run/town01-00/167001/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/167001/world.json",
+      "sha256": "0b791606d7680a08990c758b8eb65ffa8a69972072820797e84027f2d116c2d2",
+      "bytes": 24245
+    },
+    {
+      "archive": "run/town01-00/167005/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/167005/occupancy.npz",
+      "sha256": "178f0fa9b609707ae3fc18bdada9a6fbd07363257bde1bfdfe8e2b737128882e",
+      "bytes": 1589
+    },
+    {
+      "archive": "run/town01-00/167005/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/167005/prediction.png",
+      "sha256": "87f4b9e18c60b02859f75f0160a947fa5990d797f893bb31c9f7f16d9b095eef",
+      "bytes": 687349
+    },
+    {
+      "archive": "run/town01-00/167005/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/167005/world.json",
+      "sha256": "c38ef450190bb9b12aacc11b76f970b64417b7ebc4f74b1b813e9331caacdd99",
+      "bytes": 23910
+    },
+    {
+      "archive": "run/town01-00/167009/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/167009/occupancy.npz",
+      "sha256": "d79a6c68969ae9480f747a864ab877fcfd64a0319a5b1ac138cc6bec1da562b8",
+      "bytes": 1563
+    },
+    {
+      "archive": "run/town01-00/167009/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/167009/prediction.png",
+      "sha256": "66c25a9c540b16ab0217ad164f3582eede59dd7c9d5ceb6dd55da1bd465b258f",
+      "bytes": 690707
+    },
+    {
+      "archive": "run/town01-00/167009/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/167009/world.json",
+      "sha256": "f5b291a0f488c60061c3d963eb3cf903a9855241f29b5bffb79a1c2cf360ded7",
+      "bytes": 23975
+    },
+    {
+      "archive": "run/town01-00/167013/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/167013/occupancy.npz",
+      "sha256": "361a1abb56fee3a34823e1aa52af3874782a9c2078050d23763a610fc6aa12a9",
+      "bytes": 1681
+    },
+    {
+      "archive": "run/town01-00/167013/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/167013/prediction.png",
+      "sha256": "ea53862fbb73e5bbebed70642b05781172c4bcdbbc8a2f4a384cab2464f741ff",
+      "bytes": 698223
+    },
+    {
+      "archive": "run/town01-00/167013/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/167013/world.json",
+      "sha256": "97f6c48f5bb641b812706d154abca373677c8a13eeeb09965a5e1cb75cb6ff2b",
+      "bytes": 25716
+    },
+    {
+      "archive": "run/town01-00/167017/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/167017/occupancy.npz",
+      "sha256": "e1ea7968f058fad11226aab80c8047c6bf2b40dafdcc69c4c18bf556c185cec2",
+      "bytes": 1790
+    },
+    {
+      "archive": "run/town01-00/167017/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/167017/prediction.png",
+      "sha256": "66190b97071929b94cbf7bf5dd26e426bb3f48f3e97f39d6ce084b39276390aa",
+      "bytes": 693723
+    },
+    {
+      "archive": "run/town01-00/167017/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-00/167017/world.json",
+      "sha256": "dbbba11d16f4db3963dd69b015860995f91827e3529593cfb46cea2deb4f17fb",
+      "bytes": 21781
+    },
+    {
+      "archive": "run/town01-01/168344/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168344/occupancy.npz",
+      "sha256": "0381a334c3d4ba65d81fcc97def11897f11efa22176ea06c9f2ce3a1aa2e22e4",
+      "bytes": 2050
+    },
+    {
+      "archive": "run/town01-01/168344/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168344/prediction.png",
+      "sha256": "9daf589a3b795b450e1a8d2fb4d921bff3f1e9d872e6cac9d5a049f744f63f2a",
+      "bytes": 668754
+    },
+    {
+      "archive": "run/town01-01/168344/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168344/world.json",
+      "sha256": "05dbc679c82320c0f18753d5931436758c99c959ab182b5e305004b6c4d14cfa",
+      "bytes": 31606
+    },
+    {
+      "archive": "run/town01-01/168348/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168348/occupancy.npz",
+      "sha256": "d220c9f760f07c76685a7463acc8b1dcb4490fd1cd38d796605dba5797657774",
+      "bytes": 1973
+    },
+    {
+      "archive": "run/town01-01/168348/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168348/prediction.png",
+      "sha256": "8d1c136be22cfbe27209ab372c576e781cc3afedcec516346d5eb6f265a5a235",
+      "bytes": 672901
+    },
+    {
+      "archive": "run/town01-01/168348/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168348/world.json",
+      "sha256": "e742040217b79d5447a7efc17f746e21790aeaf3f75176e70bc703e2fa97176b",
+      "bytes": 32964
+    },
+    {
+      "archive": "run/town01-01/168352/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168352/occupancy.npz",
+      "sha256": "4c8a97458ad486c250df279463ac9473e7f23f4390549d9aa51be00a266f7097",
+      "bytes": 1984
+    },
+    {
+      "archive": "run/town01-01/168352/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168352/prediction.png",
+      "sha256": "6ecf5995c71ec8ee1c4cad301dbad8f77dde54cd168df8f5dce24bf4e5a74732",
+      "bytes": 672582
+    },
+    {
+      "archive": "run/town01-01/168352/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168352/world.json",
+      "sha256": "a5fdec0c72f2b49808f538ab0466027169a3884e98a98ec91c89b68edd137ee1",
+      "bytes": 26758
+    },
+    {
+      "archive": "run/town01-01/168356/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168356/occupancy.npz",
+      "sha256": "09bcf3bd03be2a0d3df3072be53165b048091b25588b373668087bb7ad255b2d",
+      "bytes": 1963
+    },
+    {
+      "archive": "run/town01-01/168356/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168356/prediction.png",
+      "sha256": "583eb1bf8e08e04fc6b1fb542d780847b8434347e8effc48117bb46dec40c149",
+      "bytes": 680536
+    },
+    {
+      "archive": "run/town01-01/168356/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168356/world.json",
+      "sha256": "0ccf90ba94443dfea3af7e55bf29d98064bf25628f3ce7183ff1262f70c1bdc3",
+      "bytes": 28592
+    },
+    {
+      "archive": "run/town01-01/168360/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168360/occupancy.npz",
+      "sha256": "96e10a42d58f2f20bb399d47b8deb5e3b4502a123a0396f8f377e25e0e5da5e8",
+      "bytes": 2008
+    },
+    {
+      "archive": "run/town01-01/168360/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168360/prediction.png",
+      "sha256": "310f93ba4166b8bca734ad9ffb9e8ff8e404d18d2ceffc6266eab653db56a2ea",
+      "bytes": 675674
+    },
+    {
+      "archive": "run/town01-01/168360/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168360/world.json",
+      "sha256": "92ebe066779cb3044edcf046686c6768e827e81be3ace6fe8f43fb00d0d597a2",
+      "bytes": 28637
+    },
+    {
+      "archive": "run/town01-01/168364/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168364/occupancy.npz",
+      "sha256": "5a088f87e7a730aa501d45a18d635b44c2be670f4a27365e600e99d272417de4",
+      "bytes": 1988
+    },
+    {
+      "archive": "run/town01-01/168364/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168364/prediction.png",
+      "sha256": "41a83fb10fd765cfa07d5fadfce3e0608c21ffb78c4dcf7b81ea8a27821835c6",
+      "bytes": 678081
+    },
+    {
+      "archive": "run/town01-01/168364/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168364/world.json",
+      "sha256": "bc532dde007e4abc5105feb42b3dc97a4a69847f86658a3bf5d2864bbd27b245",
+      "bytes": 31679
+    },
+    {
+      "archive": "run/town01-01/168368/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168368/occupancy.npz",
+      "sha256": "551ed9c42c0b14b96a77f6c627cda1bf61a879d4e069058f5137c073c8f0c04e",
+      "bytes": 2024
+    },
+    {
+      "archive": "run/town01-01/168368/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168368/prediction.png",
+      "sha256": "cbf6c555574e8aa003868834b50520909be4b772d27c016190e4b4da727a15b5",
+      "bytes": 682049
+    },
+    {
+      "archive": "run/town01-01/168368/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168368/world.json",
+      "sha256": "cf8d84b041e4f61757dfe0af0825cafa7c3baa5af29684f1cfa86fb7fc7350a5",
+      "bytes": 26987
+    },
+    {
+      "archive": "run/town01-01/168372/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168372/occupancy.npz",
+      "sha256": "0d85ccf7860f471b6217c6a8a4ee834d13cb6afed5b6c67c56572cb5f5510f08",
+      "bytes": 2028
+    },
+    {
+      "archive": "run/town01-01/168372/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168372/prediction.png",
+      "sha256": "1fa60cde7dad192608ae04cd380c8a6987283da29a07fb5b1bc253c6a9447865",
+      "bytes": 685590
+    },
+    {
+      "archive": "run/town01-01/168372/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town01-01/168372/world.json",
+      "sha256": "6b83a81fb48e481d0529404aa839e21bc5612198512c255c85134fc4a866f7fd",
+      "bytes": 26175
+    },
+    {
+      "archive": "run/town04-00/246278/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246278/occupancy.npz",
+      "sha256": "db36b0512aa2a3c7c14c3b26a382ff0e6b72141671399a4bbd523800529f1b80",
+      "bytes": 2223
+    },
+    {
+      "archive": "run/town04-00/246278/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246278/prediction.png",
+      "sha256": "738b594754c7e8cb47ce0770d0d4222e21dcd27f2e7ea76b9676522afe6ab004",
+      "bytes": 717424
+    },
+    {
+      "archive": "run/town04-00/246278/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246278/world.json",
+      "sha256": "fb9cc05b8c72de226e56bece46a103d0cc5d83aeeed512b0dcb6edc3c4efb209",
+      "bytes": 18315
+    },
+    {
+      "archive": "run/town04-00/246282/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246282/occupancy.npz",
+      "sha256": "d5aebb826bc2e475759233ca8b4e59232fea9ab34911ead0e9e45dd14116e591",
+      "bytes": 2151
+    },
+    {
+      "archive": "run/town04-00/246282/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246282/prediction.png",
+      "sha256": "3f44717d2264be5f6f327a9d8592420d83f55d6750b030a217779b0c366d07df",
+      "bytes": 718698
+    },
+    {
+      "archive": "run/town04-00/246282/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246282/world.json",
+      "sha256": "b46cdfb11e71ddc3c395b673361348947ce9806aa9e3d212b2367de50c44ebc6",
+      "bytes": 18333
+    },
+    {
+      "archive": "run/town04-00/246286/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246286/occupancy.npz",
+      "sha256": "698c95b662f76716ed208029bc3760a12d18d733a577c3a52933b62301888053",
+      "bytes": 2132
+    },
+    {
+      "archive": "run/town04-00/246286/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246286/prediction.png",
+      "sha256": "10200a110ed4634633d146374426c5c0cc5ef5ad4b0a5ff5bf53f11e275ad521",
+      "bytes": 716397
+    },
+    {
+      "archive": "run/town04-00/246286/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246286/world.json",
+      "sha256": "6a9b15c9558237c777318ef77b8f2a6cde3ec34d66c0eb0d8fc6c02e7e96e3aa",
+      "bytes": 18547
+    },
+    {
+      "archive": "run/town04-00/246290/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246290/occupancy.npz",
+      "sha256": "31de3c300f1feea7cd703cb0ab016308908561328900ce77ec36bf33b9bc1d51",
+      "bytes": 2118
+    },
+    {
+      "archive": "run/town04-00/246290/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246290/prediction.png",
+      "sha256": "45560a8336e8022da83666c125ca20362f9074efb0a7b9235d73a2000f5a0597",
+      "bytes": 713411
+    },
+    {
+      "archive": "run/town04-00/246290/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246290/world.json",
+      "sha256": "ae3ea1060dd3f8f996f346c2c1101e6b0e0dafa9428f87a1e9aeb792bcac3ea4",
+      "bytes": 18590
+    },
+    {
+      "archive": "run/town04-00/246294/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246294/occupancy.npz",
+      "sha256": "4e596034a7a48719368490762c7957ac801ddd1408025bcb23c5b455d84d87d8",
+      "bytes": 2076
+    },
+    {
+      "archive": "run/town04-00/246294/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246294/prediction.png",
+      "sha256": "8dc332e3b0957fdca78da2c00c7c5f1c5f1e8881b2ecef41b1112fa6c4638ee7",
+      "bytes": 721493
+    },
+    {
+      "archive": "run/town04-00/246294/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246294/world.json",
+      "sha256": "7a2b1fac553fc503a5c0901978be731e160cd5fe4c9054d8db862612141886c4",
+      "bytes": 14582
+    },
+    {
+      "archive": "run/town04-00/246298/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246298/occupancy.npz",
+      "sha256": "6f720b1fc8af85fd6d516f39006c0c5d60c198d5c3fb84c7353e35beb930eacf",
+      "bytes": 2130
+    },
+    {
+      "archive": "run/town04-00/246298/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246298/prediction.png",
+      "sha256": "556866c03274ef2249c385ac202fa946e6627203eff012cb17d5898b340fe15d",
+      "bytes": 723833
+    },
+    {
+      "archive": "run/town04-00/246298/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246298/world.json",
+      "sha256": "4d418d21e00d3102a9df71b6f475876248d6138ad91bd6486e91e02ba29fe435",
+      "bytes": 17896
+    },
+    {
+      "archive": "run/town04-00/246302/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246302/occupancy.npz",
+      "sha256": "6d526179a3c7954f768919b0a9b5bd63c27e6e254db96c482e640dfa3c1d2e18",
+      "bytes": 2050
+    },
+    {
+      "archive": "run/town04-00/246302/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246302/prediction.png",
+      "sha256": "440a69f0424b77a6732764272e8640947faac2b84396a23c010bc592b6d208ff",
+      "bytes": 716783
+    },
+    {
+      "archive": "run/town04-00/246302/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246302/world.json",
+      "sha256": "ed3dd13c679f487776b33fc53abe8a7a779741ba415f01ed8bce902f5bc6434e",
+      "bytes": 16912
+    },
+    {
+      "archive": "run/town04-00/246306/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246306/occupancy.npz",
+      "sha256": "a4dd60b4822e25a72dc951a48be8e7fdf9d9c52cedeb0059e786f41680993fe4",
+      "bytes": 2059
+    },
+    {
+      "archive": "run/town04-00/246306/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246306/prediction.png",
+      "sha256": "f381b177a52b5db7550835ba81e7795d16cdef8e067ca3cb5cb7f88a30934ec2",
+      "bytes": 712418
+    },
+    {
+      "archive": "run/town04-00/246306/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-00/246306/world.json",
+      "sha256": "43cffc20195974230474fe7a9d40a4eb58b7adb9fbb5b1d9cbbb5b08ec515e1d",
+      "bytes": 17046
+    },
+    {
+      "archive": "run/town04-01/246933/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246933/occupancy.npz",
+      "sha256": "297e54072356d53d1e2da8f4027bfa05be131e86d2b319369e5fde229c047f29",
+      "bytes": 2159
+    },
+    {
+      "archive": "run/town04-01/246933/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246933/prediction.png",
+      "sha256": "dc8f9666093715b22f4d6f56b259444ea734857ef42b21db4a5b6aedc5781291",
+      "bytes": 749968
+    },
+    {
+      "archive": "run/town04-01/246933/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246933/world.json",
+      "sha256": "91a7aaeee0cd030a8bd64eb9b8efb83a697a69f93bc507a1a39f68b2cdbcd3c9",
+      "bytes": 24126
+    },
+    {
+      "archive": "run/town04-01/246937/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246937/occupancy.npz",
+      "sha256": "ae692eeac35b5ff57ef8786c0b3c66a1d5ee3fa59b54fdbbb9967fbe6f44a4b9",
+      "bytes": 2052
+    },
+    {
+      "archive": "run/town04-01/246937/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246937/prediction.png",
+      "sha256": "da8ec6da04b9301f07ef11f6fcbc5ef7d12c0ed9527ac4363a0e0715d1271ae7",
+      "bytes": 739369
+    },
+    {
+      "archive": "run/town04-01/246937/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246937/world.json",
+      "sha256": "3b40ddee3bcc3086e985a1be619ff921764e358aee4ea383a39ba773cf1442b4",
+      "bytes": 18291
+    },
+    {
+      "archive": "run/town04-01/246941/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246941/occupancy.npz",
+      "sha256": "2ee8d016d8f8815672119c947b393ab13173aa86272d8a8a6e40683bf03370dc",
+      "bytes": 2132
+    },
+    {
+      "archive": "run/town04-01/246941/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246941/prediction.png",
+      "sha256": "875aeeca88e809afd06e91f101f27cb23f1d2fb3cd44b72fabf588522c7e9b09",
+      "bytes": 736814
+    },
+    {
+      "archive": "run/town04-01/246941/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246941/world.json",
+      "sha256": "57553d26b9c3d0b35c3a575a9d0284d0f5ca994c00ca78c7d08a860d69440ffa",
+      "bytes": 18896
+    },
+    {
+      "archive": "run/town04-01/246945/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246945/occupancy.npz",
+      "sha256": "6794a859dbaaeb2b80f545daaa2b357a008d0655e09d3bd19a6d4aa87af902a3",
+      "bytes": 2022
+    },
+    {
+      "archive": "run/town04-01/246945/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246945/prediction.png",
+      "sha256": "d8fac9897aaaa5e3446971b176c6c074f0bc72a8cac782d80c798684d3e517af",
+      "bytes": 735516
+    },
+    {
+      "archive": "run/town04-01/246945/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246945/world.json",
+      "sha256": "8e35c8e26b91d0c768c51de67f380f147779287b493f2ad7e57821c368eff0d5",
+      "bytes": 15401
+    },
+    {
+      "archive": "run/town04-01/246949/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246949/occupancy.npz",
+      "sha256": "f33703bb064d05202e13ef3d594296cc2318e4e066981aa7448709f26866e133",
+      "bytes": 2129
+    },
+    {
+      "archive": "run/town04-01/246949/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246949/prediction.png",
+      "sha256": "5fb9444c66a8d628bf04429147cb56ee03a27de932e1c6c7da8a473610277941",
+      "bytes": 741932
+    },
+    {
+      "archive": "run/town04-01/246949/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246949/world.json",
+      "sha256": "f946bc9c01e1d1f68d2fbc5bd8a68e6b878e24f746dc5a7b82e30da67bab994b",
+      "bytes": 21359
+    },
+    {
+      "archive": "run/town04-01/246953/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246953/occupancy.npz",
+      "sha256": "682537b92a8cedea7cce9c26b50c4390732fd09e8cd4c76ebd71ca5d7e823c0d",
+      "bytes": 2091
+    },
+    {
+      "archive": "run/town04-01/246953/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246953/prediction.png",
+      "sha256": "1edc640ad5c49bc7d1b762f0b9a0c8d83b9281a926dc41e5860f03e929cc1c7e",
+      "bytes": 735040
+    },
+    {
+      "archive": "run/town04-01/246953/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246953/world.json",
+      "sha256": "fa1282ca2fb052c5005aec9fe633a6969dfeb44968727540896b36c26b6debbe",
+      "bytes": 12666
+    },
+    {
+      "archive": "run/town04-01/246957/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246957/occupancy.npz",
+      "sha256": "31e16c4ccaef1015bdaf3b2e0ab4c67fd162189a6a43b5178fb880611b3e1fa9",
+      "bytes": 2180
+    },
+    {
+      "archive": "run/town04-01/246957/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246957/prediction.png",
+      "sha256": "a96320ccabefee5dea525e1063badd80b7558297024370fb1de9527496bc83bd",
+      "bytes": 737092
+    },
+    {
+      "archive": "run/town04-01/246957/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246957/world.json",
+      "sha256": "657093c0bf6eb8a286155982c0dba83a25ec1ec9f2d278e71cd46fc5927ac3c6",
+      "bytes": 15448
+    },
+    {
+      "archive": "run/town04-01/246961/occupancy.npz",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246961/occupancy.npz",
+      "sha256": "af65b3f1e470a0f80b480e9fbceb77380066a66e36fd8e5e7104dddb653245a5",
+      "bytes": 2179
+    },
+    {
+      "archive": "run/town04-01/246961/prediction.png",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246961/prediction.png",
+      "sha256": "445fce23c0c13d326cedec0c4e00a2ef4a461822d7f367d262d27f8259b8bdeb",
+      "bytes": 736458
+    },
+    {
+      "archive": "run/town04-01/246961/world.json",
+      "source": "artifacts/runs/phase5-world-v1-002/town04-01/246961/world.json",
+      "sha256": "68ddad2f3e4e98c847500cf4aa5077dd25e62aa4d9f1eb2a0273291d0154abf1",
+      "bytes": 17515
+    },
+    {
+      "archive": "evaluation/GT_input_inventory.json",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/GT_input_inventory.json",
+      "sha256": "76e812fcd185c47e44a508478b836e079d3b3f84c2e016532ef3eb8c7b546904",
+      "bytes": 103255
+    },
+    {
+      "archive": "evaluation/report.json",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/report.json",
+      "sha256": "384c424c1b3d7aeb927acf31f857fbda1cfa2357bff0804a40633a8282b7ac6f",
+      "bytes": 382479
+    },
+    {
+      "archive": "evaluation/source/scripts/evaluate_phase5_world.py",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/source/scripts/evaluate_phase5_world.py",
+      "sha256": "4068969730e86bd1d5b7b0156c60b2d5ba51bf82230c695932391ee375848391",
+      "bytes": 18675
+    },
+    {
+      "archive": "evaluation/source/scripts/phase5_gt.py",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/source/scripts/phase5_gt.py",
+      "sha256": "19d43c632f9c8da3b370251edef6763f0f0295c830954aac0a7d79020d681681",
+      "bytes": 2218
+    },
+    {
+      "archive": "evaluation/source/scripts/phase5_render.py",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/source/scripts/phase5_render.py",
+      "sha256": "8214a8febb9bc997711d9fc401dc961d9a8609260212ebff4c49838f9b8f3dce",
+      "bytes": 3305
+    },
+    {
+      "archive": "evaluation/source/scripts/select_phase4_pilot.py",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/source/scripts/select_phase4_pilot.py",
+      "sha256": "f75c7320183332d7085224a18d6dd385bb7cba29023ec5d755c74f5ae56531d4",
+      "bytes": 6401
+    },
+    {
+      "archive": "evaluation/town01-00/166989/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-00/166989/evaluation.png",
+      "sha256": "926102e597fbb29bcb86f0ce2f6fc8515623e0ff15487f3244fb1f38f914a418",
+      "bytes": 22688
+    },
+    {
+      "archive": "evaluation/town01-00/166989/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-00/166989/GT_reference.npz",
+      "sha256": "ebf61e0fd95fe0a7292687368ed437c2d9cea2bdd5e0f06a81bd1e2d1acd3398",
+      "bytes": 5751
+    },
+    {
+      "archive": "evaluation/town01-00/166993/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-00/166993/evaluation.png",
+      "sha256": "4ab4c92926c95db51b5fa6f0f1cfcfeeccf4469a88d23a2a02687aee31caac7e",
+      "bytes": 22474
+    },
+    {
+      "archive": "evaluation/town01-00/166993/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-00/166993/GT_reference.npz",
+      "sha256": "a2869a78d4deb787ae652598a70519d9655ed44695a51b44592765fca349fb6a",
+      "bytes": 5682
+    },
+    {
+      "archive": "evaluation/town01-00/166997/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-00/166997/evaluation.png",
+      "sha256": "96f06a7e4f412370de7e1b66b8ff001d594f33a89581c0a00f09886f12479113",
+      "bytes": 22537
+    },
+    {
+      "archive": "evaluation/town01-00/166997/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-00/166997/GT_reference.npz",
+      "sha256": "9a9c8a44bca9820d44eae08b085a5ae720ab99f048616d41b948b820554ccdb2",
+      "bytes": 5678
+    },
+    {
+      "archive": "evaluation/town01-00/167001/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-00/167001/evaluation.png",
+      "sha256": "7a7ee262104add67cff83787c0f074e7940fd36ae0621e3bbdd9b01ffbd7bfd1",
+      "bytes": 22322
+    },
+    {
+      "archive": "evaluation/town01-00/167001/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-00/167001/GT_reference.npz",
+      "sha256": "43299da2799665fb2770c3e30c5e672a6c5ec563323c34ba1e169d6e34854d2c",
+      "bytes": 5586
+    },
+    {
+      "archive": "evaluation/town01-00/167005/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-00/167005/evaluation.png",
+      "sha256": "1f6c24e56fdbf80451a6d70f62c9473ca5ae7ec4af15a9e41a05032eca942433",
+      "bytes": 22274
+    },
+    {
+      "archive": "evaluation/town01-00/167005/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-00/167005/GT_reference.npz",
+      "sha256": "a226039f026d6c7ae1fb1727c8a62c8bf3d5bbe3f684a06982759ce9cf9758ec",
+      "bytes": 5545
+    },
+    {
+      "archive": "evaluation/town01-00/167009/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-00/167009/evaluation.png",
+      "sha256": "664a5385261e65b5f3ea9cb34ff8171097518199e601deda00b9f9b91c12e691",
+      "bytes": 22234
+    },
+    {
+      "archive": "evaluation/town01-00/167009/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-00/167009/GT_reference.npz",
+      "sha256": "c55475f604dd28ab50fb342fef946b8d60152d5517b3d4602f1007545697c04b",
+      "bytes": 5593
+    },
+    {
+      "archive": "evaluation/town01-00/167013/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-00/167013/evaluation.png",
+      "sha256": "d5af77e3d598d2692019497e1f12b779401a2d6adb8743985240f30a1f27098a",
+      "bytes": 21889
+    },
+    {
+      "archive": "evaluation/town01-00/167013/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-00/167013/GT_reference.npz",
+      "sha256": "1bba8a2fd2ccfd2ccb71cfa98fc28471b1e4b0720d6d7af0f9b03f74c6181e57",
+      "bytes": 5649
+    },
+    {
+      "archive": "evaluation/town01-00/167017/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-00/167017/evaluation.png",
+      "sha256": "25902598ea2609ad02778b2f9784547c19f18d48ce86a61252fa97684d893840",
+      "bytes": 22291
+    },
+    {
+      "archive": "evaluation/town01-00/167017/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-00/167017/GT_reference.npz",
+      "sha256": "d17c4c5be6a18994820dd27d575a872498e176780f6a19ee47668265e8415f98",
+      "bytes": 5574
+    },
+    {
+      "archive": "evaluation/town01-01/168344/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-01/168344/evaluation.png",
+      "sha256": "fc6942ec7863321d92d5449fd7e6fd230c2f9a25952d92affb8cb542a62561cd",
+      "bytes": 23588
+    },
+    {
+      "archive": "evaluation/town01-01/168344/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-01/168344/GT_reference.npz",
+      "sha256": "6217710918449a75bb32bf6aa1b525466285343c38dd73eacf32d56d4e7f2d33",
+      "bytes": 6430
+    },
+    {
+      "archive": "evaluation/town01-01/168348/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-01/168348/evaluation.png",
+      "sha256": "04be01a514476899463da0f6d896481606d48c7becc27308aef56ca5eea62b03",
+      "bytes": 23441
+    },
+    {
+      "archive": "evaluation/town01-01/168348/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-01/168348/GT_reference.npz",
+      "sha256": "4f253f835e671c775e1aa43ab3190ba8cbb006bfb6ba13c1cbf47f99fdaa3025",
+      "bytes": 6459
+    },
+    {
+      "archive": "evaluation/town01-01/168352/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-01/168352/evaluation.png",
+      "sha256": "8e93d7d203873bc3eba54754acb6a02fd5da950a369519b1605a906905387d1c",
+      "bytes": 23539
+    },
+    {
+      "archive": "evaluation/town01-01/168352/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-01/168352/GT_reference.npz",
+      "sha256": "8ef45b6e1ce0753cd2e72a857ed18935c7c17eccd0c7b1208e0e0106ca798732",
+      "bytes": 6367
+    },
+    {
+      "archive": "evaluation/town01-01/168356/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-01/168356/evaluation.png",
+      "sha256": "581ddf4c71206afa30937e2bd25135e89f7d1db35a58be220fee64349c2123f0",
+      "bytes": 23828
+    },
+    {
+      "archive": "evaluation/town01-01/168356/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-01/168356/GT_reference.npz",
+      "sha256": "c9398ae34eae5a016c9382b16826ed2fe40bcec54171caf4b88186bf0cbcf4b2",
+      "bytes": 6444
+    },
+    {
+      "archive": "evaluation/town01-01/168360/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-01/168360/evaluation.png",
+      "sha256": "624dd0d992f4745461e3a2a539b35ca8de5dc2e3b1957dfd7bd2975f95624388",
+      "bytes": 23580
+    },
+    {
+      "archive": "evaluation/town01-01/168360/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-01/168360/GT_reference.npz",
+      "sha256": "3966068097f626219fd7737b0251e72afe300e72e6521a61a3cba193db7344a5",
+      "bytes": 6451
+    },
+    {
+      "archive": "evaluation/town01-01/168364/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-01/168364/evaluation.png",
+      "sha256": "7c7ed2e44e75775cedb52b3266e7e9048264b6e46561949532a689a498c93558",
+      "bytes": 23690
+    },
+    {
+      "archive": "evaluation/town01-01/168364/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-01/168364/GT_reference.npz",
+      "sha256": "325aefacce96340be8dcd2b58f36f7e466f688d5732614d24557d1b15475728c",
+      "bytes": 6531
+    },
+    {
+      "archive": "evaluation/town01-01/168368/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-01/168368/evaluation.png",
+      "sha256": "6689968fd714b77b2af4bf770050fea07058404c40e1e4a9473a331237c18216",
+      "bytes": 23859
+    },
+    {
+      "archive": "evaluation/town01-01/168368/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-01/168368/GT_reference.npz",
+      "sha256": "7ccb2e5ee53e562a9abc21a8a2637d8c60dca41ee58b9e1b0ea380ab41bb2d7f",
+      "bytes": 6415
+    },
+    {
+      "archive": "evaluation/town01-01/168372/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-01/168372/evaluation.png",
+      "sha256": "3ac67acc6bffad71e372d4c755de2c3844bb5b0570171b7fa10155bcee0aa8f4",
+      "bytes": 23873
+    },
+    {
+      "archive": "evaluation/town01-01/168372/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town01-01/168372/GT_reference.npz",
+      "sha256": "5adf9bb0e2547aa7bdfc8d8f2992ee4c0ef37c67c40156f525b5c8ad16997f5f",
+      "bytes": 6352
+    },
+    {
+      "archive": "evaluation/town04-00/246278/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-00/246278/evaluation.png",
+      "sha256": "665679182407cb0d1e2748e8ae46ffc957615e82f14d6ab3b5ce87b8d79e1b05",
+      "bytes": 23078
+    },
+    {
+      "archive": "evaluation/town04-00/246278/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-00/246278/GT_reference.npz",
+      "sha256": "3039d40627a9a7c37ce0e82033be7507ffbf7f961ee55c284b6c5b884e4def13",
+      "bytes": 6114
+    },
+    {
+      "archive": "evaluation/town04-00/246282/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-00/246282/evaluation.png",
+      "sha256": "f996079d6603d0782376d79c68b8f606ae96e9d5cec640932c874eb4efe66dd5",
+      "bytes": 22854
+    },
+    {
+      "archive": "evaluation/town04-00/246282/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-00/246282/GT_reference.npz",
+      "sha256": "4b2dad138ce9a7b46b3089c0366a546f7ae68f7df18ae42b1ad5fbcba88adb71",
+      "bytes": 5879
+    },
+    {
+      "archive": "evaluation/town04-00/246286/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-00/246286/evaluation.png",
+      "sha256": "1d7219a8839314888b6783dfd87b46c84ed93a7fa95f444e4122be19e5aabd03",
+      "bytes": 22748
+    },
+    {
+      "archive": "evaluation/town04-00/246286/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-00/246286/GT_reference.npz",
+      "sha256": "3664a67086d7290b0a227823adf6d77769c018ee899cf9f7662bd7480ae51c5f",
+      "bytes": 5824
+    },
+    {
+      "archive": "evaluation/town04-00/246290/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-00/246290/evaluation.png",
+      "sha256": "8b801513ad87bc6328d0db3cd4734e2d9760bacdbadf4d5d512fa58d344598fa",
+      "bytes": 22615
+    },
+    {
+      "archive": "evaluation/town04-00/246290/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-00/246290/GT_reference.npz",
+      "sha256": "556d9af026f645caa7a92422ba764e3f27c6811c376838b572aa333e58a5e86a",
+      "bytes": 5743
+    },
+    {
+      "archive": "evaluation/town04-00/246294/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-00/246294/evaluation.png",
+      "sha256": "45d5270bb6e31b639523f0dc954ed461d9c8f74a809c98638f23cbb4ea748780",
+      "bytes": 22530
+    },
+    {
+      "archive": "evaluation/town04-00/246294/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-00/246294/GT_reference.npz",
+      "sha256": "06bcc8695f251bfea9065d5e5b2add4aa32549effd5dc83e52a54b3fbce5e564",
+      "bytes": 5588
+    },
+    {
+      "archive": "evaluation/town04-00/246298/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-00/246298/evaluation.png",
+      "sha256": "d97854a16e1787a40fd1b2194310fe6236acf0079bdff844482f3e9fbf429c6a",
+      "bytes": 22881
+    },
+    {
+      "archive": "evaluation/town04-00/246298/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-00/246298/GT_reference.npz",
+      "sha256": "ff32f270225c2e06d553489f8e211badb82c063f89ada60d05f2552496f24185",
+      "bytes": 5761
+    },
+    {
+      "archive": "evaluation/town04-00/246302/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-00/246302/evaluation.png",
+      "sha256": "c9ae174f37508b5ae9c994a653cc1c3d7175d4585f30800b95df9978eff57b47",
+      "bytes": 22348
+    },
+    {
+      "archive": "evaluation/town04-00/246302/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-00/246302/GT_reference.npz",
+      "sha256": "80a640b0366978d50f837cc767a3e9d7cae90e2db39950806f478104c626e6e4",
+      "bytes": 5657
+    },
+    {
+      "archive": "evaluation/town04-00/246306/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-00/246306/evaluation.png",
+      "sha256": "f3e9fdfbdd69e4a02a1e246e9693aa3e937ecb65c3360b4c37297a14c1b78f2e",
+      "bytes": 22396
+    },
+    {
+      "archive": "evaluation/town04-00/246306/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-00/246306/GT_reference.npz",
+      "sha256": "87df56886bd757e888f1a1156768e3704cbcadc836aaece7cd0cc41cd9db8388",
+      "bytes": 5692
+    },
+    {
+      "archive": "evaluation/town04-01/246933/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-01/246933/evaluation.png",
+      "sha256": "49219b68d85350810f5fea7541ba7f09362a2bd3b86fd0bc43a928eebfbf205b",
+      "bytes": 23881
+    },
+    {
+      "archive": "evaluation/town04-01/246933/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-01/246933/GT_reference.npz",
+      "sha256": "f34976d580cf55ef1618f695be272914c439be10b74832887b70ace9b9337860",
+      "bytes": 6042
+    },
+    {
+      "archive": "evaluation/town04-01/246937/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-01/246937/evaluation.png",
+      "sha256": "4248a77adb4da16dca57ee4b6d378186eed0bd891178540c08057438d39b8708",
+      "bytes": 22992
+    },
+    {
+      "archive": "evaluation/town04-01/246937/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-01/246937/GT_reference.npz",
+      "sha256": "a27531fea1872347ade41c0663e80c78557fbccc4eba824330e59d6f3b0ebe9f",
+      "bytes": 5983
+    },
+    {
+      "archive": "evaluation/town04-01/246941/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-01/246941/evaluation.png",
+      "sha256": "5795d3812b40d219c1739d71db76b44dab9d6f166a77309562e7995647925f75",
+      "bytes": 22586
+    },
+    {
+      "archive": "evaluation/town04-01/246941/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-01/246941/GT_reference.npz",
+      "sha256": "a0aff85b1966fe253ec4c2ededfcd1d8ece8ba7f7eef2a518468ba5c9daddff1",
+      "bytes": 6005
+    },
+    {
+      "archive": "evaluation/town04-01/246945/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-01/246945/evaluation.png",
+      "sha256": "5b7132a798b77a100c9e2ec3a774cca64b7e1b1496bd4c3799d772d1874aad00",
+      "bytes": 22143
+    },
+    {
+      "archive": "evaluation/town04-01/246945/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-01/246945/GT_reference.npz",
+      "sha256": "8c8b3751e966bb7fa896c90f6eb9aaadd39672e4b3f42f94e4f6698ae242e6b0",
+      "bytes": 5832
+    },
+    {
+      "archive": "evaluation/town04-01/246949/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-01/246949/evaluation.png",
+      "sha256": "2636f3d80f2a5270573e55d8067b19127291f3f890577b17a5d9deea7496f845",
+      "bytes": 23157
+    },
+    {
+      "archive": "evaluation/town04-01/246949/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-01/246949/GT_reference.npz",
+      "sha256": "fd5ff849fc20963362ec9ebea2f8b0e7cad97a5ce9d88c05bc3d9effdd7cede7",
+      "bytes": 5791
+    },
+    {
+      "archive": "evaluation/town04-01/246953/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-01/246953/evaluation.png",
+      "sha256": "b02c9b4459a28b31e1c6a75fe67d4de6c5c72c3eb76f059ef6416a9765ccefd9",
+      "bytes": 22579
+    },
+    {
+      "archive": "evaluation/town04-01/246953/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-01/246953/GT_reference.npz",
+      "sha256": "a42ce06a3ef962b1056d1b442afe9e5b4985d98e14dd98b2b955c97f4c737721",
+      "bytes": 5636
+    },
+    {
+      "archive": "evaluation/town04-01/246957/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-01/246957/evaluation.png",
+      "sha256": "1de8e45145a04d391f144f7e2bdc3c39f15b66e2f35b68e485617e75e0c4dd83",
+      "bytes": 22901
+    },
+    {
+      "archive": "evaluation/town04-01/246957/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-01/246957/GT_reference.npz",
+      "sha256": "35714d2e15b7ef877c32651c783695f0435e625e6233f48271b4e2bbec7fd4ba",
+      "bytes": 5908
+    },
+    {
+      "archive": "evaluation/town04-01/246961/evaluation.png",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-01/246961/evaluation.png",
+      "sha256": "b5b1fb7dea3f64fe6f699f17b68466708e70d8f5f204405e6812998758ddaa94",
+      "bytes": 22698
+    },
+    {
+      "archive": "evaluation/town04-01/246961/GT_reference.npz",
+      "source": "artifacts/runs/phase5-world-v1-002-evaluation/town04-01/246961/GT_reference.npz",
+      "sha256": "0368cafeac04e2244ae52407c02cb1aeeba9405361efb5cb4979b2402ca71cc7",
+      "bytes": 5752
+    },
+    {
+      "archive": "visual_QA/catalog.json",
+      "source": "artifacts/runs/phase5-QA-v1-002/catalog.json",
+      "sha256": "564160f6f715c414819bd330604fe0336117e7ef9c6439d4b6898e242511de12",
+      "bytes": 20174
+    },
+    {
+      "archive": "visual_QA/evaluation-00.png",
+      "source": "artifacts/runs/phase5-QA-v1-002/evaluation-00.png",
+      "sha256": "a85ad6626d40b6b8347f8df0c643906ae790eb9c9aa37da6dbd3c20c164595c6",
+      "bytes": 178520
+    },
+    {
+      "archive": "visual_QA/evaluation-01.png",
+      "source": "artifacts/runs/phase5-QA-v1-002/evaluation-01.png",
+      "sha256": "1ec552c0eb50aa79b18f9e6af0069f5b7b1c36d2ef86f899a1c449899df3c6e2",
+      "bytes": 173063
+    },
+    {
+      "archive": "visual_QA/evaluation-02.png",
+      "source": "artifacts/runs/phase5-QA-v1-002/evaluation-02.png",
+      "sha256": "ab587c910d451e850050e5cf73bfe60e70118aecfedc3e50f94216d2438b72ad",
+      "bytes": 216242
+    },
+    {
+      "archive": "visual_QA/evaluation-03.png",
+      "source": "artifacts/runs/phase5-QA-v1-002/evaluation-03.png",
+      "sha256": "241d51b818818cd108d3012b98dbcbfbdf32aed15e2d99b5d78061a736abe398",
+      "bytes": 218765
+    },
+    {
+      "archive": "visual_QA/evaluation-04.png",
+      "source": "artifacts/runs/phase5-QA-v1-002/evaluation-04.png",
+      "sha256": "992c0f90d86618c587a8beda94e8b3b53a7a2ec995300a66878e1e53ee0d692a",
+      "bytes": 201854
+    },
+    {
+      "archive": "visual_QA/evaluation-05.png",
+      "source": "artifacts/runs/phase5-QA-v1-002/evaluation-05.png",
+      "sha256": "c01ec4cc9d6cac415e68b4f5801a114219fb479d379fd0ea2682f5ce76ada35a",
+      "bytes": 189695
+    },
+    {
+      "archive": "visual_QA/evaluation-06.png",
+      "source": "artifacts/runs/phase5-QA-v1-002/evaluation-06.png",
+      "sha256": "d5782b98f612562613d57e54e95137bf4994b83c7cbca43ee3aaf48f6ecb85c4",
+      "bytes": 190324
+    },
+    {
+      "archive": "visual_QA/evaluation-07.png",
+      "source": "artifacts/runs/phase5-QA-v1-002/evaluation-07.png",
+      "sha256": "c67b3165c87e5df1d6001c45758d625361f07c868284992ad476edbe095c00be",
+      "bytes": 186254
+    },
+    {
+      "archive": "visual_QA/prediction-00.png",
+      "source": "artifacts/runs/phase5-QA-v1-002/prediction-00.png",
+      "sha256": "e6ff3b24f0f8f107529b2547bb903d49207850b3179edab93c3b432a587ecb90",
+      "bytes": 830894
+    },
+    {
+      "archive": "visual_QA/prediction-01.png",
+      "source": "artifacts/runs/phase5-QA-v1-002/prediction-01.png",
+      "sha256": "8f22f9833c4b51ed009442a1a26bece5707e7edd54af9b6e1144087ad658bc0c",
+      "bytes": 823939
+    },
+    {
+      "archive": "visual_QA/prediction-02.png",
+      "source": "artifacts/runs/phase5-QA-v1-002/prediction-02.png",
+      "sha256": "40aa9925e83a53f20af68b117f5d8d3d59053ac4d5681cd3b6f169266574d68b",
+      "bytes": 820980
+    },
+    {
+      "archive": "visual_QA/prediction-03.png",
+      "source": "artifacts/runs/phase5-QA-v1-002/prediction-03.png",
+      "sha256": "cfbcbdd85b95229d3a8841ccc84edd5b3d521b91b1a272d2a0fd7b36e994b8ad",
+      "bytes": 835089
+    },
+    {
+      "archive": "visual_QA/prediction-04.png",
+      "source": "artifacts/runs/phase5-QA-v1-002/prediction-04.png",
+      "sha256": "73c47aa7ffdd0cf3d57fa4686a45d9313efdc1304b28e98c976a4e028f669633",
+      "bytes": 870432
+    },
+    {
+      "archive": "visual_QA/prediction-05.png",
+      "source": "artifacts/runs/phase5-QA-v1-002/prediction-05.png",
+      "sha256": "c28716f55848fe7584292dbcd484546d1b271601984859d139ade1b057048c6b",
+      "bytes": 863981
+    },
+    {
+      "archive": "visual_QA/prediction-06.png",
+      "source": "artifacts/runs/phase5-QA-v1-002/prediction-06.png",
+      "sha256": "b5cadb07b37840dd7598cab6e8e98c32ca14b44ce9a4d3fde4b952ea9e44df40",
+      "bytes": 884142
+    },
+    {
+      "archive": "visual_QA/prediction-07.png",
+      "source": "artifacts/runs/phase5-QA-v1-002/prediction-07.png",
+      "sha256": "8827a45e4d05070c7106630cf62cefc5a702108a05d4646af7a00c7c81269e03",
+      "bytes": 877392
+    },
+    {
+      "archive": "visual_QA/visual_review.json",
+      "source": "artifacts/runs/phase5-QA-v1-002/visual_review.json",
+      "sha256": "bfa683484e08f4e57dae95cbba8ef1c02ad24de1bb3f9ad1d926fb534576e536",
+      "bytes": 9029
+    },
+    {
+      "archive": "training/contract.json",
+      "source": "artifacts/runs/phase5-cuboid-v1-001/contract.json",
+      "sha256": "5eb1fc5c9c9195f07654fedc78520d0d9b2d79b58c919ec9def227b57149120d",
+      "bytes": 2062
+    },
+    {
+      "archive": "training/config.json",
+      "source": "artifacts/runs/phase5-cuboid-v1-001/config.json",
+      "sha256": "adba925c27728059dcbbb06a73331fefec6e95ed603398065c0fead76fad496d",
+      "bytes": 966
+    },
+    {
+      "archive": "training/state.json",
+      "source": "artifacts/runs/phase5-cuboid-v1-001/state.json",
+      "sha256": "1e28e11ef9bb33d7c70c61d586607809a9c7344eaecd26e2300fefd43e6f0f59",
+      "bytes": 520
+    },
+    {
+      "archive": "training/history.json",
+      "source": "artifacts/runs/phase5-cuboid-v1-001/history.json",
+      "sha256": "0c74fb7c76fe9e2b365320644ee81d68171455d29007fe9f152c41642d22b31f",
+      "bytes": 1975
+    },
+    {
+      "archive": "training/conditional_validation.json",
+      "source": "artifacts/runs/phase5-cuboid-v1-001/conditional_validation.json",
+      "sha256": "d1318f90d38ad983e9dc23b8a3bdb76c187bc9b651ca71d922250b86ccd1ce7a",
+      "bytes": 334202
+    },
+    {
+      "archive": "training/validation_predictions.npy",
+      "source": "artifacts/runs/phase5-cuboid-v1-001/validation_predictions.npy",
+      "sha256": "605d267a38735545201fcb8630a1a1c435cb035056c4ea795bfa73066b160bc1",
+      "bytes": 7552
+    },
+    {
+      "archive": "prepared_data/contract.json",
+      "source": "artifacts/runs/phase5-crops-v1-002/contract.json",
+      "sha256": "9cb129959f3561e092903b36400639348ea622c4e77877a88fbd119c2f63e44a",
+      "bytes": 3549
+    },
+    {
+      "archive": "prepared_data/source_inventory.json",
+      "source": "artifacts/runs/phase5-crops-v1-002/source_inventory.json",
+      "sha256": "3a0b1ebac07e03b6c7d2c8ac4c4273ee42955960e65219ac21da7293062ba9b1",
+      "bytes": 329518
+    },
+    {
+      "archive": "prepared_data/train_records.json",
+      "source": "artifacts/runs/phase5-crops-v1-002/train_records.json",
+      "sha256": "c0cc95c7d71342e2a8961aa7167be49734ba256e261eb14e33e24598f8b44242",
+      "bytes": 1296746
+    },
+    {
+      "archive": "prepared_data/validation_records.json",
+      "source": "artifacts/runs/phase5-crops-v1-002/validation_records.json",
+      "sha256": "ebc7d5a67a4f859b1a63087755c5d1f799f32d7216e1759e60da47c3bc12f556",
+      "bytes": 457784
+    },
+    {
+      "archive": "boundary/extra_GT_file/stderr.log",
+      "source": "artifacts/runs/phase5-boundary-v1-001/extra_GT_file/stderr.log",
+      "sha256": "6381a11a7b4bb3a52b0fb54cf19f8e1fe7bc5e900272c480fe053f094469eaa8",
+      "bytes": 339
+    },
+    {
+      "archive": "boundary/GT_pose_in_sequence/stderr.log",
+      "source": "artifacts/runs/phase5-boundary-v1-001/GT_pose_in_sequence/stderr.log",
+      "sha256": "7a818cc33ff29161294a9f919aab5bd2b17ae0ed1931b00016128546b03d8d84",
+      "bytes": 480
+    },
+    {
+      "archive": "boundary/report.json",
+      "source": "artifacts/runs/phase5-boundary-v1-001/report.json",
+      "sha256": "526a86dddfdf1418faa59a5528a45536d63373710f927e911e613d7a18d7ce3a",
+      "bytes": 1386
+    },
+    {
+      "archive": "checks/phase5-integrity-v1-002.json",
+      "source": "artifacts/reports/phase5-integrity-v1-002.json",
+      "sha256": "eaecb2756063b0dc95e6aa55b74966353f2839b0bf977c7f1b4dde74d9699786",
+      "bytes": 20263
+    },
+    {
+      "archive": "checks/phase5-supplement-v1-001.json",
+      "source": "artifacts/reports/phase5-supplement-v1-001.json",
+      "sha256": "477e00ca39ccef0966c9240c237829f5027e940423b004cad1e8804cf915f596",
+      "bytes": 35798
+    },
+    {
+      "archive": "checks/phase5-regression-final-002.log",
+      "source": "artifacts/reports/phase5-regression-final-002.log",
+      "sha256": "f6b80704eba99183fe44179381299d494e5439a8c8813200626d126fa0b202b4",
+      "bytes": 40894
+    },
+    {
+      "archive": "checks/phase5-regression-final.log",
+      "source": "artifacts/reports/phase5-regression-final.log",
+      "sha256": "4fac5be74a371f00cb5703a80ed0473b9eb8ebebb04b59c9dab3e78994970025",
+      "bytes": 40402
+    },
+    {
+      "archive": "checks/phase5-regression-001.log",
+      "source": "artifacts/reports/phase5-regression-001.log",
+      "sha256": "89683f4688b1bfcc63bbdeac4b9231ecca533e1e4d2d54132f66adfad0aae6d1",
+      "bytes": 39757
+    },
+    {
+      "archive": "history/initial-crop-guard-failure.json",
+      "source": "artifacts/runs/phase5-crops-v1-001/failure.json",
+      "sha256": "0eff948ebb61fc2b64d8292b95f106111d2090f7947b5384a6b4171bd1706e9d",
+      "bytes": 630
+    },
+    {
+      "archive": "history/initial-ray-world/contract.json",
+      "source": "artifacts/runs/phase5-world-v1-001/contract.json",
+      "sha256": "722b5656cc253b03bce37ef4ea2562356bd6dd947222218c8bd6ad16df21046c",
+      "bytes": 7157
+    },
+    {
+      "archive": "history/initial-ray-world/config.json",
+      "source": "artifacts/runs/phase5-world-v1-001/config.json",
+      "sha256": "adba925c27728059dcbbb06a73331fefec6e95ed603398065c0fead76fad496d",
+      "bytes": 966
+    },
+    {
+      "archive": "history/initial-ray-world/state.json",
+      "source": "artifacts/runs/phase5-world-v1-001/state.json",
+      "sha256": "ed47fa4ab0c2cb165165f45ba2b8a763bc3ff33442523a8504872eba410e664d",
+      "bytes": 6937
+    },
+    {
+      "archive": "history/initial-ray-evaluation/report.json",
+      "source": "artifacts/runs/phase5-world-v1-001-evaluation/report.json",
+      "sha256": "e226df80d9e0a21da674af9ad9bcc88f9b05ebf52d8f8ca15b1776007cf42d11",
+      "bytes": 379630
+    },
+    {
+      "archive": "history/initial-ray-evaluation/source/scripts/evaluate_phase5_world.py",
+      "source": "artifacts/runs/phase5-world-v1-001-evaluation/source/scripts/evaluate_phase5_world.py",
+      "sha256": "49dcf9c711ab32041890578e153da01553b7529a7332ba603baa2f98c741b576",
+      "bytes": 18375
+    },
+    {
+      "archive": "history/initial-ray-evaluation/source/scripts/phase5_gt.py",
+      "source": "artifacts/runs/phase5-world-v1-001-evaluation/source/scripts/phase5_gt.py",
+      "sha256": "19d43c632f9c8da3b370251edef6763f0f0295c830954aac0a7d79020d681681",
+      "bytes": 2218
+    },
+    {
+      "archive": "history/initial-ray-evaluation/source/scripts/phase5_render.py",
+      "source": "artifacts/runs/phase5-world-v1-001-evaluation/source/scripts/phase5_render.py",
+      "sha256": "8214a8febb9bc997711d9fc401dc961d9a8609260212ebff4c49838f9b8f3dce",
+      "bytes": 3305
+    },
+    {
+      "archive": "history/initial-ray-evaluation/source/scripts/select_phase4_pilot.py",
+      "source": "artifacts/runs/phase5-world-v1-001-evaluation/source/scripts/select_phase4_pilot.py",
+      "sha256": "f75c7320183332d7085224a18d6dd385bb7cba29023ec5d755c74f5ae56531d4",
+      "bytes": 6401
+    }
+  ]
+}

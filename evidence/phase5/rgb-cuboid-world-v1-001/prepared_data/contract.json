@@ -1,0 +1,118 @@
+{
+  "status": "completed_fixed_train_validation_crops",
+  "dataset": "C:\\code\\senior_AI\\data\\sunny-cross-town-v3-007",
+  "approved_parent_data": {
+    "audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+    "review_sha256": "2316ef3a7a5ed2c31a7e983957953c90846b26e670a41323532244af1f5976ee",
+    "image_inventory_sha256": "dfa830811b91994fbce03d7b321a533cd9dbd40227779b8dbe2511ec9163df59",
+    "metadata_inventory_sha256": "dc0f3d5a091f66eb4f481a9c8c0fadd255dce2eb36574498846a360faf6aae25",
+    "verified_images": 86400
+  },
+  "config_sha256": "620721dc5106b9df141036e7b8805b6e56f13f9c8cbbeca025409e2e23e0d14a",
+  "split_summaries": {
+    "train": {
+      "crops": 659,
+      "class_counts": {
+        "3": 138,
+        "4": 86,
+        "2": 305,
+        "1": 49,
+        "6": 50,
+        "5": 31
+      },
+      "excluded": {
+        "GT_center_out_of_fixed_range": 152,
+        "truncation_small_or_invalid_ground_anchor": 680,
+        "non_actor_class": 616
+      },
+      "scenes": [
+        "town01-00",
+        "town01-01",
+        "town01-02",
+        "town01-03",
+        "town03-00",
+        "town03-01",
+        "town03-02",
+        "town03-03"
+      ]
+    },
+    "validation": {
+      "crops": 232,
+      "class_counts": {
+        "3": 48,
+        "4": 69,
+        "2": 62,
+        "1": 30,
+        "5": 14,
+        "6": 9
+      },
+      "excluded": {
+        "GT_center_out_of_fixed_range": 73,
+        "truncation_small_or_invalid_ground_anchor": 338,
+        "non_actor_class": 349
+      },
+      "scenes": [
+        "town04-00",
+        "town04-01",
+        "town04-02"
+      ]
+    }
+  },
+  "class_size_priors_train_unique_actors": {
+    "1": [
+      4.89238166809082,
+      1.8367133140563965,
+      1.490277647972107
+    ],
+    "2": [
+      0.3753577768802643,
+      0.3753577768802643,
+      1.2999999523162842
+    ],
+    "3": [
+      1.5093227624893188,
+      0.8659406304359436,
+      1.6123536825180054
+    ],
+    "4": [
+      2.043684244155884,
+      0.7969123125076294,
+      1.523191213607788
+    ],
+    "5": [
+      7.935710430145264,
+      2.8910882472991943,
+      3.4619433879852295
+    ],
+    "6": [
+      10.272685050964355,
+      3.9441518783569336,
+      4.252848148345947
+    ]
+  },
+  "supported_class_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "scenes_disjoint": true,
+  "GT_used_as_targets_only": true,
+  "no_depth_inputs_or_targets": true,
+  "files": {
+    "source_inventory.json": "3a0b1ebac07e03b6c7d2c8ac4c4273ee42955960e65219ac21da7293062ba9b1",
+    "train.npz": "a7fbdc1dfb5481c2bd8ccdbdfdce67eae86e9114a84f3527fe8c04275fe644b6",
+    "train_records.json": "c0cc95c7d71342e2a8961aa7167be49734ba256e261eb14e33e24598f8b44242",
+    "validation.npz": "ccfa8ab1bb562a5779b9a7ae5fc603384e03ef371828f1921ef8867082760d81",
+    "validation_records.json": "ebc7d5a67a4f859b1a63087755c5d1f799f32d7216e1759e60da47c3bc12f556"
+  },
+  "sources": {
+    "scripts/prepare_phase5_crops.py": "538d77aa7d53284ec3e0f10d522650793d837a5c70e91ff55c5370b1faa7bd41",
+    "scripts/phase5_gt.py": "19d43c632f9c8da3b370251edef6763f0f0295c830954aac0a7d79020d681681",
+    "src/senior_ai/cuboid.py": "5b07987265524db0ff749efdbec75f408de154f8b6f7756dedb6b668467d988c",
+    "src/senior_ai/bev_geometry.py": "34e797f9ce6909bb341798e66e21ee93447c37036a03c0ef8044cace5ea7f449",
+    "src/senior_ai/dataset.py": "5623aee9fd60b7a378e810f1ee558237985bc93c278f86607f29d517722045bd"
+  }
+}

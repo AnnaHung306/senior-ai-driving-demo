@@ -1,0 +1,74 @@
+[
+  {
+    "path": "PHASE5.md",
+    "sha256": "e0ac4cfe900498eb71eeaf5bc49bb1ff9f4dde6d6d15d403555a9ca312422d71"
+  },
+  {
+    "path": "requirements-phase5.txt",
+    "sha256": "35c6668e317b834de84fa6289589e8f37b67c9c84b38d109327d41b749ab9f0b"
+  },
+  {
+    "path": "scripts/analyze_phase5_errors.py",
+    "sha256": "3537ffa9e223e0f170fbcbb97e830fee0e16a3b90113ee95e52602ba2ecb2d7d"
+  },
+  {
+    "path": "scripts/archive_phase5_baseline.py",
+    "sha256": "776d11f5f0c80d330d5975158f4a345cba7e6a1eb772e19d8d6aeb84215be014"
+  },
+  {
+    "path": "scripts/evaluate_phase5_world.py",
+    "sha256": "4068969730e86bd1d5b7b0156c60b2d5ba51bf82230c695932391ee375848391"
+  },
+  {
+    "path": "scripts/make_phase5_review.py",
+    "sha256": "0eaa8c45296f12603267947ed532e7edd7b12e38a28351eb93f08e5ef2b55b8a"
+  },
+  {
+    "path": "scripts/phase5_gt.py",
+    "sha256": "19d43c632f9c8da3b370251edef6763f0f0295c830954aac0a7d79020d681681"
+  },
+  {
+    "path": "scripts/phase5_render.py",
+    "sha256": "8214a8febb9bc997711d9fc401dc961d9a8609260212ebff4c49838f9b8f3dce"
+  },
+  {
+    "path": "scripts/prepare_phase5_crops.py",
+    "sha256": "538d77aa7d53284ec3e0f10d522650793d837a5c70e91ff55c5370b1faa7bd41"
+  },
+  {
+    "path": "scripts/run_phase5_world.py",
+    "sha256": "19dd5639a9fff00c8b4b536afcbb1165dd5e83300f13258dd59daec092a0dc98"
+  },
+  {
+    "path": "scripts/train_phase5_cuboids.py",
+    "sha256": "faa8ff6736a405aa7a43befb1f8ab1c0e77aedbbf6a77a912cbe68eba1de2f52"
+  },
+  {
+    "path": "scripts/verify_phase5_artifacts.py",
+    "sha256": "c744fce666276d9cd591f188c8c9f5db3d2ee36d9557cb0baca76f56dcce6660"
+  },
+  {
+    "path": "scripts/verify_phase5_boundary.py",
+    "sha256": "7d2ed2ab305efe34218fa26d93cbd185a24a60d43cd7533cffe1c984f2d4d2fe"
+  },
+  {
+    "path": "src/senior_ai/world_schema.py",
+    "sha256": "82454e33801b5202843b149038d3ef9c87925b7b0c2e346631c4903786b1932c"
+  },
+  {
+    "path": "tests/test_world_evaluation.py",
+    "sha256": "795512348ae74a9cca426b6d5383fd11cb81936fd9b2806e5563cad60ac0cce1"
+  },
+  {
+    "path": "tests/test_world_ignore_supplement.py",
+    "sha256": "fb760f2008a08b4ed726d48ed52675848ad6fc72deb46ae5b034380291b060da"
+  },
+  {
+    "path": "tests/test_world_phase5.py",
+    "sha256": "31086be6602d87a0c12c14957efdb037c67e1063aee24ed718c079f2118a3f46"
+  },
+  {
+    "path": "tests/test_world_schema.py",
+    "sha256": "a61a713c8a26e62310879b3236c2e994ee605b497c6e13345e934cb8ae1f3ed1"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "version": "phase5-rgb-cuboid-world-v1",
+  "seed": 20261020,
+  "data_stride": 8,
+  "minimum_class_samples": 10,
+  "classes": {"car": 1, "pedestrian": 2, "bicycle": 3, "motorcycle": 4, "truck": 5, "bus": 6},
+  "epochs": 12,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "crop_size": 64,
+  "maximum_anchor_range_m": 30.0,
+  "maximum_GT_center_range_m": 25.0,
+  "center_residual_scale_m": [5.0, 5.0, 2.0],
+  "minimum_detection_score": 0.5,
+  "merge_distance_m": 1.5,
+  "tracker": {"maximum_gap_s": 0.4, "association_distance_m": 2.5, "maximum_missed_frames": 2},
+  "occupancy": {"x_min": -15.0, "x_max": 35.0, "y_min": -20.0, "y_max": 20.0, "z_min": -0.5, "z_max": 4.5, "resolution_m": 0.5},
+  "scope": "Finite original train/validation baseline; no heldout, no simulator, no controls, no depth input"
+}

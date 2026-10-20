@@ -1,0 +1,64 @@
+{
+  "task": "RGB_crop_3D_regression",
+  "pretrained": false,
+  "data_contract_sha256": "9cb129959f3561e092903b36400639348ea622c4e77877a88fbd119c2f63e44a",
+  "config_sha256": "620721dc5106b9df141036e7b8805b6e56f13f9c8cbbeca025409e2e23e0d14a",
+  "sources": {
+    "scripts/prepare_phase5_crops.py": "538d77aa7d53284ec3e0f10d522650793d837a5c70e91ff55c5370b1faa7bd41",
+    "scripts/phase5_gt.py": "19d43c632f9c8da3b370251edef6763f0f0295c830954aac0a7d79020d681681",
+    "src/senior_ai/cuboid.py": "5b07987265524db0ff749efdbec75f408de154f8b6f7756dedb6b668467d988c",
+    "src/senior_ai/bev_geometry.py": "34e797f9ce6909bb341798e66e21ee93447c37036a03c0ef8044cace5ea7f449",
+    "src/senior_ai/dataset.py": "5623aee9fd60b7a378e810f1ee558237985bc93c278f86607f29d517722045bd",
+    "scripts/train_phase5_cuboids.py": "faa8ff6736a405aa7a43befb1f8ab1c0e77aedbbf6a77a912cbe68eba1de2f52",
+    "configs/phase5_world_v1.json": "620721dc5106b9df141036e7b8805b6e56f13f9c8cbbeca025409e2e23e0d14a",
+    "src/senior_ai/segmentation_training.py": "ccac2aeb158ed861cfd8325195c836230b9c4d76ca29b2662c1f0f53fe95efb8"
+  },
+  "class_size_priors": {
+    "1": [
+      4.89238166809082,
+      1.8367133140563965,
+      1.490277647972107
+    ],
+    "2": [
+      0.3753577768802643,
+      0.3753577768802643,
+      1.2999999523162842
+    ],
+    "3": [
+      1.5093227624893188,
+      0.8659406304359436,
+      1.6123536825180054
+    ],
+    "4": [
+      2.043684244155884,
+      0.7969123125076294,
+      1.523191213607788
+    ],
+    "5": [
+      7.935710430145264,
+      2.8910882472991943,
+      3.4619433879852295
+    ],
+    "6": [
+      10.272685050964355,
+      3.9441518783569336,
+      4.252848148345947
+    ]
+  },
+  "supported_class_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "torch": "2.10.0+cu128",
+  "numpy": "2.3.5",
+  "cuda": "12.8",
+  "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "precision": "float32",
+  "GT_model_features": false,
+  "GT_training_targets": true,
+  "development_lockbox_opened": false
+}

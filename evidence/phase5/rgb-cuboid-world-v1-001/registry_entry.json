@@ -1,0 +1,15 @@
+{
+  "model_id": "phase5-cuboid-v1-001",
+  "task": "conditional_RGB_3D_cuboid_head",
+  "checkpoint_local_path": "artifacts/runs/phase5-cuboid-v1-001/best.pt",
+  "checkpoint_sha256": "1ad8ccbf8e5409b476219b8ecaf0924922a756c19b845043b9cbeae99fd32f6f",
+  "pretrained": false,
+  "parameters": 94424,
+  "train_crops": 659,
+  "validation_crops": 232,
+  "status": "research_baseline_not_formal_quality_pass",
+  "reliable_orientation_validated": false,
+  "reliable_occupancy_validated": false,
+  "checkpoint_in_git": false,
+  "depth_auxiliary_adopted": false
+}

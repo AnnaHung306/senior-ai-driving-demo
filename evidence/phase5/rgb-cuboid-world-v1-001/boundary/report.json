@@ -1,0 +1,28 @@
+{
+  "status": "passed_expected_rejections",
+  "cases": [
+    {
+      "case": "extra_GT_file",
+      "return_code": 1,
+      "expected": "RGB staging contains extra/GT files",
+      "output_not_created": true,
+      "nonexistent_checkpoint_not_opened": true,
+      "stderr_sha256": "6381a11a7b4bb3a52b0fb54cf19f8e1fe7bc5e900272c480fe053f094469eaa8",
+      "fixture_inventory_sha256": "cda00466465255bb8136c72b0183d90f548aa57982efeff7b5eb8ba99aa3e283",
+      "fixture_sequence_sha256": "954d63e274adc747c7458f1b63399280f196c2f8d1f405fd396062a4ce80299d"
+    },
+    {
+      "case": "GT_pose_in_sequence",
+      "return_code": 1,
+      "expected": "GT fields forbidden in sequence",
+      "output_not_created": true,
+      "nonexistent_checkpoint_not_opened": true,
+      "stderr_sha256": "7a818cc33ff29161294a9f919aab5bd2b17ae0ed1931b00016128546b03d8d84",
+      "fixture_inventory_sha256": "cda00466465255bb8136c72b0183d90f548aa57982efeff7b5eb8ba99aa3e283",
+      "fixture_sequence_sha256": "41aa03901e01b1e7a55df6743e67c70f2c559be05002121bcf1339a90e7faf8c"
+    }
+  ],
+  "inference_tool_sha256": "19dd5639a9fff00c8b4b536afcbb1165dd5e83300f13258dd59daec092a0dc98",
+  "tool_sha256": "7d2ed2ab305efe34218fa26d93cbd185a24a60d43cd7533cffe1c984f2d4d2fe",
+  "scope": "CPU actual CLI rejects staged GT/sequence GT before opening a deliberately nonexistent checkpoint"
+}

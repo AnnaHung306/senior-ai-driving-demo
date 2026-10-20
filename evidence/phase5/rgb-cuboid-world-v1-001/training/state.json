@@ -1,0 +1,17 @@
+{
+  "status": "completed_finite_baseline_training",
+  "epochs": 12,
+  "updates": 132,
+  "best_epoch": 11,
+  "best_checkpoint_sha256": "1ad8ccbf8e5409b476219b8ecaf0924922a756c19b845043b9cbeae99fd32f6f",
+  "validation_reload_exact": true,
+  "first_gradient": {
+    "encoder_norm": 0.04781169444322586,
+    "head_norm": 0.3272011876106262
+  },
+  "parameters": 94424,
+  "peak_cuda_MiB": 92.74462890625,
+  "elapsed_s": 2.7732294999877922,
+  "quality_formally_passed": false,
+  "source_integrity_exact": true
+}

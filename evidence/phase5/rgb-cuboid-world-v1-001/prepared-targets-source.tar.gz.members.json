@@ -1,0 +1,22 @@
+[
+  {
+    "path": "scripts/phase5_gt.py",
+    "sha256": "19d43c632f9c8da3b370251edef6763f0f0295c830954aac0a7d79020d681681"
+  },
+  {
+    "path": "scripts/prepare_phase5_crops.py",
+    "sha256": "538d77aa7d53284ec3e0f10d522650793d837a5c70e91ff55c5370b1faa7bd41"
+  },
+  {
+    "path": "src/senior_ai/bev_geometry.py",
+    "sha256": "34e797f9ce6909bb341798e66e21ee93447c37036a03c0ef8044cace5ea7f449"
+  },
+  {
+    "path": "src/senior_ai/cuboid.py",
+    "sha256": "5b07987265524db0ff749efdbec75f408de154f8b6f7756dedb6b668467d988c"
+  },
+  {
+    "path": "src/senior_ai/dataset.py",
+    "sha256": "5623aee9fd60b7a378e810f1ee558237985bc93c278f86607f29d517722045bd"
+  }
+]

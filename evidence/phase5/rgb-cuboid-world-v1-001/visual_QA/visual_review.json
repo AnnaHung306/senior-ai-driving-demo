@@ -1,0 +1,191 @@
+{
+  "status": "completed_actual_visual_review_research_baseline_only",
+  "reviewer": "Codex assistant; actual tools.view_image inspection",
+  "recorded_utc": "2026-10-20T11:25:40.774066+00:00",
+  "catalog_sha256": "564160f6f715c414819bd330604fe0336117e7ef9c6439d4b6898e242511de12",
+  "run_contract_sha256": "c6669144a0c921274a52458c1451a262a546401bbf183b6f24cf3f6b4582409d",
+  "evaluation_report_sha256": "384c424c1b3d7aeb927acf31f857fbda1cfa2357bff0804a40633a8282b7ac6f",
+  "pages": [
+    {
+      "path": "prediction-00.png",
+      "sha256": "e6ff3b24f0f8f107529b2547bb903d49207850b3179edab93c3b432a587ecb90",
+      "viewed": true
+    },
+    {
+      "path": "prediction-01.png",
+      "sha256": "8f22f9833c4b51ed009442a1a26bece5707e7edd54af9b6e1144087ad658bc0c",
+      "viewed": true
+    },
+    {
+      "path": "prediction-02.png",
+      "sha256": "40aa9925e83a53f20af68b117f5d8d3d59053ac4d5681cd3b6f169266574d68b",
+      "viewed": true
+    },
+    {
+      "path": "prediction-03.png",
+      "sha256": "cfbcbdd85b95229d3a8841ccc84edd5b3d521b91b1a272d2a0fd7b36e994b8ad",
+      "viewed": true
+    },
+    {
+      "path": "prediction-04.png",
+      "sha256": "73c47aa7ffdd0cf3d57fa4686a45d9313efdc1304b28e98c976a4e028f669633",
+      "viewed": true
+    },
+    {
+      "path": "prediction-05.png",
+      "sha256": "c28716f55848fe7584292dbcd484546d1b271601984859d139ade1b057048c6b",
+      "viewed": true
+    },
+    {
+      "path": "prediction-06.png",
+      "sha256": "b5cadb07b37840dd7598cab6e8e98c32ca14b44ce9a4d3fde4b952ea9e44df40",
+      "viewed": true
+    },
+    {
+      "path": "prediction-07.png",
+      "sha256": "8827a45e4d05070c7106630cf62cefc5a702108a05d4646af7a00c7c81269e03",
+      "viewed": true
+    },
+    {
+      "path": "evaluation-00.png",
+      "sha256": "a85ad6626d40b6b8347f8df0c643906ae790eb9c9aa37da6dbd3c20c164595c6",
+      "viewed": true
+    },
+    {
+      "path": "evaluation-01.png",
+      "sha256": "1ec552c0eb50aa79b18f9e6af0069f5b7b1c36d2ef86f899a1c449899df3c6e2",
+      "viewed": true
+    },
+    {
+      "path": "evaluation-02.png",
+      "sha256": "ab587c910d451e850050e5cf73bfe60e70118aecfedc3e50f94216d2438b72ad",
+      "viewed": true
+    },
+    {
+      "path": "evaluation-03.png",
+      "sha256": "241d51b818818cd108d3012b98dbcbfbdf32aed15e2d99b5d78061a736abe398",
+      "viewed": true
+    },
+    {
+      "path": "evaluation-04.png",
+      "sha256": "992c0f90d86618c587a8beda94e8b3b53a7a2ec995300a66878e1e53ee0d692a",
+      "viewed": true
+    },
+    {
+      "path": "evaluation-05.png",
+      "sha256": "c01ec4cc9d6cac415e68b4f5801a114219fb479d379fd0ea2682f5ce76ada35a",
+      "viewed": true
+    },
+    {
+      "path": "evaluation-06.png",
+      "sha256": "d5782b98f612562613d57e54e95137bf4994b83c7cbca43ee3aaf48f6ecb85c4",
+      "viewed": true
+    },
+    {
+      "path": "evaluation-07.png",
+      "sha256": "c67b3165c87e5df1d6001c45758d625361f07c868284992ad476edbe095c00be",
+      "viewed": true
+    }
+  ],
+  "full_cases": [
+    {
+      "scene_id": "town01-00",
+      "frame": 167005,
+      "reasons": [
+        "fixed_middle"
+      ],
+      "prediction": "artifacts\\runs\\phase5-world-v1-002\\town01-00\\167005\\prediction.png",
+      "prediction_sha256": "87f4b9e18c60b02859f75f0160a947fa5990d797f893bb31c9f7f16d9b095eef",
+      "evaluation": "artifacts\\runs\\phase5-world-v1-002-evaluation\\town01-00\\167005\\evaluation.png",
+      "evaluation_sha256": "1f6c24e56fdbf80451a6d70f62c9473ca5ae7ec4af15a9e41a05032eca942433",
+      "prediction_viewed": true,
+      "evaluation_viewed": true
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168360,
+      "reasons": [
+        "fixed_middle"
+      ],
+      "prediction": "artifacts\\runs\\phase5-world-v1-002\\town01-01\\168360\\prediction.png",
+      "prediction_sha256": "310f93ba4166b8bca734ad9ffb9e8ff8e404d18d2ceffc6266eab653db56a2ea",
+      "evaluation": "artifacts\\runs\\phase5-world-v1-002-evaluation\\town01-01\\168360\\evaluation.png",
+      "evaluation_sha256": "624dd0d992f4745461e3a2a539b35ca8de5dc2e3b1957dfd7bd2975f95624388",
+      "prediction_viewed": true,
+      "evaluation_viewed": true
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246294,
+      "reasons": [
+        "fixed_middle"
+      ],
+      "prediction": "artifacts\\runs\\phase5-world-v1-002\\town04-00\\246294\\prediction.png",
+      "prediction_sha256": "8dc332e3b0957fdca78da2c00c7c5f1c5f1e8881b2ecef41b1112fa6c4638ee7",
+      "evaluation": "artifacts\\runs\\phase5-world-v1-002-evaluation\\town04-00\\246294\\evaluation.png",
+      "evaluation_sha256": "45d5270bb6e31b639523f0dc954ed461d9c8f74a809c98638f23cbb4ea748780",
+      "prediction_viewed": true,
+      "evaluation_viewed": true
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246949,
+      "reasons": [
+        "fixed_middle",
+        "largest_object_FP"
+      ],
+      "prediction": "artifacts\\runs\\phase5-world-v1-002\\town04-01\\246949\\prediction.png",
+      "prediction_sha256": "5fb9444c66a8d628bf04429147cb56ee03a27de932e1c6c7da8a473610277941",
+      "evaluation": "artifacts\\runs\\phase5-world-v1-002-evaluation\\town04-01\\246949\\evaluation.png",
+      "evaluation_sha256": "2636f3d80f2a5270573e55d8067b19127291f3f890577b17a5d9deea7496f845",
+      "prediction_viewed": true,
+      "evaluation_viewed": true
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246933,
+      "reasons": [
+        "largest_object_FP",
+        "largest_matched_yaw_error"
+      ],
+      "prediction": "artifacts\\runs\\phase5-world-v1-002\\town04-01\\246933\\prediction.png",
+      "prediction_sha256": "dc8f9666093715b22f4d6f56b259444ea734857ef42b21db4a5b6aedc5781291",
+      "evaluation": "artifacts\\runs\\phase5-world-v1-002-evaluation\\town04-01\\246933\\evaluation.png",
+      "evaluation_sha256": "49219b68d85350810f5fea7541ba7f09362a2bd3b86fd0bc43a928eebfbf205b",
+      "prediction_viewed": true,
+      "evaluation_viewed": true
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246941,
+      "reasons": [
+        "largest_matched_yaw_error"
+      ],
+      "prediction": "artifacts\\runs\\phase5-world-v1-002\\town04-01\\246941\\prediction.png",
+      "prediction_sha256": "875aeeca88e809afd06e91f101f27cb23f1d2fb3cd44b72fabf588522c7e9b09",
+      "evaluation": "artifacts\\runs\\phase5-world-v1-002-evaluation\\town04-01\\246941\\evaluation.png",
+      "evaluation_sha256": "5795d3812b40d219c1739d71db76b44dab9d6f166a77309562e7995647925f75",
+      "prediction_viewed": true,
+      "evaluation_viewed": true
+    }
+  ],
+  "findings": [
+    "All16 contact pages inspected: eight prediction and eight GT comparison pages, covering all32 bundles. All6 selected full prediction and all6 full evaluation cases inspected.",
+    "WorldFrame renders learned metric cuboids in calibrated RGB views and in isometric view; blue car and green bicycle roughly align in Town01, with visible yaw and footpoint offsets. No reconstructed mesh is shown.",
+    "Town04 front/right rocks and trees produce large incorrect truck hypotheses in246933/246949, propagated from2D detections and class-size priors. A distant real red truck is also visible inTown01-01; not all unmatched truck proposals imply no truck exists in the scene.",
+    "Pink pedestrian hypotheses may duplicate, shift laterally, or attach to riders. Motorcycle/bicycle classification and occlusion failures remain. Basic nearest tracking has11 ID switches over86 consecutive correctly matched transitions; no stable long-term tracking claim.",
+    "GT green vs prediction orange overlays expose orientation/center errors inTown04. Validation-only results are materially worse than the known training clips. GT-crop mean yaw72deg is not reliable orientation estimation.",
+    "Predicted ground patches are broader/smoother than the sparse GT surface grid, especially sloped terrain projected onto the flat plane. This is ground-plus-cuboid occupancy, not fine3D geometry. Unknown remains dark; free is ray evidence only.",
+    "Endpoint voxels and the ground/below-ground slab are excluded from free carving in both final predictor and independent GT evaluator. Earlier ray/slab ambiguity is preserved in run001, not rewritten as success.",
+    "Low barriers, guardrails, Fence and buildings still appear in development clips. No new full wall-free route is certified and no vehicle was driven.",
+    "Same simulator assets recur across train/validation, so very small L/W errors and exact class dimension priors do not demonstrate unseen-shape learning. Bus has no positive actor/voxel support in the32-frame end-to-end pilot."
+  ],
+  "decision": {
+    "phase5_engineering_baseline_complete": true,
+    "phase5_formal_quality_passed": false,
+    "reliable_orientation_validated": false,
+    "reliable_occupancy_validated": false,
+    "live_driving_validated": false,
+    "extra_training_after_fixed12epochs": false
+  }
+}

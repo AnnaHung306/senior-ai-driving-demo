@@ -1,0 +1,265 @@
+{
+  "status": "completed_world_inference_pending_independent_evaluation",
+  "bundles": 32,
+  "records": [
+    {
+      "scene_id": "town01-00",
+      "frame": 166989,
+      "folder": "town01-00\\166989",
+      "objects": 7,
+      "object_ms": 295.2824999811128,
+      "occupancy_ms": 90.41679999791086
+    },
+    {
+      "scene_id": "town01-00",
+      "frame": 166993,
+      "folder": "town01-00\\166993",
+      "objects": 7,
+      "object_ms": 40.41700001107529,
+      "occupancy_ms": 73.27920000534505
+    },
+    {
+      "scene_id": "town01-00",
+      "frame": 166997,
+      "folder": "town01-00\\166997",
+      "objects": 5,
+      "object_ms": 36.8725000298582,
+      "occupancy_ms": 81.6295999684371
+    },
+    {
+      "scene_id": "town01-00",
+      "frame": 167001,
+      "folder": "town01-00\\167001",
+      "objects": 5,
+      "object_ms": 31.92390000913292,
+      "occupancy_ms": 117.79659998137504
+    },
+    {
+      "scene_id": "town01-00",
+      "frame": 167005,
+      "folder": "town01-00\\167005",
+      "objects": 5,
+      "object_ms": 32.61549997841939,
+      "occupancy_ms": 68.57380003202707
+    },
+    {
+      "scene_id": "town01-00",
+      "frame": 167009,
+      "folder": "town01-00\\167009",
+      "objects": 5,
+      "object_ms": 30.903999984730035,
+      "occupancy_ms": 63.19059996167198
+    },
+    {
+      "scene_id": "town01-00",
+      "frame": 167013,
+      "folder": "town01-00\\167013",
+      "objects": 5,
+      "object_ms": 33.30349997850135,
+      "occupancy_ms": 68.56630003312603
+    },
+    {
+      "scene_id": "town01-00",
+      "frame": 167017,
+      "folder": "town01-00\\167017",
+      "objects": 5,
+      "object_ms": 36.370999994687736,
+      "occupancy_ms": 63.528799975756556
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168344,
+      "folder": "town01-01\\168344",
+      "objects": 7,
+      "object_ms": 52.32439999235794,
+      "occupancy_ms": 85.95380000770092
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168348,
+      "folder": "town01-01\\168348",
+      "objects": 6,
+      "object_ms": 43.972000014036894,
+      "occupancy_ms": 86.92460000747815
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168352,
+      "folder": "town01-01\\168352",
+      "objects": 5,
+      "object_ms": 41.05070000514388,
+      "occupancy_ms": 72.39440002012998
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168356,
+      "folder": "town01-01\\168356",
+      "objects": 7,
+      "object_ms": 30.541100015398115,
+      "occupancy_ms": 80.31779999146238
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168360,
+      "folder": "town01-01\\168360",
+      "objects": 6,
+      "object_ms": 32.93630003463477,
+      "occupancy_ms": 91.35830000741407
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168364,
+      "folder": "town01-01\\168364",
+      "objects": 7,
+      "object_ms": 38.33469998789951,
+      "occupancy_ms": 88.43100001104176
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168368,
+      "folder": "town01-01\\168368",
+      "objects": 6,
+      "object_ms": 31.634900020435452,
+      "occupancy_ms": 75.60349995037541
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168372,
+      "folder": "town01-01\\168372",
+      "objects": 5,
+      "object_ms": 32.2306000161916,
+      "occupancy_ms": 74.84160002786666
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246278,
+      "folder": "town04-00\\246278",
+      "objects": 3,
+      "object_ms": 33.92590000294149,
+      "occupancy_ms": 59.27890003658831
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246282,
+      "folder": "town04-00\\246282",
+      "objects": 3,
+      "object_ms": 41.928699996788055,
+      "occupancy_ms": 65.9618999925442
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246286,
+      "folder": "town04-00\\246286",
+      "objects": 3,
+      "object_ms": 34.80120003223419,
+      "occupancy_ms": 65.79319998854771
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246290,
+      "folder": "town04-00\\246290",
+      "objects": 3,
+      "object_ms": 34.387399966362864,
+      "occupancy_ms": 66.39450002694502
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246294,
+      "folder": "town04-00\\246294",
+      "objects": 3,
+      "object_ms": 52.57890000939369,
+      "occupancy_ms": 62.552699993830174
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246298,
+      "folder": "town04-00\\246298",
+      "objects": 3,
+      "object_ms": 50.788799999281764,
+      "occupancy_ms": 71.57899998128414
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246302,
+      "folder": "town04-00\\246302",
+      "objects": 3,
+      "object_ms": 36.50350001407787,
+      "occupancy_ms": 72.97530001960695
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246306,
+      "folder": "town04-00\\246306",
+      "objects": 3,
+      "object_ms": 37.05020004417747,
+      "occupancy_ms": 63.51400003768504
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246933,
+      "folder": "town04-01\\246933",
+      "objects": 6,
+      "object_ms": 42.64490003697574,
+      "occupancy_ms": 87.56659994833171
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246937,
+      "folder": "town04-01\\246937",
+      "objects": 4,
+      "object_ms": 43.33429998951033,
+      "occupancy_ms": 73.23879998875782
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246941,
+      "folder": "town04-01\\246941",
+      "objects": 4,
+      "object_ms": 53.076500014867634,
+      "occupancy_ms": 75.80649998271838
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246945,
+      "folder": "town04-01\\246945",
+      "objects": 3,
+      "object_ms": 56.05069996090606,
+      "occupancy_ms": 75.12690004659817
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246949,
+      "folder": "town04-01\\246949",
+      "objects": 5,
+      "object_ms": 46.6026000212878,
+      "occupancy_ms": 74.62609995855018
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246953,
+      "folder": "town04-01\\246953",
+      "objects": 2,
+      "object_ms": 53.7820000317879,
+      "occupancy_ms": 67.3209999804385
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246957,
+      "folder": "town04-01\\246957",
+      "objects": 3,
+      "object_ms": 39.08320004120469,
+      "occupancy_ms": 73.36290000239387
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246961,
+      "folder": "town04-01\\246961",
+      "objects": 3,
+      "object_ms": 44.07899995567277,
+      "occupancy_ms": 76.44780003465712
+    }
+  ],
+  "GT_used_in_inference": false,
+  "control_issued": false,
+  "source_integrity_exact": true
+}

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\code\senior_AI\scripts\run_phase5_world.py", line 130, in <module>
+    try:main(args)
+        ^^^^^^^^^^
+  File "C:\code\senior_AI\scripts\run_phase5_world.py", line 37, in main
+    raise ValueError('RGB staging contains extra/GT files')
+ValueError: RGB staging contains extra/GT files

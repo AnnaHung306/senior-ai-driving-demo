@@ -1,0 +1,117 @@
+{
+  "task": "RGB_learned_cuboid_WorldFrame",
+  "sources": {
+    "src/senior_ai/acquisition_safety.py": "dc4deb5ed40296f8cbda4b6c49a16d62b5c26ed32e8bd9145efe3f5f64e32074",
+    "src/senior_ai/bev_fusion.py": "f12cdc933ca6829b1c556bf63dd8c647e8640a1040a5548ace9156892deb03eb",
+    "src/senior_ai/bev_geometry.py": "34e797f9ce6909bb341798e66e21ee93447c37036a03c0ef8044cace5ea7f449",
+    "src/senior_ai/bev_path.py": "3cfb35c23447d288e51522615e68adc06f0e388a83244ef005758c07edc2c15e",
+    "src/senior_ai/bev_temporal.py": "e3a52e274a136c98fdbf74be79cb1be8c9ec77c8d52a81deb234642ba4d8b870",
+    "src/senior_ai/core.py": "eba53145e07996150e6bc4aebfe464a6c3cf201350edb0f4d035007a8ecd6f35",
+    "src/senior_ai/cuboid.py": "5b07987265524db0ff749efdbec75f408de154f8b6f7756dedb6b668467d988c",
+    "src/senior_ai/dataset.py": "5623aee9fd60b7a378e810f1ee558237985bc93c278f86607f29d517722045bd",
+    "src/senior_ai/detection_augmentation.py": "32c48ed6349c0a0ccdaa823459c5d9c2b70039cc8903f100c0a406dc40d630a7",
+    "src/senior_ai/detection_metrics.py": "a1017dd068d9df03752fb8e379f8ee5311412b1aa14d2f8d99cc79f0d51cb9b6",
+    "src/senior_ai/detection_model.py": "dcdb811e94f462f6b9dc106985923c65d2896833698f6428493f5c3983a898c8",
+    "src/senior_ai/doctor.py": "b9e189ced0c73643ce566857354224154c521097d2d34478a8fd900a25215e73",
+    "src/senior_ai/frames.py": "cffd819cdbd361e66bedb37f0898489334dba57c853bdf37d075159d564a13f7",
+    "src/senior_ai/instance_labels.py": "53439db03595dc6119813ee859897eb1affbcf5a8d5a701a21effa787b3196c8",
+    "src/senior_ai/light_joint_policy.py": "f8dce271eefd3240d88e34688c818adb8d2efac1f14bfd8726ade425b5108c84",
+    "src/senior_ai/light_labels.py": "e516649cf73cf9aec93691de41199bbeed341851d9960dc43d05de9efb5346bf",
+    "src/senior_ai/light_model.py": "0b1080bd52e595fde47cc120e968181b8c667728c56617193c21668b20e84349",
+    "src/senior_ai/mobile_segmentation.py": "b1296a20a061b923cdc2a7e2dd0275fecf1af50b513f97f9a0836694d93aa25b",
+    "src/senior_ai/motion.py": "d9e10c9ba82fbf4fbfd6218f6b79557e10ffd09defa13e5c716cf51cd5c083ad",
+    "src/senior_ai/perception_quality.py": "d7077415e375f4967a6e058f939d34dfb3afab10d0f7bb21a1c381e0f8cd1253",
+    "src/senior_ai/road_boundaries.py": "33f43f10dc7b48aee446f324fafef5a5bcc81d56e13370212c819a4ed6c1bfe6",
+    "src/senior_ai/segmentation_data.py": "94b9d623ad2447dbe939b09dd52efbc8b1ec06c59ccba7546400313e988ecc81",
+    "src/senior_ai/segmentation_expansion.py": "e3318eabe32f594b6e7cb3a6de43a71208e4419bcb24a1453d7c782f49b854cd",
+    "src/senior_ai/segmentation_metrics.py": "d1c42901688b44c255c7b49acfb606236434c6a9211fa254d4416a2aacecf84a",
+    "src/senior_ai/segmentation_model.py": "c2a84e2ca62115dab46f94957168c0170ff5a240f35a4ad146ae56fe6067627a",
+    "src/senior_ai/segmentation_supplement.py": "9a6d3bc51c9f41610e3a2470cae5c3cf835ec2e0ae386c12b1358c04426bab09",
+    "src/senior_ai/segmentation_training.py": "ccac2aeb158ed861cfd8325195c836230b9c4d76ca29b2662c1f0f53fe95efb8",
+    "src/senior_ai/semantic_occupancy.py": "30655cc4b9ad0f2879209db45ad31e3e08d2c8a26adb560dc01fabf09e7da913",
+    "src/senior_ai/smoke.py": "f2bb3a97920ed840b10490d8416f43bc0e4f0caf10fcc5ffe3cc3b577cc9ddb0",
+    "src/senior_ai/sunny_augmentation.py": "56970d305e21b6c32823d81a48d161d5063c98fc3d28191bf528cc322e421ea1",
+    "src/senior_ai/sunny_data.py": "bc9e5a0a3b66dc6fe4865f1bf3d591740d7617aeddbbd52baff318ff87004483",
+    "src/senior_ai/sunny_losses.py": "550a25cdc5d7a52416550eda62e4491ed01f1e72e86255e4ed9390953b2b399f",
+    "src/senior_ai/visibility_policy.py": "e66815786d42df84e6809e762758845030637239c28d52d4c614e98ce9a23e01",
+    "src/senior_ai/world_tracking.py": "a87e0aa80add24c018e047e8e543115cb10f9183e3b19b67ce33402f117c5d67",
+    "src/senior_ai/__init__.py": "c285e576bba7be22f3dfe803e0f8ea274a4e0076d45de75baef01ddae84afff1",
+    "src/senior_ai/__main__.py": "ea4b9d7761dc175bd590279a1cf5a5521d2496b76c5353489b0086e5f8293afb",
+    "scripts/run_phase5_world.py": "19dd5639a9fff00c8b4b536afcbb1165dd5e83300f13258dd59daec092a0dc98",
+    "scripts/phase5_render.py": "8214a8febb9bc997711d9fc401dc961d9a8609260212ebff4c49838f9b8f3dce",
+    "configs/phase5_world_v1.json": "620721dc5106b9df141036e7b8805b6e56f13f9c8cbbeca025409e2e23e0d14a"
+  },
+  "config_sha256": "620721dc5106b9df141036e7b8805b6e56f13f9c8cbbeca025409e2e23e0d14a",
+  "checkpoint_sha256": "1ad8ccbf8e5409b476219b8ecaf0924922a756c19b845043b9cbeae99fd32f6f",
+  "training_contract": {
+    "task": "RGB_crop_3D_regression",
+    "pretrained": false,
+    "data_contract_sha256": "9cb129959f3561e092903b36400639348ea622c4e77877a88fbd119c2f63e44a",
+    "config_sha256": "620721dc5106b9df141036e7b8805b6e56f13f9c8cbbeca025409e2e23e0d14a",
+    "sources": {
+      "scripts/prepare_phase5_crops.py": "538d77aa7d53284ec3e0f10d522650793d837a5c70e91ff55c5370b1faa7bd41",
+      "scripts/phase5_gt.py": "19d43c632f9c8da3b370251edef6763f0f0295c830954aac0a7d79020d681681",
+      "src/senior_ai/cuboid.py": "5b07987265524db0ff749efdbec75f408de154f8b6f7756dedb6b668467d988c",
+      "src/senior_ai/bev_geometry.py": "34e797f9ce6909bb341798e66e21ee93447c37036a03c0ef8044cace5ea7f449",
+      "src/senior_ai/dataset.py": "5623aee9fd60b7a378e810f1ee558237985bc93c278f86607f29d517722045bd",
+      "scripts/train_phase5_cuboids.py": "faa8ff6736a405aa7a43befb1f8ab1c0e77aedbbf6a77a912cbe68eba1de2f52",
+      "configs/phase5_world_v1.json": "620721dc5106b9df141036e7b8805b6e56f13f9c8cbbeca025409e2e23e0d14a",
+      "src/senior_ai/segmentation_training.py": "ccac2aeb158ed861cfd8325195c836230b9c4d76ca29b2662c1f0f53fe95efb8"
+    },
+    "class_size_priors": {
+      "1": [
+        4.89238166809082,
+        1.8367133140563965,
+        1.490277647972107
+      ],
+      "2": [
+        0.3753577768802643,
+        0.3753577768802643,
+        1.2999999523162842
+      ],
+      "3": [
+        1.5093227624893188,
+        0.8659406304359436,
+        1.6123536825180054
+      ],
+      "4": [
+        2.043684244155884,
+        0.7969123125076294,
+        1.523191213607788
+      ],
+      "5": [
+        7.935710430145264,
+        2.8910882472991943,
+        3.4619433879852295
+      ],
+      "6": [
+        10.272685050964355,
+        3.9441518783569336,
+        4.252848148345947
+      ]
+    },
+    "supported_class_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "torch": "2.10.0+cu128",
+    "numpy": "2.3.5",
+    "cuda": "12.8",
+    "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "precision": "float32",
+    "GT_model_features": false,
+    "GT_training_targets": true,
+    "development_lockbox_opened": false
+  },
+  "phase4_contract_sha256": "bb66b420c8ed632a0996d109e08695b0ffab6a5c33c92aa449afe8f066bbc7f6",
+  "phase4_integrity_sha256": "fe375d70efb9e5f6c23136c869197dff23f3fa4b8a93bc5f78f1f0fc74c278d6",
+  "RGB_inventory_sha256": "c2df90d1e0694d54b97d36f4b9f80460e1b16b9abc1eee5a0b09f0051c9e57ac",
+  "input_list_sha256": "b9a707af2de8aaeae51e1e19f7e8dfede09026f889fc8085926cee14d4fbd8ec",
+  "inference_GT_inputs": false,
+  "control_issued": false,
+  "derived_parent_predictions": "Hash-bound RGB-only Phase4 output"
+}

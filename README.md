@@ -2,6 +2,8 @@
 
 長期需求見 [PROJECT_SPEC.md](PROJECT_SPEC.md)，當前任務見 [CURRENT_TASK.md](CURRENT_TASK.md)。
 
+**2026-10-20：Phase 5 已完成首版訓練與 World Model 串接。** 新增 RGB 3D 方框模型、八鏡頭融合、基本追蹤 ID、粗 semantic occupancy 與 WorldFrame 契約；223 項測試通過。validation 短片的嚴格定位P/R為61.11%／55.93%，完整3D方框Recall@IoU.25僅25.42%，仍有朝向、行人佔據與ID切換問題，**Phase5品質尚未通過**。已保存獨立GT／先驗比較、全部錯例與來源，不追加盲目訓練。見[Phase5規劃](PHASE5.md)及[圖文實測報告](evidence/phase5/rgb-cuboid-world-v1-001/README.md)。
+
 **2026-10-20：Phase 4 首版道路 BEV 已實作並完成有限實測。** 八鏡頭幾何投影、跨鏡頭地面接觸點去重、RGB 時序配準及標線中央候選軌跡已串接；193 項回歸測試通過。固定 32 組原 train／validation 畫面的八鏡頭時序道路 IoU 95.20%、標線 F1 90.27%；候選軌跡平均 RMSE 15.9cm，其中單側標線加寬度先驗為 30.6cm、雙側標線為 1.1cm。這是已知短序列的原型結果，尚待新完整路線驗收；物件定位 P/R 為 60.3%／55.0%，每組計算約 1.10 秒，未達即時行駛。見[執行規劃與後續條件](PHASE4.md)及[實測圖文報告](evidence/phase4/geometric-bev-v1-001/README.md)。
 
 **最新決定：Phase 3 依目前成果收尾，深度分支不納入，不再追補 Wall。** 後續以晴天、無近牆路線及道路／車道線跟隨為預設。歷史驗證未達項目保留，下一步重心轉向道路 BEV 與行駛整合；見 [階段收尾與後續工作](PHASE3_CLOSEOUT.md)。以下「未通過」描述原門檻結果，不表示要重啟 Phase 3。

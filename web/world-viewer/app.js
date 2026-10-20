@@ -2,6 +2,8 @@ import * as THREE from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
 import {CLASS_NAMES,COLORS,toScene,sceneDimensions,sceneYaw,gridPoint,playbackIndex} from './math.js';
 import {PredictionClient} from './data-client.js';
+import {MOTION_LABELS,RISK_LABELS,dynamicsSummary} from './dynamics.js';
+import {createDynamicsLayer} from './dynamics-view.js';
 
 const $=id=>document.getElementById(id);
 const client=new PredictionClient();
@@ -9,7 +11,7 @@ const state={manifest:null,scene:null,index:0,current:null,mode:'follow',selecte
   request:0,imageRequest:0,imageURL:null,watch:false,feedKey:null,feedTime:null,feedScene:null,feedAge:null,error:null};
 const metrics={applies:[],loads:[],fps:[],applied:[],totalApplies:0,unique:new Set(),maxGeometries:0,streamApplied:0,renderedFrames:0};
 const viewport=$('viewport'),message=$('viewportMessage');
-let renderer,camera,controls,scene,frameGroup,voxelGroup,objectGroups=[],labelNodes=[],lastMetric=0,fpsTicks=0,fpsStart=performance.now(),contextValid=true;
+let renderer,camera,controls,scene,frameGroup,voxelGroup,dynamicsGroup,objectGroups=[],labelNodes=[],lastMetric=0,fpsTicks=0,fpsStart=performance.now(),contextValid=true;
 
 const percentile=(values,p)=>values.length?[...values].sort((a,b)=>a-b)[Math.min(values.length-1,Math.floor((values.length-1)*p))]:null;
 const format=(v,n=1)=>Number.isFinite(v)?v.toFixed(n):'—';
@@ -85,6 +87,7 @@ function resize(){
   renderer.setSize(w,h,false);
   if(camera.isOrthographicCamera){camera.left=-29*w/h;camera.right=29*w/h;}else camera.aspect=w/h;
   camera.updateProjectionMatrix();
+  for(const label of labelNodes)label.width=null;
 }
 
 function initialize3D(){
@@ -150,10 +153,11 @@ function renderFrame(frame){
     const outline=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(...sceneDimensions(object.size_lwh_m))),new THREE.LineBasicMaterial({color:0xd7bc87,transparent:true,opacity:.57}));outline.name='predictionBounds';root.add(outline);
     objectGroups.push(root);frameGroup.add(root);
     const label=document.createElement('span');label.className='world-label low';label.textContent=object.track_id.split(':').at(-1)+' · '+CLASS_NAMES[object.class_id];$('canvasLabels').append(label);
-    labelNodes.push({element:label,object});
+    if(object.motion){label.textContent+=' · '+(object.motion.velocity_available?'≈'+format(object.motion.speed_mps*3.6,0)+' km/h'+(object.motion.status==='uncertain'?' 待確認':''):'待估速');label.classList.add('risk-'+object.risk.status);}
+    label.dataset.trackId=object.track_id;labelNodes.push({element:label,object});
   }
   scene.add(frameGroup);if(!frame.objects.some(o=>o.track_id===state.selected))state.selected=null;
-  drawVoxelLayers();applyLayerVisibility();renderObjectList();
+  drawVoxelLayers();applyLayerVisibility();renderObjectList();drawDynamicsLayers();renderDynamicsSummary();
   const samples=frame.local_path.points_ego_m;$('pathSummary').textContent=frame.local_path.status==='candidate'?`循線候選 · ${format(samples.at(-1)?.[0])} m${frame.local_path.source?.includes('prior')?' · 使用寬度先驗':''}`:'循線候選不可用 · 不產生替代直線';
 }
 
@@ -175,13 +179,37 @@ function applyLayerVisibility(){
   $('rgbCard').hidden=!$('showRGB').checked;
 }
 
-function selectObject(id){state.selected=id;renderObjectList();updateDiagnostics();}
+function drawDynamicsLayers(){
+  disposeTree(dynamicsGroup);dynamicsGroup=null;if(!state.current?.frame.dynamics)return;
+  dynamicsGroup=createDynamicsLayer(state.current.frame,state.selected,{prediction:$('showPrediction').checked,velocity:$('showVelocity').checked,
+    history:$('showHistory').checked,uncertainty:$('showUncertainty').checked,coasting:$('showCoasting').checked});scene.add(dynamicsGroup);
+}
+
+function renderDynamicsSummary(){
+  const frame=state.current.frame,enabled=Boolean(frame.dynamics);$('motionCard').hidden=!enabled;$('motionLayers').hidden=!enabled;
+  if(!enabled)return;const summary=dynamicsSummary(frame),ego=frame.dynamics.ego_motion;
+  $('velocityCount').textContent=summary.available+' / '+summary.total;
+  $('egoSpeed').textContent=ego.status==='estimated'?format(Math.hypot(...ego.velocity_ego_mps)*3.6,1):'—';
+  $('riskBadge').textContent=RISK_LABELS[summary.risk];$('riskBadge').className='risk-badge '+summary.risk;
+  $('riskSummary').textContent=summary.nominal_alerts?`${summary.nominal_alerts} 個量測物件在運動假設內接近自車；請對照影像確認。`:
+    summary.possible_alerts?`${summary.possible_alerts} 個物件的不確定域或煞車假設可能接近。`:summary.risk==='unknown'?'資訊不足：含暫失或尚未成熟的軌跡，無法判定全部風險。':'目前假設內未觸發；不代表安全。';
+  $('coastSummary').textContent=summary.coasting?`${summary.coasting} 個暫失軌跡 · 灰色虛線為外推，未計入當前佔據。`:'未來虛線為運動學推估；速度已補償自車運動。';
+  const list=$('riskObjects');list.replaceChildren();const rank=['high','watch','potential'];
+  for(const o of frame.objects.filter(o=>rank.includes(o.risk.status)).sort((a,b)=>rank.indexOf(a.risk.status)-rank.indexOf(b.risk.status)).slice(0,3)){
+    const b=document.createElement('button');b.className='risk-object '+o.risk.status;b.dataset.trackId=o.track_id;
+    b.textContent=CLASS_NAMES[o.class_id]+' · '+o.track_id.split(':').at(-1)+(o.risk.TTC_s!==null?' · TTC '+format(o.risk.TTC_s)+' s':' · 可能接近');
+    b.addEventListener('click',()=>selectObject(o.track_id));list.append(b);
+  }
+}
+
+function selectObject(id){state.selected=id;renderObjectList();drawDynamicsLayers();updateDiagnostics();}
 function renderObjectList(){
   const objects=state.current?.frame.objects??[];const list=$('objectList');list.replaceChildren();
   for(const object of [...objects].sort((a,b)=>Math.hypot(...a.center_ego_m.slice(0,2))-Math.hypot(...b.center_ego_m.slice(0,2)))){
     const button=document.createElement('button');button.className='object-row'+(state.selected===object.track_id?' selected':'');button.dataset.trackId=object.track_id;
     const icon=document.createElement('span');icon.className='class-dot';icon.style.borderColor='#'+COLORS[object.class_id].toString(16);icon.textContent={1:'車',2:'人',3:'單',4:'機',5:'貨',6:'巴'}[object.class_id];
     const label=document.createElement('span');label.className='object-identity';const title=document.createElement('strong');title.textContent=CLASS_NAMES[object.class_id];const small=document.createElement('small');small.textContent=object.track_id.split(':').at(-1)+' · '+object.camera_support.length+' 鏡頭';label.append(title,small);
+    if(object.motion)small.textContent+=' · '+(object.motion.velocity_available?format(object.motion.speed_mps*3.6,1)+' km/h'+(object.motion.status==='uncertain'?' · 待確認':''):MOTION_LABELS[object.motion.status]);
     const distance=document.createElement('span');distance.className='distance';distance.textContent=format(Math.hypot(...object.center_ego_m.slice(0,2)))+' m';button.append(icon,label,distance);button.addEventListener('click',()=>selectObject(object.track_id));list.append(button);
   }
   if(!objects.length){const p=document.createElement('p');p.className='empty-message';p.textContent='當幀沒有可用三維量測';list.append(p);}
@@ -190,6 +218,13 @@ function renderObjectList(){
   if(chosen){
     const dl=document.createElement('dl');for(const [key,value] of [['ID',chosen.track_id.split(':').at(-1)],['位置 x/y/z',chosen.center_ego_m.map(v=>format(v,2)).join(' / ')+' m'],['長／寬／高',chosen.size_lwh_m.map(v=>format(v,2)).join(' / ')+' m'],['朝向',format(chosen.yaw_rad*180/Math.PI)+'°'],['模型分數',format(chosen.score_uncalibrated,3)],['觀測次數',String(chosen.track_age_measurements)]]){const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=key;dd.textContent=value;dl.append(dt,dd);}details.append(dl);
     const note=document.createElement('span');note.className='uncertainty';note.textContent='朝向向量'+(chosen.orientation_reliable?'有效':'不足')+'，有效性不代表方向準確。';details.append(note);
+    if(chosen.motion){
+      const motion=chosen.motion,rows=[['運動狀態',MOTION_LABELS[motion.status]],['地面速度',motion.velocity_available?format(motion.speed_mps*3.6,1)+' km/h · '+format(motion.speed_mps,2)+' m/s':'尚無可用估計'],
+        ['運動方向',motion.heading_rad!==null?format(motion.heading_rad*180/Math.PI)+'°':'—'],['速度不確定量',format(motion.velocity_sigma_max_mps,2)+' m/s · 未校準'],
+        ['預測模式',chosen.forecast.status==='available'?'固定速度 · 未來 3 秒':'等待足夠觀測'],['接近風險',RISK_LABELS[chosen.risk.status]],['TTC',chosen.risk.TTC_s!==null?format(chosen.risk.TTC_s,2)+' s':'未提供']];
+      const extra=document.createElement('dl');extra.className='motion-details';for(const [k,v] of rows){const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=k;dd.textContent=v;extra.append(dt,dd);}details.append(extra);
+      const hint=document.createElement('p');hint.className='uncertainty';hint.textContent='預測軌跡固定在當前自車座標；運動方向與方框朝向分開估計。風險不等於碰撞機率。';details.append(hint);
+    }
   }
   viewport.dataset.selectedId=state.selected??'';
 }
@@ -229,12 +264,23 @@ async function changeScene(id,index=0){
 
 function updateLabels(){
   if(!camera||!state.current)return;
-  for(const label of labelNodes){
+  const placed=[];
+  for(const label of [...labelNodes].sort((a,b)=>Number(b.object.track_id===state.selected)-Number(a.object.track_id===state.selected))){
     if(!$('showIDs').checked){label.element.hidden=true;continue;}
     const xyz=label.object.center_ego_m,point=new THREE.Vector3(...toScene([xyz[0],xyz[1],xyz[2]+label.object.size_lwh_m[2]/2+.25]));
     const local=point.clone().applyMatrix4(camera.matrixWorldInverse);point.project(camera);
     const visible=local.z<0&&point.z<1&&Math.abs(point.x)<.98&&Math.abs(point.y)<.96;label.element.hidden=!visible;
-    if(visible){label.element.style.left=(point.x*.5+.5)*viewport.clientWidth+'px';label.element.style.top=(-point.y*.5+.5)*viewport.clientHeight+'px';}
+    if(visible){
+      const px=(point.x*.5+.5)*viewport.clientWidth,py=(-point.y*.5+.5)*viewport.clientHeight,width=label.width||(label.width=label.element.offsetWidth||170),height=20;
+      const chosen=label.object.track_id===state.selected;let spot=null;
+      for(const [dx,dy] of [[0,0],[0,-23],[0,-46],[0,-69],[35,-23],[-35,-23],[0,23],[0,46]]){
+        const x=Math.max(width/2+7,Math.min(viewport.clientWidth-width/2-7,px+dx)),y=py+dy,rect={l:x-width/2,r:x+width/2,t:y-height,b:y};
+        if(rect.t<42||rect.b>viewport.clientHeight-42||placed.some(p=>rect.l<p.r+4&&rect.r>p.l-4&&rect.t<p.b+4&&rect.b>p.t-4))continue;
+        spot={x,y,rect};break;
+      }
+      label.element.hidden=!spot;if(spot){placed.push(spot.rect);label.element.style.left=spot.x+'px';label.element.style.top=spot.y+'px';}
+      label.element.classList.toggle('selected',chosen);label.element.style.opacity=state.selected&&!chosen?'.5':'1';
+    }
   }
 }
 
@@ -251,6 +297,10 @@ function updateDiagnostics(){
     frame_apply_ms:{measurement:'CPU scene rebuild plus render submission; excludes GPU present',samples:metrics.applies.length,p50:percentile(metrics.applies,.5),p95},verified_fetch_ms:{p50:percentile(metrics.loads,.5),p95:percentile(metrics.loads,.95)},
     render_fps:{samples:metrics.fps.length,median:percentile(metrics.fps,.5),latest:fps},renderer_memory:{...info.memory,max_geometries:metrics.maxGeometries},render_calls:info.render.calls,
     stream_applied:metrics.streamApplied,feed_age_ms:state.feedAge,context_valid:contextValid,error:state.error,
+    motion_prediction_source_sha256:frame?.motion_prediction_source_sha256,motion_summary:frame?.dynamics?dynamicsSummary(frame):null,
+    rendered_forecasts:dynamicsGroup?.userData.renderedForecasts??[],
+    motion_objects:frame?.dynamics?frame.objects.map(o=>({track_id:o.track_id,motion:o.motion,forecast:o.forecast,risk:o.risk,lifecycle:o.lifecycle})):[],
+    motion_layers:{prediction:$('showPrediction').checked,velocity:$('showVelocity').checked,history:$('showHistory').checked,uncertainty:$('showUncertainty').checked,coasting:$('showCoasting').checked},
     layers:{boxes:$('showBoxes').checked,IDs:$('showIDs').checked,voxels:$('showVoxels').checked,free:$('showFree').checked},
     camera:camera?{type:camera.type,position:camera.position.toArray(),target:controls.target.toArray(),zoom:camera.zoom}:null,
     rendered_object_transforms:objectGroups.map(g=>({track_id:g.userData.trackId,position_three:g.position.toArray(),yaw_y_three:g.rotation.y,dimensions_three:sceneDimensions(g.userData.source.size_lwh_m)})),
@@ -303,6 +353,7 @@ function connectUI(){
   $('speedSelect').addEventListener('change',()=>{pause();state.speed=Number($('speedSelect').value);});
   for(const id of ['showBoxes','showIDs','showRGB'])$(id).addEventListener('change',()=>{applyLayerVisibility();updateDiagnostics();});
   for(const id of ['showVoxels','showFree'])$(id).addEventListener('change',()=>{drawVoxelLayers();updateDiagnostics();});
+  for(const id of ['showPrediction','showVelocity','showHistory','showUncertainty','showCoasting'])$(id).addEventListener('change',()=>{drawDynamicsLayers();updateDiagnostics();});
   $('cameraSelect').addEventListener('change',updateRGB);
   $('watchFeed').addEventListener('change',()=>{pause();state.watch=$('watchFeed').checked;state.feedKey=null;state.feedScene=null;state.feedTime=null;state.error=null;if(state.watch)pollFeed();else status('已離開監看 · 錄製回放');});
   $('retryData').addEventListener('click',()=>location.reload());setInterval(pollFeed,500);
@@ -318,7 +369,11 @@ async function start(){
   try{
     initialize3D();connectUI();state.manifest=await client.initialize();
     const select=$('sceneSelect');for(const item of state.manifest.scenes){const option=document.createElement('option');option.value=item.id;option.textContent=item.id+' · '+item.frames.length+' 組';select.append(option);}select.disabled=false;
-    const q=state.manifest.quality_context;$('qualitySummary').textContent=`既有驗證短片：定位 P ${format(q.position_precision_at_2m*100)}%／R ${format(q.position_recall_at_2m*100)}%，完整3D方框 R@IoU .25 ${format(q.box_recall_IoU025*100)}%。ID切換 ${q.ID_switches}／${q.matched_transitions} 個成功配對轉移。品質尚未通過。`;
+    const q=state.manifest.quality_context;
+    if(state.manifest.motion_evaluation){
+      const m=state.manifest.motion_evaluation;$('qualitySummary').textContent=`本輪原 validation 長序列：速度向量誤差 ${format(m.velocity_vector_MAE_mps,2)} m/s，1秒 ADE ${format(m.ADE1_m,2)} m，2秒 FDE ${format(m.FDE2_m,2)} m；可評真值預測覆蓋 ${format(m.forecast_coverage_2s*100)}%。研究模型，非未見場景或閉環驗收。`;
+      $('motionLabLink').hidden=!state.manifest.synthetic_diagnostics;$('sourceLabel').textContent='RGB 推論回放 · 因果運動預測';
+    }else $('qualitySummary').textContent=`既有驗證短片：定位 P ${format(q.position_precision_at_2m*100)}%／R ${format(q.position_recall_at_2m*100)}%，完整3D方框 R@IoU .25 ${format(q.box_recall_IoU025*100)}%。ID切換 ${q.ID_switches}／${q.matched_transitions} 個成功配對轉移。品質尚未通過。`;
     await changeScene(state.manifest.scenes[0].id);
   }catch(error){fail(error);}
 }

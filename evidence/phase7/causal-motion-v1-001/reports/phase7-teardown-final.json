@@ -1,0 +1,18 @@
+{
+  "status": "owned_test_services_stopped",
+  "observed_utc": "2026-10-20T14:12:15.160568+00:00",
+  "sessions_stopped": [
+    57692,
+    78532
+  ],
+  "ports_checked": [
+    8766,
+    8767
+  ],
+  "method": "Ctrl+C to both owned sessions, then normal-host Get-NetTCPConnection -State Listen returned no rows for both ports.",
+  "active_owned_training_or_inference": false,
+  "CARLA_started": false,
+  "control_issued": false,
+  "firewall_or_global_security_changes": false,
+  "restart": "./Start-WorldViewer.ps1"
+}

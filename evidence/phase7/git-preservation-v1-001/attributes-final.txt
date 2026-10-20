@@ -1,0 +1,15 @@
+* text=auto
+*.py text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.ps1 text eol=lf
+*.patch text eol=lf whitespace=-blank-at-eol
+# Receipts bind exact captured bytes, including Windows newlines. Never filter
+# archived sources/reports on add or checkout, or their recorded SHA256 changes.
+evidence/** -text
+# Keep licensed upstream vendor bytes identical to the verified npm package.
+# The package contains an original mixed-indent line; do not rewrite it.
+web/world-viewer/vendor/** -text whitespace=cr-at-eol,-space-before-tab
+evidence/**/*.bin binary
+# These configs were hash-bound before inference, including original CRLF bytes.
+configs/phase7_motion*.json -text

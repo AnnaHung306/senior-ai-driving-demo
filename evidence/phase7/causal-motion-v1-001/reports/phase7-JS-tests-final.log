@@ -1,0 +1,48 @@
+✔ ego axes round trip, right stays right, forward becomes -Z (0.8998ms)
+✔ actual Three box corners agree with ego analytic corners at nontrivial yaw (1.9443ms)
+✔ grid row points backwards, column right, layer up with half cell offset (0.1459ms)
+✔ timestamp playback respects missing intervals and ends without extrapolation (0.6877ms)
+✔ valid units are order independent and empty objects are supported (1.373ms)
+✔ reject NaN position (0.1743ms)
+✔ reject negative full size (0.1202ms)
+✔ reject degree yaw (0.1019ms)
+✔ reject duplicate IDs (0.1322ms)
+✔ reject GT geometry (0.1762ms)
+✔ reject held track as current (0.1302ms)
+✔ reject unknown filled label (0.1008ms)
+✔ reject grid distortion (0.0972ms)
+✔ reject bad voxel shape (0.135ms)
+✔ reject fake height (0.1441ms)
+✔ reject invented path (0.2845ms)
+✔ reject unsafe source (0.1284ms)
+✔ reject fake quality pass (0.1104ms)
+✔ reject negative compute time (0.107ms)
+✔ client verifies SHA bytes, refuses unbound files and poisoned RGB (30.7013ms)
+✔ accept causal fixed-current-ego motion and compute visible counts (1.8837ms)
+✔ actual Three forecast buffers use y,z,-x and do not move measured boxes (5.5273ms)
+✔ unobserved tracks prevent an all-clear interpretation (0.3001ms)
+✔ reject missing source hash (0.2356ms)
+✔ reject future observation used (0.1182ms)
+✔ reject nonfinite speed (0.179ms)
+✔ reject inconsistent speed (0.144ms)
+✔ reject negative covariance (0.1976ms)
+✔ reject nonPSD covariance (0.155ms)
+✔ reject fake calibration (0.2039ms)
+✔ reject future GT (0.1671ms)
+✔ reject forecast yaw coordinate confusion (0.1114ms)
+✔ reject false motion model (0.1053ms)
+✔ reject unordered future time (0.1703ms)
+✔ reject infinite uncertainty (0.1124ms)
+✔ reject unavailable velocity has numbers (0.1229ms)
+✔ reject unknown risk code (0.1098ms)
+✔ reject out of horizon TTC (0.1082ms)
+✔ reject ghost in current measurements (0.0935ms)
+✔ diagnostic projection preserves forward and right and rejects invalid synthetic traces (0.2256ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 40
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 164.0546

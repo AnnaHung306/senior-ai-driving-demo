@@ -8,8 +8,9 @@ from senior_ai.world_viewer_service import ViewerBundle,publish_existing_frame
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--bundle',type=Path,default=ROOT/'artifacts/runs/phase6-viewer-bundle-002')
-    p.add_argument('--feed',type=Path,default=ROOT/'artifacts/runs/phase6-feed')
+    preferred=ROOT/'artifacts/runs/phase7-viewer-bundle-v1-001'
+    p.add_argument('--bundle',type=Path,default=preferred if (preferred/'bundle.json').is_file() else ROOT/'artifacts/runs/phase6-viewer-bundle-002')
+    p.add_argument('--feed',type=Path,default=ROOT/'artifacts/runs/phase7-feed')
     p.add_argument('--key',required=True);p.add_argument('--heartbeat-seconds',type=float,default=0)
     a=p.parse_args()
     if not 0<=a.heartbeat_seconds<=60:p.error('Bounded diagnostic heartbeat must be 0..60 seconds')

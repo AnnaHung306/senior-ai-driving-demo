@@ -16,5 +16,7 @@ def main(args):
 
 
 if __name__ == '__main__':
-    p = argparse.ArgumentParser();p.add_argument('--bundle', type=Path, default=ROOT/'artifacts/runs/phase6-viewer-bundle-002')
+    preferred=ROOT/'artifacts/runs/phase7-viewer-bundle-v1-001'
+    default_bundle=preferred if (preferred/'bundle.json').is_file() else ROOT/'artifacts/runs/phase6-viewer-bundle-002'
+    p = argparse.ArgumentParser();p.add_argument('--bundle', type=Path, default=default_bundle)
     p.add_argument('--port', type=int, default=8766);p.add_argument('--feed', type=Path);main(p.parse_args())

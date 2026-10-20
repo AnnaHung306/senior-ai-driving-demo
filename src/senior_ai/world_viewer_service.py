@@ -12,7 +12,7 @@ import uuid
 from urllib.parse import unquote, urlsplit
 from .world_display import read, relative_path, sha
 
-WEB_FILES = {'index.html', 'styles.css', 'app.js', 'math.js', 'data-client.js',
+WEB_FILES = {'index.html', 'styles.css', 'app.js', 'math.js', 'data-client.js', 'dynamics.js', 'dynamics-view.js', 'motion-lab.html', 'motion-lab.js',
              'vendor/three.module.js', 'vendor/three.core.js', 'vendor/OrbitControls.js', 'vendor/LICENSE.three.txt'}
 
 

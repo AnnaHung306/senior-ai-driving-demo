@@ -1,0 +1,13 @@
+{
+  "version":"phase7-causal-motion-v1",
+  "seed":20261020,
+  "selection":{"scenes":["town01-00","town01-01","town04-00","town04-01"],"start":20,"stop":80},
+  "maximum_gap_s":0.4,"maximum_coast_s":0.65,"minimum_hits":3,"minimum_history_s":0.4,
+  "measurement_sigma_m":0.35,"acceleration_sigma_mps2":1.5,"initial_velocity_sigma_mps":5.0,
+  "mahalanobis_gate":9.21,"maximum_association_distance_m":3.0,"appearance_weight":1.5,
+  "history_length":20,"forecast_step_s":0.2,"forecast_horizon_s":3.0,
+  "maximum_speed_mps":35.0,"velocity_sigma_limit_mps":2.0,"stationary_threshold_mps":0.5,
+  "ego_size_lw_m":[4.5,1.9],"collision_margin_m":0.25,"braking_assumption_mps2":3.0,
+  "engineering_gates":{"synthetic_ADE1_m":0.75,"synthetic_FDE2_m":1.5,"browser_apply_p95_ms":200,"browser_render_median_FPS":30},
+  "exploratory_quality_gates":{"speed_MAE_mps":1.5,"ADE1_m":1.5,"FDE2_m":3.0,"ID_switches_not_above_baseline":true}
+}

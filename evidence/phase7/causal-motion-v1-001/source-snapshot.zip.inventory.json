@@ -1,0 +1,1692 @@
+[
+  {
+    "path": ".gitattributes",
+    "bytes": 553,
+    "sha256": "18b091d86cb17a6312421a0841a3c23ea660ba577b702037b07215eea52704c1"
+  },
+  {
+    "path": ".gitignore",
+    "bytes": 240,
+    "sha256": "28060ea20def717faef2e8bb53a2aa7f35cc17341f16741eab1a54109104c396"
+  },
+  {
+    "path": "configs/camera_rig_v1.json",
+    "bytes": 801,
+    "sha256": "df872f550458d9e284927b8bf1ccac8def4851fb7ff7e02a9a0f838aac537f10"
+  },
+  {
+    "path": "configs/dataset_expansion_v3_plan.json",
+    "bytes": 5423,
+    "sha256": "7a2374284b049467c7ef430b007ece6c2a88193300f23d517cd10c1cf1ba95ea"
+  },
+  {
+    "path": "configs/dataset_motion_criteria_v2.json",
+    "bytes": 1208,
+    "sha256": "7c5a21ef53731d6e648e4c1ee16f070fb560ed72391733a3bd42720b0747f384"
+  },
+  {
+    "path": "configs/dataset_motion_scenes_v2.json",
+    "bytes": 56903,
+    "sha256": "cd349098513f47ec6a0d282b1fd90d134cb9d07f4e2759a82add936bd88eef00"
+  },
+  {
+    "path": "configs/dataset_pilot_criteria_v1.json",
+    "bytes": 656,
+    "sha256": "72b01e3616c20d3da5e67f7726dc00ad3a12d898ee6662c38aaaf7f198cb0fd4"
+  },
+  {
+    "path": "configs/dataset_scenes_v1.json",
+    "bytes": 9627,
+    "sha256": "ba79e6ffd887589be4461bc53bd83128f5e4f516a8c65cf400528c6a04087c71"
+  },
+  {
+    "path": "configs/dataset_sunny_v3_1.json",
+    "bytes": 307404,
+    "sha256": "7df56295224a10c0324d2f33df09af5691c9e5b5c5c603b6d224e9debfb8d74a"
+  },
+  {
+    "path": "configs/dataset_sunny_v3_2.json",
+    "bytes": 311192,
+    "sha256": "19dab84a249951d2c6db9a79d5a25079d5fc24b80ce6a20b3fcb688d7c57af2f"
+  },
+  {
+    "path": "configs/dataset_sunny_v3_3.json",
+    "bytes": 298100,
+    "sha256": "45f8541d69bf8890e9c5b995febf4e58810cf01055dd02156b5145379576c907"
+  },
+  {
+    "path": "configs/dataset_sunny_v3_4.json",
+    "bytes": 298092,
+    "sha256": "1e73b474820f0d8bc9f43bc8eed213a0bb8976d4e3355227f616e1ab297d5c9b"
+  },
+  {
+    "path": "configs/dataset_sunny_v3_5.json",
+    "bytes": 298286,
+    "sha256": "15072e2e2a14a3f0e8accea239afd3343d7df1ecd883bce5468b801b22de0f77"
+  },
+  {
+    "path": "configs/dataset_sunny_v3_6.json",
+    "bytes": 298735,
+    "sha256": "bb4e0ef62e6fcecfa2736c110ec9f82b34e5fabbf8be90785f9c6423973423b4"
+  },
+  {
+    "path": "configs/dataset_sunny_v3_7.json",
+    "bytes": 298983,
+    "sha256": "9371401befe8e97e0ffe148524b2dbc2d987c0b93c605936257cf6e3360a3df3"
+  },
+  {
+    "path": "configs/dataset_sunny_v3_8.json",
+    "bytes": 299140,
+    "sha256": "912d2658b1971af0c0ec5e5c25c98783c90e4b36ffbed2c9d854b1ceaa163a26"
+  },
+  {
+    "path": "configs/depth_ablation_v1_1.json",
+    "bytes": 1527,
+    "sha256": "af7011085cbb0ed3d16a3ef0e2e77f2a2a1b18101d5ce209c5845a090b5bc2ad"
+  },
+  {
+    "path": "configs/detection_label_contract_v1.json",
+    "bytes": 2739,
+    "sha256": "b4eb2f3e8c25c1b5c7886d76636a390a5e4c715f88bd095294587f106de50cba"
+  },
+  {
+    "path": "configs/detector_p1_design_v1.json",
+    "bytes": 1584,
+    "sha256": "5bad154c2a2d850d6eae18e35c560a57d7c8e651678a08592726f0c00ecfd63c"
+  },
+  {
+    "path": "configs/illumination_diagnostic_v1.json",
+    "bytes": 1071,
+    "sha256": "4f2d592419b9c87755d9359f10d71669457e14ee99deee5927f3051688720cf2"
+  },
+  {
+    "path": "configs/instance_probe_v1.json",
+    "bytes": 1831,
+    "sha256": "b5237048dce6758b218de9c016be435660f571e396fd1aed79c97db4cb965c8f"
+  },
+  {
+    "path": "configs/instance_weather_night_v1.json",
+    "bytes": 2437,
+    "sha256": "b2c456f8fc7d24fa63ff04430b9f2ddcfa028680fc98b4181d4236b0600736a9"
+  },
+  {
+    "path": "configs/instance_weather_noon_v1.json",
+    "bytes": 2432,
+    "sha256": "9be5b1d94768c48acc5b716c4f948e5cfa608ccefde338d26ff50ef6cfc2ca6c"
+  },
+  {
+    "path": "configs/landscape_diagnostics_v1.json",
+    "bytes": 714,
+    "sha256": "3697faf6901bf879503895cb6d6cd58ba759ff1b22a3137f9f488df80255483b"
+  },
+  {
+    "path": "configs/landscape_diagnostics_v10.json",
+    "bytes": 584,
+    "sha256": "f02669e14253f6811debfaecde62a050b164f378e8710a0aaa3e25d1c534a882"
+  },
+  {
+    "path": "configs/landscape_diagnostics_v11.json",
+    "bytes": 587,
+    "sha256": "e5cb06c46ce65d9a97d659b7adc5a4671ff51403a489a918a7ebd2f33ee23945"
+  },
+  {
+    "path": "configs/landscape_diagnostics_v12.json",
+    "bytes": 667,
+    "sha256": "0649517cd21cd37181c1e850296d7de77d532b8acb46776fefef36cd25e9e33e"
+  },
+  {
+    "path": "configs/landscape_diagnostics_v2.json",
+    "bytes": 765,
+    "sha256": "e2372dc8f0adb139aeb8ee55f9ac2c450a07bb01399e70074c27ff16576fb3e3"
+  },
+  {
+    "path": "configs/landscape_diagnostics_v3.json",
+    "bytes": 742,
+    "sha256": "ad1716e9ad38dba85dd6b15523ae69f38776030bf229dc6aa37b44cb2985c2c2"
+  },
+  {
+    "path": "configs/landscape_diagnostics_v4.json",
+    "bytes": 821,
+    "sha256": "dec22a842922a595bee00b5f21c69157e8e0e96451b2a64f9c2fd9ebe8197958"
+  },
+  {
+    "path": "configs/landscape_diagnostics_v5.json",
+    "bytes": 527,
+    "sha256": "f13b17919d717729e68db391509e0fdd210f6fdec84a669e44a47012b6a53ad7"
+  },
+  {
+    "path": "configs/landscape_diagnostics_v6.json",
+    "bytes": 593,
+    "sha256": "366f54f12d152511e8a47721830ac3147846316f7a5ac76629b9dcdb93efc307"
+  },
+  {
+    "path": "configs/landscape_diagnostics_v7.json",
+    "bytes": 564,
+    "sha256": "690e0fffa5afbc44bc89a3151dab312a087587661c6c634f8b23fc473b231fd0"
+  },
+  {
+    "path": "configs/landscape_diagnostics_v8.json",
+    "bytes": 1152,
+    "sha256": "9527bb16b8e3e415acabfc347b000265d419266eeb4f271cb5c19ee3e82a0c70"
+  },
+  {
+    "path": "configs/landscape_diagnostics_v9.json",
+    "bytes": 639,
+    "sha256": "71b48da1d77a70e40b10c4f9f46e167766d1d56239184f46190d28729bf8a0db"
+  },
+  {
+    "path": "configs/light_lockbox_supplement_v1.json",
+    "bytes": 14933,
+    "sha256": "daa805761dbe8f3b7acb00ebbe40786741cb9da7138d4f13eb5dac76bb2e5692"
+  },
+  {
+    "path": "configs/light_state_v1.json",
+    "bytes": 1216,
+    "sha256": "97682d8185f1a40a823e70b3888d8cdc996f434c9b9dcdad9a0d73d91d935f8b"
+  },
+  {
+    "path": "configs/light_state_v1_1.json",
+    "bytes": 1703,
+    "sha256": "393740842538738c1b196620457ff4cdc70c523e533fa72722b74ad241a6f2d2"
+  },
+  {
+    "path": "configs/motion_instance_probe_scenes_v1.json",
+    "bytes": 54506,
+    "sha256": "24b32873d02797d3917584121a575e88a572eeb00307f55687c6dfd21f3b2e68"
+  },
+  {
+    "path": "configs/motion_instance_probe_v1.json",
+    "bytes": 1061,
+    "sha256": "cb63645c8f97131ae24ee980161431a95162a08919862fcba3e71e38ec1520a3"
+  },
+  {
+    "path": "configs/phase0_acceptance.json",
+    "bytes": 200,
+    "sha256": "db9649f3e6cf5c5b9d3c09e2ddc6a43f83810ed94e1cfbe6cc49ff7084ea8def"
+  },
+  {
+    "path": "configs/phase0_protocol_v2.json",
+    "bytes": 563,
+    "sha256": "ecd15a0192d2e8eb3632e21d4aa09c9624185f14516ff2fa446b44fa8318e5a3"
+  },
+  {
+    "path": "configs/phase1_acceptance.json",
+    "bytes": 791,
+    "sha256": "8c134088fdf5a1573c3327e31ed235bef2160d2523b731492f28aaea2ddebb79"
+  },
+  {
+    "path": "configs/phase1_scenarios_v1.json",
+    "bytes": 13232,
+    "sha256": "c0f8ceb13ea3b94146ef62e4fe43bcaa5bf6d630aa4b3ac98e917715ebcae88c"
+  },
+  {
+    "path": "configs/phase4_bev_v1.json",
+    "bytes": 1238,
+    "sha256": "2916b17a5cf15ce50dedc8fdd1922c38abcc4de212d2d972e036e255bccf66b9"
+  },
+  {
+    "path": "configs/phase5_world_v1.json",
+    "bytes": 833,
+    "sha256": "620721dc5106b9df141036e7b8805b6e56f13f9c8cbbeca025409e2e23e0d14a"
+  },
+  {
+    "path": "configs/phase7_motion_v1.json",
+    "bytes": 918,
+    "sha256": "62a795937a941e33d303b78b23572896e84b29f7d64025090aa6d3e40ebe7c20"
+  },
+  {
+    "path": "configs/phase7_motion_v1_1.json",
+    "bytes": 1225,
+    "sha256": "ff76e188901f950f5a7b682138dae5dce5ede3605e983488f24cbc7aaf728094"
+  },
+  {
+    "path": "configs/phase7_motion_v1_2.json",
+    "bytes": 1205,
+    "sha256": "f7aa327ac87e44baa8247d950b55161660744815672f5a704bc7590319992f42"
+  },
+  {
+    "path": "configs/render_quality_probe_v1.json",
+    "bytes": 908,
+    "sha256": "4c5967205108e497e527d715e2b6374ee34b46bce55ed6f174439b2c3b1efa6f"
+  },
+  {
+    "path": "configs/rig_acceptance_v1.json",
+    "bytes": 407,
+    "sha256": "25def8bb846537e7469a7c57f064fc3addf6ab7623ed0e947a378772ab67a1ca"
+  },
+  {
+    "path": "configs/segmentation_expansion_diverse_v2_2.json",
+    "bytes": 109079,
+    "sha256": "aff1cc0dc406830104ae50c960f2bc77b9a8d8488ea873e8c43604459e1c44ff"
+  },
+  {
+    "path": "configs/segmentation_expansion_low_preview_v2_3.json",
+    "bytes": 16633,
+    "sha256": "18a6649f91eb08632e68aa20c6951be5a775e97d5b4cd8d62b30c7ead1e1df74"
+  },
+  {
+    "path": "configs/segmentation_expansion_town06_preview_v2_1.json",
+    "bytes": 60233,
+    "sha256": "89e8b81ea902aa9aa4ec107d1f13145740f4a7dfd8a911af8c464175ca5ed95d"
+  },
+  {
+    "path": "configs/segmentation_expansion_town07_preview_v2_1.json",
+    "bytes": 52019,
+    "sha256": "b3f585279663af8ec533a7ca8a1e34d9754d15377c783d81a456b13821b8869a"
+  },
+  {
+    "path": "configs/segmentation_feature_style_design_v1.json",
+    "bytes": 1368,
+    "sha256": "f0c4f6f4787015b63ec373cc0465d621b7177a2f15104af4e17fc98d7732488c"
+  },
+  {
+    "path": "configs/segmentation_low_wall_preview_v1_1.json",
+    "bytes": 248462,
+    "sha256": "6df0b7d3ca3c93eb3e8364d91c12fd72c164b9a29eb2a28077a7b036338c8dfb"
+  },
+  {
+    "path": "configs/segmentation_prior_calibration_v1.json",
+    "bytes": 518,
+    "sha256": "4ca8b9a608ad4ab4811142ef695ce41aae43fb0b6802c7cea317aa7ac8fb03c0"
+  },
+  {
+    "path": "configs/segmentation_supplement_v1.json",
+    "bytes": 104256,
+    "sha256": "8d2cab60f1287a195e77c4a84435db53070e99360c9ed10399d75dd25e657350"
+  },
+  {
+    "path": "configs/segmentation_training_expansion_scout_v1.json",
+    "bytes": 1521,
+    "sha256": "31129735bd35f221c03bbc95a764cf54aa0e0b52d880e3607b41e118b7ac257b"
+  },
+  {
+    "path": "configs/segmentation_v1.json",
+    "bytes": 1183,
+    "sha256": "6236b71dabdc56bf065b52f61b0b569019b390a8b2dd4d407acf7cefe31784c4"
+  },
+  {
+    "path": "configs/segmentation_v1_1.json",
+    "bytes": 1390,
+    "sha256": "7fdc014df85049758a17edf2c51926da0ae199fc7d875f2f9cb77b333433f36e"
+  },
+  {
+    "path": "configs/sunny_detection_v5_1.json",
+    "bytes": 4798,
+    "sha256": "08e0240296f163c20f13e205ecce744e6f6a3c9fc10a2fe9ed25a97c6ccc1ee1"
+  },
+  {
+    "path": "configs/sunny_detection_v6_1.json",
+    "bytes": 5053,
+    "sha256": "e64d745b228eb2c32aab314eedb314cb72070e0b3a24ad682cc4648de1345859"
+  },
+  {
+    "path": "configs/sunny_segmentation_v5_1.json",
+    "bytes": 5513,
+    "sha256": "db034d5d761b8aeb3fcc40aa1cb8c3ea6f565f83a4db4c0d1f8bb72f0fc18d04"
+  },
+  {
+    "path": "configs/sunny_segmentation_v6_1.json",
+    "bytes": 6009,
+    "sha256": "b2a3ca820bc73bd26267b2be09cde25d630bfd41a99aaf227cc473bcec6d770d"
+  },
+  {
+    "path": "configs/sunny_training_v3_1.json",
+    "bytes": 1563,
+    "sha256": "c6fa083f5a716962eaa7d65416a78f2b118fb30d935dc99369543bd02b5c6c0a"
+  },
+  {
+    "path": "configs/sunny_training_v3_2.json",
+    "bytes": 1563,
+    "sha256": "8ea53aa7bba1f69ac5d10fb5fe80bc7ff6dba0bc9f0b737eba9a5eb7438c7862"
+  },
+  {
+    "path": "configs/sunny_training_v3_3.json",
+    "bytes": 2023,
+    "sha256": "98631edb5d4124a8f7cc29dc2552dd4b514c3687b8528933e27c444870616da6"
+  },
+  {
+    "path": "configs/sunny_training_v3_4.json",
+    "bytes": 2023,
+    "sha256": "f2b406d29e355aae0d7eff31ad596ea025bf47dd6ca576923ead3aec82737665"
+  },
+  {
+    "path": "configs/sunny_training_v3_5.json",
+    "bytes": 2675,
+    "sha256": "43b63634a055e11a25e0b69a9e2be5eb729a5747b6f2194a1158dfb0b423d048"
+  },
+  {
+    "path": "configs/sunny_training_v3_6.json",
+    "bytes": 3148,
+    "sha256": "c70748bb1fdadb9b3d0513ee37712faeff55771193949e7f78094b38dd61a0f6"
+  },
+  {
+    "path": "configs/sunny_training_v3_7.json",
+    "bytes": 3481,
+    "sha256": "d0d8e7ee87ea7ca21f3f0822bf9171869c732156a06beeafb2aebbae92410dfd"
+  },
+  {
+    "path": "configs/sunny_training_v3_8.json",
+    "bytes": 3769,
+    "sha256": "9a891c4d771fdc60cc65110831bbbe2d0e1fcddf930287dd1dbcedae5abdc5e1"
+  },
+  {
+    "path": "configs/sunny_training_v3_9.json",
+    "bytes": 3769,
+    "sha256": "92b3e4738054974caff6f7a7bf7ccb6fbf60444f3d92fd3019006cb5cd198f8a"
+  },
+  {
+    "path": "configs/sunny_training_v4_1.json",
+    "bytes": 4559,
+    "sha256": "25c02eefe5f5328f97773a024efe400ea4b786cfcc516a4c00d8b5a4fae853de"
+  },
+  {
+    "path": "configs/visibility_policy_v1.json",
+    "bytes": 1904,
+    "sha256": "7a5ec4390177c3b6b30bfe47a58a388d563b125def3395bfdcef0b24debdb717"
+  },
+  {
+    "path": "configs/visibility_policy_v1_1.json",
+    "bytes": 2382,
+    "sha256": "7583839494b7ebc235595b9fad331b2a023429dfceaa116c007acf9ab5a023d9"
+  },
+  {
+    "path": "CURRENT_TASK.md",
+    "bytes": 91990,
+    "sha256": "c71f4ac13400df40f3dfecb7cadd85b7e6a2a7efa7c29d20167f2ae242db4ea2"
+  },
+  {
+    "path": "PHASE7.md",
+    "bytes": 13986,
+    "sha256": "7466f92cc9d24107798b485951511071bcc77f1b4f33ceaadceb3d8e2b3d0ef6"
+  },
+  {
+    "path": "README.md",
+    "bytes": 12217,
+    "sha256": "1dfa9a0f74faf816f33cf61fab08098df0c4e02159dd3269fa82579ff85248e3"
+  },
+  {
+    "path": "ROADMAP.md",
+    "bytes": 4650,
+    "sha256": "2c324f9e8371e46b2387616d8eb3458a3a8673a7e1993b5b0e8c8e291a0a547d"
+  },
+  {
+    "path": "scripts/amend_sunny_geometry.py",
+    "bytes": 4359,
+    "sha256": "4297271ca003827581f3f2e6ef877fa1b0c718e4953e394bd2b129fc6624a76b"
+  },
+  {
+    "path": "scripts/analyze_carla_dump.py",
+    "bytes": 4021,
+    "sha256": "07186cc8bc4734e58b56272530035405ec52dba3b182304b72e0043c8e3d32e6"
+  },
+  {
+    "path": "scripts/analyze_detector_operating_points.py",
+    "bytes": 5548,
+    "sha256": "f7bff12927735509838e10edafd436589969e353a3d3f8558ded185d858b442b"
+  },
+  {
+    "path": "scripts/analyze_phase5_errors.py",
+    "bytes": 4731,
+    "sha256": "3537ffa9e223e0f170fbcbb97e830fee0e16a3b90113ee95e52602ba2ecb2d7d"
+  },
+  {
+    "path": "scripts/analyze_sunny_phase_confidence.py",
+    "bytes": 6327,
+    "sha256": "14af88b2f0ad48b776fb28be8c9aa41ecf83b6436a74141ea83fe2c296bbe134"
+  },
+  {
+    "path": "scripts/archive_phase4_pilot.py",
+    "bytes": 8852,
+    "sha256": "cb5fb678e84f6d7ce95e39b962120c33a1d6d4be4787d470eb89f073e012a6b5"
+  },
+  {
+    "path": "scripts/archive_phase5_baseline.py",
+    "bytes": 7528,
+    "sha256": "776d11f5f0c80d330d5975158f4a345cba7e6a1eb772e19d8d6aeb84215be014"
+  },
+  {
+    "path": "scripts/archive_phase6_evidence.py",
+    "bytes": 4887,
+    "sha256": "ce7dfc04570c3f3542b968da7e3eada43d6f72450f3c6279301f2b2bc024f504"
+  },
+  {
+    "path": "scripts/archive_phase7_evidence.py",
+    "bytes": 6889,
+    "sha256": "0bb9c7d818e0de3846079e4a921921c21a2413b4fc69b442ec177d06526c5aa3"
+  },
+  {
+    "path": "scripts/archive_wall_diagnostics.py",
+    "bytes": 3059,
+    "sha256": "3209317627528d3e3eafa94fbd6574e00916ed21ae51fad090c24f27be2b0ab7"
+  },
+  {
+    "path": "scripts/assert_training_idle.ps1",
+    "bytes": 1366,
+    "sha256": "ea32b5ce14d2418029dfefbef7143b5471c343300894004ac52eb1fab7843285"
+  },
+  {
+    "path": "scripts/audit_instance_probe.py",
+    "bytes": 9943,
+    "sha256": "bb40cbdb804bb51f4f9e6ff4bba1015860ef143ded7825fae8b86caa216507cd"
+  },
+  {
+    "path": "scripts/audit_light_supplement.py",
+    "bytes": 7753,
+    "sha256": "f0ca7cc405b13118c849921ad03ad818dc932041fc08c18fae687d57fd3ab77f"
+  },
+  {
+    "path": "scripts/audit_motion_instances.py",
+    "bytes": 8835,
+    "sha256": "c66ae394be05aa2aa30fc616444cdb135123359101cf8a08dbef271305740ea5"
+  },
+  {
+    "path": "scripts/audit_phase5_runtime.py",
+    "bytes": 7287,
+    "sha256": "6bd6c468a7bce3347e9089b45911059711e5778b0e9415575bc36a99c6d3062a"
+  },
+  {
+    "path": "scripts/audit_segmentation_supplement.py",
+    "bytes": 12113,
+    "sha256": "5f91b7b23fa9afbb1894083223ce7765563c8b6c117387f6460a57fc2177d880"
+  },
+  {
+    "path": "scripts/audit_sunny_dataset.py",
+    "bytes": 16524,
+    "sha256": "f853cc0a2c44100e552a3c5f52a2ff92218e9e2872f6d7ef49483d1e158da4cd"
+  },
+  {
+    "path": "scripts/audit_unused_scenery.py",
+    "bytes": 15172,
+    "sha256": "caebd6383b8e66a6947920800a975861612ca1ab05fd010dc28f78f9c26181bc"
+  },
+  {
+    "path": "scripts/baseline.py",
+    "bytes": 14897,
+    "sha256": "fd5eb48e28c16ec04cdb3fb8a06b0af020c8b10e15c9c673e411095d68cd599d"
+  },
+  {
+    "path": "scripts/benchmark_perception.py",
+    "bytes": 3709,
+    "sha256": "61947a4ccbd461473982dd3aa2ac2dbe634de8ebf1be72e10661a0d0b60b7350"
+  },
+  {
+    "path": "scripts/benchmark_sunny.py",
+    "bytes": 2768,
+    "sha256": "53e7d594a0bf98ca259a01de9d1be13775670f666a03f0bf7b39b43af306c8ef"
+  },
+  {
+    "path": "scripts/build_error_catalog.py",
+    "bytes": 3240,
+    "sha256": "51cc7c43551a54744ecb720810bbbd500b3ba9d086aa2df61444b71ebe1e9eac"
+  },
+  {
+    "path": "scripts/build_pdb_inspector.cmd",
+    "bytes": 500,
+    "sha256": "d78e6e3b4631e476c9f67f896002affdf082824c3150cc28d54a3fc33249f554"
+  },
+  {
+    "path": "scripts/calibrate_segmentation_prior.py",
+    "bytes": 10639,
+    "sha256": "e62b539d7e198c985659c6f8d9833fc6bd46493f738869d4c872535a29f19c96"
+  },
+  {
+    "path": "scripts/capture_carla_dump.py",
+    "bytes": 2518,
+    "sha256": "49ecb395964a30de065231f8abcd43d900ca8c64cf4fd98285ea29321a0a7071"
+  },
+  {
+    "path": "scripts/check_evidence_git_bytes.py",
+    "bytes": 2670,
+    "sha256": "dd8fe044862d8dcf78693832178e679059172bccf5dacefa2590753a24776434"
+  },
+  {
+    "path": "scripts/check_phase7_browser_receipt.py",
+    "bytes": 5312,
+    "sha256": "565df88db160b01a2ac97566831f78bd430ac5e9c11022e22ef766cb34ab9c59"
+  },
+  {
+    "path": "scripts/check_sunny_detection_artifacts.py",
+    "bytes": 8276,
+    "sha256": "a5bde005e9f665520c0cb90d224292f241b2cac3db161d58ba41f135ce255d8b"
+  },
+  {
+    "path": "scripts/check_sunny_segmentation_artifacts.py",
+    "bytes": 7178,
+    "sha256": "74488214300b9e8e177a79d0095c3b9f54f28271e25e40f5549e184ccf5a0fa7"
+  },
+  {
+    "path": "scripts/check_viewer_browser_receipt.py",
+    "bytes": 4584,
+    "sha256": "525153dae10c7369c21ac7d649ac559f61f12ef14f0d3010fab1fe76265b63a0"
+  },
+  {
+    "path": "scripts/check_viewer_http.py",
+    "bytes": 3374,
+    "sha256": "cdf23fa1d28872891ed0090fb7e4066ccce5e42471bc67896d5dcc2bbead330d"
+  },
+  {
+    "path": "scripts/check_world_viewer.mjs",
+    "bytes": 2106,
+    "sha256": "c60e6768a8a719b5285c2782188a7b8413872c41741b6a3c5535fe57c0b5f9d0"
+  },
+  {
+    "path": "scripts/check_world_viewer.py",
+    "bytes": 4400,
+    "sha256": "2b181f0c1ed5e57fc459647c3c88dc5d80a29f3a41eefa21d586b4d0470b4211"
+  },
+  {
+    "path": "scripts/collect_dataset.py",
+    "bytes": 34680,
+    "sha256": "8c61b3127987171526dfce57cc77a23dba4ec626c54b2f5efed40b8d8d736575"
+  },
+  {
+    "path": "scripts/collect_light_supplement.py",
+    "bytes": 8324,
+    "sha256": "08390b2f796360619168fda7bf2987dc8c9ac44306072c1158de5c4b434fe32e"
+  },
+  {
+    "path": "scripts/collect_segmentation_supplement.py",
+    "bytes": 7291,
+    "sha256": "d9f53ed67e328814c5d974bd498b309c7590e6cd7fc003af8586a1824fc39335"
+  },
+  {
+    "path": "scripts/collect_sunny_dataset.py",
+    "bytes": 6985,
+    "sha256": "10a50732abc75ad02517349e683e86d74c83b0059bc4699252643c006aa60e9d"
+  },
+  {
+    "path": "scripts/collect_unused_scenery.py",
+    "bytes": 8879,
+    "sha256": "38519d5068bbbd59f5af8c7aa23e79a957b047206a80764f9c5deeea7879d744"
+  },
+  {
+    "path": "scripts/continue_phase3_prior.py",
+    "bytes": 5398,
+    "sha256": "d5a1d8bbaf07eb44f2a9d93914a4d1f97fbf016070f2f2ac16d4b2384a09baf5"
+  },
+  {
+    "path": "scripts/depth_ablation_components.py",
+    "bytes": 6594,
+    "sha256": "6bd73fd7ae43d999e0d7dcafb5071c2dd7686377726b34f7fa231064f81f9e52"
+  },
+  {
+    "path": "scripts/diagnose_illumination.py",
+    "bytes": 8303,
+    "sha256": "331ff953609346c6e3290cf6b0e33c8b6da105651535a56fe7ec2fb0484890a2"
+  },
+  {
+    "path": "scripts/diagnose_landscape.py",
+    "bytes": 13768,
+    "sha256": "5eb8d84a56b04bbc0379eac45901af5ea0104689c3b27d5a17c2b10437b542b1"
+  },
+  {
+    "path": "scripts/diagnose_phase7_scenarios.py",
+    "bytes": 4053,
+    "sha256": "48add5ee0c33c51fe5628b92a416de9122e6a1a7769565cbb0ec7a08b388ecb4"
+  },
+  {
+    "path": "scripts/diagnose_sunny_box_sizes.py",
+    "bytes": 7197,
+    "sha256": "0631624cf123ae7768a3d5b08f3817e928704b2fa9a661c14d442c15ec0126c6"
+  },
+  {
+    "path": "scripts/download_carla.py",
+    "bytes": 1382,
+    "sha256": "a635fec2ec49ef2f44ae9974db441a0eb836dccfbf58b58c00ed350044b2baee"
+  },
+  {
+    "path": "scripts/evaluate_light_state.py",
+    "bytes": 14751,
+    "sha256": "ea14bd03b0de1cef794ed084c34c1b181f11d963f287c2663584debd3295a6ec"
+  },
+  {
+    "path": "scripts/evaluate_phase4_pilot.py",
+    "bytes": 15014,
+    "sha256": "5dc87a3c9baf739f2f74a0ad71d37a944afc20338e1e9a01c93e827deada4574"
+  },
+  {
+    "path": "scripts/evaluate_phase5_world.py",
+    "bytes": 18675,
+    "sha256": "4068969730e86bd1d5b7b0156c60b2d5ba51bf82230c695932391ee375848391"
+  },
+  {
+    "path": "scripts/evaluate_phase7_motion.py",
+    "bytes": 14752,
+    "sha256": "f06ed0056ba64b649246886f694446ca24333d0d53ea6c4dce66d9e5f30ae2d4"
+  },
+  {
+    "path": "scripts/evaluate_sunny.py",
+    "bytes": 7982,
+    "sha256": "e8957a10234e52014502a379650e2b3ea2831d1f3bd0149b151fff6ddf51ed2c"
+  },
+  {
+    "path": "scripts/evaluate_sunny_segmentation_cpu.py",
+    "bytes": 8081,
+    "sha256": "02ee8c035c547fc3281cb1a92e28c2deefd7a755ebae86045578b14f8b56a682"
+  },
+  {
+    "path": "scripts/experimental_depth_branch.py",
+    "bytes": 3252,
+    "sha256": "93e51cd7a4c476f63f6ccea1cd209316825c044454b219b3003e3d606e6b3479"
+  },
+  {
+    "path": "scripts/experimental_detector_geometry.py",
+    "bytes": 3512,
+    "sha256": "7f75ca920c00e3f93692e61d38b3a33ef1040eef9b5800ccca4d163a5d390d3d"
+  },
+  {
+    "path": "scripts/experimental_feature_style.py",
+    "bytes": 2802,
+    "sha256": "6260dfd5100aef160f18598685ee7f64baa703e0d987862163c01485e9c84de8"
+  },
+  {
+    "path": "scripts/experimental_p1_detector.py",
+    "bytes": 1654,
+    "sha256": "a855a9e54262c1a35b4746a8406ae32558dfa8ad51288f2c2d93955959ceb047"
+  },
+  {
+    "path": "scripts/export_phase7_viewer.py",
+    "bytes": 7075,
+    "sha256": "e0e8785a3044f916b754613a5ee3373f55f081822b8bc105319d3576027b686e"
+  },
+  {
+    "path": "scripts/export_sunny_results.py",
+    "bytes": 15489,
+    "sha256": "e3ee00b9c422a0dc461a2ae291024d99ad329aeefe7e945f1903531ce4697dfe"
+  },
+  {
+    "path": "scripts/export_training_index.py",
+    "bytes": 2048,
+    "sha256": "d92d5be3af9fcd9728777768d1297acbfb416ea24c55faefc5b6bcf2c2ee502c"
+  },
+  {
+    "path": "scripts/export_visible_instances.py",
+    "bytes": 4152,
+    "sha256": "3f9f8f5bbabd7e87737f0f61814f14fbf39df56c4408bc4708bf4acae3fc1286"
+  },
+  {
+    "path": "scripts/export_world_viewer.py",
+    "bytes": 6770,
+    "sha256": "651088a2fbcc00c44e9ad48884e34021eefde00ce91d333795db434e3691c6ac"
+  },
+  {
+    "path": "scripts/hold_awake_for_training.py",
+    "bytes": 4501,
+    "sha256": "d2388536bd9a2229e4feb7fdce211d23fb9e5266787af2d8e194ba63a4bf3ce8"
+  },
+  {
+    "path": "scripts/inspect_carla_pdb.cpp",
+    "bytes": 2695,
+    "sha256": "7fdcff0d9fd39defc4f21fcaab0fb18c4702796d06ae0dc7cae8b43b550ca1f8"
+  },
+  {
+    "path": "scripts/install_additional_maps.py",
+    "bytes": 8325,
+    "sha256": "85b7404857be750260cc986b7867f1b2693cb5b765b8436ca0f1772553e1bc8b"
+  },
+  {
+    "path": "scripts/install_carla.py",
+    "bytes": 4088,
+    "sha256": "8f17e52521c102ec266d8f6d5940d18a518c086a3ec4767c9256adeff9d7facb"
+  },
+  {
+    "path": "scripts/make_phase4_review.py",
+    "bytes": 3281,
+    "sha256": "9147ecb85ba4f45cb62d0f4d5f947c5a4b6ee25a8cffe4e650605165d784b7ae"
+  },
+  {
+    "path": "scripts/make_phase5_review.py",
+    "bytes": 3143,
+    "sha256": "0eaa8c45296f12603267947ed532e7edd7b12e38a28351eb93f08e5ef2b55b8a"
+  },
+  {
+    "path": "scripts/patch_pixel_reader.py",
+    "bytes": 5187,
+    "sha256": "88ce8605bdd58a22bdc4df552d2adecf635dcd0b3b587ce7b2d69a6ab5c9af07"
+  },
+  {
+    "path": "scripts/perception_inputs.py",
+    "bytes": 724,
+    "sha256": "71b41352e67811a1467bd8840cb6b72d06831c06f48e8a08532df21d723e388c"
+  },
+  {
+    "path": "scripts/phase5_gt.py",
+    "bytes": 2218,
+    "sha256": "19d43c632f9c8da3b370251edef6763f0f0295c830954aac0a7d79020d681681"
+  },
+  {
+    "path": "scripts/phase5_render.py",
+    "bytes": 3305,
+    "sha256": "8214a8febb9bc997711d9fc401dc961d9a8609260212ebff4c49838f9b8f3dce"
+  },
+  {
+    "path": "scripts/predict_perception.py",
+    "bytes": 5929,
+    "sha256": "8464b30ab3ba230f2a24dd5ad4d7bbfd546419cc855864e49d75ea817a3d9a71"
+  },
+  {
+    "path": "scripts/predict_segmentation.py",
+    "bytes": 3242,
+    "sha256": "18c093c3f9d83cbc7893d3b640c3e27d94be6ae6aee6f3b351ae87b8ba695f52"
+  },
+  {
+    "path": "scripts/predict_sunny.py",
+    "bytes": 6148,
+    "sha256": "c69b5a7a68460878041ef94fb0ae6034acb3915754be31ad390e780337d27037"
+  },
+  {
+    "path": "scripts/preflight_sunny_spawns.py",
+    "bytes": 2205,
+    "sha256": "23a1d340b08e53d1700f81a2e8ca8138f213898500b92682e8f2d2bb925cadd8"
+  },
+  {
+    "path": "scripts/prepare_additional_map_runtime.py",
+    "bytes": 10545,
+    "sha256": "3ae833b7d700c2f5de5087ff8a1380bba09d18868a648bd5d23300449e4e5d73"
+  },
+  {
+    "path": "scripts/prepare_diagnostic_runtimes.py",
+    "bytes": 2199,
+    "sha256": "7cfc3aec68b26d011c1f916ca9dcee2f2a6ebe6677ccda0c41f11dacf69a9e4d"
+  },
+  {
+    "path": "scripts/prepare_motion_dataset.py",
+    "bytes": 6373,
+    "sha256": "dfc2084b458befec3505150f6e4ec48092e179f1962742e31f5c3944e7a2f20e"
+  },
+  {
+    "path": "scripts/prepare_phase4_inputs.py",
+    "bytes": 937,
+    "sha256": "67c5c34f36a478e621ede8ca70e79d8a3a12cf432ce93d87ef1de97d8400c2fa"
+  },
+  {
+    "path": "scripts/prepare_phase5_crops.py",
+    "bytes": 8106,
+    "sha256": "538d77aa7d53284ec3e0f10d522650793d837a5c70e91ff55c5370b1faa7bd41"
+  },
+  {
+    "path": "scripts/prepare_phase7_inputs.py",
+    "bytes": 3147,
+    "sha256": "b2f2c83d0e4683bb7ba632e80e893ba1f166ef92cf2c0cba4a31ad024f352de3"
+  },
+  {
+    "path": "scripts/prepare_phase7_viewer_fixture.py",
+    "bytes": 1585,
+    "sha256": "b710cf766d9e30d6c2f01c882cb0888909fc8b3e6338181584c739df7bdea4a2"
+  },
+  {
+    "path": "scripts/prepare_reserved_world.py",
+    "bytes": 3365,
+    "sha256": "8143612c563f68cda3ae8ecafd89361d2ad82874fa8ba6c21b0cf650c94ae2a3"
+  },
+  {
+    "path": "scripts/prepare_segmentation_supplement.py",
+    "bytes": 4816,
+    "sha256": "d834defa390d0bdf93191ca952baf4c9a76e63a75d3861c706f6e7a17dc1908d"
+  },
+  {
+    "path": "scripts/prepare_sunny_dataset.py",
+    "bytes": 7483,
+    "sha256": "3dbe67c742107952bd2aa7da90714105310a877be75819f27078c4ba2a379b6d"
+  },
+  {
+    "path": "scripts/prepare_unused_scenery.py",
+    "bytes": 12482,
+    "sha256": "f90d8edcbeca7586e3bb875ebbbd9bc7b941fbb4dd5af03f549f4d5b26510e45"
+  },
+  {
+    "path": "scripts/probe_depth_branch.py",
+    "bytes": 14143,
+    "sha256": "5a83422aadb4c2f854c3574bd71ad1654ba217904b28e8f528f68cb721efcaf6"
+  },
+  {
+    "path": "scripts/probe_instances.py",
+    "bytes": 14794,
+    "sha256": "e9784039aad0e6833ce9f7ca10d226d04b247b5c12359dd93742e54a1d8b9659"
+  },
+  {
+    "path": "scripts/probe_phase3_assets.py",
+    "bytes": 7019,
+    "sha256": "626f789d296c0d32f14b94ab8254b36d1f4c0da743c2fefb0f4324943819623b"
+  },
+  {
+    "path": "scripts/probe_simulator.py",
+    "bytes": 3019,
+    "sha256": "fcac3a6e3d4f02cf02d99c66929a9ba4396bf8655b62c4c5c00c1f3b61d59390"
+  },
+  {
+    "path": "scripts/probe_sunny_landscape.py",
+    "bytes": 6879,
+    "sha256": "41dfc47a2a3b60c1eca38e305cc41405f71d4b48ae0611b109c01f9dc0e2e5e1"
+  },
+  {
+    "path": "scripts/profile_dataset.py",
+    "bytes": 2342,
+    "sha256": "6acc3d2b8b398b24b3b4f4b662fef5cbb41243c47033b551a9bb37e3ec0329a6"
+  },
+  {
+    "path": "scripts/propose_low_wall_preview.py",
+    "bytes": 5097,
+    "sha256": "3ed03bf2dac7eb36c85e2872becb372b110e0424dccd16b319ba67232a88b64f"
+  },
+  {
+    "path": "scripts/publish_viewer_frame.py",
+    "bytes": 1269,
+    "sha256": "49be4b66eebd620bb2042e15386167c6e14234b141c4b9d9d2b66e2d0fc6f71b"
+  },
+  {
+    "path": "scripts/recount_light_joint_ignore.py",
+    "bytes": 6222,
+    "sha256": "79bba5952e23a7310af356daba91792fb74642bc823bf966a2c71c9cf994bf8f"
+  },
+  {
+    "path": "scripts/review_bicycle_fit.py",
+    "bytes": 8967,
+    "sha256": "134bb934270d258b887f0184b281741d6217c29fc56d69f2a79be0dcf9846344"
+  },
+  {
+    "path": "scripts/review_phase7_predictions.py",
+    "bytes": 6327,
+    "sha256": "9a920c45e0790ac2d9c0d4abe3a0d7483afb56fe8b162d69667080b9acaac662"
+  },
+  {
+    "path": "scripts/review_saved_detection.py",
+    "bytes": 7429,
+    "sha256": "938c19d3ca779fb6a8e64e918d6270007242dc69441958d444bc22f75300b916"
+  },
+  {
+    "path": "scripts/review_scenery_probe.py",
+    "bytes": 7372,
+    "sha256": "9e8260c09b456d20662bded7ab4721a61981fb866af41998527095e50e91d99d"
+  },
+  {
+    "path": "scripts/review_sunny_segmentation.py",
+    "bytes": 13659,
+    "sha256": "0b82cee94e4a110913d0bfd1e42e6be4693710817c79e94f5f630a698cc3d139"
+  },
+  {
+    "path": "scripts/review_wall_snapshot.py",
+    "bytes": 6745,
+    "sha256": "6b7724ba5f64ddfce8e2b0acce0d71309b99407ef9ac0fefe6a41c193f941529"
+  },
+  {
+    "path": "scripts/review_wall_training_diversity.py",
+    "bytes": 5260,
+    "sha256": "24f86d866490a67eb005a943a239430e14baf7e2de84f817c5c2913d37a068a0"
+  },
+  {
+    "path": "scripts/rig_capture.py",
+    "bytes": 11496,
+    "sha256": "696899ca9c6d98c0757dd122901283623ca730182b40c4501cd40df974453936"
+  },
+  {
+    "path": "scripts/run.py",
+    "bytes": 246,
+    "sha256": "8dfb4310252adbc714ba35d17c0c6145dd156358070ce624abd559a65c670ec1"
+  },
+  {
+    "path": "scripts/run_depth_ablation.py",
+    "bytes": 26828,
+    "sha256": "3c8c559c8bc8952976091023999e1fe1cb619c8f59a0fad36cfe9e102eda46f4"
+  },
+  {
+    "path": "scripts/run_phase3_final_qa.py",
+    "bytes": 7102,
+    "sha256": "3c2ae12afce7986d087bae4f5a91908f009effaa34992d4d12bd2796483c313d"
+  },
+  {
+    "path": "scripts/run_phase3_recovery_batch.py",
+    "bytes": 12517,
+    "sha256": "0da30400902e476c4acbd4dd70e416b96922c7a4bf07c1b72d2853bec97c784a"
+  },
+  {
+    "path": "scripts/run_phase4_pilot.py",
+    "bytes": 11038,
+    "sha256": "9defb41de73331956fc42f06eaad58ea3faa05626b0757a20578d469365189f6"
+  },
+  {
+    "path": "scripts/run_phase5_world.py",
+    "bytes": 10702,
+    "sha256": "19dd5639a9fff00c8b4b536afcbb1165dd5e83300f13258dd59daec092a0dc98"
+  },
+  {
+    "path": "scripts/run_phase7_motion.py",
+    "bytes": 5395,
+    "sha256": "68a2ec34ed7f8c68facf449f317ce933d77414709d232773130dba534464cc4c"
+  },
+  {
+    "path": "scripts/scan_wall_training_support.py",
+    "bytes": 6902,
+    "sha256": "f4e43a74370c264ce8b7039fa009686e4c42df601f0b8d60d98adf3d25a6e41e"
+  },
+  {
+    "path": "scripts/scout_training_scenery.py",
+    "bytes": 5037,
+    "sha256": "c442bdb25efea50b0151512486356ef9e40c2054357e0be4d7a0f2932a7de1c2"
+  },
+  {
+    "path": "scripts/scout_unused_training_town.py",
+    "bytes": 6465,
+    "sha256": "f3be41b5eeeac63229fb23f61387d7abb1352f42d80e5daa69ea6cca86802684"
+  },
+  {
+    "path": "scripts/seal_phase7_replay.py",
+    "bytes": 2946,
+    "sha256": "116d209b1c77b6c4df62171b114384a42116f8e7728929ff45b1d292e80bb601"
+  },
+  {
+    "path": "scripts/select_phase4_pilot.py",
+    "bytes": 6401,
+    "sha256": "f75c7320183332d7085224a18d6dd385bb7cba29023ec5d755c74f5ae56531d4"
+  },
+  {
+    "path": "scripts/serve_world_viewer.py",
+    "bytes": 1089,
+    "sha256": "3b0fc2611b885a7f775b297700afcfcb5d2c7ecabe7a67605cce83f909d9c72e"
+  },
+  {
+    "path": "scripts/setup.ps1",
+    "bytes": 775,
+    "sha256": "08ecc73b819b0cb8ff8160d8d40bec5e02f1ec9e3f1e03db59987cc7a9c1cef4"
+  },
+  {
+    "path": "scripts/start_carla.ps1",
+    "bytes": 1597,
+    "sha256": "e10d5a7179825e5b698a385456c188a9941761f087cefd04ea54d071fee31b11"
+  },
+  {
+    "path": "scripts/status_phase3_batch.ps1",
+    "bytes": 2717,
+    "sha256": "f525a6dc67c36ea6a444c78c9274f60aa713cadd3387c2c04f00aea269512899"
+  },
+  {
+    "path": "scripts/status_sunny_training.ps1",
+    "bytes": 3006,
+    "sha256": "e82bdd4e3ad84934a84a19ac9299631a9cda3fdd1b436a2cf8b05b38ce74ddb2"
+  },
+  {
+    "path": "scripts/stop_carla.ps1",
+    "bytes": 985,
+    "sha256": "1d5191a109c64aeaf378fb75094c7e2ca86fad6ab8ae7d0ab5f82d07238dabf4"
+  },
+  {
+    "path": "scripts/study_bicycle_proposals.py",
+    "bytes": 7144,
+    "sha256": "10e45554c5a615bd282b4dbc4d9cb5991af069650726d78d1ae1380fcf91e8d0"
+  },
+  {
+    "path": "scripts/study_segmentation_prior.py",
+    "bytes": 7284,
+    "sha256": "ae6c1c6b15b139f6440fd4f26e50edfac26379e4cb308cd640542296fe318e27"
+  },
+  {
+    "path": "scripts/summarize_training.py",
+    "bytes": 8970,
+    "sha256": "c8edd13d57eababce65009ae47c6e3ba52a04cd99bc746f932f1d29ecb9aa8bb"
+  },
+  {
+    "path": "scripts/summarize_visibility.py",
+    "bytes": 5168,
+    "sha256": "087cbd427284aed0242feb8efba0ea332b00941abfe7250001f23f4c89a2e737"
+  },
+  {
+    "path": "scripts/supervise_sunny_collection.py",
+    "bytes": 3329,
+    "sha256": "9388e0d87dab15d25bdba8c6e3bb23668c4256248b8ea5cbc3facfc665685383"
+  },
+  {
+    "path": "scripts/survey_bicycle_proposals.py",
+    "bytes": 9606,
+    "sha256": "ee47e8f5ca73988554ecc64f71d92db306fd40c63cb808ef5dc038e15e26949d"
+  },
+  {
+    "path": "scripts/survey_sunny_materials.py",
+    "bytes": 10758,
+    "sha256": "f949ac88b8931807db478cf38539da80653966b5a4b6c2fb5cc27739ca49c299"
+  },
+  {
+    "path": "scripts/train_light_state.py",
+    "bytes": 10044,
+    "sha256": "ae354361ef122aa3e879b8abc270d1d1dbbd5cad70e2e243309beea86272dc41"
+  },
+  {
+    "path": "scripts/train_phase5_cuboids.py",
+    "bytes": 10831,
+    "sha256": "faa8ff6736a405aa7a43befb1f8ab1c0e77aedbbf6a77a912cbe68eba1de2f52"
+  },
+  {
+    "path": "scripts/train_segmentation.py",
+    "bytes": 1052,
+    "sha256": "dc905383ce9448fe50f80a57f9bfcbe4f1b8133d84832f44ed5895057ade97fe"
+  },
+  {
+    "path": "scripts/train_sunny.py",
+    "bytes": 21791,
+    "sha256": "2919bc6acc9498d5c4951ecdac6ddc0d850e0d95db790ec6978f1883376212bb"
+  },
+  {
+    "path": "scripts/validate_dataset.py",
+    "bytes": 13737,
+    "sha256": "c621a7381ad572a910f201b02ce442eba403ec2c0db47b2e987e2d7af20c8699"
+  },
+  {
+    "path": "scripts/validate_light_joint.py",
+    "bytes": 3348,
+    "sha256": "db8f4ae4a701b8b14585156d3bebe96dcef99d3561713742adbdd5d0d3cfe64c"
+  },
+  {
+    "path": "scripts/vendor_phase6_three.py",
+    "bytes": 1947,
+    "sha256": "b14620a8c4178953407f22f73628bd4b9cc448d811813eb97c206e2472137fff"
+  },
+  {
+    "path": "scripts/verify_detector_geometry.py",
+    "bytes": 5953,
+    "sha256": "121d7d4edabc55359e25b0c73ebcd77fb1018c0c12df42e883dd275c783c64ac"
+  },
+  {
+    "path": "scripts/verify_phase0.py",
+    "bytes": 2800,
+    "sha256": "d042db5a9bac5cb91c32c55b7d6425a61f9d2c165e66c960069cef1c6a576797"
+  },
+  {
+    "path": "scripts/verify_phase4_artifacts.py",
+    "bytes": 4893,
+    "sha256": "dd4f852c236bea8bb0c4f04a6aadabd15e22d7d3facdf9355c660f1b9e62436f"
+  },
+  {
+    "path": "scripts/verify_phase4_rgb_boundary.py",
+    "bytes": 2970,
+    "sha256": "99aac75bd9d744d6ac13b8c2d95b4a6b09049d663a0ad995cad90aef3c517f07"
+  },
+  {
+    "path": "scripts/verify_phase5_artifacts.py",
+    "bytes": 9624,
+    "sha256": "c744fce666276d9cd591f188c8c9f5db3d2ee36d9557cb0baca76f56dcce6660"
+  },
+  {
+    "path": "scripts/verify_phase5_boundary.py",
+    "bytes": 2562,
+    "sha256": "7d2ed2ab305efe34218fa26d93cbd185a24a60d43cd7533cffe1c984f2d4d2fe"
+  },
+  {
+    "path": "scripts/verify_phase7_artifacts.py",
+    "bytes": 6095,
+    "sha256": "0d78b245ef14786d712d2c44b6646c6c06323b83a51158d9e533b0f1eb7095e8"
+  },
+  {
+    "path": "scripts/verify_static_capture_probe.py",
+    "bytes": 3707,
+    "sha256": "bf864343b61b542ebb5a1641bcb473274adc6c8080472e195b61992cb62c1628"
+  },
+  {
+    "path": "scripts/verify_sunny_capacity.py",
+    "bytes": 7275,
+    "sha256": "e235cdb900b9217792510af004a0dfd5428e8518bc806cb4b58e8defb49d59fb"
+  },
+  {
+    "path": "scripts/verify_sunny_models.py",
+    "bytes": 4154,
+    "sha256": "aa3206ee5b8aa0554518aaca3fad00d4617540c49c09ae43af1c5ac7f87edae8"
+  },
+  {
+    "path": "scripts/verify_training_receipt.py",
+    "bytes": 4066,
+    "sha256": "a3f3ad2b478a0bcde2e18b4873bb008a65112b07802cc3fcb5482677fce92a0a"
+  },
+  {
+    "path": "src/senior_ai/__init__.py",
+    "bytes": 86,
+    "sha256": "c285e576bba7be22f3dfe803e0f8ea274a4e0076d45de75baef01ddae84afff1"
+  },
+  {
+    "path": "src/senior_ai/__main__.py",
+    "bytes": 1432,
+    "sha256": "ea4b9d7761dc175bd590279a1cf5a5521d2496b76c5353489b0086e5f8293afb"
+  },
+  {
+    "path": "src/senior_ai/acquisition_safety.py",
+    "bytes": 1429,
+    "sha256": "dc4deb5ed40296f8cbda4b6c49a16d62b5c26ed32e8bd9145efe3f5f64e32074"
+  },
+  {
+    "path": "src/senior_ai/bev_fusion.py",
+    "bytes": 3196,
+    "sha256": "f12cdc933ca6829b1c556bf63dd8c647e8640a1040a5548ace9156892deb03eb"
+  },
+  {
+    "path": "src/senior_ai/bev_geometry.py",
+    "bytes": 5461,
+    "sha256": "34e797f9ce6909bb341798e66e21ee93447c37036a03c0ef8044cace5ea7f449"
+  },
+  {
+    "path": "src/senior_ai/bev_path.py",
+    "bytes": 4170,
+    "sha256": "3cfb35c23447d288e51522615e68adc06f0e388a83244ef005758c07edc2c15e"
+  },
+  {
+    "path": "src/senior_ai/bev_temporal.py",
+    "bytes": 5071,
+    "sha256": "e3a52e274a136c98fdbf74be79cb1be8c9ec77c8d52a81deb234642ba4d8b870"
+  },
+  {
+    "path": "src/senior_ai/core.py",
+    "bytes": 2282,
+    "sha256": "eba53145e07996150e6bc4aebfe464a6c3cf201350edb0f4d035007a8ecd6f35"
+  },
+  {
+    "path": "src/senior_ai/cuboid.py",
+    "bytes": 6814,
+    "sha256": "5b07987265524db0ff749efdbec75f408de154f8b6f7756dedb6b668467d988c"
+  },
+  {
+    "path": "src/senior_ai/dataset.py",
+    "bytes": 4574,
+    "sha256": "5623aee9fd60b7a378e810f1ee558237985bc93c278f86607f29d517722045bd"
+  },
+  {
+    "path": "src/senior_ai/detection_augmentation.py",
+    "bytes": 4249,
+    "sha256": "32c48ed6349c0a0ccdaa823459c5d9c2b70039cc8903f100c0a406dc40d630a7"
+  },
+  {
+    "path": "src/senior_ai/detection_metrics.py",
+    "bytes": 4989,
+    "sha256": "a1017dd068d9df03752fb8e379f8ee5311412b1aa14d2f8d99cc79f0d51cb9b6"
+  },
+  {
+    "path": "src/senior_ai/detection_model.py",
+    "bytes": 10002,
+    "sha256": "dcdb811e94f462f6b9dc106985923c65d2896833698f6428493f5c3983a898c8"
+  },
+  {
+    "path": "src/senior_ai/doctor.py",
+    "bytes": 4051,
+    "sha256": "b9e189ced0c73643ce566857354224154c521097d2d34478a8fd900a25215e73"
+  },
+  {
+    "path": "src/senior_ai/frames.py",
+    "bytes": 2248,
+    "sha256": "cffd819cdbd361e66bedb37f0898489334dba57c853bdf37d075159d564a13f7"
+  },
+  {
+    "path": "src/senior_ai/instance_labels.py",
+    "bytes": 6364,
+    "sha256": "53439db03595dc6119813ee859897eb1affbcf5a8d5a701a21effa787b3196c8"
+  },
+  {
+    "path": "src/senior_ai/light_joint_policy.py",
+    "bytes": 608,
+    "sha256": "f8dce271eefd3240d88e34688c818adb8d2efac1f14bfd8726ade425b5108c84"
+  },
+  {
+    "path": "src/senior_ai/light_labels.py",
+    "bytes": 1294,
+    "sha256": "e516649cf73cf9aec93691de41199bbeed341851d9960dc43d05de9efb5346bf"
+  },
+  {
+    "path": "src/senior_ai/light_model.py",
+    "bytes": 1046,
+    "sha256": "0b1080bd52e595fde47cc120e968181b8c667728c56617193c21668b20e84349"
+  },
+  {
+    "path": "src/senior_ai/mobile_segmentation.py",
+    "bytes": 2252,
+    "sha256": "b1296a20a061b923cdc2a7e2dd0275fecf1af50b513f97f9a0836694d93aa25b"
+  },
+  {
+    "path": "src/senior_ai/motion.py",
+    "bytes": 2785,
+    "sha256": "d9e10c9ba82fbf4fbfd6218f6b79557e10ffd09defa13e5c716cf51cd5c083ad"
+  },
+  {
+    "path": "src/senior_ai/motion_forecast.py",
+    "bytes": 17506,
+    "sha256": "091ef89eac713f2afd4cab099ec63d3eb5c3cdd4eb87f1b4343a5ac40ea74106"
+  },
+  {
+    "path": "src/senior_ai/perception_quality.py",
+    "bytes": 1466,
+    "sha256": "d7077415e375f4967a6e058f939d34dfb3afab10d0f7bb21a1c381e0f8cd1253"
+  },
+  {
+    "path": "src/senior_ai/road_boundaries.py",
+    "bytes": 1866,
+    "sha256": "33f43f10dc7b48aee446f324fafef5a5bcc81d56e13370212c819a4ed6c1bfe6"
+  },
+  {
+    "path": "src/senior_ai/segmentation_data.py",
+    "bytes": 4548,
+    "sha256": "94b9d623ad2447dbe939b09dd52efbc8b1ec06c59ccba7546400313e988ecc81"
+  },
+  {
+    "path": "src/senior_ai/segmentation_expansion.py",
+    "bytes": 6913,
+    "sha256": "e3318eabe32f594b6e7cb3a6de43a71208e4419bcb24a1453d7c782f49b854cd"
+  },
+  {
+    "path": "src/senior_ai/segmentation_metrics.py",
+    "bytes": 2427,
+    "sha256": "d1c42901688b44c255c7b49acfb606236434c6a9211fa254d4416a2aacecf84a"
+  },
+  {
+    "path": "src/senior_ai/segmentation_model.py",
+    "bytes": 2142,
+    "sha256": "c2a84e2ca62115dab46f94957168c0170ff5a240f35a4ad146ae56fe6067627a"
+  },
+  {
+    "path": "src/senior_ai/segmentation_supplement.py",
+    "bytes": 4967,
+    "sha256": "9a6d3bc51c9f41610e3a2470cae5c3cf835ec2e0ae386c12b1358c04426bab09"
+  },
+  {
+    "path": "src/senior_ai/segmentation_training.py",
+    "bytes": 26394,
+    "sha256": "ccac2aeb158ed861cfd8325195c836230b9c4d76ca29b2662c1f0f53fe95efb8"
+  },
+  {
+    "path": "src/senior_ai/semantic_occupancy.py",
+    "bytes": 5325,
+    "sha256": "4fe73fbe9429b9ea62394caf6100089f5fcc454e959e9bac2f2335178e82d1e2"
+  },
+  {
+    "path": "src/senior_ai/smoke.py",
+    "bytes": 12161,
+    "sha256": "f2bb3a97920ed840b10490d8416f43bc0e4f0caf10fcc5ffe3cc3b577cc9ddb0"
+  },
+  {
+    "path": "src/senior_ai/sunny_augmentation.py",
+    "bytes": 1316,
+    "sha256": "56970d305e21b6c32823d81a48d161d5063c98fc3d28191bf528cc322e421ea1"
+  },
+  {
+    "path": "src/senior_ai/sunny_data.py",
+    "bytes": 6249,
+    "sha256": "bc9e5a0a3b66dc6fe4865f1bf3d591740d7617aeddbbd52baff318ff87004483"
+  },
+  {
+    "path": "src/senior_ai/sunny_losses.py",
+    "bytes": 837,
+    "sha256": "550a25cdc5d7a52416550eda62e4491ed01f1e72e86255e4ed9390953b2b399f"
+  },
+  {
+    "path": "src/senior_ai/visibility_policy.py",
+    "bytes": 4919,
+    "sha256": "e66815786d42df84e6809e762758845030637239c28d52d4c614e98ce9a23e01"
+  },
+  {
+    "path": "src/senior_ai/world_display.py",
+    "bytes": 6537,
+    "sha256": "1022bbe0785151a935a0ec8bade8d300e561a08c1e3786296683a9cbd4cf7ffc"
+  },
+  {
+    "path": "src/senior_ai/world_schema.py",
+    "bytes": 2929,
+    "sha256": "82454e33801b5202843b149038d3ef9c87925b7b0c2e346631c4903786b1932c"
+  },
+  {
+    "path": "src/senior_ai/world_tracking.py",
+    "bytes": 3521,
+    "sha256": "a87e0aa80add24c018e047e8e543115cb10f9183e3b19b67ce33402f117c5d67"
+  },
+  {
+    "path": "src/senior_ai/world_viewer_service.py",
+    "bytes": 8007,
+    "sha256": "66b4440cab538225e8b5d2b94ba593956bb6e9a8d8eab56fc6763e9674dade03"
+  },
+  {
+    "path": "Start-WorldViewer.ps1",
+    "bytes": 609,
+    "sha256": "3672be4bf0b6db8b6c0335e8c0fc6114c2891bd38d3fafeb4fdbc39b69ba16db"
+  },
+  {
+    "path": "tests/test_acquisition_safety.py",
+    "bytes": 994,
+    "sha256": "df2b0c788c8966521b9fed33150a6f042256fbd0b3c1ffafd432ce6fa31ce839"
+  },
+  {
+    "path": "tests/test_additional_map_install.py",
+    "bytes": 5189,
+    "sha256": "d0b8f68290f1db39a1da9b70891da491d647d9d540673b37773016747efae24c"
+  },
+  {
+    "path": "tests/test_additional_map_runtime.py",
+    "bytes": 4633,
+    "sha256": "3a1f06afa00c012a507975463eba7090cd15d8f63f0e7dea2d46dda29a1acbe6"
+  },
+  {
+    "path": "tests/test_anchor_shape_diagnostic.py",
+    "bytes": 792,
+    "sha256": "25b83b28a041fece1db443b5dc91b79224c6a9960475d671158067a38f35e43d"
+  },
+  {
+    "path": "tests/test_bev_evaluation.py",
+    "bytes": 1733,
+    "sha256": "7426286df86197f3ea9c79abfebe92ed94aa28d1c77ffbb7e2ceac8931345700"
+  },
+  {
+    "path": "tests/test_bev_phase4.py",
+    "bytes": 8062,
+    "sha256": "a772db421390034e7079f0cb8b2a091b5911c16ba7e099ce816e4d86d5ed3bca"
+  },
+  {
+    "path": "tests/test_dataset.py",
+    "bytes": 4113,
+    "sha256": "cdd35ec43e1ecd8c4cd7b81d5e32f4e3fb803201c9808a5b6c8a9e101dc5aaea"
+  },
+  {
+    "path": "tests/test_depth_ablation_components.py",
+    "bytes": 3435,
+    "sha256": "de3a7a91e1f3ce9742a750169aa8e804ec3026fadf73083e3000e678a316780e"
+  },
+  {
+    "path": "tests/test_detection_artifact_validation.py",
+    "bytes": 1599,
+    "sha256": "2b954715f36541fd3f436d35b3dcbe32a789c4b43b0b0983011a867f27defff5"
+  },
+  {
+    "path": "tests/test_detection_metrics.py",
+    "bytes": 2227,
+    "sha256": "93d3c31ce46f5fc270576332e036b16b4d6cd9fd6583de467e6e2cd89cfb8e90"
+  },
+  {
+    "path": "tests/test_detection_model.py",
+    "bytes": 5355,
+    "sha256": "e2718242d85c8a715e360509aea5cd8ead1d49ab69b836f382f230c288c5e376"
+  },
+  {
+    "path": "tests/test_detection_scale_training.py",
+    "bytes": 2252,
+    "sha256": "2e23f4230b4ff0f7badd6003c548e404d53ab6dfd9fe241f23421a504788bfdc"
+  },
+  {
+    "path": "tests/test_error_catalog.py",
+    "bytes": 2283,
+    "sha256": "bb3a95ac95d6977c0ecc2660c52cd5278274014ee4a4b46eccdede20dfe856e8"
+  },
+  {
+    "path": "tests/test_experimental_depth_branch.py",
+    "bytes": 2891,
+    "sha256": "29cce3f2c42cc1c0a26702a2dcd8235aa27c9a47fbb2e69154bbaec3f2df2939"
+  },
+  {
+    "path": "tests/test_experimental_detector_geometry.py",
+    "bytes": 3046,
+    "sha256": "6300f6162cae7f9269a540af99f870182f34aa3704470689a1d6c413cf201ccc"
+  },
+  {
+    "path": "tests/test_experimental_feature_style.py",
+    "bytes": 3519,
+    "sha256": "5151dde92441869f9d38259a4bf3ab8752ea159dfdb4970436f282a8ac766dde"
+  },
+  {
+    "path": "tests/test_experimental_p1_detector.py",
+    "bytes": 3036,
+    "sha256": "070bda9d9c92f521eef94741e67bc9d5681b94e26337b08d24a8e9b0bc51625b"
+  },
+  {
+    "path": "tests/test_frames.py",
+    "bytes": 2475,
+    "sha256": "bd6e164944e7871cd36134f7afb77ba513b62035948b8a64e8209a96c9dc92c8"
+  },
+  {
+    "path": "tests/test_instance_labels.py",
+    "bytes": 3981,
+    "sha256": "6fe8b915812f4328a1c912660cd695cd8badb8a3b00e8040622c4e681965435c"
+  },
+  {
+    "path": "tests/test_light_joint_ignore.py",
+    "bytes": 777,
+    "sha256": "0f2be32a7b45593a497a3d4446cfc9c5bdb4c311dbc2a48dffd9ea948731feb0"
+  },
+  {
+    "path": "tests/test_light_labels.py",
+    "bytes": 1020,
+    "sha256": "8f8f38eacec0d254bfd12db9a50f91bf5ea14dd366d3fb9db4853b0cadac6578"
+  },
+  {
+    "path": "tests/test_light_supplement.py",
+    "bytes": 5461,
+    "sha256": "c113278d510331dd544c0edc738b8e47b6fe0bcedd929ffa81ce91ba81a2fa9c"
+  },
+  {
+    "path": "tests/test_material_survey_io.py",
+    "bytes": 2208,
+    "sha256": "e68196d5759ef91ed9c850b5fd0a71a4b0c3b85e50b17dc09491d8647cbcff65"
+  },
+  {
+    "path": "tests/test_motion.py",
+    "bytes": 2567,
+    "sha256": "e13a601ff68d2ce73795e4be78af6e01d2488115d40f537db0775270d5083194"
+  },
+  {
+    "path": "tests/test_motion_evaluation.py",
+    "bytes": 1484,
+    "sha256": "fef900330fb6df7c6eb6b2c5d021f65371078173cb71979c417bff8ea76e6b69"
+  },
+  {
+    "path": "tests/test_motion_phase7.py",
+    "bytes": 8976,
+    "sha256": "1ceab6fcba45074cbd62a89fe83b1ab86519f4bb369343b481bc9c01b92807d5"
+  },
+  {
+    "path": "tests/test_perception_inputs.py",
+    "bytes": 2337,
+    "sha256": "c788e1f4dcaef0db4b7e4efa67eae723021f662f6e6fa0233b7233a5e4c296dd"
+  },
+  {
+    "path": "tests/test_phase0.py",
+    "bytes": 2576,
+    "sha256": "4f91a87ce6502d85e7153f6db4b3b68399fd0170fdc11801bb4b34aa7678f8ab"
+  },
+  {
+    "path": "tests/test_phase3_continuation.py",
+    "bytes": 1184,
+    "sha256": "d1b68d3953078a240816ab8de1ff15ae188bc45855374085a1a564dbdbee9cfb"
+  },
+  {
+    "path": "tests/test_road_boundaries.py",
+    "bytes": 1048,
+    "sha256": "d25546c97adc321a578005b58e689bfd895d36be8ba8efe1737ccd1fb9e45efc"
+  },
+  {
+    "path": "tests/test_scenery_training.py",
+    "bytes": 6885,
+    "sha256": "bf0b552e8b3d89f025f625a7d3f6219dd1a92f9a081506269bdfb0cdf080104e"
+  },
+  {
+    "path": "tests/test_segmentation.py",
+    "bytes": 12236,
+    "sha256": "ed1f93ce786214b9dd3c792dcb09f09780c66ec1c9fb3a01a88c5c10a625fed8"
+  },
+  {
+    "path": "tests/test_segmentation_artifact_selection.py",
+    "bytes": 1393,
+    "sha256": "55499ab27698099470276e169a15fa8dd841b3810e702677382496dde0fb1623"
+  },
+  {
+    "path": "tests/test_segmentation_data.py",
+    "bytes": 2051,
+    "sha256": "6e303309d82901ae054207003ffc27b93eaf78919c2a8e1fc0b821f793df702a"
+  },
+  {
+    "path": "tests/test_segmentation_expansion.py",
+    "bytes": 5451,
+    "sha256": "7bc7f76b45bf838e9b2d4352e88cd17f50be760cf4ead7e004b8d2a638747305"
+  },
+  {
+    "path": "tests/test_segmentation_prior.py",
+    "bytes": 1664,
+    "sha256": "c515c62cdcf7ab73a14c8b11faa3bcc826992eb3d0923412e57a2ec9d332a07f"
+  },
+  {
+    "path": "tests/test_segmentation_review.py",
+    "bytes": 2181,
+    "sha256": "fd7b9a6b5398c83525f1717f8556166fb3391a1b7b67cc1d3cfb5b9dab821250"
+  },
+  {
+    "path": "tests/test_sunny_augmentation.py",
+    "bytes": 1809,
+    "sha256": "526cd8eb4374cccc5cd9ff776836fee02b15591ec288a3f2f8a0123922f832bc"
+  },
+  {
+    "path": "tests/test_sunny_data.py",
+    "bytes": 1302,
+    "sha256": "4171279b58a177048bdd1380b9caaa49a4f31752126baf682ee974d3b7817c6a"
+  },
+  {
+    "path": "tests/test_sunny_export.py",
+    "bytes": 7479,
+    "sha256": "03905134334e6c9380f8ecf704c849a94bed2141a9f29341cf4caff7021a41ba"
+  },
+  {
+    "path": "tests/test_sunny_inference.py",
+    "bytes": 2356,
+    "sha256": "c0e7cb14154a931b337c4075c2d33110a6640775d2f259d585554cfa277e1f6a"
+  },
+  {
+    "path": "tests/test_sunny_lamps.py",
+    "bytes": 1333,
+    "sha256": "9d421ee6ee4f14879b2c65ef5a0e2292a29310918d551d0365c439bff0eef06e"
+  },
+  {
+    "path": "tests/test_sunny_losses.py",
+    "bytes": 1245,
+    "sha256": "08a1ca6fda26b8812dc171b308714c468401455df0fd46dc178253742225ac97"
+  },
+  {
+    "path": "tests/test_training_scenery_scout.py",
+    "bytes": 1602,
+    "sha256": "863a26fb49f6c9e09ba1466eb4bbb9ec576b0a12f5c121fc5deeb578eb2db9c9"
+  },
+  {
+    "path": "tests/test_unused_scenery_preparation.py",
+    "bytes": 1870,
+    "sha256": "e822110ab192ff2ea090c07353525cbb3bc23c32a6ad78067f1e3b286a35f042"
+  },
+  {
+    "path": "tests/test_unused_training_town.py",
+    "bytes": 2380,
+    "sha256": "362d1efbb9136dd047fc303bd598b271450a7bc55026e07841176317ce37bf80"
+  },
+  {
+    "path": "tests/test_visibility_policy.py",
+    "bytes": 3881,
+    "sha256": "6877c0b0bdd89395e54dfd52807dab5f409d5021b9375621f5c3a400ce93daad"
+  },
+  {
+    "path": "tests/test_wall_bias_diagnostic.py",
+    "bytes": 948,
+    "sha256": "b184ed13052226b59ef70d361435b4636850628ae1eca9d081bf3ec745e6dad9"
+  },
+  {
+    "path": "tests/test_world_evaluation.py",
+    "bytes": 2458,
+    "sha256": "795512348ae74a9cca426b6d5383fd11cb81936fd9b2806e5563cad60ac0cce1"
+  },
+  {
+    "path": "tests/test_world_ignore_supplement.py",
+    "bytes": 1635,
+    "sha256": "fb760f2008a08b4ed726d48ed52675848ad6fc72deb46ae5b034380291b060da"
+  },
+  {
+    "path": "tests/test_world_phase5.py",
+    "bytes": 7910,
+    "sha256": "31086be6602d87a0c12c14957efdb037c67e1063aee24ed718c079f2118a3f46"
+  },
+  {
+    "path": "tests/test_world_schema.py",
+    "bytes": 2707,
+    "sha256": "a61a713c8a26e62310879b3236c2e994ee605b497c6e13345e934cb8ae1f3ed1"
+  },
+  {
+    "path": "tests/test_world_viewer.py",
+    "bytes": 6064,
+    "sha256": "a3bff46ecdfc55a65af601bedf0fd9d8d59fe8184dc261dcc81c5557e27d4485"
+  },
+  {
+    "path": "web/world-viewer/app.js",
+    "bytes": 34281,
+    "sha256": "999e899dabd39cf51b3aead981d57cbbc3a56f295d6253268511ab0afa52aa49"
+  },
+  {
+    "path": "web/world-viewer/data-client.js",
+    "bytes": 3419,
+    "sha256": "ccba3d23974fd768cafd99d0279279d1957daa761b16913468152f9a43f1d1e0"
+  },
+  {
+    "path": "web/world-viewer/dynamics-view.js",
+    "bytes": 3426,
+    "sha256": "92363f91320caaeccf757789a53d2aae4e08ed5e3deba46ae2480da1907d0b14"
+  },
+  {
+    "path": "web/world-viewer/dynamics.js",
+    "bytes": 6776,
+    "sha256": "b6d5fc7359f5c4958ba026fce97856d1f7204fcb9d89248c143f4864ce6256f9"
+  },
+  {
+    "path": "web/world-viewer/index.html",
+    "bytes": 8387,
+    "sha256": "4005e39b5700f1e8877d2c313c5db61595269843a280470b74d5112837f27c00"
+  },
+  {
+    "path": "web/world-viewer/math.js",
+    "bytes": 5683,
+    "sha256": "99c3a5ff0994d69e65b40c66b4dd7b00bb5541a5895477ac6640c7149833c3e5"
+  },
+  {
+    "path": "web/world-viewer/motion-lab.html",
+    "bytes": 2852,
+    "sha256": "6808a5f8634ff5f4d3aacf83afa1ce83c4306c10ecac2877b822b35ba9b22805"
+  },
+  {
+    "path": "web/world-viewer/motion-lab.js",
+    "bytes": 6735,
+    "sha256": "6847593e0ae05bee490b678ef3c52ae93415e43eb746acc0ed34cb8e27537bf0"
+  },
+  {
+    "path": "web/world-viewer/package.json",
+    "bytes": 237,
+    "sha256": "4bd89f2e7f3f346ac27b1ffe7f89ebd0f7807f0a903e49fdcaea41b2bd2f4187"
+  },
+  {
+    "path": "web/world-viewer/styles.css",
+    "bytes": 15127,
+    "sha256": "b9565c63aea882a921aeb300a104ae08531e574616fd6d34ea5d5fa08599fbf4"
+  },
+  {
+    "path": "web/world-viewer/tests/contracts.test.mjs",
+    "bytes": 4802,
+    "sha256": "e473f5d9ce705e977e7bdeac7205ebdfc77b60f25bdb413adc6a4d2914c49e97"
+  },
+  {
+    "path": "web/world-viewer/tests/dynamics.test.mjs",
+    "bytes": 4736,
+    "sha256": "5aa0c39023eab71c6cd4f184e794d408f46bb8ce3430150f140a6c21dc8be957"
+  },
+  {
+    "path": "web/world-viewer/vendor/LICENSE.three.txt",
+    "bytes": 1081,
+    "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+  },
+  {
+    "path": "web/world-viewer/vendor/OrbitControls.js",
+    "bytes": 38703,
+    "sha256": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c"
+  },
+  {
+    "path": "web/world-viewer/vendor/provenance.json",
+    "bytes": 1178,
+    "sha256": "e8f8411d7c383fbeaab04af6e20d5e8494c7a6d56249ad9fe09a8252a577a1df"
+  },
+  {
+    "path": "web/world-viewer/vendor/three.core.js",
+    "bytes": 1403455,
+    "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
+  },
+  {
+    "path": "web/world-viewer/vendor/three.module.js",
+    "bytes": 603113,
+    "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+  }
+]

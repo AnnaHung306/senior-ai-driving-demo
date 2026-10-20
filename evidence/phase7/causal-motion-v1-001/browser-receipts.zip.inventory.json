@@ -1,0 +1,42 @@
+[
+  {
+    "path": "artifacts/reports/phase7-browser-001/checks-before-reload.json",
+    "bytes": 44058,
+    "sha256": "0c3deb4b54cbcb156ee640188343d706d7002822d3669039bbf003f7008d1168"
+  },
+  {
+    "path": "artifacts/reports/phase7-browser-001/checks.json",
+    "bytes": 143530,
+    "sha256": "67d20c63e08e74caf97d4e4d43936aef1b11ffc9f6cc0de3398f6dadbd2edb77"
+  },
+  {
+    "path": "artifacts/reports/phase7-browser-001/console-final.json",
+    "bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "path": "artifacts/reports/phase7-browser-001/frames.json",
+    "bytes": 3886464,
+    "sha256": "bc49db768494b2431b48033df6b36286d3af21829bc87392a12a9b8d05cbf863"
+  },
+  {
+    "path": "artifacts/reports/phase7-browser-001/lab-cut_in.json",
+    "bytes": 142198,
+    "sha256": "51bb4d8a83761d6fdcd2ccae4f28ee3b1b92f298c57e8459adf87c9616fe97b2"
+  },
+  {
+    "path": "artifacts/reports/phase7-browser-001/lab-following.json",
+    "bytes": 144776,
+    "sha256": "4d1565cab8efda532b33d93cfbe4e867ccf0ab39dc393fb863c98d793dd52854"
+  },
+  {
+    "path": "artifacts/reports/phase7-browser-001/lab-sudden_brake.json",
+    "bytes": 145410,
+    "sha256": "7459a18bc0f3f3de45ffc58cd67543972350e239266d56545f2f9d675414595a"
+  },
+  {
+    "path": "artifacts/reports/phase7-browser-001/lab-turning.json",
+    "bytes": 142041,
+    "sha256": "5b401ba98cb6d3b1fe48d439f99630c5b1c59509e9083a9e206c220827405511"
+  }
+]

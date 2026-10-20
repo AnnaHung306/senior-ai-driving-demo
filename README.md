@@ -2,6 +2,8 @@
 
 長期需求見 [PROJECT_SPEC.md](PROJECT_SPEC.md)，當前任務見 [CURRENT_TASK.md](CURRENT_TASK.md)。
 
+**2026-10-20：Phase7動態展示工程研究版已完成。** `./Start-WorldViewer.ps1`預設開啟240組RGB推論的速度／方向、3秒軌跡、暫失與接近風險；另有四種明示非RGB AI的合成診斷。256 Python、40 JS、22 HTTP及真browser全240組／1091物件／889預測核對通過，render median60FPS、CPU套用p9544.4ms。原模型選擇validation速度向量MAE .290m/s、ADE1 .950m、FDE2 1.205m，2秒GT覆蓋61.22%（all-GT miss47.52%），ID switches2與舊版相同。**這是運動學研究展示；正式品質、未見路線、連續即時推論及控制仍未通過／未提供。** 見[Phase7結果與啟動方式](PHASE7.md)及[實測證據](evidence/phase7/causal-motion-v1-001/README.md)。以下保留各階段原交付狀態，速度／預測以本節為準。
+
 **2026-10-20：Phase5工程再驗證＋Phase6互動3D研究版已交付。** 執行 `./Start-WorldViewer.ps1`，再開啟 `http://127.0.0.1:8766/`。含三視角、物件檢視、道路線／局部候選路徑、佔據格／八RGB對照、四序列時間軸及已驗證輸出監看。235項Python、20項JS與真瀏覽器操作通過，32影格／147物件／256RGB來源一致；本機render median60FPS、CPU影格套用p9541.1ms。**模型品質、模擬器連續即時推論、目的地導航及控制仍未通過／未提供**，60FPS畫面不是感知頻率。見[使用與狀態矩陣](PHASE6.md)及[截圖／實測證據](evidence/phase6/world-viewer-v1-001/README.md)。
 
 **2026-10-20：Phase 5 已完成首版訓練與 World Model 串接。** 新增 RGB 3D 方框模型、八鏡頭融合、基本追蹤 ID、粗 semantic occupancy 與 WorldFrame 契約；223 項測試通過。validation 短片的嚴格定位P/R為61.11%／55.93%，完整3D方框Recall@IoU.25僅25.42%，仍有朝向、行人佔據與ID切換問題，**Phase5品質尚未通過**。已保存獨立GT／先驗比較、全部錯例與來源，不追加盲目訓練。見[Phase5規劃](PHASE5.md)及[圖文實測報告](evidence/phase5/rgb-cuboid-world-v1-001/README.md)。

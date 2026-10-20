@@ -1,0 +1,34 @@
+{
+  "status": "passed_real_browser_sources_geometry_playback_and_synthetic_isolation",
+  "real_frames": 240,
+  "objects": 1091,
+  "forecasts": 889,
+  "synthetic_frames": 204,
+  "complete_11_8s_playbacks": 4,
+  "WebGL_loss_and_reload_recovery": true,
+  "eight_RGB_camera_switches": 8,
+  "mobile_horizontal_overflow": false,
+  "final_warning_error_console": [],
+  "CPU_apply_ms": {
+    "measurement": "CPU scene rebuild plus render submission; excludes GPU present",
+    "samples": 487,
+    "p50": 36.09999996423721,
+    "p95": 44.39999997615814
+  },
+  "render_FPS": {
+    "samples": 300,
+    "median": 60,
+    "latest": 59.9980328513778
+  },
+  "renderer_memory": {
+    "geometries": 56,
+    "textures": 0,
+    "max_geometries": 120
+  },
+  "second_cycle_geometry_drift": 0,
+  "bundle_sha256": "d2a92c8cfe389f9c308b0bbfa98248d93f341d9b8a688de43a4ff0c516232db8",
+  "browser_receipt_sha256": "bc49db768494b2431b48033df6b36286d3af21829bc87392a12a9b8d05cbf863",
+  "checks_sha256": "67d20c63e08e74caf97d4e4d43936aef1b11ffc9f6cc0de3398f6dadbd2edb77",
+  "formal_model_quality_passed": false,
+  "limits": "Observed 240 WebGL frames and 204 clearly synthetic SVG frames. CPU apply excludes GPU present; recorded replay, no live CARLA producer."
+}

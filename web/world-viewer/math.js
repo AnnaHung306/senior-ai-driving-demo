@@ -1,3 +1,4 @@
+import {validateDynamics} from './dynamics.js';
 export const CLASS_NAMES = {1:'汽車',2:'行人',3:'自行車',4:'機車',5:'卡車',6:'公車'};
 export const COLORS = {1:0x69a9ed,2:0xf0a0bc,3:0x71d7b5,4:0xefbd76,5:0xb4a0ed,6:0x79d1da};
 export const toScene = ([x,y,z=0]) => [y,z,-x];
@@ -67,5 +68,6 @@ export function validateDisplayFrame(frame) {
     ||(frame.local_path.status==='unavailable'&&frame.local_path.points_ego_m.length)) throw Error('候選路徑錯誤');
   if(!frame.cameras||Object.keys(frame.cameras).length!==8||!Object.values(frame.cameras).every(c=>safe(c.file)&&/^[a-f0-9]{64}$/.test(c.sha256))) throw Error('八鏡頭來源不完整');
   if(!Object.values(frame.timing_ms).every(x=>Number.isFinite(x)&&x>=0)) throw Error('延遲資料錯誤');
+  validateDynamics(frame);
   return true;
 }

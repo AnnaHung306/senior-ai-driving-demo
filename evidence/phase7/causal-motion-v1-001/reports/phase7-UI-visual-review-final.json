@@ -1,0 +1,16 @@
+{
+  "status": "assistant_reviewed_final_UI",
+  "final_desktop_sha256": "a9bfe980d5eded77429f489abb5f572752c12875b1b92c8d5b8dfb340e890dcd",
+  "observations": [
+    "Selected bicycle mint forecast and speed label are readable; other forecasts fade.",
+    "Main screenshot includes source RGB, unknown-space and research limitations, actual current measurements and separate ghost.",
+    "390px main and synthetic diagnostic screenshots inspected; mobile SVG viewBox corrected after small-label finding.",
+    "Synthetic offscreen target explicitly marked outside view; no clamping into a false position.",
+    "Semantic future-data fixture refused with zero objects, then valid fixture recovered in same test tab.",
+    "Actual WEBGL_lose_context produced visible paused error; reload restored first frame."
+  ],
+  "raw_fixture_receipt_limitation": "The earlier in-memory invalid/valid fixture JSON was lost during a browser REPL timeout reset; screenshots and observed tool outputs survive. Final WebGL loss/recovery JSON and 240+204 frame receipts are persisted and independently checked.",
+  "console_final_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "no_GT_scene_geometry": true,
+  "formal_quality_passed": false
+}

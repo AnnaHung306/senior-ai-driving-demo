@@ -1,0 +1,21 @@
+test_RGB_hist_is_normalized_and_uses_current_crops (test_motion_phase7.MotionTests.test_RGB_hist_is_normalized_and_uses_current_crops) ... ok
+test_assignment_gates_empty_and_nan (test_motion_phase7.MotionTests.test_assignment_gates_empty_and_nan) ... ok
+test_assignment_global_optimum_not_greedy (test_motion_phase7.MotionTests.test_assignment_global_optimum_not_greedy) ... ok
+test_assignment_matches_exhaustive_random_rectangles (test_motion_phase7.MotionTests.test_assignment_matches_exhaustive_random_rectangles) ... ok
+test_continuous_contact_catches_fast_crossing_between_samples (test_motion_phase7.MotionTests.test_continuous_contact_catches_fast_crossing_between_samples) ... ok
+test_converged_constant_velocity_and_fixed_ego_forecast (test_motion_phase7.MotionTests.test_converged_constant_velocity_and_fixed_ego_forecast) ... ok
+test_crossing_same_class_with_appearance_and_predicted_velocity (test_motion_phase7.MotionTests.test_crossing_same_class_with_appearance_and_predicted_velocity) ... ok
+test_ego_twist_straight_and_turn (test_motion_phase7.MotionTests.test_ego_twist_straight_and_turn) ... ok
+test_gap_scene_calibration_and_bad_motion_reset (test_motion_phase7.MotionTests.test_gap_scene_calibration_and_bad_motion_reset) ... ok
+test_ground_velocity_subtracts_ego_translation (test_motion_phase7.MotionTests.test_ground_velocity_subtracts_ego_translation) ... ok
+test_ground_velocity_under_ego_rotation_and_translation (test_motion_phase7.MotionTests.test_ground_velocity_under_ego_rotation_and_translation) ... ok
+test_history_and_covariance_are_bounded (test_motion_phase7.MotionTests.test_history_and_covariance_are_bounded) ... ok
+test_prefix_causality_and_input_not_mutated (test_motion_phase7.MotionTests.test_prefix_causality_and_input_not_mutated) ... ok
+test_short_occlusion_retains_ID_not_occupancy_then_expires (test_motion_phase7.MotionTests.test_short_occlusion_retains_ID_not_occupancy_then_expires) ... ok
+test_truth_nan_nonrigid_and_features_rejected (test_motion_phase7.MotionTests.test_truth_nan_nonrigid_and_features_rejected) ... ok
+test_warmup_and_ambiguous_not_confident (test_motion_phase7.MotionTests.test_warmup_and_ambiguous_not_confident) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 1.084s
+
+OK

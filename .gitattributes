@@ -11,3 +11,5 @@ evidence/** -text
 # The package contains an original mixed-indent line; do not rewrite it.
 web/world-viewer/vendor/** -text whitespace=cr-at-eol,-space-before-tab
 evidence/**/*.bin binary
+# These configs were hash-bound before inference, including original CRLF bytes.
+configs/phase7_motion*.json -text

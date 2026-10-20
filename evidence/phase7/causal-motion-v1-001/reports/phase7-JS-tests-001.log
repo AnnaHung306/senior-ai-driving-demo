@@ -1,0 +1,47 @@
+✔ ego axes round trip, right stays right, forward becomes -Z (0.9148ms)
+✔ actual Three box corners agree with ego analytic corners at nontrivial yaw (1.9814ms)
+✔ grid row points backwards, column right, layer up with half cell offset (0.1656ms)
+✔ timestamp playback respects missing intervals and ends without extrapolation (0.9397ms)
+✔ valid units are order independent and empty objects are supported (1.6198ms)
+✔ reject NaN position (0.2225ms)
+✔ reject negative full size (0.1365ms)
+✔ reject degree yaw (0.1198ms)
+✔ reject duplicate IDs (0.1403ms)
+✔ reject GT geometry (0.1993ms)
+✔ reject held track as current (0.1407ms)
+✔ reject unknown filled label (0.1078ms)
+✔ reject grid distortion (0.1025ms)
+✔ reject bad voxel shape (0.1808ms)
+✔ reject fake height (0.1613ms)
+✔ reject invented path (0.1518ms)
+✔ reject unsafe source (0.1376ms)
+✔ reject fake quality pass (0.1428ms)
+✔ reject negative compute time (0.1298ms)
+✔ client verifies SHA bytes, refuses unbound files and poisoned RGB (33.587ms)
+✔ accept causal fixed-current-ego motion and compute visible counts (1.7758ms)
+✔ actual Three forecast buffers use y,z,-x and do not move measured boxes (7.7234ms)
+✔ reject missing source hash (1.4509ms)
+✔ reject future observation used (0.2533ms)
+✔ reject nonfinite speed (0.7303ms)
+✔ reject inconsistent speed (1.0051ms)
+✔ reject negative covariance (0.1591ms)
+✔ reject nonPSD covariance (0.1199ms)
+✔ reject fake calibration (0.1423ms)
+✔ reject future GT (0.1949ms)
+✔ reject forecast yaw coordinate confusion (0.7416ms)
+✔ reject false motion model (0.1452ms)
+✔ reject unordered future time (0.1025ms)
+✔ reject infinite uncertainty (0.0908ms)
+✔ reject unavailable velocity has numbers (0.1088ms)
+✔ reject unknown risk code (4.8302ms)
+✔ reject out of horizon TTC (0.1483ms)
+✔ reject ghost in current measurements (0.3448ms)
+✔ diagnostic projection preserves forward and right and rejects invalid synthetic traces (0.2679ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 39
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 160.5691

@@ -1,0 +1,34 @@
+{
+  "status": "assistant_visually_reviewed_evaluation_only_GT_panels",
+  "reviewed_utc": "2026-10-20T14:12:15.141392+00:00",
+  "catalog_original_status_preserved": "generated_pending_assistant_visual_review",
+  "catalog_sha256": "50733cae67e3684dd901ab37aadbc423c4e85e6ae1ab3ccc2034b7ca909757ca",
+  "panels": 8,
+  "unique_actor_frames": 7,
+  "basis": [
+    "Both complete contact pages actually viewed",
+    "Full case-00 worst and case-05 best additionally viewed"
+  ],
+  "observations": [
+    "Case00 early motorcycle RGB jitter produces a forecast opposite to the captured future; FDE2=7.6159497296m.",
+    "Other scene-worst plots also diverge by several metres; mean accuracy does not establish reliable intent prediction.",
+    "Validation median and best cases show usable short-horizon trajectories; best bike FDE2=0.033m is not representative of all targets.",
+    "Axes are fixed CURRENT ego with y right and x forward; predicted/GT/ego styles and error panels are readable.",
+    "Case07 duplicates case00 because first motorcycle and scene worst are the same source; seven independent actor-frames total.",
+    "GT reference geometry is evaluation-only and not exported into the WorldFrame display."
+  ],
+  "UI_response": "Uncertain forecasts gray, no velocity arrow unless moving, uncertain numerical speed marked 待確認. No model output or metric changed.",
+  "formal_quality_passed": false,
+  "files": {
+    "case-00.png": "0735a023452e3a7a3619ede3a898528ba45209e24351fd138d68fb81772af2d9",
+    "case-01.png": "3058db9aa27f871618fc4a30cd8166d435c6d3f78ea090133f1c7f1468f22ba6",
+    "case-02.png": "28b3001d3881ce64867a6c558dbe7d58e55a1069ab6e7f5c4f0f0a6a3cc9e271",
+    "case-03.png": "9c6a24145ab2126c5684fa76ba40de8832858fde9b6cc125981fb0740c149f4e",
+    "case-04.png": "8d119c1b6154a2486ec80b5587dbefebe7304acc3492584b92ab8fd0a1d9e9c2",
+    "case-05.png": "b3654df02978a4e1ab10aa444db18ab2ff3658f4e0acba46bc0c5a52d8472f00",
+    "case-06.png": "56e38d34696313930fdb0b89ca2e9aaac5dd7b5870b746d1e28029e02a763a2e",
+    "case-07.png": "1da2e5fa5a51440aa3b07eb2aa29a5ac9c4b7eb4be60b719f53773861c14721c",
+    "contact-0.png": "97fd38293abb2ca13d1c599e6f20c3b8ddf284d025922c7301b48d1e22a887e5",
+    "contact-1.png": "cce63557b039ef258cfb9950bae00ac83398818737ef737f8821456eec3518e4"
+  }
+}

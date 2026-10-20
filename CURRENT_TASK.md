@@ -1,3 +1,17 @@
+## 2026-10-20 Phase7動態研究展示完成；正式模型品質仍未過
+
+最新要求：「phase7，這是展示核心，要謹慎製作並驗證，一次完成」。規畫PHASE7.md後完成240組凍結RGB CUDA重播、因果Kalman運動／CV三秒預測、接近風險、互動3D與四種獨立合成診斷；無新訓練／CARLA／控制／dev或lockbox評分。所有本輪推論與CPU jobs已結束，兩測試viewer（8766／8767）也已停止並查無listener。勿重啟歷史jobs。
+
+權威結果：`artifacts/runs/phase7-motion-v1-004`、`phase7-evaluation-v1-004`、`phase7-viewer-bundle-v1-001`，bundle SHA `d2a92c8cfe389f9c308b0bbfa98248d93f341d9b8a688de43a4ff0c516232db8`。v1 ID66、v1.1 ID58都差於原50而未採用；final v1.2沿用RGB Phase5 ID，修003離群重暖計數／age後另存004，未重跑GPU。不可宣稱ID改善，003無evaluation003。沒有修改原cuboid/world_tracking/schema、權重或Phase3/4/5/6證據。
+
+原validation120組：向量速度MAE.2899m/s（259配對）、ADE1.9502m、FDE2 1.2047m（210配對）；2秒GT覆蓋210/343=61.22%，all-GT miss47.52%，69右設限。ID2/245 transitions同baseline，fragment22、IDF1.6385、MOTA.3665。混合train/val風險circle近接recall50%，寬uncertainty誤警很多；不是CARLA碰撞率。探索門檻過，formal品質false，不能用平均遮掉7.616m最差／反向預測。四種情境為16個合成診斷案，不是四段真AI交通事件。
+
+驗證：256Python 0fail/0skip、40JS、22HTTP；全240因果replay／80prefix exact、原ID/cuboid/occupancy不變；實際Three1091物件／1920RGB／889forecast Float32 buffer逐項核對；4段完整timestamp播放，第二輪geometry drift0，CPU套用p9544.4ms、render median60FPS。Phase7含RGB decode計算p50/p95 43.13/52.25ms，不是端到端感知效能。手機390px、八鏡頭、圖層／選取、污染拒絕／恢復與真WebGL中斷／reload均實測；最後console warn/error空。8面板7獨立GT錯例／代表例已實看並存assistant_review，主畫面不輸出GT幾何。
+
+啟動 `./Start-WorldViewer.ps1` → `http://127.0.0.1:8766/`，會用Phase7 bundle；另可`-Bundle`開舊Phase6。完整圖文／收據／failed版本／source與Git bytes證據見 `evidence/phase7/causal-motion-v1-001`。1920RGB、權重、大NPZ僅本機ignored，Git不是完整可攜資料集。新計算使用新輸出目錄，勿覆寫原004。接下來須依使用者要求規畫Phase8，先固定新晴天無近牆完整路線與控制驗收，不自行重啟Wall/depth、盲訓或說閉環完成。
+
+以下為舊歷史，與本節衝突時以本節／PHASE7.md及最新使用者授權為準。
+
 ## 2026-10-20 Phase5／6 聯合工程驗證與互動3D已交付；正式品質仍未過
 
 最新使用者：「繼續驗證並確保phase5都有正確建立，你之前把phase5、6放一起，乾脆這輪一起做完吧」。已先寫PHASE6.md，再完成Phase5獨立raw-target／新CUDA audit、嚴格顯示export、本機Three.js三維介面與pointer更新監看、回歸／HTTP／真browser驗證。**本輪未更新模型權重，沒有CARLA、車輛控制或heldout評分；GPU audit4344、Python測試44482、HTTP、publisher64355與viewer37671均已結束，8766無listener。不要重啟歷史jobs。** nvidia-smi其他兩程序是桌面dwm／BongoCat，不是本輪訓練，不停止。

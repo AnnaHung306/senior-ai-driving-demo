@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="八鏡頭推論的三維世界模型研究介面；檢視道路、物件、候選路徑與未知空間。">
+  <title>World · 多鏡頭三維環境感知</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="importmap">{"imports":{"three":"/vendor/three.module.js"}}</script>
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+<header class="app-header">
+  <a class="brand" href="/" aria-label="World 首頁"><span class="brand-mark">W<span>·</span></span><span>WORLD<small>多鏡頭環境感知</small></span></a>
+  <div class="header-context"><span class="sun-icon">☀</span><span>晴天研究環境</span><span class="divider"></span><span id="sourceLabel">已計算推論回放</span></div>
+  <span class="research-tag">研究模型 · 品質驗證中</span>
+</header>
+<main>
+  <section class="workspace-heading"><div><p class="eyebrow">SPATIAL PERCEPTION</p><h1>看見車輛周圍的世界</h1></div><div class="scene-field"><label for="sceneSelect">場景序列</label><select id="sceneSelect" aria-label="場景序列" disabled></select></div></section>
+  <div class="workspace-grid">
+    <section class="viewer-card" aria-label="三維環境檢視">
+      <div class="viewer-toolbar"><div class="segmented" role="group" aria-label="觀察視角"><button id="followView" class="active" aria-pressed="true">跟車</button><button id="topView" aria-pressed="false">俯視</button><button id="freeView" aria-pressed="false">自由視角</button></div><button id="resetView" class="quiet-button">↺ 重設視角</button></div>
+      <div id="viewport" tabindex="0" aria-label="互動三維場景，使用自由視角後可拖曳旋轉及縮放">
+        <div class="canvas-heading"><span class="live-dot"></span><span id="viewTitle">自車中心 · 跟車視角</span></div>
+        <div id="canvasLabels" aria-hidden="true"></div>
+        <div id="viewportMessage" class="viewport-message" role="status">正在核對推論資料…</div>
+        <div class="compass"><span>前方 ↑</span><small>公尺 · 自車座標</small></div>
+        <div class="viewer-legend"><span><i class="legend-road"></i>已觀測道路</span><span><i class="legend-path"></i>循線候選</span><span><i class="legend-unknown"></i>未知區域留空</span></div>
+        <div id="viewHint" class="view-hint">滾輪縮放 · 點選物件查看預測</div>
+      </div>
+      <div class="layer-toolbar"><label><input id="showBoxes" type="checkbox" checked>三維方框</label><label><input id="showIDs" type="checkbox" checked>追蹤 ID</label><label><input id="showVoxels" type="checkbox">佔據格</label><label><input id="showFree" type="checkbox">自由空間證據</label><label><input id="showRGB" type="checkbox" checked>影像對照</label></div>
+      <div class="timeline"><div class="play-buttons"><button id="prevFrame" aria-label="上一影格" title="上一影格">‹</button><button id="playPause" aria-label="播放" class="play-button">▶</button><button id="nextFrame" aria-label="下一影格" title="下一影格">›</button></div><div class="scrubber"><div class="timeline-label"><span id="timeLabel">0.0 / 0.0 s</span><span id="frameLabel">尚未載入</span></div><input id="frameSlider" type="range" min="0" max="7" value="0" step="1" aria-label="影格時間軸"></div><select id="speedSelect" aria-label="播放速度"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></div>
+      <div class="stream-bar"><span id="dataStatus" role="status">等待來源核對</span><label><input id="watchFeed" type="checkbox">監看新輸出</label><button id="retryData" class="quiet-button">重新載入</button></div>
+    </section>
+    <aside class="inspector">
+      <section class="summary-card"><div class="section-heading"><h2>當前感知</h2><span class="tiny-label">RGB 推論</span></div><div class="summary-metrics"><div><strong id="objectCount">—</strong><span>量測物件</span></div><div><strong id="unknownCount">—</strong><span>未知空間</span></div><div><strong id="dataFrequency">—</strong><span>來源更新 Hz</span></div></div><p class="model-note">朝向及分數尚未校準；空白區域不代表可通行。</p></section>
+      <section class="object-card"><div class="section-heading"><h2>周圍物件</h2><span id="selectedHint" class="tiny-label">點選查看</span></div><div id="objectList" class="object-list"><p class="empty-message">尚無有效影格</p></div><div id="objectDetails" class="object-details" hidden></div></section>
+      <section id="rgbCard" class="rgb-card"><div class="section-heading"><h2>感測影像對照</h2><select id="cameraSelect" aria-label="對照鏡頭"><option value="front">前方</option><option value="front_right">右前</option><option value="right">右側</option><option value="rear_right">右後</option><option value="rear">後方</option><option value="rear_left">左後</option><option value="left">左側</option><option value="front_left">左前</option></select></div><img id="rgbImage" alt="當前影格的原始 RGB 感測影像"><p id="rgbCaption">八鏡頭原始輸入 · 來源已綁定</p></section>
+    </aside>
+  </div>
+  <section class="footnotes"><div><span class="status-square"></span><span id="pathSummary">道路線候選 · 正在載入</span></div><p>三維資產為示意外觀，依預測位置、尺寸及朝向擺放。路緣僅為道路／人行道語意界面；未量測高度。</p></section>
+  <details id="diagnostics" class="diagnostics"><summary>效能、來源與驗證限制 <span id="fpsShort">— FPS</span></summary><div class="diagnostic-grid"><div><span>畫面渲染</span><strong id="renderFPS">—</strong></div><div><span>影格套用 p95</span><strong id="applyLatency">—</strong></div><div><span>感知階段計算</span><strong id="perceptionLatency">—</strong></div><div><span>最近輸出年齡</span><strong id="arrivalLatency">回放模式</strong></div></div><p id="qualitySummary"></p><p>渲染 FPS 與感知更新率分開計算；套用時間只量 CPU 場景建立及繪圖提交，不含 GPU 顯示完成。輸出年齡由最近發布指標起算，並非推論延遲。來源為已知短序列推論，並非模擬器即時閉環；未提供目的地路由、速度預測或控制。</p><label for="diagnosticReport">可核對診斷紀錄</label><textarea id="diagnosticReport" readonly aria-label="診斷紀錄"></textarea></details>
+</main>
+<footer class="diagnostics"><details><summary>繪圖故障診斷</summary><p id="graphicsTestStatus">可測試瀏覽器繪圖中斷後是否停止更新；執行後需按「重新載入」恢復。</p><button id="testGraphicsLoss" class="quiet-button">測試 WebGL 中斷</button></details></footer>
+<noscript>此三維介面需要 JavaScript 與 WebGL2；請在本機服務啟動後以支援的瀏覽器開啟。</noscript>
+</body>
+</html>

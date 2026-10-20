@@ -7,3 +7,7 @@
 # Receipts bind exact captured bytes, including Windows newlines. Never filter
 # archived sources/reports on add or checkout, or their recorded SHA256 changes.
 evidence/** -text
+# Keep licensed upstream vendor bytes identical to the verified npm package.
+# The package contains an original mixed-indent line; do not rewrite it.
+web/world-viewer/vendor/** -text whitespace=cr-at-eol,-space-before-tab
+evidence/**/*.bin binary

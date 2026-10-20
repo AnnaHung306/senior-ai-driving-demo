@@ -1,0 +1,28 @@
+✔ ego axes round trip, right stays right, forward becomes -Z (0.8515ms)
+✔ actual Three box corners agree with ego analytic corners at nontrivial yaw (2.4748ms)
+✔ grid row points backwards, column right, layer up with half cell offset (0.1541ms)
+✔ timestamp playback respects missing intervals and ends without extrapolation (0.7163ms)
+✔ valid units are order independent and empty objects are supported (0.6635ms)
+✔ reject NaN position (0.1906ms)
+✔ reject negative full size (0.155ms)
+✔ reject degree yaw (0.1036ms)
+✔ reject duplicate IDs (0.6352ms)
+✔ reject GT geometry (0.6073ms)
+✔ reject held track as current (0.4059ms)
+✔ reject unknown filled label (0.2868ms)
+✔ reject grid distortion (0.2503ms)
+✔ reject bad voxel shape (0.325ms)
+✔ reject fake height (0.3364ms)
+✔ reject invented path (0.3761ms)
+✔ reject unsafe source (0.304ms)
+✔ reject fake quality pass (0.1811ms)
+✔ reject negative compute time (0.2297ms)
+✔ client verifies SHA bytes, refuses unbound files and poisoned RGB (42.5868ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 212.667

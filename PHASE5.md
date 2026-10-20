@@ -1,5 +1,7 @@
 # Phase 5：RGB 三維物件與 World Model
 
+**2026-10-20補充：已依授權與Phase6一併完成工程再驗證。** 891原始裁切／GT targets與232筆新CUDA reload exact，沒有更新權重。32份WorldFrame已接本機互動3D，147物件的Python／Three.js／真browser座標一致，235項Python與20項JS測試通過。詳見[聯合結果](PHASE6.md)與[證據](evidence/phase6/world-viewer-v1-001/README.md)。原模型、GT評分與舊證據不改；既有品質未通過仍成立。
+
 2026-10-20 使用者授權「很好，繼續phase5」。Phase4 的幾何 BEV 原型可作依賴，但其完整路線、延遲及物件可靠度尚未驗收；開始 Phase5 不把那些限制改成通過。沿用晴天、平坦、無近牆循線範圍，不重訓 Wall、不採 depth auxiliary，不開 development／lockbox，不啟動 CARLA／控制。
 
 ## 第一個實作里程碑

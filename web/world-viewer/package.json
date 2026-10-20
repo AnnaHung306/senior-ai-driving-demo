@@ -1,0 +1,7 @@
+{
+  "name": "senior-ai-world-viewer",
+  "private": true,
+  "type": "module",
+  "scripts": {"test": "node --test tests/*.test.mjs"},
+  "description": "Local source-bound WorldFrame viewer; pinned Three.js is vendored with its license."
+}

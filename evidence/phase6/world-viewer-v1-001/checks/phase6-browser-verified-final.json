@@ -1,0 +1,36 @@
+{
+  "status": "passed_actual_browser_UI_and_geometry",
+  "frames": 32,
+  "objects": 147,
+  "checks": 30,
+  "receipt_sha256": "977e1e0d853a2aacb26a100cf72f61c5b7dc865029511b9aff247b82e607de20",
+  "bundle_sha256": "84444cf76c5e984154801ebabac43fd1050b89401d2ba34c7fa6580bd219e672",
+  "performance": {
+    "frame_apply_ms": {
+      "measurement": "CPU scene rebuild plus render submission; excludes GPU present",
+      "samples": 70,
+      "p50": 32.19999998807907,
+      "p95": 41.10000002384186
+    },
+    "verified_fetch_ms": {
+      "p50": 0.9000000357627869,
+      "p95": 16.80000001192093
+    },
+    "render_fps": {
+      "samples": 161,
+      "median": 60,
+      "latest": 60.00983767830792
+    },
+    "renderer_memory": {
+      "geometries": 42,
+      "textures": 0,
+      "max_geometries": 81
+    },
+    "total_applied_frames": 70,
+    "stream_applied": 2,
+    "feed_age_ms": 28248.304999999997
+  },
+  "console_logs": [],
+  "formal_model_quality_passed": false,
+  "limits": "Actual local recorded prediction replay/monitored pointer only. CPU apply excludes GPU present. Short sequences, no CARLA live inference or destination navigation."
+}

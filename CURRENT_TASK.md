@@ -1,3 +1,21 @@
+## 2026-10-20 Phase5／6 聯合工程驗證與互動3D已交付；正式品質仍未過
+
+最新使用者：「繼續驗證並確保phase5都有正確建立，你之前把phase5、6放一起，乾脆這輪一起做完吧」。已先寫PHASE6.md，再完成Phase5獨立raw-target／新CUDA audit、嚴格顯示export、本機Three.js三維介面與pointer更新監看、回歸／HTTP／真browser驗證。**本輪未更新模型權重，沒有CARLA、車輛控制或heldout評分；GPU audit4344、Python測試44482、HTTP、publisher64355與viewer37671均已結束，8766無listener。不要重啟歷史jobs。** nvidia-smi其他兩程序是桌面dwm／BongoCat，不是本輪訓練，不停止。
+
+**工程研究版完成，不宣稱原Phase5／6所有正式需求通過。** Phase5 validation定位P61.11/R55.93、3D R@IoU.25 25.42仍不足；朝向、行人occupancy、free-space與長程ID問題保留。新無近牆完整路線、CARLA連續即時推論、新key持續加入、路口拓樸、速度／運動狀態、目的地路由及閉環尚未驗收／未提供。晴天、停止Wall/depth、dev/lockbox不開保持。
+
+獨立audit：artifacts/runs/phase56-runtime-audit-001/report.json，891裁切逐byte對原RGB exact、891GT targets用原vertices／capture transform獨立核對，最大中心／yaw誤差2.03e-13／2.89e-13，232真CUDA輸出exact。正確模型參數是**94,424**，舊歷史94224為筆誤。四種凍結權重干預未加訓：RGB原始中心.93065m、yaw72.05°、IoU3D.23132；zeroRGB2.24624m／109.62°／.02790；同類RGB shuffle.92716m／77.74°／.20853；geometry shuffle1.10933m／74.12°／.18034。只證明輸入依賴，不能宣稱因果視覺定位或泛化。
+
+權威顯示bundle **artifacts/runs/phase6-viewer-bundle-002**（初001保留）：32影格／4場景／147物件／256RGB，320檔SHA256綁定；bundle SHA84444cf76c5e984154801ebabac43fd1050b89401d2ba34c7fa6580bd219e672。adapter只白名單輸出推論；原32份objects／occupancy、Phase4道路線／語意界面／候選path全部逐項核對。Python角點→真正Three.BoxGeometry與真browser32份transform一致。ground0.5m、線0.2m，unknown留空，路緣未測高度；六類低面數示意mesh依預測LWH/yaw擺放，非精細重建。
+
+新入口 `./Start-WorldViewer.ps1` → `http://127.0.0.1:8766/`，read-only loopback；本機88.6MB bundle含RGB留ignored，Git證據只封存顯示JSON/bin、manifest、來源／報告／截圖，不含256原RGB或權重。Three0.180.0官方npm integrity與各vendor SHA／MIT保留。三視角、drag／wheel／reset、canvas raycast／列表、四場景逐幀和.5×播放、1×／2×、seek、八RGB、layers、390px無水平overflow、真WEBGL_lose_context／reload皆實測。監看只接受**本bundle既有推論key**，GT欄位／倒序／來源不符拒絕；不是模擬器live producer。80次正常主機原子發布成功。已修正有界Windows替換重試、監看錯誤後同key恢復、記憶體釋放／512筆有界診斷歷史；正常服務不改防火牆。
+
+235 Python 0fail／0skip，15.329s；20 JS；22 HTTP；30 browser操作收據＋32DOM診斷。70次CPU套用p50 32.2/p95 41.1ms（不含GPU present）、161段render median60FPS，geometry峰81末42；source錄製5Hz與上游p50 1213.68ms分開，不能把渲染稱即時感知。第一輪系統TEMP清理PermissionError保留，改測試子程序TEMP到repo後完整通過，未改全域環境或skip。第一次sandbox localhost不通改同一正常主機loopback驗證；無安全設定變更。
+
+完整新證據 **evidence/phase6/world-viewer-v1-001**、規劃／矩陣PHASE6.md、README／ROADMAP／PHASE5已同步。舊Phase3/4/5證據與凍結模型sources不改。後續先依使用者新要求選擇Phase7速度／追蹤，或預先固定新晴天無近牆完整路線，再進Phase8/9；不可自行重啟Wall、depth、盲訓或宣稱閉環完成。
+
+以下為舊歷史，與本節衝突時以本節及最新使用者授權為準。
+
 ## 2026-10-20 Phase 5 首版工程基準已完成；品質未通過
 
 最新使用者：「很好，繼續phase5」。已先寫 PHASE5.md，再新增從零訓練RGB crop 3D head、八鏡頭cuboid融合、基本因果ID、0.5m三維semantic occupancy、WorldFrame契約及真正推論圖。**訓練20945、兩次GPU replay97562／9188、GT評估74345／46143、回歸25531與CPU核對都已退出，沒有CARLA／控制／watcher／automation。不要重啟舊jobs。** 本次只固定一次12epochs，不追加調參；Phase3收尾／不採depth／不補Wall／不開dev或lockbox持續有效。

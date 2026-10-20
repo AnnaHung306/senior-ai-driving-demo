@@ -1,0 +1,10 @@
+{
+  "status": "resolved_for_normal_host_local_workflow",
+  "events": [
+    "First default sandbox Python regression could not clean system TEMP; rerun used only process-local TEMP/TMP under repo: 235 tests, no skips.",
+    "Sandbox loopback could not reach test service (WinError10013/timeout). Normal-host loopback was verified; no firewall or security changes.",
+    "Two early sandbox pointer heartbeats saw PermissionError replacing latest.json. Added bounded two-second atomic replace retry and unique pending file; mocked transient lock regression passed and normal-host publisher completed 80 writes, exit0. Exact cause of early mixed sandbox/normal-host permissions is not asserted.",
+    "Browser found recovery with same feed key could leave an error overlay; valid reapply now clears it. Diagnostics histories capped at512; renderer resources disposed each frame.",
+    "Viewer service and bounded publishers stopped at handoff. Port8766 has no listener. Desktop GPU entries dwm/BongoCat are unrelated and were left running."
+  ]
+}

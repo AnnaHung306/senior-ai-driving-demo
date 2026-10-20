@@ -1,0 +1,1 @@
+{"schema_version": 1, "scope": "RGB+rig calibration only; selection diagnostics are external and not model inputs", "inventory_sha256": "cda00466465255bb8136c72b0183d90f548aa57982efeff7b5eb8ba99aa3e283", "sequences": [{"scene_id": "town01-00", "manifests": ["inputs/frames/town01-00/00166989.json"]}]}

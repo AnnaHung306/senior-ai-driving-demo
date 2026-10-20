@@ -1,0 +1,1475 @@
+{
+  "status": "exact_raw_copies",
+  "files": [
+    {
+      "archive": "README.md",
+      "source": "artifacts/reports/phase4-pilot-report-001.md",
+      "sha256": "aed980e84736430847cc8983ced69b7ed1021d41122af62f39f98b5203d86946",
+      "bytes": 10665
+    },
+    {
+      "archive": "run/config.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/config.json",
+      "sha256": "6e95ece0160b7a389231c200d4ef603f1b88aaafc22465260a4d61fd84af0ae2",
+      "bytes": 1454
+    },
+    {
+      "archive": "run/contract.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/contract.json",
+      "sha256": "bb66b420c8ed632a0996d109e08695b0ffab6a5c33c92aa449afe8f066bbc7f6",
+      "bytes": 5060
+    },
+    {
+      "archive": "run/progress.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/progress.json",
+      "sha256": "a2fab656c2c7fd98f6f86080741bccff6d7689283f1227b918f88efbb3d3b590",
+      "bytes": 282
+    },
+    {
+      "archive": "run/state.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/state.json",
+      "sha256": "809b39042c4380aada5a55e84de3558453f19d714ed9adf629aedf8565cfe071",
+      "bytes": 8533
+    },
+    {
+      "archive": "run/town01-00/166989/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/166989/frame.json",
+      "sha256": "b93d73dfc8f57a2413637f6292e354605e8cefd5ac1f8411e3a2b9de0ffe480e",
+      "bytes": 12053
+    },
+    {
+      "archive": "run/town01-00/166989/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/166989/detections.json",
+      "sha256": "065eb003973e0f008e8f94411d385027708fb1c182eac2f1be8e8807eb0b8922",
+      "bytes": 6374
+    },
+    {
+      "archive": "run/town01-00/166989/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/166989/panel.png",
+      "sha256": "354374f6e5f509ace384a18eacddf737f2a5757ac2f06e145ec69c52f0c8f5dd",
+      "bytes": 678571
+    },
+    {
+      "archive": "run/town01-00/166993/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/166993/frame.json",
+      "sha256": "cd7afc4e6dae121ed7503132c0c0d4f04c330749acc6829777f2d341e58008ae",
+      "bytes": 12886
+    },
+    {
+      "archive": "run/town01-00/166993/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/166993/detections.json",
+      "sha256": "e0cc259e7ea7fc3712bdaca316cba313c0239797d8e84c9ce28b49e22fce9ac9",
+      "bytes": 7445
+    },
+    {
+      "archive": "run/town01-00/166993/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/166993/panel.png",
+      "sha256": "58c700e1caa3853c0de431a66fce91572a2adbdcd1d5820eec79273c36c35a66",
+      "bytes": 685402
+    },
+    {
+      "archive": "run/town01-00/166997/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/166997/frame.json",
+      "sha256": "ca19249b41c987af90992cd7863fade3469f115518253019efdd8474b0e7e80c",
+      "bytes": 11828
+    },
+    {
+      "archive": "run/town01-00/166997/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/166997/detections.json",
+      "sha256": "58496ae56ae99562d72c6f2c3ea560e625ccf2c731aaee8d3307940f723497d9",
+      "bytes": 12401
+    },
+    {
+      "archive": "run/town01-00/166997/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/166997/panel.png",
+      "sha256": "2693b7305dfcbad16910c5d2e35a34a3eeb30a3e75459b13d18a76595394638a",
+      "bytes": 685579
+    },
+    {
+      "archive": "run/town01-00/167001/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/167001/frame.json",
+      "sha256": "8b6cbdf4b65830eb1661c2440ada7eca75dc15c2ad1ce3ad1c7b65d5fbf688f5",
+      "bytes": 11399
+    },
+    {
+      "archive": "run/town01-00/167001/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/167001/detections.json",
+      "sha256": "48d754e35c86de74af8f3f6f0045e52b6e8e6aa4ced27ac541dfc11108e6105a",
+      "bytes": 6641
+    },
+    {
+      "archive": "run/town01-00/167001/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/167001/panel.png",
+      "sha256": "69666ad0e5e578e077b9de267bdc14e3e591fa88809536a62b6f43545ba9040d",
+      "bytes": 684355
+    },
+    {
+      "archive": "run/town01-00/167005/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/167005/frame.json",
+      "sha256": "e097a9d15ab24201a6f8e1daa6333261c6c975c133dc17a6555ab0836a236e34",
+      "bytes": 10497
+    },
+    {
+      "archive": "run/town01-00/167005/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/167005/detections.json",
+      "sha256": "3a62c39d7308b15b10fd6517540675d9fcf249717a16f0033e3857f067c6aa24",
+      "bytes": 7961
+    },
+    {
+      "archive": "run/town01-00/167005/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/167005/panel.png",
+      "sha256": "e4d61e5a549b64f2dbfcf6d1d9aa04a2a624a050cc32eb971c807ff68419d84a",
+      "bytes": 676401
+    },
+    {
+      "archive": "run/town01-00/167009/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/167009/frame.json",
+      "sha256": "5d22bc4fab2ae2fb40c282f258eb9c989460fce608b86994aca75c5a8b53e894",
+      "bytes": 11192
+    },
+    {
+      "archive": "run/town01-00/167009/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/167009/detections.json",
+      "sha256": "07bb55a5455c3f80b15192aed4f4459d52b042e6c85c7c0550ac37e9a538f862",
+      "bytes": 7133
+    },
+    {
+      "archive": "run/town01-00/167009/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/167009/panel.png",
+      "sha256": "afcf14308f2a9962862d9649f9ad65c1a10c223afba413c8a34515dfac0fa074",
+      "bytes": 680176
+    },
+    {
+      "archive": "run/town01-00/167013/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/167013/frame.json",
+      "sha256": "437d7fea7a24c115b08934163e5caea4c39b285a17389e48628b8795d6e8fb8d",
+      "bytes": 11648
+    },
+    {
+      "archive": "run/town01-00/167013/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/167013/detections.json",
+      "sha256": "fd4c2feeeea35b12c417df70f625fdfe3023808c7b457de089f596a8aef15c06",
+      "bytes": 6628
+    },
+    {
+      "archive": "run/town01-00/167013/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/167013/panel.png",
+      "sha256": "eab6ca24cdd3908319f6b93052b0aa98db595c467af5ce39abf83ea0a9566c3e",
+      "bytes": 688322
+    },
+    {
+      "archive": "run/town01-00/167017/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/167017/frame.json",
+      "sha256": "194f446ae85754962fdd433885201015bc4f431d24530c4dea9b431bd5ffaf53",
+      "bytes": 10912
+    },
+    {
+      "archive": "run/town01-00/167017/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/167017/detections.json",
+      "sha256": "58d988756b874060e77aeb108a6be1d3c3895430036200a531262e1db59cb38e",
+      "bytes": 6655
+    },
+    {
+      "archive": "run/town01-00/167017/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-00/167017/panel.png",
+      "sha256": "df25961ccb53a4d69b121dbee0d990701cea19771d7fe75c8eeb6be8aa5a486f",
+      "bytes": 685128
+    },
+    {
+      "archive": "run/town01-01/168344/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168344/frame.json",
+      "sha256": "84ba582018827639786cba7719289871c0808fefdc37c33272a1b611962a22df",
+      "bytes": 10744
+    },
+    {
+      "archive": "run/town01-01/168344/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168344/detections.json",
+      "sha256": "f63d841c2c7792dd8c22fd91e60c74b63bd5760fce40c295c18be51a99aab501",
+      "bytes": 10718
+    },
+    {
+      "archive": "run/town01-01/168344/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168344/panel.png",
+      "sha256": "93e99c3b3d03a514ce01302c3afbd65315a1cfc8c55aa244ef83eb436f9c4e10",
+      "bytes": 664774
+    },
+    {
+      "archive": "run/town01-01/168348/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168348/frame.json",
+      "sha256": "d1234c003a941900358c7354b66b2e8fa3441a91123e939a2f66bb3b837d9b24",
+      "bytes": 11783
+    },
+    {
+      "archive": "run/town01-01/168348/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168348/detections.json",
+      "sha256": "dfe9147b84fea998c432bdbd0b4eb53048ecd5f09cb2740f551413962345a62b",
+      "bytes": 8189
+    },
+    {
+      "archive": "run/town01-01/168348/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168348/panel.png",
+      "sha256": "d3247f5c4a05111bb064e6ef6a8520083ea2f094541562ff7b02a9a6923c288d",
+      "bytes": 667072
+    },
+    {
+      "archive": "run/town01-01/168352/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168352/frame.json",
+      "sha256": "40f4f29dce98248e681b57d01d01dbc1194424939545bccad28d30a45a8292a9",
+      "bytes": 10737
+    },
+    {
+      "archive": "run/town01-01/168352/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168352/detections.json",
+      "sha256": "2edb41ccdf00446654157245797c534b64c6815be645fea6e125db33b6999e26",
+      "bytes": 7657
+    },
+    {
+      "archive": "run/town01-01/168352/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168352/panel.png",
+      "sha256": "df3d232b9d954fd7b2243f1d7956c5c3e251705004289c1cb54f5722d816f50a",
+      "bytes": 667570
+    },
+    {
+      "archive": "run/town01-01/168356/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168356/frame.json",
+      "sha256": "02d939553783b36b5681ccd74f8e2f519eb29f501f3b45b462310abe8f0eade0",
+      "bytes": 10950
+    },
+    {
+      "archive": "run/town01-01/168356/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168356/detections.json",
+      "sha256": "6c04898e2ec6c0f76a91d4244752d7247531dada4b54456b8ee7f199a14ecfc7",
+      "bytes": 7158
+    },
+    {
+      "archive": "run/town01-01/168356/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168356/panel.png",
+      "sha256": "f2c1cc3640ce7099853971a73882aaf6927253bb921bf280bb86a8c01c62b602",
+      "bytes": 672042
+    },
+    {
+      "archive": "run/town01-01/168360/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168360/frame.json",
+      "sha256": "623db68d866c5dcedf327d0408ebaadc67cb9c85c2a0ab6d03f3a9169bf5ce03",
+      "bytes": 11387
+    },
+    {
+      "archive": "run/town01-01/168360/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168360/detections.json",
+      "sha256": "187c90f1cc18c76fc7dc771df65db0476a60489666cdfd4e0ecda4580dd3f9bf",
+      "bytes": 9415
+    },
+    {
+      "archive": "run/town01-01/168360/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168360/panel.png",
+      "sha256": "23dd470df249faf565f4bb78561e8c51ad019bbb2ce4e75fc9997424ae645210",
+      "bytes": 667738
+    },
+    {
+      "archive": "run/town01-01/168364/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168364/frame.json",
+      "sha256": "e8989f3b3d9dc611c774c8278b74addba653099e1899f06a5e12cf25bc038046",
+      "bytes": 11267
+    },
+    {
+      "archive": "run/town01-01/168364/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168364/detections.json",
+      "sha256": "53d6bac23ca6bebfe698847d0a3973230af5a5fbeab788c55c43875200505154",
+      "bytes": 10391
+    },
+    {
+      "archive": "run/town01-01/168364/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168364/panel.png",
+      "sha256": "2e1c8fdf111819be4bf6f4cfc86628229e23058cecde9f598d25ab08753d3005",
+      "bytes": 668003
+    },
+    {
+      "archive": "run/town01-01/168368/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168368/frame.json",
+      "sha256": "147ab0f89e6a406d5e04a1895387a83d4eed4def6c9a883db08ade38a2f51214",
+      "bytes": 10705
+    },
+    {
+      "archive": "run/town01-01/168368/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168368/detections.json",
+      "sha256": "36180bb1a31a4e13b43e93555053cefce8271ab85db2035a22ae59d13c426c48",
+      "bytes": 7413
+    },
+    {
+      "archive": "run/town01-01/168368/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168368/panel.png",
+      "sha256": "5460cb8782bb6b3c08104cf347c6089ba191fc28ed8aaf8e785ad874e198c295",
+      "bytes": 674477
+    },
+    {
+      "archive": "run/town01-01/168372/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168372/frame.json",
+      "sha256": "b829c6989318317198b4b4e342a90cd5200d423f9130589af38dbaae84201e81",
+      "bytes": 10904
+    },
+    {
+      "archive": "run/town01-01/168372/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168372/detections.json",
+      "sha256": "ed52945d4a7103e0c3a4d4ac6a456ee1a5ba01d2e58a240a36a806ab99875cbe",
+      "bytes": 8629
+    },
+    {
+      "archive": "run/town01-01/168372/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town01-01/168372/panel.png",
+      "sha256": "298660fb813f1e95676a9cac29d059a2952c53dbbb7b97c7a8e2e2bba97bc349",
+      "bytes": 679128
+    },
+    {
+      "archive": "run/town04-00/246278/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246278/frame.json",
+      "sha256": "d80ee4c1575b9bcb253465d425745a591749334194d5b50a0df1d1ddbec6368f",
+      "bytes": 8849
+    },
+    {
+      "archive": "run/town04-00/246278/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246278/detections.json",
+      "sha256": "552096c0caa550cd1ddd5ef14d2572e9317b921b180f98b0db1478e9a5a7dc50",
+      "bytes": 7758
+    },
+    {
+      "archive": "run/town04-00/246278/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246278/panel.png",
+      "sha256": "8182194b2b1deb356992fbf8fa4d88b5e3e0a8aee39b0ddee8c33484162dfc99",
+      "bytes": 721420
+    },
+    {
+      "archive": "run/town04-00/246282/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246282/frame.json",
+      "sha256": "3426417db325237e1e3a416c8920bac59306b11ee56a1324ce0b944274058abf",
+      "bytes": 9321
+    },
+    {
+      "archive": "run/town04-00/246282/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246282/detections.json",
+      "sha256": "a3abd9362f3d1f7e281aa9cf5eb569d32852b76bf73edf8f802db38a110cf873",
+      "bytes": 7770
+    },
+    {
+      "archive": "run/town04-00/246282/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246282/panel.png",
+      "sha256": "b57a7ad57504bff215e1f03b33d7fad18f8db53a3c58e5582434bacae1d03e8b",
+      "bytes": 723477
+    },
+    {
+      "archive": "run/town04-00/246286/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246286/frame.json",
+      "sha256": "8eb7959c7bd0b77b91fc06e18065f1aecca8f5e403f0677f5720b300234036d3",
+      "bytes": 9554
+    },
+    {
+      "archive": "run/town04-00/246286/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246286/detections.json",
+      "sha256": "2dcadac1c19f34857f9798449e23d5f76dc0aad207ec492547a7e1288b6db2d5",
+      "bytes": 8541
+    },
+    {
+      "archive": "run/town04-00/246286/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246286/panel.png",
+      "sha256": "c0263ae1c089a179750dcbce77ac0bc105125798113060d2d076b97c7fa2fc70",
+      "bytes": 721895
+    },
+    {
+      "archive": "run/town04-00/246290/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246290/frame.json",
+      "sha256": "a1a6e848ce5f046b2116dce8552c1c10407cda3445afd5bd2edaf99a99d93697",
+      "bytes": 9269
+    },
+    {
+      "archive": "run/town04-00/246290/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246290/detections.json",
+      "sha256": "044901123770338a919eeab7ccd62d1a7284458ef9031ed8ab1b26efcae4060d",
+      "bytes": 8479
+    },
+    {
+      "archive": "run/town04-00/246290/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246290/panel.png",
+      "sha256": "bfa3d4746de9faff77b7c6ba8a89661c18e8f885826f2ba5a7c3414f597fdf66",
+      "bytes": 717864
+    },
+    {
+      "archive": "run/town04-00/246294/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246294/frame.json",
+      "sha256": "2f497f0ddc6be05dd07635a87f84eb6380d11e45c0bf538ebd8121c73f6bc240",
+      "bytes": 9055
+    },
+    {
+      "archive": "run/town04-00/246294/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246294/detections.json",
+      "sha256": "72927d55354d5f295a41ebaf3b580d003702ad7396e4b9f4d8bf09ce46ed1e3f",
+      "bytes": 9735
+    },
+    {
+      "archive": "run/town04-00/246294/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246294/panel.png",
+      "sha256": "28a5c63e0544b7ac6846bcfec174b5784f4790db825aed557f192765564a6893",
+      "bytes": 727696
+    },
+    {
+      "archive": "run/town04-00/246298/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246298/frame.json",
+      "sha256": "6c51e02ca5afb6b477be02c6080b373d47f2643b5b25abb7725dfaa03ab63e4c",
+      "bytes": 10206
+    },
+    {
+      "archive": "run/town04-00/246298/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246298/detections.json",
+      "sha256": "1727998ee81341b279ef01aa6cac037eeff544e5e1691347fa6ce908b0e436a6",
+      "bytes": 8748
+    },
+    {
+      "archive": "run/town04-00/246298/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246298/panel.png",
+      "sha256": "7b0ae2098616d1faa4fb2f3a645c3e6391cfa6396df0465d976908051c5aa9e9",
+      "bytes": 729972
+    },
+    {
+      "archive": "run/town04-00/246302/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246302/frame.json",
+      "sha256": "a3eeca898b23020cc2b7a5328d14ac8f29ae92f0e40ef3011fff0d325ae85de6",
+      "bytes": 9521
+    },
+    {
+      "archive": "run/town04-00/246302/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246302/detections.json",
+      "sha256": "820d45636ef9873d00b0a62342ceaab408d57936d5bfe3b51a70ddd324d116c3",
+      "bytes": 9479
+    },
+    {
+      "archive": "run/town04-00/246302/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246302/panel.png",
+      "sha256": "99489d72902227aa43b481b2164e4c4c04fdf2deb18feb1d139e8d2ca8f4f668",
+      "bytes": 722357
+    },
+    {
+      "archive": "run/town04-00/246306/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246306/frame.json",
+      "sha256": "d206733c137ee7202aa6227296ff471acc32ee53e82f2d222a913f09fb1f3eca",
+      "bytes": 9879
+    },
+    {
+      "archive": "run/town04-00/246306/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246306/detections.json",
+      "sha256": "5c1c333d02a262e37c33479acd2d9d0258a9b7512dbf6d5b2a0ea19e63fbf687",
+      "bytes": 10190
+    },
+    {
+      "archive": "run/town04-00/246306/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-00/246306/panel.png",
+      "sha256": "1326883f2a0fc4cac8b205c8b23082442a888b9f0b2655110921fcb374ec59cc",
+      "bytes": 716667
+    },
+    {
+      "archive": "run/town04-01/246933/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246933/frame.json",
+      "sha256": "761036f9a82bdae2d3dbcabd9f7f7f4ebcb37083c10fbf8743fee9dd15ba18cb",
+      "bytes": 9699
+    },
+    {
+      "archive": "run/town04-01/246933/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246933/detections.json",
+      "sha256": "21960cd3ba6f9e40433f574711058c96ad79f1489a860ff0710cdb110bb64e4e",
+      "bytes": 10276
+    },
+    {
+      "archive": "run/town04-01/246933/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246933/panel.png",
+      "sha256": "6c1d852a173a30f2c39d4ecbbc7b6b054dea99459f4d2572ec988c859946e45c",
+      "bytes": 738566
+    },
+    {
+      "archive": "run/town04-01/246937/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246937/frame.json",
+      "sha256": "a87030a8719e45d25e3bc71d4532873858d6739b1660b05e7f931a5b6ab395ce",
+      "bytes": 10152
+    },
+    {
+      "archive": "run/town04-01/246937/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246937/detections.json",
+      "sha256": "db1f6f3f78aff7d2cf9f9698fb4a1554e30f589918c8cc9ecc1862bf311fc416",
+      "bytes": 14283
+    },
+    {
+      "archive": "run/town04-01/246937/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246937/panel.png",
+      "sha256": "3137ebfdee85168e33769b6b812599bfad3e399a3ef04d3b906862899b0320b8",
+      "bytes": 737506
+    },
+    {
+      "archive": "run/town04-01/246941/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246941/frame.json",
+      "sha256": "b52c0b8eb2a51ffd391bafee66c749743fd4388aaefafedb9cfdb2cb5bec6a78",
+      "bytes": 9548
+    },
+    {
+      "archive": "run/town04-01/246941/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246941/detections.json",
+      "sha256": "740b801850587069105bf3b0a0df818f73cf8abb3338e63835163667ff22a996",
+      "bytes": 10260
+    },
+    {
+      "archive": "run/town04-01/246941/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246941/panel.png",
+      "sha256": "c0dfcfaf01e74229be45dd9b5f76a1d55ae91bddd7b10826b07f27a984ef5663",
+      "bytes": 735626
+    },
+    {
+      "archive": "run/town04-01/246945/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246945/frame.json",
+      "sha256": "a70f296539c68c5bd5303d4da604e644d6de55f69fdb22d324d7aca744710ce1",
+      "bytes": 8622
+    },
+    {
+      "archive": "run/town04-01/246945/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246945/detections.json",
+      "sha256": "513227549ed62d594ad06cc634f0ad1da8d75be277ffe1f6aaef3d7635cabadb",
+      "bytes": 9482
+    },
+    {
+      "archive": "run/town04-01/246945/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246945/panel.png",
+      "sha256": "80b2e79624c433ca286b773af5df181df10f1021ef1653df9c262dfcc0ca342f",
+      "bytes": 735729
+    },
+    {
+      "archive": "run/town04-01/246949/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246949/frame.json",
+      "sha256": "01374a8877938bfa3c6ce35eed9eb4b53c9f9727171791664e8d5282d09556b0",
+      "bytes": 9559
+    },
+    {
+      "archive": "run/town04-01/246949/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246949/detections.json",
+      "sha256": "fbf8f6123a79d2679819809f451a1b5bfb22c7a749bf6a05bdb997a6b0f21e41",
+      "bytes": 9514
+    },
+    {
+      "archive": "run/town04-01/246949/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246949/panel.png",
+      "sha256": "a0e63b248bdbd49b94f8bab5cb60941a6236f242ca5de941d72b1d162f8d6239",
+      "bytes": 736205
+    },
+    {
+      "archive": "run/town04-01/246953/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246953/frame.json",
+      "sha256": "83220279dd6ba6a7d8d8ae49ce31ec9fec3a7e70a26754af4210ff0e7e5033e6",
+      "bytes": 7792
+    },
+    {
+      "archive": "run/town04-01/246953/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246953/detections.json",
+      "sha256": "9233fa135ae4496dd94e7977bff616c0dce8c2bb82fb9716af2fa5ba8e5f5229",
+      "bytes": 9229
+    },
+    {
+      "archive": "run/town04-01/246953/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246953/panel.png",
+      "sha256": "16d099dd4c2d0a464186696b795b82e8f48012bcf5c06a36261de8587822d642",
+      "bytes": 736519
+    },
+    {
+      "archive": "run/town04-01/246957/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246957/frame.json",
+      "sha256": "875181e049c209354ddfc8b4821f7562d7508aa06903847e3ab1fd6bcdcd5caf",
+      "bytes": 7454
+    },
+    {
+      "archive": "run/town04-01/246957/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246957/detections.json",
+      "sha256": "72c12d8df0db60c183bc20e9dc980cd06bf32cb5b04e291be4cb921aa4ca3f7b",
+      "bytes": 9623
+    },
+    {
+      "archive": "run/town04-01/246957/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246957/panel.png",
+      "sha256": "3a5923185d2a55483261554e8888a69a33737cc26ac94c9ca384356818111264",
+      "bytes": 736901
+    },
+    {
+      "archive": "run/town04-01/246961/frame.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246961/frame.json",
+      "sha256": "e2b54602fbb12bcd9a77c11c6ba24a1ab148f70f87e51eab922407f2368081a8",
+      "bytes": 9739
+    },
+    {
+      "archive": "run/town04-01/246961/detections.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246961/detections.json",
+      "sha256": "ca5fce6fa5354c2b37e3800a250ff39a40d97b1d32620de39cbb729476567d92",
+      "bytes": 9577
+    },
+    {
+      "archive": "run/town04-01/246961/panel.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002/town04-01/246961/panel.png",
+      "sha256": "c8653e2908babf27db92200e950ef892fc72ddebdfd82c0912d2e4e3a224277c",
+      "bytes": 736541
+    },
+    {
+      "archive": "evaluation/GT_input_inventory.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/GT_input_inventory.json",
+      "sha256": "f151e31ad907a2e042476b47d3116c526a0450fad588561e5e48101d01d34245",
+      "bytes": 103663
+    },
+    {
+      "archive": "evaluation/report.json",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/report.json",
+      "sha256": "b3810154f0e8218107e1a23d33a072b30c17c60c5ae80ffca527757fa0c0cc78",
+      "bytes": 93999
+    },
+    {
+      "archive": "evaluation/town01-00/166989/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-00/166989/evaluation.png",
+      "sha256": "8671a7179650cc6f7d25ac349185c7ca5065cb57180b704ffbc731ce3ee97ec6",
+      "bytes": 44223
+    },
+    {
+      "archive": "evaluation/town01-00/166989/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-00/166989/GT_reference.npz",
+      "sha256": "2939d93785ff99f5195c1865833f6f12ef2e8695ab91971d97792859cc93fb3b",
+      "bytes": 14686
+    },
+    {
+      "archive": "evaluation/town01-00/166993/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-00/166993/evaluation.png",
+      "sha256": "814e5683784388b3801cff93df43520f9cb047c5e6a7c3c2e8711f87d79b5efa",
+      "bytes": 45128
+    },
+    {
+      "archive": "evaluation/town01-00/166993/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-00/166993/GT_reference.npz",
+      "sha256": "872d3a4eaea2b5d8052464a5dc9f7584e848a0b47f1eda3bcf4b2bb458019d5d",
+      "bytes": 14976
+    },
+    {
+      "archive": "evaluation/town01-00/166997/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-00/166997/evaluation.png",
+      "sha256": "31f2cd7e66137c8b9eb2e42f69ca4d6dd3a82b1b5b0c68c0e63af3c918568d1e",
+      "bytes": 44874
+    },
+    {
+      "archive": "evaluation/town01-00/166997/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-00/166997/GT_reference.npz",
+      "sha256": "352a2d1dff97e7e6edd2c435f017f57e5ccc5248cdb41496c8d403617178461e",
+      "bytes": 14576
+    },
+    {
+      "archive": "evaluation/town01-00/167001/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-00/167001/evaluation.png",
+      "sha256": "b64efaf0f87f3d502bc16e0bf1bfd9911e9c0f80702f15339c19845ecab26993",
+      "bytes": 45811
+    },
+    {
+      "archive": "evaluation/town01-00/167001/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-00/167001/GT_reference.npz",
+      "sha256": "194a52046c95e9c13023605b87c12fa43c9ec466a309a26c67904992f0eaf5de",
+      "bytes": 14848
+    },
+    {
+      "archive": "evaluation/town01-00/167005/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-00/167005/evaluation.png",
+      "sha256": "5e16c0f25c5312c5087ec1f72d519d10c1e26e20b17b74bdcbda0da24cbf9b44",
+      "bytes": 45037
+    },
+    {
+      "archive": "evaluation/town01-00/167005/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-00/167005/GT_reference.npz",
+      "sha256": "c7d8c1702af4d8e4887e41af75a3d78c165dd49adb64af0583d56ff5d94e10b2",
+      "bytes": 14580
+    },
+    {
+      "archive": "evaluation/town01-00/167009/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-00/167009/evaluation.png",
+      "sha256": "99f36d9331b8d1b268c56a0460e47673c1cec123e4602466ea45d259bf5d4167",
+      "bytes": 44636
+    },
+    {
+      "archive": "evaluation/town01-00/167009/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-00/167009/GT_reference.npz",
+      "sha256": "ed38f7daaf324895f0763f13cf643cb7113263d1ee6ff8e980c484aa95375125",
+      "bytes": 14749
+    },
+    {
+      "archive": "evaluation/town01-00/167013/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-00/167013/evaluation.png",
+      "sha256": "77a43f3355875efd3f0f7229f6e19dd81044f2b33ecee01046b9f5dcb7d02dbe",
+      "bytes": 46224
+    },
+    {
+      "archive": "evaluation/town01-00/167013/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-00/167013/GT_reference.npz",
+      "sha256": "7bbaed766007b1bca38d80ed9246aec06ddaed2d228b1c025c231e7dd48d9e3c",
+      "bytes": 15070
+    },
+    {
+      "archive": "evaluation/town01-00/167017/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-00/167017/evaluation.png",
+      "sha256": "077ebf01c9dfd191cdb1346044039affcb7ec6f958d07b90e164913ef4885704",
+      "bytes": 45978
+    },
+    {
+      "archive": "evaluation/town01-00/167017/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-00/167017/GT_reference.npz",
+      "sha256": "054b51fa12c94ac37ab1ec2504462225280aa6a208aaaf2505c4bbcd5a87c938",
+      "bytes": 14988
+    },
+    {
+      "archive": "evaluation/town01-01/168344/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-01/168344/evaluation.png",
+      "sha256": "4acead73c72181d91f69dceb87924873fd3b6f581c7d6d2c0b8304edf078e53b",
+      "bytes": 46095
+    },
+    {
+      "archive": "evaluation/town01-01/168344/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-01/168344/GT_reference.npz",
+      "sha256": "ee6216fb9705e8b6898ddc6da4228cbf4132bc7fba82da36b2d2c1247a93d4bf",
+      "bytes": 16310
+    },
+    {
+      "archive": "evaluation/town01-01/168348/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-01/168348/evaluation.png",
+      "sha256": "bc76a2a7850bce8363049bfad6f61cdcce3c1859eaaaec2aa03f77c67bc6ed88",
+      "bytes": 45496
+    },
+    {
+      "archive": "evaluation/town01-01/168348/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-01/168348/GT_reference.npz",
+      "sha256": "f0ba3f2fac4107876029e6071c160f345fcb8e77f7a1791dec739595aea65c1b",
+      "bytes": 15768
+    },
+    {
+      "archive": "evaluation/town01-01/168352/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-01/168352/evaluation.png",
+      "sha256": "817459a9bac61dd0af2fa980e41ae2409a92ebd1c3754c400d1dd441a25e5ccb",
+      "bytes": 45616
+    },
+    {
+      "archive": "evaluation/town01-01/168352/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-01/168352/GT_reference.npz",
+      "sha256": "1200e57f8f298b4b52bd4f637d514908a2fff683d2590dd48346e61c2824d276",
+      "bytes": 15747
+    },
+    {
+      "archive": "evaluation/town01-01/168356/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-01/168356/evaluation.png",
+      "sha256": "40d258832ad281e820b2c40c9b88cf8de960558b4f3354d5af0f278bcaf4cd7a",
+      "bytes": 45811
+    },
+    {
+      "archive": "evaluation/town01-01/168356/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-01/168356/GT_reference.npz",
+      "sha256": "b6d2066ce711cccc6bcc7675cb4656ddd2fe7d2f3d2bbe45ed4e9ab8fc1ebee5",
+      "bytes": 15954
+    },
+    {
+      "archive": "evaluation/town01-01/168360/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-01/168360/evaluation.png",
+      "sha256": "bb6cfe9388db1ea88e930c1cc3fdc5399658775fdd352b983df3d86661dabb33",
+      "bytes": 44995
+    },
+    {
+      "archive": "evaluation/town01-01/168360/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-01/168360/GT_reference.npz",
+      "sha256": "01d0f2e58c6f5757b5489636f1bb7272b0c5ce90ed40b2e0cacac96def4665db",
+      "bytes": 15614
+    },
+    {
+      "archive": "evaluation/town01-01/168364/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-01/168364/evaluation.png",
+      "sha256": "31b3dd7bec0605b869bd850f0a3c2e6cdad77f03b9bec49ed3aae1cd8bfa2b99",
+      "bytes": 45094
+    },
+    {
+      "archive": "evaluation/town01-01/168364/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-01/168364/GT_reference.npz",
+      "sha256": "811e0599f1f1acf091e2b6dbc9a5daf0c74fec6f17d6ef1541738d3b8a31fd94",
+      "bytes": 15711
+    },
+    {
+      "archive": "evaluation/town01-01/168368/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-01/168368/evaluation.png",
+      "sha256": "5a22afb1d47ace9f43d327bd95039db0012658161a4cbad23a70df097655b9e7",
+      "bytes": 44129
+    },
+    {
+      "archive": "evaluation/town01-01/168368/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-01/168368/GT_reference.npz",
+      "sha256": "2e7d959f6791d8647c7c212ec9e9e94ce9fa4c44e3ce05b1239d087fdabab8e9",
+      "bytes": 15207
+    },
+    {
+      "archive": "evaluation/town01-01/168372/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-01/168372/evaluation.png",
+      "sha256": "c67c8c549b8aad3d850e38bc2d7806ddfb731d09046e5cdd577b46a3d13e11e7",
+      "bytes": 44038
+    },
+    {
+      "archive": "evaluation/town01-01/168372/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town01-01/168372/GT_reference.npz",
+      "sha256": "b1862fa8870c45d509c0f4e4c4aba05b305eca1ed83df99f63c279d412085055",
+      "bytes": 15017
+    },
+    {
+      "archive": "evaluation/town04-00/246278/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-00/246278/evaluation.png",
+      "sha256": "1ac3a2e746bbc83bfc5fd2b2957c04e30c3f205196ce2556ac52894d891b1959",
+      "bytes": 51368
+    },
+    {
+      "archive": "evaluation/town04-00/246278/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-00/246278/GT_reference.npz",
+      "sha256": "b2e783b4e1c40aa1acb73b7d40487749a5529eeac47a3145900e98e0de26523c",
+      "bytes": 18089
+    },
+    {
+      "archive": "evaluation/town04-00/246282/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-00/246282/evaluation.png",
+      "sha256": "041bc35d1fc649e278ae170cb046551eeb8e075f10c9dc67f12de7f203114e28",
+      "bytes": 51323
+    },
+    {
+      "archive": "evaluation/town04-00/246282/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-00/246282/GT_reference.npz",
+      "sha256": "f2d600fbc8ca2bdf919247fb422c52c29c1c9255547dffb9674abef31a7826d2",
+      "bytes": 18018
+    },
+    {
+      "archive": "evaluation/town04-00/246286/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-00/246286/evaluation.png",
+      "sha256": "50fb52e1625532c6e992f7dd5fd8c5b12ce09227e9ebf3964f0fc7711b4e2838",
+      "bytes": 51874
+    },
+    {
+      "archive": "evaluation/town04-00/246286/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-00/246286/GT_reference.npz",
+      "sha256": "dc23922baa002129e0b83234b3852154531af73f1f5280c222799b8feacac2bf",
+      "bytes": 17884
+    },
+    {
+      "archive": "evaluation/town04-00/246290/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-00/246290/evaluation.png",
+      "sha256": "5087d734a456f38943d58ac308479091d7b30eb330aee467c68e36ee3ead5612",
+      "bytes": 52162
+    },
+    {
+      "archive": "evaluation/town04-00/246290/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-00/246290/GT_reference.npz",
+      "sha256": "1f30546b95a9184e5d42a42f92345d33e6303b76b53e994a814970047eeca7d9",
+      "bytes": 18152
+    },
+    {
+      "archive": "evaluation/town04-00/246294/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-00/246294/evaluation.png",
+      "sha256": "8a046b29e9844bee8d0f3df2724734f7e6f896d7767f89a678cbea1800ba90a2",
+      "bytes": 51695
+    },
+    {
+      "archive": "evaluation/town04-00/246294/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-00/246294/GT_reference.npz",
+      "sha256": "89271c38159a15216db21a690b562efeddaeecbaac3c6216ae8f633fd7f77ce2",
+      "bytes": 18146
+    },
+    {
+      "archive": "evaluation/town04-00/246298/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-00/246298/evaluation.png",
+      "sha256": "39b42a151bceeeb0028fb875f59be013c5befdafbd9d9a840baec9bc5931b535",
+      "bytes": 52226
+    },
+    {
+      "archive": "evaluation/town04-00/246298/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-00/246298/GT_reference.npz",
+      "sha256": "40c6d384b398606e0b1ebbc572aa35fa8d2b7754324a3672467873621684f32a",
+      "bytes": 18331
+    },
+    {
+      "archive": "evaluation/town04-00/246302/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-00/246302/evaluation.png",
+      "sha256": "8b2d263d8dd6a4b988829ce583845325557d014edb188611d6a7176c7c88f221",
+      "bytes": 52995
+    },
+    {
+      "archive": "evaluation/town04-00/246302/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-00/246302/GT_reference.npz",
+      "sha256": "ae4d079e00f83bb0a94c4ae8d6f2f202474e24f99824f9b676a26601b3fc71bb",
+      "bytes": 18425
+    },
+    {
+      "archive": "evaluation/town04-00/246306/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-00/246306/evaluation.png",
+      "sha256": "4d1fc66934112961c54419702c39c1b4ed500de5bc09b75ff60f504906c1c138",
+      "bytes": 52561
+    },
+    {
+      "archive": "evaluation/town04-00/246306/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-00/246306/GT_reference.npz",
+      "sha256": "7a545ec6ae64ac174d855c465b8f34536d6a49110f7cd1adcd9b58cb51a48fa8",
+      "bytes": 18353
+    },
+    {
+      "archive": "evaluation/town04-01/246933/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-01/246933/evaluation.png",
+      "sha256": "64696231f476d6d0482b0835b7319f108acaef8cedc9dc814cbdc086cb2461df",
+      "bytes": 35005
+    },
+    {
+      "archive": "evaluation/town04-01/246933/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-01/246933/GT_reference.npz",
+      "sha256": "c97c19882e011e4369fbcd1a050232550d215d603d194c10a4782066f66e9eea",
+      "bytes": 13255
+    },
+    {
+      "archive": "evaluation/town04-01/246937/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-01/246937/evaluation.png",
+      "sha256": "83589a7a2ecf3af87e8f3b0c635da0fcff426a1e6fe86a9ff4cad6b632f06f5c",
+      "bytes": 34786
+    },
+    {
+      "archive": "evaluation/town04-01/246937/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-01/246937/GT_reference.npz",
+      "sha256": "3bc15a94c91629563afe31ba037e3096c3086595a905035db2c058b5448d51e1",
+      "bytes": 12920
+    },
+    {
+      "archive": "evaluation/town04-01/246941/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-01/246941/evaluation.png",
+      "sha256": "5c9b848fe76ee3bcd9440cd0c77a447a7d09016d17acbd2101716073bccdb877",
+      "bytes": 34821
+    },
+    {
+      "archive": "evaluation/town04-01/246941/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-01/246941/GT_reference.npz",
+      "sha256": "ec6681b6a694e5b28193b3fb58f9cf036543aa0cdc2aa725e49fbf350571d7e6",
+      "bytes": 12994
+    },
+    {
+      "archive": "evaluation/town04-01/246945/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-01/246945/evaluation.png",
+      "sha256": "9bc2574ad128776a259223c26c4fb6a77f08ae642e6ca0369fb67ec574380d96",
+      "bytes": 33832
+    },
+    {
+      "archive": "evaluation/town04-01/246945/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-01/246945/GT_reference.npz",
+      "sha256": "f1ecf37bbf5d37274a6bfc727c8fd088b8a421771a3809eb06bb2c4a712bba48",
+      "bytes": 12725
+    },
+    {
+      "archive": "evaluation/town04-01/246949/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-01/246949/evaluation.png",
+      "sha256": "46952204dfd30a3830fe3cec48e76fdc4ac3313414ecafcaadb1487e45199e9f",
+      "bytes": 33982
+    },
+    {
+      "archive": "evaluation/town04-01/246949/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-01/246949/GT_reference.npz",
+      "sha256": "3baeaab31cca3a0ac851746c22aa061a2433f4f47cfea12a763fe94da3cfdb6d",
+      "bytes": 12672
+    },
+    {
+      "archive": "evaluation/town04-01/246953/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-01/246953/evaluation.png",
+      "sha256": "dc2e11560834fcee5d93a464ce47f09b58fd2a9cb4889dc5f9bd4a9f23d567f6",
+      "bytes": 33620
+    },
+    {
+      "archive": "evaluation/town04-01/246953/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-01/246953/GT_reference.npz",
+      "sha256": "8aea367bc4ea0ace8f734785c34020add03df6466069cdb74e768bb14370dde6",
+      "bytes": 12638
+    },
+    {
+      "archive": "evaluation/town04-01/246957/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-01/246957/evaluation.png",
+      "sha256": "ad100c3572dc2ff63088f9e53edd12c426d4f2ca61fc8e9a3042d9d0ee2959b1",
+      "bytes": 33465
+    },
+    {
+      "archive": "evaluation/town04-01/246957/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-01/246957/GT_reference.npz",
+      "sha256": "c653bb127b4518b96a2a707d2b351991c94b87820433400931e5f67baf4e045c",
+      "bytes": 12707
+    },
+    {
+      "archive": "evaluation/town04-01/246961/evaluation.png",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-01/246961/evaluation.png",
+      "sha256": "51e6563f253e8dd7dfa4493dda692a1d1f8a4a96381ebe0874152abba4bcb7a5",
+      "bytes": 33394
+    },
+    {
+      "archive": "evaluation/town04-01/246961/GT_reference.npz",
+      "source": "artifacts/runs/phase4-bev-pilot-002-evaluation-final/town04-01/246961/GT_reference.npz",
+      "sha256": "2ff776e00e9d7af7460cdb94eb13e0e3f158847c1aa1bb837810a12896ecbc87",
+      "bytes": 12828
+    },
+    {
+      "archive": "visual_QA/catalog.json",
+      "source": "artifacts/runs/phase4-visual-QA-001/catalog.json",
+      "sha256": "4ddb5d531103df06de63878a10f92afd757b306246634274a3aad72f1f59e28c",
+      "bytes": 24088
+    },
+    {
+      "archive": "visual_QA/GT_evaluation-00.png",
+      "source": "artifacts/runs/phase4-visual-QA-001/GT_evaluation-00.png",
+      "sha256": "1a86888e0ff35c6aeaf54b6e5d6d83e08ca84f534877a36b6acf5d995c329c37",
+      "bytes": 610642
+    },
+    {
+      "archive": "visual_QA/GT_evaluation-01.png",
+      "source": "artifacts/runs/phase4-visual-QA-001/GT_evaluation-01.png",
+      "sha256": "c2a439c31eee93a4254c41fb89bc84177065d61f51da84cff389d90926d671ef",
+      "bytes": 593099
+    },
+    {
+      "archive": "visual_QA/GT_evaluation-02.png",
+      "source": "artifacts/runs/phase4-visual-QA-001/GT_evaluation-02.png",
+      "sha256": "d77a27fc54cacfc4d5bd5a8390c128a879ce494fe3d7ac040d898e2abc4373cb",
+      "bytes": 741620
+    },
+    {
+      "archive": "visual_QA/GT_evaluation-03.png",
+      "source": "artifacts/runs/phase4-visual-QA-001/GT_evaluation-03.png",
+      "sha256": "892cae238df451d7a2a52a7da0da06cb48327ba6ffdfb5a84a337d57cf9624a2",
+      "bytes": 503479
+    },
+    {
+      "archive": "visual_QA/prediction-00.png",
+      "source": "artifacts/runs/phase4-visual-QA-001/prediction-00.png",
+      "sha256": "19e4b9bbee9e9e520d62d489748944cd136d41f3ec55d52fe33db32edc004b6b",
+      "bytes": 829391
+    },
+    {
+      "archive": "visual_QA/prediction-01.png",
+      "source": "artifacts/runs/phase4-visual-QA-001/prediction-01.png",
+      "sha256": "bbffc61b0fecae302864a75574b7b32017aee206e9a5f8e66e91e0af2897fe19",
+      "bytes": 818226
+    },
+    {
+      "archive": "visual_QA/prediction-02.png",
+      "source": "artifacts/runs/phase4-visual-QA-001/prediction-02.png",
+      "sha256": "22a0424f1428a49dac25d708c2d6f0c2071381807cd865430ce0305a74594ff0",
+      "bytes": 833010
+    },
+    {
+      "archive": "visual_QA/prediction-03.png",
+      "source": "artifacts/runs/phase4-visual-QA-001/prediction-03.png",
+      "sha256": "2572c18c6a85aeb0573392361fb7de8a2e7c9e07bf010563b162ff1da0153307",
+      "bytes": 837352
+    },
+    {
+      "archive": "visual_QA/prediction-04.png",
+      "source": "artifacts/runs/phase4-visual-QA-001/prediction-04.png",
+      "sha256": "302252af618318a7b564e09f24e42b98546add3cb8cd986148625a08c78d5604",
+      "bytes": 934891
+    },
+    {
+      "archive": "visual_QA/prediction-05.png",
+      "source": "artifacts/runs/phase4-visual-QA-001/prediction-05.png",
+      "sha256": "c228e957f0719237b38bf7ec2ff3a2277345824322c115d9761ea117516b2fe2",
+      "bytes": 944636
+    },
+    {
+      "archive": "visual_QA/prediction-06.png",
+      "source": "artifacts/runs/phase4-visual-QA-001/prediction-06.png",
+      "sha256": "667537c86036923d6eab56d0d7e219d24bd7ef5200df86b8b9526cd7b4d4e304",
+      "bytes": 913385
+    },
+    {
+      "archive": "visual_QA/prediction-07.png",
+      "source": "artifacts/runs/phase4-visual-QA-001/prediction-07.png",
+      "sha256": "69a553a79fbfc6dba9f359e2611608574a8e50fead234df29c7e463cb6722dd1",
+      "bytes": 919253
+    },
+    {
+      "archive": "visual_QA/visual_review.json",
+      "source": "artifacts/runs/phase4-visual-QA-001/visual_review.json",
+      "sha256": "80b9b11a0bc4db255a5e656949a1f67edd737de89d8d505ab1317e9e935ea2f9",
+      "bytes": 8903
+    },
+    {
+      "archive": "selection/selection.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/selection.json",
+      "sha256": "c605b5d3b4556d1d11b4020fd677af39c68982a9be1257533c71ed0857d940df",
+      "bytes": 79681
+    },
+    {
+      "archive": "selection/sequence_inputs.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/sequence_inputs.json",
+      "sha256": "b9a707af2de8aaeae51e1e19f7e8dfede09026f889fc8085926cee14d4fbd8ec",
+      "bytes": 2148
+    },
+    {
+      "archive": "selection/rgb_only_inventory.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only_inventory.json",
+      "sha256": "c2df90d1e0694d54b97d36f4b9f80460e1b16b9abc1eee5a0b09f0051c9e57ac",
+      "bytes": 33751
+    },
+    {
+      "archive": "selection/rgb_only_metadata/calibration/town01-00.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/calibration/town01-00.json",
+      "sha256": "c3ed3a415bb02e8a8d90d2cf23bab2d2b2a9f1c30b6c473de968ec96b150efdc",
+      "bytes": 32239
+    },
+    {
+      "archive": "selection/rgb_only_metadata/calibration/town01-01.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/calibration/town01-01.json",
+      "sha256": "c3ed3a415bb02e8a8d90d2cf23bab2d2b2a9f1c30b6c473de968ec96b150efdc",
+      "bytes": 32239
+    },
+    {
+      "archive": "selection/rgb_only_metadata/calibration/town04-00.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/calibration/town04-00.json",
+      "sha256": "c3ed3a415bb02e8a8d90d2cf23bab2d2b2a9f1c30b6c473de968ec96b150efdc",
+      "bytes": 32239
+    },
+    {
+      "archive": "selection/rgb_only_metadata/calibration/town04-01.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/calibration/town04-01.json",
+      "sha256": "c3ed3a415bb02e8a8d90d2cf23bab2d2b2a9f1c30b6c473de968ec96b150efdc",
+      "bytes": 32239
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town01-00/00166989.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town01-00/00166989.json",
+      "sha256": "d6bdcaa1d6dda3137f252a26696090c98e15fc3e2b741d11020c81844cb00a17",
+      "bytes": 1424
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town01-00/00166993.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town01-00/00166993.json",
+      "sha256": "1e137ef7a5c825ce40fd040ea9b4c519f30c80c1b87c2f40e59a76824f761dba",
+      "bytes": 1433
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town01-00/00166997.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town01-00/00166997.json",
+      "sha256": "5068ceb7f0a72891f7864206af603363d46e5d974b1b2fea3ef52ab70d1125c9",
+      "bytes": 1433
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town01-00/00167001.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town01-00/00167001.json",
+      "sha256": "fb39996dec67aa6d07e6fc06261cc20b9a35699820f46c4ba84888836b4c253e",
+      "bytes": 1415
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town01-00/00167005.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town01-00/00167005.json",
+      "sha256": "23c0eea4eb7958d1f3cd4b46e9fea5528f65efd40a84aaf4435ae283507d1610",
+      "bytes": 1433
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town01-00/00167009.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town01-00/00167009.json",
+      "sha256": "4ae631f655b1a3d36bca3cd3d8d5d6062f871c2962ee234632506de9385cf582",
+      "bytes": 1433
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town01-00/00167013.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town01-00/00167013.json",
+      "sha256": "c8b92b67e8dfcc8b6471043e9e6eae836d7c9dc774e2a9bd931ec52c2b8944eb",
+      "bytes": 1433
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town01-00/00167017.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town01-00/00167017.json",
+      "sha256": "db707dde9476562a41c7adbc6aba9105721b4976569b0f728aa483ed9141bc44",
+      "bytes": 1433
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town01-01/00168344.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town01-01/00168344.json",
+      "sha256": "32f88e9650f980624465009b9426a4851420bace21743113ff19091625e04c20",
+      "bytes": 1433
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town01-01/00168348.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town01-01/00168348.json",
+      "sha256": "da073b28e598168b25d81e2c7bb3bfb2d085bb9b972f7106ef3937757d8536a0",
+      "bytes": 1424
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town01-01/00168352.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town01-01/00168352.json",
+      "sha256": "a6679af66e633251817d712cc175671dcc5ba4cadd09c275e4c2ac05e33096b2",
+      "bytes": 1433
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town01-01/00168356.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town01-01/00168356.json",
+      "sha256": "81e16f83378ed945c83a6e55c46b816cf415bed09ecc2ef2a39a3ee6e158778a",
+      "bytes": 1433
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town01-01/00168360.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town01-01/00168360.json",
+      "sha256": "f64f68fa02332d895a13ea071f7f0c7625fa80787ea2eb0d9c2322874bb2b8b5",
+      "bytes": 1433
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town01-01/00168364.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town01-01/00168364.json",
+      "sha256": "cff09657d450056fdc91aa775f8aa9b814a3a57dc05b959008a752e81f78f713",
+      "bytes": 1424
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town01-01/00168368.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town01-01/00168368.json",
+      "sha256": "31280d50b94792bb3e2ad2225834fd9905b9b805dbbdbb7799fe721ac7129d7c",
+      "bytes": 1433
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town01-01/00168372.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town01-01/00168372.json",
+      "sha256": "1e09da3ba2309f31f00d6e19a1182a256c3bf3aa0fa355e0e1186492a0968318",
+      "bytes": 1433
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town04-00/00246278.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town04-00/00246278.json",
+      "sha256": "f91018c56569c4b47fcbcdcb88fb2fe187900b11631ac9e79e3908121102f1c3",
+      "bytes": 1433
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town04-00/00246282.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town04-00/00246282.json",
+      "sha256": "86d2f70eb63aba9608977a3012ac124173afff14bb30c2ef6c456529251f4258",
+      "bytes": 1433
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town04-00/00246286.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town04-00/00246286.json",
+      "sha256": "0b7e47b8404b8b91da93dbc667aa9eafbc445ee984487a9cb10938bd39c5f927",
+      "bytes": 1424
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town04-00/00246290.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town04-00/00246290.json",
+      "sha256": "052ba94380d83c0640bd910cd297be455e755fc4a843cfb3216944bcb9b9119e",
+      "bytes": 1433
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town04-00/00246294.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town04-00/00246294.json",
+      "sha256": "4136c8d3a8ec8386e0d32dcb0fb6bc148f00bd583292bdfe7a68ae53bd8ed9db",
+      "bytes": 1433
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town04-00/00246298.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town04-00/00246298.json",
+      "sha256": "d157c7623e4d04af8df2f50a9f146a58b40c0127e163c25f2c89da0e1522fa72",
+      "bytes": 1433
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town04-00/00246302.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town04-00/00246302.json",
+      "sha256": "01bcd61ae7a84ad6251b5bd4ef9d5e8199fd4b7378694f0dce9db0f44c09cab1",
+      "bytes": 1433
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town04-00/00246306.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town04-00/00246306.json",
+      "sha256": "ab4bbe76919ff012b3e1324df44266ce1dfa4a8779e0c835bb3e7e38fe120994",
+      "bytes": 1424
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town04-01/00246933.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town04-01/00246933.json",
+      "sha256": "3992f3a1cb48f708ce83368f19f23be8840c6edaf1622a64cf8caa3864858971",
+      "bytes": 1424
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town04-01/00246937.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town04-01/00246937.json",
+      "sha256": "b952156502b45045ec9cb244ee23b963876c863cbdd3c8aa14aaa9440e5432a6",
+      "bytes": 1424
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town04-01/00246941.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town04-01/00246941.json",
+      "sha256": "21608476a6168fcc1bc84bc7efe5cd3787fbf664dbb715f490f3424413408403",
+      "bytes": 1433
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town04-01/00246945.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town04-01/00246945.json",
+      "sha256": "b48e74964fc9812594c792894b46910a8a890fe68185e738d996a1179ef0c7e2",
+      "bytes": 1424
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town04-01/00246949.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town04-01/00246949.json",
+      "sha256": "7573ccb23b147514293d67eebd4551e2ef96fe214357a4d1f33df8690a058f03",
+      "bytes": 1424
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town04-01/00246953.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town04-01/00246953.json",
+      "sha256": "83660ce018ac218d8e426639d53fd40adb0434f6bf8f0f6bcffb6f825f7dc7dc",
+      "bytes": 1424
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town04-01/00246957.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town04-01/00246957.json",
+      "sha256": "678f3206c35c09e28c540d5fb0bb12b39b1044a5e075e7fca7c84801a3996261",
+      "bytes": 1433
+    },
+    {
+      "archive": "selection/rgb_only_metadata/inputs/frames/town04-01/00246961.json",
+      "source": "artifacts/runs/phase4-pilot-selection-002/rgb_only/inputs/frames/town04-01/00246961.json",
+      "sha256": "477114bacafc490f17fde15e4af283cd4c7c23be284a839831f6dba8366a9752",
+      "bytes": 1433
+    },
+    {
+      "archive": "boundary/extra_GT_file/inputs.json",
+      "source": "artifacts/runs/phase4-RGB-boundary-001/extra_GT_file/inputs.json",
+      "sha256": "954d63e274adc747c7458f1b63399280f196c2f8d1f405fd396062a4ce80299d",
+      "bytes": 301
+    },
+    {
+      "archive": "boundary/extra_GT_file/inventory.json",
+      "source": "artifacts/runs/phase4-RGB-boundary-001/extra_GT_file/inventory.json",
+      "sha256": "cda00466465255bb8136c72b0183d90f548aa57982efeff7b5eb8ba99aa3e283",
+      "bytes": 1113
+    },
+    {
+      "archive": "boundary/extra_GT_file/root/calibration/town01-00.json",
+      "source": "artifacts/runs/phase4-RGB-boundary-001/extra_GT_file/root/calibration/town01-00.json",
+      "sha256": "c3ed3a415bb02e8a8d90d2cf23bab2d2b2a9f1c30b6c473de968ec96b150efdc",
+      "bytes": 32239
+    },
+    {
+      "archive": "boundary/extra_GT_file/root/inputs/frames/town01-00/00166989.json",
+      "source": "artifacts/runs/phase4-RGB-boundary-001/extra_GT_file/root/inputs/frames/town01-00/00166989.json",
+      "sha256": "d6bdcaa1d6dda3137f252a26696090c98e15fc3e2b741d11020c81844cb00a17",
+      "bytes": 1424
+    },
+    {
+      "archive": "boundary/extra_GT_file/root/labels/fake.json",
+      "source": "artifacts/runs/phase4-RGB-boundary-001/extra_GT_file/root/labels/fake.json",
+      "sha256": "903b1a3282711cddd421717a7cb461ec861bd5aa72e748c795be31fd886700b5",
+      "bytes": 35
+    },
+    {
+      "archive": "boundary/extra_GT_file/stderr.log",
+      "source": "artifacts/runs/phase4-RGB-boundary-001/extra_GT_file/stderr.log",
+      "sha256": "bd36aa705dc3e35d8ca286b85ee8948f05ce6431865cab648b502d18f72013b0",
+      "bytes": 662
+    },
+    {
+      "archive": "boundary/GT_pose_in_sequence/inputs.json",
+      "source": "artifacts/runs/phase4-RGB-boundary-001/GT_pose_in_sequence/inputs.json",
+      "sha256": "41aa03901e01b1e7a55df6743e67c70f2c559be05002121bcf1339a90e7faf8c",
+      "bytes": 330
+    },
+    {
+      "archive": "boundary/GT_pose_in_sequence/inventory.json",
+      "source": "artifacts/runs/phase4-RGB-boundary-001/GT_pose_in_sequence/inventory.json",
+      "sha256": "cda00466465255bb8136c72b0183d90f548aa57982efeff7b5eb8ba99aa3e283",
+      "bytes": 1113
+    },
+    {
+      "archive": "boundary/GT_pose_in_sequence/root/calibration/town01-00.json",
+      "source": "artifacts/runs/phase4-RGB-boundary-001/GT_pose_in_sequence/root/calibration/town01-00.json",
+      "sha256": "c3ed3a415bb02e8a8d90d2cf23bab2d2b2a9f1c30b6c473de968ec96b150efdc",
+      "bytes": 32239
+    },
+    {
+      "archive": "boundary/GT_pose_in_sequence/root/inputs/frames/town01-00/00166989.json",
+      "source": "artifacts/runs/phase4-RGB-boundary-001/GT_pose_in_sequence/root/inputs/frames/town01-00/00166989.json",
+      "sha256": "d6bdcaa1d6dda3137f252a26696090c98e15fc3e2b741d11020c81844cb00a17",
+      "bytes": 1424
+    },
+    {
+      "archive": "boundary/GT_pose_in_sequence/stderr.log",
+      "source": "artifacts/runs/phase4-RGB-boundary-001/GT_pose_in_sequence/stderr.log",
+      "sha256": "083e99acc5b3b808bd4f29f59ffe1c29d4bc92264642b63d3123df70bbbead89",
+      "bytes": 482
+    },
+    {
+      "archive": "boundary/report.json",
+      "source": "artifacts/runs/phase4-RGB-boundary-001/report.json",
+      "sha256": "b1b2c40cce9c460674ea954195517830750cc354df5916aec628de674a46016b",
+      "bytes": 949
+    },
+    {
+      "archive": "checks/phase4-artifact-integrity-001.json",
+      "source": "artifacts/reports/phase4-artifact-integrity-001.json",
+      "sha256": "fe375d70efb9e5f6c23136c869197dff23f3fa4b8a93bc5f78f1f0fc74c278d6",
+      "bytes": 22851
+    },
+    {
+      "archive": "checks/phase4-perception-unchanged-001.json",
+      "source": "artifacts/reports/phase4-perception-unchanged-001.json",
+      "sha256": "f653414643245a21a1b5cc53862b133598e3e56a327dae576b8880787b8739ae",
+      "bytes": 331
+    },
+    {
+      "archive": "checks/phase4-regression-final.log",
+      "source": "artifacts/reports/phase4-regression-final.log",
+      "sha256": "93123346b7db64f1e45d217759b089c76aba7ea07ab8fd0f7bc013c5e26aad18",
+      "bytes": 36951
+    },
+    {
+      "archive": "checks/phase4-path-refinement-CPU-001.json",
+      "source": "artifacts/reports/phase4-path-refinement-CPU-001.json",
+      "sha256": "b3e4114b2dddf2ff1ddaa716ecacbb2fba64cced6bad1a5b3088c0f30b90137e",
+      "bytes": 36259
+    },
+    {
+      "archive": "history/selector-001-failure.json",
+      "source": "artifacts/runs/phase4-pilot-selection-001/failure.json",
+      "sha256": "d8dac26026545f2a036d2906c34604713c408e263aa4f98bc553871a7d0535d3",
+      "bytes": 258
+    },
+    {
+      "archive": "history/paired-only-001/config.json",
+      "source": "artifacts/runs/phase4-bev-pilot-001/config.json",
+      "sha256": "215bb9a930d97c50d1a1fddc1ae39b16f3165250e1f7eb3309cbf898f84deb60",
+      "bytes": 1317
+    },
+    {
+      "archive": "history/paired-only-001/contract.json",
+      "source": "artifacts/runs/phase4-bev-pilot-001/contract.json",
+      "sha256": "b8656c3786dfa323562b99155576af8bc66ef9da680ac5c9cdc38d0384092393",
+      "bytes": 5060
+    },
+    {
+      "archive": "history/paired-only-001/progress.json",
+      "source": "artifacts/runs/phase4-bev-pilot-001/progress.json",
+      "sha256": "70292111e4b1d5d4aa4b3af9be3ed7e02709a6ac4d8558eb36747cd347efef60",
+      "bytes": 284
+    },
+    {
+      "archive": "history/paired-only-001/state.json",
+      "source": "artifacts/runs/phase4-bev-pilot-001/state.json",
+      "sha256": "f801b9439dace806fe1e0ae48f6ae80206f84aca300fc7824a0d436a8246cd7d",
+      "bytes": 8579
+    },
+    {
+      "archive": "history/initial-evaluation-001/report.json",
+      "source": "artifacts/runs/phase4-bev-pilot-001-evaluation/report.json",
+      "sha256": "841eece10ab9af39177ac4edf063f0bc5ac09b113155f7a1ab2865615461b768",
+      "bytes": 86399
+    },
+    {
+      "archive": "history/initial-evaluation-001/evaluator.py",
+      "source": "artifacts/runs/phase4-bev-pilot-001-evaluation/evaluator.py",
+      "sha256": "ecdfa8a53d6f6f6fd33b8b8f1e8ef3bf5560edf551e9a9fa48abb7f2ef182bd5",
+      "bytes": 12939
+    },
+    {
+      "archive": "history/initial-evaluation-001/GT_helper.py",
+      "source": "artifacts/runs/phase4-bev-pilot-001-evaluation/GT_helper.py",
+      "sha256": "f75c7320183332d7085224a18d6dd385bb7cba29023ec5d755c74f5ae56531d4",
+      "bytes": 6401
+    },
+    {
+      "archive": "history/initial-evaluation-001/GT_input_inventory.json",
+      "source": "artifacts/runs/phase4-bev-pilot-001-evaluation/GT_input_inventory.json",
+      "sha256": "854196deeff86cecc72efd74374e1982af5bbd967130bce24aeacbee15aaba6d",
+      "bytes": 72215
+    }
+  ]
+}

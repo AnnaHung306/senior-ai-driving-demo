@@ -1,0 +1,2501 @@
+{
+  "status": "selected_before_model_inference",
+  "tool_sha256": "f75c7320183332d7085224a18d6dd385bb7cba29023ec5d755c74f5ae56531d4",
+  "dataset_audit_sha256": "55c233e337632e3e8d5e1a197c20b2bdab325818d6f38b24d1da113fce4fd11f",
+  "criteria": "stride4 visible rawWall4 must be zero in x[-10,25]m,y±6m,z[-.5,4]m; road-z p90<=.2m; >=12 raw24 line samples, all8frames. Visible sample screen, not complete asset clearance. Fixed starts20/60/100, first eligible per scene; first2 groups per split.",
+  "scope": "Prototype original train/validation only, no development/lockbox, no independent generalization claim. Selection uses GT, inference will not.",
+  "candidates": [
+    {
+      "scene": "town01-00",
+      "original_split": "train",
+      "start_index": 20,
+      "manifests": [
+        "inputs/frames/town01-00/00166989.json",
+        "inputs/frames/town01-00/00166993.json",
+        "inputs/frames/town01-00/00166997.json",
+        "inputs/frames/town01-00/00167001.json",
+        "inputs/frames/town01-00/00167005.json",
+        "inputs/frames/town01-00/00167009.json",
+        "inputs/frames/town01-00/00167013.json",
+        "inputs/frames/town01-00/00167017.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 24,
+          "road_abs_z_p90_m": 0.0013919019038590719,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 28,
+          "road_abs_z_p90_m": 0.005091402888913188,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 36,
+          "road_abs_z_p90_m": 0.00356552845630409,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 42,
+          "road_abs_z_p90_m": 0.0022569143627206856,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 52,
+          "road_abs_z_p90_m": 0.0037949524467163044,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 69,
+          "road_abs_z_p90_m": 0.0015041906190549348,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 86,
+          "road_abs_z_p90_m": 0.00160686321195036,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 102,
+          "road_abs_z_p90_m": 0.0044569215641467866,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town01-00",
+      "original_split": "train",
+      "start_index": 60,
+      "manifests": [
+        "inputs/frames/town01-00/00167149.json",
+        "inputs/frames/town01-00/00167153.json",
+        "inputs/frames/town01-00/00167157.json",
+        "inputs/frames/town01-00/00167161.json",
+        "inputs/frames/town01-00/00167165.json",
+        "inputs/frames/town01-00/00167169.json",
+        "inputs/frames/town01-00/00167173.json",
+        "inputs/frames/town01-00/00167177.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 82,
+          "road_abs_z_p90_m": 0.0011589733492588738,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 92,
+          "road_abs_z_p90_m": 0.0012810382677823195,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 103,
+          "road_abs_z_p90_m": 0.003978810763747775,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 104,
+          "road_abs_z_p90_m": 0.010414462412262848,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 98,
+          "road_abs_z_p90_m": 0.003612091198644918,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 97,
+          "road_abs_z_p90_m": 0.007130629448567594,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 90,
+          "road_abs_z_p90_m": 0.0017546798454366463,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 92,
+          "road_abs_z_p90_m": 0.005854108021190685,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town01-00",
+      "original_split": "train",
+      "start_index": 100,
+      "manifests": [
+        "inputs/frames/town01-00/00167309.json",
+        "inputs/frames/town01-00/00167313.json",
+        "inputs/frames/town01-00/00167317.json",
+        "inputs/frames/town01-00/00167321.json",
+        "inputs/frames/town01-00/00167325.json",
+        "inputs/frames/town01-00/00167329.json",
+        "inputs/frames/town01-00/00167333.json",
+        "inputs/frames/town01-00/00167337.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 25,
+          "road_abs_z_p90_m": 0.0016310455638773869,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 25,
+          "road_abs_z_p90_m": 0.0016382275598287865,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 25,
+          "road_abs_z_p90_m": 0.001637826291257971,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 25,
+          "road_abs_z_p90_m": 0.0016381562732572519,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 25,
+          "road_abs_z_p90_m": 0.0016518352941449431,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 25,
+          "road_abs_z_p90_m": 0.0016512981612583743,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 25,
+          "road_abs_z_p90_m": 0.0016491630083544928,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 24,
+          "road_abs_z_p90_m": 0.0016500215805124619,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town01-01",
+      "original_split": "train",
+      "start_index": 20,
+      "manifests": [
+        "inputs/frames/town01-01/00168344.json",
+        "inputs/frames/town01-01/00168348.json",
+        "inputs/frames/town01-01/00168352.json",
+        "inputs/frames/town01-01/00168356.json",
+        "inputs/frames/town01-01/00168360.json",
+        "inputs/frames/town01-01/00168364.json",
+        "inputs/frames/town01-01/00168368.json",
+        "inputs/frames/town01-01/00168372.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 21,
+          "road_abs_z_p90_m": 0.004669747846691719,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 26,
+          "road_abs_z_p90_m": 0.0014752646040996575,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 28,
+          "road_abs_z_p90_m": 0.0013801963016624175,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 35,
+          "road_abs_z_p90_m": 0.00420665095488415,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 38,
+          "road_abs_z_p90_m": 0.001583967551176646,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 45,
+          "road_abs_z_p90_m": 0.005195193117281561,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 58,
+          "road_abs_z_p90_m": 0.0011392297774822867,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 76,
+          "road_abs_z_p90_m": 0.0026356001309821406,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town01-01",
+      "original_split": "train",
+      "start_index": 60,
+      "manifests": [
+        "inputs/frames/town01-01/00168504.json",
+        "inputs/frames/town01-01/00168508.json",
+        "inputs/frames/town01-01/00168512.json",
+        "inputs/frames/town01-01/00168516.json",
+        "inputs/frames/town01-01/00168520.json",
+        "inputs/frames/town01-01/00168524.json",
+        "inputs/frames/town01-01/00168528.json",
+        "inputs/frames/town01-01/00168532.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 27,
+          "road_abs_z_p90_m": 0.002922097110401323,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 23,
+          "road_abs_z_p90_m": 0.0011308849232481322,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 30,
+          "road_abs_z_p90_m": 0.004594490692314591,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 36,
+          "road_abs_z_p90_m": 0.001131441210328288,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 41,
+          "road_abs_z_p90_m": 0.002409037072612552,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 52,
+          "road_abs_z_p90_m": 0.0022421189988941492,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 62,
+          "road_abs_z_p90_m": 0.0011393516472804066,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 88,
+          "road_abs_z_p90_m": 0.004635096262028205,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town01-01",
+      "original_split": "train",
+      "start_index": 100,
+      "manifests": [
+        "inputs/frames/town01-01/00168664.json",
+        "inputs/frames/town01-01/00168668.json",
+        "inputs/frames/town01-01/00168672.json",
+        "inputs/frames/town01-01/00168676.json",
+        "inputs/frames/town01-01/00168680.json",
+        "inputs/frames/town01-01/00168684.json",
+        "inputs/frames/town01-01/00168688.json",
+        "inputs/frames/town01-01/00168692.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 21,
+          "road_abs_z_p90_m": 0.0013090885361040972,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 25,
+          "road_abs_z_p90_m": 0.0013523363846849046,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 29,
+          "road_abs_z_p90_m": 0.004064903650578433,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 33,
+          "road_abs_z_p90_m": 0.0017499023228801924,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 40,
+          "road_abs_z_p90_m": 0.004459318784436617,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 54,
+          "road_abs_z_p90_m": 0.002780237214581538,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 77,
+          "road_abs_z_p90_m": 0.0011871202522822256,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 98,
+          "road_abs_z_p90_m": 0.004819926906821648,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town01-02",
+      "original_split": "train",
+      "start_index": 20,
+      "manifests": [
+        "inputs/frames/town01-02/00168997.json",
+        "inputs/frames/town01-02/00169001.json",
+        "inputs/frames/town01-02/00169005.json",
+        "inputs/frames/town01-02/00169009.json",
+        "inputs/frames/town01-02/00169013.json",
+        "inputs/frames/town01-02/00169017.json",
+        "inputs/frames/town01-02/00169021.json",
+        "inputs/frames/town01-02/00169025.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 59,
+          "road_abs_z_p90_m": 0.011254528090629545,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 91,
+          "road_abs_z_p90_m": 0.00163079919645992,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 111,
+          "road_abs_z_p90_m": 0.0013491755732748523,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 102,
+          "road_abs_z_p90_m": 0.006322988106448955,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 93,
+          "road_abs_z_p90_m": 0.0011120758658740293,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 78,
+          "road_abs_z_p90_m": 0.002292956548506586,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 55,
+          "road_abs_z_p90_m": 0.005121463150320694,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 31,
+          "road_abs_z_p90_m": 0.0015060409164225242,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town01-02",
+      "original_split": "train",
+      "start_index": 60,
+      "manifests": [
+        "inputs/frames/town01-02/00169157.json",
+        "inputs/frames/town01-02/00169161.json",
+        "inputs/frames/town01-02/00169165.json",
+        "inputs/frames/town01-02/00169169.json",
+        "inputs/frames/town01-02/00169173.json",
+        "inputs/frames/town01-02/00169177.json",
+        "inputs/frames/town01-02/00169181.json",
+        "inputs/frames/town01-02/00169185.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 30,
+          "road_abs_z_p90_m": 0.002350575911592445,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 34,
+          "road_abs_z_p90_m": 0.001159340761034655,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 44,
+          "road_abs_z_p90_m": 0.00583258250388572,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 60,
+          "road_abs_z_p90_m": 0.0014676178057186906,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 76,
+          "road_abs_z_p90_m": 0.0016562112662890094,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 99,
+          "road_abs_z_p90_m": 0.005307381171430148,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 98,
+          "road_abs_z_p90_m": 0.001474674221382166,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 83,
+          "road_abs_z_p90_m": 0.0014399385629271678,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town01-02",
+      "original_split": "train",
+      "start_index": 100,
+      "manifests": [
+        "inputs/frames/town01-02/00169317.json",
+        "inputs/frames/town01-02/00169321.json",
+        "inputs/frames/town01-02/00169325.json",
+        "inputs/frames/town01-02/00169329.json",
+        "inputs/frames/town01-02/00169333.json",
+        "inputs/frames/town01-02/00169337.json",
+        "inputs/frames/town01-02/00169341.json",
+        "inputs/frames/town01-02/00169345.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 50,
+          "road_abs_z_p90_m": 0.0034004169433541577,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 50,
+          "road_abs_z_p90_m": 0.0038958685932102277,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 53,
+          "road_abs_z_p90_m": 0.003952465762171699,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 53,
+          "road_abs_z_p90_m": 0.004049309390214884,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 55,
+          "road_abs_z_p90_m": 0.0037541179094469977,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 54,
+          "road_abs_z_p90_m": 0.004132517673525404,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 54,
+          "road_abs_z_p90_m": 0.0037381025396669987,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 53,
+          "road_abs_z_p90_m": 0.001333551155182744,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town01-03",
+      "original_split": "train",
+      "start_index": 20,
+      "manifests": [
+        "inputs/frames/town01-03/00169648.json",
+        "inputs/frames/town01-03/00169652.json",
+        "inputs/frames/town01-03/00169656.json",
+        "inputs/frames/town01-03/00169660.json",
+        "inputs/frames/town01-03/00169664.json",
+        "inputs/frames/town01-03/00169668.json",
+        "inputs/frames/town01-03/00169672.json",
+        "inputs/frames/town01-03/00169676.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 22,
+          "road_abs_z_p90_m": 0.0011525092069361253,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 18,
+          "road_abs_z_p90_m": 0.0011002539848939063,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 24,
+          "road_abs_z_p90_m": 0.003918313468597168,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 24,
+          "road_abs_z_p90_m": 0.0020767034337911827,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 30,
+          "road_abs_z_p90_m": 0.002062111516677745,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 37,
+          "road_abs_z_p90_m": 0.0049908928544599735,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 39,
+          "road_abs_z_p90_m": 0.001716281575932177,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 50,
+          "road_abs_z_p90_m": 0.0021709484720072057,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town01-03",
+      "original_split": "train",
+      "start_index": 60,
+      "manifests": [
+        "inputs/frames/town01-03/00169808.json",
+        "inputs/frames/town01-03/00169812.json",
+        "inputs/frames/town01-03/00169816.json",
+        "inputs/frames/town01-03/00169820.json",
+        "inputs/frames/town01-03/00169824.json",
+        "inputs/frames/town01-03/00169828.json",
+        "inputs/frames/town01-03/00169832.json",
+        "inputs/frames/town01-03/00169836.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 42,
+          "road_abs_z_p90_m": 0.0035020761735456984,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 50,
+          "road_abs_z_p90_m": 0.0022449600439673036,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 64,
+          "road_abs_z_p90_m": 0.0039860206238067075,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 76,
+          "road_abs_z_p90_m": 0.001411234937261474,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 97,
+          "road_abs_z_p90_m": 0.001440304616161403,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 103,
+          "road_abs_z_p90_m": 0.004194636892955295,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 102,
+          "road_abs_z_p90_m": 0.0011759675064130007,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 94,
+          "road_abs_z_p90_m": 0.004225724381193352,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town01-03",
+      "original_split": "train",
+      "start_index": 100,
+      "manifests": [
+        "inputs/frames/town01-03/00169968.json",
+        "inputs/frames/town01-03/00169972.json",
+        "inputs/frames/town01-03/00169976.json",
+        "inputs/frames/town01-03/00169980.json",
+        "inputs/frames/town01-03/00169984.json",
+        "inputs/frames/town01-03/00169988.json",
+        "inputs/frames/town01-03/00169992.json",
+        "inputs/frames/town01-03/00169996.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 101,
+          "road_abs_z_p90_m": 0.00256612614191587,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 96,
+          "road_abs_z_p90_m": 0.0011913801990601324,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 85,
+          "road_abs_z_p90_m": 0.005056575987137046,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 74,
+          "road_abs_z_p90_m": 0.0011853835685436075,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 58,
+          "road_abs_z_p90_m": 0.0027576992069324735,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 34,
+          "road_abs_z_p90_m": 0.0027161349319472015,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 22,
+          "road_abs_z_p90_m": 0.0011669746392888758,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 22,
+          "road_abs_z_p90_m": 0.005057076578191966,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town03-00",
+      "original_split": "train",
+      "start_index": 20,
+      "manifests": [
+        "inputs/frames/town03-00/00167680.json",
+        "inputs/frames/town03-00/00167684.json",
+        "inputs/frames/town03-00/00167688.json",
+        "inputs/frames/town03-00/00167692.json",
+        "inputs/frames/town03-00/00167696.json",
+        "inputs/frames/town03-00/00167700.json",
+        "inputs/frames/town03-00/00167704.json",
+        "inputs/frames/town03-00/00167708.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 581,
+          "road_abs_z_p90_m": 0.0012522857404044796,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 580,
+          "road_abs_z_p90_m": 0.007899253333094804,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 570,
+          "road_abs_z_p90_m": 0.01607597268080263,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 573,
+          "road_abs_z_p90_m": 0.003932241236384737,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 571,
+          "road_abs_z_p90_m": 0.0030647436120929683,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 561,
+          "road_abs_z_p90_m": 0.007818932660376032,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 566,
+          "road_abs_z_p90_m": 0.011293963576370383,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 549,
+          "road_abs_z_p90_m": 0.001888216399446918,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town03-00",
+      "original_split": "train",
+      "start_index": 60,
+      "manifests": [
+        "inputs/frames/town03-00/00167840.json",
+        "inputs/frames/town03-00/00167844.json",
+        "inputs/frames/town03-00/00167848.json",
+        "inputs/frames/town03-00/00167852.json",
+        "inputs/frames/town03-00/00167856.json",
+        "inputs/frames/town03-00/00167860.json",
+        "inputs/frames/town03-00/00167864.json",
+        "inputs/frames/town03-00/00167868.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 561,
+          "road_abs_z_p90_m": 0.0013751443140448405,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 560,
+          "road_abs_z_p90_m": 0.001580209833147639,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 560,
+          "road_abs_z_p90_m": 0.0017107994384064629,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 557,
+          "road_abs_z_p90_m": 0.0016078573210793312,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 553,
+          "road_abs_z_p90_m": 0.0016399078940980694,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 554,
+          "road_abs_z_p90_m": 0.0017345012384553994,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 554,
+          "road_abs_z_p90_m": 0.001795342606053585,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 554,
+          "road_abs_z_p90_m": 0.002447937424148705,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town03-00",
+      "original_split": "train",
+      "start_index": 100,
+      "manifests": [
+        "inputs/frames/town03-00/00168000.json",
+        "inputs/frames/town03-00/00168004.json",
+        "inputs/frames/town03-00/00168008.json",
+        "inputs/frames/town03-00/00168012.json",
+        "inputs/frames/town03-00/00168016.json",
+        "inputs/frames/town03-00/00168020.json",
+        "inputs/frames/town03-00/00168024.json",
+        "inputs/frames/town03-00/00168028.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 558,
+          "road_abs_z_p90_m": 0.0018500011994537773,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 559,
+          "road_abs_z_p90_m": 0.0018510746323309847,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 560,
+          "road_abs_z_p90_m": 0.0018460535759861067,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 560,
+          "road_abs_z_p90_m": 0.0018487679485943431,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 560,
+          "road_abs_z_p90_m": 0.0018469588069316423,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 559,
+          "road_abs_z_p90_m": 0.0018491008489818217,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 559,
+          "road_abs_z_p90_m": 0.0018482626586140416,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 558,
+          "road_abs_z_p90_m": 0.0018449098971453637,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town03-01",
+      "original_split": "train",
+      "start_index": 20,
+      "manifests": [
+        "inputs/frames/town03-01/00170346.json",
+        "inputs/frames/town03-01/00170350.json",
+        "inputs/frames/town03-01/00170354.json",
+        "inputs/frames/town03-01/00170358.json",
+        "inputs/frames/town03-01/00170362.json",
+        "inputs/frames/town03-01/00170366.json",
+        "inputs/frames/town03-01/00170370.json",
+        "inputs/frames/town03-01/00170374.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 374,
+          "road_abs_z_p90_m": 0.0017089123031893915,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 387,
+          "road_abs_z_p90_m": 0.0016125657210197542,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 409,
+          "road_abs_z_p90_m": 0.0019353286585375162,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 418,
+          "road_abs_z_p90_m": 0.002910732782745055,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 398,
+          "road_abs_z_p90_m": 0.0038911061818034387,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 366,
+          "road_abs_z_p90_m": 0.00482987939297197,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 342,
+          "road_abs_z_p90_m": 0.005807768154605153,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 332,
+          "road_abs_z_p90_m": 0.006766099141005011,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town03-01",
+      "original_split": "train",
+      "start_index": 60,
+      "manifests": [
+        "inputs/frames/town03-01/00170506.json",
+        "inputs/frames/town03-01/00170510.json",
+        "inputs/frames/town03-01/00170514.json",
+        "inputs/frames/town03-01/00170518.json",
+        "inputs/frames/town03-01/00170522.json",
+        "inputs/frames/town03-01/00170526.json",
+        "inputs/frames/town03-01/00170530.json",
+        "inputs/frames/town03-01/00170534.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 381,
+          "road_abs_z_p90_m": 0.01404017948801406,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 380,
+          "road_abs_z_p90_m": 0.006773100808720887,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 369,
+          "road_abs_z_p90_m": 0.009797287571271074,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 389,
+          "road_abs_z_p90_m": 0.010545791569104068,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 412,
+          "road_abs_z_p90_m": 0.009782754820744399,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 429,
+          "road_abs_z_p90_m": 0.008022159241483418,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 451,
+          "road_abs_z_p90_m": 0.006618589300919985,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 495,
+          "road_abs_z_p90_m": 0.00986604376828622,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town03-01",
+      "original_split": "train",
+      "start_index": 100,
+      "manifests": [
+        "inputs/frames/town03-01/00170666.json",
+        "inputs/frames/town03-01/00170670.json",
+        "inputs/frames/town03-01/00170674.json",
+        "inputs/frames/town03-01/00170678.json",
+        "inputs/frames/town03-01/00170682.json",
+        "inputs/frames/town03-01/00170686.json",
+        "inputs/frames/town03-01/00170690.json",
+        "inputs/frames/town03-01/00170694.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 479,
+          "road_abs_z_p90_m": 0.021416269774211773,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 479,
+          "road_abs_z_p90_m": 0.021416269774211773,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 479,
+          "road_abs_z_p90_m": 0.021416269774211773,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 479,
+          "road_abs_z_p90_m": 0.021416269774211773,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 479,
+          "road_abs_z_p90_m": 0.021416269774211773,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 479,
+          "road_abs_z_p90_m": 0.021416269774211773,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 479,
+          "road_abs_z_p90_m": 0.021416269774211773,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 479,
+          "road_abs_z_p90_m": 0.021416269774211773,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town03-02",
+      "original_split": "train",
+      "start_index": 20,
+      "manifests": [
+        "inputs/frames/town03-02/00244922.json",
+        "inputs/frames/town03-02/00244926.json",
+        "inputs/frames/town03-02/00244930.json",
+        "inputs/frames/town03-02/00244934.json",
+        "inputs/frames/town03-02/00244938.json",
+        "inputs/frames/town03-02/00244942.json",
+        "inputs/frames/town03-02/00244946.json",
+        "inputs/frames/town03-02/00244950.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 24751,
+          "line_samples_stride4": 369,
+          "road_abs_z_p90_m": 0.0014678108528998423,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        },
+        {
+          "wall_samples_stride4": 24757,
+          "line_samples_stride4": 363,
+          "road_abs_z_p90_m": 0.0014746290718298694,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        },
+        {
+          "wall_samples_stride4": 24736,
+          "line_samples_stride4": 357,
+          "road_abs_z_p90_m": 0.004661083939117373,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        },
+        {
+          "wall_samples_stride4": 24691,
+          "line_samples_stride4": 351,
+          "road_abs_z_p90_m": 0.002678524117378789,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        },
+        {
+          "wall_samples_stride4": 24708,
+          "line_samples_stride4": 357,
+          "road_abs_z_p90_m": 0.002153457084506316,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        },
+        {
+          "wall_samples_stride4": 24715,
+          "line_samples_stride4": 361,
+          "road_abs_z_p90_m": 0.005631556105698143,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        },
+        {
+          "wall_samples_stride4": 24836,
+          "line_samples_stride4": 373,
+          "road_abs_z_p90_m": 0.0023577469259153253,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        },
+        {
+          "wall_samples_stride4": 24817,
+          "line_samples_stride4": 384,
+          "road_abs_z_p90_m": 0.002298929679332762,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "scene": "town03-02",
+      "original_split": "train",
+      "start_index": 60,
+      "manifests": [
+        "inputs/frames/town03-02/00245082.json",
+        "inputs/frames/town03-02/00245086.json",
+        "inputs/frames/town03-02/00245090.json",
+        "inputs/frames/town03-02/00245094.json",
+        "inputs/frames/town03-02/00245098.json",
+        "inputs/frames/town03-02/00245102.json",
+        "inputs/frames/town03-02/00245106.json",
+        "inputs/frames/town03-02/00245110.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 8087,
+          "line_samples_stride4": 439,
+          "road_abs_z_p90_m": 0.0013376811029519597,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        },
+        {
+          "wall_samples_stride4": 7459,
+          "line_samples_stride4": 424,
+          "road_abs_z_p90_m": 0.002953278329256559,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        },
+        {
+          "wall_samples_stride4": 6477,
+          "line_samples_stride4": 410,
+          "road_abs_z_p90_m": 0.003329403911096241,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        },
+        {
+          "wall_samples_stride4": 6008,
+          "line_samples_stride4": 392,
+          "road_abs_z_p90_m": 0.0013106819139860892,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        },
+        {
+          "wall_samples_stride4": 5638,
+          "line_samples_stride4": 390,
+          "road_abs_z_p90_m": 0.00542839975692675,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        },
+        {
+          "wall_samples_stride4": 5411,
+          "line_samples_stride4": 382,
+          "road_abs_z_p90_m": 0.00183561144104889,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        },
+        {
+          "wall_samples_stride4": 5468,
+          "line_samples_stride4": 359,
+          "road_abs_z_p90_m": 0.0012982031260011732,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        },
+        {
+          "wall_samples_stride4": 5825,
+          "line_samples_stride4": 346,
+          "road_abs_z_p90_m": 0.006415692354186176,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "scene": "town03-02",
+      "original_split": "train",
+      "start_index": 100,
+      "manifests": [
+        "inputs/frames/town03-02/00245242.json",
+        "inputs/frames/town03-02/00245246.json",
+        "inputs/frames/town03-02/00245250.json",
+        "inputs/frames/town03-02/00245254.json",
+        "inputs/frames/town03-02/00245258.json",
+        "inputs/frames/town03-02/00245262.json",
+        "inputs/frames/town03-02/00245266.json",
+        "inputs/frames/town03-02/00245270.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 8278,
+          "line_samples_stride4": 409,
+          "road_abs_z_p90_m": 0.002677235855357729,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        },
+        {
+          "wall_samples_stride4": 7278,
+          "line_samples_stride4": 476,
+          "road_abs_z_p90_m": 0.004784443514614267,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        },
+        {
+          "wall_samples_stride4": 6242,
+          "line_samples_stride4": 500,
+          "road_abs_z_p90_m": 0.0027567552183094257,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        },
+        {
+          "wall_samples_stride4": 5719,
+          "line_samples_stride4": 485,
+          "road_abs_z_p90_m": 0.0028642152486416882,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        },
+        {
+          "wall_samples_stride4": 6657,
+          "line_samples_stride4": 433,
+          "road_abs_z_p90_m": 0.005721531031821736,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        },
+        {
+          "wall_samples_stride4": 7696,
+          "line_samples_stride4": 376,
+          "road_abs_z_p90_m": 0.002196597211483287,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        },
+        {
+          "wall_samples_stride4": 8262,
+          "line_samples_stride4": 341,
+          "road_abs_z_p90_m": 0.002262571604498831,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        },
+        {
+          "wall_samples_stride4": 7486,
+          "line_samples_stride4": 341,
+          "road_abs_z_p90_m": 0.0031681499163516147,
+          "excluded_reasons": [
+            "visible_near_wall_in_ego_corridor"
+          ]
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "scene": "town03-03",
+      "original_split": "train",
+      "start_index": 20,
+      "manifests": [
+        "inputs/frames/town03-03/00245588.json",
+        "inputs/frames/town03-03/00245592.json",
+        "inputs/frames/town03-03/00245596.json",
+        "inputs/frames/town03-03/00245600.json",
+        "inputs/frames/town03-03/00245604.json",
+        "inputs/frames/town03-03/00245608.json",
+        "inputs/frames/town03-03/00245612.json",
+        "inputs/frames/town03-03/00245616.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 376,
+          "road_abs_z_p90_m": 0.030884074551530385,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 388,
+          "road_abs_z_p90_m": 0.03970973660374134,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 382,
+          "road_abs_z_p90_m": 0.04155895174749271,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 372,
+          "road_abs_z_p90_m": 0.04172034462216346,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 379,
+          "road_abs_z_p90_m": 0.04653595302488126,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 366,
+          "road_abs_z_p90_m": 0.040485017887943744,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 381,
+          "road_abs_z_p90_m": 0.03548249414561647,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 420,
+          "road_abs_z_p90_m": 0.041305592646783,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town03-03",
+      "original_split": "train",
+      "start_index": 60,
+      "manifests": [
+        "inputs/frames/town03-03/00245748.json",
+        "inputs/frames/town03-03/00245752.json",
+        "inputs/frames/town03-03/00245756.json",
+        "inputs/frames/town03-03/00245760.json",
+        "inputs/frames/town03-03/00245764.json",
+        "inputs/frames/town03-03/00245768.json",
+        "inputs/frames/town03-03/00245772.json",
+        "inputs/frames/town03-03/00245776.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 403,
+          "road_abs_z_p90_m": 0.030838436460025445,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 429,
+          "road_abs_z_p90_m": 0.027282942801595232,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 400,
+          "road_abs_z_p90_m": 0.03445262403467833,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 386,
+          "road_abs_z_p90_m": 0.039952931124480395,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 366,
+          "road_abs_z_p90_m": 0.036009798772265816,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 354,
+          "road_abs_z_p90_m": 0.04150731402774037,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 356,
+          "road_abs_z_p90_m": 0.03910018157763076,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 368,
+          "road_abs_z_p90_m": 0.03340738319316605,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town03-03",
+      "original_split": "train",
+      "start_index": 100,
+      "manifests": [
+        "inputs/frames/town03-03/00245908.json",
+        "inputs/frames/town03-03/00245912.json",
+        "inputs/frames/town03-03/00245916.json",
+        "inputs/frames/town03-03/00245920.json",
+        "inputs/frames/town03-03/00245924.json",
+        "inputs/frames/town03-03/00245928.json",
+        "inputs/frames/town03-03/00245932.json",
+        "inputs/frames/town03-03/00245936.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 341,
+          "road_abs_z_p90_m": 0.00950458798192666,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 333,
+          "road_abs_z_p90_m": 0.005984173326743392,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 360,
+          "road_abs_z_p90_m": 0.01093899598354331,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 364,
+          "road_abs_z_p90_m": 0.011217904048868646,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 361,
+          "road_abs_z_p90_m": 0.001526091840549526,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 367,
+          "road_abs_z_p90_m": 0.0014371078569054506,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 374,
+          "road_abs_z_p90_m": 0.0016346244689799505,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 376,
+          "road_abs_z_p90_m": 0.0012801431882440983,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town04-00",
+      "original_split": "validation",
+      "start_index": 20,
+      "manifests": [
+        "inputs/frames/town04-00/00246278.json",
+        "inputs/frames/town04-00/00246282.json",
+        "inputs/frames/town04-00/00246286.json",
+        "inputs/frames/town04-00/00246290.json",
+        "inputs/frames/town04-00/00246294.json",
+        "inputs/frames/town04-00/00246298.json",
+        "inputs/frames/town04-00/00246302.json",
+        "inputs/frames/town04-00/00246306.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 269,
+          "road_abs_z_p90_m": 0.006246834866254282,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 297,
+          "road_abs_z_p90_m": 0.0025274635867731376,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 274,
+          "road_abs_z_p90_m": 0.0019359932503724142,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 274,
+          "road_abs_z_p90_m": 0.002419629092196729,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 303,
+          "road_abs_z_p90_m": 0.015419203962037997,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 276,
+          "road_abs_z_p90_m": 0.003441886298567675,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 293,
+          "road_abs_z_p90_m": 0.0074297524606270066,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 297,
+          "road_abs_z_p90_m": 0.007783674912673844,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town04-00",
+      "original_split": "validation",
+      "start_index": 60,
+      "manifests": [
+        "inputs/frames/town04-00/00246438.json",
+        "inputs/frames/town04-00/00246442.json",
+        "inputs/frames/town04-00/00246446.json",
+        "inputs/frames/town04-00/00246450.json",
+        "inputs/frames/town04-00/00246454.json",
+        "inputs/frames/town04-00/00246458.json",
+        "inputs/frames/town04-00/00246462.json",
+        "inputs/frames/town04-00/00246466.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 322,
+          "road_abs_z_p90_m": 0.001666717583299837,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 322,
+          "road_abs_z_p90_m": 0.0016687895455271384,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 321,
+          "road_abs_z_p90_m": 0.0016775740024681518,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 321,
+          "road_abs_z_p90_m": 0.00166671997562855,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 321,
+          "road_abs_z_p90_m": 0.0016629294552190643,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 322,
+          "road_abs_z_p90_m": 0.0016730808718870005,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 321,
+          "road_abs_z_p90_m": 0.001673125867921188,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 322,
+          "road_abs_z_p90_m": 0.0016632076107731875,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town04-00",
+      "original_split": "validation",
+      "start_index": 100,
+      "manifests": [
+        "inputs/frames/town04-00/00246598.json",
+        "inputs/frames/town04-00/00246602.json",
+        "inputs/frames/town04-00/00246606.json",
+        "inputs/frames/town04-00/00246610.json",
+        "inputs/frames/town04-00/00246614.json",
+        "inputs/frames/town04-00/00246618.json",
+        "inputs/frames/town04-00/00246622.json",
+        "inputs/frames/town04-00/00246626.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 320,
+          "road_abs_z_p90_m": 0.0016628696002928046,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 320,
+          "road_abs_z_p90_m": 0.0016791707719225,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 320,
+          "road_abs_z_p90_m": 0.0016773211791647035,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 319,
+          "road_abs_z_p90_m": 0.001675834081241412,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 319,
+          "road_abs_z_p90_m": 0.0016786688076679823,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 319,
+          "road_abs_z_p90_m": 0.001673684270846021,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 319,
+          "road_abs_z_p90_m": 0.0016646158628816688,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 320,
+          "road_abs_z_p90_m": 0.0016809529394317569,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town04-01",
+      "original_split": "validation",
+      "start_index": 20,
+      "manifests": [
+        "inputs/frames/town04-01/00246933.json",
+        "inputs/frames/town04-01/00246937.json",
+        "inputs/frames/town04-01/00246941.json",
+        "inputs/frames/town04-01/00246945.json",
+        "inputs/frames/town04-01/00246949.json",
+        "inputs/frames/town04-01/00246953.json",
+        "inputs/frames/town04-01/00246957.json",
+        "inputs/frames/town04-01/00246961.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 402,
+          "road_abs_z_p90_m": 0.003012030751227801,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 393,
+          "road_abs_z_p90_m": 0.001610214200529558,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 347,
+          "road_abs_z_p90_m": 0.001397396261589301,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 336,
+          "road_abs_z_p90_m": 0.0015385066550375637,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 349,
+          "road_abs_z_p90_m": 0.001900292607167886,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 365,
+          "road_abs_z_p90_m": 0.0017321148930579788,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 394,
+          "road_abs_z_p90_m": 0.001701780470249492,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 372,
+          "road_abs_z_p90_m": 0.0017137013690151637,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town04-01",
+      "original_split": "validation",
+      "start_index": 60,
+      "manifests": [
+        "inputs/frames/town04-01/00247093.json",
+        "inputs/frames/town04-01/00247097.json",
+        "inputs/frames/town04-01/00247101.json",
+        "inputs/frames/town04-01/00247105.json",
+        "inputs/frames/town04-01/00247109.json",
+        "inputs/frames/town04-01/00247113.json",
+        "inputs/frames/town04-01/00247117.json",
+        "inputs/frames/town04-01/00247121.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 271,
+          "road_abs_z_p90_m": 0.0016701318003015774,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 271,
+          "road_abs_z_p90_m": 0.0016701318003015774,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 271,
+          "road_abs_z_p90_m": 0.0016701318003015774,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 271,
+          "road_abs_z_p90_m": 0.0016701318003015774,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 271,
+          "road_abs_z_p90_m": 0.0016701318003015774,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 271,
+          "road_abs_z_p90_m": 0.0016701318003015774,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 271,
+          "road_abs_z_p90_m": 0.0016701318003015774,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 271,
+          "road_abs_z_p90_m": 0.0016701318003015774,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town04-01",
+      "original_split": "validation",
+      "start_index": 100,
+      "manifests": [
+        "inputs/frames/town04-01/00247253.json",
+        "inputs/frames/town04-01/00247257.json",
+        "inputs/frames/town04-01/00247261.json",
+        "inputs/frames/town04-01/00247265.json",
+        "inputs/frames/town04-01/00247269.json",
+        "inputs/frames/town04-01/00247273.json",
+        "inputs/frames/town04-01/00247277.json",
+        "inputs/frames/town04-01/00247281.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 141,
+          "road_abs_z_p90_m": 0.08317584660417965,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 170,
+          "road_abs_z_p90_m": 0.0841706562489691,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 199,
+          "road_abs_z_p90_m": 0.06631791455715158,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 237,
+          "road_abs_z_p90_m": 0.05508327344455648,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 309,
+          "road_abs_z_p90_m": 0.05233889356706457,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 386,
+          "road_abs_z_p90_m": 0.04978308291076044,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 498,
+          "road_abs_z_p90_m": 0.049398198381009784,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 288,
+          "road_abs_z_p90_m": 0.04814164937027724,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town04-02",
+      "original_split": "validation",
+      "start_index": 20,
+      "manifests": [
+        "inputs/frames/town04-02/00247588.json",
+        "inputs/frames/town04-02/00247592.json",
+        "inputs/frames/town04-02/00247596.json",
+        "inputs/frames/town04-02/00247600.json",
+        "inputs/frames/town04-02/00247604.json",
+        "inputs/frames/town04-02/00247608.json",
+        "inputs/frames/town04-02/00247612.json",
+        "inputs/frames/town04-02/00247616.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 305,
+          "road_abs_z_p90_m": 0.0016366685471260523,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 291,
+          "road_abs_z_p90_m": 0.0017832373817130431,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 261,
+          "road_abs_z_p90_m": 0.0016384167162794671,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 227,
+          "road_abs_z_p90_m": 0.0017557418734148512,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 228,
+          "road_abs_z_p90_m": 0.0016539294228993472,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 226,
+          "road_abs_z_p90_m": 0.0017072890634182158,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 223,
+          "road_abs_z_p90_m": 0.0016714664259936507,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 223,
+          "road_abs_z_p90_m": 0.0017149903902424768,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town04-02",
+      "original_split": "validation",
+      "start_index": 60,
+      "manifests": [
+        "inputs/frames/town04-02/00247748.json",
+        "inputs/frames/town04-02/00247752.json",
+        "inputs/frames/town04-02/00247756.json",
+        "inputs/frames/town04-02/00247760.json",
+        "inputs/frames/town04-02/00247764.json",
+        "inputs/frames/town04-02/00247768.json",
+        "inputs/frames/town04-02/00247772.json",
+        "inputs/frames/town04-02/00247776.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 221,
+          "road_abs_z_p90_m": 0.0016961224401166764,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 231,
+          "road_abs_z_p90_m": 0.0016943150278543317,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 245,
+          "road_abs_z_p90_m": 0.001691521059964174,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 264,
+          "road_abs_z_p90_m": 0.0016957120117986335,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 301,
+          "road_abs_z_p90_m": 0.0016820524497191513,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 297,
+          "road_abs_z_p90_m": 0.0016963639376408324,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 274,
+          "road_abs_z_p90_m": 0.0016930111761717104,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 247,
+          "road_abs_z_p90_m": 0.0016940356310646276,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town04-02",
+      "original_split": "validation",
+      "start_index": 100,
+      "manifests": [
+        "inputs/frames/town04-02/00247908.json",
+        "inputs/frames/town04-02/00247912.json",
+        "inputs/frames/town04-02/00247916.json",
+        "inputs/frames/town04-02/00247920.json",
+        "inputs/frames/town04-02/00247924.json",
+        "inputs/frames/town04-02/00247928.json",
+        "inputs/frames/town04-02/00247932.json",
+        "inputs/frames/town04-02/00247936.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 257,
+          "road_abs_z_p90_m": 0.0016836198922159928,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 228,
+          "road_abs_z_p90_m": 0.00168565372739371,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 225,
+          "road_abs_z_p90_m": 0.0016893892925491372,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 225,
+          "road_abs_z_p90_m": 0.0016874232403909506,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 221,
+          "road_abs_z_p90_m": 0.0016888322820047374,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 224,
+          "road_abs_z_p90_m": 0.0016786831869700868,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 236,
+          "road_abs_z_p90_m": 0.0016732455203530617,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 249,
+          "road_abs_z_p90_m": 0.0016888393911497213,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    }
+  ],
+  "selected": [
+    {
+      "scene": "town01-00",
+      "original_split": "train",
+      "start_index": 20,
+      "manifests": [
+        "inputs/frames/town01-00/00166989.json",
+        "inputs/frames/town01-00/00166993.json",
+        "inputs/frames/town01-00/00166997.json",
+        "inputs/frames/town01-00/00167001.json",
+        "inputs/frames/town01-00/00167005.json",
+        "inputs/frames/town01-00/00167009.json",
+        "inputs/frames/town01-00/00167013.json",
+        "inputs/frames/town01-00/00167017.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 24,
+          "road_abs_z_p90_m": 0.0013919019038590719,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 28,
+          "road_abs_z_p90_m": 0.005091402888913188,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 36,
+          "road_abs_z_p90_m": 0.00356552845630409,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 42,
+          "road_abs_z_p90_m": 0.0022569143627206856,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 52,
+          "road_abs_z_p90_m": 0.0037949524467163044,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 69,
+          "road_abs_z_p90_m": 0.0015041906190549348,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 86,
+          "road_abs_z_p90_m": 0.00160686321195036,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 102,
+          "road_abs_z_p90_m": 0.0044569215641467866,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town01-01",
+      "original_split": "train",
+      "start_index": 20,
+      "manifests": [
+        "inputs/frames/town01-01/00168344.json",
+        "inputs/frames/town01-01/00168348.json",
+        "inputs/frames/town01-01/00168352.json",
+        "inputs/frames/town01-01/00168356.json",
+        "inputs/frames/town01-01/00168360.json",
+        "inputs/frames/town01-01/00168364.json",
+        "inputs/frames/town01-01/00168368.json",
+        "inputs/frames/town01-01/00168372.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 21,
+          "road_abs_z_p90_m": 0.004669747846691719,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 26,
+          "road_abs_z_p90_m": 0.0014752646040996575,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 28,
+          "road_abs_z_p90_m": 0.0013801963016624175,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 35,
+          "road_abs_z_p90_m": 0.00420665095488415,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 38,
+          "road_abs_z_p90_m": 0.001583967551176646,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 45,
+          "road_abs_z_p90_m": 0.005195193117281561,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 58,
+          "road_abs_z_p90_m": 0.0011392297774822867,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 76,
+          "road_abs_z_p90_m": 0.0026356001309821406,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town04-00",
+      "original_split": "validation",
+      "start_index": 20,
+      "manifests": [
+        "inputs/frames/town04-00/00246278.json",
+        "inputs/frames/town04-00/00246282.json",
+        "inputs/frames/town04-00/00246286.json",
+        "inputs/frames/town04-00/00246290.json",
+        "inputs/frames/town04-00/00246294.json",
+        "inputs/frames/town04-00/00246298.json",
+        "inputs/frames/town04-00/00246302.json",
+        "inputs/frames/town04-00/00246306.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 269,
+          "road_abs_z_p90_m": 0.006246834866254282,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 297,
+          "road_abs_z_p90_m": 0.0025274635867731376,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 274,
+          "road_abs_z_p90_m": 0.0019359932503724142,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 274,
+          "road_abs_z_p90_m": 0.002419629092196729,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 303,
+          "road_abs_z_p90_m": 0.015419203962037997,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 276,
+          "road_abs_z_p90_m": 0.003441886298567675,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 293,
+          "road_abs_z_p90_m": 0.0074297524606270066,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 297,
+          "road_abs_z_p90_m": 0.007783674912673844,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    },
+    {
+      "scene": "town04-01",
+      "original_split": "validation",
+      "start_index": 20,
+      "manifests": [
+        "inputs/frames/town04-01/00246933.json",
+        "inputs/frames/town04-01/00246937.json",
+        "inputs/frames/town04-01/00246941.json",
+        "inputs/frames/town04-01/00246945.json",
+        "inputs/frames/town04-01/00246949.json",
+        "inputs/frames/town04-01/00246953.json",
+        "inputs/frames/town04-01/00246957.json",
+        "inputs/frames/town04-01/00246961.json"
+      ],
+      "checks": [
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 402,
+          "road_abs_z_p90_m": 0.003012030751227801,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 393,
+          "road_abs_z_p90_m": 0.001610214200529558,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 347,
+          "road_abs_z_p90_m": 0.001397396261589301,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 336,
+          "road_abs_z_p90_m": 0.0015385066550375637,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 349,
+          "road_abs_z_p90_m": 0.001900292607167886,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 365,
+          "road_abs_z_p90_m": 0.0017321148930579788,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 394,
+          "road_abs_z_p90_m": 0.001701780470249492,
+          "excluded_reasons": []
+        },
+        {
+          "wall_samples_stride4": 0,
+          "line_samples_stride4": 372,
+          "road_abs_z_p90_m": 0.0017137013690151637,
+          "excluded_reasons": []
+        }
+      ],
+      "eligible": true
+    }
+  ]
+}

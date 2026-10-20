@@ -1,0 +1,10 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "torch": "2.10.0+cu128",
+  "added_distribution": "opencv-python-headless==4.13.0.92",
+  "wheel": "artifacts/dependencies/phase4/opencv_python_headless-4.13.0.92-cp37-abi3-win_amd64.whl",
+  "wheel_sha256": "77a82fe35ddcec0f62c15f2ba8a12ecc2ed4207c17b0902c7a3151ae29f37fb6",
+  "wheel_in_git": false,
+  "installation": "Official PyPI pinned wheel, --no-deps"
+}

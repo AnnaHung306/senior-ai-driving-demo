@@ -1,0 +1,556 @@
+{
+  "status": "pending_assistant_visual_review",
+  "scope": "All32 saved bundles in contact pages, fixed middle cases and validation error extremes. No independent new trials.",
+  "pages": [
+    {
+      "kind": "prediction",
+      "path": "prediction-00.png",
+      "sha256": "19e4b9bbee9e9e520d62d489748944cd136d41f3ec55d52fe33db32edc004b6b",
+      "sources": [
+        {
+          "frame": 166989,
+          "scene": "town01-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town01-00\\166989\\panel.png",
+          "sha256": "354374f6e5f509ace384a18eacddf737f2a5757ac2f06e145ec69c52f0c8f5dd"
+        },
+        {
+          "frame": 166993,
+          "scene": "town01-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town01-00\\166993\\panel.png",
+          "sha256": "58c700e1caa3853c0de431a66fce91572a2adbdcd1d5820eec79273c36c35a66"
+        },
+        {
+          "frame": 166997,
+          "scene": "town01-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town01-00\\166997\\panel.png",
+          "sha256": "2693b7305dfcbad16910c5d2e35a34a3eeb30a3e75459b13d18a76595394638a"
+        },
+        {
+          "frame": 167001,
+          "scene": "town01-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town01-00\\167001\\panel.png",
+          "sha256": "69666ad0e5e578e077b9de267bdc14e3e591fa88809536a62b6f43545ba9040d"
+        }
+      ]
+    },
+    {
+      "kind": "prediction",
+      "path": "prediction-01.png",
+      "sha256": "bbffc61b0fecae302864a75574b7b32017aee206e9a5f8e66e91e0af2897fe19",
+      "sources": [
+        {
+          "frame": 167005,
+          "scene": "town01-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town01-00\\167005\\panel.png",
+          "sha256": "e4d61e5a549b64f2dbfcf6d1d9aa04a2a624a050cc32eb971c807ff68419d84a"
+        },
+        {
+          "frame": 167009,
+          "scene": "town01-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town01-00\\167009\\panel.png",
+          "sha256": "afcf14308f2a9962862d9649f9ad65c1a10c223afba413c8a34515dfac0fa074"
+        },
+        {
+          "frame": 167013,
+          "scene": "town01-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town01-00\\167013\\panel.png",
+          "sha256": "eab6ca24cdd3908319f6b93052b0aa98db595c467af5ce39abf83ea0a9566c3e"
+        },
+        {
+          "frame": 167017,
+          "scene": "town01-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town01-00\\167017\\panel.png",
+          "sha256": "df25961ccb53a4d69b121dbee0d990701cea19771d7fe75c8eeb6be8aa5a486f"
+        }
+      ]
+    },
+    {
+      "kind": "prediction",
+      "path": "prediction-02.png",
+      "sha256": "22a0424f1428a49dac25d708c2d6f0c2071381807cd865430ce0305a74594ff0",
+      "sources": [
+        {
+          "frame": 168344,
+          "scene": "town01-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town01-01\\168344\\panel.png",
+          "sha256": "93e99c3b3d03a514ce01302c3afbd65315a1cfc8c55aa244ef83eb436f9c4e10"
+        },
+        {
+          "frame": 168348,
+          "scene": "town01-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town01-01\\168348\\panel.png",
+          "sha256": "d3247f5c4a05111bb064e6ef6a8520083ea2f094541562ff7b02a9a6923c288d"
+        },
+        {
+          "frame": 168352,
+          "scene": "town01-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town01-01\\168352\\panel.png",
+          "sha256": "df3d232b9d954fd7b2243f1d7956c5c3e251705004289c1cb54f5722d816f50a"
+        },
+        {
+          "frame": 168356,
+          "scene": "town01-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town01-01\\168356\\panel.png",
+          "sha256": "f2c1cc3640ce7099853971a73882aaf6927253bb921bf280bb86a8c01c62b602"
+        }
+      ]
+    },
+    {
+      "kind": "prediction",
+      "path": "prediction-03.png",
+      "sha256": "2572c18c6a85aeb0573392361fb7de8a2e7c9e07bf010563b162ff1da0153307",
+      "sources": [
+        {
+          "frame": 168360,
+          "scene": "town01-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town01-01\\168360\\panel.png",
+          "sha256": "23dd470df249faf565f4bb78561e8c51ad019bbb2ce4e75fc9997424ae645210"
+        },
+        {
+          "frame": 168364,
+          "scene": "town01-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town01-01\\168364\\panel.png",
+          "sha256": "2e1c8fdf111819be4bf6f4cfc86628229e23058cecde9f598d25ab08753d3005"
+        },
+        {
+          "frame": 168368,
+          "scene": "town01-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town01-01\\168368\\panel.png",
+          "sha256": "5460cb8782bb6b3c08104cf347c6089ba191fc28ed8aaf8e785ad874e198c295"
+        },
+        {
+          "frame": 168372,
+          "scene": "town01-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town01-01\\168372\\panel.png",
+          "sha256": "298660fb813f1e95676a9cac29d059a2952c53dbbb7b97c7a8e2e2bba97bc349"
+        }
+      ]
+    },
+    {
+      "kind": "prediction",
+      "path": "prediction-04.png",
+      "sha256": "302252af618318a7b564e09f24e42b98546add3cb8cd986148625a08c78d5604",
+      "sources": [
+        {
+          "frame": 246278,
+          "scene": "town04-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town04-00\\246278\\panel.png",
+          "sha256": "8182194b2b1deb356992fbf8fa4d88b5e3e0a8aee39b0ddee8c33484162dfc99"
+        },
+        {
+          "frame": 246282,
+          "scene": "town04-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town04-00\\246282\\panel.png",
+          "sha256": "b57a7ad57504bff215e1f03b33d7fad18f8db53a3c58e5582434bacae1d03e8b"
+        },
+        {
+          "frame": 246286,
+          "scene": "town04-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town04-00\\246286\\panel.png",
+          "sha256": "c0263ae1c089a179750dcbce77ac0bc105125798113060d2d076b97c7fa2fc70"
+        },
+        {
+          "frame": 246290,
+          "scene": "town04-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town04-00\\246290\\panel.png",
+          "sha256": "bfa3d4746de9faff77b7c6ba8a89661c18e8f885826f2ba5a7c3414f597fdf66"
+        }
+      ]
+    },
+    {
+      "kind": "prediction",
+      "path": "prediction-05.png",
+      "sha256": "c228e957f0719237b38bf7ec2ff3a2277345824322c115d9761ea117516b2fe2",
+      "sources": [
+        {
+          "frame": 246294,
+          "scene": "town04-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town04-00\\246294\\panel.png",
+          "sha256": "28a5c63e0544b7ac6846bcfec174b5784f4790db825aed557f192765564a6893"
+        },
+        {
+          "frame": 246298,
+          "scene": "town04-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town04-00\\246298\\panel.png",
+          "sha256": "7b0ae2098616d1faa4fb2f3a645c3e6391cfa6396df0465d976908051c5aa9e9"
+        },
+        {
+          "frame": 246302,
+          "scene": "town04-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town04-00\\246302\\panel.png",
+          "sha256": "99489d72902227aa43b481b2164e4c4c04fdf2deb18feb1d139e8d2ca8f4f668"
+        },
+        {
+          "frame": 246306,
+          "scene": "town04-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town04-00\\246306\\panel.png",
+          "sha256": "1326883f2a0fc4cac8b205c8b23082442a888b9f0b2655110921fcb374ec59cc"
+        }
+      ]
+    },
+    {
+      "kind": "prediction",
+      "path": "prediction-06.png",
+      "sha256": "667537c86036923d6eab56d0d7e219d24bd7ef5200df86b8b9526cd7b4d4e304",
+      "sources": [
+        {
+          "frame": 246933,
+          "scene": "town04-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town04-01\\246933\\panel.png",
+          "sha256": "6c1d852a173a30f2c39d4ecbbc7b6b054dea99459f4d2572ec988c859946e45c"
+        },
+        {
+          "frame": 246937,
+          "scene": "town04-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town04-01\\246937\\panel.png",
+          "sha256": "3137ebfdee85168e33769b6b812599bfad3e399a3ef04d3b906862899b0320b8"
+        },
+        {
+          "frame": 246941,
+          "scene": "town04-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town04-01\\246941\\panel.png",
+          "sha256": "c0dfcfaf01e74229be45dd9b5f76a1d55ae91bddd7b10826b07f27a984ef5663"
+        },
+        {
+          "frame": 246945,
+          "scene": "town04-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town04-01\\246945\\panel.png",
+          "sha256": "80b2e79624c433ca286b773af5df181df10f1021ef1653df9c262dfcc0ca342f"
+        }
+      ]
+    },
+    {
+      "kind": "prediction",
+      "path": "prediction-07.png",
+      "sha256": "69a553a79fbfc6dba9f359e2611608574a8e50fead234df29c7e463cb6722dd1",
+      "sources": [
+        {
+          "frame": 246949,
+          "scene": "town04-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town04-01\\246949\\panel.png",
+          "sha256": "a0e63b248bdbd49b94f8bab5cb60941a6236f242ca5de941d72b1d162f8d6239"
+        },
+        {
+          "frame": 246953,
+          "scene": "town04-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town04-01\\246953\\panel.png",
+          "sha256": "16d099dd4c2d0a464186696b795b82e8f48012bcf5c06a36261de8587822d642"
+        },
+        {
+          "frame": 246957,
+          "scene": "town04-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town04-01\\246957\\panel.png",
+          "sha256": "3a5923185d2a55483261554e8888a69a33737cc26ac94c9ca384356818111264"
+        },
+        {
+          "frame": 246961,
+          "scene": "town04-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002\\town04-01\\246961\\panel.png",
+          "sha256": "c8653e2908babf27db92200e950ef892fc72ddebdfd82c0912d2e4e3a224277c"
+        }
+      ]
+    },
+    {
+      "kind": "GT_evaluation",
+      "path": "GT_evaluation-00.png",
+      "sha256": "1a86888e0ff35c6aeaf54b6e5d6d83e08ca84f534877a36b6acf5d995c329c37",
+      "sources": [
+        {
+          "frame": 166989,
+          "scene": "town01-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-00\\166989\\evaluation.png",
+          "sha256": "8671a7179650cc6f7d25ac349185c7ca5065cb57180b704ffbc731ce3ee97ec6"
+        },
+        {
+          "frame": 166993,
+          "scene": "town01-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-00\\166993\\evaluation.png",
+          "sha256": "814e5683784388b3801cff93df43520f9cb047c5e6a7c3c2e8711f87d79b5efa"
+        },
+        {
+          "frame": 166997,
+          "scene": "town01-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-00\\166997\\evaluation.png",
+          "sha256": "31f2cd7e66137c8b9eb2e42f69ca4d6dd3a82b1b5b0c68c0e63af3c918568d1e"
+        },
+        {
+          "frame": 167001,
+          "scene": "town01-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-00\\167001\\evaluation.png",
+          "sha256": "b64efaf0f87f3d502bc16e0bf1bfd9911e9c0f80702f15339c19845ecab26993"
+        },
+        {
+          "frame": 167005,
+          "scene": "town01-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-00\\167005\\evaluation.png",
+          "sha256": "5e16c0f25c5312c5087ec1f72d519d10c1e26e20b17b74bdcbda0da24cbf9b44"
+        },
+        {
+          "frame": 167009,
+          "scene": "town01-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-00\\167009\\evaluation.png",
+          "sha256": "99f36d9331b8d1b268c56a0460e47673c1cec123e4602466ea45d259bf5d4167"
+        },
+        {
+          "frame": 167013,
+          "scene": "town01-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-00\\167013\\evaluation.png",
+          "sha256": "77a43f3355875efd3f0f7229f6e19dd81044f2b33ecee01046b9f5dcb7d02dbe"
+        },
+        {
+          "frame": 167017,
+          "scene": "town01-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-00\\167017\\evaluation.png",
+          "sha256": "077ebf01c9dfd191cdb1346044039affcb7ec6f958d07b90e164913ef4885704"
+        }
+      ]
+    },
+    {
+      "kind": "GT_evaluation",
+      "path": "GT_evaluation-01.png",
+      "sha256": "c2a439c31eee93a4254c41fb89bc84177065d61f51da84cff389d90926d671ef",
+      "sources": [
+        {
+          "frame": 168344,
+          "scene": "town01-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-01\\168344\\evaluation.png",
+          "sha256": "4acead73c72181d91f69dceb87924873fd3b6f581c7d6d2c0b8304edf078e53b"
+        },
+        {
+          "frame": 168348,
+          "scene": "town01-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-01\\168348\\evaluation.png",
+          "sha256": "bc76a2a7850bce8363049bfad6f61cdcce3c1859eaaaec2aa03f77c67bc6ed88"
+        },
+        {
+          "frame": 168352,
+          "scene": "town01-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-01\\168352\\evaluation.png",
+          "sha256": "817459a9bac61dd0af2fa980e41ae2409a92ebd1c3754c400d1dd441a25e5ccb"
+        },
+        {
+          "frame": 168356,
+          "scene": "town01-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-01\\168356\\evaluation.png",
+          "sha256": "40d258832ad281e820b2c40c9b88cf8de960558b4f3354d5af0f278bcaf4cd7a"
+        },
+        {
+          "frame": 168360,
+          "scene": "town01-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-01\\168360\\evaluation.png",
+          "sha256": "bb6cfe9388db1ea88e930c1cc3fdc5399658775fdd352b983df3d86661dabb33"
+        },
+        {
+          "frame": 168364,
+          "scene": "town01-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-01\\168364\\evaluation.png",
+          "sha256": "31b3dd7bec0605b869bd850f0a3c2e6cdad77f03b9bec49ed3aae1cd8bfa2b99"
+        },
+        {
+          "frame": 168368,
+          "scene": "town01-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-01\\168368\\evaluation.png",
+          "sha256": "5a22afb1d47ace9f43d327bd95039db0012658161a4cbad23a70df097655b9e7"
+        },
+        {
+          "frame": 168372,
+          "scene": "town01-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-01\\168372\\evaluation.png",
+          "sha256": "c67c8c549b8aad3d850e38bc2d7806ddfb731d09046e5cdd577b46a3d13e11e7"
+        }
+      ]
+    },
+    {
+      "kind": "GT_evaluation",
+      "path": "GT_evaluation-02.png",
+      "sha256": "d77a27fc54cacfc4d5bd5a8390c128a879ce494fe3d7ac040d898e2abc4373cb",
+      "sources": [
+        {
+          "frame": 246278,
+          "scene": "town04-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town04-00\\246278\\evaluation.png",
+          "sha256": "1ac3a2e746bbc83bfc5fd2b2957c04e30c3f205196ce2556ac52894d891b1959"
+        },
+        {
+          "frame": 246282,
+          "scene": "town04-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town04-00\\246282\\evaluation.png",
+          "sha256": "041bc35d1fc649e278ae170cb046551eeb8e075f10c9dc67f12de7f203114e28"
+        },
+        {
+          "frame": 246286,
+          "scene": "town04-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town04-00\\246286\\evaluation.png",
+          "sha256": "50fb52e1625532c6e992f7dd5fd8c5b12ce09227e9ebf3964f0fc7711b4e2838"
+        },
+        {
+          "frame": 246290,
+          "scene": "town04-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town04-00\\246290\\evaluation.png",
+          "sha256": "5087d734a456f38943d58ac308479091d7b30eb330aee467c68e36ee3ead5612"
+        },
+        {
+          "frame": 246294,
+          "scene": "town04-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town04-00\\246294\\evaluation.png",
+          "sha256": "8a046b29e9844bee8d0f3df2724734f7e6f896d7767f89a678cbea1800ba90a2"
+        },
+        {
+          "frame": 246298,
+          "scene": "town04-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town04-00\\246298\\evaluation.png",
+          "sha256": "39b42a151bceeeb0028fb875f59be013c5befdafbd9d9a840baec9bc5931b535"
+        },
+        {
+          "frame": 246302,
+          "scene": "town04-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town04-00\\246302\\evaluation.png",
+          "sha256": "8b2d263d8dd6a4b988829ce583845325557d014edb188611d6a7176c7c88f221"
+        },
+        {
+          "frame": 246306,
+          "scene": "town04-00",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town04-00\\246306\\evaluation.png",
+          "sha256": "4d1fc66934112961c54419702c39c1b4ed500de5bc09b75ff60f504906c1c138"
+        }
+      ]
+    },
+    {
+      "kind": "GT_evaluation",
+      "path": "GT_evaluation-03.png",
+      "sha256": "892cae238df451d7a2a52a7da0da06cb48327ba6ffdfb5a84a337d57cf9624a2",
+      "sources": [
+        {
+          "frame": 246933,
+          "scene": "town04-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town04-01\\246933\\evaluation.png",
+          "sha256": "64696231f476d6d0482b0835b7319f108acaef8cedc9dc814cbdc086cb2461df"
+        },
+        {
+          "frame": 246937,
+          "scene": "town04-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town04-01\\246937\\evaluation.png",
+          "sha256": "83589a7a2ecf3af87e8f3b0c635da0fcff426a1e6fe86a9ff4cad6b632f06f5c"
+        },
+        {
+          "frame": 246941,
+          "scene": "town04-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town04-01\\246941\\evaluation.png",
+          "sha256": "5c9b848fe76ee3bcd9440cd0c77a447a7d09016d17acbd2101716073bccdb877"
+        },
+        {
+          "frame": 246945,
+          "scene": "town04-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town04-01\\246945\\evaluation.png",
+          "sha256": "9bc2574ad128776a259223c26c4fb6a77f08ae642e6ca0369fb67ec574380d96"
+        },
+        {
+          "frame": 246949,
+          "scene": "town04-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town04-01\\246949\\evaluation.png",
+          "sha256": "46952204dfd30a3830fe3cec48e76fdc4ac3313414ecafcaadb1487e45199e9f"
+        },
+        {
+          "frame": 246953,
+          "scene": "town04-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town04-01\\246953\\evaluation.png",
+          "sha256": "dc2e11560834fcee5d93a464ce47f09b58fd2a9cb4889dc5f9bd4a9f23d567f6"
+        },
+        {
+          "frame": 246957,
+          "scene": "town04-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town04-01\\246957\\evaluation.png",
+          "sha256": "ad100c3572dc2ff63088f9e53edd12c426d4f2ca61fc8e9a3042d9d0ee2959b1"
+        },
+        {
+          "frame": 246961,
+          "scene": "town04-01",
+          "source": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town04-01\\246961\\evaluation.png",
+          "sha256": "51e6563f253e8dd7dfa4493dda692a1d1f8a4a96381ebe0874152abba4bcb7a5"
+        }
+      ]
+    }
+  ],
+  "full_resolution_cases": [
+    {
+      "scene": "town01-00",
+      "frame": 167005,
+      "reasons": [
+        "fixed_middle_frame"
+      ],
+      "prediction_panel": "artifacts\\runs\\phase4-bev-pilot-002\\town01-00\\167005\\panel.png",
+      "prediction_sha256": "e4d61e5a549b64f2dbfcf6d1d9aa04a2a624a050cc32eb971c807ff68419d84a",
+      "GT_panel": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-00\\167005\\evaluation.png",
+      "GT_sha256": "5e16c0f25c5312c5087ec1f72d519d10c1e26e20b17b74bdcbda0da24cbf9b44"
+    },
+    {
+      "scene": "town01-01",
+      "frame": 168360,
+      "reasons": [
+        "fixed_middle_frame"
+      ],
+      "prediction_panel": "artifacts\\runs\\phase4-bev-pilot-002\\town01-01\\168360\\panel.png",
+      "prediction_sha256": "23dd470df249faf565f4bb78561e8c51ad019bbb2ce4e75fc9997424ae645210",
+      "GT_panel": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-01\\168360\\evaluation.png",
+      "GT_sha256": "bb6cfe9388db1ea88e930c1cc3fdc5399658775fdd352b983df3d86661dabb33"
+    },
+    {
+      "scene": "town04-00",
+      "frame": 246294,
+      "reasons": [
+        "fixed_middle_frame"
+      ],
+      "prediction_panel": "artifacts\\runs\\phase4-bev-pilot-002\\town04-00\\246294\\panel.png",
+      "prediction_sha256": "28a5c63e0544b7ac6846bcfec174b5784f4790db825aed557f192765564a6893",
+      "GT_panel": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town04-00\\246294\\evaluation.png",
+      "GT_sha256": "8a046b29e9844bee8d0f3df2724734f7e6f896d7767f89a678cbea1800ba90a2"
+    },
+    {
+      "scene": "town04-01",
+      "frame": 246949,
+      "reasons": [
+        "fixed_middle_frame",
+        "largest_object_false_positive_count"
+      ],
+      "prediction_panel": "artifacts\\runs\\phase4-bev-pilot-002\\town04-01\\246949\\panel.png",
+      "prediction_sha256": "a0e63b248bdbd49b94f8bab5cb60941a6236f242ca5de941d72b1d162f8d6239",
+      "GT_panel": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town04-01\\246949\\evaluation.png",
+      "GT_sha256": "46952204dfd30a3830fe3cec48e76fdc4ac3313414ecafcaadb1487e45199e9f"
+    },
+    {
+      "scene": "town01-00",
+      "frame": 166989,
+      "reasons": [
+        "largest_path_GT_error"
+      ],
+      "prediction_panel": "artifacts\\runs\\phase4-bev-pilot-002\\town01-00\\166989\\panel.png",
+      "prediction_sha256": "354374f6e5f509ace384a18eacddf737f2a5757ac2f06e145ec69c52f0c8f5dd",
+      "GT_panel": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-00\\166989\\evaluation.png",
+      "GT_sha256": "8671a7179650cc6f7d25ac349185c7ca5065cb57180b704ffbc731ce3ee97ec6"
+    },
+    {
+      "scene": "town01-00",
+      "frame": 167017,
+      "reasons": [
+        "largest_path_GT_error"
+      ],
+      "prediction_panel": "artifacts\\runs\\phase4-bev-pilot-002\\town01-00\\167017\\panel.png",
+      "prediction_sha256": "df25961ccb53a4d69b121dbee0d990701cea19771d7fe75c8eeb6be8aa5a486f",
+      "GT_panel": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-00\\167017\\evaluation.png",
+      "GT_sha256": "077ebf01c9dfd191cdb1346044039affcb7ec6f958d07b90e164913ef4885704"
+    },
+    {
+      "scene": "town04-01",
+      "frame": 246961,
+      "reasons": [
+        "largest_object_false_positive_count"
+      ],
+      "prediction_panel": "artifacts\\runs\\phase4-bev-pilot-002\\town04-01\\246961\\panel.png",
+      "prediction_sha256": "c8653e2908babf27db92200e950ef892fc72ddebdfd82c0912d2e4e3a224277c",
+      "GT_panel": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town04-01\\246961\\evaluation.png",
+      "GT_sha256": "51e6563f253e8dd7dfa4493dda692a1d1f8a4a96381ebe0874152abba4bcb7a5"
+    }
+  ],
+  "run_contract_sha256": "bb66b420c8ed632a0996d109e08695b0ffab6a5c33c92aa449afe8f066bbc7f6",
+  "evaluation_report_sha256": "b3810154f0e8218107e1a23d33a072b30c17c60c5ae80ffca527757fa0c0cc78"
+}

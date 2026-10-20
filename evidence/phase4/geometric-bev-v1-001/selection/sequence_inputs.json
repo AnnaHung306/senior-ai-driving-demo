@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "scope": "RGB+rig calibration only; selection diagnostics are external and not model inputs",
+  "inventory_sha256": "c2df90d1e0694d54b97d36f4b9f80460e1b16b9abc1eee5a0b09f0051c9e57ac",
+  "sequences": [
+    {
+      "scene_id": "town01-00",
+      "manifests": [
+        "inputs/frames/town01-00/00166989.json",
+        "inputs/frames/town01-00/00166993.json",
+        "inputs/frames/town01-00/00166997.json",
+        "inputs/frames/town01-00/00167001.json",
+        "inputs/frames/town01-00/00167005.json",
+        "inputs/frames/town01-00/00167009.json",
+        "inputs/frames/town01-00/00167013.json",
+        "inputs/frames/town01-00/00167017.json"
+      ]
+    },
+    {
+      "scene_id": "town01-01",
+      "manifests": [
+        "inputs/frames/town01-01/00168344.json",
+        "inputs/frames/town01-01/00168348.json",
+        "inputs/frames/town01-01/00168352.json",
+        "inputs/frames/town01-01/00168356.json",
+        "inputs/frames/town01-01/00168360.json",
+        "inputs/frames/town01-01/00168364.json",
+        "inputs/frames/town01-01/00168368.json",
+        "inputs/frames/town01-01/00168372.json"
+      ]
+    },
+    {
+      "scene_id": "town04-00",
+      "manifests": [
+        "inputs/frames/town04-00/00246278.json",
+        "inputs/frames/town04-00/00246282.json",
+        "inputs/frames/town04-00/00246286.json",
+        "inputs/frames/town04-00/00246290.json",
+        "inputs/frames/town04-00/00246294.json",
+        "inputs/frames/town04-00/00246298.json",
+        "inputs/frames/town04-00/00246302.json",
+        "inputs/frames/town04-00/00246306.json"
+      ]
+    },
+    {
+      "scene_id": "town04-01",
+      "manifests": [
+        "inputs/frames/town04-01/00246933.json",
+        "inputs/frames/town04-01/00246937.json",
+        "inputs/frames/town04-01/00246941.json",
+        "inputs/frames/town04-01/00246945.json",
+        "inputs/frames/town04-01/00246949.json",
+        "inputs/frames/town04-01/00246953.json",
+        "inputs/frames/town04-01/00246957.json",
+        "inputs/frames/town04-01/00246961.json"
+      ]
+    }
+  ]
+}

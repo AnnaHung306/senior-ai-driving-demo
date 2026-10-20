@@ -1,0 +1,298 @@
+{
+  "status": "completed_inference_pending_evaluation_and_visual_review",
+  "bundles": 32,
+  "sequences": 4,
+  "records": [
+    {
+      "scene_id": "town01-00",
+      "frame": 166989,
+      "folder": "town01-00\\166989",
+      "motion_status": "cold_start",
+      "path_status": "unavailable",
+      "inference_ms": 1681.8864999804646,
+      "fusion_ms": 520.7935000071302
+    },
+    {
+      "scene_id": "town01-00",
+      "frame": 166993,
+      "folder": "town01-00\\166993",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 534.399600001052,
+      "fusion_ms": 609.0218999888748
+    },
+    {
+      "scene_id": "town01-00",
+      "frame": 166997,
+      "folder": "town01-00\\166997",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 500.9868999477476,
+      "fusion_ms": 656.1520000104792
+    },
+    {
+      "scene_id": "town01-00",
+      "frame": 167001,
+      "folder": "town01-00\\167001",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 523.1529999873601,
+      "fusion_ms": 638.419300026726
+    },
+    {
+      "scene_id": "town01-00",
+      "frame": 167005,
+      "folder": "town01-00\\167005",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 519.887300033588,
+      "fusion_ms": 716.457000002265
+    },
+    {
+      "scene_id": "town01-00",
+      "frame": 167009,
+      "folder": "town01-00\\167009",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 523.4792999690399,
+      "fusion_ms": 562.9777000285685
+    },
+    {
+      "scene_id": "town01-00",
+      "frame": 167013,
+      "folder": "town01-00\\167013",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 537.2820999473333,
+      "fusion_ms": 588.8693000306375
+    },
+    {
+      "scene_id": "town01-00",
+      "frame": 167017,
+      "folder": "town01-00\\167017",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 519.3106000078842,
+      "fusion_ms": 606.5956000238657
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168344,
+      "folder": "town01-01\\168344",
+      "motion_status": "cold_start",
+      "path_status": "unavailable",
+      "inference_ms": 506.736200011801,
+      "fusion_ms": 443.5494000208564
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168348,
+      "folder": "town01-01\\168348",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 505.43040002230555,
+      "fusion_ms": 533.5628999746405
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168352,
+      "folder": "town01-01\\168352",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 503.6312000011094,
+      "fusion_ms": 584.7384000080638
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168356,
+      "folder": "town01-01\\168356",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 514.8615000071004,
+      "fusion_ms": 588.457899983041
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168360,
+      "folder": "town01-01\\168360",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 528.5324000287801,
+      "fusion_ms": 583.6557999718934
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168364,
+      "folder": "town01-01\\168364",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 534.6272999886423,
+      "fusion_ms": 538.1480000214651
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168368,
+      "folder": "town01-01\\168368",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 530.5259999586269,
+      "fusion_ms": 541.3338000071235
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168372,
+      "folder": "town01-01\\168372",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 496.25249998643994,
+      "fusion_ms": 572.2653999691829
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246278,
+      "folder": "town04-00\\246278",
+      "motion_status": "cold_start",
+      "path_status": "unavailable",
+      "inference_ms": 530.6597999879159,
+      "fusion_ms": 428.48420003429055
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246282,
+      "folder": "town04-00\\246282",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 573.8416999811307,
+      "fusion_ms": 520.0026000384241
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246286,
+      "folder": "town04-00\\246286",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 530.172600003425,
+      "fusion_ms": 564.3256999901496
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246290,
+      "folder": "town04-00\\246290",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 554.290600004606,
+      "fusion_ms": 534.3619000050239
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246294,
+      "folder": "town04-00\\246294",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 581.9374999846332,
+      "fusion_ms": 565.2164000202902
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246298,
+      "folder": "town04-00\\246298",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 527.5492999935523,
+      "fusion_ms": 554.6919999760576
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246302,
+      "folder": "town04-00\\246302",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 540.347500005737,
+      "fusion_ms": 568.955399969127
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246306,
+      "folder": "town04-00\\246306",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 542.3327999887988,
+      "fusion_ms": 564.7165999980643
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246933,
+      "folder": "town04-01\\246933",
+      "motion_status": "cold_start",
+      "path_status": "candidate",
+      "inference_ms": 541.8299000011757,
+      "fusion_ms": 440.76899997889996
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246937,
+      "folder": "town04-01\\246937",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 523.8585000042804,
+      "fusion_ms": 537.910400016699
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246941,
+      "folder": "town04-01\\246941",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 560.8418000047095,
+      "fusion_ms": 589.9022000376135
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246945,
+      "folder": "town04-01\\246945",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 531.9560000207275,
+      "fusion_ms": 584.8350999876857
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246949,
+      "folder": "town04-01\\246949",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 547.6221999851987,
+      "fusion_ms": 543.1491999770515
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246953,
+      "folder": "town04-01\\246953",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 558.4606999764219,
+      "fusion_ms": 559.4965000054799
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246957,
+      "folder": "town04-01\\246957",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 535.5394000071101,
+      "fusion_ms": 567.7072999533266
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246961,
+      "folder": "town04-01\\246961",
+      "motion_status": "aligned",
+      "path_status": "unavailable",
+      "inference_ms": 544.3344000377692,
+      "fusion_ms": 589.4239000044763
+    }
+  ],
+  "control_issued": false,
+  "GT_inputs_used": false,
+  "source_integrity_exact": true
+}

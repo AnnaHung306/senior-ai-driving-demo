@@ -1,0 +1,2834 @@
+{
+  "status": "completed_pilot_evaluation_pending_visual_review",
+  "scope": "Fixed32 original train/validation bundles, not independent heldout. GT visible near-plane ground only; unknown prediction counts against GT road. No GT used by inference.",
+  "metrics": {
+    "front": {
+      "TP": 330109,
+      "FP": 5283,
+      "FN": 372499,
+      "GT_visible_ground_cells": 1795554,
+      "predicted_observed_cells_on_GT_domain": 616750,
+      "GT_line_cells": 27396,
+      "predicted_line_cells": 12827,
+      "matched_predicted": 11650,
+      "matched_GT": 10905,
+      "road_IoU": 0.46632744306679985,
+      "GT_ground_coverage": 0.3434873025261284,
+      "line_precision": 0.9082404303422468,
+      "line_recall": 0.3980508103372755,
+      "line_F1": 0.5535149100299321
+    },
+    "single": {
+      "TP": 677094,
+      "FP": 9601,
+      "FN": 25514,
+      "GT_visible_ground_cells": 1795554,
+      "predicted_observed_cells_on_GT_domain": 1744780,
+      "GT_line_cells": 27396,
+      "predicted_line_cells": 24105,
+      "matched_predicted": 22459,
+      "matched_GT": 23828,
+      "road_IoU": 0.9506956525401954,
+      "GT_ground_coverage": 0.9717223764921579,
+      "line_precision": 0.9317154117403028,
+      "line_recall": 0.8697620090524164,
+      "line_F1": 0.899673411420001
+    },
+    "temporal": {
+      "TP": 677391,
+      "FP": 8940,
+      "FN": 25217,
+      "GT_visible_ground_cells": 1795554,
+      "predicted_observed_cells_on_GT_domain": 1744780,
+      "GT_line_cells": 27396,
+      "predicted_line_cells": 24623,
+      "matched_predicted": 23151,
+      "matched_GT": 23781,
+      "road_IoU": 0.9519962110778191,
+      "GT_ground_coverage": 0.9717223764921579,
+      "line_precision": 0.9402184949031394,
+      "line_recall": 0.8680464301357862,
+      "line_F1": 0.902692184919467
+    }
+  },
+  "common_front_GT_visible_domain": {
+    "front": {
+      "TP": 224993,
+      "FP": 3268,
+      "FN": 10674,
+      "GT_visible_ground_cells": 430872,
+      "predicted_observed_cells_on_GT_domain": 414736,
+      "GT_line_cells": 9358,
+      "predicted_line_cells": 7737,
+      "matched_predicted": 7243,
+      "matched_GT": 7882,
+      "road_IoU": 0.9416494025571808,
+      "GT_ground_coverage": 0.9625503629848308,
+      "line_precision": 0.9361509629055189,
+      "line_recall": 0.8422739901688395,
+      "line_F1": 0.8867347543271507
+    },
+    "single": {
+      "TP": 227545,
+      "FP": 3473,
+      "FN": 8122,
+      "GT_visible_ground_cells": 430872,
+      "predicted_observed_cells_on_GT_domain": 424161,
+      "GT_line_cells": 9358,
+      "predicted_line_cells": 7608,
+      "matched_predicted": 7165,
+      "matched_GT": 7897,
+      "road_IoU": 0.9515137576315129,
+      "GT_ground_coverage": 0.9844246087004958,
+      "line_precision": 0.9417718191377498,
+      "line_recall": 0.8438768967728147,
+      "line_F1": 0.8901409029903034
+    },
+    "temporal": {
+      "TP": 227521,
+      "FP": 3308,
+      "FN": 8146,
+      "GT_visible_ground_cells": 430872,
+      "predicted_observed_cells_on_GT_domain": 424161,
+      "GT_line_cells": 9358,
+      "predicted_line_cells": 7904,
+      "matched_predicted": 7542,
+      "matched_GT": 7881,
+      "road_IoU": 0.9520703002406109,
+      "GT_ground_coverage": 0.9844246087004958,
+      "line_precision": 0.9542004048582996,
+      "line_recall": 0.8421671297285744,
+      "line_F1": 0.894690201947084
+    }
+  },
+  "ablation_scope": "Full-surround domain comparison includes coverage gain from eight views; common-front GT-visible domain separately compares same-FOV quality.",
+  "by_scene": {
+    "town01-00": {
+      "front": {
+        "TP": 69586,
+        "FP": 699,
+        "FN": 88328,
+        "GT_visible_ground_cells": 535961,
+        "predicted_observed_cells_on_GT_domain": 164985,
+        "GT_line_cells": 1715,
+        "predicted_line_cells": 1310,
+        "matched_predicted": 1260,
+        "matched_GT": 1132,
+        "road_IoU": 0.43871561599616676,
+        "GT_ground_coverage": 0.30783023391627373,
+        "line_precision": 0.9618320610687023,
+        "line_recall": 0.6600583090379009,
+        "line_F1": 0.7828707235812966
+      },
+      "single": {
+        "TP": 153450,
+        "FP": 1828,
+        "FN": 4464,
+        "GT_visible_ground_cells": 535961,
+        "predicted_observed_cells_on_GT_domain": 526548,
+        "GT_line_cells": 1715,
+        "predicted_line_cells": 1710,
+        "matched_predicted": 1648,
+        "matched_GT": 1715,
+        "road_IoU": 0.9606114860212092,
+        "GT_ground_coverage": 0.9824371549422439,
+        "line_precision": 0.9637426900584796,
+        "line_recall": 1.0,
+        "line_F1": 0.9815366289458011
+      },
+      "temporal": {
+        "TP": 153579,
+        "FP": 1788,
+        "FN": 4335,
+        "GT_visible_ground_cells": 535961,
+        "predicted_observed_cells_on_GT_domain": 526548,
+        "GT_line_cells": 1715,
+        "predicted_line_cells": 1799,
+        "matched_predicted": 1741,
+        "matched_GT": 1715,
+        "road_IoU": 0.9616598414547094,
+        "GT_ground_coverage": 0.9824371549422439,
+        "line_precision": 0.9677598665925514,
+        "line_recall": 1.0,
+        "line_F1": 0.9836158192090395
+      }
+    },
+    "town01-01": {
+      "front": {
+        "TP": 72664,
+        "FP": 978,
+        "FN": 97127,
+        "GT_visible_ground_cells": 416762,
+        "predicted_observed_cells_on_GT_domain": 137089,
+        "GT_line_cells": 1695,
+        "predicted_line_cells": 1384,
+        "matched_predicted": 1261,
+        "matched_GT": 1095,
+        "road_IoU": 0.4255104849240787,
+        "GT_ground_coverage": 0.32893833890805785,
+        "line_precision": 0.9111271676300579,
+        "line_recall": 0.6460176991150443,
+        "line_F1": 0.7560045169900421
+      },
+      "single": {
+        "TP": 164015,
+        "FP": 1611,
+        "FN": 5776,
+        "GT_visible_ground_cells": 416762,
+        "predicted_observed_cells_on_GT_domain": 399930,
+        "GT_line_cells": 1695,
+        "predicted_line_cells": 1854,
+        "matched_predicted": 1722,
+        "matched_GT": 1683,
+        "road_IoU": 0.9569024865520822,
+        "GT_ground_coverage": 0.9596124406735739,
+        "line_precision": 0.9288025889967637,
+        "line_recall": 0.9929203539823008,
+        "line_F1": 0.959791835566789
+      },
+      "temporal": {
+        "TP": 164172,
+        "FP": 1539,
+        "FN": 5619,
+        "GT_visible_ground_cells": 416762,
+        "predicted_observed_cells_on_GT_domain": 399930,
+        "GT_line_cells": 1695,
+        "predicted_line_cells": 1931,
+        "matched_predicted": 1809,
+        "matched_GT": 1683,
+        "road_IoU": 0.9582209770618105,
+        "GT_ground_coverage": 0.9596124406735739,
+        "line_precision": 0.9368203003625065,
+        "line_recall": 0.9929203539823008,
+        "line_F1": 0.9640548766586111
+      }
+    },
+    "town04-00": {
+      "front": {
+        "TP": 95364,
+        "FP": 2358,
+        "FN": 92404,
+        "GT_visible_ground_cells": 520402,
+        "predicted_observed_cells_on_GT_domain": 170221,
+        "GT_line_cells": 13472,
+        "predicted_line_cells": 4537,
+        "matched_predicted": 4113,
+        "matched_GT": 4412,
+        "road_IoU": 0.5015831606408382,
+        "GT_ground_coverage": 0.3270952071667672,
+        "line_precision": 0.9065461758871501,
+        "line_recall": 0.3274940617577197,
+        "line_F1": 0.48116500622186215
+      },
+      "single": {
+        "TP": 179261,
+        "FP": 4562,
+        "FN": 8507,
+        "GT_visible_ground_cells": 520402,
+        "predicted_observed_cells_on_GT_domain": 505105,
+        "GT_line_cells": 13472,
+        "predicted_line_cells": 9435,
+        "matched_predicted": 8706,
+        "matched_GT": 10734,
+        "road_IoU": 0.9320490823064524,
+        "GT_ground_coverage": 0.9706054165817963,
+        "line_precision": 0.9227344992050874,
+        "line_recall": 0.7967636579572447,
+        "line_F1": 0.8551347517851208
+      },
+      "temporal": {
+        "TP": 179312,
+        "FP": 4094,
+        "FN": 8456,
+        "GT_visible_ground_cells": 520402,
+        "predicted_observed_cells_on_GT_domain": 505105,
+        "GT_line_cells": 13472,
+        "predicted_line_cells": 9421,
+        "matched_predicted": 8789,
+        "matched_GT": 10677,
+        "road_IoU": 0.9345884020806622,
+        "GT_ground_coverage": 0.9706054165817963,
+        "line_precision": 0.9329158263453986,
+        "line_recall": 0.7925326603325415,
+        "line_F1": 0.8570134285995116
+      }
+    },
+    "town04-01": {
+      "front": {
+        "TP": 92495,
+        "FP": 1248,
+        "FN": 94640,
+        "GT_visible_ground_cells": 322429,
+        "predicted_observed_cells_on_GT_domain": 144455,
+        "GT_line_cells": 10514,
+        "predicted_line_cells": 5596,
+        "matched_predicted": 5016,
+        "matched_GT": 4266,
+        "road_IoU": 0.49099441032364916,
+        "GT_ground_coverage": 0.44802111472603273,
+        "line_precision": 0.8963545389563974,
+        "line_recall": 0.405744721323949,
+        "line_F1": 0.5586227313239028
+      },
+      "single": {
+        "TP": 180368,
+        "FP": 1600,
+        "FN": 6767,
+        "GT_visible_ground_cells": 322429,
+        "predicted_observed_cells_on_GT_domain": 313197,
+        "GT_line_cells": 10514,
+        "predicted_line_cells": 11106,
+        "matched_predicted": 10383,
+        "matched_GT": 9696,
+        "road_IoU": 0.9556680001059686,
+        "GT_ground_coverage": 0.9713673397864336,
+        "line_precision": 0.9349000540248514,
+        "line_recall": 0.9221989727981739,
+        "line_F1": 0.9285060807614501
+      },
+      "temporal": {
+        "TP": 180328,
+        "FP": 1519,
+        "FN": 6807,
+        "GT_visible_ground_cells": 322429,
+        "predicted_observed_cells_on_GT_domain": 313197,
+        "GT_line_cells": 10514,
+        "predicted_line_cells": 11472,
+        "matched_predicted": 10812,
+        "matched_GT": 9706,
+        "road_IoU": 0.955866294910259,
+        "GT_ground_coverage": 0.9713673397864336,
+        "line_precision": 0.9424686192468619,
+        "line_recall": 0.9231500856001522,
+        "line_F1": 0.9327093304465378
+      }
+    }
+  },
+  "motion": {
+    "accepted": 28,
+    "possible": 28,
+    "translation_mean_m": 0.018785300421474683,
+    "yaw_mean_deg": 0.017915748294134812
+  },
+  "path": {
+    "candidates": 32,
+    "bundles": 32,
+    "GT_comparable": 32,
+    "lateral_RMSE_mean_m": 0.1588641633441065
+  },
+  "objects": {
+    "TP": 88,
+    "FP": 58,
+    "FN": 72,
+    "duplicate_observations_removed": 64,
+    "GT_supported_merged_clusters": 57,
+    "mixed_GT_actor_merges": 0,
+    "precision_at_2m": 0.6027397260273972,
+    "recall_at_2m": 0.55,
+    "matched_mean_distance_m": 0.3745507832292602,
+    "limits": "GT positive visible actors within24m, class-aware one-to-one2m match; ground-contact hypothesis vs actor origin, not3D box accuracy. Mixed-actor merge check only on IoU50-supported sources."
+  },
+  "timing_ms": {
+    "inference_ms": {
+      "p50": 502.4285000108648,
+      "p95": 578.6330850183731
+    },
+    "fusion_ms": {
+      "p50": 600.768500007689,
+      "p95": 677.9530299769249
+    }
+  },
+  "line_tolerance_m": 0.25,
+  "line_raster_note": "5x5 elliptical dilation at.1m grid; offsets <=sqrt(5)*.1m, within declared.25m bound. GT forward depth raster, no filled holes.",
+  "prediction_contract_sha256": "bb66b420c8ed632a0996d109e08695b0ffab6a5c33c92aa449afe8f066bbc7f6",
+  "selection_sha256": "c605b5d3b4556d1d11b4020fd677af39c68982a9be1257533c71ed0857d940df",
+  "evaluator_sha256": "5dc87a3c9baf739f2f74a0ad71d37a944afc20338e1e9a01c93e827deada4574",
+  "GT_helper_sha256": "f75c7320183332d7085224a18d6dd385bb7cba29023ec5d755c74f5ae56531d4",
+  "verified_GT_files": 840,
+  "records": [
+    {
+      "scene_id": "town01-00",
+      "frame": 166989,
+      "folder": "town01-00\\166989",
+      "motion_status": "cold_start",
+      "path_status": "candidate",
+      "inference_ms": 1229.0637000114657,
+      "fusion_ms": 524.2811000207439,
+      "metrics": {
+        "front": {
+          "TP": 8623,
+          "FP": 85,
+          "FN": 11230,
+          "GT_visible_ground_cells": 68018,
+          "predicted_observed_cells_on_GT_domain": 21526,
+          "GT_line_cells": 211,
+          "predicted_line_cells": 143,
+          "matched_predicted": 139,
+          "matched_GT": 120,
+          "road_IoU": 0.4324907212358311,
+          "GT_ground_coverage": 0.31647505072186777,
+          "line_precision": 0.972027972027972,
+          "line_recall": 0.5687203791469194,
+          "line_F1": 0.7175891071006045
+        },
+        "single": {
+          "TP": 19338,
+          "FP": 214,
+          "FN": 515,
+          "GT_visible_ground_cells": 68018,
+          "predicted_observed_cells_on_GT_domain": 67053,
+          "GT_line_cells": 211,
+          "predicted_line_cells": 208,
+          "matched_predicted": 199,
+          "matched_GT": 211,
+          "road_IoU": 0.963671699805651,
+          "GT_ground_coverage": 0.9858125790231997,
+          "line_precision": 0.9567307692307693,
+          "line_recall": 1.0,
+          "line_F1": 0.977886977886978
+        },
+        "temporal": {
+          "TP": 19338,
+          "FP": 214,
+          "FN": 515,
+          "GT_visible_ground_cells": 68018,
+          "predicted_observed_cells_on_GT_domain": 67053,
+          "GT_line_cells": 211,
+          "predicted_line_cells": 208,
+          "matched_predicted": 199,
+          "matched_GT": 211,
+          "road_IoU": 0.963671699805651,
+          "GT_ground_coverage": 0.9858125790231997,
+          "line_precision": 0.9567307692307693,
+          "line_recall": 1.0,
+          "line_F1": 0.977886977886978
+        }
+      },
+      "motion_error": null,
+      "path_GT_error": {
+        "lateral_rmse_m": 0.3480745179947449,
+        "lateral_absolute_p95_m": 0.355633414149948,
+        "road_id": 19,
+        "lane_id": -1,
+        "points": 22
+      },
+      "object_metrics": {
+        "TP": 5,
+        "FP": 1,
+        "FN": 1,
+        "duplicate_observations_removed": 4,
+        "GT_supported_merged_clusters": 4,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town01-00",
+      "frame": 166993,
+      "folder": "town01-00\\166993",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 503.31860000733286,
+      "fusion_ms": 596.6446999809705,
+      "metrics": {
+        "front": {
+          "TP": 8714,
+          "FP": 55,
+          "FN": 11224,
+          "GT_visible_ground_cells": 67709,
+          "predicted_observed_cells_on_GT_domain": 21487,
+          "GT_line_cells": 223,
+          "predicted_line_cells": 160,
+          "matched_predicted": 155,
+          "matched_GT": 143,
+          "road_IoU": 0.43585254839193716,
+          "GT_ground_coverage": 0.3173433369271441,
+          "line_precision": 0.96875,
+          "line_recall": 0.6412556053811659,
+          "line_F1": 0.771694664461659
+        },
+        "single": {
+          "TP": 19363,
+          "FP": 216,
+          "FN": 575,
+          "GT_visible_ground_cells": 67709,
+          "predicted_observed_cells_on_GT_domain": 66588,
+          "GT_line_cells": 223,
+          "predicted_line_cells": 218,
+          "matched_predicted": 205,
+          "matched_GT": 223,
+          "road_IoU": 0.9607522079984122,
+          "GT_ground_coverage": 0.9834438553220399,
+          "line_precision": 0.9403669724770642,
+          "line_recall": 1.0,
+          "line_F1": 0.9692671394799055
+        },
+        "temporal": {
+          "TP": 19387,
+          "FP": 215,
+          "FN": 551,
+          "GT_visible_ground_cells": 67709,
+          "predicted_observed_cells_on_GT_domain": 66588,
+          "GT_line_cells": 223,
+          "predicted_line_cells": 228,
+          "matched_predicted": 214,
+          "matched_GT": 223,
+          "road_IoU": 0.9619907706048727,
+          "GT_ground_coverage": 0.9834438553220399,
+          "line_precision": 0.9385964912280702,
+          "line_recall": 1.0,
+          "line_F1": 0.9683257918552036
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.014717308579413174,
+        "yaw_error_deg": 0.027194886652643146
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.33217224727384065,
+        "lateral_absolute_p95_m": 0.3559098501137874,
+        "road_id": 19,
+        "lane_id": -1,
+        "points": 23
+      },
+      "object_metrics": {
+        "TP": 5,
+        "FP": 1,
+        "FN": 1,
+        "duplicate_observations_removed": 4,
+        "GT_supported_merged_clusters": 4,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town01-00",
+      "frame": 166997,
+      "folder": "town01-00\\166997",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 504.4929999858141,
+      "fusion_ms": 678.9173999568447,
+      "metrics": {
+        "front": {
+          "TP": 8781,
+          "FP": 66,
+          "FN": 11238,
+          "GT_visible_ground_cells": 67733,
+          "predicted_observed_cells_on_GT_domain": 21165,
+          "GT_line_cells": 207,
+          "predicted_line_cells": 163,
+          "matched_predicted": 162,
+          "matched_GT": 136,
+          "road_IoU": 0.4371919342793129,
+          "GT_ground_coverage": 0.312476931480962,
+          "line_precision": 0.9938650306748467,
+          "line_recall": 0.6570048309178744,
+          "line_F1": 0.7910667480521345
+        },
+        "single": {
+          "TP": 19491,
+          "FP": 211,
+          "FN": 528,
+          "GT_visible_ground_cells": 67733,
+          "predicted_observed_cells_on_GT_domain": 66522,
+          "GT_line_cells": 207,
+          "predicted_line_cells": 211,
+          "matched_predicted": 209,
+          "matched_GT": 207,
+          "road_IoU": 0.9634700939199209,
+          "GT_ground_coverage": 0.9821209750047982,
+          "line_precision": 0.990521327014218,
+          "line_recall": 1.0,
+          "line_F1": 0.9952380952380951
+        },
+        "temporal": {
+          "TP": 19513,
+          "FP": 204,
+          "FN": 506,
+          "GT_visible_ground_cells": 67733,
+          "predicted_observed_cells_on_GT_domain": 66522,
+          "GT_line_cells": 207,
+          "predicted_line_cells": 221,
+          "matched_predicted": 220,
+          "matched_GT": 207,
+          "road_IoU": 0.964891460218563,
+          "GT_ground_coverage": 0.9821209750047982,
+          "line_precision": 0.995475113122172,
+          "line_recall": 1.0,
+          "line_F1": 0.9977324263038548
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.009556433113139357,
+        "yaw_error_deg": 0.005865439320492897
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.3293674483271131,
+        "lateral_absolute_p95_m": 0.3399600119035877,
+        "road_id": 19,
+        "lane_id": -1,
+        "points": 24
+      },
+      "object_metrics": {
+        "TP": 5,
+        "FP": 1,
+        "FN": 1,
+        "duplicate_observations_removed": 2,
+        "GT_supported_merged_clusters": 2,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town01-00",
+      "frame": 167001,
+      "folder": "town01-00\\167001",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 495.8661999553442,
+      "fusion_ms": 640.2976000099443,
+      "metrics": {
+        "front": {
+          "TP": 8685,
+          "FP": 121,
+          "FN": 11052,
+          "GT_visible_ground_cells": 67183,
+          "predicted_observed_cells_on_GT_domain": 20624,
+          "GT_line_cells": 208,
+          "predicted_line_cells": 168,
+          "matched_predicted": 163,
+          "matched_GT": 144,
+          "road_IoU": 0.4373552220767449,
+          "GT_ground_coverage": 0.3069824211482071,
+          "line_precision": 0.9702380952380952,
+          "line_recall": 0.6923076923076923,
+          "line_F1": 0.8080418617460755
+        },
+        "single": {
+          "TP": 19223,
+          "FP": 253,
+          "FN": 514,
+          "GT_visible_ground_cells": 67183,
+          "predicted_observed_cells_on_GT_domain": 66020,
+          "GT_line_cells": 208,
+          "predicted_line_cells": 204,
+          "matched_predicted": 198,
+          "matched_GT": 208,
+          "road_IoU": 0.9616308154077039,
+          "GT_ground_coverage": 0.9826890731286189,
+          "line_precision": 0.9705882352941176,
+          "line_recall": 1.0,
+          "line_F1": 0.9850746268656716
+        },
+        "temporal": {
+          "TP": 19231,
+          "FP": 231,
+          "FN": 506,
+          "GT_visible_ground_cells": 67183,
+          "predicted_observed_cells_on_GT_domain": 66020,
+          "GT_line_cells": 208,
+          "predicted_line_cells": 221,
+          "matched_predicted": 216,
+          "matched_GT": 208,
+          "road_IoU": 0.9630909455128205,
+          "GT_ground_coverage": 0.9826890731286189,
+          "line_precision": 0.9773755656108597,
+          "line_recall": 1.0,
+          "line_F1": 0.9885583524027459
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.0242506697730543,
+        "yaw_error_deg": 0.021717751192684313
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.3430591077812852,
+        "lateral_absolute_p95_m": 0.3626625404470332,
+        "road_id": 19,
+        "lane_id": -1,
+        "points": 25
+      },
+      "object_metrics": {
+        "TP": 4,
+        "FP": 1,
+        "FN": 2,
+        "duplicate_observations_removed": 2,
+        "GT_supported_merged_clusters": 2,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town01-00",
+      "frame": 167005,
+      "folder": "town01-00\\167005",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 513.1083999876864,
+      "fusion_ms": 647.7301999693736,
+      "metrics": {
+        "front": {
+          "TP": 8746,
+          "FP": 132,
+          "FN": 10931,
+          "GT_visible_ground_cells": 66768,
+          "predicted_observed_cells_on_GT_domain": 20566,
+          "GT_line_cells": 217,
+          "predicted_line_cells": 169,
+          "matched_predicted": 161,
+          "matched_GT": 146,
+          "road_IoU": 0.4415164824069867,
+          "GT_ground_coverage": 0.30802180685358255,
+          "line_precision": 0.9526627218934911,
+          "line_recall": 0.6728110599078341,
+          "line_F1": 0.7886463907668049
+        },
+        "single": {
+          "TP": 19164,
+          "FP": 255,
+          "FN": 513,
+          "GT_visible_ground_cells": 66768,
+          "predicted_observed_cells_on_GT_domain": 65706,
+          "GT_line_cells": 217,
+          "predicted_line_cells": 212,
+          "matched_predicted": 206,
+          "matched_GT": 217,
+          "road_IoU": 0.9614689945815773,
+          "GT_ground_coverage": 0.9840941768511862,
+          "line_precision": 0.9716981132075472,
+          "line_recall": 1.0,
+          "line_F1": 0.985645933014354
+        },
+        "temporal": {
+          "TP": 19176,
+          "FP": 246,
+          "FN": 501,
+          "GT_visible_ground_cells": 66768,
+          "predicted_observed_cells_on_GT_domain": 65706,
+          "GT_line_cells": 217,
+          "predicted_line_cells": 230,
+          "matched_predicted": 221,
+          "matched_GT": 217,
+          "road_IoU": 0.9625056467399488,
+          "GT_ground_coverage": 0.9840941768511862,
+          "line_precision": 0.9608695652173913,
+          "line_recall": 1.0,
+          "line_F1": 0.9800443458980045
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.020047529541271217,
+        "yaw_error_deg": 0.024488127249084224
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.33848378051999495,
+        "lateral_absolute_p95_m": 0.3784672247382962,
+        "road_id": 19,
+        "lane_id": -1,
+        "points": 24
+      },
+      "object_metrics": {
+        "TP": 2,
+        "FP": 2,
+        "FN": 3,
+        "duplicate_observations_removed": 2,
+        "GT_supported_merged_clusters": 1,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town01-00",
+      "frame": 167009,
+      "folder": "town01-00\\167009",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 480.7994000148028,
+      "fusion_ms": 657.7683999785222,
+      "metrics": {
+        "front": {
+          "TP": 8745,
+          "FP": 75,
+          "FN": 10980,
+          "GT_visible_ground_cells": 66827,
+          "predicted_observed_cells_on_GT_domain": 20234,
+          "GT_line_cells": 223,
+          "predicted_line_cells": 175,
+          "matched_predicted": 166,
+          "matched_GT": 154,
+          "road_IoU": 0.44166666666666665,
+          "GT_ground_coverage": 0.30278180974755714,
+          "line_precision": 0.9485714285714286,
+          "line_recall": 0.6905829596412556,
+          "line_F1": 0.7992746373186594
+        },
+        "single": {
+          "TP": 19146,
+          "FP": 224,
+          "FN": 579,
+          "GT_visible_ground_cells": 66827,
+          "predicted_observed_cells_on_GT_domain": 65552,
+          "GT_line_cells": 223,
+          "predicted_line_cells": 218,
+          "matched_predicted": 210,
+          "matched_GT": 223,
+          "road_IoU": 0.9597473557571808,
+          "GT_ground_coverage": 0.9809208852709235,
+          "line_precision": 0.963302752293578,
+          "line_recall": 1.0,
+          "line_F1": 0.9813084112149533
+        },
+        "temporal": {
+          "TP": 19176,
+          "FP": 229,
+          "FN": 549,
+          "GT_visible_ground_cells": 66827,
+          "predicted_observed_cells_on_GT_domain": 65552,
+          "GT_line_cells": 223,
+          "predicted_line_cells": 231,
+          "matched_predicted": 224,
+          "matched_GT": 223,
+          "road_IoU": 0.9610103237446126,
+          "GT_ground_coverage": 0.9809208852709235,
+          "line_precision": 0.9696969696969697,
+          "line_recall": 1.0,
+          "line_F1": 0.9846153846153847
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.016598726784473865,
+        "yaw_error_deg": 0.006117983678752356
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.3283176273440554,
+        "lateral_absolute_p95_m": 0.36709331197291856,
+        "road_id": 19,
+        "lane_id": -1,
+        "points": 25
+      },
+      "object_metrics": {
+        "TP": 4,
+        "FP": 2,
+        "FN": 1,
+        "duplicate_observations_removed": 2,
+        "GT_supported_merged_clusters": 1,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town01-00",
+      "frame": 167013,
+      "folder": "town01-00\\167013",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 493.3236000360921,
+      "fusion_ms": 622.4393000011332,
+      "metrics": {
+        "front": {
+          "TP": 8627,
+          "FP": 101,
+          "FN": 10898,
+          "GT_visible_ground_cells": 66247,
+          "predicted_observed_cells_on_GT_domain": 19871,
+          "GT_line_cells": 213,
+          "predicted_line_cells": 173,
+          "matched_predicted": 166,
+          "matched_GT": 146,
+          "road_IoU": 0.4395699582186895,
+          "GT_ground_coverage": 0.29995320542817033,
+          "line_precision": 0.9595375722543352,
+          "line_recall": 0.6854460093896714,
+          "line_F1": 0.7996568562755708
+        },
+        "single": {
+          "TP": 18901,
+          "FP": 240,
+          "FN": 624,
+          "GT_visible_ground_cells": 66247,
+          "predicted_observed_cells_on_GT_domain": 64954,
+          "GT_line_cells": 213,
+          "predicted_line_cells": 212,
+          "matched_predicted": 205,
+          "matched_GT": 213,
+          "road_IoU": 0.9562863647862383,
+          "GT_ground_coverage": 0.9804821350400773,
+          "line_precision": 0.9669811320754716,
+          "line_recall": 1.0,
+          "line_F1": 0.9832134292565947
+        },
+        "temporal": {
+          "TP": 18915,
+          "FP": 232,
+          "FN": 610,
+          "GT_visible_ground_cells": 66247,
+          "predicted_observed_cells_on_GT_domain": 64954,
+          "GT_line_cells": 213,
+          "predicted_line_cells": 222,
+          "matched_predicted": 218,
+          "matched_GT": 213,
+          "road_IoU": 0.9573821936528826,
+          "GT_ground_coverage": 0.9804821350400773,
+          "line_precision": 0.9819819819819819,
+          "line_recall": 1.0,
+          "line_F1": 0.9909090909090909
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.013535757088353903,
+        "yaw_error_deg": 0.004058116038311783
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.34371990591144386,
+        "lateral_absolute_p95_m": 0.36370032055060053,
+        "road_id": 19,
+        "lane_id": -1,
+        "points": 24
+      },
+      "object_metrics": {
+        "TP": 5,
+        "FP": 1,
+        "FN": 1,
+        "duplicate_observations_removed": 3,
+        "GT_supported_merged_clusters": 3,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town01-00",
+      "frame": 167017,
+      "folder": "town01-00\\167017",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 488.50919998949394,
+      "fusion_ms": 591.4340000017546,
+      "metrics": {
+        "front": {
+          "TP": 8665,
+          "FP": 64,
+          "FN": 10775,
+          "GT_visible_ground_cells": 65476,
+          "predicted_observed_cells_on_GT_domain": 19512,
+          "GT_line_cells": 213,
+          "predicted_line_cells": 159,
+          "matched_predicted": 148,
+          "matched_GT": 143,
+          "road_IoU": 0.44426784249384743,
+          "GT_ground_coverage": 0.2980023214612988,
+          "line_precision": 0.9308176100628931,
+          "line_recall": 0.6713615023474179,
+          "line_F1": 0.7800814581375205
+        },
+        "single": {
+          "TP": 18824,
+          "FP": 215,
+          "FN": 616,
+          "GT_visible_ground_cells": 65476,
+          "predicted_observed_cells_on_GT_domain": 64153,
+          "GT_line_cells": 213,
+          "predicted_line_cells": 227,
+          "matched_predicted": 216,
+          "matched_GT": 213,
+          "road_IoU": 0.9577206817603663,
+          "GT_ground_coverage": 0.9797941230374488,
+          "line_precision": 0.9515418502202643,
+          "line_recall": 1.0,
+          "line_F1": 0.9751693002257337
+        },
+        "temporal": {
+          "TP": 18843,
+          "FP": 217,
+          "FN": 597,
+          "GT_visible_ground_cells": 65476,
+          "predicted_observed_cells_on_GT_domain": 64153,
+          "GT_line_cells": 213,
+          "predicted_line_cells": 238,
+          "matched_predicted": 229,
+          "matched_GT": 213,
+          "road_IoU": 0.9585898153329603,
+          "GT_ground_coverage": 0.9797941230374488,
+          "line_precision": 0.9621848739495799,
+          "line_recall": 1.0,
+          "line_F1": 0.9807280513918629
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.016769694614901298,
+        "yaw_error_deg": 0.004521716463169754
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.34405426241742443,
+        "lateral_absolute_p95_m": 0.36451891797733715,
+        "road_id": 19,
+        "lane_id": -1,
+        "points": 23
+      },
+      "object_metrics": {
+        "TP": 3,
+        "FP": 2,
+        "FN": 2,
+        "duplicate_observations_removed": 2,
+        "GT_supported_merged_clusters": 2,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168344,
+      "folder": "town01-01\\168344",
+      "motion_status": "cold_start",
+      "path_status": "candidate",
+      "inference_ms": 494.7878000093624,
+      "fusion_ms": 493.23049996746704,
+      "metrics": {
+        "front": {
+          "TP": 9371,
+          "FP": 134,
+          "FN": 12721,
+          "GT_visible_ground_cells": 53754,
+          "predicted_observed_cells_on_GT_domain": 18171,
+          "GT_line_cells": 259,
+          "predicted_line_cells": 144,
+          "matched_predicted": 136,
+          "matched_GT": 119,
+          "road_IoU": 0.42162332403491404,
+          "GT_ground_coverage": 0.33803995981694385,
+          "line_precision": 0.9444444444444444,
+          "line_recall": 0.4594594594594595,
+          "line_F1": 0.6181818181818182
+        },
+        "single": {
+          "TP": 21425,
+          "FP": 206,
+          "FN": 667,
+          "GT_visible_ground_cells": 53754,
+          "predicted_observed_cells_on_GT_domain": 51851,
+          "GT_line_cells": 259,
+          "predicted_line_cells": 284,
+          "matched_predicted": 266,
+          "matched_GT": 249,
+          "road_IoU": 0.9608485065925195,
+          "GT_ground_coverage": 0.9645979834058861,
+          "line_precision": 0.9366197183098591,
+          "line_recall": 0.9613899613899614,
+          "line_F1": 0.9488432060740634
+        },
+        "temporal": {
+          "TP": 21425,
+          "FP": 206,
+          "FN": 667,
+          "GT_visible_ground_cells": 53754,
+          "predicted_observed_cells_on_GT_domain": 51851,
+          "GT_line_cells": 259,
+          "predicted_line_cells": 284,
+          "matched_predicted": 266,
+          "matched_GT": 249,
+          "road_IoU": 0.9608485065925195,
+          "GT_ground_coverage": 0.9645979834058861,
+          "line_precision": 0.9366197183098591,
+          "line_recall": 0.9613899613899614,
+          "line_F1": 0.9488432060740634
+        }
+      },
+      "motion_error": null,
+      "path_GT_error": {
+        "lateral_rmse_m": 0.27960545767425565,
+        "lateral_absolute_p95_m": 0.2981359262120666,
+        "road_id": 15,
+        "lane_id": -1,
+        "points": 20
+      },
+      "object_metrics": {
+        "TP": 3,
+        "FP": 2,
+        "FN": 3,
+        "duplicate_observations_removed": 2,
+        "GT_supported_merged_clusters": 2,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168348,
+      "folder": "town01-01\\168348",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 481.199000030756,
+      "fusion_ms": 552.3498999536969,
+      "metrics": {
+        "front": {
+          "TP": 9337,
+          "FP": 143,
+          "FN": 12637,
+          "GT_visible_ground_cells": 53900,
+          "predicted_observed_cells_on_GT_domain": 17935,
+          "GT_line_cells": 225,
+          "predicted_line_cells": 170,
+          "matched_predicted": 157,
+          "matched_GT": 128,
+          "road_IoU": 0.4221639462856626,
+          "GT_ground_coverage": 0.33274582560296845,
+          "line_precision": 0.9235294117647059,
+          "line_recall": 0.5688888888888889,
+          "line_F1": 0.7040728737847071
+        },
+        "single": {
+          "TP": 21316,
+          "FP": 206,
+          "FN": 658,
+          "GT_visible_ground_cells": 53900,
+          "predicted_observed_cells_on_GT_domain": 51893,
+          "GT_line_cells": 225,
+          "predicted_line_cells": 278,
+          "matched_predicted": 266,
+          "matched_GT": 225,
+          "road_IoU": 0.9610459873760144,
+          "GT_ground_coverage": 0.9627643784786641,
+          "line_precision": 0.9568345323741008,
+          "line_recall": 1.0,
+          "line_F1": 0.9779411764705883
+        },
+        "temporal": {
+          "TP": 21337,
+          "FP": 206,
+          "FN": 637,
+          "GT_visible_ground_cells": 53900,
+          "predicted_observed_cells_on_GT_domain": 51893,
+          "GT_line_cells": 225,
+          "predicted_line_cells": 285,
+          "matched_predicted": 275,
+          "matched_GT": 225,
+          "road_IoU": 0.9619927862939586,
+          "GT_ground_coverage": 0.9627643784786641,
+          "line_precision": 0.9649122807017544,
+          "line_recall": 1.0,
+          "line_F1": 0.9821428571428572
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.019706317098951584,
+        "yaw_error_deg": 0.013449207754295516
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.263316041254454,
+        "lateral_absolute_p95_m": 0.2782493007976632,
+        "road_id": 15,
+        "lane_id": -1,
+        "points": 21
+      },
+      "object_metrics": {
+        "TP": 3,
+        "FP": 2,
+        "FN": 3,
+        "duplicate_observations_removed": 3,
+        "GT_supported_merged_clusters": 3,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168352,
+      "folder": "town01-01\\168352",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 494.3689000210725,
+      "fusion_ms": 600.0478999922052,
+      "metrics": {
+        "front": {
+          "TP": 9282,
+          "FP": 138,
+          "FN": 12446,
+          "GT_visible_ground_cells": 53292,
+          "predicted_observed_cells_on_GT_domain": 17740,
+          "GT_line_cells": 196,
+          "predicted_line_cells": 160,
+          "matched_predicted": 149,
+          "matched_GT": 135,
+          "road_IoU": 0.4244946492271106,
+          "GT_ground_coverage": 0.33288298431284247,
+          "line_precision": 0.93125,
+          "line_recall": 0.6887755102040817,
+          "line_F1": 0.7918667821431383
+        },
+        "single": {
+          "TP": 21016,
+          "FP": 182,
+          "FN": 712,
+          "GT_visible_ground_cells": 53292,
+          "predicted_observed_cells_on_GT_domain": 51190,
+          "GT_line_cells": 196,
+          "predicted_line_cells": 205,
+          "matched_predicted": 185,
+          "matched_GT": 196,
+          "road_IoU": 0.9591967138293017,
+          "GT_ground_coverage": 0.9605569316220071,
+          "line_precision": 0.9024390243902439,
+          "line_recall": 1.0,
+          "line_F1": 0.9487179487179488
+        },
+        "temporal": {
+          "TP": 21039,
+          "FP": 183,
+          "FN": 689,
+          "GT_visible_ground_cells": 53292,
+          "predicted_observed_cells_on_GT_domain": 51190,
+          "GT_line_cells": 196,
+          "predicted_line_cells": 212,
+          "matched_predicted": 197,
+          "matched_GT": 196,
+          "road_IoU": 0.9602026379444115,
+          "GT_ground_coverage": 0.9605569316220071,
+          "line_precision": 0.9292452830188679,
+          "line_recall": 1.0,
+          "line_F1": 0.9633251833740831
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.011352694787648858,
+        "yaw_error_deg": 0.009158328669266087
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.2846237418586375,
+        "lateral_absolute_p95_m": 0.2934466112589748,
+        "road_id": 15,
+        "lane_id": -1,
+        "points": 22
+      },
+      "object_metrics": {
+        "TP": 2,
+        "FP": 2,
+        "FN": 4,
+        "duplicate_observations_removed": 2,
+        "GT_supported_merged_clusters": 2,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168356,
+      "folder": "town01-01\\168356",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 497.56749998778105,
+      "fusion_ms": 604.0455000475049,
+      "metrics": {
+        "front": {
+          "TP": 9190,
+          "FP": 95,
+          "FN": 12264,
+          "GT_visible_ground_cells": 52071,
+          "predicted_observed_cells_on_GT_domain": 17477,
+          "GT_line_cells": 197,
+          "predicted_line_cells": 146,
+          "matched_predicted": 135,
+          "matched_GT": 137,
+          "road_IoU": 0.4264699057960926,
+          "GT_ground_coverage": 0.335637879049759,
+          "line_precision": 0.9246575342465754,
+          "line_recall": 0.6954314720812182,
+          "line_F1": 0.7938279288366205
+        },
+        "single": {
+          "TP": 20710,
+          "FP": 152,
+          "FN": 744,
+          "GT_visible_ground_cells": 52071,
+          "predicted_observed_cells_on_GT_domain": 49989,
+          "GT_line_cells": 197,
+          "predicted_line_cells": 176,
+          "matched_predicted": 165,
+          "matched_GT": 196,
+          "road_IoU": 0.9585300379524206,
+          "GT_ground_coverage": 0.960016131820015,
+          "line_precision": 0.9375,
+          "line_recall": 0.9949238578680203,
+          "line_F1": 0.9653587259891644
+        },
+        "temporal": {
+          "TP": 20733,
+          "FP": 151,
+          "FN": 721,
+          "GT_visible_ground_cells": 52071,
+          "predicted_observed_cells_on_GT_domain": 49989,
+          "GT_line_cells": 197,
+          "predicted_line_cells": 185,
+          "matched_predicted": 175,
+          "matched_GT": 196,
+          "road_IoU": 0.9596389724600787,
+          "GT_ground_coverage": 0.960016131820015,
+          "line_precision": 0.9459459459459459,
+          "line_recall": 0.9949238578680203,
+          "line_F1": 0.9698169223156853
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.003918347913812089,
+        "yaw_error_deg": 0.007883583421005532
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.2651341618313582,
+        "lateral_absolute_p95_m": 0.2980735539006619,
+        "road_id": 15,
+        "lane_id": -1,
+        "points": 23
+      },
+      "object_metrics": {
+        "TP": 3,
+        "FP": 1,
+        "FN": 3,
+        "duplicate_observations_removed": 2,
+        "GT_supported_merged_clusters": 2,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168360,
+      "folder": "town01-01\\168360",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 468.3750999975018,
+      "fusion_ms": 605.0265000085346,
+      "metrics": {
+        "front": {
+          "TP": 9068,
+          "FP": 127,
+          "FN": 12095,
+          "GT_visible_ground_cells": 52496,
+          "predicted_observed_cells_on_GT_domain": 17124,
+          "GT_line_cells": 204,
+          "predicted_line_cells": 184,
+          "matched_predicted": 177,
+          "matched_GT": 141,
+          "road_IoU": 0.42592766557069045,
+          "GT_ground_coverage": 0.32619628162145686,
+          "line_precision": 0.9619565217391305,
+          "line_recall": 0.6911764705882353,
+          "line_F1": 0.8043898665635274
+        },
+        "single": {
+          "TP": 20404,
+          "FP": 180,
+          "FN": 759,
+          "GT_visible_ground_cells": 52496,
+          "predicted_observed_cells_on_GT_domain": 50440,
+          "GT_line_cells": 204,
+          "predicted_line_cells": 217,
+          "matched_predicted": 211,
+          "matched_GT": 203,
+          "road_IoU": 0.9560043105467835,
+          "GT_ground_coverage": 0.9608351112465712,
+          "line_precision": 0.9723502304147466,
+          "line_recall": 0.9950980392156863,
+          "line_F1": 0.9835926287387337
+        },
+        "temporal": {
+          "TP": 20431,
+          "FP": 178,
+          "FN": 732,
+          "GT_visible_ground_cells": 52496,
+          "predicted_observed_cells_on_GT_domain": 50440,
+          "GT_line_cells": 204,
+          "predicted_line_cells": 222,
+          "matched_predicted": 217,
+          "matched_GT": 203,
+          "road_IoU": 0.9573590740827516,
+          "GT_ground_coverage": 0.9608351112465712,
+          "line_precision": 0.9774774774774775,
+          "line_recall": 0.9950980392156863,
+          "line_F1": 0.9862090581413572
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.029113613123540136,
+        "yaw_error_deg": 0.01681663865460819
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.2706302950335413,
+        "lateral_absolute_p95_m": 0.2940419762505301,
+        "road_id": 15,
+        "lane_id": -1,
+        "points": 24
+      },
+      "object_metrics": {
+        "TP": 3,
+        "FP": 1,
+        "FN": 3,
+        "duplicate_observations_removed": 2,
+        "GT_supported_merged_clusters": 2,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168364,
+      "folder": "town01-01\\168364",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 482.65810002340004,
+      "fusion_ms": 625.1768000074662,
+      "metrics": {
+        "front": {
+          "TP": 8841,
+          "FP": 77,
+          "FN": 11851,
+          "GT_visible_ground_cells": 51570,
+          "predicted_observed_cells_on_GT_domain": 16619,
+          "GT_line_cells": 199,
+          "predicted_line_cells": 187,
+          "matched_predicted": 171,
+          "matched_GT": 141,
+          "road_IoU": 0.4256825075834176,
+          "GT_ground_coverage": 0.3222610044599573,
+          "line_precision": 0.9144385026737968,
+          "line_recall": 0.7085427135678392,
+          "line_F1": 0.7984303596264652
+        },
+        "single": {
+          "TP": 19935,
+          "FP": 191,
+          "FN": 757,
+          "GT_visible_ground_cells": 51570,
+          "predicted_observed_cells_on_GT_domain": 49447,
+          "GT_line_cells": 199,
+          "predicted_line_cells": 216,
+          "matched_predicted": 203,
+          "matched_GT": 199,
+          "road_IoU": 0.9546042235311019,
+          "GT_ground_coverage": 0.958832654644173,
+          "line_precision": 0.9398148148148148,
+          "line_recall": 1.0,
+          "line_F1": 0.9689737470167064
+        },
+        "temporal": {
+          "TP": 19957,
+          "FP": 179,
+          "FN": 735,
+          "GT_visible_ground_cells": 51570,
+          "predicted_observed_cells_on_GT_domain": 49447,
+          "GT_line_cells": 199,
+          "predicted_line_cells": 238,
+          "matched_predicted": 226,
+          "matched_GT": 199,
+          "road_IoU": 0.9562071774232188,
+          "GT_ground_coverage": 0.958832654644173,
+          "line_precision": 0.9495798319327731,
+          "line_recall": 1.0,
+          "line_F1": 0.9741379310344828
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.007554195123247446,
+        "yaw_error_deg": 0.015000347664870316
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.27274604932685825,
+        "lateral_absolute_p95_m": 0.2978898557482316,
+        "road_id": 15,
+        "lane_id": -1,
+        "points": 25
+      },
+      "object_metrics": {
+        "TP": 3,
+        "FP": 1,
+        "FN": 3,
+        "duplicate_observations_removed": 3,
+        "GT_supported_merged_clusters": 3,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168368,
+      "folder": "town01-01\\168368",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 472.148000029847,
+      "fusion_ms": 617.8155000088736,
+      "metrics": {
+        "front": {
+          "TP": 8832,
+          "FP": 144,
+          "FN": 11627,
+          "GT_visible_ground_cells": 50197,
+          "predicted_observed_cells_on_GT_domain": 16028,
+          "GT_line_cells": 204,
+          "predicted_line_cells": 203,
+          "matched_predicted": 170,
+          "matched_GT": 143,
+          "road_IoU": 0.4286754356161724,
+          "GT_ground_coverage": 0.3193019503157559,
+          "line_precision": 0.8374384236453202,
+          "line_recall": 0.7009803921568627,
+          "line_F1": 0.7631574816744886
+        },
+        "single": {
+          "TP": 19728,
+          "FP": 233,
+          "FN": 731,
+          "GT_visible_ground_cells": 50197,
+          "predicted_observed_cells_on_GT_domain": 48046,
+          "GT_line_cells": 204,
+          "predicted_line_cells": 244,
+          "matched_predicted": 216,
+          "matched_GT": 204,
+          "road_IoU": 0.9534119466460468,
+          "GT_ground_coverage": 0.9571488335956332,
+          "line_precision": 0.8852459016393442,
+          "line_recall": 1.0,
+          "line_F1": 0.9391304347826086
+        },
+        "temporal": {
+          "TP": 19747,
+          "FP": 208,
+          "FN": 712,
+          "GT_visible_ground_cells": 50197,
+          "predicted_observed_cells_on_GT_domain": 48046,
+          "GT_line_cells": 204,
+          "predicted_line_cells": 255,
+          "matched_predicted": 229,
+          "matched_GT": 204,
+          "road_IoU": 0.9554845889582426,
+          "GT_ground_coverage": 0.9571488335956332,
+          "line_precision": 0.8980392156862745,
+          "line_recall": 1.0,
+          "line_F1": 0.9462809917355373
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.03336513879279763,
+        "yaw_error_deg": 0.006532307502164855
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.28833227971913145,
+        "lateral_absolute_p95_m": 0.3101730503112189,
+        "road_id": 15,
+        "lane_id": -1,
+        "points": 25
+      },
+      "object_metrics": {
+        "TP": 3,
+        "FP": 1,
+        "FN": 3,
+        "duplicate_observations_removed": 2,
+        "GT_supported_merged_clusters": 2,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town01-01",
+      "frame": 168372,
+      "folder": "town01-01\\168372",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 487.9267999785952,
+      "fusion_ms": 601.4891000231728,
+      "metrics": {
+        "front": {
+          "TP": 8743,
+          "FP": 120,
+          "FN": 11486,
+          "GT_visible_ground_cells": 49482,
+          "predicted_observed_cells_on_GT_domain": 15995,
+          "GT_line_cells": 211,
+          "predicted_line_cells": 190,
+          "matched_predicted": 166,
+          "matched_GT": 151,
+          "road_IoU": 0.42965256277949776,
+          "GT_ground_coverage": 0.3232488581706479,
+          "line_precision": 0.8736842105263158,
+          "line_recall": 0.7156398104265402,
+          "line_F1": 0.7868039424948208
+        },
+        "single": {
+          "TP": 19481,
+          "FP": 261,
+          "FN": 748,
+          "GT_visible_ground_cells": 49482,
+          "predicted_observed_cells_on_GT_domain": 47074,
+          "GT_line_cells": 211,
+          "predicted_line_cells": 234,
+          "matched_predicted": 210,
+          "matched_GT": 211,
+          "road_IoU": 0.9507564665690581,
+          "GT_ground_coverage": 0.9513358392950972,
+          "line_precision": 0.8974358974358975,
+          "line_recall": 1.0,
+          "line_F1": 0.945945945945946
+        },
+        "temporal": {
+          "TP": 19503,
+          "FP": 228,
+          "FN": 726,
+          "GT_visible_ground_cells": 49482,
+          "predicted_observed_cells_on_GT_domain": 47074,
+          "GT_line_cells": 211,
+          "predicted_line_cells": 250,
+          "matched_predicted": 224,
+          "matched_GT": 211,
+          "road_IoU": 0.9533655961284646,
+          "GT_ground_coverage": 0.9513358392950972,
+          "line_precision": 0.896,
+          "line_recall": 1.0,
+          "line_F1": 0.9451476793248946
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.003497732393236089,
+        "yaw_error_deg": 0.0024210694105970265
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.26914970486148865,
+        "lateral_absolute_p95_m": 0.3232045275434701,
+        "road_id": 15,
+        "lane_id": -1,
+        "points": 25
+      },
+      "object_metrics": {
+        "TP": 2,
+        "FP": 2,
+        "FN": 4,
+        "duplicate_observations_removed": 2,
+        "GT_supported_merged_clusters": 2,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246278,
+      "folder": "town04-00\\246278",
+      "motion_status": "cold_start",
+      "path_status": "candidate",
+      "inference_ms": 492.0814000070095,
+      "fusion_ms": 433.09969996334985,
+      "metrics": {
+        "front": {
+          "TP": 11395,
+          "FP": 264,
+          "FN": 11502,
+          "GT_visible_ground_cells": 66215,
+          "predicted_observed_cells_on_GT_domain": 20891,
+          "GT_line_cells": 1557,
+          "predicted_line_cells": 598,
+          "matched_predicted": 539,
+          "matched_GT": 525,
+          "road_IoU": 0.4919908466819222,
+          "GT_ground_coverage": 0.3155025296382995,
+          "line_precision": 0.9013377926421404,
+          "line_recall": 0.3371868978805395,
+          "line_F1": 0.49077631890444884
+        },
+        "single": {
+          "TP": 21761,
+          "FP": 397,
+          "FN": 1136,
+          "GT_visible_ground_cells": 66215,
+          "predicted_observed_cells_on_GT_domain": 63871,
+          "GT_line_cells": 1557,
+          "predicted_line_cells": 1129,
+          "matched_predicted": 1071,
+          "matched_GT": 1269,
+          "road_IoU": 0.934189061560917,
+          "GT_ground_coverage": 0.9646001661255003,
+          "line_precision": 0.9486271036315324,
+          "line_recall": 0.815028901734104,
+          "line_F1": 0.8767679230822824
+        },
+        "temporal": {
+          "TP": 21761,
+          "FP": 397,
+          "FN": 1136,
+          "GT_visible_ground_cells": 66215,
+          "predicted_observed_cells_on_GT_domain": 63871,
+          "GT_line_cells": 1557,
+          "predicted_line_cells": 1129,
+          "matched_predicted": 1071,
+          "matched_GT": 1269,
+          "road_IoU": 0.934189061560917,
+          "GT_ground_coverage": 0.9646001661255003,
+          "line_precision": 0.9486271036315324,
+          "line_recall": 0.815028901734104,
+          "line_F1": 0.8767679230822824
+        }
+      },
+      "motion_error": null,
+      "path_GT_error": {
+        "lateral_rmse_m": 0.010838175300669913,
+        "lateral_absolute_p95_m": 0.015647164808004214,
+        "road_id": 16,
+        "lane_id": -1,
+        "points": 18
+      },
+      "object_metrics": {
+        "TP": 2,
+        "FP": 2,
+        "FN": 1,
+        "duplicate_observations_removed": 2,
+        "GT_supported_merged_clusters": 1,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246282,
+      "folder": "town04-00\\246282",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 511.4564999821596,
+      "fusion_ms": 536.1425000010058,
+      "metrics": {
+        "front": {
+          "TP": 11560,
+          "FP": 260,
+          "FN": 11630,
+          "GT_visible_ground_cells": 65693,
+          "predicted_observed_cells_on_GT_domain": 21368,
+          "GT_line_cells": 1650,
+          "predicted_line_cells": 582,
+          "matched_predicted": 545,
+          "matched_GT": 551,
+          "road_IoU": 0.4929637526652452,
+          "GT_ground_coverage": 0.3252705767737811,
+          "line_precision": 0.936426116838488,
+          "line_recall": 0.3339393939393939,
+          "line_F1": 0.4923143257165153
+        },
+        "single": {
+          "TP": 21929,
+          "FP": 477,
+          "FN": 1261,
+          "GT_visible_ground_cells": 65693,
+          "predicted_observed_cells_on_GT_domain": 63901,
+          "GT_line_cells": 1650,
+          "predicted_line_cells": 1104,
+          "matched_predicted": 1043,
+          "matched_GT": 1312,
+          "road_IoU": 0.92656441458571,
+          "GT_ground_coverage": 0.9727215989527043,
+          "line_precision": 0.9447463768115942,
+          "line_recall": 0.7951515151515152,
+          "line_F1": 0.8635179299034075
+        },
+        "temporal": {
+          "TP": 21933,
+          "FP": 442,
+          "FN": 1257,
+          "GT_visible_ground_cells": 65693,
+          "predicted_observed_cells_on_GT_domain": 63901,
+          "GT_line_cells": 1650,
+          "predicted_line_cells": 1115,
+          "matched_predicted": 1055,
+          "matched_GT": 1313,
+          "road_IoU": 0.9281059580230197,
+          "GT_ground_coverage": 0.9727215989527043,
+          "line_precision": 0.9461883408071748,
+          "line_recall": 0.7957575757575758,
+          "line_F1": 0.8644775169319244
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.05055231759917337,
+        "yaw_error_deg": 0.01426183765780094
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.012495378507516586,
+        "lateral_absolute_p95_m": 0.018042960375956613,
+        "road_id": 16,
+        "lane_id": -1,
+        "points": 19
+      },
+      "object_metrics": {
+        "TP": 4,
+        "FP": 0,
+        "FN": 1,
+        "duplicate_observations_removed": 2,
+        "GT_supported_merged_clusters": 2,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246286,
+      "folder": "town04-00\\246286",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 506.08529994497076,
+      "fusion_ms": 547.1705000381917,
+      "metrics": {
+        "front": {
+          "TP": 11810,
+          "FP": 265,
+          "FN": 11600,
+          "GT_visible_ground_cells": 64675,
+          "predicted_observed_cells_on_GT_domain": 21260,
+          "GT_line_cells": 1668,
+          "predicted_line_cells": 636,
+          "matched_predicted": 542,
+          "matched_GT": 538,
+          "road_IoU": 0.4988384371700106,
+          "GT_ground_coverage": 0.32872052570545035,
+          "line_precision": 0.8522012578616353,
+          "line_recall": 0.3225419664268585,
+          "line_F1": 0.4679672354247711
+        },
+        "single": {
+          "TP": 22326,
+          "FP": 582,
+          "FN": 1084,
+          "GT_visible_ground_cells": 64675,
+          "predicted_observed_cells_on_GT_domain": 62710,
+          "GT_line_cells": 1668,
+          "predicted_line_cells": 1204,
+          "matched_predicted": 1081,
+          "matched_GT": 1354,
+          "road_IoU": 0.9305601867289096,
+          "GT_ground_coverage": 0.9696173173560109,
+          "line_precision": 0.8978405315614618,
+          "line_recall": 0.8117505995203836,
+          "line_F1": 0.8526279488915116
+        },
+        "temporal": {
+          "TP": 22274,
+          "FP": 468,
+          "FN": 1136,
+          "GT_visible_ground_cells": 64675,
+          "predicted_observed_cells_on_GT_domain": 62710,
+          "GT_line_cells": 1668,
+          "predicted_line_cells": 1171,
+          "matched_predicted": 1081,
+          "matched_GT": 1339,
+          "road_IoU": 0.932825194739928,
+          "GT_ground_coverage": 0.9696173173560109,
+          "line_precision": 0.9231426131511529,
+          "line_recall": 0.802757793764988,
+          "line_F1": 0.8587516689770065
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.0060117040591844625,
+        "yaw_error_deg": 0.03348602368409386
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.004844813654635514,
+        "lateral_absolute_p95_m": 0.006496620506974407,
+        "road_id": 16,
+        "lane_id": -1,
+        "points": 20
+      },
+      "object_metrics": {
+        "TP": 4,
+        "FP": 0,
+        "FN": 1,
+        "duplicate_observations_removed": 1,
+        "GT_supported_merged_clusters": 1,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246290,
+      "folder": "town04-00\\246290",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 504.2606000206433,
+      "fusion_ms": 591.3295000209473,
+      "metrics": {
+        "front": {
+          "TP": 12107,
+          "FP": 267,
+          "FN": 11572,
+          "GT_visible_ground_cells": 64859,
+          "predicted_observed_cells_on_GT_domain": 21492,
+          "GT_line_cells": 1783,
+          "predicted_line_cells": 645,
+          "matched_predicted": 587,
+          "matched_GT": 629,
+          "road_IoU": 0.5055959241626994,
+          "GT_ground_coverage": 0.3313649609152161,
+          "line_precision": 0.9100775193798449,
+          "line_recall": 0.35277621985417834,
+          "line_F1": 0.5084574675382799
+        },
+        "single": {
+          "TP": 22611,
+          "FP": 556,
+          "FN": 1068,
+          "GT_visible_ground_cells": 64859,
+          "predicted_observed_cells_on_GT_domain": 63008,
+          "GT_line_cells": 1783,
+          "predicted_line_cells": 1241,
+          "matched_predicted": 1144,
+          "matched_GT": 1475,
+          "road_IoU": 0.932989478027646,
+          "GT_ground_coverage": 0.9714611696140859,
+          "line_precision": 0.9218372280419017,
+          "line_recall": 0.8272574312955693,
+          "line_F1": 0.8719901959239084
+        },
+        "temporal": {
+          "TP": 22589,
+          "FP": 527,
+          "FN": 1090,
+          "GT_visible_ground_cells": 64859,
+          "predicted_observed_cells_on_GT_domain": 63008,
+          "GT_line_cells": 1783,
+          "predicted_line_cells": 1201,
+          "matched_predicted": 1129,
+          "matched_GT": 1457,
+          "road_IoU": 0.9331983805668016,
+          "GT_ground_coverage": 0.9714611696140859,
+          "line_precision": 0.9400499583680266,
+          "line_recall": 0.8171620863712844,
+          "line_F1": 0.8743090369463261
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.006043002799678446,
+        "yaw_error_deg": 0.0002677252958926805
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.007837623220898876,
+        "lateral_absolute_p95_m": 0.012812321503794735,
+        "road_id": 16,
+        "lane_id": -1,
+        "points": 20
+      },
+      "object_metrics": {
+        "TP": 2,
+        "FP": 1,
+        "FN": 2,
+        "duplicate_observations_removed": 2,
+        "GT_supported_merged_clusters": 2,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246294,
+      "folder": "town04-00\\246294",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 495.04670000169426,
+      "fusion_ms": 582.5311000226066,
+      "metrics": {
+        "front": {
+          "TP": 11937,
+          "FP": 370,
+          "FN": 11554,
+          "GT_visible_ground_cells": 64490,
+          "predicted_observed_cells_on_GT_domain": 21052,
+          "GT_line_cells": 1777,
+          "predicted_line_cells": 605,
+          "matched_predicted": 538,
+          "matched_GT": 570,
+          "road_IoU": 0.5002724110473157,
+          "GT_ground_coverage": 0.32643820747402696,
+          "line_precision": 0.8892561983471075,
+          "line_recall": 0.3207653348339899,
+          "line_F1": 0.4714669192144371
+        },
+        "single": {
+          "TP": 22457,
+          "FP": 664,
+          "FN": 1034,
+          "GT_visible_ground_cells": 64490,
+          "predicted_observed_cells_on_GT_domain": 62579,
+          "GT_line_cells": 1777,
+          "predicted_line_cells": 1268,
+          "matched_predicted": 1139,
+          "matched_GT": 1370,
+          "road_IoU": 0.9297039950320845,
+          "GT_ground_coverage": 0.970367498837029,
+          "line_precision": 0.8982649842271293,
+          "line_recall": 0.770962296004502,
+          "line_F1": 0.8297593058317334
+        },
+        "temporal": {
+          "TP": 22469,
+          "FP": 555,
+          "FN": 1022,
+          "GT_visible_ground_cells": 64490,
+          "predicted_observed_cells_on_GT_domain": 62579,
+          "GT_line_cells": 1777,
+          "predicted_line_cells": 1247,
+          "matched_predicted": 1147,
+          "matched_GT": 1376,
+          "road_IoU": 0.9344173667137986,
+          "GT_ground_coverage": 0.970367498837029,
+          "line_precision": 0.9198075380914194,
+          "line_recall": 0.7743387732132808,
+          "line_F1": 0.8408277796142928
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.04802666352821185,
+        "yaw_error_deg": 0.04874100650215834
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.006229762479379036,
+        "lateral_absolute_p95_m": 0.011029290301299916,
+        "road_id": 16,
+        "lane_id": -1,
+        "points": 20
+      },
+      "object_metrics": {
+        "TP": 3,
+        "FP": 0,
+        "FN": 2,
+        "duplicate_observations_removed": 1,
+        "GT_supported_merged_clusters": 1,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246298,
+      "folder": "town04-00\\246298",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 501.53840001439676,
+      "fusion_ms": 550.4294999991544,
+      "metrics": {
+        "front": {
+          "TP": 11984,
+          "FP": 288,
+          "FN": 11539,
+          "GT_visible_ground_cells": 64615,
+          "predicted_observed_cells_on_GT_domain": 21269,
+          "GT_line_cells": 1635,
+          "predicted_line_cells": 494,
+          "matched_predicted": 467,
+          "matched_GT": 522,
+          "road_IoU": 0.5032967955986729,
+          "GT_ground_coverage": 0.32916505455389616,
+          "line_precision": 0.9453441295546559,
+          "line_recall": 0.3192660550458716,
+          "line_F1": 0.4773269970129615
+        },
+        "single": {
+          "TP": 22451,
+          "FP": 620,
+          "FN": 1072,
+          "GT_visible_ground_cells": 64615,
+          "predicted_observed_cells_on_GT_domain": 62862,
+          "GT_line_cells": 1635,
+          "predicted_line_cells": 1194,
+          "matched_predicted": 1088,
+          "matched_GT": 1294,
+          "road_IoU": 0.9299175744522222,
+          "GT_ground_coverage": 0.9728700766075988,
+          "line_precision": 0.9112227805695142,
+          "line_recall": 0.7914373088685015,
+          "line_F1": 0.8471164734608215
+        },
+        "temporal": {
+          "TP": 22503,
+          "FP": 552,
+          "FN": 1020,
+          "GT_visible_ground_cells": 64615,
+          "predicted_observed_cells_on_GT_domain": 62862,
+          "GT_line_cells": 1635,
+          "predicted_line_cells": 1222,
+          "matched_predicted": 1120,
+          "matched_GT": 1281,
+          "road_IoU": 0.9347040498442367,
+          "GT_ground_coverage": 0.9728700766075988,
+          "line_precision": 0.9165302782324058,
+          "line_recall": 0.7834862385321101,
+          "line_F1": 0.8448022158746646
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.01801748923770682,
+        "yaw_error_deg": 0.04360658394862074
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.009816119747693587,
+        "lateral_absolute_p95_m": 0.01827162513380164,
+        "road_id": 16,
+        "lane_id": -1,
+        "points": 20
+      },
+      "object_metrics": {
+        "TP": 2,
+        "FP": 2,
+        "FN": 1,
+        "duplicate_observations_removed": 1,
+        "GT_supported_merged_clusters": 1,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246302,
+      "folder": "town04-00\\246302",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 541.9016000232659,
+      "fusion_ms": 586.6541999857873,
+      "metrics": {
+        "front": {
+          "TP": 12205,
+          "FP": 293,
+          "FN": 11585,
+          "GT_visible_ground_cells": 64586,
+          "predicted_observed_cells_on_GT_domain": 21446,
+          "GT_line_cells": 1727,
+          "predicted_line_cells": 482,
+          "matched_predicted": 441,
+          "matched_GT": 528,
+          "road_IoU": 0.5067890213013329,
+          "GT_ground_coverage": 0.3320533861827641,
+          "line_precision": 0.9149377593360996,
+          "line_recall": 0.3057324840764331,
+          "line_F1": 0.45831574161280886
+        },
+        "single": {
+          "TP": 22840,
+          "FP": 725,
+          "FN": 950,
+          "GT_visible_ground_cells": 64586,
+          "predicted_observed_cells_on_GT_domain": 62695,
+          "GT_line_cells": 1727,
+          "predicted_line_cells": 1184,
+          "matched_predicted": 1085,
+          "matched_GT": 1317,
+          "road_IoU": 0.931674485009178,
+          "GT_ground_coverage": 0.970721208930728,
+          "line_precision": 0.9163851351351351,
+          "line_recall": 0.7625940938042849,
+          "line_F1": 0.8324461430598321
+        },
+        "temporal": {
+          "TP": 22837,
+          "FP": 613,
+          "FN": 953,
+          "GT_visible_ground_cells": 64586,
+          "predicted_observed_cells_on_GT_domain": 62695,
+          "GT_line_cells": 1727,
+          "predicted_line_cells": 1217,
+          "matched_predicted": 1124,
+          "matched_GT": 1308,
+          "road_IoU": 0.9358275621849772,
+          "GT_ground_coverage": 0.970721208930728,
+          "line_precision": 0.923582580115037,
+          "line_recall": 0.7573827446438911,
+          "line_F1": 0.8322664353985186
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.023403524882131044,
+        "yaw_error_deg": 0.05374221010998094
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.015050586288011382,
+        "lateral_absolute_p95_m": 0.019364384872619,
+        "road_id": 16,
+        "lane_id": -1,
+        "points": 20
+      },
+      "object_metrics": {
+        "TP": 4,
+        "FP": 0,
+        "FN": 1,
+        "duplicate_observations_removed": 1,
+        "GT_supported_merged_clusters": 1,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town04-00",
+      "frame": 246306,
+      "folder": "town04-00\\246306",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 536.9100000243634,
+      "fusion_ms": 614.5031999913044,
+      "metrics": {
+        "front": {
+          "TP": 12366,
+          "FP": 351,
+          "FN": 11422,
+          "GT_visible_ground_cells": 65269,
+          "predicted_observed_cells_on_GT_domain": 21443,
+          "GT_line_cells": 1675,
+          "predicted_line_cells": 495,
+          "matched_predicted": 454,
+          "matched_GT": 549,
+          "road_IoU": 0.5122830274659265,
+          "GT_ground_coverage": 0.32853268779972117,
+          "line_precision": 0.9171717171717172,
+          "line_recall": 0.32776119402985077,
+          "line_F1": 0.4829389510804541
+        },
+        "single": {
+          "TP": 22886,
+          "FP": 541,
+          "FN": 902,
+          "GT_visible_ground_cells": 65269,
+          "predicted_observed_cells_on_GT_domain": 63479,
+          "GT_line_cells": 1675,
+          "predicted_line_cells": 1111,
+          "matched_predicted": 1055,
+          "matched_GT": 1343,
+          "road_IoU": 0.9406880677380903,
+          "GT_ground_coverage": 0.9725750356218112,
+          "line_precision": 0.9495949594959496,
+          "line_recall": 0.8017910447761194,
+          "line_F1": 0.8694562281886526
+        },
+        "temporal": {
+          "TP": 22946,
+          "FP": 540,
+          "FN": 842,
+          "GT_visible_ground_cells": 65269,
+          "predicted_observed_cells_on_GT_domain": 63479,
+          "GT_line_cells": 1675,
+          "predicted_line_cells": 1119,
+          "matched_predicted": 1062,
+          "matched_GT": 1334,
+          "road_IoU": 0.9431930286090102,
+          "GT_ground_coverage": 0.9725750356218112,
+          "line_precision": 0.9490616621983914,
+          "line_recall": 0.7964179104477612,
+          "line_F1": 0.866065369929539
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.0036540543140286394,
+        "yaw_error_deg": 0.006271422862671294
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.006391181788146378,
+        "lateral_absolute_p95_m": 0.013507921396130046,
+        "road_id": 16,
+        "lane_id": -1,
+        "points": 20
+      },
+      "object_metrics": {
+        "TP": 4,
+        "FP": 0,
+        "FN": 1,
+        "duplicate_observations_removed": 1,
+        "GT_supported_merged_clusters": 1,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246933,
+      "folder": "town04-01\\246933",
+      "motion_status": "cold_start",
+      "path_status": "candidate",
+      "inference_ms": 542.768299987074,
+      "fusion_ms": 436.78449996514246,
+      "metrics": {
+        "front": {
+          "TP": 11215,
+          "FP": 189,
+          "FN": 12346,
+          "GT_visible_ground_cells": 40171,
+          "predicted_observed_cells_on_GT_domain": 17252,
+          "GT_line_cells": 1329,
+          "predicted_line_cells": 741,
+          "matched_predicted": 664,
+          "matched_GT": 565,
+          "road_IoU": 0.47221052631578947,
+          "GT_ground_coverage": 0.4294640412237684,
+          "line_precision": 0.8960863697705803,
+          "line_recall": 0.4251316779533484,
+          "line_F1": 0.5766719621003734
+        },
+        "single": {
+          "TP": 22775,
+          "FP": 220,
+          "FN": 786,
+          "GT_visible_ground_cells": 40171,
+          "predicted_observed_cells_on_GT_domain": 39125,
+          "GT_line_cells": 1329,
+          "predicted_line_cells": 1545,
+          "matched_predicted": 1417,
+          "matched_GT": 1254,
+          "road_IoU": 0.9576973213910265,
+          "GT_ground_coverage": 0.9739613153767643,
+          "line_precision": 0.9171521035598705,
+          "line_recall": 0.9435665914221218,
+          "line_F1": 0.9301718594061753
+        },
+        "temporal": {
+          "TP": 22775,
+          "FP": 220,
+          "FN": 786,
+          "GT_visible_ground_cells": 40171,
+          "predicted_observed_cells_on_GT_domain": 39125,
+          "GT_line_cells": 1329,
+          "predicted_line_cells": 1545,
+          "matched_predicted": 1417,
+          "matched_GT": 1254,
+          "road_IoU": 0.9576973213910265,
+          "GT_ground_coverage": 0.9739613153767643,
+          "line_precision": 0.9171521035598705,
+          "line_recall": 0.9435665914221218,
+          "line_F1": 0.9301718594061753
+        }
+      },
+      "motion_error": null,
+      "path_GT_error": {
+        "lateral_rmse_m": 0.03750955507319749,
+        "lateral_absolute_p95_m": 0.06393517871584728,
+        "road_id": 32,
+        "lane_id": -1,
+        "points": 27
+      },
+      "object_metrics": {
+        "TP": 2,
+        "FP": 2,
+        "FN": 2,
+        "duplicate_observations_removed": 3,
+        "GT_supported_merged_clusters": 2,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246937,
+      "folder": "town04-01\\246937",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 544.4874000386335,
+      "fusion_ms": 538.1524999975227,
+      "metrics": {
+        "front": {
+          "TP": 11333,
+          "FP": 170,
+          "FN": 12241,
+          "GT_visible_ground_cells": 40122,
+          "predicted_observed_cells_on_GT_domain": 17577,
+          "GT_line_cells": 1330,
+          "predicted_line_cells": 706,
+          "matched_predicted": 652,
+          "matched_GT": 557,
+          "road_IoU": 0.47729952830188677,
+          "GT_ground_coverage": 0.43808882907133245,
+          "line_precision": 0.9235127478753541,
+          "line_recall": 0.418796992481203,
+          "line_F1": 0.5762669370565898
+        },
+        "single": {
+          "TP": 22745,
+          "FP": 196,
+          "FN": 829,
+          "GT_visible_ground_cells": 40122,
+          "predicted_observed_cells_on_GT_domain": 39082,
+          "GT_line_cells": 1330,
+          "predicted_line_cells": 1452,
+          "matched_predicted": 1367,
+          "matched_GT": 1244,
+          "road_IoU": 0.9568784181741691,
+          "GT_ground_coverage": 0.9740790588704451,
+          "line_precision": 0.9414600550964187,
+          "line_recall": 0.9353383458646617,
+          "line_F1": 0.9383892166368043
+        },
+        "temporal": {
+          "TP": 22752,
+          "FP": 198,
+          "FN": 822,
+          "GT_visible_ground_cells": 40122,
+          "predicted_observed_cells_on_GT_domain": 39082,
+          "GT_line_cells": 1330,
+          "predicted_line_cells": 1523,
+          "matched_predicted": 1436,
+          "matched_GT": 1250,
+          "road_IoU": 0.9570923775870772,
+          "GT_ground_coverage": 0.9740790588704451,
+          "line_precision": 0.942875902823375,
+          "line_recall": 0.9398496240601504,
+          "line_F1": 0.9413603312329722
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.022677472531756736,
+        "yaw_error_deg": 0.017656045130845722
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.007768966555953668,
+        "lateral_absolute_p95_m": 0.016459894587789896,
+        "road_id": 32,
+        "lane_id": -1,
+        "points": 26
+      },
+      "object_metrics": {
+        "TP": 2,
+        "FP": 3,
+        "FN": 2,
+        "duplicate_observations_removed": 3,
+        "GT_supported_merged_clusters": 2,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246941,
+      "folder": "town04-01\\246941",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 620.3666999936104,
+      "fusion_ms": 677.1639999933541,
+      "metrics": {
+        "front": {
+          "TP": 11603,
+          "FP": 154,
+          "FN": 12230,
+          "GT_visible_ground_cells": 40407,
+          "predicted_observed_cells_on_GT_domain": 18002,
+          "GT_line_cells": 1307,
+          "predicted_line_cells": 727,
+          "matched_predicted": 646,
+          "matched_GT": 555,
+          "road_IoU": 0.48372034852211615,
+          "GT_ground_coverage": 0.44551686588957357,
+          "line_precision": 0.8885832187070152,
+          "line_recall": 0.4246365723029839,
+          "line_F1": 0.574656176796572
+        },
+        "single": {
+          "TP": 22927,
+          "FP": 214,
+          "FN": 906,
+          "GT_visible_ground_cells": 40407,
+          "predicted_observed_cells_on_GT_domain": 39224,
+          "GT_line_cells": 1307,
+          "predicted_line_cells": 1455,
+          "matched_predicted": 1348,
+          "matched_GT": 1218,
+          "road_IoU": 0.9534245436021125,
+          "GT_ground_coverage": 0.9707228945479743,
+          "line_precision": 0.9264604810996564,
+          "line_recall": 0.9319051262433052,
+          "line_F1": 0.929174827802625
+        },
+        "temporal": {
+          "TP": 22924,
+          "FP": 190,
+          "FN": 909,
+          "GT_visible_ground_cells": 40407,
+          "predicted_observed_cells_on_GT_domain": 39224,
+          "GT_line_cells": 1307,
+          "predicted_line_cells": 1492,
+          "matched_predicted": 1413,
+          "matched_GT": 1218,
+          "road_IoU": 0.9542521749989593,
+          "GT_ground_coverage": 0.9707228945479743,
+          "line_precision": 0.9470509383378016,
+          "line_recall": 0.9319051262433052,
+          "line_F1": 0.9394169889196291
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.01447666840224846,
+        "yaw_error_deg": 0.0001546515017339139
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.013405923179775413,
+        "lateral_absolute_p95_m": 0.018535218581931225,
+        "road_id": 32,
+        "lane_id": -1,
+        "points": 25
+      },
+      "object_metrics": {
+        "TP": 2,
+        "FP": 3,
+        "FN": 2,
+        "duplicate_observations_removed": 2,
+        "GT_supported_merged_clusters": 1,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246945,
+      "folder": "town04-01\\246945",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 511.7644999991171,
+      "fusion_ms": 578.2693999935873,
+      "metrics": {
+        "front": {
+          "TP": 11502,
+          "FP": 143,
+          "FN": 12032,
+          "GT_visible_ground_cells": 40207,
+          "predicted_observed_cells_on_GT_domain": 17947,
+          "GT_line_cells": 1277,
+          "predicted_line_cells": 693,
+          "matched_predicted": 613,
+          "matched_GT": 533,
+          "road_IoU": 0.4857878954259408,
+          "GT_ground_coverage": 0.44636506081030664,
+          "line_precision": 0.8845598845598845,
+          "line_recall": 0.41738449490994517,
+          "line_F1": 0.5671541525990088
+        },
+        "single": {
+          "TP": 22679,
+          "FP": 140,
+          "FN": 855,
+          "GT_visible_ground_cells": 40207,
+          "predicted_observed_cells_on_GT_domain": 39028,
+          "GT_line_cells": 1277,
+          "predicted_line_cells": 1384,
+          "matched_predicted": 1296,
+          "matched_GT": 1181,
+          "road_IoU": 0.957970769620681,
+          "GT_ground_coverage": 0.9706767478299798,
+          "line_precision": 0.9364161849710982,
+          "line_recall": 0.9248238057948316,
+          "line_F1": 0.9305838949188568
+        },
+        "temporal": {
+          "TP": 22648,
+          "FP": 151,
+          "FN": 886,
+          "GT_visible_ground_cells": 40207,
+          "predicted_observed_cells_on_GT_domain": 39028,
+          "GT_line_cells": 1277,
+          "predicted_line_cells": 1449,
+          "matched_predicted": 1371,
+          "matched_GT": 1183,
+          "road_IoU": 0.9562170149883893,
+          "GT_ground_coverage": 0.9706767478299798,
+          "line_precision": 0.9461697722567288,
+          "line_recall": 0.9263899765074393,
+          "line_F1": 0.9361754076701029
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.023410029420555947,
+        "yaw_error_deg": 0.0015016272226627846
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.003863636405180472,
+        "lateral_absolute_p95_m": 0.006408720521782197,
+        "road_id": 32,
+        "lane_id": -1,
+        "points": 19
+      },
+      "object_metrics": {
+        "TP": 1,
+        "FP": 4,
+        "FN": 3,
+        "duplicate_observations_removed": 1,
+        "GT_supported_merged_clusters": 1,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246949,
+      "folder": "town04-01\\246949",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 514.5084999967366,
+      "fusion_ms": 721.3816000148654,
+      "metrics": {
+        "front": {
+          "TP": 11501,
+          "FP": 140,
+          "FN": 11891,
+          "GT_visible_ground_cells": 40327,
+          "predicted_observed_cells_on_GT_domain": 18155,
+          "GT_line_cells": 1300,
+          "predicted_line_cells": 712,
+          "matched_predicted": 620,
+          "matched_GT": 525,
+          "road_IoU": 0.48873873873873874,
+          "GT_ground_coverage": 0.45019465866541025,
+          "line_precision": 0.8707865168539326,
+          "line_recall": 0.40384615384615385,
+          "line_F1": 0.5517884387184268
+        },
+        "single": {
+          "TP": 22445,
+          "FP": 169,
+          "FN": 947,
+          "GT_visible_ground_cells": 40327,
+          "predicted_observed_cells_on_GT_domain": 39139,
+          "GT_line_cells": 1300,
+          "predicted_line_cells": 1378,
+          "matched_predicted": 1286,
+          "matched_GT": 1195,
+          "road_IoU": 0.9526335894062221,
+          "GT_ground_coverage": 0.9705408287251717,
+          "line_precision": 0.9332365747460087,
+          "line_recall": 0.9192307692307692,
+          "line_F1": 0.9261807256871306
+        },
+        "temporal": {
+          "TP": 22468,
+          "FP": 163,
+          "FN": 924,
+          "GT_visible_ground_cells": 40327,
+          "predicted_observed_cells_on_GT_domain": 39139,
+          "GT_line_cells": 1300,
+          "predicted_line_cells": 1426,
+          "matched_predicted": 1346,
+          "matched_GT": 1196,
+          "road_IoU": 0.9538526852048398,
+          "GT_ground_coverage": 0.9705408287251717,
+          "line_precision": 0.9438990182328191,
+          "line_recall": 0.92,
+          "line_F1": 0.931796291837226
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.021638265621791178,
+        "yaw_error_deg": 0.019848039430441198
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.0038741748843028325,
+        "lateral_absolute_p95_m": 0.007196618184517139,
+        "road_id": 32,
+        "lane_id": -1,
+        "points": 20
+      },
+      "object_metrics": {
+        "TP": 1,
+        "FP": 5,
+        "FN": 3,
+        "duplicate_observations_removed": 1,
+        "GT_supported_merged_clusters": 1,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246953,
+      "folder": "town04-01\\246953",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 484.74599997280166,
+      "fusion_ms": 673.9031000179239,
+      "metrics": {
+        "front": {
+          "TP": 11616,
+          "FP": 140,
+          "FN": 11594,
+          "GT_visible_ground_cells": 40220,
+          "predicted_observed_cells_on_GT_domain": 18293,
+          "GT_line_cells": 1323,
+          "predicted_line_cells": 720,
+          "matched_predicted": 635,
+          "matched_GT": 518,
+          "road_IoU": 0.49747323340471095,
+          "GT_ground_coverage": 0.45482347090999503,
+          "line_precision": 0.8819444444444444,
+          "line_recall": 0.3915343915343915,
+          "line_F1": 0.5423122421304712
+        },
+        "single": {
+          "TP": 22344,
+          "FP": 196,
+          "FN": 866,
+          "GT_visible_ground_cells": 40220,
+          "predicted_observed_cells_on_GT_domain": 39079,
+          "GT_line_cells": 1323,
+          "predicted_line_cells": 1372,
+          "matched_predicted": 1283,
+          "matched_GT": 1201,
+          "road_IoU": 0.9546270187131505,
+          "GT_ground_coverage": 0.9716310293386375,
+          "line_precision": 0.935131195335277,
+          "line_recall": 0.907785336356765,
+          "line_F1": 0.9212553819957724
+        },
+        "temporal": {
+          "TP": 22333,
+          "FP": 193,
+          "FN": 877,
+          "GT_visible_ground_cells": 40220,
+          "predicted_observed_cells_on_GT_domain": 39079,
+          "GT_line_cells": 1323,
+          "predicted_line_cells": 1418,
+          "matched_predicted": 1336,
+          "matched_GT": 1201,
+          "road_IoU": 0.9542793658932616,
+          "GT_ground_coverage": 0.9716310293386375,
+          "line_precision": 0.9421720733427362,
+          "line_recall": 0.907785336356765,
+          "line_F1": 0.9246591170380682
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.025837006712896602,
+        "yaw_error_deg": 0.04199362433673086
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.01983884380395573,
+        "lateral_absolute_p95_m": 0.027150042606302997,
+        "road_id": 32,
+        "lane_id": -1,
+        "points": 20
+      },
+      "object_metrics": {
+        "TP": 0,
+        "FP": 4,
+        "FN": 4,
+        "duplicate_observations_removed": 1,
+        "GT_supported_merged_clusters": 1,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246957,
+      "folder": "town04-01\\246957",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 517.529500008095,
+      "fusion_ms": 608.1330999732018,
+      "metrics": {
+        "front": {
+          "TP": 11798,
+          "FP": 149,
+          "FN": 11239,
+          "GT_visible_ground_cells": 40369,
+          "predicted_observed_cells_on_GT_domain": 18481,
+          "GT_line_cells": 1311,
+          "predicted_line_cells": 684,
+          "matched_predicted": 618,
+          "matched_GT": 512,
+          "road_IoU": 0.5088415423100147,
+          "GT_ground_coverage": 0.45780177859248433,
+          "line_precision": 0.9035087719298246,
+          "line_recall": 0.3905415713196034,
+          "line_F1": 0.5453539537024111
+        },
+        "single": {
+          "TP": 22252,
+          "FP": 221,
+          "FN": 785,
+          "GT_visible_ground_cells": 40369,
+          "predicted_observed_cells_on_GT_domain": 39188,
+          "GT_line_cells": 1311,
+          "predicted_line_cells": 1316,
+          "matched_predicted": 1242,
+          "matched_GT": 1194,
+          "road_IoU": 0.9567460658698083,
+          "GT_ground_coverage": 0.9707448784958755,
+          "line_precision": 0.9437689969604863,
+          "line_recall": 0.9107551487414187,
+          "line_F1": 0.9269682200648462
+        },
+        "temporal": {
+          "TP": 22230,
+          "FP": 190,
+          "FN": 807,
+          "GT_visible_ground_cells": 40369,
+          "predicted_observed_cells_on_GT_domain": 39188,
+          "GT_line_cells": 1311,
+          "predicted_line_cells": 1359,
+          "matched_predicted": 1290,
+          "matched_GT": 1195,
+          "road_IoU": 0.9570758169371851,
+          "GT_ground_coverage": 0.9707448784958755,
+          "line_precision": 0.9492273730684326,
+          "line_recall": 0.9115179252479023,
+          "line_F1": 0.9299905435426875
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.018824206950315652,
+        "yaw_error_deg": 0.02842495374187959
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.005369876196850505,
+        "lateral_absolute_p95_m": 0.007875147354003159,
+        "road_id": 32,
+        "lane_id": -1,
+        "points": 20
+      },
+      "object_metrics": {
+        "TP": 0,
+        "FP": 4,
+        "FN": 4,
+        "duplicate_observations_removed": 1,
+        "GT_supported_merged_clusters": 1,
+        "mixed_GT_actor_merges": 0
+      }
+    },
+    {
+      "scene_id": "town04-01",
+      "frame": 246961,
+      "folder": "town04-01\\246961",
+      "motion_status": "aligned",
+      "path_status": "candidate",
+      "inference_ms": 518.4237000066787,
+      "fusion_ms": 641.5119000012055,
+      "metrics": {
+        "front": {
+          "TP": 11927,
+          "FP": 163,
+          "FN": 11067,
+          "GT_visible_ground_cells": 40606,
+          "predicted_observed_cells_on_GT_domain": 18748,
+          "GT_line_cells": 1337,
+          "predicted_line_cells": 613,
+          "matched_predicted": 568,
+          "matched_GT": 501,
+          "road_IoU": 0.5150494450921967,
+          "GT_ground_coverage": 0.4617051667241294,
+          "line_precision": 0.9265905383360522,
+          "line_recall": 0.37471952131638,
+          "line_F1": 0.5336338721216206
+        },
+        "single": {
+          "TP": 22201,
+          "FP": 244,
+          "FN": 793,
+          "GT_visible_ground_cells": 40606,
+          "predicted_observed_cells_on_GT_domain": 39332,
+          "GT_line_cells": 1337,
+          "predicted_line_cells": 1204,
+          "matched_predicted": 1144,
+          "matched_GT": 1209,
+          "road_IoU": 0.9553748171099062,
+          "GT_ground_coverage": 0.9686253263064571,
+          "line_precision": 0.9501661129568106,
+          "line_recall": 0.9042632759910246,
+          "line_F1": 0.9266465762015085
+        },
+        "temporal": {
+          "TP": 22198,
+          "FP": 214,
+          "FN": 796,
+          "GT_visible_ground_cells": 40606,
+          "predicted_observed_cells_on_GT_domain": 39332,
+          "GT_line_cells": 1337,
+          "predicted_line_cells": 1260,
+          "matched_predicted": 1203,
+          "matched_GT": 1209,
+          "road_IoU": 0.9564805239572561,
+          "GT_ground_coverage": 0.9686253263064571,
+          "line_precision": 0.9547619047619048,
+          "line_recall": 0.9042632759910246,
+          "line_F1": 0.9288267170665867
+        }
+      },
+      "motion_error": {
+        "translation_error_m": 0.019431847013770917,
+        "yaw_error_deg": 0.02645969713831582
+      },
+      "path_GT_error": {
+        "lateral_rmse_m": 0.01773198079561304,
+        "lateral_absolute_p95_m": 0.033837223148200445,
+        "road_id": 32,
+        "lane_id": -1,
+        "points": 28
+      },
+      "object_metrics": {
+        "TP": 0,
+        "FP": 5,
+        "FN": 4,
+        "duplicate_observations_removed": 2,
+        "GT_supported_merged_clusters": 1,
+        "mixed_GT_actor_merges": 0
+      }
+    }
+  ]
+}

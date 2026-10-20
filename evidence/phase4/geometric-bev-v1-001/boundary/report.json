@@ -1,0 +1,22 @@
+{
+  "status": "passed_expected_rejections",
+  "tool_sha256": "99aac75bd9d744d6ac13b8c2d95b4a6b09049d663a0ad995cad90aef3c517f07",
+  "inference_tool_sha256": "9defb41de73331956fc42f06eaad58ea3faa05626b0757a20578d469365189f6",
+  "scope": "Actual CPU CLI rejected GT contamination before model construction/forward; no simulator or GPU work",
+  "cases": [
+    {
+      "case": "extra_GT_file",
+      "return_code": 1,
+      "expected_rejection": "Staging must contain only frozen RGB inputs and calibration",
+      "output_directory_not_created": true,
+      "stderr_sha256": "bd36aa705dc3e35d8ca286b85ee8948f05ce6431865cab648b502d18f72013b0"
+    },
+    {
+      "case": "GT_pose_in_sequence",
+      "return_code": 1,
+      "expected_rejection": "GT fields forbidden in sequence input",
+      "output_directory_not_created": true,
+      "stderr_sha256": "083e99acc5b3b808bd4f29f59ffe1c29d4bc92264642b63d3123df70bbbead89"
+    }
+  ]
+}

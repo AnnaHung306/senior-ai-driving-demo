@@ -1,0 +1,50 @@
+[
+  {
+    "path": "PHASE4.md",
+    "sha256": "9daa8d07b4de450d39a031bae3a8983564f1eb7d35b1ddd20685e6c2b28af117"
+  },
+  {
+    "path": "requirements-phase4.txt",
+    "sha256": "87f5bb38c7ef06e282dd1c78f3c34e8206336e13acdb23e63a650ae0d8e716aa"
+  },
+  {
+    "path": "scripts/archive_phase4_pilot.py",
+    "sha256": "cb5fb678e84f6d7ce95e39b962120c33a1d6d4be4787d470eb89f073e012a6b5"
+  },
+  {
+    "path": "scripts/evaluate_phase4_pilot.py",
+    "sha256": "5dc87a3c9baf739f2f74a0ad71d37a944afc20338e1e9a01c93e827deada4574"
+  },
+  {
+    "path": "scripts/make_phase4_review.py",
+    "sha256": "9147ecb85ba4f45cb62d0f4d5f947c5a4b6ee25a8cffe4e650605165d784b7ae"
+  },
+  {
+    "path": "scripts/prepare_phase4_inputs.py",
+    "sha256": "67c5c34f36a478e621ede8ca70e79d8a3a12cf432ce93d87ef1de97d8400c2fa"
+  },
+  {
+    "path": "scripts/run_phase4_pilot.py",
+    "sha256": "9defb41de73331956fc42f06eaad58ea3faa05626b0757a20578d469365189f6"
+  },
+  {
+    "path": "scripts/select_phase4_pilot.py",
+    "sha256": "f75c7320183332d7085224a18d6dd385bb7cba29023ec5d755c74f5ae56531d4"
+  },
+  {
+    "path": "scripts/verify_phase4_artifacts.py",
+    "sha256": "dd4f852c236bea8bb0c4f04a6aadabd15e22d7d3facdf9355c660f1b9e62436f"
+  },
+  {
+    "path": "scripts/verify_phase4_rgb_boundary.py",
+    "sha256": "99aac75bd9d744d6ac13b8c2d95b4a6b09049d663a0ad995cad90aef3c517f07"
+  },
+  {
+    "path": "tests/test_bev_evaluation.py",
+    "sha256": "7426286df86197f3ea9c79abfebe92ed94aa28d1c77ffbb7e2ceac8931345700"
+  },
+  {
+    "path": "tests/test_bev_phase4.py",
+    "sha256": "a772db421390034e7079f0cb8b2a091b5911c16ba7e099ce816e4d86d5ed3bca"
+  }
+]

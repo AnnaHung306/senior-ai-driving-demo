@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\code\senior_AI\scripts\run_phase4_pilot.py", line 117, in <module>
+    try:main(args)
+        ^^^^^^^^^^
+  File "C:\code\senior_AI\scripts\run_phase4_pilot.py", line 48, in main
+    if set(seq)!={'scene_id','manifests'}:raise ValueError('GT fields forbidden in sequence input')
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: GT fields forbidden in sequence input

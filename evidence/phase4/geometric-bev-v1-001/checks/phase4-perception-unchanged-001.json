@@ -1,0 +1,15 @@
+{
+  "bundles": 32,
+  "all_BEV_arrays_exact": true,
+  "keys": [
+    "single",
+    "temporal",
+    "front",
+    "observed",
+    "front_observed",
+    "support",
+    "geometric_coverage"
+  ],
+  "all_detection_JSON_bytes_exact": true,
+  "scope": "Only lane-path policy changed; repeat is not a new independent trial."
+}

@@ -7,8 +7,8 @@
 | 0 | 硬體 / 相容 Python / CARLA server / 單車與單鏡頭 | 環境報告 + 固定加速煞車 protocol | v2 通過：本地 native 排程修正 + 原始影格配對，原 v1 失敗保留 |
 | 1 | Phase 0 通過後，固定 Town01 起終點、規則 Baseline、事件記錄 | 5 個預先固定 scenario；抵達 / 碰撞 / 偏離 / 時間；號誌未刺激 | 初始 Baseline 5/5 通過，DX12 最終設定回歸通過；非 AI |
 | 2 | 8 RGB / calibration / 同幀 queue / 標籤隔離與場景切分 | 完整同步、無 split 群組交集；資料分佈稽核 | v2 基礎資料驗收通過：六個移動自車場景、300 組／7200 PNG、行人／兩輪車、train format；仍是有限單城研究版本 |
-| 3 | 先小規模 2D 偵測 / 分割與 CUDA 試跑，再自訓或微調 | 保留測試集逐類 AP / precision / recall / IoU + 錯誤樣本 | 進行中：首輪 segmentation 原test26.22%；已完成可見instance政策、靜態/動態32 sensors、640 PNG與44 tests；配對夜雨診斷仍嚴重失敗。完整v3資料 / detector / 品質驗收未完成 |
-| 4 | 多鏡頭幾何、BEV、跨鏡頭與時序融合 | 同物件去重 / 位置與道路誤差；單鏡頭消融 | 未開始 |
+| 3 | 2D偵測／分割／號誌與資料管線 | 原逐類 AP/P/R/IoU、錯例、模型卡與來源保留 | 2026-10-18依使用者決定收尾，不追Wall、不納入depth；原品質未達項目保留，後續限定晴天／無近牆循線 |
+| 4 | 多鏡頭幾何、BEV、跨鏡頭與時序融合 | 同物件去重 / 位置與道路誤差；單鏡頭消融 | 進行中：幾何 BEV 原型及 32 組 GPU／獨立 GT／視覺檢查完成，193 測試通過；時序道路 IoU 95.20%、線 F1 90.27%，候選軌跡 RMSE 15.9cm；新完整路線與效能／物件可靠度仍待驗收，見 PHASE4.md |
 | 5 | 3D boxes → occupancy → 進階 geometry | 位置 / 尺寸 / 朝向 / semantic occupancy IoU | 未開始 |
 | 6 | WorldFrame 推論輸出 → 3D 導航顯示 | 來源檢查、追蹤 / 俯視 / 自由視角、延遲與更新率 | 未開始 |
 | 7 | 跨時追蹤、速度、運動預測 | ID switches / ADE / FDE / 風險情境 | 未開始 |
@@ -28,4 +28,4 @@ Phase 3 之後的品質門檻尚未凍結，不假裝已有適合本資料集的
 ## 進入下一階段
 
 Phase 0 必須同時有 doctor=`passed` 與實際 smoke=`passed`，只有單元測試通過不算。
-尚未產生 checkpoint；目前沒有自訓、微調或直接使用的預訓練模型。
+Phase 3 已有自訓分割、偵測與號誌 checkpoint；Phase 4 沿用凍結版本，只新增幾何與時序融合，不新增模型訓練。原 Phase 3 未達數值保留，使用者已授權依晴天／無近牆循線範圍往後推進，詳見 PHASE3_CLOSEOUT.md。

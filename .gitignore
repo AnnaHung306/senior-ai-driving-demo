@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 artifacts/downloads/
+artifacts/dependencies/
 artifacts/carla/
 artifacts/carla-*/
 artifacts/runtimes/

@@ -1,0 +1,421 @@
+{
+  "source": "learned_RGB_prediction_with_calibrated_ground_plane",
+  "scene_id": "town01-01",
+  "frame": 168344,
+  "timestamp_s": 10.067531693726778,
+  "manifest": "inputs/frames/town01-01/00168344.json",
+  "manifest_sha256": "32f88e9650f980624465009b9426a4851420bace21743113ff19091625e04c20",
+  "motion": {
+    "status": "cold_start",
+    "history_frames_used": 0,
+    "motion_source": "RGB_ground_features_only"
+  },
+  "path": {
+    "status": "candidate",
+    "source": "single_predicted_boundary_with_fixed_width_prior",
+    "points_ego_m": [
+      [
+        8.5,
+        -0.4884418700418549
+      ],
+      [
+        9.0,
+        -0.4980197062820174
+      ],
+      [
+        9.5,
+        -0.5077548846730633
+      ],
+      [
+        10.0,
+        -0.5176474052149924
+      ],
+      [
+        10.5,
+        -0.5276972679078049
+      ],
+      [
+        11.0,
+        -0.5379044727515008
+      ],
+      [
+        11.5,
+        -0.5482690197460801
+      ],
+      [
+        12.0,
+        -0.5587909088915427
+      ],
+      [
+        12.5,
+        -0.5694701401878887
+      ],
+      [
+        13.0,
+        -0.5803067136351179
+      ],
+      [
+        13.5,
+        -0.5913006292332306
+      ],
+      [
+        14.0,
+        -0.6024518869822266
+      ],
+      [
+        14.5,
+        -0.6137604868821059
+      ],
+      [
+        15.0,
+        -0.6252264289328686
+      ],
+      [
+        15.5,
+        -0.6368497131345147
+      ],
+      [
+        16.0,
+        -0.6486303394870441
+      ],
+      [
+        16.5,
+        -0.6605683079904568
+      ],
+      [
+        17.0,
+        -0.672663618644753
+      ],
+      [
+        17.5,
+        -0.6849162714499324
+      ],
+      [
+        18.0,
+        -0.6973262664059953
+      ]
+    ],
+    "observed_pairs": 12,
+    "span_m": 9.5,
+    "fit_rmse_m": 0.025452852470767996,
+    "median_width_m": 3.5,
+    "control_issued": false,
+    "limits": "Visible local center candidate; no destination routing, traffic rules or closed-loop proof",
+    "width_prior_m": 3.5,
+    "assumption": "One painted boundary, fixed lane width and predicted ground support; width is not measured in this mode"
+  },
+  "objects": [
+    {
+      "frame_local_id": 0,
+      "class_name": "pedestrian",
+      "xy_m": [
+        8.26402277339347,
+        4.068835884136009
+      ],
+      "score_uncalibrated": 0.9999839067459106,
+      "sources": [
+        {
+          "bbox_xyxy": [
+            189.75424194335938,
+            168.27777099609375,
+            218.74664306640625,
+            249.90267944335938
+          ],
+          "class_id": 2,
+          "class_name": "pedestrian",
+          "score": 0.9999839067459106,
+          "camera": "front_right",
+          "detection_index": 0,
+          "xy_m": [
+            8.326327321204545,
+            4.099414614334545
+          ],
+          "geometry": "bbox_bottom_ground_plane_hypothesis_not_3D_box"
+        },
+        {
+          "bbox_xyxy": [
+            498.6950378417969,
+            167.72802734375,
+            531.7916259765625,
+            259.9028015136719
+          ],
+          "class_id": 2,
+          "class_name": "pedestrian",
+          "score": 0.9999723434448242,
+          "camera": "front",
+          "detection_index": 1,
+          "xy_m": [
+            8.201717505116223,
+            4.0382568003366295
+          ],
+          "geometry": "bbox_bottom_ground_plane_hypothesis_not_3D_box"
+        }
+      ],
+      "geometry": "assumed_ground_contact",
+      "maximum_source_separation_m": 0.13880880547922403
+    },
+    {
+      "frame_local_id": 1,
+      "class_name": "car",
+      "xy_m": [
+        13.582548797876115,
+        -3.775781317757483
+      ],
+      "score_uncalibrated": 0.9999822378158569,
+      "sources": [
+        {
+          "bbox_xyxy": [
+            476.8866882324219,
+            184.2268829345703,
+            547.558349609375,
+            227.48753356933594
+          ],
+          "class_id": 1,
+          "class_name": "car",
+          "score": 0.9999822378158569,
+          "camera": "front_left",
+          "detection_index": 0,
+          "xy_m": [
+            13.429759700380597,
+            -3.7607213257011405
+          ],
+          "geometry": "bbox_bottom_ground_plane_hypothesis_not_3D_box"
+        },
+        {
+          "bbox_xyxy": [
+            188.95156860351562,
+            182.98822021484375,
+            250.125,
+            222.3277587890625
+          ],
+          "class_id": 1,
+          "class_name": "car",
+          "score": 0.9999798536300659,
+          "camera": "front",
+          "detection_index": 0,
+          "xy_m": [
+            13.735338259656569,
+            -3.7908413457203682
+          ],
+          "geometry": "bbox_bottom_ground_plane_hypothesis_not_3D_box"
+        }
+      ],
+      "geometry": "assumed_ground_contact",
+      "maximum_source_separation_m": 0.30705939408384386
+    },
+    {
+      "frame_local_id": 2,
+      "class_name": "motorcycle",
+      "xy_m": [
+        3.890470237861172,
+        -3.718363135682867
+      ],
+      "score_uncalibrated": 0.9999370574951172,
+      "sources": [
+        {
+          "bbox_xyxy": [
+            254.6024932861328,
+            189.52377319335938,
+            359.2889404296875,
+            309.9417724609375
+          ],
+          "class_id": 4,
+          "class_name": "motorcycle",
+          "score": 0.9999370574951172,
+          "camera": "front_left",
+          "detection_index": 3,
+          "xy_m": [
+            3.890470237861172,
+            -3.718363135682867
+          ],
+          "geometry": "bbox_bottom_ground_plane_hypothesis_not_3D_box"
+        }
+      ],
+      "geometry": "assumed_ground_contact",
+      "maximum_source_separation_m": 0.0
+    },
+    {
+      "frame_local_id": 3,
+      "class_name": "bicycle",
+      "xy_m": [
+        8.73751163554646,
+        -0.20114616096656496
+      ],
+      "score_uncalibrated": 0.9999130964279175,
+      "sources": [
+        {
+          "bbox_xyxy": [
+            294.77459716796875,
+            182.563232421875,
+            326.189208984375,
+            253.717041015625
+          ],
+          "class_id": 3,
+          "class_name": "bicycle",
+          "score": 0.9999130964279175,
+          "camera": "front",
+          "detection_index": 2,
+          "xy_m": [
+            8.73751163554646,
+            -0.20114616096656496
+          ],
+          "geometry": "bbox_bottom_ground_plane_hypothesis_not_3D_box"
+        }
+      ],
+      "geometry": "assumed_ground_contact",
+      "maximum_source_separation_m": 0.0
+    },
+    {
+      "frame_local_id": 4,
+      "class_name": "pedestrian",
+      "xy_m": [
+        -3.667493325253311,
+        -15.740619977438932
+      ],
+      "score_uncalibrated": 0.752565860748291,
+      "sources": [
+        {
+          "bbox_xyxy": [
+            543.9132080078125,
+            197.9805908203125,
+            554.69091796875,
+            221.44146728515625
+          ],
+          "class_id": 2,
+          "class_name": "pedestrian",
+          "score": 0.752565860748291,
+          "camera": "rear_left",
+          "detection_index": 0,
+          "xy_m": [
+            -3.667493325253311,
+            -15.740619977438932
+          ],
+          "geometry": "bbox_bottom_ground_plane_hypothesis_not_3D_box"
+        }
+      ],
+      "geometry": "assumed_ground_contact",
+      "maximum_source_separation_m": 0.0
+    }
+  ],
+  "unprojected_objects": [
+    {
+      "bbox_xyxy": [
+        252.7584686279297,
+        162.33929443359375,
+        289.24407958984375,
+        197.19064331054688
+      ],
+      "class_id": 5,
+      "class_name": "truck",
+      "score": 0.9998704195022583,
+      "camera": "front",
+      "detection_index": 3,
+      "reason": "no_ground_intersection"
+    },
+    {
+      "bbox_xyxy": [
+        284.3736877441406,
+        164.606201171875,
+        300.6072082519531,
+        189.78204345703125
+      ],
+      "class_id": 6,
+      "class_name": "bus",
+      "score": 0.999748170375824,
+      "camera": "front",
+      "detection_index": 4,
+      "reason": "no_ground_intersection"
+    },
+    {
+      "bbox_xyxy": [
+        421.54345703125,
+        199.29913330078125,
+        446.248779296875,
+        244.28939819335938
+      ],
+      "class_id": 8,
+      "class_name": "temporary_obstacle",
+      "score": 0.9995881915092468,
+      "camera": "left",
+      "detection_index": 0,
+      "reason": "contact_not_adjacent_to_predicted_ground"
+    },
+    {
+      "bbox_xyxy": [
+        393.6588439941406,
+        168.41555786132812,
+        415.3442077636719,
+        245.36627197265625
+      ],
+      "class_id": 2,
+      "class_name": "pedestrian",
+      "score": 0.9987271428108215,
+      "camera": "left",
+      "detection_index": 1,
+      "reason": "contact_not_adjacent_to_predicted_ground"
+    },
+    {
+      "bbox_xyxy": [
+        539.4876708984375,
+        158.28652954101562,
+        594.6434326171875,
+        201.98190307617188
+      ],
+      "class_id": 5,
+      "class_name": "truck",
+      "score": 0.9999734163284302,
+      "camera": "front_left",
+      "detection_index": 1,
+      "reason": "no_ground_intersection"
+    },
+    {
+      "bbox_xyxy": [
+        588.8361206054688,
+        161.01698303222656,
+        610.9035034179688,
+        193.5674591064453
+      ],
+      "class_id": 6,
+      "class_name": "bus",
+      "score": 0.9999676942825317,
+      "camera": "front_left",
+      "detection_index": 2,
+      "reason": "no_ground_intersection"
+    },
+    {
+      "bbox_xyxy": [
+        99.38079833984375,
+        201.52877807617188,
+        131.69862365722656,
+        254.89068603515625
+      ],
+      "class_id": 8,
+      "class_name": "temporary_obstacle",
+      "score": 0.9998871088027954,
+      "camera": "front_left",
+      "detection_index": 4,
+      "reason": "contact_not_adjacent_to_predicted_ground"
+    },
+    {
+      "bbox_xyxy": [
+        50.43220520019531,
+        166.1411895751953,
+        87.24009704589844,
+        263.41937255859375
+      ],
+      "class_id": 2,
+      "class_name": "pedestrian",
+      "score": 0.9960552453994751,
+      "camera": "front_left",
+      "detection_index": 5,
+      "reason": "contact_not_adjacent_to_predicted_ground"
+    }
+  ],
+  "projected_before_dedup": 7,
+  "objects_after_dedup": 5,
+  "timing_ms": {
+    "RGB_decode_and_neural_inference": 494.7878000093624,
+    "fusion_motion_path": 493.23049996746704
+  },
+  "control_issued": false
+}

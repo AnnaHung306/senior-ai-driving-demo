@@ -1,0 +1,5 @@
+{
+  "status": "failed_before_selection_or_model_inference",
+  "cause": "GT modality entry is an image/frame/timestamp record; initial reader expected a string",
+  "repair": "Read required image field. Preserve failed directory and use new output002."
+}

@@ -1,0 +1,52 @@
+{
+  "version": "phase4-geometric-bev-v1",
+  "grid": {
+    "x_min": -15.0,
+    "x_max": 35.0,
+    "y_min": -20.0,
+    "y_max": 20.0,
+    "resolution_m": 0.1
+  },
+  "ground_z_m": 0.0,
+  "max_camera_range_m": 35.0,
+  "minimum_axial_m": 0.25,
+  "vehicle_mask": {
+    "half_length_m": 2.5,
+    "half_width_m": 1.1
+  },
+  "road_ids": [
+    1,
+    10
+  ],
+  "line_id": 10,
+  "object_min_score": 0.5,
+  "object_max_range_m": 25.0,
+  "object_merge_distance_m": 1.5,
+  "temporal": {
+    "maximum_gap_s": 0.4,
+    "history_weight": 0.5,
+    "minimum_inliers": 12,
+    "maximum_residual_m": 0.2
+  },
+  "path": {
+    "x_min_m": 3.0,
+    "x_max_m": 18.0,
+    "minimum_span_m": 5.0,
+    "minimum_width_m": 2.5,
+    "maximum_width_m": 4.5
+  },
+  "models": {
+    "segmentation": {
+      "path": "artifacts/runs/sunny-segmentation-v6-001/best.pt",
+      "sha256": "0a3fe3f66fb93be373f2e82218632a4f8cc277bf6067f48bb4683a71f1b2af30"
+    },
+    "detection": {
+      "path": "artifacts/runs/sunny-detection-v6-001/best.pt",
+      "sha256": "ba6d2f4269a7f3f95e4b92d7daff1f330f4203a4619e1f5902c752aa371f7155"
+    },
+    "phase": {
+      "path": "artifacts/runs/sunny-light-state-v1-004/best.pt",
+      "sha256": "f9836ef6474d74b607124cbb4887492105b3949f23d3c9065741d86c160b451e"
+    }
+  }
+}

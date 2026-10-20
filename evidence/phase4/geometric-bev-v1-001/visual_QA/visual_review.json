@@ -1,0 +1,194 @@
+{
+  "status": "completed_assistant_visual_review_prototype_only",
+  "reviewer": "Codex assistant; actual tool image inspection during this task",
+  "recorded_utc": "2026-10-20T08:51:14.633274+00:00",
+  "catalog_sha256": "4ddb5d531103df06de63878a10f92afd757b306246634274a3aad72f1f59e28c",
+  "prediction_contract_sha256": "bb66b420c8ed632a0996d109e08695b0ffab6a5c33c92aa449afe8f066bbc7f6",
+  "evaluation_report_sha256": "b3810154f0e8218107e1a23d33a072b30c17c60c5ae80ffca527757fa0c0cc78",
+  "pages": [
+    {
+      "kind": "prediction",
+      "path": "prediction-00.png",
+      "sha256": "19e4b9bbee9e9e520d62d489748944cd136d41f3ec55d52fe33db32edc004b6b",
+      "viewed": true
+    },
+    {
+      "kind": "prediction",
+      "path": "prediction-01.png",
+      "sha256": "bbffc61b0fecae302864a75574b7b32017aee206e9a5f8e66e91e0af2897fe19",
+      "viewed": true
+    },
+    {
+      "kind": "prediction",
+      "path": "prediction-02.png",
+      "sha256": "22a0424f1428a49dac25d708c2d6f0c2071381807cd865430ce0305a74594ff0",
+      "viewed": true
+    },
+    {
+      "kind": "prediction",
+      "path": "prediction-03.png",
+      "sha256": "2572c18c6a85aeb0573392361fb7de8a2e7c9e07bf010563b162ff1da0153307",
+      "viewed": true
+    },
+    {
+      "kind": "prediction",
+      "path": "prediction-04.png",
+      "sha256": "302252af618318a7b564e09f24e42b98546add3cb8cd986148625a08c78d5604",
+      "viewed": true
+    },
+    {
+      "kind": "prediction",
+      "path": "prediction-05.png",
+      "sha256": "c228e957f0719237b38bf7ec2ff3a2277345824322c115d9761ea117516b2fe2",
+      "viewed": true
+    },
+    {
+      "kind": "prediction",
+      "path": "prediction-06.png",
+      "sha256": "667537c86036923d6eab56d0d7e219d24bd7ef5200df86b8b9526cd7b4d4e304",
+      "viewed": true
+    },
+    {
+      "kind": "prediction",
+      "path": "prediction-07.png",
+      "sha256": "69a553a79fbfc6dba9f359e2611608574a8e50fead234df29c7e463cb6722dd1",
+      "viewed": true
+    },
+    {
+      "kind": "GT_evaluation",
+      "path": "GT_evaluation-00.png",
+      "sha256": "1a86888e0ff35c6aeaf54b6e5d6d83e08ca84f534877a36b6acf5d995c329c37",
+      "viewed": true
+    },
+    {
+      "kind": "GT_evaluation",
+      "path": "GT_evaluation-01.png",
+      "sha256": "c2a439c31eee93a4254c41fb89bc84177065d61f51da84cff389d90926d671ef",
+      "viewed": true
+    },
+    {
+      "kind": "GT_evaluation",
+      "path": "GT_evaluation-02.png",
+      "sha256": "d77a27fc54cacfc4d5bd5a8390c128a879ce494fe3d7ac040d898e2abc4373cb",
+      "viewed": true
+    },
+    {
+      "kind": "GT_evaluation",
+      "path": "GT_evaluation-03.png",
+      "sha256": "892cae238df451d7a2a52a7da0da06cb48327ba6ffdfb5a84a337d57cf9624a2",
+      "viewed": true
+    }
+  ],
+  "full_resolution_cases": [
+    {
+      "scene": "town01-00",
+      "frame": 167005,
+      "reasons": [
+        "fixed_middle_frame"
+      ],
+      "prediction_panel": "artifacts\\runs\\phase4-bev-pilot-002\\town01-00\\167005\\panel.png",
+      "prediction_sha256": "e4d61e5a549b64f2dbfcf6d1d9aa04a2a624a050cc32eb971c807ff68419d84a",
+      "GT_panel": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-00\\167005\\evaluation.png",
+      "GT_sha256": "5e16c0f25c5312c5087ec1f72d519d10c1e26e20b17b74bdcbda0da24cbf9b44",
+      "prediction_viewed": true,
+      "GT_full_resolution_viewed": true
+    },
+    {
+      "scene": "town01-01",
+      "frame": 168360,
+      "reasons": [
+        "fixed_middle_frame"
+      ],
+      "prediction_panel": "artifacts\\runs\\phase4-bev-pilot-002\\town01-01\\168360\\panel.png",
+      "prediction_sha256": "23dd470df249faf565f4bb78561e8c51ad019bbb2ce4e75fc9997424ae645210",
+      "GT_panel": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-01\\168360\\evaluation.png",
+      "GT_sha256": "bb6cfe9388db1ea88e930c1cc3fdc5399658775fdd352b983df3d86661dabb33",
+      "prediction_viewed": true,
+      "GT_full_resolution_viewed": true
+    },
+    {
+      "scene": "town04-00",
+      "frame": 246294,
+      "reasons": [
+        "fixed_middle_frame"
+      ],
+      "prediction_panel": "artifacts\\runs\\phase4-bev-pilot-002\\town04-00\\246294\\panel.png",
+      "prediction_sha256": "28a5c63e0544b7ac6846bcfec174b5784f4790db825aed557f192765564a6893",
+      "GT_panel": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town04-00\\246294\\evaluation.png",
+      "GT_sha256": "8a046b29e9844bee8d0f3df2724734f7e6f896d7767f89a678cbea1800ba90a2",
+      "prediction_viewed": true,
+      "GT_full_resolution_viewed": true
+    },
+    {
+      "scene": "town04-01",
+      "frame": 246949,
+      "reasons": [
+        "fixed_middle_frame",
+        "largest_object_false_positive_count"
+      ],
+      "prediction_panel": "artifacts\\runs\\phase4-bev-pilot-002\\town04-01\\246949\\panel.png",
+      "prediction_sha256": "a0e63b248bdbd49b94f8bab5cb60941a6236f242ca5de941d72b1d162f8d6239",
+      "GT_panel": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town04-01\\246949\\evaluation.png",
+      "GT_sha256": "46952204dfd30a3830fe3cec48e76fdc4ac3313414ecafcaadb1487e45199e9f",
+      "prediction_viewed": true,
+      "GT_full_resolution_viewed": true
+    },
+    {
+      "scene": "town01-00",
+      "frame": 166989,
+      "reasons": [
+        "largest_path_GT_error"
+      ],
+      "prediction_panel": "artifacts\\runs\\phase4-bev-pilot-002\\town01-00\\166989\\panel.png",
+      "prediction_sha256": "354374f6e5f509ace384a18eacddf737f2a5757ac2f06e145ec69c52f0c8f5dd",
+      "GT_panel": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-00\\166989\\evaluation.png",
+      "GT_sha256": "8671a7179650cc6f7d25ac349185c7ca5065cb57180b704ffbc731ce3ee97ec6",
+      "prediction_viewed": true,
+      "GT_full_resolution_viewed": false
+    },
+    {
+      "scene": "town01-00",
+      "frame": 167017,
+      "reasons": [
+        "largest_path_GT_error"
+      ],
+      "prediction_panel": "artifacts\\runs\\phase4-bev-pilot-002\\town01-00\\167017\\panel.png",
+      "prediction_sha256": "df25961ccb53a4d69b121dbee0d990701cea19771d7fe75c8eeb6be8aa5a486f",
+      "GT_panel": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town01-00\\167017\\evaluation.png",
+      "GT_sha256": "077ebf01c9dfd191cdb1346044039affcb7ec6f958d07b90e164913ef4885704",
+      "prediction_viewed": true,
+      "GT_full_resolution_viewed": false
+    },
+    {
+      "scene": "town04-01",
+      "frame": 246961,
+      "reasons": [
+        "largest_object_false_positive_count"
+      ],
+      "prediction_panel": "artifacts\\runs\\phase4-bev-pilot-002\\town04-01\\246961\\panel.png",
+      "prediction_sha256": "c8653e2908babf27db92200e950ef892fc72ddebdfd82c0912d2e4e3a224277c",
+      "GT_panel": "artifacts\\runs\\phase4-bev-pilot-002-evaluation-final\\town04-01\\246961\\evaluation.png",
+      "GT_sha256": "51e6563f253e8dd7dfa4493dda692a1d1f8a4a96381ebe0874152abba4bcb7a5",
+      "prediction_viewed": true,
+      "GT_full_resolution_viewed": false
+    }
+  ],
+  "findings": [
+    "All12 contact pages inspected, covering all32 prediction and GT evaluation bundles. Seven full prediction cases and four fixed-middle full GT cases inspected.",
+    "Painted lane lines and road align with the front RGB; eight cameras add rear/side coverage. Temporal differences are modest. Far line false positives and ragged road edges remain.",
+    "Ego and front blind region remain unknown; current occluders create black wedges. Gray non-road observed regions do not imply free space.",
+    "Cyan candidate is geometric lane center only. It can approach an observed bicycle/object; no clearance, obstacle avoidance or control authorization follows from it.",
+    "Paired-line16 cases average1.14cm lateral RMSE; single-line plus3.5m width prior16 cases average30.63cm. The overall15.89cm conceals important conditional bias unless both modes are disclosed.",
+    "Object duplicate/class errors and misses remain visible. Red ground-contact point hypotheses are not3D boxes; P60.27/R55.00 do not establish reliable object reconstruction.",
+    "Low walls, Fence, guardrails and buildings remain in old clips. The rawWall near-corridor screen is not certification of a complete wall-free driving route. No vehicle was driven.",
+    "GT reference is sparse forward depth raster on visible near-plane ground, so far stripes/holes remain. All evaluation columns use the same GT-derived domain; raw unmasked predictions are saved separately.",
+    "Four known train/validation1.4s clips are a geometry development pilot, not heldout generalization or long-route acceptance."
+  ],
+  "decision": {
+    "prototype_artifacts_reviewed": true,
+    "phase4_formal_complete": false,
+    "live_driving_validated": false,
+    "depth_auxiliary_adopted": false,
+    "Wall_retraining_requested": false
+  }
+}

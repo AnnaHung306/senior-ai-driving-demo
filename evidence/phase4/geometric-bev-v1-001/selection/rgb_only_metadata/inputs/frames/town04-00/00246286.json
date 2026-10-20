@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "source": "carla_rgb_only",
+  "scene_id": "town04-00",
+  "frame": 246286,
+  "timestamp_s": 10.71877583116293,
+  "cameras": {
+    "front": {
+      "image": "inputs/rgb/town04-00/front/00246286.png",
+      "frame": 246286,
+      "timestamp_s": 10.71877583116293
+    },
+    "front_right": {
+      "image": "inputs/rgb/town04-00/front_right/00246286.png",
+      "frame": 246286,
+      "timestamp_s": 10.71877583116293
+    },
+    "right": {
+      "image": "inputs/rgb/town04-00/right/00246286.png",
+      "frame": 246286,
+      "timestamp_s": 10.71877583116293
+    },
+    "rear_right": {
+      "image": "inputs/rgb/town04-00/rear_right/00246286.png",
+      "frame": 246286,
+      "timestamp_s": 10.71877583116293
+    },
+    "rear": {
+      "image": "inputs/rgb/town04-00/rear/00246286.png",
+      "frame": 246286,
+      "timestamp_s": 10.71877583116293
+    },
+    "rear_left": {
+      "image": "inputs/rgb/town04-00/rear_left/00246286.png",
+      "frame": 246286,
+      "timestamp_s": 10.71877583116293
+    },
+    "left": {
+      "image": "inputs/rgb/town04-00/left/00246286.png",
+      "frame": 246286,
+      "timestamp_s": 10.71877583116293
+    },
+    "front_left": {
+      "image": "inputs/rgb/town04-00/front_left/00246286.png",
+      "frame": 246286,
+      "timestamp_s": 10.71877583116293
+    }
+  },
+  "calibration": "calibration/town04-00.json"
+}

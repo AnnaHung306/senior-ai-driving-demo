@@ -1,0 +1,12 @@
+{
+  "completed_bundles": 32,
+  "latest": {
+    "scene_id": "town04-01",
+    "frame": 246961,
+    "folder": "town04-01\\246961",
+    "motion_status": "aligned",
+    "path_status": "candidate",
+    "inference_ms": 518.4237000066787,
+    "fusion_ms": 641.5119000012055
+  }
+}

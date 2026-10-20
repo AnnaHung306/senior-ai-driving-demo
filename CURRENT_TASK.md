@@ -1,4 +1,22 @@
-## 最新使用者決定：Phase 3 至此收尾，停止 Wall／深度迭代
+## 2026-10-20 Phase 4 首版實測已完成並封存
+
+最新使用者：「做Phase 4，規劃完成後立刻開始」。已先寫 PHASE4.md 再實作並完成第一個可檢查里程碑。**兩次 CUDA replay、所有 CPU 評估／檔案核對都已退出，沒有訓練、CARLA、watcher 或 automation。不要重啟舊 exec51907、23804 或 Phase3 任務。** Phase4 幾何 BEV 原型完成；完整新路線正式驗收尚未完成，不宣稱閉環或整個 Phase4 已通過。
+
+程式：bev_geometry／bev_fusion／bev_temporal／bev_path，config phase4-geometric-bev-v1.1；既有 segmentation v6 parent0a3fe／detector v6 ba6d2／phase004 f9836 SHA 不變。未納入 depth/control 實驗模型、未重訓 Wall、未開 development／lockbox。venv 只新增 OpenCV headless4.13.0.92（wheel SHA77a82fe35ddcec0f62c15f2ba8a12ecc2ed4207c17b0902c7a3151ae29f37fb6），Python3.12.14／NumPy2.3.5／Torch2.10.0+cu128 不變。
+
+固定選例 artifacts/runs/phase4-pilot-selection-002：新推論前保留全部33候選，4序列／32bundles／256RGB，原train T1-00/01與原val T4-00/01各start20，序列各1.4秒。rawWall4近走廊抽樣為0不等於完整無牆路線；實看仍有低隔牆／Fence／護欄，這些只作離線幾何開發，不發車。GT選景與evaluation獨立，推論292檔僅RGB／input manifest／calibration；額外GT檔與GTpose欄位兩種真CPU CLI污染測試均在模型建立前拒絕，記於 phase4-RGB-boundary-001。
+
+真GPU第一版001只有2/32雙側標線路徑；第二版002加單側實際標線＋固定3.5m寬度先驗、道路支持及最多6m虛線缺口，32/32候選。所有32組BEV arrays與detections JSON對001 exact，僅path政策改變，不是獨立試驗。權威最終評估 **artifacts/runs/phase4-bev-pilot-002-evaluation-final/report.json**：周遭GT可見地面 roadIoU front.4663274／single.9506957／temporal.9519962，lineF1 .5535149／.8996734／.9026922；差異含覆蓋，common-front road .9416494／.9515138／.9520703，line .8867348／.8901409／.8946902。GT840檔SHA綁定，預測unknown對GTroad計FN，不依預測遮罩縮小GTdomain。
+
+motion28/28、平均GT平移誤差.0187853m／yaw.0179157deg。path32/32可比較，逐幀RMSE平均.1588642m；16單側寬度先驗.3062992m、16雙側.0114292m，最大逐幀RMSE.3480745m。不可用平均隱藏先驗偏差。objects ground-contact P.6027397／R.55／matchedXYmean.3745508m；64重複觀測移除、57GT支持合併群、mixedactor0只限有支持群，不是3D box驗收。每組計算總p50 1097.7767ms／p95 1263.6284ms，排除啟動／存圖／檔案／simulator／控制，非20Hz。候選軌跡只代表幾何車道中央，沒有物件通行／避讓檢查。
+
+完整 **193 tests 0fail/0skip，10.711s**，log artifacts/reports/phase4-regression-final.log；30focused涵蓋幾何／SE2／遮擋／跨場景／斷流／去重／直彎與虛線／空線拒絕及GTdomain。不是193項全用GPU。已實看12張contact頁（32組prediction／GT全部）＋7個完整prediction錯例／代表例＋4固定中間GT圖，visual_review.json另寫，保留原catalog/report/status原bytes不改。32×3mode全部評分及scene重算exact、38sources與模型／source config原bytes核對通過，integrity report status passed_artifact_integrity_not_formal_quality。
+
+封存 evidence/phase4/geometric-bev-v1-001：報告、32組JSON／panel、GTreference與圖、QA頁／實看收據、兩版source snapshots、選例／輸入inventory、2污染拒絕與193測試log、完整檔案SHA、依賴wheelSHA及失敗歷史。原RGB／權重／大型BEV NPZ只留本機ignored，manifest可核對，不能宣稱Git含完整資料。selector001欄位dict錯誤於推論前修復；001舊GTpath evaluator因road_id斷段比較不到已修正連續lane，原report/source留存。完整GPU不用重跑。
+
+接續：先讀 PHASE4.md 與 evidence報告。下一個里程碑是**事前固定全新晴天／平坦／完整無近牆且線清楚路線與數值門檻，再採集／離線replay**；並改善~1.1秒延遲、驗證較長彎路／間隔／遮擋／不可靠物件定位。不可拿原train/val短片當泛化或用這次分數事後宣告正式pass。未來若接循線需另做Phase8/9控制、通行檢查與失效煞停。Phase3仍依下方使用者決定收尾，不因歷史文字重啟Wall或depth。
+
+## 2026-10-18 使用者決定：Phase 3 至此收尾，停止 Wall／深度迭代
 
 使用者明確決定：「那就不納入了，就先這樣。phase3就先到這為止，不要再糾結Wall。未來行駛路線預設附近不要有牆壁，跟著道路繪製線行駛就好。phase還有什麼要做的?」
 

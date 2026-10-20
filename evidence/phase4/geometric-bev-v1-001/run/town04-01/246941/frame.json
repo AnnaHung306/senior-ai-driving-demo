@@ -1,0 +1,389 @@
+{
+  "source": "learned_RGB_prediction_with_calibrated_ground_plane",
+  "scene_id": "town04-01",
+  "frame": 246941,
+  "timestamp_s": 43.031605910509825,
+  "manifest": "inputs/frames/town04-01/00246941.json",
+  "manifest_sha256": "21608476a6168fcc1bc84bc7efe5cd3787fbf664dbb715f490f3424413408403",
+  "motion": {
+    "status": "aligned",
+    "history_frames_used": 2,
+    "motion_source": "RGB_ground_features_only",
+    "previous_to_current": [
+      [
+        0.9999868727057191,
+        -0.005123906345407438,
+        -0.6418207762576782
+      ],
+      [
+        0.00512390634540743,
+        0.9999868727057188,
+        0.0030239334425326003
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "correspondences": 341,
+    "inliers": 262,
+    "median_residual_m": 0.026830408389719618
+  },
+  "path": {
+    "status": "candidate",
+    "source": "paired_predicted_lane_marks_ground_plane",
+    "points_ego_m": [
+      [
+        4.5,
+        -0.045717111823242416
+      ],
+      [
+        5.0,
+        -0.056388421525256895
+      ],
+      [
+        5.5,
+        -0.06679861582697766
+      ],
+      [
+        6.0,
+        -0.07694769472840468
+      ],
+      [
+        6.5,
+        -0.08683565822953801
+      ],
+      [
+        7.0,
+        -0.09646250633037756
+      ],
+      [
+        7.5,
+        -0.1058282390309234
+      ],
+      [
+        8.0,
+        -0.1149328563311755
+      ],
+      [
+        8.5,
+        -0.12377635823113387
+      ],
+      [
+        9.0,
+        -0.13235874473079853
+      ],
+      [
+        9.5,
+        -0.14068001583016945
+      ],
+      [
+        10.0,
+        -0.14874017152924665
+      ],
+      [
+        10.5,
+        -0.15653921182803007
+      ],
+      [
+        11.0,
+        -0.1640771367265198
+      ],
+      [
+        11.5,
+        -0.17135394622471584
+      ],
+      [
+        12.0,
+        -0.17836964032261807
+      ],
+      [
+        12.5,
+        -0.1851242190202266
+      ],
+      [
+        13.0,
+        -0.19161768231754142
+      ],
+      [
+        13.5,
+        -0.19785003021456246
+      ],
+      [
+        14.0,
+        -0.20382126271128984
+      ],
+      [
+        14.5,
+        -0.20953137980772343
+      ],
+      [
+        15.0,
+        -0.2149803815038633
+      ],
+      [
+        15.5,
+        -0.22016826779970947
+      ],
+      [
+        16.0,
+        -0.22509503869526185
+      ],
+      [
+        16.5,
+        -0.22976069419052056
+      ]
+    ],
+    "observed_pairs": 12,
+    "span_m": 12.0,
+    "fit_rmse_m": 0.0064542746213606525,
+    "median_width_m": 3.5,
+    "control_issued": false,
+    "limits": "Visible local center candidate; no destination routing, traffic rules or closed-loop proof"
+  },
+  "objects": [
+    {
+      "frame_local_id": 0,
+      "class_name": "temporary_obstacle",
+      "xy_m": [
+        -7.927046026085917,
+        -9.342901325185641
+      ],
+      "score_uncalibrated": 0.9999082088470459,
+      "sources": [
+        {
+          "bbox_xyxy": [
+            5.337915420532227,
+            197.02096557617188,
+            38.798561096191406,
+            242.0849609375
+          ],
+          "class_id": 8,
+          "class_name": "temporary_obstacle",
+          "score": 0.9999082088470459,
+          "camera": "left",
+          "detection_index": 0,
+          "xy_m": [
+            -7.828974819877084,
+            -9.223013438889836
+          ],
+          "geometry": "bbox_bottom_ground_plane_hypothesis_not_3D_box"
+        },
+        {
+          "bbox_xyxy": [
+            349.09136962890625,
+            194.6759796142578,
+            369.46453857421875,
+            226.8544158935547
+          ],
+          "class_id": 8,
+          "class_name": "temporary_obstacle",
+          "score": 0.9998923540115356,
+          "camera": "rear_left",
+          "detection_index": 0,
+          "xy_m": [
+            -8.02511878736499,
+            -9.462791112488798
+          ],
+          "geometry": "bbox_bottom_ground_plane_hypothesis_not_3D_box"
+        }
+      ],
+      "geometry": "assumed_ground_contact",
+      "maximum_source_separation_m": 0.3097834545911497
+    },
+    {
+      "frame_local_id": 1,
+      "class_name": "pedestrian",
+      "xy_m": [
+        -10.339276700162873,
+        -11.338462038171219
+      ],
+      "score_uncalibrated": 0.9994654059410095,
+      "sources": [
+        {
+          "bbox_xyxy": [
+            335.4224853515625,
+            170.873291015625,
+            352.090576171875,
+            216.39889526367188
+          ],
+          "class_id": 2,
+          "class_name": "pedestrian",
+          "score": 0.9994654059410095,
+          "camera": "rear_left",
+          "detection_index": 1,
+          "xy_m": [
+            -10.339276700162873,
+            -11.338462038171219
+          ],
+          "geometry": "bbox_bottom_ground_plane_hypothesis_not_3D_box"
+        }
+      ],
+      "geometry": "assumed_ground_contact",
+      "maximum_source_separation_m": 0.0
+    },
+    {
+      "frame_local_id": 2,
+      "class_name": "car",
+      "xy_m": [
+        17.262339253647554,
+        -6.240889126225662
+      ],
+      "score_uncalibrated": 0.9983629584312439,
+      "sources": [
+        {
+          "bbox_xyxy": [
+            431.4501953125,
+            183.23037719726562,
+            522.5574340820312,
+            212.85800170898438
+          ],
+          "class_id": 1,
+          "class_name": "car",
+          "score": 0.9983629584312439,
+          "camera": "front_left",
+          "detection_index": 1,
+          "xy_m": [
+            17.333907307581395,
+            -6.224454296027147
+          ],
+          "geometry": "bbox_bottom_ground_plane_hypothesis_not_3D_box"
+        },
+        {
+          "bbox_xyxy": [
+            147.596435546875,
+            182.5706024169922,
+            234.53378295898438,
+            212.39305114746094
+          ],
+          "class_id": 1,
+          "class_name": "car",
+          "score": 0.9945552349090576,
+          "camera": "front",
+          "detection_index": 0,
+          "xy_m": [
+            17.19049719646801,
+            -6.257386878308588
+          ],
+          "geometry": "bbox_bottom_ground_plane_hypothesis_not_3D_box"
+        }
+      ],
+      "geometry": "assumed_ground_contact",
+      "maximum_source_separation_m": 0.14714283857965246
+    },
+    {
+      "frame_local_id": 3,
+      "class_name": "pedestrian",
+      "xy_m": [
+        2.2375294710853817,
+        -8.566803544483424
+      ],
+      "score_uncalibrated": 0.669242799282074,
+      "sources": [
+        {
+          "bbox_xyxy": [
+            394.7057189941406,
+            187.62725830078125,
+            428.6711730957031,
+            247.54168701171875
+          ],
+          "class_id": 2,
+          "class_name": "pedestrian",
+          "score": 0.669242799282074,
+          "camera": "left",
+          "detection_index": 1,
+          "xy_m": [
+            2.2375294710853817,
+            -8.566803544483424
+          ],
+          "geometry": "bbox_bottom_ground_plane_hypothesis_not_3D_box"
+        }
+      ],
+      "geometry": "assumed_ground_contact",
+      "maximum_source_separation_m": 0.0
+    },
+    {
+      "frame_local_id": 4,
+      "class_name": "motorcycle",
+      "xy_m": [
+        2.17786614584649,
+        -8.21708381449687
+      ],
+      "score_uncalibrated": 0.6520076394081116,
+      "sources": [
+        {
+          "bbox_xyxy": [
+            392.3127746582031,
+            189.2400360107422,
+            434.6094055175781,
+            250.8441925048828
+          ],
+          "class_id": 4,
+          "class_name": "motorcycle",
+          "score": 0.6520076394081116,
+          "camera": "left",
+          "detection_index": 2,
+          "xy_m": [
+            2.17786614584649,
+            -8.21708381449687
+          ],
+          "geometry": "bbox_bottom_ground_plane_hypothesis_not_3D_box"
+        }
+      ],
+      "geometry": "assumed_ground_contact",
+      "maximum_source_separation_m": 0.0
+    }
+  ],
+  "unprojected_objects": [
+    {
+      "bbox_xyxy": [
+        268.9815979003906,
+        164.82327270507812,
+        307.0320129394531,
+        190.20352172851562
+      ],
+      "class_id": 6,
+      "class_name": "bus",
+      "score": 0.9933218359947205,
+      "camera": "front",
+      "detection_index": 1,
+      "reason": "no_ground_intersection"
+    },
+    {
+      "bbox_xyxy": [
+        102.0124740600586,
+        321.01129150390625,
+        128.0758056640625,
+        348.58233642578125
+      ],
+      "class_id": 8,
+      "class_name": "temporary_obstacle",
+      "score": 0.5378627777099609,
+      "camera": "rear_right",
+      "detection_index": 0,
+      "reason": "contact_not_adjacent_to_predicted_ground"
+    },
+    {
+      "bbox_xyxy": [
+        557.4607543945312,
+        161.20396423339844,
+        624.1687622070312,
+        194.2180633544922
+      ],
+      "class_id": 6,
+      "class_name": "bus",
+      "score": 0.9990818500518799,
+      "camera": "front_left",
+      "detection_index": 0,
+      "reason": "no_ground_intersection"
+    }
+  ],
+  "projected_before_dedup": 7,
+  "objects_after_dedup": 5,
+  "timing_ms": {
+    "RGB_decode_and_neural_inference": 620.3666999936104,
+    "fusion_motion_path": 677.1639999933541
+  },
+  "control_issued": false
+}

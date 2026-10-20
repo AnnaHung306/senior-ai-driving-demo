@@ -1,0 +1,1604 @@
+{
+  "scope": "CPU path-only revision on unchanged pilot001 arrays; not new perception scores",
+  "counts": {
+    "('town01-00', 'unavailable')": 8,
+    "('town01-01', 'unavailable')": 8,
+    "('town04-00', 'candidate')": 8,
+    "('town04-01', 'candidate')": 4,
+    "('town04-01', 'unavailable')": 4
+  },
+  "rows": [
+    {
+      "frame": 166989,
+      "scene": "town01-00",
+      "result": {
+        "status": "unavailable",
+        "reason": "insufficient_paired_visible_lane_evidence",
+        "points_ego_m": [],
+        "control_issued": false
+      }
+    },
+    {
+      "frame": 166993,
+      "scene": "town01-00",
+      "result": {
+        "status": "unavailable",
+        "reason": "insufficient_paired_visible_lane_evidence",
+        "points_ego_m": [],
+        "control_issued": false
+      }
+    },
+    {
+      "frame": 166997,
+      "scene": "town01-00",
+      "result": {
+        "status": "unavailable",
+        "reason": "insufficient_paired_visible_lane_evidence",
+        "points_ego_m": [],
+        "control_issued": false
+      }
+    },
+    {
+      "frame": 167001,
+      "scene": "town01-00",
+      "result": {
+        "status": "unavailable",
+        "reason": "insufficient_paired_visible_lane_evidence",
+        "points_ego_m": [],
+        "control_issued": false
+      }
+    },
+    {
+      "frame": 167005,
+      "scene": "town01-00",
+      "result": {
+        "status": "unavailable",
+        "reason": "insufficient_paired_visible_lane_evidence",
+        "points_ego_m": [],
+        "control_issued": false
+      }
+    },
+    {
+      "frame": 167009,
+      "scene": "town01-00",
+      "result": {
+        "status": "unavailable",
+        "reason": "insufficient_paired_visible_lane_evidence",
+        "points_ego_m": [],
+        "control_issued": false
+      }
+    },
+    {
+      "frame": 167013,
+      "scene": "town01-00",
+      "result": {
+        "status": "unavailable",
+        "reason": "insufficient_paired_visible_lane_evidence",
+        "points_ego_m": [],
+        "control_issued": false
+      }
+    },
+    {
+      "frame": 167017,
+      "scene": "town01-00",
+      "result": {
+        "status": "unavailable",
+        "reason": "insufficient_paired_visible_lane_evidence",
+        "points_ego_m": [],
+        "control_issued": false
+      }
+    },
+    {
+      "frame": 168344,
+      "scene": "town01-01",
+      "result": {
+        "status": "unavailable",
+        "reason": "insufficient_paired_visible_lane_evidence",
+        "points_ego_m": [],
+        "control_issued": false
+      }
+    },
+    {
+      "frame": 168348,
+      "scene": "town01-01",
+      "result": {
+        "status": "unavailable",
+        "reason": "insufficient_paired_visible_lane_evidence",
+        "points_ego_m": [],
+        "control_issued": false
+      }
+    },
+    {
+      "frame": 168352,
+      "scene": "town01-01",
+      "result": {
+        "status": "unavailable",
+        "reason": "insufficient_paired_visible_lane_evidence",
+        "points_ego_m": [],
+        "control_issued": false
+      }
+    },
+    {
+      "frame": 168356,
+      "scene": "town01-01",
+      "result": {
+        "status": "unavailable",
+        "reason": "insufficient_paired_visible_lane_evidence",
+        "points_ego_m": [],
+        "control_issued": false
+      }
+    },
+    {
+      "frame": 168360,
+      "scene": "town01-01",
+      "result": {
+        "status": "unavailable",
+        "reason": "insufficient_paired_visible_lane_evidence",
+        "points_ego_m": [],
+        "control_issued": false
+      }
+    },
+    {
+      "frame": 168364,
+      "scene": "town01-01",
+      "result": {
+        "status": "unavailable",
+        "reason": "insufficient_paired_visible_lane_evidence",
+        "points_ego_m": [],
+        "control_issued": false
+      }
+    },
+    {
+      "frame": 168368,
+      "scene": "town01-01",
+      "result": {
+        "status": "unavailable",
+        "reason": "insufficient_paired_visible_lane_evidence",
+        "points_ego_m": [],
+        "control_issued": false
+      }
+    },
+    {
+      "frame": 168372,
+      "scene": "town01-01",
+      "result": {
+        "status": "unavailable",
+        "reason": "insufficient_paired_visible_lane_evidence",
+        "points_ego_m": [],
+        "control_issued": false
+      }
+    },
+    {
+      "frame": 246278,
+      "scene": "town04-00",
+      "result": {
+        "status": "candidate",
+        "source": "single_predicted_boundary_with_fixed_width_prior",
+        "points_ego_m": [
+          [
+            5.0,
+            0.014094143404487912
+          ],
+          [
+            5.5,
+            0.009925897856932112
+          ],
+          [
+            6.0,
+            0.00587133173340057
+          ],
+          [
+            6.5,
+            0.001930445033893266
+          ],
+          [
+            7.0,
+            -0.001896762241589793
+          ],
+          [
+            7.5,
+            -0.0056102900930485936
+          ],
+          [
+            8.0,
+            -0.009210138520483142
+          ],
+          [
+            8.5,
+            -0.012696307523893453
+          ],
+          [
+            9.0,
+            -0.016068797103279513
+          ],
+          [
+            9.5,
+            -0.019327607258641306
+          ],
+          [
+            10.0,
+            -0.022472737989978876
+          ],
+          [
+            10.5,
+            -0.025504189297292194
+          ],
+          [
+            11.0,
+            -0.02842196118058126
+          ],
+          [
+            11.5,
+            -0.03122605363984606
+          ],
+          [
+            12.0,
+            -0.033916466675086625
+          ],
+          [
+            12.5,
+            -0.036493200286302936
+          ],
+          [
+            13.0,
+            -0.03895625447349501
+          ],
+          [
+            13.5,
+            -0.04130562923666283
+          ],
+          [
+            14.0,
+            -0.043541324575806416
+          ],
+          [
+            14.5,
+            -0.04566334049092572
+          ],
+          [
+            15.0,
+            -0.04767167698202079
+          ],
+          [
+            15.5,
+            -0.04956633404909163
+          ],
+          [
+            16.0,
+            -0.051347311692138194
+          ],
+          [
+            16.5,
+            -0.05301460991116052
+          ],
+          [
+            17.0,
+            -0.05456822870615859
+          ],
+          [
+            17.5,
+            -0.05600816807713243
+          ],
+          [
+            18.0,
+            -0.057334428024082014
+          ]
+        ],
+        "observed_pairs": 27,
+        "span_m": 13.0,
+        "fit_rmse_m": 0.012244803281656483,
+        "median_width_m": 3.5,
+        "control_issued": false,
+        "limits": "Visible local center candidate; no destination routing, traffic rules or closed-loop proof",
+        "width_prior_m": 3.5,
+        "assumption": "One painted boundary, fixed lane width and predicted ground support; width is not measured in this mode"
+      }
+    },
+    {
+      "frame": 246282,
+      "scene": "town04-00",
+      "result": {
+        "status": "candidate",
+        "source": "single_predicted_boundary_with_fixed_width_prior",
+        "points_ego_m": [
+          [
+            5.0,
+            0.015325670498083921
+          ],
+          [
+            5.5,
+            0.010323775841016958
+          ],
+          [
+            6.0,
+            0.005507136541619148
+          ],
+          [
+            6.5,
+            0.000875752599890478
+          ],
+          [
+            7.0,
+            -0.0035703759841690386
+          ],
+          [
+            7.5,
+            -0.007831249210559416
+          ],
+          [
+            8.0,
+            -0.01190686707928064
+          ],
+          [
+            8.5,
+            -0.015797229590332723
+          ],
+          [
+            9.0,
+            -0.019502336743715654
+          ],
+          [
+            9.5,
+            -0.02302218853942943
+          ],
+          [
+            10.0,
+            -0.026356784977474096
+          ],
+          [
+            10.5,
+            -0.02950612605784958
+          ],
+          [
+            11.0,
+            -0.03247021178055594
+          ],
+          [
+            11.5,
+            -0.03524904214559316
+          ],
+          [
+            12.0,
+            -0.03784261715296121
+          ],
+          [
+            12.5,
+            -0.04025093680266012
+          ],
+          [
+            13.0,
+            -0.04247400109468988
+          ],
+          [
+            13.5,
+            -0.0445118100290505
+          ],
+          [
+            14.0,
+            -0.04636436360574196
+          ],
+          [
+            14.5,
+            -0.04803166182476429
+          ],
+          [
+            15.0,
+            -0.049513704686117474
+          ],
+          [
+            15.5,
+            -0.05081049218980151
+          ],
+          [
+            16.0,
+            -0.0519220243358164
+          ],
+          [
+            16.5,
+            -0.052848301124162125
+          ],
+          [
+            17.0,
+            -0.05358932255483874
+          ],
+          [
+            17.5,
+            -0.054145088627846186
+          ],
+          [
+            18.0,
+            -0.05451559934318449
+          ]
+        ],
+        "observed_pairs": 27,
+        "span_m": 13.0,
+        "fit_rmse_m": 0.011859883879603648,
+        "median_width_m": 3.5,
+        "control_issued": false,
+        "limits": "Visible local center candidate; no destination routing, traffic rules or closed-loop proof",
+        "width_prior_m": 3.5,
+        "assumption": "One painted boundary, fixed lane width and predicted ground support; width is not measured in this mode"
+      }
+    },
+    {
+      "frame": 246286,
+      "scene": "town04-00",
+      "result": {
+        "status": "candidate",
+        "source": "single_predicted_boundary_with_fixed_width_prior",
+        "points_ego_m": [
+          [
+            5.0,
+            0.014340448823207091
+          ],
+          [
+            5.5,
+            0.009810113258388875
+          ],
+          [
+            6.0,
+            0.005468822365373938
+          ],
+          [
+            6.5,
+            0.001316576144162293
+          ],
+          [
+            7.0,
+            -0.0026466254052460586
+          ],
+          [
+            7.5,
+            -0.006420782282851131
+          ],
+          [
+            8.0,
+            -0.010005894488652911
+          ],
+          [
+            8.5,
+            -0.013401962022651412
+          ],
+          [
+            9.0,
+            -0.016608984884846606
+          ],
+          [
+            9.5,
+            -0.019626963075238535
+          ],
+          [
+            10.0,
+            -0.022455896593827157
+          ],
+          [
+            10.5,
+            -0.0250957854406125
+          ],
+          [
+            11.0,
+            -0.027546629615594537
+          ],
+          [
+            11.5,
+            -0.029808429118773322
+          ],
+          [
+            12.0,
+            -0.031881183950148786
+          ],
+          [
+            12.5,
+            -0.033764894109721
+          ],
+          [
+            13.0,
+            -0.03545955959748988
+          ],
+          [
+            13.5,
+            -0.03696518041345552
+          ],
+          [
+            14.0,
+            -0.03828175655761783
+          ],
+          [
+            14.5,
+            -0.03940928802997687
+          ],
+          [
+            15.0,
+            -0.04034777483053262
+          ],
+          [
+            15.5,
+            -0.04109721695928509
+          ],
+          [
+            16.0,
+            -0.041657614416234265
+          ],
+          [
+            16.5,
+            -0.04202896720138015
+          ],
+          [
+            17.0,
+            -0.042211275314722754
+          ],
+          [
+            17.5,
+            -0.04220453875626207
+          ],
+          [
+            18.0,
+            -0.0420087575259981
+          ]
+        ],
+        "observed_pairs": 27,
+        "span_m": 13.0,
+        "fit_rmse_m": 0.017691466619500416,
+        "median_width_m": 3.5,
+        "control_issued": false,
+        "limits": "Visible local center candidate; no destination routing, traffic rules or closed-loop proof",
+        "width_prior_m": 3.5,
+        "assumption": "One painted boundary, fixed lane width and predicted ground support; width is not measured in this mode"
+      }
+    },
+    {
+      "frame": 246290,
+      "scene": "town04-00",
+      "result": {
+        "status": "candidate",
+        "source": "single_predicted_boundary_with_fixed_width_prior",
+        "points_ego_m": [
+          [
+            5.0,
+            0.015270935960590794
+          ],
+          [
+            5.5,
+            0.010892172961138237
+          ],
+          [
+            6.0,
+            0.0066927708307017095
+          ],
+          [
+            6.5,
+            0.002672729569281232
+          ],
+          [
+            7.0,
+            -0.0011679508231232094
+          ],
+          [
+            7.5,
+            -0.004829270346511622
+          ],
+          [
+            8.0,
+            -0.00831122900088399
+          ],
+          [
+            8.5,
+            -0.01161382678624033
+          ],
+          [
+            9.0,
+            -0.014737063702580627
+          ],
+          [
+            9.5,
+            -0.01768093974990488
+          ],
+          [
+            10.0,
+            -0.02044545492821312
+          ],
+          [
+            10.5,
+            -0.023030609237505287
+          ],
+          [
+            11.0,
+            -0.02543640267778144
+          ],
+          [
+            11.5,
+            -0.027662835249041548
+          ],
+          [
+            12.0,
+            -0.029709906951285614
+          ],
+          [
+            12.5,
+            -0.031577617784513665
+          ],
+          [
+            13.0,
+            -0.03326596774872563
+          ],
+          [
+            13.5,
+            -0.03477495684392161
+          ],
+          [
+            14.0,
+            -0.03610458507010153
+          ],
+          [
+            14.5,
+            -0.03725485242726542
+          ],
+          [
+            15.0,
+            -0.03822575891541326
+          ],
+          [
+            15.5,
+            -0.03901730453454508
+          ],
+          [
+            16.0,
+            -0.03962948928466084
+          ],
+          [
+            16.5,
+            -0.040062313165760574
+          ],
+          [
+            17.0,
+            -0.04031577617784428
+          ],
+          [
+            17.5,
+            -0.040389878320911926
+          ],
+          [
+            18.0,
+            -0.04028461959496356
+          ]
+        ],
+        "observed_pairs": 27,
+        "span_m": 13.0,
+        "fit_rmse_m": 0.017796486443726365,
+        "median_width_m": 3.5,
+        "control_issued": false,
+        "limits": "Visible local center candidate; no destination routing, traffic rules or closed-loop proof",
+        "width_prior_m": 3.5,
+        "assumption": "One painted boundary, fixed lane width and predicted ground support; width is not measured in this mode"
+      }
+    },
+    {
+      "frame": 246294,
+      "scene": "town04-00",
+      "result": {
+        "status": "candidate",
+        "source": "single_predicted_boundary_with_fixed_width_prior",
+        "points_ego_m": [
+          [
+            5.0,
+            -0.004761904761904855
+          ],
+          [
+            5.5,
+            -0.004151404151404234
+          ],
+          [
+            6.0,
+            -0.0033821733821734513
+          ],
+          [
+            6.5,
+            -0.0024542124542125086
+          ],
+          [
+            7.0,
+            -0.0013675213675214018
+          ],
+          [
+            7.5,
+            -0.00012210012210013728
+          ],
+          [
+            8.0,
+            0.001282051282051288
+          ],
+          [
+            8.5,
+            0.0028449328449328733
+          ],
+          [
+            9.0,
+            0.004566544566544621
+          ],
+          [
+            9.5,
+            0.006446886446886532
+          ],
+          [
+            10.0,
+            0.0084859584859586
+          ],
+          [
+            10.5,
+            0.010683760683760828
+          ],
+          [
+            11.0,
+            0.013040293040293218
+          ],
+          [
+            11.5,
+            0.015555555555555767
+          ],
+          [
+            12.0,
+            0.01822954822954848
+          ],
+          [
+            12.5,
+            0.021062271062271355
+          ],
+          [
+            13.0,
+            0.024053724053724385
+          ],
+          [
+            13.5,
+            0.02720390720390758
+          ],
+          [
+            14.0,
+            0.03051282051282094
+          ],
+          [
+            14.5,
+            0.03398046398046445
+          ],
+          [
+            15.0,
+            0.03760683760683813
+          ],
+          [
+            15.5,
+            0.04139194139194196
+          ],
+          [
+            16.0,
+            0.045335775335775964
+          ],
+          [
+            16.5,
+            0.049438339438340126
+          ],
+          [
+            17.0,
+            0.05369963369963444
+          ],
+          [
+            17.5,
+            0.058119658119658926
+          ],
+          [
+            18.0,
+            0.06269841269841356
+          ]
+        ],
+        "observed_pairs": 27,
+        "span_m": 13.0,
+        "fit_rmse_m": 0.013292230772358195,
+        "median_width_m": 3.5,
+        "control_issued": false,
+        "limits": "Visible local center candidate; no destination routing, traffic rules or closed-loop proof",
+        "width_prior_m": 3.5,
+        "assumption": "One painted boundary, fixed lane width and predicted ground support; width is not measured in this mode"
+      }
+    },
+    {
+      "frame": 246298,
+      "scene": "town04-00",
+      "result": {
+        "status": "candidate",
+        "source": "single_predicted_boundary_with_fixed_width_prior",
+        "points_ego_m": [
+          [
+            5.0,
+            -0.01226053639846758
+          ],
+          [
+            5.5,
+            -0.009003831417624633
+          ],
+          [
+            6.0,
+            -0.005785440613026882
+          ],
+          [
+            6.5,
+            -0.0026053639846743554
+          ],
+          [
+            7.0,
+            0.0005363984674329747
+          ],
+          [
+            7.5,
+            0.0036398467432950804
+          ],
+          [
+            8.0,
+            0.0067049808429119825
+          ],
+          [
+            8.5,
+            0.009731800766283667
+          ],
+          [
+            9.0,
+            0.012720306513410148
+          ],
+          [
+            9.5,
+            0.015670498084291412
+          ],
+          [
+            10.0,
+            0.01858237547892748
+          ],
+          [
+            10.5,
+            0.021455938697318322
+          ],
+          [
+            11.0,
+            0.024291187739463954
+          ],
+          [
+            11.5,
+            0.027088122605364376
+          ],
+          [
+            12.0,
+            0.029846743295019587
+          ],
+          [
+            12.5,
+            0.03256704980842959
+          ],
+          [
+            13.0,
+            0.03524904214559438
+          ],
+          [
+            13.5,
+            0.03789272030651396
+          ],
+          [
+            14.0,
+            0.04049808429118833
+          ],
+          [
+            14.5,
+            0.043065134099617486
+          ],
+          [
+            15.0,
+            0.045593869731801434
+          ],
+          [
+            15.5,
+            0.04808429118774017
+          ],
+          [
+            16.0,
+            0.0505363984674337
+          ],
+          [
+            16.5,
+            0.052950191570882
+          ],
+          [
+            17.0,
+            0.05532567049808512
+          ],
+          [
+            17.5,
+            0.057662835249043004
+          ],
+          [
+            18.0,
+            0.05996168582375569
+          ]
+        ],
+        "observed_pairs": 27,
+        "span_m": 13.0,
+        "fit_rmse_m": 0.01244827527243884,
+        "median_width_m": 3.5,
+        "control_issued": false,
+        "limits": "Visible local center candidate; no destination routing, traffic rules or closed-loop proof",
+        "width_prior_m": 3.5,
+        "assumption": "One painted boundary, fixed lane width and predicted ground support; width is not measured in this mode"
+      }
+    },
+    {
+      "frame": 246302,
+      "scene": "town04-00",
+      "result": {
+        "status": "candidate",
+        "source": "single_predicted_boundary_with_fixed_width_prior",
+        "points_ego_m": [
+          [
+            5.0,
+            -0.001970443349753749
+          ],
+          [
+            5.5,
+            -0.0021872763252074167
+          ],
+          [
+            6.0,
+            -0.0021889604648225886
+          ],
+          [
+            6.5,
+            -0.001975495768599265
+          ],
+          [
+            7.0,
+            -0.0015468822365374505
+          ],
+          [
+            7.5,
+            -0.0009031198686371405
+          ],
+          [
+            8.0,
+            -4.420866489833648e-05
+          ],
+          [
+            8.5,
+            0.0010298513746789615
+          ],
+          [
+            9.0,
+            0.0023190602500947535
+          ],
+          [
+            9.5,
+            0.003823417961349041
+          ],
+          [
+            10.0,
+            0.005542924508441821
+          ],
+          [
+            10.5,
+            0.007477579891373086
+          ],
+          [
+            11.0,
+            0.009627384110142854
+          ],
+          [
+            11.5,
+            0.011992337164751116
+          ],
+          [
+            12.0,
+            0.014572439055197872
+          ],
+          [
+            12.5,
+            0.01736768978148312
+          ],
+          [
+            13.0,
+            0.020378089343606867
+          ],
+          [
+            13.5,
+            0.0236036377415691
+          ],
+          [
+            14.0,
+            0.027044334975369823
+          ],
+          [
+            14.5,
+            0.030700181045009045
+          ],
+          [
+            15.0,
+            0.03457117595048677
+          ],
+          [
+            15.5,
+            0.03865731969180298
+          ],
+          [
+            16.0,
+            0.04295861226895769
+          ],
+          [
+            16.5,
+            0.04747505368195089
+          ],
+          [
+            17.0,
+            0.05220664393078259
+          ],
+          [
+            17.5,
+            0.05715338301545277
+          ],
+          [
+            18.0,
+            0.06231527093596146
+          ]
+        ],
+        "observed_pairs": 27,
+        "span_m": 13.0,
+        "fit_rmse_m": 0.013348365162384477,
+        "median_width_m": 3.5,
+        "control_issued": false,
+        "limits": "Visible local center candidate; no destination routing, traffic rules or closed-loop proof",
+        "width_prior_m": 3.5,
+        "assumption": "One painted boundary, fixed lane width and predicted ground support; width is not measured in this mode"
+      }
+    },
+    {
+      "frame": 246306,
+      "scene": "town04-00",
+      "result": {
+        "status": "candidate",
+        "source": "single_predicted_boundary_with_fixed_width_prior",
+        "points_ego_m": [
+          [
+            5.0,
+            0.0
+          ],
+          [
+            5.5,
+            0.0
+          ],
+          [
+            6.0,
+            0.0
+          ],
+          [
+            6.5,
+            0.0
+          ],
+          [
+            7.0,
+            0.0
+          ],
+          [
+            7.5,
+            0.0
+          ],
+          [
+            8.0,
+            0.0
+          ],
+          [
+            8.5,
+            0.0
+          ],
+          [
+            9.0,
+            0.0
+          ],
+          [
+            9.5,
+            0.0
+          ],
+          [
+            10.0,
+            0.0
+          ],
+          [
+            10.5,
+            0.0
+          ],
+          [
+            11.0,
+            0.0
+          ],
+          [
+            11.5,
+            0.0
+          ],
+          [
+            12.0,
+            0.0
+          ],
+          [
+            12.5,
+            0.0
+          ],
+          [
+            13.0,
+            0.0
+          ],
+          [
+            13.5,
+            0.0
+          ],
+          [
+            14.0,
+            0.0
+          ],
+          [
+            14.5,
+            0.0
+          ],
+          [
+            15.0,
+            0.0
+          ],
+          [
+            15.5,
+            0.0
+          ],
+          [
+            16.0,
+            0.0
+          ],
+          [
+            16.5,
+            0.0
+          ],
+          [
+            17.0,
+            0.0
+          ],
+          [
+            17.5,
+            0.0
+          ],
+          [
+            18.0,
+            0.0
+          ]
+        ],
+        "observed_pairs": 27,
+        "span_m": 13.0,
+        "fit_rmse_m": 0.0,
+        "median_width_m": 3.5,
+        "control_issued": false,
+        "limits": "Visible local center candidate; no destination routing, traffic rules or closed-loop proof",
+        "width_prior_m": 3.5,
+        "assumption": "One painted boundary, fixed lane width and predicted ground support; width is not measured in this mode"
+      }
+    },
+    {
+      "frame": 246933,
+      "scene": "town04-01",
+      "result": {
+        "status": "candidate",
+        "source": "paired_predicted_lane_marks_ground_plane",
+        "points_ego_m": [
+          [
+            4.5,
+            -0.08911707043831141
+          ],
+          [
+            5.0,
+            -0.1048760677776199
+          ],
+          [
+            5.5,
+            -0.12059422116416732
+          ],
+          [
+            6.0,
+            -0.13627153059795366
+          ],
+          [
+            6.5,
+            -0.15190799607897892
+          ],
+          [
+            7.0,
+            -0.16750361760724314
+          ],
+          [
+            7.5,
+            -0.18305839518274628
+          ],
+          [
+            8.0,
+            -0.19857232880548834
+          ],
+          [
+            8.5,
+            -0.2140454184754694
+          ],
+          [
+            9.0,
+            -0.2294776641926893
+          ],
+          [
+            9.5,
+            -0.24486906595714816
+          ],
+          [
+            10.0,
+            -0.260219623768846
+          ],
+          [
+            10.5,
+            -0.2755293376277827
+          ]
+        ],
+        "observed_pairs": 9,
+        "span_m": 6.0,
+        "fit_rmse_m": 0.012928411648984242,
+        "median_width_m": 3.5,
+        "control_issued": false,
+        "limits": "Visible local center candidate; no destination routing, traffic rules or closed-loop proof"
+      }
+    },
+    {
+      "frame": 246937,
+      "scene": "town04-01",
+      "result": {
+        "status": "candidate",
+        "source": "paired_predicted_lane_marks_ground_plane",
+        "points_ego_m": [
+          [
+            4.5,
+            -0.09923507462686396
+          ],
+          [
+            5.0,
+            -0.09998756218905297
+          ],
+          [
+            5.5,
+            -0.10231343283581909
+          ],
+          [
+            6.0,
+            -0.10621268656716236
+          ],
+          [
+            6.5,
+            -0.11168532338308276
+          ],
+          [
+            7.0,
+            -0.11873134328358029
+          ],
+          [
+            7.5,
+            -0.12735074626865495
+          ],
+          [
+            8.0,
+            -0.13754353233830677
+          ],
+          [
+            8.5,
+            -0.1493097014925357
+          ],
+          [
+            9.0,
+            -0.1626492537313418
+          ],
+          [
+            9.5,
+            -0.17756218905472498
+          ],
+          [
+            10.0,
+            -0.19404850746268537
+          ]
+        ],
+        "observed_pairs": 9,
+        "span_m": 5.5,
+        "fit_rmse_m": 0.006403922754418274,
+        "median_width_m": 3.5,
+        "control_issued": false,
+        "limits": "Visible local center candidate; no destination routing, traffic rules or closed-loop proof"
+      }
+    },
+    {
+      "frame": 246941,
+      "scene": "town04-01",
+      "result": {
+        "status": "unavailable",
+        "reason": "insufficient_paired_visible_lane_evidence",
+        "points_ego_m": [],
+        "control_issued": false
+      }
+    },
+    {
+      "frame": 246945,
+      "scene": "town04-01",
+      "result": {
+        "status": "candidate",
+        "source": "single_predicted_boundary_with_fixed_width_prior",
+        "points_ego_m": [
+          [
+            5.0,
+            -0.04077723043240175
+          ],
+          [
+            5.5,
+            -0.04949896846448448
+          ],
+          [
+            6.0,
+            -0.05796008589111905
+          ],
+          [
+            6.5,
+            -0.06616058271230543
+          ],
+          [
+            7.0,
+            -0.07410045892804362
+          ],
+          [
+            7.5,
+            -0.08177971453833366
+          ],
+          [
+            8.0,
+            -0.08919834954317549
+          ],
+          [
+            8.5,
+            -0.09635636394256913
+          ],
+          [
+            9.0,
+            -0.10325375773651463
+          ],
+          [
+            9.5,
+            -0.10989053092501191
+          ],
+          [
+            10.0,
+            -0.11626668350806105
+          ],
+          [
+            10.5,
+            -0.12238221548566197
+          ],
+          [
+            11.0,
+            -0.12823712685781471
+          ],
+          [
+            11.5,
+            -0.1338314176245193
+          ],
+          [
+            12.0,
+            -0.1391650877857757
+          ],
+          [
+            12.5,
+            -0.1442381373415839
+          ],
+          [
+            13.0,
+            -0.14905056629194394
+          ],
+          [
+            13.5,
+            -0.15360237463685578
+          ],
+          [
+            14.0,
+            -0.15789356237631944
+          ],
+          [
+            14.5,
+            -0.16192412951033494
+          ],
+          [
+            15.0,
+            -0.16569407603890224
+          ],
+          [
+            15.5,
+            -0.16920340196202138
+          ],
+          [
+            16.0,
+            -0.17245210727969232
+          ],
+          [
+            16.5,
+            -0.17544019199191507
+          ],
+          [
+            17.0,
+            -0.17816765609868968
+          ],
+          [
+            17.5,
+            -0.18063449960001607
+          ],
+          [
+            18.0,
+            -0.1828407224958943
+          ]
+        ],
+        "observed_pairs": 27,
+        "span_m": 13.0,
+        "fit_rmse_m": 0.015640473070885827,
+        "median_width_m": 3.5,
+        "control_issued": false,
+        "limits": "Visible local center candidate; no destination routing, traffic rules or closed-loop proof",
+        "width_prior_m": 3.5,
+        "assumption": "One painted boundary, fixed lane width and predicted ground support; width is not measured in this mode"
+      }
+    },
+    {
+      "frame": 246949,
+      "scene": "town04-01",
+      "result": {
+        "status": "candidate",
+        "source": "single_predicted_boundary_with_fixed_width_prior",
+        "points_ego_m": [
+          [
+            5.0,
+            -0.0379857690202509
+          ],
+          [
+            5.5,
+            -0.041002484105931464
+          ],
+          [
+            6.0,
+            -0.0440074102143058
+          ],
+          [
+            6.5,
+            -0.04700054734537392
+          ],
+          [
+            7.0,
+            -0.04998189549913582
+          ],
+          [
+            7.5,
+            -0.0529514546755915
+          ],
+          [
+            8.0,
+            -0.05590922487474096
+          ],
+          [
+            8.5,
+            -0.0588552060965842
+          ],
+          [
+            9.0,
+            -0.061789398341121224
+          ],
+          [
+            9.5,
+            -0.06471180160835202
+          ],
+          [
+            10.0,
+            -0.06762241589827661
+          ],
+          [
+            10.5,
+            -0.07052124121089497
+          ],
+          [
+            11.0,
+            -0.07340827754620712
+          ],
+          [
+            11.5,
+            -0.07628352490421304
+          ],
+          [
+            12.0,
+            -0.07914698328491274
+          ],
+          [
+            12.5,
+            -0.08199865268830622
+          ],
+          [
+            13.0,
+            -0.08483853311439349
+          ],
+          [
+            13.5,
+            -0.08766662456317453
+          ],
+          [
+            14.0,
+            -0.09048292703464936
+          ],
+          [
+            14.5,
+            -0.09328744052881797
+          ],
+          [
+            15.0,
+            -0.09608016504568036
+          ],
+          [
+            15.5,
+            -0.09886110058523652
+          ],
+          [
+            16.0,
+            -0.10163024714748647
+          ],
+          [
+            16.5,
+            -0.1043876047324302
+          ],
+          [
+            17.0,
+            -0.10713317334006771
+          ],
+          [
+            17.5,
+            -0.109866952970399
+          ],
+          [
+            18.0,
+            -0.11258894362342407
+          ]
+        ],
+        "observed_pairs": 27,
+        "span_m": 13.0,
+        "fit_rmse_m": 0.017599602904318473,
+        "median_width_m": 3.5,
+        "control_issued": false,
+        "limits": "Visible local center candidate; no destination routing, traffic rules or closed-loop proof",
+        "width_prior_m": 3.5,
+        "assumption": "One painted boundary, fixed lane width and predicted ground support; width is not measured in this mode"
+      }
+    },
+    {
+      "frame": 246953,
+      "scene": "town04-01",
+      "result": {
+        "status": "unavailable",
+        "reason": "insufficient_paired_visible_lane_evidence",
+        "points_ego_m": [],
+        "control_issued": false
+      }
+    },
+    {
+      "frame": 246957,
+      "scene": "town04-01",
+      "result": {
+        "status": "unavailable",
+        "reason": "insufficient_paired_visible_lane_evidence",
+        "points_ego_m": [],
+        "control_issued": false
+      }
+    },
+    {
+      "frame": 246961,
+      "scene": "town04-01",
+      "result": {
+        "status": "unavailable",
+        "reason": "insufficient_paired_visible_lane_evidence",
+        "points_ego_m": [],
+        "control_issued": false
+      }
+    }
+  ]
+}

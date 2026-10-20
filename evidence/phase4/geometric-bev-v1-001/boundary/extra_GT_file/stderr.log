@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\code\senior_AI\scripts\run_phase4_pilot.py", line 117, in <module>
+    try:main(args)
+        ^^^^^^^^^^
+  File "C:\code\senior_AI\scripts\run_phase4_pilot.py", line 42, in main
+    if actual!=set(inventory) or any(not x.startswith(('inputs/','calibration/')) for x in actual):raise ValueError('Staging must contain only frozen RGB inputs and calibration')
+                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Staging must contain only frozen RGB inputs and calibration

@@ -1,0 +1,24 @@
+{
+  "status": "completed_geometric_BEV_prototype",
+  "phase4_formal_complete": false,
+  "control_issued": false,
+  "original_raw_statuses_preserved": true,
+  "run_contract_sha256": "bb66b420c8ed632a0996d109e08695b0ffab6a5c33c92aa449afe8f066bbc7f6",
+  "evaluation_report_sha256": "b3810154f0e8218107e1a23d33a072b30c17c60c5ae80ffca527757fa0c0cc78",
+  "visual_review_sha256": "80b9b11a0bc4db255a5e656949a1f67edd737de89d8d505ab1317e9e935ea2f9",
+  "tests": {
+    "total": 193,
+    "failures": 0,
+    "skipped": 0
+  },
+  "remaining": [
+    "Fresh predefined complete sunny flat marked routes without nearby walls",
+    "Longer turns, missing observations and failure continuity evaluation",
+    "Computation latency and ground-contact object reliability"
+  ],
+  "local_only": [
+    "Original RGB/GT corpus, model weights, OpenCV wheel",
+    "Per-view observation and floating BEV arrays; output hashes in integrity report"
+  ],
+  "limits": "Known short train/validation pilot, no independent heldout, 3D box or live-driving acceptance"
+}

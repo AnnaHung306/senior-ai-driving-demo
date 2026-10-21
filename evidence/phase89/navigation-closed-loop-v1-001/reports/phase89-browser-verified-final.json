@@ -1,0 +1,65 @@
+{
+  "status": "passed_public_DOM_source_control_Three_transforms_and_forecast_buffers",
+  "frames": 411,
+  "objects": 333,
+  "forecasts": 169,
+  "files": [
+    {
+      "file": "blocker-frames.json",
+      "frames": 75,
+      "unique_frames": 75,
+      "sha256": "987feeda68b639fe64db0c98a8e4a4e75fea0ed54193dde585af3b3cbfd0179f"
+    },
+    {
+      "file": "camera-timeout-frames.json",
+      "frames": 7,
+      "unique_frames": 7,
+      "sha256": "6c380c61d2570ace974587b02bc9ed3aaa6e9ed41c11e252daad896218a2ae17"
+    },
+    {
+      "file": "custom-frames.json",
+      "frames": 23,
+      "unique_frames": 23,
+      "sha256": "1356cd458c786fbda5a80a4fdd304370c225df8bc59467c5c3f4fd5964ea92aa"
+    },
+    {
+      "file": "pedestrian-frames.json",
+      "frames": 64,
+      "unique_frames": 64,
+      "sha256": "21be2abd730081a3d9321d464ef4c2a86b354575f4c421891df208a47f8c69bd"
+    },
+    {
+      "file": "sensor-fault-frames.json",
+      "frames": 11,
+      "unique_frames": 11,
+      "sha256": "28bcf0908fb2862bba07acd18daa760ffc205ab03e4051323e90a8955af8f5c2"
+    },
+    {
+      "file": "signal-frames.json",
+      "frames": 126,
+      "unique_frames": 126,
+      "sha256": "7430d0ffc7928c67e1e67ee42054ef4fbf58dcedbd16767846a42e2a096ef777"
+    },
+    {
+      "file": "straight2-frames.json",
+      "frames": 51,
+      "unique_frames": 51,
+      "sha256": "2bc695b27a2bfa789d7389679c90422b7b5e3cc9e7196fa83ab2e45011807bce"
+    },
+    {
+      "file": "unseen-straight1-frames.json",
+      "frames": 54,
+      "unique_frames": 54,
+      "sha256": "d7d23f9a4bf4cd53d64aaf4b6f9e19794a94c04340f1daf44cac7f7f061d4180"
+    }
+  ],
+  "checks_sha256": "9e03612aac551e596b999daa37ba9c18b1127614cc8149610763635c9b6313a3",
+  "render_median_FPS": 59.99400060208534,
+  "maximum_JSON_numeric_absolute_delta": 7.105427357601002e-15,
+  "JSON_numeric_absolute_tolerance": 1e-12,
+  "forecast_Float32_absolute_tolerance_m": 1e-05,
+  "manual_stop_and_graphics_loss_stop_confirmed": true,
+  "mobile_overflow": false,
+  "formal_quality_passed": false,
+  "limits": "Actual DOM/Three transforms and forecast Float32 buffers. Does not certify perception or arbitrary route safety."
+}

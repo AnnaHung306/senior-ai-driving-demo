@@ -1,3 +1,19 @@
+## 2026-10-21 Phase 8–9導航與真閉環工程研究版完成；正式品質仍未過
+
+最新使用者要求：「Phase 8–9一次完成，並準備告訴我目前模型是怎麼部屬的。未來我可以透過什麼方式展示？自定義起終點、自行導航駕駛抵達、網頁展示？」已完成PHASE89.md規畫、實作、真CARLA閉環／網頁操作、錯例修正、逐幀核對、獨立可攜回放包與DEPLOYMENT.md。**所有導航／推論／director／CARLA／HTTP測試服務都已退出，2000、8766–8769無listener；沒有訓練、批次、watcher或automation待續，不重啟歷史jobs。** 使用者晴天／無近牆、不補Wall／不採depth、不開development或lockbox評分持續有效；四權重SHA未變、沒有安裝新套件。
+
+能力：Town01 255道路節點可點地圖／下拉自訂起終點，預覽8–600m可連通且支援的路線後起車；八640×360新RGB→凍結seg/det/light/cuboid CUDA→BEV／Phase5 ID／Phase7因果運動→地圖全域／同車道局部／行為規劃→自寫pure-pursuit＋PI→CARLA→新感測。**地圖與自車位置／速度是明示先驗，其他actor GT不進planner；不是端到端學習駕駛，也不是模型在網頁執行。** 網頁顯示AI道路／3D物件與預測、map prior、控制狀態、八RGB及保存回放；原Phase7 8766功能保留。
+
+權威catalog `artifacts/runs/phase89-route-catalog-v1-002`，另複製configs/phase89_routes_v1.json供新clone；三路線頂點距007 Town01 train自車軌跡≥15m，實際最近139.03／86.49／133.76m，不排除其他歷史資料／遠景與同城資產重疊，不稱heldout泛化。五個最終具名真案例：unseen-straight1／straight2 v1-001、signal-probe-v1-001、blocker-probe-v1-002、pedestrian-probe-v1-001，370影格均抵達、碰撞0、越線0、最大路線橫向誤差.706m。行人末幀速度.185m/s符合原.3門檻，不寫精確零。共18次嘗試的舊失敗／預檢拒絕／中斷保留；最終5案通過不是全部嘗試成功率。
+
+真網頁自訂179→62共11m抵達（web-20261021-083327-121829）；人工stop與真WebGL context loss兩run取消、收尾速度0；sensor-fault為有效性注入，camera-timeout才是真front.stop後15s TimeoutError，實測清理前速度0，原error保留。紅→綠director、障礙移除、橫穿行人獨立控制環境，不提供actor真值給自車；號誌綠燈消失後用當前RGB光流保留ROI、只在RGB確認靜止時分類，TTL30s/.70/3幀綠燈限制不隱瞞。原失敗紅燈終點相關性、hood道路支持、綠燈ROI、blocker001未恢復與同步中斷清理均見PHASE89.md，不刪失敗。
+
+驗證：**295 Python 0fail/0skip、48 JS、23真HTTP**；15個完整有結果run、1123影格／8984PNG的source SHA與凍結planner/control重算exact；實際Three1123影格／730cuboids；真browser411影格／333objects／169Float32 forecasts，誤差只容許IEEE尾差1e-12／Float32 1e-5m。桌機／390px、完整播放／seek、八RGB、起終點地圖操作、失效恢復、純回放CARLA關閉及fresh console空皆通過；7曲線及2contact頁、最終桌機／手機圖已實看。p50/p95感知融合運動1216.02/1338.98ms，不含所有I/O／RPC；5Hz是同步模擬時間，牆鐘慢8–9倍，render60FPS含idle不當推論速度。錯類、誤停、停走抖動、dense traffic／任意路線／舒適性仍未驗收，formal false。
+
+本機展示：`./Start-NavigationDemo.ps1 -StartSimulator` → http://127.0.0.1:8768/；純回放 `-ReplayOnly`不匯入Torch／CARLA且禁止起車。可攜包 `artifacts/runs/phase89-portable-replay-v1-001.zip` 139,590,759bytes，含64幀真行人／512RGB，獨立資料夾607檔SHA及八RGB／拒絕起車實測通過；無GPU可展示保存結果，沒有公開上傳。完整資料／weights留ignored；新Git證據在 `evidence/phase89/navigation-closed-loop-v1-001`，含失敗、model registry、source versions、selector001精確重建收據（不是當時已保存）、實看圖與可攜manifest。
+
+以下保留Phase7與舊階段歷史；涉及「尚無導航／閉環」時以本節為準。後續可依使用者要求進Phase10固定更廣路線／錯例驗收或展示整理；不可自行啟動盲訓或改寫舊品質缺口。
+
 ## 2026-10-20 Phase7動態研究展示完成；正式模型品質仍未過
 
 最新要求：「phase7，這是展示核心，要謹慎製作並驗證，一次完成」。規畫PHASE7.md後完成240組凍結RGB CUDA重播、因果Kalman運動／CV三秒預測、接近風險、互動3D與四種獨立合成診斷；無新訓練／CARLA／控制／dev或lockbox評分。所有本輪推論與CPU jobs已結束，兩測試viewer（8766／8767）也已停止並查無listener。勿重啟歷史jobs。

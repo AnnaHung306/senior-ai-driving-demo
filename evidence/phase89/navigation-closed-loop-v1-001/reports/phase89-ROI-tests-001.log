@@ -1,0 +1,8 @@
+test_expired_or_missing_images_never_make_ROI (test_signal_roi.SignalROITests.test_expired_or_missing_images_never_make_ROI) ... ok
+test_flow_follows_previously_detected_signal (test_signal_roi.SignalROITests.test_flow_follows_previously_detected_signal) ... ok
+test_textureless_tracking_not_trusted (test_signal_roi.SignalROITests.test_textureless_tracking_not_trusted) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.034s
+
+OK

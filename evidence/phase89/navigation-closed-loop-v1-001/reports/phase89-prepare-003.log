@@ -1,0 +1,2 @@
+{'status': 'frozen_before_driving', 'routes': [('straight-1', 28.000015879515203, 62), ('straight-2', 28.00000381913951, 68), ('turn-1', 50.788235055881216, 1)], 'spawns': 255}
+INFO:  Found the required file in cache!  Carla/Maps/Nav/Town01.bin 

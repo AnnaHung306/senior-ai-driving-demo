@@ -2,6 +2,8 @@
 
 長期需求見 [PROJECT_SPEC.md](PROJECT_SPEC.md)，當前任務見 [CURRENT_TASK.md](CURRENT_TASK.md)。
 
+**2026-10-21：Phase 8–9導航與真閉環工程研究版已完成。** 網頁可選Town01道路起終點、預覽路線、啟動八RGB→本機CUDA模型→規劃→控制，並看3D、八鏡頭與完成紀錄回放。五個最終具名直路／轉彎／紅綠燈／障礙車／橫穿行人案例抵達，碰撞與越線皆0；另從網頁自訂11m路線實際抵達，人工停止、WebGL中斷及真相機timeout均驗證煞停。295 Python、48 JS、23真HTTP、1123保存影格與411真browser影格核對完成；18次開發嘗試的失敗與中斷均保留。**目前依賴地圖與自車定位先驗，推論約1.2秒／循環、牆鐘慢8–9倍；研究品質與任意路線可靠性未通過。** 執行 `./Start-NavigationDemo.ps1 -StartSimulator`，開啟 `http://127.0.0.1:8768/`；純回放用 `-ReplayOnly`。詳見[部署與展示方式](DEPLOYMENT.md)、[Phase 8–9結果](PHASE89.md)及[封存證據](evidence/phase89/navigation-closed-loop-v1-001/README.md)。亦已準備不需GPU／CARLA的本機可攜回放ZIP。以下保留舊階段交付狀態；目的地導航與閉環進展以本節為準。
+
 **2026-10-20：Phase7動態展示工程研究版已完成。** `./Start-WorldViewer.ps1`預設開啟240組RGB推論的速度／方向、3秒軌跡、暫失與接近風險；另有四種明示非RGB AI的合成診斷。256 Python、40 JS、22 HTTP及真browser全240組／1091物件／889預測核對通過，render median60FPS、CPU套用p9544.4ms。原模型選擇validation速度向量MAE .290m/s、ADE1 .950m、FDE2 1.205m，2秒GT覆蓋61.22%（all-GT miss47.52%），ID switches2與舊版相同。**這是運動學研究展示；正式品質、未見路線、連續即時推論及控制仍未通過／未提供。** 見[Phase7結果與啟動方式](PHASE7.md)及[實測證據](evidence/phase7/causal-motion-v1-001/README.md)。以下保留各階段原交付狀態，速度／預測以本節為準。
 
 **2026-10-20：Phase5工程再驗證＋Phase6互動3D研究版已交付。** 執行 `./Start-WorldViewer.ps1`，再開啟 `http://127.0.0.1:8766/`。含三視角、物件檢視、道路線／局部候選路徑、佔據格／八RGB對照、四序列時間軸及已驗證輸出監看。235項Python、20項JS與真瀏覽器操作通過，32影格／147物件／256RGB來源一致；本機render median60FPS、CPU影格套用p9541.1ms。**模型品質、模擬器連續即時推論、目的地導航及控制仍未通過／未提供**，60FPS畫面不是感知頻率。見[使用與狀態矩陣](PHASE6.md)及[截圖／實測證據](evidence/phase6/world-viewer-v1-001/README.md)。

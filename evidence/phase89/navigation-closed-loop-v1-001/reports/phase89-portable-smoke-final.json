@@ -1,0 +1,17 @@
+{
+  "status": "passed_relocated_CPU_replay_HTTP_and_manifest",
+  "run_id": "phase89-drive-pedestrian-probe-v1-001",
+  "frames": 64,
+  "RGB_checked": 8,
+  "sample_frame": 121465,
+  "CARLA_stopped": true,
+  "vehicle_start_rejected": true,
+  "manifest_files_checked": 607,
+  "import_proof": {
+    "module": "C:\\code\\senior_AI\\artifacts\\runs\\phase89-portable-replay-v1-001\\src\\senior_ai\\navigation_service.py",
+    "torch_imported": false,
+    "carla_imported": false
+  },
+  "port": 8769,
+  "formal_quality_passed": false
+}

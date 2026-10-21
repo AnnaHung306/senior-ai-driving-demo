@@ -1,0 +1,69 @@
+{
+  "status": "generated_pending_assistant_visual_review",
+  "cases": [
+    {
+      "file": "case-00.png",
+      "run": "phase89-drive-unseen-straight1-v1-001",
+      "report_sha256": "fc4a2c3e32c5daffa9a94d15f14bdeaa20c393efa2e2b3896e3b993006593e4d",
+      "plot_sha256": "7affab5d98ca23e9cc62a1bca581af21835e78f106be78ac7bc280c744c05fb4",
+      "frames": 54,
+      "status": "arrived",
+      "max_cross_track_m": 0.20812534553862325
+    },
+    {
+      "file": "case-01.png",
+      "run": "phase89-drive-unseen-straight2-v1-001",
+      "report_sha256": "ce1ce1d6ee75ff3997e9b02c0575f0c371f6a443e1451efa859777de13a8b7c7",
+      "plot_sha256": "30164601d5403380af87716371af20e92a260db11d02bb52d3a858847cf45803",
+      "frames": 51,
+      "status": "arrived",
+      "max_cross_track_m": 0.0499086757589282
+    },
+    {
+      "file": "case-02.png",
+      "run": "phase89-drive-signal-probe-v1-001",
+      "report_sha256": "b09c379cc1e2344f99269ac2db79b45a2f99a4611437a4a7c6a7781c924bd202",
+      "plot_sha256": "3a03cb7f509509c015411bb6dccde86410cff90f00e5e400f0f821d88dd0a3d1",
+      "frames": 126,
+      "status": "arrived",
+      "max_cross_track_m": 0.7062578106417089
+    },
+    {
+      "file": "case-03.png",
+      "run": "phase89-drive-blocker-probe-v1-001",
+      "report_sha256": "5bc02347bb19c1c0a47be3be281e09f14d583c17ae977092f295e8567026a128",
+      "plot_sha256": "ea12294c6dc612d4d73d4d6a88815b6777ce181775dc54d73ca6ed7f5eb7d77e",
+      "frames": 93,
+      "status": "blocked_safe_stop",
+      "max_cross_track_m": 0.07403546562512636
+    },
+    {
+      "file": "case-04.png",
+      "run": "phase89-drive-blocker-probe-v1-002",
+      "report_sha256": "e4435a6e9324e61913d304dcfdf410deb9e970f5d9dd75fd0b7d3d28bde87513",
+      "plot_sha256": "213f2d98581bb683762f5a6e9f7bd45a7fe55f74a62d7c8609286d32e26a7d19",
+      "frames": 75,
+      "status": "arrived",
+      "max_cross_track_m": 0.07990980210870463
+    },
+    {
+      "file": "case-05.png",
+      "run": "phase89-drive-pedestrian-probe-v1-001",
+      "report_sha256": "f8d44611ffdb807423b41465ee816448760271ea2fb1a7969fb9ac8df32d2d9d",
+      "plot_sha256": "419d5a206889157fb0258ac198c9c613f94c7390fbd8378e684d9aa03f011bf5",
+      "frames": 64,
+      "status": "arrived",
+      "max_cross_track_m": 0.1303301281118575
+    },
+    {
+      "file": "case-06.png",
+      "run": "phase89-drive-sensor-fault-v1-001",
+      "report_sha256": "4a52957627c4484cf95da93eb7bd0b97fd27acbf147f1297dff96e75f2a452b1",
+      "plot_sha256": "00a50910c25a65d9ffdd605f028dfb366d88dd319fe468c4503e9378a7dd5e11",
+      "frames": 11,
+      "status": "fault_stopped",
+      "max_cross_track_m": 0.20812534553862325
+    }
+  ],
+  "source_sha256": "4f88a243465bad6b4d778092dac303f1c5e33e8de4858a77eafa0160c6a92076"
+}

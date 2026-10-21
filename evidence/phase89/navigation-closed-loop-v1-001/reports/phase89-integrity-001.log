@@ -1,0 +1,1 @@
+{'runs': 3, 'frames': 214, 'states': [('phase89-drive-straight1-v1-004', 'blocked_safe_stop'), ('phase89-drive-straight2-v1-001', 'arrived'), ('phase89-drive-unseen-straight1-v1-001', 'arrived')]}

@@ -1,0 +1,408 @@
+{
+  "status": "completed_limited_closed_loop_engineering_demo",
+  "named_final_route_cases": [
+    {
+      "run_id": "phase89-drive-unseen-straight1-v1-001",
+      "frames": 54,
+      "length_m": 28.000015879515203,
+      "status": "arrived",
+      "collisions": 0,
+      "lane_events": 0,
+      "max_cross_track_m": 0.20812534553862325,
+      "final_goal_distance_m": 1.6104144482568543,
+      "final_speed_mps": 0.0005579266171722711,
+      "simulation_s": 10.8,
+      "wall_s": 92.89000000001397,
+      "report_sha256": "fc4a2c3e32c5daffa9a94d15f14bdeaa20c393efa2e2b3896e3b993006593e4d",
+      "contract_sha256": "53aa3c6b8d2d18f5ca90c444bbcd03495edfc03c87b48bb7efe5fc70f2d30b7f"
+    },
+    {
+      "run_id": "phase89-drive-unseen-straight2-v1-001",
+      "frames": 51,
+      "length_m": 28.00000381913951,
+      "status": "arrived",
+      "collisions": 0,
+      "lane_events": 0,
+      "max_cross_track_m": 0.0499086757589282,
+      "final_goal_distance_m": 1.575699129498801,
+      "final_speed_mps": 0.00024734667127231477,
+      "simulation_s": 10.200000000000001,
+      "wall_s": 88.01600000000326,
+      "report_sha256": "ce1ce1d6ee75ff3997e9b02c0575f0c371f6a443e1451efa859777de13a8b7c7",
+      "contract_sha256": "d33fa5efd7f6f30788c580fcd20f80c6ad75081813379cc9216947fa24d5cf3f"
+    },
+    {
+      "run_id": "phase89-drive-signal-probe-v1-001",
+      "frames": 126,
+      "length_m": 50.788235055881216,
+      "status": "arrived",
+      "collisions": 0,
+      "lane_events": 0,
+      "max_cross_track_m": 0.7062578106417089,
+      "final_goal_distance_m": 1.5662910178132383,
+      "final_speed_mps": 0.00024456335445005,
+      "simulation_s": 25.200000000000003,
+      "wall_s": 212.38999999995576,
+      "report_sha256": "b09c379cc1e2344f99269ac2db79b45a2f99a4611437a4a7c6a7781c924bd202",
+      "contract_sha256": "c71aff8c855c96b33457961fadbb2c39b38120f9f0ef7157e8fd2e3ee6778263"
+    },
+    {
+      "run_id": "phase89-drive-blocker-probe-v1-002",
+      "frames": 75,
+      "length_m": 28.00000381913951,
+      "status": "arrived",
+      "collisions": 0,
+      "lane_events": 0,
+      "max_cross_track_m": 0.07990980210870463,
+      "final_goal_distance_m": 1.6015332067512422,
+      "final_speed_mps": 0.0002421968662367679,
+      "simulation_s": 15.0,
+      "wall_s": 129.04699999996228,
+      "report_sha256": "e4435a6e9324e61913d304dcfdf410deb9e970f5d9dd75fd0b7d3d28bde87513",
+      "contract_sha256": "14c44babc26a549b9fbf0edd119034d94d39644e4837c750507795f13a8105a0"
+    },
+    {
+      "run_id": "phase89-drive-pedestrian-probe-v1-001",
+      "frames": 64,
+      "length_m": 28.00000381913951,
+      "status": "arrived",
+      "collisions": 0,
+      "lane_events": 0,
+      "max_cross_track_m": 0.1303301281118575,
+      "final_goal_distance_m": 1.7163405672176713,
+      "final_speed_mps": 0.18523481510109455,
+      "simulation_s": 12.8,
+      "wall_s": 112.0,
+      "report_sha256": "f8d44611ffdb807423b41465ee816448760271ea2fb1a7969fb9ac8df32d2d9d",
+      "contract_sha256": "d33fa5efd7f6f30788c580fcd20f80c6ad75081813379cc9216947fa24d5cf3f"
+    }
+  ],
+  "named_final_route_cases_passed": 5,
+  "named_final_route_cases_total": 5,
+  "controlled_dynamic_probes": {
+    "signal": {
+      "scenario": "signal",
+      "status": "completed_declared_real_RGB_environment_probe",
+      "passed": true,
+      "stationary_RGB_stop": true,
+      "release_trigger_observed": true,
+      "pedestrian_reaction": false,
+      "route_passed": true,
+      "events": [
+        {
+          "frame": 103995,
+          "event": "environment_red_set",
+          "lights": 36
+        },
+        {
+          "frame": 104041,
+          "event": "environment_green_set_after_RGB_stop"
+        }
+      ],
+      "errors": [],
+      "restored": [
+        "original_light_states_and_freeze_restored_elapsed_phase_not_restorable"
+      ],
+      "director_thread_ended": true,
+      "formal_quality_passed": false,
+      "limits": "Scripted controlled empty-road environment, not varied multi-actor collision/violation-rate certification."
+    },
+    "blocker": {
+      "scenario": "blocker",
+      "status": "completed_declared_real_RGB_environment_probe",
+      "passed": true,
+      "stationary_RGB_stop": true,
+      "release_trigger_observed": true,
+      "pedestrian_reaction": false,
+      "route_passed": true,
+      "events": [
+        {
+          "frame": 135136,
+          "event": "environment_actor_spawn",
+          "scenario": "blocker",
+          "actor_id_evaluation_only": 331,
+          "position_xy_m": [
+            1.9952377080917358,
+            193.59896850585938
+          ]
+        },
+        {
+          "frame": 135196,
+          "event": "blocker_removed_after_RGB_stop"
+        }
+      ],
+      "errors": [],
+      "restored": [],
+      "director_thread_ended": true,
+      "formal_quality_passed": false,
+      "limits": "Scripted controlled empty-road environment, not varied multi-actor collision/violation-rate certification."
+    },
+    "pedestrian": {
+      "scenario": "pedestrian",
+      "status": "completed_declared_real_RGB_environment_probe",
+      "passed": true,
+      "stationary_RGB_stop": false,
+      "release_trigger_observed": false,
+      "pedestrian_reaction": true,
+      "route_passed": true,
+      "events": [
+        {
+          "frame": 121429,
+          "event": "environment_actor_spawn",
+          "scenario": "pedestrian",
+          "actor_id_evaluation_only": 308,
+          "position_xy_m": [
+            4.996804185866841,
+            196.59740173838048
+          ]
+        }
+      ],
+      "errors": [],
+      "restored": [],
+      "director_thread_ended": true,
+      "formal_quality_passed": false,
+      "limits": "Scripted controlled empty-road environment, not varied multi-actor collision/violation-rate certification."
+    }
+  },
+  "signal_red_phase_no_junction_entry_observed": true,
+  "fault_tests": {
+    "phase89-drive-sensor-fault-v1-001": {
+      "status": "fault_stopped",
+      "checks": {
+        "arrived_stopped": false,
+        "collision_free": true,
+        "no_solid_lane_crossing": true,
+        "cross_track_within_1_5m": true,
+        "cleanup": true,
+        "source_exact": true,
+        "no_errors": true
+      },
+      "final_recorded_speed_mps": 0.00023428483846578486,
+      "cleanup_final_speed_mps": null,
+      "errors": [],
+      "report_sha256": "4a52957627c4484cf95da93eb7bd0b97fd27acbf147f1297dff96e75f2a452b1"
+    },
+    "phase89-drive-camera-timeout-v1-001": {
+      "status": "sensor_timeout_stopped",
+      "checks": {
+        "arrived_stopped": false,
+        "collision_free": true,
+        "no_solid_lane_crossing": true,
+        "cross_track_within_1_5m": true,
+        "cleanup": true,
+        "cleanup_stopped": true,
+        "source_exact": true,
+        "no_errors": false
+      },
+      "final_recorded_speed_mps": 3.121146600068656,
+      "cleanup_final_speed_mps": 0.0,
+      "errors": [
+        "TimeoutError: Camera timeout at frame 163182"
+      ],
+      "report_sha256": "c06b2fb56710d313c9b0361141fc387665ded13228bd477379743d55199e2554"
+    }
+  },
+  "inference_ms_named_cases": {
+    "samples": 370,
+    "p50": 1216.0204499959946,
+    "p95": 1338.980659993831
+  },
+  "maximum_speed_named_cases_mps": 3.2205058895400236,
+  "source_versions_per_case": {
+    "phase89-drive-unseen-straight1-v1-001": {
+      "src/senior_ai/navigation_runtime.py": "9bea3a93f833b8f01d32a205d9a1efda162d81dd3f941445a3a4e1c7ac8a441f",
+      "src/senior_ai/navigation.py": "6cc852ded938f231a22b180c7e90cf4f5ed876e389d49a5365f09a6fe2aaef5e",
+      "src/senior_ai/live_perception.py": "d91c051ff6b9436b93370a9e106d006cee96f301a4195d86f172992c2a1d6c62",
+      "configs/phase89_navigation_v1.json": "7cacc2df185842165623f020d723f549c35c09ae8a233ffe21a03ec88e4f3896"
+    },
+    "phase89-drive-unseen-straight2-v1-001": {
+      "src/senior_ai/navigation_runtime.py": "518b4a314a67aa4024918530045ae681bd4117a4f30d841d0c14837b22958b40",
+      "src/senior_ai/navigation.py": "6169ceda64f0134ff65d3ca644dcb4d5505d6881ee0a1320402915656fbeb67f",
+      "src/senior_ai/live_perception.py": "1c9a87787ebb6b257179e166f45e549bb6d2aeaf300a931644880cb7c8e1d4a7",
+      "src/senior_ai/navigation_lock.py": "5edaadc9955bb96ec3d1fd094efa40e71d484c5c2b74b6e5f7beed9e19d12764",
+      "configs/phase89_navigation_v1.json": "7cacc2df185842165623f020d723f549c35c09ae8a233ffe21a03ec88e4f3896"
+    },
+    "phase89-drive-signal-probe-v1-001": {
+      "src/senior_ai/navigation_runtime.py": "9bea3a93f833b8f01d32a205d9a1efda162d81dd3f941445a3a4e1c7ac8a441f",
+      "src/senior_ai/navigation.py": "6cc852ded938f231a22b180c7e90cf4f5ed876e389d49a5365f09a6fe2aaef5e",
+      "src/senior_ai/live_perception.py": "1c9a87787ebb6b257179e166f45e549bb6d2aeaf300a931644880cb7c8e1d4a7",
+      "configs/phase89_navigation_v1.json": "7cacc2df185842165623f020d723f549c35c09ae8a233ffe21a03ec88e4f3896"
+    },
+    "phase89-drive-blocker-probe-v1-002": {
+      "src/senior_ai/navigation_runtime.py": "09704336d24ca19e32e43646aa23104d58626f0861e8d71ace8dd073a56b754a",
+      "src/senior_ai/navigation.py": "756a26bc82d5d1cbed682131b6220fbcdb30955a2a497851153f73f98f3c380e",
+      "src/senior_ai/live_perception.py": "1c9a87787ebb6b257179e166f45e549bb6d2aeaf300a931644880cb7c8e1d4a7",
+      "src/senior_ai/navigation_lock.py": "5edaadc9955bb96ec3d1fd094efa40e71d484c5c2b74b6e5f7beed9e19d12764",
+      "configs/phase89_navigation_v1.json": "7cacc2df185842165623f020d723f549c35c09ae8a233ffe21a03ec88e4f3896"
+    },
+    "phase89-drive-pedestrian-probe-v1-001": {
+      "src/senior_ai/navigation_runtime.py": "518b4a314a67aa4024918530045ae681bd4117a4f30d841d0c14837b22958b40",
+      "src/senior_ai/navigation.py": "6169ceda64f0134ff65d3ca644dcb4d5505d6881ee0a1320402915656fbeb67f",
+      "src/senior_ai/live_perception.py": "1c9a87787ebb6b257179e166f45e549bb6d2aeaf300a931644880cb7c8e1d4a7",
+      "src/senior_ai/navigation_lock.py": "5edaadc9955bb96ec3d1fd094efa40e71d484c5c2b74b6e5f7beed9e19d12764",
+      "configs/phase89_navigation_v1.json": "7cacc2df185842165623f020d723f549c35c09ae8a233ffe21a03ec88e4f3896"
+    }
+  },
+  "all_attempts_including_failures": [
+    {
+      "run_id": "phase89-drive-blocker-probe-v1-001",
+      "status": "blocked_safe_stop",
+      "frames": 93,
+      "engineering_route_passed": false,
+      "contract_sha256": "d33fa5efd7f6f30788c580fcd20f80c6ad75081813379cc9216947fa24d5cf3f",
+      "errors": []
+    },
+    {
+      "run_id": "phase89-drive-blocker-probe-v1-002",
+      "status": "arrived",
+      "frames": 75,
+      "engineering_route_passed": true,
+      "contract_sha256": "14c44babc26a549b9fbf0edd119034d94d39644e4837c750507795f13a8105a0",
+      "errors": []
+    },
+    {
+      "run_id": "phase89-drive-camera-timeout-v1-001",
+      "status": "sensor_timeout_stopped",
+      "frames": 7,
+      "engineering_route_passed": false,
+      "contract_sha256": "84f8d48b06555566bcf675d9a5a9f3a7eb952780725694d567eb5c394c97fc3e",
+      "errors": [
+        "TimeoutError: Camera timeout at frame 163182"
+      ]
+    },
+    {
+      "run_id": "phase89-drive-pedestrian-probe-v1-001",
+      "status": "arrived",
+      "frames": 64,
+      "engineering_route_passed": true,
+      "contract_sha256": "d33fa5efd7f6f30788c580fcd20f80c6ad75081813379cc9216947fa24d5cf3f",
+      "errors": []
+    },
+    {
+      "run_id": "phase89-drive-sensor-fault-v1-001",
+      "status": "fault_stopped",
+      "frames": 11,
+      "engineering_route_passed": false,
+      "contract_sha256": "02a35e7cd31da2667f6efa540b69a27d632c08ba1f3dea2dd2e121c854441951",
+      "errors": []
+    },
+    {
+      "run_id": "phase89-drive-signal-probe-v1-001",
+      "status": "arrived",
+      "frames": 126,
+      "engineering_route_passed": true,
+      "contract_sha256": "c71aff8c855c96b33457961fadbb2c39b38120f9f0ef7157e8fd2e3ee6778263",
+      "errors": []
+    },
+    {
+      "run_id": "phase89-drive-straight1-v1-001",
+      "status": "interrupted_no_final_report",
+      "frames": 26,
+      "engineering_route_passed": false,
+      "contract_sha256": "97dfcfdf6a55550797564c3068595b3bfd1ac23c61d41af33a67a99ca1228ac0",
+      "errors": []
+    },
+    {
+      "run_id": "phase89-drive-straight1-v1-002",
+      "status": "failed",
+      "frames": 0,
+      "engineering_route_passed": false,
+      "contract_sha256": "2f7857be17bf8bc71720e7dba95e256f422a2a3cfb67410b483efa95f13639e7",
+      "errors": [
+        "RuntimeError: World has another synchronous owner"
+      ]
+    },
+    {
+      "run_id": "phase89-drive-straight1-v1-003",
+      "status": "failed",
+      "frames": 0,
+      "engineering_route_passed": false,
+      "contract_sha256": "2f7857be17bf8bc71720e7dba95e256f422a2a3cfb67410b483efa95f13639e7",
+      "errors": [
+        "RuntimeError: Dedicated empty simulation world required"
+      ]
+    },
+    {
+      "run_id": "phase89-drive-straight1-v1-004",
+      "status": "blocked_safe_stop",
+      "frames": 108,
+      "engineering_route_passed": false,
+      "contract_sha256": "2f7857be17bf8bc71720e7dba95e256f422a2a3cfb67410b483efa95f13639e7",
+      "errors": []
+    },
+    {
+      "run_id": "phase89-drive-straight2-v1-001",
+      "status": "arrived",
+      "frames": 52,
+      "engineering_route_passed": true,
+      "contract_sha256": "eb563a4e598109575841a36fa54c47e7c97eae1b1871cd8ef39a30e87ef2a1cf",
+      "errors": []
+    },
+    {
+      "run_id": "phase89-drive-unseen-straight1-v1-001",
+      "status": "arrived",
+      "frames": 54,
+      "engineering_route_passed": true,
+      "contract_sha256": "53aa3c6b8d2d18f5ca90c444bbcd03495edfc03c87b48bb7efe5fc70f2d30b7f",
+      "errors": []
+    },
+    {
+      "run_id": "phase89-drive-unseen-straight2-v1-001",
+      "status": "arrived",
+      "frames": 51,
+      "engineering_route_passed": true,
+      "contract_sha256": "d33fa5efd7f6f30788c580fcd20f80c6ad75081813379cc9216947fa24d5cf3f",
+      "errors": []
+    },
+    {
+      "run_id": "phase89-drive-unseen-turn-v1-001",
+      "status": "cancelled",
+      "frames": 166,
+      "engineering_route_passed": false,
+      "contract_sha256": "0d154edcc4da3625e0ec20c2fc46339b479b5df6d153b6312cd189e0d7d1c6c6",
+      "errors": []
+    },
+    {
+      "run_id": "phase89-drive-unseen-turn-v1-002",
+      "status": "cancelled",
+      "frames": 202,
+      "engineering_route_passed": false,
+      "contract_sha256": "47bb0e24fb929201603f5c82afd9b39bbc446fadbf2b046c3a08896aeedbdac7",
+      "errors": []
+    },
+    {
+      "run_id": "phase89-drive-web-20261021-083327-121829",
+      "status": "arrived",
+      "frames": 23,
+      "engineering_route_passed": true,
+      "contract_sha256": "279526a6d242376abda8d636751c3fe347cc756cc423a2ef38cd5753513e1443",
+      "errors": []
+    },
+    {
+      "run_id": "phase89-drive-web-20261021-083905-537988",
+      "status": "cancelled",
+      "frames": 58,
+      "engineering_route_passed": false,
+      "contract_sha256": "bd4de738d0e52156c9e9604d1a179856eca8bd4bb7d8e469fb5b489eb807dbc7",
+      "errors": []
+    },
+    {
+      "run_id": "phase89-drive-web-20261021-084120-965069",
+      "status": "cancelled",
+      "frames": 33,
+      "engineering_route_passed": false,
+      "contract_sha256": "bd4de738d0e52156c9e9604d1a179856eca8bd4bb7d8e469fb5b489eb807dbc7",
+      "errors": []
+    }
+  ],
+  "formal_quality_passed": false,
+  "limitations": [
+    "Final named versions are development engineering cases, not statistical success rate or heldout model quality.",
+    "Three map routes in the same city; original007 training ego traces separated 86-139m, historical/camera/asset overlap not excluded.",
+    "Ground-truth map and ego localization are explicit planning priors; other actor GT never enters planner.",
+    "Signal/blocker/pedestrian scenes use a declared environment director, no BasicAgent/autopilot for ego.",
+    "Object classes/sizes can be wrong and following/yielding shows stop-go jitter; comfort not validated.",
+    "No learned intent/planner, dense mixed traffic, arbitrary lane changes, overtake or general route reliability certified.",
+    "Camera timeout case intentionally contains a TimeoutError; successful emergency stop is distinct from route completion."
+  ]
+}

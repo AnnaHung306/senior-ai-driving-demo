@@ -1,0 +1,28 @@
+{
+  "status": "assistant_visually_reviewed_all_7_panels_and_2_contact_pages",
+  "catalog_sha256": "ac64b454d1c14403c738a348bb4f4f4a548648779b547298cb348ae42079e068",
+  "original_catalog_status_preserved": "generated_pending_assistant_visual_review",
+  "cases": 7,
+  "basis": "Both complete contact sheets actually viewed; final desktop RGB/AI navigation screenshot inspected.",
+  "observations": [
+    "All five final route cases stop within goal radius; map/GPS prior and actual ego trajectory are distinguished.",
+    "Signal curve includes complete stationary red interval then resumption and turn; max route cross-track error .706m.",
+    "Blocker001 remains stopped and is visibly incomplete; blocker002 resumes after removal, with stop-go jitter retained.",
+    "Pedestrian case visibly reduces speed; last record .185m/s is within frozen .3m/s arrival threshold, not falsely reported exact zero.",
+    "Controller/yield speed curves have intermittent braking and acceleration; comfort and dense traffic are not validated.",
+    "Sensor validity fault stops before destination; failure-safe success is kept separate from arrival.",
+    "Plots are evaluation-only map/ego localization priors, not RGB geometry accuracy; GT actor geometry not inserted into display."
+  ],
+  "formal_quality_passed": false,
+  "files": {
+    "case-00.png": "7affab5d98ca23e9cc62a1bca581af21835e78f106be78ac7bc280c744c05fb4",
+    "case-01.png": "30164601d5403380af87716371af20e92a260db11d02bb52d3a858847cf45803",
+    "case-02.png": "3a03cb7f509509c015411bb6dccde86410cff90f00e5e400f0f821d88dd0a3d1",
+    "case-03.png": "ea12294c6dc612d4d73d4d6a88815b6777ce181775dc54d73ca6ed7f5eb7d77e",
+    "case-04.png": "213f2d98581bb683762f5a6e9f7bd45a7fe55f74a62d7c8609286d32e26a7d19",
+    "case-05.png": "419d5a206889157fb0258ac198c9c613f94c7390fbd8378e684d9aa03f011bf5",
+    "case-06.png": "00a50910c25a65d9ffdd605f028dfb366d88dd319fe468c4503e9378a7dd5e11",
+    "contact-0.png": "1280046dd39363281afe45c51eeb0a777eefbae65e8c013246f5e030e7e5a060",
+    "contact-1.png": "946d6b0073f08aebdf5647781613378835c4c974202be5f57d11e5b20d4b7bc6"
+  }
+}

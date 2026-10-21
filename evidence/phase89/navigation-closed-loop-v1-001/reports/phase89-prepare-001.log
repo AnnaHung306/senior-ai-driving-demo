@@ -1,0 +1,10 @@
+INFO:  Found the required file in cache!  Carla/Maps/Nav/Town10HD_Opt.bin 
+INFO:  Found the required file in cache!  Carla/Maps/Nav/Town01.bin 
+Traceback (most recent call last):
+  File "C:\code\senior_AI\scripts\prepare_phase89_routes.py", line 78, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\code\senior_AI\scripts\prepare_phase89_routes.py", line 60, in main
+    if len(straights)!=2 or turning is None:raise RuntimeError('Required map-only route cases unavailable')
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Required map-only route cases unavailable

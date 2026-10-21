@@ -1,0 +1,10 @@
+{"run": "phase89-drive-camera-timeout-v1-001", "step": 0, "frame": 163168, "state": "CRUISE", "speed": 0.0, "remaining": 28.0, "road": {"0.0": 0.7777777777777778, "-0.45": 0.7777777777777778, "0.45": 0.7777777777777778}}
+{"run": "phase89-drive-camera-timeout-v1-001", "step": 1, "frame": 163170, "state": "CRUISE", "speed": 0.0, "remaining": 28.0, "road": {"0.0": 0.7777777777777778, "-0.45": 0.7777777777777778, "0.45": 0.7777777777777778}}
+{"run": "phase89-drive-camera-timeout-v1-001", "step": 2, "frame": 163172, "state": "CRUISE", "speed": 0.0, "remaining": 28.0, "road": {"0.0": 0.7777777777777778, "-0.45": 0.7777777777777778, "0.45": 0.7777777777777778}}
+{"run": "phase89-drive-camera-timeout-v1-001", "step": 3, "frame": 163174, "state": "CRUISE", "speed": 0.0, "remaining": 28.0, "road": {"0.0": 0.7777777777777778, "-0.45": 0.7777777777777778, "0.45": 0.7777777777777778}}
+{"run": "phase89-drive-camera-timeout-v1-001", "step": 4, "frame": 163176, "state": "CRUISE", "speed": 1.52, "remaining": 28.0, "road": {"0.0": 0.7777777777777778, "-0.45": 0.7777777777777778, "0.45": 0.7777777777777778}}
+{"run": "phase89-drive-camera-timeout-v1-001", "step": 5, "frame": 163178, "state": "CRUISE", "speed": 2.59, "remaining": 27.81, "road": {"0.0": 0.8888888888888888, "-0.45": 0.8888888888888888, "0.45": 0.8888888888888888}}
+{"run": "phase89-drive-camera-timeout-v1-001", "step": 6, "frame": 163180, "state": "CRUISE", "speed": 3.12, "remaining": 27.3, "road": {"0.0": 0.7777777777777778, "-0.45": 0.7777777777777778, "0.45": 0.7777777777777778}}
+INFO:  Found the required file in cache!  Carla/Maps/Nav/Town01.bin 
+WARNING: attempting to unsubscribe from stream but sensor wasn't listening: Actor 346 (sensor.camera.rgb) 
+{'status': 'sensor_timeout_stopped', 'engineering_route_passed': False, 'checks': {'arrived_stopped': False, 'collision_free': True, 'no_solid_lane_crossing': True, 'cross_track_within_1_5m': True, 'cleanup': True, 'cleanup_stopped': True, 'source_exact': True, 'no_errors': False}, 'frames': 7, 'wall_s': 30.93799999996554}

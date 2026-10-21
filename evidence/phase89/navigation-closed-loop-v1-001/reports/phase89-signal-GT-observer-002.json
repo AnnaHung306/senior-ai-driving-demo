@@ -1,0 +1,221 @@
+{
+  "evaluation_only_not_controller_input": true,
+  "lights": [
+    {
+      "id": 49,
+      "state": "Green",
+      "elapsed": 7.199995517730713,
+      "distance_ego_m": 13.003350257873535
+    },
+    {
+      "id": 48,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 27.24612045288086
+    },
+    {
+      "id": 50,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 33.83646011352539
+    },
+    {
+      "id": 51,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 55.957496643066406
+    },
+    {
+      "id": 52,
+      "state": "Green",
+      "elapsed": 7.199995517730713,
+      "distance_ego_m": 70.06291198730469
+    },
+    {
+      "id": 47,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 71.65737915039062
+    },
+    {
+      "id": 44,
+      "state": "Green",
+      "elapsed": 7.199995517730713,
+      "distance_ego_m": 72.18090057373047
+    },
+    {
+      "id": 53,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 82.2331314086914
+    },
+    {
+      "id": 43,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 91.54187774658203
+    },
+    {
+      "id": 45,
+      "state": "Green",
+      "elapsed": 7.199995517730713,
+      "distance_ego_m": 125.03833770751953
+    },
+    {
+      "id": 60,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 129.35047912597656
+    },
+    {
+      "id": 46,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 143.49298095703125
+    },
+    {
+      "id": 40,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 161.53724670410156
+    },
+    {
+      "id": 42,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 179.43585205078125
+    },
+    {
+      "id": 41,
+      "state": "Green",
+      "elapsed": 7.199995517730713,
+      "distance_ego_m": 180.62596130371094
+    },
+    {
+      "id": 38,
+      "state": "Green",
+      "elapsed": 7.199995517730713,
+      "distance_ego_m": 184.32650756835938
+    },
+    {
+      "id": 55,
+      "state": "Green",
+      "elapsed": 7.199995517730713,
+      "distance_ego_m": 191.32424926757812
+    },
+    {
+      "id": 37,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 194.89093017578125
+    },
+    {
+      "id": 56,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 197.3721160888672
+    },
+    {
+      "id": 39,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 200.5055389404297
+    },
+    {
+      "id": 29,
+      "state": "Green",
+      "elapsed": 7.199995517730713,
+      "distance_ego_m": 206.33888244628906
+    },
+    {
+      "id": 54,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 209.8802490234375
+    },
+    {
+      "id": 28,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 214.23924255371094
+    },
+    {
+      "id": 32,
+      "state": "Green",
+      "elapsed": 7.199995517730713,
+      "distance_ego_m": 214.52565002441406
+    },
+    {
+      "id": 26,
+      "state": "Green",
+      "elapsed": 7.199995517730713,
+      "distance_ego_m": 221.43142700195312
+    },
+    {
+      "id": 25,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 223.06227111816406
+    },
+    {
+      "id": 30,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 223.64309692382812
+    },
+    {
+      "id": 31,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 227.20767211914062
+    },
+    {
+      "id": 33,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 229.1562957763672
+    },
+    {
+      "id": 27,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 239.82977294921875
+    },
+    {
+      "id": 58,
+      "state": "Green",
+      "elapsed": 7.199995517730713,
+      "distance_ego_m": 245.72067260742188
+    },
+    {
+      "id": 59,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 248.59866333007812
+    },
+    {
+      "id": 57,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 264.8182067871094
+    },
+    {
+      "id": 34,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 278.335693359375
+    },
+    {
+      "id": 35,
+      "state": "Green",
+      "elapsed": 7.199995517730713,
+      "distance_ego_m": 288.6445617675781
+    },
+    {
+      "id": 36,
+      "state": "Red",
+      "elapsed": 0.0,
+      "distance_ego_m": 307.1603088378906
+    }
+  ]
+}

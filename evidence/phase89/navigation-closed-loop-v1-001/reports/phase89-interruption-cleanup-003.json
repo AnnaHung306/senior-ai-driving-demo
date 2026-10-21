@@ -1,0 +1,11 @@
+INFO:  Found the required file in cache!  Carla/Maps/Nav/Town01.bin 
+WARNING: attempting to unsubscribe from stream but sensor wasn't listening: Actor 198 (sensor.other.collision) 
+WARNING: attempting to unsubscribe from stream but sensor wasn't listening: Actor 200 (sensor.camera.rgb) 
+WARNING: attempting to unsubscribe from stream but sensor wasn't listening: Actor 201 (sensor.camera.rgb) 
+WARNING: attempting to unsubscribe from stream but sensor wasn't listening: Actor 202 (sensor.camera.rgb) 
+WARNING: attempting to unsubscribe from stream but sensor wasn't listening: Actor 203 (sensor.camera.rgb) 
+WARNING: attempting to unsubscribe from stream but sensor wasn't listening: Actor 204 (sensor.camera.rgb) 
+WARNING: attempting to unsubscribe from stream but sensor wasn't listening: Actor 205 (sensor.camera.rgb) 
+WARNING: attempting to unsubscribe from stream but sensor wasn't listening: Actor 206 (sensor.camera.rgb) 
+WARNING: attempting to unsubscribe from stream but sensor wasn't listening: Actor 207 (sensor.camera.rgb) 
+{"owned_vehicle_ids_destroyed": [197], "owned_sensors_destroyed": 10, "synchronous": false}

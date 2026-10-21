@@ -1,0 +1,15 @@
+{
+  "status": "passed_owned_services_stopped",
+  "checked_ports": [
+    2000,
+    8766,
+    8767,
+    8768,
+    8769
+  ],
+  "listeners": [],
+  "remaining_navigation_or_CARLA_jobs": [],
+  "simulator_pre_stop_cleanup_receipt": "artifacts/reports/phase89-world-cleanup-final.json",
+  "unrelated_desktop_processes_untouched": true,
+  "ended_at": "2026-10-21T09:17:48.3463824+08:00"
+}

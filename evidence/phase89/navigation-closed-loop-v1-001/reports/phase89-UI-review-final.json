@@ -1,0 +1,22 @@
+{
+  "status": "assistant_visually_reviewed_and_source_checked",
+  "final_desktop_sha256": "44b120f86c61782154df14b05c72e9774414fbb0aa2c20dc09136f299993a08b",
+  "final_mobile_sha256": "8065b297d11e5b7a7c0f5129a336a25c66ca90a4ccb5f2ebd73c894d724d4595",
+  "observations": [
+    "Actual pedestrian at F121465 appears in source RGB; AI cuboid/trajectory and speed response visible in same frame.",
+    "Clear badge distinguishes replay-only from live control; map route is explicitly a map prior.",
+    "Manual stop and real WebGL context loss both ended worker and measured cleanup speed0 before destroying vehicle.",
+    "Mobile390 has no horizontal overflow; eight camera switches loaded exact640x360 sources.",
+    "Ctrl+Home while range was focused moved seek to0; final QA blurs range instead of treating that shortcut as page scroll.",
+    "Revision/command ordering is a preventive async-state guard; shortcut focus is the directly observed cause of that QA seek reset."
+  ],
+  "numeric_receipt_comparison": {
+    "first_exact_comparison_failed_at": "blocker F135136 path point1",
+    "observed": 1.0021819531638,
+    "source": 1.0021819531637999,
+    "absolute_tolerance": 1e-12,
+    "maximum_observed_delta": 7.105427357601002e-15,
+    "reason": "JSON/IEEE transport representation; structure/IDs/hashes/bools strict, original outputs unchanged"
+  },
+  "formal_quality_passed": false
+}

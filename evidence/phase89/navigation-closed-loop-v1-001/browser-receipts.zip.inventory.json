@@ -1,0 +1,67 @@
+[
+  {
+    "path": "artifacts/reports/phase89-browser-001/blocker-frames.json",
+    "bytes": 627840,
+    "sha256": "987feeda68b639fe64db0c98a8e4a4e75fea0ed54193dde585af3b3cbfd0179f"
+  },
+  {
+    "path": "artifacts/reports/phase89-browser-001/camera-timeout-frames.json",
+    "bytes": 70954,
+    "sha256": "6c380c61d2570ace974587b02bc9ed3aaa6e9ed41c11e252daad896218a2ae17"
+  },
+  {
+    "path": "artifacts/reports/phase89-browser-001/checks.json",
+    "bytes": 100410,
+    "sha256": "9e03612aac551e596b999daa37ba9c18b1127614cc8149610763635c9b6313a3"
+  },
+  {
+    "path": "artifacts/reports/phase89-browser-001/console-final.json",
+    "bytes": 3,
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  {
+    "path": "artifacts/reports/phase89-browser-001/console-live-completed.json",
+    "bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "path": "artifacts/reports/phase89-browser-001/console-live-final.json",
+    "bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "path": "artifacts/reports/phase89-browser-001/console-restart-history.json",
+    "bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "path": "artifacts/reports/phase89-browser-001/custom-frames.json",
+    "bytes": 171071,
+    "sha256": "1356cd458c786fbda5a80a4fdd304370c225df8bc59467c5c3f4fd5964ea92aa"
+  },
+  {
+    "path": "artifacts/reports/phase89-browser-001/pedestrian-frames.json",
+    "bytes": 502123,
+    "sha256": "21be2abd730081a3d9321d464ef4c2a86b354575f4c421891df208a47f8c69bd"
+  },
+  {
+    "path": "artifacts/reports/phase89-browser-001/sensor-fault-frames.json",
+    "bytes": 101092,
+    "sha256": "28bcf0908fb2862bba07acd18daa760ffc205ab03e4051323e90a8955af8f5c2"
+  },
+  {
+    "path": "artifacts/reports/phase89-browser-001/signal-frames.json",
+    "bytes": 904024,
+    "sha256": "7430d0ffc7928c67e1e67ee42054ef4fbf58dcedbd16767846a42e2a096ef777"
+  },
+  {
+    "path": "artifacts/reports/phase89-browser-001/straight2-frames.json",
+    "bytes": 406268,
+    "sha256": "2bc695b27a2bfa789d7389679c90422b7b5e3cc9e7196fa83ab2e45011807bce"
+  },
+  {
+    "path": "artifacts/reports/phase89-browser-001/unseen-straight1-frames.json",
+    "bytes": 332054,
+    "sha256": "d7d23f9a4bf4cd53d64aaf4b6f9e19794a94c04340f1daf44cac7f7f061d4180"
+  }
+]

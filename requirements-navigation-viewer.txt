@@ -1,0 +1,3 @@
+# CPU-only recorded navigation display; no Torch or CARLA import required.
+numpy==2.3.5
+Pillow==12.0.0

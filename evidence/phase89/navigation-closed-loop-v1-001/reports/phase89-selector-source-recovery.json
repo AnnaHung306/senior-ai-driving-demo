@@ -1,0 +1,7 @@
+{
+  "status": "recovered_exact_original_bytes_from_known_patch_delta",
+  "expected_sha256": "e03244656fee2e9ce4252096a31eafaa1a92c4757eb0d8754b8105373f6eb8fa",
+  "actual_sha256": "e03244656fee2e9ce4252096a31eafaa1a92c4757eb0d8754b8105373f6eb8fa",
+  "originally_saved_at_run_time": false,
+  "method": "Reverse only recorded --unseen selector additions; SHA compared to pre-drive catalog001. Original catalog never rewritten."
+}

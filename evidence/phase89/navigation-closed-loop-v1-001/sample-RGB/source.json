@@ -1,0 +1,8 @@
+{
+  "run_id": "phase89-drive-pedestrian-probe-v1-001",
+  "frame": 121465,
+  "camera": "front",
+  "original_path": "artifacts\\runs\\phase89-drive-pedestrian-probe-v1-001\\frames\\00121465\\front.png",
+  "sha256": "773319e50b4a3c6de367a96224657e8b6c3b801d9b705ef8ea92f3aaee46baf4",
+  "not_all_RGB_archived": true
+}

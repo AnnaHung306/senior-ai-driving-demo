@@ -1,0 +1,49 @@
+{
+  "status": "frozen_models_verified_no_training",
+  "sampled_utc": "2026-10-21T01:18:57.115627+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.10.0+cu128",
+    "torchvision": "0.25.0+cu128",
+    "numpy": "2.3.5",
+    "Pillow": "12.0.0",
+    "carla": "0.9.16"
+  },
+  "models": {
+    "segmentation": {
+      "path": "artifacts/runs/sunny-segmentation-v6-001/best.pt",
+      "sha256": "0a3fe3f66fb93be373f2e82218632a4f8cc277bf6067f48bb4683a71f1b2af30",
+      "bytes": 43506583
+    },
+    "detection": {
+      "path": "artifacts/runs/sunny-detection-v6-001/best.pt",
+      "sha256": "ba6d2f4269a7f3f95e4b92d7daff1f330f4203a4619e1f5902c752aa371f7155",
+      "bytes": 242227815
+    },
+    "phase": {
+      "path": "artifacts/runs/sunny-light-state-v1-004/best.pt",
+      "sha256": "f9836ef6474d74b607124cbb4887492105b3949f23d3c9065741d86c160b451e",
+      "bytes": 328181
+    },
+    "cuboid": {
+      "path": "artifacts/runs/phase5-cuboid-v1-001/best.pt",
+      "sha256": "1ad8ccbf8e5409b476219b8ecaf0924922a756c19b845043b9cbeae99fd32f6f",
+      "bytes": 1158149
+    }
+  },
+  "CARLA_navigation_provider_sources": {
+    "global_route_planner.py": "adccc6f5e3290d7fa3c7284bd7597628491da95d817d6015e955fbf37ddfe86e",
+    "local_planner.py": "9250a88536a04ee30ee19b01c3b3764388295cf3f438123e2b2c88b647096b4f",
+    "controller.py": "35dbabac3b7bf69fd7f1272fcd8af97aa7797a537af2e58a31d9d6b67c1f3a0e"
+  },
+  "map_OpenDRIVE_sha256": "97a7f6ac67812567e5c8ee0599cd823b23f80f30f3f97c502212e38b72e2b709",
+  "live_inference": "local PyTorch CUDA; new eight RGB images each cycle",
+  "planner_controller": "classical map/ego-localization and RGB hybrid; not learned end-to-end",
+  "map_and_ego_GT_prior_explicit": true,
+  "other_actor_GT_in_planner": false,
+  "new_training_runs": 0,
+  "packages_installed_this_turn": false,
+  "offline_mode": "replay-only service imports neither Torch nor CARLA; NumPy/Pillow + copied recorded run PNG/JSON",
+  "formal_model_quality_passed": false
+}

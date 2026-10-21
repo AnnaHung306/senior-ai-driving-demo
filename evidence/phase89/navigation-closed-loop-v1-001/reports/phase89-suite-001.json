@@ -1,0 +1,22 @@
+[
+  {
+    "job": "unseen-straight2",
+    "exit_code": 0,
+    "run": "phase89-drive-unseen-straight2-v1-001"
+  },
+  {
+    "job": "blocker-probe",
+    "exit_code": 0,
+    "run": "phase89-drive-blocker-probe-v1-001"
+  },
+  {
+    "job": "pedestrian-probe",
+    "exit_code": 0,
+    "run": "phase89-drive-pedestrian-probe-v1-001"
+  },
+  {
+    "job": "sensor-fault",
+    "exit_code": 0,
+    "run": "phase89-drive-sensor-fault-v1-001"
+  }
+]

@@ -4,10 +4,12 @@ This runs after cloning without CARLA, Torch, Pillow, original recordings or
 network access. It checks all web bytes and the eight-camera/frame provenance.
 """
 import hashlib
+import argparse
 from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
+import subprocess
 
 ROOT=Path(__file__).resolve().parents[1]
 SITE=ROOT/'docs'
@@ -29,6 +31,9 @@ class Links(HTMLParser):
 
 
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--git-index',action='store_true',help='Also require every deployed file to be included in the Git index.')
+    args=parser.parse_args()
     manifest=read(SITE/'manifest.json')
     for entry in manifest['files']:
         path=SITE/entry['path']
@@ -38,6 +43,10 @@ def main():
     expected={x['path'] for x in manifest['files']}|{'manifest.json'}
     actual={x.relative_to(SITE).as_posix() for x in SITE.rglob('*') if x.is_file()}
     assert expected==actual,actual^expected
+    if args.git_index:
+        tracked=set(subprocess.check_output(['git','ls-files','-z','--','docs'],cwd=ROOT).decode().rstrip('\0').split('\0'))
+        missing={'docs/'+path for path in actual}-tracked
+        assert not missing,('Deployed files ignored or not staged',sorted(missing))
     data=(SITE/'data/route.json').read_bytes()
     assert hashlib.sha256(data).hexdigest()==manifest['bundle_sha256']
     bundle=json.loads(data)

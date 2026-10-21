@@ -19,3 +19,5 @@ configs/phase10*.json -text
 # The public site manifest binds every deployed byte. Preserve LF/CRLF exactly
 # on Windows clones as well as GitHub Pages; refresh the manifest after edits.
 docs/** -text
+# Preserve the same licensed upstream indentation exception as the local viewer.
+docs/vendor/** -text whitespace=cr-at-eol,-space-before-tab

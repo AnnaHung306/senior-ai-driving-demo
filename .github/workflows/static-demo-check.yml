@@ -17,6 +17,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Check every static asset and recorded frame
-        run: python3 scripts/check_static_demo.py
+        run: python3 scripts/check_static_demo.py --git-index
       - name: Check replay source and error handling
         run: node --test web/static-demo-tests/replay.test.mjs

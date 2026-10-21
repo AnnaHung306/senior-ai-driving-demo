@@ -11,5 +11,9 @@ artifacts/tmp/
 artifacts/reports/*
 !artifacts/reports/.gitkeep
 data/
+# Small, audited public replay bundle belongs to the deployable website.
+# Training data/artifacts remain ignored above.
+!docs/data/
+!docs/data/route.json
 weights/
 .pytest_cache/

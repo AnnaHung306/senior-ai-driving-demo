@@ -16,3 +16,6 @@ configs/phase7_motion*.json -text
 # Frozen navigation criteria and pre-drive route catalog retain their bytes.
 configs/phase89*.json -text
 configs/phase10*.json -text
+# The public site manifest binds every deployed byte. Preserve LF/CRLF exactly
+# on Windows clones as well as GitHub Pages; refresh the manifest after edits.
+docs/** -text

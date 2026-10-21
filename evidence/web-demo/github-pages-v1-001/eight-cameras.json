@@ -1,0 +1,50 @@
+[
+  {
+    "camera": "front",
+    "frame": "69246",
+    "height": 360,
+    "width": 640
+  },
+  {
+    "camera": "front_right",
+    "frame": "69246",
+    "height": 360,
+    "width": 640
+  },
+  {
+    "camera": "right",
+    "frame": "69246",
+    "height": 360,
+    "width": 640
+  },
+  {
+    "camera": "rear_right",
+    "frame": "69246",
+    "height": 360,
+    "width": 640
+  },
+  {
+    "camera": "rear",
+    "frame": "69246",
+    "height": 360,
+    "width": 640
+  },
+  {
+    "camera": "rear_left",
+    "frame": "69246",
+    "height": 360,
+    "width": 640
+  },
+  {
+    "camera": "left",
+    "frame": "69246",
+    "height": 360,
+    "width": 640
+  },
+  {
+    "camera": "front_left",
+    "frame": "69246",
+    "height": 360,
+    "width": 640
+  }
+]

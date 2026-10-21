@@ -1,4 +1,49 @@
-# 多鏡頭三維環境感知與自主駕駛研究系統
+# W·DRIVE — 多鏡頭三維感知與自主駕駛展示
+
+**[直接開啟線上展示](https://annahung306.github.io/senior-ai-driving-demo/)** · [部署／操作說明](WEB_DEMO.md) · [GitHub專案](https://github.com/AnnaHung306/senior-ai-driving-demo)
+
+這個專案將CARLA八鏡頭RGB、凍結AI模型、三維感知、導航規劃與車輛控制串成閉環。目前以一段**已成功抵達的晴天行人避讓路線**作為展示：Town01、28m、67影格、13.4模擬秒，無碰撞／實線越線事件。線上頁面支援3D旋轉、八鏡頭切換、播放／暫停、時間軸與逐幀，另有可下載的16:9影片。
+
+公開網站播放真實保存結果，不需要GPU或CARLA。它不在瀏覽器訓練／運行模型，也不接受新的駕駛任務；新起終點可透過完整本機模式操作。固定路線成功即為目前展示交付目標，原始品質限制仍保留。
+
+![實際網頁展示](evidence/web-demo/github-pages-v1-001/desktop.jpg)
+
+## 最快開啟方式
+
+**觀眾：** 直接開啟上方線上展示，按「探索駕駛過程」→播放。手機也可以觀看，不需安裝。
+
+**本機／離線網頁：** 安裝Git與Python 3.10以上，於終端機執行：
+
+```bash
+git clone https://github.com/AnnaHung306/senior-ai-driving-demo.git
+cd senior-ai-driving-demo
+python -m http.server 8080 --directory docs
+```
+
+開啟 **http://localhost:8080/**。Windows也可用 `py -3` 代替 `python`。不要直接雙擊HTML；Ctrl+C停止伺服器。靜態模式**不用pip／npm install**，不需要原artifacts、模型權重或CUDA；整個docs資料夾已包含536張RGB預覽、67幀推論資料、影片與本機vendor。
+
+| 模式 | 啟動 | 需要什麼 | 能做什麼 |
+|---|---|---|---|
+| 公開網站 | 上方Pages連結 | 新版瀏覽器 | 固定成功路線的互動回放／影片 |
+| 本機靜態網站 | `python -m http.server 8080 --directory docs` | Python標準函式庫 | 同一份展示，可離線開HTTP服務 |
+| 完整保存run回放 | `./Start-NavigationDemo.ps1 -ReplayOnly` | 指定run完整PNG／JSON、NumPy／Pillow | 原導航介面；run資料另存本機artifacts |
+| 新閉環駕駛 | `./Start-NavigationDemo.ps1 -StartSimulator` | Windows、CUDA、CARLA及四個模型權重 | 在8768選起終點，驅動新的模擬；任意路線不保證抵達 |
+
+## 專案導覽與部署
+
+`docs/`是可直接部署的網站；`src/senior_ai/`是感知／世界模型／規劃控制；`scripts/`是資料、訓練、評估與展示工具；`tests/`及`web/*tests/`保留回歸；`evidence/`保存分階段結果與來源。大型原始資料、CARLA安裝檔與模型權重未放Git，完整閉環不能只靠clone啟動；靜態展示已自帶所需資料。
+
+GitHub Pages使用 **main分支的/docs**，push後自動更新。完整開啟、重新部署、修改manifest、驗證、程式註解導覽與常見問題見 **[WEB_DEMO.md](WEB_DEMO.md)**；本機模型／CARLA安裝和控制見 **[DEPLOYMENT.md](DEPLOYMENT.md)**。Three.js授權與來源在 `docs/vendor/`。新增的匯出／檢查腳本、播放器資料提交與資源釋放都有註解。
+
+```bash
+python scripts/check_static_demo.py
+# Node 22以上，不用npm install。
+node --test web/static-demo-tests/replay.test.mjs
+```
+
+修改docs之後先執行 `python scripts/build_static_demo.py --manifest-only` 再檢查、commit／push。原始模型輸出數值未修改；JPEG只作網頁預覽，原PNG及record雜湊保留於bundle。關閉JavaScript／WebGL不支援時可改看影片。
+
+## 研究進度與品質紀錄
 
 長期需求見 [PROJECT_SPEC.md](PROJECT_SPEC.md)，當前任務見 [CURRENT_TASK.md](CURRENT_TASK.md)。
 

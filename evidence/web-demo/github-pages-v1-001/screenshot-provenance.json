@@ -1,0 +1,23 @@
+{
+  "status": "actual_browser_screenshots_with_document_region_crop",
+  "desktop_source": "artifacts\\reports\\static-demo-browser-v1-001\\desktop-full.png",
+  "desktop_source_sha256": "dc81de3a0d97ade6e6b623ef6f8f573a21169873d823e1e5be90c4265980f72d",
+  "crop_xyxy": [
+    0,
+    606,
+    1264,
+    1579
+  ],
+  "desktop_frame": 69246,
+  "desktop_content_modified": false,
+  "mobile_source_sha256": "6b2868276f0b3d2d51709773b64b080e0f1f5a97ee0cfacc934cefc2707534a3",
+  "mobile_viewport_requested": [
+    390,
+    844
+  ],
+  "mobile_client_scroll_width": [
+    375,
+    375
+  ],
+  "source_png_kept_locally": true
+}

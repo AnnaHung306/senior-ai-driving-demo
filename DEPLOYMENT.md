@@ -1,5 +1,11 @@
 # 模型部署與展示方式
 
+## 直接分享的網頁展示
+
+公開展示入口：[W·DRIVE GitHub Pages](https://annahung306.github.io/senior-ai-driving-demo/)。已將一段成功的28m行人避讓路線整理為純靜態網站，支援67影格／八鏡頭／3D旋轉／播放與逐幀，含16:9影片；觀眾不需GPU或CARLA。完整開啟、GitHub更新及註解導覽見[WEB_DEMO.md](WEB_DEMO.md)。
+
+從乾淨clone於專案根目錄執行 `python -m http.server 8080 --directory docs`，再開啟 `http://localhost:8080/` 即可回放，不需pip／npm套件。以下章節說明完整本機模型／模擬器部署；線上靜態展示不執行新的模型推論或駕駛控制。
+
 ## 現在部署在哪裡
 
 目前是**本機 Windows／RTX4070 Laptop 的研究部署**，不是將整個模型裝進網頁。Phase10已完成更廣稽核：原六條新路線2/6抵達，無GT循環p50約1.19秒，正式可靠性與即時品質仍未通過，詳[PHASE10.md](PHASE10.md)及[問題清單](PHASE10_ISSUES.md)。本輪測試服務與CARLA交付前均已停止。

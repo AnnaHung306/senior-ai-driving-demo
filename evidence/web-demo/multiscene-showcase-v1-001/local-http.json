@@ -1,0 +1,376 @@
+{
+  "status": "passed_actual_static_deployment",
+  "url": "http://127.0.0.1:8080/",
+  "checks": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 10751,
+      "content_type": "text/html",
+      "sha256": "26450219c296674e62fb83a0496f2fa34d17258ce1cf46ce7e2a9d24159cd061",
+      "exact": true
+    },
+    {
+      "path": "app.js",
+      "status": 200,
+      "bytes": 18912,
+      "content_type": "application/javascript",
+      "sha256": "d93bd75753181c216f5c779cd077ba73a5ea8261e123837e2eda5972cdf9c4e2",
+      "exact": true
+    },
+    {
+      "path": "replay.js",
+      "status": 200,
+      "bytes": 7060,
+      "content_type": "application/javascript",
+      "sha256": "9ee88e1db59b7aed8824c5d15f526338999d6f6f4410c53a9abed1689a29b418",
+      "exact": true
+    },
+    {
+      "path": "record-contract.js",
+      "status": 200,
+      "bytes": 2742,
+      "content_type": "application/javascript",
+      "sha256": "9ae4f498a783f8f1c304b70b55b279a094516f65786105ce6aabc61daa954469",
+      "exact": true
+    },
+    {
+      "path": "style.css",
+      "status": 200,
+      "bytes": 13165,
+      "content_type": "text/css",
+      "sha256": "2267ada85273220b9c74b0f52b5738bcfad5cd0c44b982cd664dfdf78d3e065e",
+      "exact": true
+    },
+    {
+      "path": "vendor/three.module.js",
+      "status": 200,
+      "bytes": 603113,
+      "content_type": "application/javascript",
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+      "exact": true
+    },
+    {
+      "path": "vendor/three.core.js",
+      "status": 200,
+      "bytes": 1403455,
+      "content_type": "application/javascript",
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+      "exact": true
+    },
+    {
+      "path": "vendor/OrbitControls.js",
+      "status": 200,
+      "bytes": 38703,
+      "content_type": "application/javascript",
+      "sha256": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c",
+      "exact": true
+    },
+    {
+      "path": "data/route.json",
+      "status": 200,
+      "bytes": 4226737,
+      "content_type": "application/json",
+      "sha256": "5202c8990fd9364308d3c0482a3f40f6571ef3e01bf44ae2a4da3a8528c510df",
+      "exact": true
+    },
+    {
+      "path": "data/showcases.json",
+      "status": 200,
+      "bytes": 1630,
+      "content_type": "application/json",
+      "sha256": "379831e1eefe448421f1bd4e3ae8ed4ffa01daa6cf28e261f6845ef00c65247e",
+      "exact": true
+    },
+    {
+      "path": "data/perception.json",
+      "status": 200,
+      "bytes": 3545885,
+      "content_type": "application/json",
+      "sha256": "b4142a486fa63539caef237cdffbd4fcfd90e6ce4a67634d3611524ba52e494f",
+      "exact": true
+    },
+    {
+      "path": "data/signal-turn.json",
+      "status": 200,
+      "bytes": 14816371,
+      "content_type": "application/json",
+      "sha256": "dc1b9e135baa9254dc203560ebe7e171f934cdad2b0330ca04c9febcf24608a2",
+      "exact": true
+    },
+    {
+      "path": "manifest.json",
+      "status": 200,
+      "bytes": 369733,
+      "content_type": "application/json",
+      "sha256": "df4196e01fc66b81df327f3480f21ef764a18c03bd845ebadbd3709ed11ac3b4",
+      "exact": true
+    },
+    {
+      "path": "media/showcase.webm",
+      "status": 200,
+      "bytes": 12346932,
+      "content_type": "video/webm",
+      "sha256": "76f53e5bbf5913212d7e087e91bf9eb69f842c39d5c3b7bfc4129a3ae59de5ee",
+      "exact": true
+    },
+    {
+      "path": "images/69246/front.jpg",
+      "status": 200,
+      "bytes": 35443,
+      "content_type": "image/jpeg",
+      "sha256": "73bfea9823af9753b6bd4d58a3caaa37d41f980ece7ddee7902a65910e33b0c2",
+      "exact": true
+    },
+    {
+      "path": "images/69246/front_right.jpg",
+      "status": 200,
+      "bytes": 30130,
+      "content_type": "image/jpeg",
+      "sha256": "ae6a4d7d9a39acf24ea1f104bc6c45eb321fa7283bb5515a160b1e71cc8964c0",
+      "exact": true
+    },
+    {
+      "path": "images/69246/right.jpg",
+      "status": 200,
+      "bytes": 52616,
+      "content_type": "image/jpeg",
+      "sha256": "0d63bfd9bc6dd1d0013b02d7effe88d834ce18f821e2d50c51d2d65edcfffd13",
+      "exact": true
+    },
+    {
+      "path": "images/69246/rear_right.jpg",
+      "status": 200,
+      "bytes": 59336,
+      "content_type": "image/jpeg",
+      "sha256": "f086f18a832db176388905ba0c4216c23caab6b35abb6382ae4e90fb7a994eaa",
+      "exact": true
+    },
+    {
+      "path": "images/69246/rear.jpg",
+      "status": 200,
+      "bytes": 38715,
+      "content_type": "image/jpeg",
+      "sha256": "9d6149de3cc512fb7ea57a7cd2df255bf4c83ed49d08c87a331707d19243ae31",
+      "exact": true
+    },
+    {
+      "path": "images/69246/rear_left.jpg",
+      "status": 200,
+      "bytes": 40012,
+      "content_type": "image/jpeg",
+      "sha256": "5c78de0af54954c3b9753502defa34e3b968355854da30e6928d9c7a515f276c",
+      "exact": true
+    },
+    {
+      "path": "images/69246/left.jpg",
+      "status": 200,
+      "bytes": 41150,
+      "content_type": "image/jpeg",
+      "sha256": "e6cc4fa4bc51eaa7884763cad9ec7b5db37b7be45a2561aebba446675381e976",
+      "exact": true
+    },
+    {
+      "path": "images/69246/front_left.jpg",
+      "status": 200,
+      "bytes": 36912,
+      "content_type": "image/jpeg",
+      "sha256": "3c1195736c19092b68befd37ed56c93686ea62eb4f8bd284fe369e3b4c4e8d86",
+      "exact": true
+    },
+    {
+      "path": "images/167005/front.jpg",
+      "status": 200,
+      "bytes": 42703,
+      "content_type": "image/jpeg",
+      "sha256": "e3d2f270e0ae9548acf225f1312b6361f9ea92f634a6938713936dbaf1345b8d",
+      "exact": true
+    },
+    {
+      "path": "images/167005/front_right.jpg",
+      "status": 200,
+      "bytes": 39309,
+      "content_type": "image/jpeg",
+      "sha256": "c42efc447ba38225982819a313828fd12755a9e1f8202046674e117985f2dd11",
+      "exact": true
+    },
+    {
+      "path": "images/167005/right.jpg",
+      "status": 200,
+      "bytes": 35678,
+      "content_type": "image/jpeg",
+      "sha256": "741b0d854b14db9ba909f5aee1d898f7582b8ac8c34d233792be8b2c19e4c283",
+      "exact": true
+    },
+    {
+      "path": "images/167005/rear_right.jpg",
+      "status": 200,
+      "bytes": 33468,
+      "content_type": "image/jpeg",
+      "sha256": "523fcd965d52f44d27737f6bde4cc73473b794862b5285a2ddc8971488566fe1",
+      "exact": true
+    },
+    {
+      "path": "images/167005/rear.jpg",
+      "status": 200,
+      "bytes": 38908,
+      "content_type": "image/jpeg",
+      "sha256": "a90de811a544d95b94ea4be373206c847a793f67d5498af9ce4a70f08716e9a0",
+      "exact": true
+    },
+    {
+      "path": "images/167005/rear_left.jpg",
+      "status": 200,
+      "bytes": 48569,
+      "content_type": "image/jpeg",
+      "sha256": "c9c20f0095a59e08176845f84b4e2902ded9d33954f726ecb01f402c8400da2e",
+      "exact": true
+    },
+    {
+      "path": "images/167005/left.jpg",
+      "status": 200,
+      "bytes": 57974,
+      "content_type": "image/jpeg",
+      "sha256": "48076dc297358acdd7ec944004b9a0a7928eb4286787eb385e82dbe1497da1ee",
+      "exact": true
+    },
+    {
+      "path": "images/167005/front_left.jpg",
+      "status": 200,
+      "bytes": 45526,
+      "content_type": "image/jpeg",
+      "sha256": "e81264e6c3fe974712146722c18204d8f6a23cf5652ae074e36401b222d0fe5f",
+      "exact": true
+    },
+    {
+      "path": "images/72097/front.jpg",
+      "status": 200,
+      "bytes": 51827,
+      "content_type": "image/jpeg",
+      "sha256": "829d160510717e66ea5cadeaa30bd627fa77cef0038a64f0a770f2dd86ad4c1b",
+      "exact": true
+    },
+    {
+      "path": "images/72097/front_right.jpg",
+      "status": 200,
+      "bytes": 51675,
+      "content_type": "image/jpeg",
+      "sha256": "79a25991d608a3932a09517927a7d52fa631c113b734cd28fbf7ae61f46e6447",
+      "exact": true
+    },
+    {
+      "path": "images/72097/right.jpg",
+      "status": 200,
+      "bytes": 43798,
+      "content_type": "image/jpeg",
+      "sha256": "a2fca68baec3d1af8f675473e55db8155733876a4f37767719b0cece546d4992",
+      "exact": true
+    },
+    {
+      "path": "images/72097/rear_right.jpg",
+      "status": 200,
+      "bytes": 41347,
+      "content_type": "image/jpeg",
+      "sha256": "23ee8c7d481b612424fb6244a9fbb380ab7b461e8a35c4e9a352fad299da7fb2",
+      "exact": true
+    },
+    {
+      "path": "images/72097/rear.jpg",
+      "status": 200,
+      "bytes": 35726,
+      "content_type": "image/jpeg",
+      "sha256": "4e8d95e31f39ee6eff98acb22b7fbb428405b5ea11180622eb9552f53cf271c0",
+      "exact": true
+    },
+    {
+      "path": "images/72097/rear_left.jpg",
+      "status": 200,
+      "bytes": 42788,
+      "content_type": "image/jpeg",
+      "sha256": "2ef715c920a1d7a0a03e9dd5ce5c15368d02e5385f2afad9dbb6dd7380c4002c",
+      "exact": true
+    },
+    {
+      "path": "images/72097/left.jpg",
+      "status": 200,
+      "bytes": 47839,
+      "content_type": "image/jpeg",
+      "sha256": "3bc6bb711469862ae05b0e8efafee48eb0700742cfa71757182a07ad9b029fd2",
+      "exact": true
+    },
+    {
+      "path": "images/72097/front_left.jpg",
+      "status": 200,
+      "bytes": 49783,
+      "content_type": "image/jpeg",
+      "sha256": "8a4a8bbb9d786c92757dab9ba75654730377cca6100faab8d277eb6b808dc9a7",
+      "exact": true
+    },
+    {
+      "path": "images/72373/front.jpg",
+      "status": 200,
+      "bytes": 47310,
+      "content_type": "image/jpeg",
+      "sha256": "2acad52113227bc73b8868c46318ebab51e9d1adcee113b90309ed296ec02fa7",
+      "exact": true
+    },
+    {
+      "path": "images/72373/front_right.jpg",
+      "status": 200,
+      "bytes": 47631,
+      "content_type": "image/jpeg",
+      "sha256": "24ff89fa6a1de46c776a3b66e480f4ea86ad7ef970319c3aa6b41740b9f6bc57",
+      "exact": true
+    },
+    {
+      "path": "images/72373/right.jpg",
+      "status": 200,
+      "bytes": 44193,
+      "content_type": "image/jpeg",
+      "sha256": "4ec5106d4268b92e2c49b500b313ba27e21244badf022715df26f8762d6a5fe5",
+      "exact": true
+    },
+    {
+      "path": "images/72373/rear_right.jpg",
+      "status": 200,
+      "bytes": 43614,
+      "content_type": "image/jpeg",
+      "sha256": "d0cae1c44fea76056541ea3e7ff55f5a3de8a4656712fa3dddf90f8ba5a977ea",
+      "exact": true
+    },
+    {
+      "path": "images/72373/rear.jpg",
+      "status": 200,
+      "bytes": 34061,
+      "content_type": "image/jpeg",
+      "sha256": "acaec30de0ede527fa05de5b44f9c5b1e852b2159371b3f1e269196dd79c4eee",
+      "exact": true
+    },
+    {
+      "path": "images/72373/rear_left.jpg",
+      "status": 200,
+      "bytes": 28782,
+      "content_type": "image/jpeg",
+      "sha256": "a5a6a0cd4d717705b1c99c82a5f53912fee3d24a1813aad2ad586c64c2b48d73",
+      "exact": true
+    },
+    {
+      "path": "images/72373/left.jpg",
+      "status": 200,
+      "bytes": 37840,
+      "content_type": "image/jpeg",
+      "sha256": "2caa4f38987d9aa2b73e9f66e4aa724ab74c66c95473b892f14fc2c732be9729",
+      "exact": true
+    },
+    {
+      "path": "images/72373/front_left.jpg",
+      "status": 200,
+      "bytes": 40617,
+      "content_type": "image/jpeg",
+      "sha256": "6850b17fc3009235cadd1137d32ea735a23d071624354a0db11c22d55d664dd8",
+      "exact": true
+    }
+  ],
+  "site_manifest_sha256": "df4196e01fc66b81df327f3480f21ef764a18c03bd845ebadbd3709ed11ac3b4",
+  "limits": "HTTP bytes/MIME check; browser rendering and interaction have separate receipts."
+}

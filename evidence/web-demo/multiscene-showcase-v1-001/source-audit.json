@@ -1,0 +1,43 @@
+{
+  "status": "passed_unchanged_sources",
+  "chapters": [
+    {
+      "chapter": "perception",
+      "records_equal_to_original": 60,
+      "original_PNG_hashes_verified": 480,
+      "kind": "perception",
+      "source_bundle_sha256": "b4142a486fa63539caef237cdffbd4fcfd90e6ce4a67634d3611524ba52e494f"
+    },
+    {
+      "chapter": "signal-turn",
+      "records_equal_to_original": 236,
+      "original_PNG_hashes_verified": 1888,
+      "kind": "drive",
+      "source_bundle_sha256": "dc1b9e135baa9254dc203560ebe7e171f934cdad2b0330ca04c9febcf24608a2"
+    },
+    {
+      "chapter": "pedestrian",
+      "records_equal_to_original": 67,
+      "original_PNG_hashes_verified": 536,
+      "kind": "drive",
+      "source_bundle_sha256": "5202c8990fd9364308d3c0482a3f40f6571ef3e01bf44ae2a4da3a8528c510df"
+    }
+  ],
+  "perception": {
+    "car_motorcycle_person_simultaneous_model_outputs": 30,
+    "domain": "original_training_sequence_not_unseen_validation",
+    "new_accuracy_claim": false,
+    "control_issued": false,
+    "memory_max_coast_s": 0.65,
+    "held_frames": 37
+  },
+  "signal": {
+    "first_RGB_green_frame": 72097,
+    "first_RGB_green_s": 19.500000290572643,
+    "release_frame": 72177,
+    "release_delay_after_first_RGB_green_s": 8.00000011920929,
+    "final_state": "ARRIVED",
+    "ego_yaw_change_rad": -1.4437663391172615
+  },
+  "limits": "Original model mistakes are retained. Simultaneous predicted classes are not a new accuracy score or identity ground truth."
+}

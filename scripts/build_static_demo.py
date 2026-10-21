@@ -91,14 +91,16 @@ def main():
         shutil.copyfile(first,media/'poster.jpg')
         (site/'.nojekyll').write_text('',encoding='utf8')
     payload=read(site/'data/route.json')
+    catalog_path=site/'data/showcases.json'
+    bundles=[read(site/c['file']) for c in read(catalog_path)['chapters']] if catalog_path.exists() else [payload]
     inventory=[{'path':p.relative_to(site).as_posix(),'bytes':p.stat().st_size,'sha256':sha(p)}
         for p in sorted(site.rglob('*')) if p.is_file() and p.name!='manifest.json']
     write(site/'manifest.json',{'schema_version':1,'files':inventory,'manifest_self_excluded':True,
-        'bundle_sha256':sha(site/'data/route.json'),'frames':len(payload['records']),
-        'RGB_previews':sum(len(x['images']) for x in payload['frame_assets']),
+        'bundle_sha256':sha(site/'data/route.json'),'frames':sum(len(b['records']) for b in bundles),
+        'RGB_previews':sum(len(x['images']) for b in bundles for x in b['frame_assets']),
         'purpose':'Static recorded demo; no control endpoint or model weights.'})
     print(json.dumps({'status':'static_site_exported','files':len(inventory),
-        'bytes':sum(x['bytes'] for x in inventory),'frames':len(payload['records'])}))
+        'bytes':sum(x['bytes'] for x in inventory),'frames':sum(len(b['records']) for b in bundles)}))
 
 
 if __name__=='__main__':

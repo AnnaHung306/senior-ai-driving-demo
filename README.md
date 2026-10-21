@@ -2,11 +2,19 @@
 
 **[直接開啟線上展示](https://annahung306.github.io/senior-ai-driving-demo/)** · [部署／操作說明](WEB_DEMO.md) · [GitHub專案](https://github.com/AnnaHung306/senior-ai-driving-demo)
 
-這個專案將CARLA八鏡頭RGB、凍結AI模型、三維感知、導航規劃與車輛控制串成閉環。目前以一段**已成功抵達的晴天行人避讓路線**作為展示：Town01、28m、67影格、13.4模擬秒，無碰撞／實線越線事件。線上頁面支援3D旋轉、八鏡頭切換、播放／暫停、時間軸與逐幀，另有可下載的16:9影片。
+這個專案將CARLA八鏡頭RGB、凍結AI模型、三維感知、導航規劃與車輛控制串接。目前網站提供 **三個可切換章節**，另有59.2秒、16:9、可下載的兩章展示影片。
 
-公開網站播放真實保存結果，不需要GPU或CARLA。它不在瀏覽器訓練／運行模型，也不接受新的駕駛任務；新起終點可透過完整本機模式操作。固定路線成功即為目前展示交付目標，原始品質限制仍保留。
+| 章節 | 展示重點 | 紀錄範圍 |
+|---|---|---|
+| 多物件與短期記憶（預設） | 同時出現車、機車、行人；金色線框、追蹤ID、暫失秒數、重現及逾時移除 | 60幀，約12秒；既有訓練場景感知重播，沒有駕駛控制 |
+| 紅綠燈與左轉 | 紅燈減速、靜止停等、RGB綠燈辨識、起步、左轉抵達；同幀號誌局部放大 | 236幀，47.2模擬秒，50.8m；真閉環保存紀錄 |
+| 原行人避讓 | 起步、減速避讓、恢復行駛、抵達 | 67幀，13.4模擬秒，28m；真閉環保存紀錄 |
 
-![實際網頁展示](evidence/web-demo/github-pages-v1-001/desktop.jpg)
+網站支援3D旋轉、八鏡頭切換、播放／暫停、時間軸、逐幀與重點書籤。短期記憶上限為0.65秒，並非永久物件地圖；暫失物件不算當前辨識，也不加入佔據格。紅綠燈片段保留綠燈辨識後約8秒才解除停等的原始延遲。模型錯類、漏檢與身份關聯錯誤均未修飾，不能把展示當成新的準確率或泛化驗證。
+
+公開網站播放保存結果，不需要GPU或CARLA；它不在瀏覽器執行模型，也不接受新的駕駛任務。新起終點可透過完整本機模式操作。第一章是感知展示，第二、三章才有實際閉環控制。
+
+![實際多物件與短期記憶展示](evidence/web-demo/multiscene-showcase-v1-001/desktop.jpg)
 
 ## 最快開啟方式
 
@@ -20,11 +28,11 @@ cd senior-ai-driving-demo
 python -m http.server 8080 --directory docs
 ```
 
-開啟 **http://localhost:8080/**。Windows也可用 `py -3` 代替 `python`。不要直接雙擊HTML；Ctrl+C停止伺服器。靜態模式**不用pip／npm install**，不需要原artifacts、模型權重或CUDA；整個docs資料夾已包含536張RGB預覽、67幀推論資料、影片與本機vendor。
+開啟 **http://localhost:8080/**。Windows也可用 `py -3` 代替 `python`。不要直接雙擊HTML；Ctrl+C停止伺服器。靜態模式**不用pip／npm install**，不需要原artifacts、模型權重或CUDA；整個docs資料夾已包含2,904張RGB預覽、363幀記錄資料、影片與本機vendor。
 
 | 模式 | 啟動 | 需要什麼 | 能做什麼 |
 |---|---|---|---|
-| 公開網站 | 上方Pages連結 | 新版瀏覽器 | 固定成功路線的互動回放／影片 |
+| 公開網站 | 上方Pages連結 | 新版瀏覽器 | 多物件記憶、號誌左轉、行人避讓的互動回放／影片 |
 | 本機靜態網站 | `python -m http.server 8080 --directory docs` | Python標準函式庫 | 同一份展示，可離線開HTTP服務 |
 | 完整保存run回放 | `./Start-NavigationDemo.ps1 -ReplayOnly` | 指定run完整PNG／JSON、NumPy／Pillow | 原導航介面；run資料另存本機artifacts |
 | 新閉環駕駛 | `./Start-NavigationDemo.ps1 -StartSimulator` | Windows、CUDA、CARLA及四個模型權重 | 在8768選起終點，驅動新的模擬；任意路線不保證抵達 |

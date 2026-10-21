@@ -1,3 +1,15 @@
+## 2026-10-21 多物件記憶＋號誌左轉展示擴充
+
+使用者希望固定影片更豐富，可斟酌加入車／機車／行人、物件暫存及紅綠燈轉彎。本輪利用既有真實資料擴充同一GitHub Pages網站，沒有新訓練、CARLA採集或改舊run。原權重、Wall／depth決策與所有舊證據保持不變。
+
+新增三章目錄與分開載入：預設Phase7 town01-00完整60幀／約12秒（原訓練場景感知重播、不含控制）；第二章Phase10 long-red完整236幀／47.2秒、50.8m，紅燈停等→綠燈→左轉抵達；保留原67幀行人避讓。合計363 record／2904 JPEG。第一章同時car/person/motorcycle輸出30幀、37幀有held；金色線框＋ID＋age，上限0.65秒，T000005重現、T000003過期。此為原追蹤器展示，非新準確率或永久地圖。第二章RGB綠燈後8秒才解除停等，完整保留，沒有GT替換。號誌小窗只裁同幀、同鏡頭模型ROI。
+
+59.2秒16:9無聲新影片已製作：真瀏覽器296幀截圖＋DOM字幕＋同幀JPEG號誌ROI，兩章完整順序，沒有跳過紅燈；5fps回放不是即時推論。11個Node測試、標準函式庫2925個靜態檔案（含manifest）、全部原始record／PNG核對、296新幀＋67原幀真browser操作、85次介面檢查、46本機HTTP通過；桌機／390px手機及影片實際播放通過，console空。修正載入中書籤競態、播放中切章晚到回應及末幀重播競態，單renderer與池化幾何維持。
+
+新證據：evidence/web-demo/multiscene-showcase-v1-001，README及WEB_DEMO已更新。本輪接續以新Git匯出／公開部署驗證收據及Git工作區狀態為準；不重啟任何舊訓練／driver。
+
+以下為舊歷史狀態。
+
 ## 2026-10-21 GitHub專案與公開網頁展示已部署
 
 使用者接受一段路線可展示即成功，授權放GitHub及部署網頁、補完整說明／註解。新公開repository：**https://github.com/AnnaHung306/senior-ai-driving-demo**；網站：**https://annahung306.github.io/senior-ai-driving-demo/**。現有AnnaHung306.github.io與lane-nav未修改。使用既有Git Credential Manager登入，未安裝gh、未顯示／保存token；本地分支已命名main並設定origin/main上游。

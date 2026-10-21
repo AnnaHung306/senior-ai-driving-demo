@@ -15,5 +15,8 @@ data/
 # Training data/artifacts remain ignored above.
 !docs/data/
 !docs/data/route.json
+!docs/data/perception.json
+!docs/data/signal-turn.json
+!docs/data/showcases.json
 weights/
 .pytest_cache/

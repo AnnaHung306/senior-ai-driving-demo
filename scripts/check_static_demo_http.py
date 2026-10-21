@@ -20,9 +20,13 @@ def main():
     entries={r['path']:r for r in manifest['files']}
     paths=['index.html','app.js','replay.js','record-contract.js','style.css',
         'vendor/three.module.js','vendor/three.core.js','vendor/OrbitControls.js',
-        'data/route.json','manifest.json','media/driving-replay.webm']
+        'data/route.json','data/showcases.json','data/perception.json','data/signal-turn.json',
+        'manifest.json','media/showcase.webm']
     bundle=json.loads((ROOT/'docs/data/route.json').read_text(encoding='utf8'))
     paths += [a['url'] for a in bundle['frame_assets'][18]['images'].values()]
+    for name,index in [('perception',4),('signal-turn',97),('signal-turn',235)]:
+        extra=json.loads((ROOT/f'docs/data/{name}.json').read_text(encoding='utf8'))
+        paths += [a['url'] for a in extra['frame_assets'][index]['images'].values()]
     rows=[]
     for relative in paths:
         with urllib.request.urlopen(urllib.request.Request(args.url.rstrip('/')+'/'+relative,

@@ -1,0 +1,29 @@
+{
+  "status": "passed_browser_UI_and_capture_sources",
+  "captured_new_frames": 296,
+  "original_frames_stepped": 67,
+  "UI_checks": 85,
+  "console_errors_or_warnings": 0,
+  "all_frame_links_equal": true,
+  "natural_play_to_end": true,
+  "keyboard_seek": true,
+  "mobile_overflow": false,
+  "latest_chapter_wins": true,
+  "same_camera_RGB_ROI_only": true,
+  "desktop_screenshot_sha256": "2aaa5b16d8780b5a01ee77c4e296312d9b9f235a40883102548ebca4e0f15d85",
+  "desktop_crop": {
+    "height": 1189.25,
+    "width": 1180.800048828125,
+    "x": 42,
+    "y": 626
+  },
+  "mobile_screenshot_sha256": "5907724645688b1fb5baba6a560ae014164e0f5b24540d2db0ccd1eed030c44b",
+  "mobile_crop": {
+    "clientWidth": 390,
+    "height": 2000.125,
+    "width": 350.3999938964844,
+    "x": 20,
+    "y": 829.4998779296875
+  },
+  "limits": "Browser DOM/source checks and screenshots; no new accuracy or realtime inference claim."
+}

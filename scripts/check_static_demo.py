@@ -47,25 +47,49 @@ def main():
         tracked=set(subprocess.check_output(['git','ls-files','-z','--','docs'],cwd=ROOT).decode().rstrip('\0').split('\0'))
         missing={'docs/'+path for path in actual}-tracked
         assert not missing,('Deployed files ignored or not staged',sorted(missing))
-    data=(SITE/'data/route.json').read_bytes()
-    assert hashlib.sha256(data).hexdigest()==manifest['bundle_sha256']
-    bundle=json.loads(data)
-    assert len(bundle['records'])==67 and manifest['RGB_previews']==536
-    assert bundle['summary']['status']=='arrived' and bundle['summary']['engineering_route_passed']
-    assert all(bundle['summary']['checks'].values())
-    previous=-1
-    for record,assets in zip(bundle['records'],bundle['frame_assets']):
-        assert record['frame']==assets['frame'] and record['frame']>previous
-        previous=record['frame']
-        assert record['other_actor_GT_in_planning'] is False and record['plan']['actor_GT_used'] is False
-        assert set(assets['images'])==set(record['RGB']) and len(assets['images'])==8
-        for camera,image in assets['images'].items():
-            assert image['url']==f'images/{record["frame"]}/{camera}.jpg'
-            assert record['RGB'][camera]['frame']==record['frame']
-            assert record['RGB'][camera]['sha256']==image['source_PNG_sha256']
-            assert hashlib.sha256((SITE/image['url']).read_bytes()).hexdigest()==image['web_JPEG_sha256']
-        for object in record['perception']['objects']:
-            assert 'actor_id' not in object and 'world_pose' not in object
+    catalog=read(SITE/'data/showcases.json');frames=previews=0
+    assert len(catalog['chapters'])==3
+    for chapter in catalog['chapters']:
+        path=SITE/chapter['file'];data=path.read_bytes()
+        assert path.resolve().is_relative_to((SITE/'data').resolve())
+        assert hashlib.sha256(data).hexdigest()==chapter['sha256']
+        bundle=json.loads(data);perception=chapter['kind']=='perception'
+        assert bundle['provenance']['other_actor_GT_in_main_view'] is False
+        assert bundle['summary']['formal_quality_passed'] is False
+        assert len(bundle['records'])==len(bundle['frame_assets'])==bundle['summary']['frames']
+        if perception:
+            assert bundle['mode']=='recorded_perception' and bundle['summary']['status']=='perception_only'
+            assert bundle['provenance']['control_issued'] is False and bundle['memory_max_coast_s']==.65
+        else:
+            assert bundle['summary']['status']=='arrived' and bundle['summary']['engineering_route_passed']
+            assert all(bundle['summary']['checks'].values())
+        previous=-1
+        for record,assets in zip(bundle['records'],bundle['frame_assets']):
+            assert record['frame']==assets['frame'] and record['frame']>previous
+            previous=record['frame'];frames+=1
+            if perception:
+                assert record['GT_used_in_inference'] is False and record['control_issued'] is False
+                assert record['future_observations_used'] is False
+                objects=record['objects'];cameras=record['cameras']
+                held=record['dynamics']['held_unobserved_tracks']
+                assert record['dynamics']['held_tracks_used_for_occupancy'] is False
+                for h in held:
+                    assert h['measurement_current'] is False and h['used_for_occupancy'] is False
+                    assert 0<h['age_since_measurement_s']<=bundle['memory_max_coast_s']
+                    assert h['track_id'] not in {o['track_id'] for o in objects}
+            else:
+                assert record['other_actor_GT_in_planning'] is False and record['plan']['actor_GT_used'] is False
+                objects=record['perception']['objects'];cameras=record['RGB']
+            assert set(assets['images'])==set(cameras) and len(assets['images'])==8
+            for camera,image in assets['images'].items():
+                assert image['url']==f'images/{record["frame"]}/{camera}.jpg'
+                if not perception:assert cameras[camera]['frame']==record['frame']
+                assert cameras[camera]['sha256']==image['source_PNG_sha256']
+                assert hashlib.sha256((SITE/image['url']).read_bytes()).hexdigest()==image['web_JPEG_sha256']
+                previews+=1
+            for object in objects:assert 'actor_id' not in object and 'world_pose' not in object
+    assert (frames,previews)==(363,2904)
+    assert hashlib.sha256((SITE/'data/route.json').read_bytes()).hexdigest()==manifest['bundle_sha256']
     html=(SITE/'index.html').read_text(encoding='utf8');links=Links();links.feed(html)
     for value in links.local:
         if value.startswith('#'):assert value[1:] in links.ids,value
@@ -75,7 +99,7 @@ def main():
     assert (SITE/'vendor/LICENSE.three.txt').is_file()
     assert not list(SITE.rglob('*.pt'))
     print(json.dumps({'status':'passed_portable_static_site','manifest_files':len(manifest['files']),
-        'frames':67,'RGB_previews':536,'total_bytes':sum(x['bytes'] for x in manifest['files']),
+        'frames':frames,'RGB_previews':previews,'chapters':3,'total_bytes':sum(x['bytes'] for x in manifest['files']),
         'all_HTML_links_resolve':True,'CARLA_Torch_or_original_run_required':False}))
 
 

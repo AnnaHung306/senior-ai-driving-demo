@@ -79,6 +79,12 @@ def main():
         latest_code,latest=api(path+'/pages/builds/latest')
         result['latest_build_http_status']=latest_code
         result['latest_build']={k:latest.get(k) for k in ['status','commit','duration','created_at','updated_at','error']}
+        # Compact read-only workflow status lets a release verify the exact SHA,
+        # rather than mistaking an earlier successful Pages build for this one.
+        actions_code,actions=api(path+'/actions/runs?per_page=10')
+        result['actions_http_status']=actions_code
+        result['actions']=[{k:run.get(k) for k in ['name','status','conclusion','head_sha','html_url']}
+            for run in actions.get('workflow_runs',[])] if actions_code==200 else []
         if code not in [200,201]:
             output.write_text(json.dumps(result,indent=2)+'\n',encoding='utf8')
             raise RuntimeError(f'Pages unavailable, HTTP {code}: {pages.get("message")}')

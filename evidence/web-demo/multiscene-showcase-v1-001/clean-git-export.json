@@ -1,0 +1,26 @@
+{
+  "status": "passed_clean_Git_index_export",
+  "original_artifacts_present": false,
+  "site_files": 2925,
+  "site_manifest_sha256": "df4196e01fc66b81df327f3480f21ef764a18c03bd845ebadbd3709ed11ac3b4",
+  "checks": [
+    {
+      "command": [
+        "python.exe",
+        "check_static_demo.py"
+      ],
+      "exit_code": 0,
+      "output": "{\"status\": \"passed_portable_static_site\", \"manifest_files\": 2924, \"frames\": 363, \"RGB_previews\": 2904, \"chapters\": 3, \"total_bytes\": 161597369, \"all_HTML_links_resolve\": true, \"CARLA_Torch_or_original_run_required\": false}\n"
+    },
+    {
+      "command": [
+        "node.exe",
+        "--test",
+        "replay.test.mjs"
+      ],
+      "exit_code": 0,
+      "output": "✔ new complete perception and signal/turn recordings satisfy distinct contracts (19.1776ms)\n✔ known memory episode retains original IDs, reappears and expires without future filling (4.4655ms)\n✔ a held object cannot be marketed as a current observation or permanent memory (153.1931ms)\n✔ actual signal run contains stationary RGB red, green, then a real left turn and arrival (0.2013ms)\n✔ all 67 committed real records satisfy the replay and live geometry contracts (3.3921ms)\n✔ time lookup cannot reveal future frames and clamps at boundaries (0.1854ms)\n✔ a cross-frame RGB swap is rejected (26.7586ms)\n✔ GT contamination cannot enter the main model scene (23.4312ms)\n✔ duplicate simulation timestamps cannot enter playback (25.4502ms)\n✔ paths cannot escape the site or load an external endpoint (0.2886ms)\n✔ corrupt byte content or HTTP error stops replay instead of accepting stale data (25.4018ms)\nℹ tests 11\nℹ suites 0\nℹ pass 11\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 520.438\n"
+    }
+  ],
+  "diff_whitespace_check": "passed with CR-at-EOL allowed for hash-bound preserved Windows bytes"
+}

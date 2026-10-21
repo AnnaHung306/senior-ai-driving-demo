@@ -1,0 +1,40 @@
+{
+  "status": "actual_visual_review_completed",
+  "viewed": [
+    {
+      "file": "contact-0.jpg",
+      "sha256": "20a2937372e82cbc637154f179ff0331e7a80dd81203081edb6725c5a102cddd"
+    },
+    {
+      "file": "contact-1.jpg",
+      "sha256": "ab2f2f03c5d8b696e35a19d6271ef02445361c1413eea8d9bbc3fde224a848e6"
+    },
+    {
+      "file": "contact-2.jpg",
+      "sha256": "54b2fd5148e2d3736a688de5ca69f5b35518105a4cc54b5be830b522f74527c7"
+    },
+    {
+      "file": "contact-3.jpg",
+      "sha256": "116b48003f8624e58b5b74f4d88f912aa45b16398dce72759502b25b57635723"
+    },
+    {
+      "file": "contact-4.jpg",
+      "sha256": "76c5a5be6c30815f116e38f501747e7892b0310110db9eadf81deb05417ed599"
+    },
+    {
+      "file": "contact-5.jpg",
+      "sha256": "7171169de9ee8da0d2367f75efbd9b9581337afcdf30d99e5c1df527b1ec6d38"
+    }
+  ],
+  "observations": [
+    "All listed contact sheets and four aggregate plots were actually viewed, not inferred from file existence.",
+    "Original lowest road-IoU panels include road-empty tiny-FP negatives; supplemental road panels require >=5000 GT road pixels.",
+    "Car/truck high-confidence confusion and bicycle/rider label ambiguity are visible; distant/truncated missed lamps remain.",
+    "GT and prediction masks differ at grass/road boundaries; high aggregate road IoU does not imply metric BEV correctness.",
+    "Speed curves expose oscillating stop/go and false stops. Fault/cancel curves end before separately verified cleanup speed zero.",
+    "Original vertical/horizontal straight maps collapsed due equal-aspect tiny extent; v2 expands both limits in meters. Old plots retained.",
+    "Desktop and 375px mobile actual screenshots reviewed; mobile has no horizontal overflow but text is small. Real 200% zoom not verified.",
+    "16:9 focused WebM was actually decoded/playing in browser, 1280x720 duration13.4s; recorded5Hz simulation playback, not live inference."
+  ],
+  "original_catalog_preserved": true
+}

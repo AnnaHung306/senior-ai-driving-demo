@@ -1,0 +1,97 @@
+[
+  {
+    "path": "artifacts/reports/phase10-browser-001/checks.json",
+    "bytes": 16164,
+    "sha256": "4b5eb9f465cb2b2a9940cedf477763979ca44244c83d1b167899a3412073163e"
+  },
+  {
+    "path": "artifacts/reports/phase10-browser-001/console-final.json",
+    "bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "path": "artifacts/reports/phase10-browser-001/console-shared-GPU-history.json",
+    "bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "path": "artifacts/reports/phase10-browser-001/final-checks.json",
+    "bytes": 2152,
+    "sha256": "6415a20d192632d06308481b924613c29af0b2b623c4b4567180919c45eff813"
+  },
+  {
+    "path": "artifacts/reports/phase10-browser-001/final-pedestrian-frames.json",
+    "bytes": 922518,
+    "sha256": "928fcf0e80587a80a05625e2fd63130590cdde84954007b2c690a4323b4ceee4"
+  },
+  {
+    "path": "artifacts/reports/phase10-browser-001/final-pedestrian-v2-frames.json",
+    "bytes": 810477,
+    "sha256": "0e12a40a7256979e575ba4fa6eaadd97534a8b5e4b171a59095a0966456b25a5"
+  },
+  {
+    "path": "artifacts/reports/phase10-browser-001/focused-video-playback.json",
+    "bytes": 193,
+    "sha256": "4c861b863793dd9cbd0d911e950d5687a99266bff26c93cd6ed55cd9e64a1380"
+  },
+  {
+    "path": "artifacts/reports/phase10-browser-001/graphics-loss-console.json",
+    "bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "path": "artifacts/reports/phase10-browser-001/graphics-loss-diagnostic.json",
+    "bytes": 13212,
+    "sha256": "29bfa83994a5d522bd7583540dbd796c2d1abc868e24aeb7be1f02ac23a9477c"
+  },
+  {
+    "path": "artifacts/reports/phase10-browser-001/live-before-graphics-loss.json",
+    "bytes": 12778,
+    "sha256": "f9e09272447ca19d5375c757c74bbde1ad6c1041c104366c67a12844c6178a31"
+  },
+  {
+    "path": "artifacts/reports/phase10-browser-001/live-before-page-close.json",
+    "bytes": 12961,
+    "sha256": "7bd9c3f25cb460848acca52afcdca0cb5cb3ae9a8381119cc46343297a82dead"
+  },
+  {
+    "path": "artifacts/reports/phase10-browser-001/live3-before-page-close.json",
+    "bytes": 14127,
+    "sha256": "3533329ed63e9c232809001962f149640419f46843b909ad4583fc32735e4834"
+  },
+  {
+    "path": "artifacts/reports/phase10-browser-001/offline-playback-diagnostics.json",
+    "bytes": 15808,
+    "sha256": "0d7d723ce245aa4bf7ff6974005000fb87cc7f7977882afabfacdd2c5b8f30e7"
+  },
+  {
+    "path": "artifacts/reports/phase10-browser-001/page-close-3s-trigger.json",
+    "bytes": 114,
+    "sha256": "65f82446cf8e735771bbf47012181c8b2e14b52373e081e71b9c0547896b933d"
+  },
+  {
+    "path": "artifacts/reports/phase10-browser-001/page-close-trigger.json",
+    "bytes": 113,
+    "sha256": "6a694d8e53e3aa359eac190dc4b2a8f4eb7869fe3c6cece610419427bf2d05fa"
+  },
+  {
+    "path": "artifacts/reports/phase10-browser-001/pedestrian-frames.json",
+    "bytes": 434603,
+    "sha256": "ee5633afcf1dbfbbb74ee3e1ec18d24dedc0af5f896a5bfa3ef3a574d5f2177a"
+  },
+  {
+    "path": "artifacts/reports/phase10-browser-001/playback-diagnostics.json",
+    "bytes": 16119,
+    "sha256": "19254562bdfaa45ed0d377e1707b4a16f0635663da634ddc7dc45660ebec991b"
+  },
+  {
+    "path": "artifacts/reports/phase10-browser-001/rapid-loop-harness-partial.json",
+    "bytes": 26125,
+    "sha256": "3956ba8b3d582f65225aed55c24b6029d6bfbcf4366ce456dfdf7e6b86ed7eb0"
+  },
+  {
+    "path": "artifacts/reports/phase10-browser-001/video-full-page-playback.json",
+    "bytes": 86,
+    "sha256": "86c6cfc48e39cd727eb28d57ee53f730aaf278e1f4cd9cb5cdc84fae1bcbd1df"
+  }
+]

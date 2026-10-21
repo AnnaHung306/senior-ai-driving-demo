@@ -1,0 +1,20 @@
+{
+  "active_phase10_processes": [],
+  "listeners": [],
+  "sampled_utc": "2026-10-21T04:03:26.6136321Z",
+  "stopped_python_pids": [
+    13972,
+    3440,
+    12220
+  ],
+  "status": "stopped_and_verified",
+  "browser_tabs_closed": true,
+  "checked_ports": [
+    2000,
+    8768,
+    8769,
+    8770,
+    8771
+  ],
+  "CARLA_world_cleanup_receipt": "phase10-world-cleanup-final.json"
+}

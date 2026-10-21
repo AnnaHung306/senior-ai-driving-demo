@@ -1,0 +1,12 @@
+file:///C:/code/senior_AI/web/world-viewer/navigation-contract.js:12
+      if(!Array.isArray(t)||!t.length||!t.every((x,i)=>Number.isFinite(x)&&x>0&&(i===0||x>t[i-1]))||!Array.isArray(p)||p.length!==t.length||p.some(x=>!v(x,2)))throw Error('無效預測軌跡');
+                                                                                                                                                                     ^
+
+Error: 無效預測軌跡
+    at validateLiveRecord (file:///C:/code/senior_AI/web/world-viewer/navigation-contract.js:12:166)
+    at file:///C:/code/senior_AI/scripts/check_phase89_client.mjs:7:112
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.19.0

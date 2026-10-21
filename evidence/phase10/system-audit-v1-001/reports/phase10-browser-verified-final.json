@@ -1,0 +1,13 @@
+{
+  "status": "passed_final_browser_source_control_Three_RGB_and_labels",
+  "frames": 67,
+  "objects": 83,
+  "forecasts": 64,
+  "receipts_sha256": "0e12a40a7256979e575ba4fa6eaadd97534a8b5e4b171a59095a0966456b25a5",
+  "checks_sha256": "6415a20d192632d06308481b924613c29af0b2b623c4b4567180919c45eff813",
+  "maximum_JSON_numeric_delta": 3.552713678800501e-15,
+  "JSON_numeric_absolute_tolerance": 1e-12,
+  "forecast_Float32_absolute_tolerance_m": 1e-05,
+  "real_200_percent_browser_zoom_verified": false,
+  "formal_quality_passed": false
+}

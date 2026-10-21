@@ -1,0 +1,14 @@
+{
+  "status": "passed_real_UI_page_close_and_WebGL_loss_stops",
+  "cases": [
+    {
+      "case": "page_close",
+      "run_id": "phase10-drive-web-20261021-110809-283034",
+      "status": "cancelled",
+      "frames": 41,
+      "cleanup_speed_mps": 0.0,
+      "report_modified_ms": 1792552141765.8499,
+      "page_close_to_report_ms": 13510.849853515625
+    }
+  ]
+}

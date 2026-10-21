@@ -1,6 +1,7 @@
 """Classical map/RGB hybrid planning. Pure numeric; no CARLA/GT actor API."""
 import math
 import numpy as np
+from .navigation_safety import validate_evidence,project_to_path,path_positions
 
 
 def finite(value, shape=None):
@@ -81,6 +82,7 @@ class Planner:
         def stop(state, reason):
             result.update(state=state, target_speed_mps=0., reason=reason)
             return result
+        validate_evidence(route,observation)
         if not observation.get('valid') or now-observation.get('timestamp_s', -1e9) > c['max_image_age_s'] or observation.get('timestamp_s', now+1)>now+1e-6:
             return stop('FAILSAFE', 'missing_stale_or_future_RGB')
         if route['cross_track_m'] > c['maximum_cross_track_m']:
@@ -119,17 +121,19 @@ class Planner:
                 size = finite(o['size_lwh_m'], (3,))
                 if (size<=0).any():raise ValueError('Invalid object dimensions')
                 if center[0] < -2. or center[0] > 25.:continue
-                lateral = float(np.interp(center[0], candidate[:,0], candidate[:,1])) if len(candidate)>1 else 0.
-                if abs(center[1]-lateral) < size[1]/2+c['vehicle_half_width_m']+c['obstacle_margin_m']:
-                    nearest = min(nearest, float(center[0]-size[0]/2-c['vehicle_front_m']))
+                along,lateral_distance=project_to_path(center,candidate)
+                if lateral_distance < size[1]/2+c['vehicle_half_width_m']+c['obstacle_margin_m']:
+                    nearest = min(nearest, float(along-size[0]/2-c['vehicle_front_m']))
                 f = o.get('forecast', {})
                 if f.get('status')=='available':
                     future = finite(f['positions_ego_xy_m'])
                     times = finite(f['times_s'])
                     if future.shape != (len(times),2):raise ValueError('Invalid future trajectory')
-                    relative = future.copy();relative[:,0]-=speed*times
-                    if ((abs(relative[:,1])<size[1]/2+1.2)&(relative[:,0]>-2)&(relative[:,0]<4.)).any():
-                        nearest=min(nearest, max(0.,float(center[0]-size[0]/2-c['vehicle_front_m'])))
+                    if not len(times) or (times<0).any() or (np.diff(times)<=0).any():raise ValueError('Invalid forecast clock')
+                    relative=future-path_positions(candidate,speed*times)
+                    radius=float(np.hypot(size[0]/2+c['vehicle_front_m'],size[1]/2+1.2))
+                    if (np.linalg.norm(relative,axis=1)<radius).any():
+                        nearest=min(nearest,max(0.,float(along-size[0]/2-c['vehicle_front_m'])))
             clearance = nearest
             # Prefer center. A side option is useful only if it materially clears obstruction.
             feasible.append((min(clearance,30.)-abs(offset)*2, offset, candidate, clearance))
@@ -141,9 +145,9 @@ class Planner:
             held=[o for o in observation.get('held_objects',[]) if o.get('age_since_measurement_s',99)<=.65]
             for o in observation.get('objects',[])+held:
                 center=finite(o['center_ego_m'],(3,));size=finite(o['size_lwh_m'],(3,))
-                lateral=float(np.interp(center[0],path[:,0],path[:,1]))
-                if 0<center[0]<15 and abs(center[1]-lateral)<size[1]/2+c['vehicle_half_width_m']+c['obstacle_margin_m']:
-                    ahead.append(float(center[0]-size[0]/2-c['vehicle_front_m']))
+                along,lateral_distance=project_to_path(center[:2],path)
+                if 0<center[0]<15 and lateral_distance<size[1]/2+c['vehicle_half_width_m']+c['obstacle_margin_m']:
+                    ahead.append(float(along-size[0]/2-c['vehicle_front_m']))
             if ahead:
                 result['nearest_obstacle_m']=min(ahead)
                 return stop('OBSTACLE_STOP','predicted_object_ahead_and_RGB_corridor_unavailable')

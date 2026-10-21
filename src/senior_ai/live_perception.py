@@ -8,11 +8,12 @@ from .bev_geometry import Grid, cameras_from_calibration
 from .bev_fusion import fuse_road
 from .bev_temporal import CausalRoadFusion
 from .bev_path import lane_center
-from .cuboid import CuboidNet, geometry_features, crop, decode, fuse_cuboids
+from .cuboid import CuboidNet, geometry_features, crop, decode, fuse_cuboids, prior_box
 from .world_tracking import WorldTracker
 from .motion_forecast import MotionTracker, appearance_histogram
 from .light_model import LightStateNet, crop_rgb
 from .light_labels import LIGHT_STATES
+from .road_fusion_cache import CachedRoadFusion
 
 ROOT=Path(__file__).resolve().parents[2]
 
@@ -58,6 +59,8 @@ class LivePerception:
         self.signal_roi=[]
         self.previous_front_gray=None
         self.calibration_sha=__import__('hashlib').sha256(__import__('json').dumps(calibration,sort_keys=True).encode()).hexdigest()
+        optimization=ROOT/'configs/phase10_optimization_v1.json'
+        self.projection_cache=CachedRoadFusion(self.cameras,self.grid,self.c) if optimization.exists() and read(optimization).get('projection_cache_enabled') else None
 
     @torch.inference_mode()
     def infer(self, rgb, scene, frame, timestamp):
@@ -68,6 +71,7 @@ class LivePerception:
         if not torch.isfinite(logits).all():raise ValueError('Nonfinite segmentation')
         probs=logits.softmax(1);ids=logits.argmax(1).cpu().numpy().astype(np.uint8)
         ground=torch.stack([probs[:,self.c['road_ids']].sum(1),probs[:,self.c['line_id']]],-1).cpu().numpy()
+        segmentation_done=time.perf_counter()
         observations={};signals=[]
         for i,n in enumerate(names):
             detection=self.det([t[i]])[0];objects=[]
@@ -81,7 +85,8 @@ class LivePerception:
                         signals.append({'phase':d['phase'],'score':s,'camera':n,'bbox_xyxy':b})
                 objects.append(d)
             observations[n]={'rgb':rgb[n],'ids':ids[i],'ground_probabilities':ground[i],'objects':objects}
-        fused=fuse_road(observations,self.cameras,self.grid,self.c)
+        detection_done=time.perf_counter()
+        fused=self.projection_cache(observations) if self.projection_cache is not None else fuse_road(observations,self.cameras,self.grid,self.c)
         temporal,ego_motion=self.temporal.update(fused,observations,self.cameras,scene,timestamp,self.calibration_sha)
         current_gray=cv2.cvtColor(rgb['front'],cv2.COLOR_RGB2GRAY)
         retained=track_signal_rois(self.previous_front_gray,current_gray,self.signal_roi,timestamp)
@@ -102,6 +107,7 @@ class LivePerception:
                 phase=LIGHT_STATES[int(lp.argmax())] if float(lp.max())>=.70 else 'unknown_or_unobservable'
                 signals.append({**old,'phase':phase,'state_score_uncalibrated':float(lp.max()),'association':'stationary_RGB_retained_detection_ROI','ROI_age_s':timestamp-old['last_detected_s']})
         road_path=lane_center(temporal,self.grid,self.c['path'])
+        fusion_done=time.perf_counter()
         candidates=[];features=[];crops=[]
         for n,ob in observations.items():
             for i,d in enumerate(ob['objects']):
@@ -110,19 +116,25 @@ class LivePerception:
                 if g is None:continue
                 f,anchor=g;features.append(f);crops.append(crop(rgb[n],d['bbox_xyxy'],self.c3['crop_size']));candidates.append((n,i,d,anchor))
         predictions=self.cuboid(torch.from_numpy(np.stack(crops)).to(self.device).float()/255,torch.from_numpy(np.stack(features)).to(self.device)).cpu().numpy() if candidates else []
-        single=[]
+        single=[];priors=[]
         for (n,i,d,a),pred in zip(candidates,predictions):
             o=decode(pred,a,self.cameras[n],d['class_id'],self.priors,self.c3['center_residual_scale_m'])
             if np.linalg.norm(o['center_ego_m'][:2])<=30:
                 single.append({**o,'camera':n,'detection_index':i,'bbox_xyxy':d['bbox_xyxy'],'score_uncalibrated':d['score']})
+                priors.append({**prior_box(a,self.cameras[n],d['class_id'],self.priors),'camera':n,'detection_index':i,'bbox_xyxy':d['bbox_xyxy'],'score_uncalibrated':d['score']})
         measured,tracking=self.tracker.update(fuse_cuboids(single,self.c3['merge_distance_m']),scene,timestamp,self.calibration_sha,ego_motion)
         dynamic,dynamics=self.motion.update(measured,scene,timestamp,self.calibration_sha,ego_motion,[appearance_histogram(rgb,o['sources']) for o in measured])
         if self.device=='cuda':torch.cuda.synchronize()
+        self.audit_output={'observations':observations,'single_3D':single,'prior_3D':priors}
+        stage_ms={'input_and_segmentation':(segmentation_done-started)*1000,
+                  'eight_detection_and_detected_lights':(detection_done-segmentation_done)*1000,
+                  'BEV_temporal_and_retained_light':(fusion_done-detection_done)*1000,
+                  'cuboid_tracking_and_motion':(time.perf_counter()-fusion_done)*1000}
         step=5;xy=self.grid.points()[::step,::step,:2];p=fused['probabilities'][::step,::step];seen=fused['observed'][::step,::step]
         view={'frame':int(frame),'timestamp_s':float(timestamp),'source':'live_eight_RGB_frozen_neural_models',
               'objects':dynamic,'signals':signals,'road_path':road_path,'RGB_ego_motion':ego_motion,
               'road_cells_xy_m':xy[seen&(p[...,0]>.4)].tolist(),'lane_cells_xy_m':xy[seen&(p[...,1]>.25)].tolist(),
-              'tracking':tracking,'dynamics':dynamics,'inference_ms':(time.perf_counter()-started)*1000,
+              'tracking':tracking,'dynamics':dynamics,'inference_ms':(time.perf_counter()-started)*1000,'stage_wall_ms':stage_ms,
               'GT_other_actors_used':False,'learned_planner':False,'model_quality_passed':False}
         return view,fused
 

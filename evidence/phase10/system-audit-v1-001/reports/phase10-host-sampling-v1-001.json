@@ -1,0 +1,129 @@
+{
+  "status": "bounded_shared_device_samples",
+  "samples": [
+    {
+      "sample_monotonic_s": 429956.703,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 3, 63, 29.94"
+    },
+    {
+      "sample_monotonic_s": 429958.75,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 5, 62, 14.58"
+    },
+    {
+      "sample_monotonic_s": 429960.828,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 56, 64, 27.51"
+    },
+    {
+      "sample_monotonic_s": 429962.89,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 3, 63, 18.67"
+    },
+    {
+      "sample_monotonic_s": 429964.953,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 3, 62, 14.54"
+    },
+    {
+      "sample_monotonic_s": 429967.0,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 44, 64, 28.70"
+    },
+    {
+      "sample_monotonic_s": 429969.062,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 99, 64, 23.37"
+    },
+    {
+      "sample_monotonic_s": 429971.125,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 83, 65, 38.11"
+    },
+    {
+      "sample_monotonic_s": 429973.187,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 3, 62, 15.36"
+    },
+    {
+      "sample_monotonic_s": 429975.25,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 3, 62, 14.78"
+    },
+    {
+      "sample_monotonic_s": 429977.296,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 5, 63, 16.66"
+    },
+    {
+      "sample_monotonic_s": 429979.343,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 3, 63, 14.67"
+    },
+    {
+      "sample_monotonic_s": 429981.406,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 41, 64, 24.95"
+    },
+    {
+      "sample_monotonic_s": 429983.5,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 36, 63, 20.99"
+    },
+    {
+      "sample_monotonic_s": 429985.546,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 75, 66, 36.12"
+    },
+    {
+      "sample_monotonic_s": 429987.609,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 5, 63, 29.89"
+    },
+    {
+      "sample_monotonic_s": 429989.671,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 3, 62, 14.55"
+    },
+    {
+      "sample_monotonic_s": 429991.734,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 28, 64, 16.49"
+    },
+    {
+      "sample_monotonic_s": 429993.781,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 67, 65, 23.67"
+    },
+    {
+      "sample_monotonic_s": 429995.828,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 78, 68, 30.71"
+    },
+    {
+      "sample_monotonic_s": 429997.906,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 54, 64, 16.38"
+    },
+    {
+      "sample_monotonic_s": 429999.968,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 53, 65, 32.99"
+    },
+    {
+      "sample_monotonic_s": 430002.031,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 87, 64, 46.51"
+    },
+    {
+      "sample_monotonic_s": 430004.078,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 78, 65, 34.50"
+    },
+    {
+      "sample_monotonic_s": 430006.171,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 5, 62, 13.11"
+    },
+    {
+      "sample_monotonic_s": 430008.218,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 3, 62, 14.61"
+    },
+    {
+      "sample_monotonic_s": 430010.281,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 7, 63, 14.82"
+    },
+    {
+      "sample_monotonic_s": 430012.343,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 94, 65, 39.23"
+    },
+    {
+      "sample_monotonic_s": 430014.39,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 5, 62, 14.76"
+    },
+    {
+      "sample_monotonic_s": 430016.453,
+      "raw_memory_MiB_utilization_percent_temperature_C_power_W": "6049, 7, 63, 13.58"
+    }
+  ],
+  "disk_free_bytes": 267994730496,
+  "GPU_includes_CARLA_desktop_and_inference": true,
+  "not_per_model_memory": true,
+  "training_started": false
+}

@@ -1,0 +1,58 @@
+{
+  "status": "extension_hypothesis_rejected_for_primary_failure",
+  "run_id": "phase10-drive-right-2-audit-v1-001",
+  "frame": 30328,
+  "local_path_xy_m": [
+    [
+      0.07139273741501921,
+      -0.9171016342466974
+    ],
+    [
+      0.8207119878452199,
+      -0.8409700826846287
+    ],
+    [
+      1.5509040211079472,
+      -0.6726958329047577
+    ],
+    [
+      2.2544059536547643,
+      -0.41464185147169913
+    ],
+    [
+      2.9202034560202543,
+      -0.07082963724043974
+    ],
+    [
+      3.5378962814964567,
+      0.35336996969488105
+    ],
+    [
+      4.097844266683377,
+      0.8513196788873695
+    ],
+    [
+      4.624040201641103,
+      1.452691348650135
+    ],
+    [
+      5.253722841384331,
+      2.229544786128608
+    ],
+    [
+      6.370190632056621,
+      3.606935410881299
+    ]
+  ],
+  "tangent_forward_ratio": 0.6296878123319416,
+  "extension_requires_ratio_above": 0.7,
+  "extension_was_applied": false,
+  "road_gate_fractions": {
+    "0.0": 0.4666666666666667,
+    "-0.45": 0.4666666666666667,
+    "0.45": 0.5333333333333333
+  },
+  "GT_oracle_same_gate": true,
+  "conclusion": "This failed curved route did not activate tangent extension. Geometry, visibility, map-path alignment and sample coverage remain unresolved; no threshold relaxation or route-success rerun performed.",
+  "control_change": false
+}

@@ -1,0 +1,18 @@
+{
+  "status": "encoded_and_decoded_readable_16_9_actual_panel_replay",
+  "file": "phase10-focus-replay.webm",
+  "sha256": "62dfbf5faaba2d8e44ac6e5d2e49d910463993fe7d5cec3bedb79c9446f32982",
+  "bytes": 2483330,
+  "frames": 67,
+  "fps": 5,
+  "duration_s": 13.4,
+  "width": 1280,
+  "height": 720,
+  "not_live_inference": true,
+  "GT_geometry_in_main_view": false,
+  "capture_manifest_sha256": "d579c2e55f4dc46675e0a9135ccd6fe2fea0407154e2b5e0a0cdb215fc3c0c1b",
+  "crop_rects_sha256": "b29e8b7d863d505bde49ca794c9274cd3ffefaabaa2adb71c87d41a0677f9701",
+  "upstream_full_page_video_report_sha256": "5d756e425d8edd42028eb0543414f06a8f540401e89760af7bed56435fb9e4c5",
+  "source_sha256": "6afe307bbc13beb8329b55656f311dcd7bfb0a30d5a3244913fb45fcbff84976",
+  "composition": "Only real captured viewport, RGB, stats, class-summary and map panels plus explicit playback annotations; no invented model outputs."
+}

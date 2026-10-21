@@ -1,0 +1,14 @@
+{
+  "version": "phase10-audit-v1",
+  "seed": 20261021,
+  "route_counts": {"straight": 2, "LEFT": 2, "RIGHT": 2},
+  "route_length_m": [35, 90],
+  "GT_stride": 5,
+  "min_visible_pixels": 16,
+  "detector_score": 0.5,
+  "strict_center_threshold_m": 2.0,
+  "cuboid_iou_threshold": 0.25,
+  "real_time_cycle_budget_ms": 200,
+  "supported_scope": "ClearNoon Town01 same-lane navigation; no wall/depth training or old development/lockbox",
+  "formal_quality_passed": false
+}

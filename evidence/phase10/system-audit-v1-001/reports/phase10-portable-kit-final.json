@@ -1,0 +1,14 @@
+{
+  "status": "packaged_local_CPU_replay",
+  "run_id": "phase89-drive-pedestrian-probe-v1-001",
+  "recorded_frames": 64,
+  "recorded_RGB_images": 512,
+  "archive": "artifacts/runs/phase10-portable-replay-v1-001.zip",
+  "archive_sha256": "f58cf9fe10732f47ec94fd002be0862e6654ed34b9bc20ed5a6fdad6157f3a27",
+  "archive_bytes": 139595970,
+  "kit_files": 610,
+  "GPU_or_CARLA_required": false,
+  "Torch_import_required": false,
+  "uploaded": false,
+  "source_sha256": "bd908abe4a53b0f152e5ab8de39de6401157e8a0e8fffccc7cce29dada525fe3"
+}

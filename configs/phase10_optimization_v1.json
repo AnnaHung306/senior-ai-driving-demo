@@ -1,0 +1,7 @@
+{
+  "projection_cache_enabled": true,
+  "PNG_compress_level": 1,
+  "fusion_benchmark_sha256": "3ca2e94f68322d0f8728f6945565f8978b02cce704cde34d3b078fb3fac5f657",
+  "PNG_benchmark_sha256": "4b846fe492770e678d0eb9ef4c4ba50da75371b8f8303585491033bd6cbed9b6",
+  "geometry_equivalence": "same grid/rig/ground parameters, exact arithmetic order; cache reset per job"
+}

@@ -1,0 +1,141 @@
+{
+  "status": "pending_actual_visual_review",
+  "cases": [
+    {
+      "run_id": "phase10-drive-blocker-probe-v1-002",
+      "frame": 128505,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9851969480514526,
+      "IoU": 0.9203983243334655,
+      "true_box": [
+        286,
+        186,
+        357,
+        250
+      ],
+      "predicted_box": [
+        285.018310546875,
+        185.26832580566406,
+        358.11737060546875,
+        252.8067169189453
+      ],
+      "kind": "class_confusion",
+      "caption": "GT class 1, highest-score match class 5 @ 0.985",
+      "file": "case-00.jpg"
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 71003,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9850372672080994,
+      "IoU": 0.8915822466647431,
+      "true_box": [
+        290,
+        185,
+        349,
+        238
+      ],
+      "predicted_box": [
+        288.49658203125,
+        186.04171752929688,
+        350.4168701171875,
+        240.57717895507812
+      ],
+      "kind": "class_confusion",
+      "caption": "GT class 1, highest-score match class 5 @ 0.985",
+      "file": "case-01.jpg"
+    },
+    {
+      "run_id": "phase10-drive-blocker-probe-v1-002",
+      "frame": 128515,
+      "camera": "front_right",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9066394567489624,
+      "IoU": 0.9100487995413973,
+      "true_box": [
+        0,
+        188,
+        37,
+        275
+      ],
+      "predicted_box": [
+        0.0,
+        189.15895080566406,
+        38.52241134643555,
+        278.643798828125
+      ],
+      "kind": "class_confusion",
+      "caption": "GT class 1, highest-score match class 5 @ 0.907",
+      "file": "case-02.jpg"
+    },
+    {
+      "run_id": "phase10-drive-bicycle-probe-v1-001",
+      "frame": 70122,
+      "camera": "front",
+      "true_class": 3,
+      "predicted_class": 2,
+      "score": 0.8941896557807922,
+      "IoU": 0.8241744100556028,
+      "true_box": [
+        303,
+        185,
+        344,
+        304
+      ],
+      "predicted_box": [
+        299.58837890625,
+        171.9355926513672,
+        343.6705322265625,
+        303.75177001953125
+      ],
+      "kind": "class_confusion",
+      "caption": "GT class 3, highest-score match class 2 @ 0.894",
+      "file": "case-03.jpg"
+    },
+    {
+      "run_id": "phase10-drive-right-2-audit-v1-001",
+      "frame": 30158,
+      "camera": "right",
+      "RGB": "frames/00030158/right.png",
+      "road_iou": 0.4175045903646061,
+      "detection_FP": 0,
+      "detection_FN": 0,
+      "sample_path": "artifacts\\runs\\phase10-drive-right-2-audit-v1-001\\audit\\00030158",
+      "kind": "supported_road",
+      "caption": "GT road pixels 5634; road IoU 0.4175",
+      "file": "case-04.jpg"
+    },
+    {
+      "run_id": "phase10-drive-long-red-probe-v1-001",
+      "frame": 72253,
+      "camera": "right",
+      "RGB": "frames/00072253/right.png",
+      "road_iou": 0.4281379310344828,
+      "detection_FP": 0,
+      "detection_FN": 0,
+      "sample_path": "artifacts\\runs\\phase10-drive-long-red-probe-v1-001\\audit\\00072253",
+      "kind": "supported_road",
+      "caption": "GT road pixels 7265; road IoU 0.4281",
+      "file": "case-05.jpg"
+    },
+    {
+      "run_id": "phase10-drive-left-2-audit-v1-001",
+      "frame": 28421,
+      "camera": "rear_right",
+      "RGB": "frames/00028421/rear_right.png",
+      "road_iou": 0.7144142792860357,
+      "detection_FP": 0,
+      "detection_FN": 0,
+      "sample_path": "artifacts\\runs\\phase10-drive-left-2-audit-v1-001\\audit\\00028421",
+      "kind": "supported_road",
+      "caption": "GT road pixels 6422; road IoU 0.7144",
+      "file": "case-06.jpg"
+    }
+  ],
+  "selection_note": "Original first gallery includes road-empty negatives with tiny FP union. Supplemental supported-road views require >=5000 GT road pixels; wrong-class cases remain unchanged."
+}

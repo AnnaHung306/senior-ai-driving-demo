@@ -1,3 +1,19 @@
+## 2026-10-21 Phase10系統稽核與工程修復完成；正式品質未通過
+
+最新使用者要求Phase10查效能、畫面、正確率與完整性。已完成固定六條新路線、獨立八instance GT audit、受控障礙／橫穿／前車煞停／15秒紅燈、實體相機／WebGL／關頁／watchdog／setup fault及Windows鎖檔回歸；322 Python、52 JS、27真HTTP、2194幀來源／frozen planner-control exact與真Three通過。**所有CARLA、driver、director與本輪HTTP服務已停止，2000／8768–8771無listener，world async且actors0，測試tabs已關閉；沒有訓練或批次待續，不重啟舊jobs。**
+
+原固定六案只有2/6抵達，三blocked_safe_stop、一simulation_timeout，分母不以後續成功改寫；共24次attempt、23有影格、2194record／17552RGB，393GTbundles。權威rtifacts/runs/phase10-evaluation-final-v1-002；lightphase10-light-evaluation-final-v1-001為1084個CPU frozen crop診斷，非CUDA bit-exact。道路2D IoU98.06%，car/truck錯類44/77（class-agnostic最高分協議）、car R5.19%、traffic-light R17.30%、3D IoU.25 R2/51=3.92%、yaw MAE51.27°；2秒預測14/41GT覆蓋34.15%，maxFDE4.83m。無GT循環257次p50/p95 1193.94/1303.59ms，未達200ms；RAF p95 41.735ms仍有長幀，真正200% zoom未驗證，不能宣稱畫面與模型品質全過。
+
+已修NaN/Inf與時序gate、曲路障礙投影、紅燈stall、Windows原子寫入有界重試、GT bbox生命週期與部分setup所有權、控制紀錄先於GT／timing finally、實線停止、RGB來源競態、preview遲到、錯誤可見性、Three契約與Orbit/reset。投影cache真八RGB arrays exact、p50 516.02→78.63ms（僅此段6.56倍），PNG level1 paired快45.15%、size×1.555、pixels exact。不能把整條route的GT/noGT差異全說成優化收益。最終blocker002／bike002／ped001／lead001／longred001抵達，原001失敗與所有web/harness取消保留。
+
+right2 F30328的road gate在RGB soft/hard與同幾何GT oracle一致；切線前向比.6297未達.7，沒有套用終點延伸，延伸假說排除。曲路幾何／視野／取樣、號誌方向關聯／停等記憶、車類與3D、預測覆蓋及即時效能仍未解。晴天／無近牆，不補Wall／不納depth／不盲訓／不開舊development或lockbox持續有效；四權重與舊Phase0–9證據未改，無新套件。
+
+交付見PHASE10.md、PHASE10_ISSUES.md（24項）、DEPLOYMENT.md與vidence/phase10/system-audit-v1-001。最新可攜包rtifacts/runs/phase10-portable-replay-v1-001.zip，139595970bytes，609項manifest＋自身共610檔，64幀Phase89真行人／512RGB，無GPU／CARLA可回放；16:9真畫面影片vidence/phase10/system-audit-v1-001/video/phase10-focus-replay.webm，1280x720、67幀、13.4秒，明標錄製非即時。完整6GB RGB與四權重、133.1MiB ZIP仍local ignored，未上傳／公開。
+
+本機閉環./Start-NavigationDemo.ps1 -StartSimulator→127.0.0.1:8768可自訂Town01道路起終點，任意路線不保證抵達；-ReplayOnly純回放。viewer3秒lease，實際關頁4.402秒完成停止清理；beacon即送未單獨證明，背景節流也可能保守停車。若後續使用者要求改善，依問題清單先固定新獨立矩陣，勿用本輪診斷資料再宣稱heldout。
+
+以下是歷史階段狀態，遇衝突以本節及Phase10結果為準。
+
 ## 2026-10-21 Phase 8–9導航與真閉環工程研究版完成；正式品質仍未過
 
 最新使用者要求：「Phase 8–9一次完成，並準備告訴我目前模型是怎麼部屬的。未來我可以透過什麼方式展示？自定義起終點、自行導航駕駛抵達、網頁展示？」已完成PHASE89.md規畫、實作、真CARLA閉環／網頁操作、錯例修正、逐幀核對、獨立可攜回放包與DEPLOYMENT.md。**所有導航／推論／director／CARLA／HTTP測試服務都已退出，2000、8766–8769無listener；沒有訓練、批次、watcher或automation待續，不重啟歷史jobs。** 使用者晴天／無近牆、不補Wall／不採depth、不開development或lockbox評分持續有效；四權重SHA未變、沒有安裝新套件。

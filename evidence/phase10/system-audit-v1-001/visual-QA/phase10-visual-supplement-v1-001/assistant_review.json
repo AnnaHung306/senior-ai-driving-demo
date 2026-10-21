@@ -1,0 +1,28 @@
+{
+  "status": "actual_visual_review_completed",
+  "viewed": [
+    {
+      "file": "contact-0.jpg",
+      "sha256": "710f4c9884933de552b5961b535abbc312a5b71b24b92d43f4493c7456a941b1"
+    },
+    {
+      "file": "contact-1.jpg",
+      "sha256": "8955f43f7d2badaa20268f4cd6c34f995423d366dc2f558d34393f5f492a50a6"
+    },
+    {
+      "file": "contact-2.jpg",
+      "sha256": "1cb1eaffcd991c1584210eba72ea866511b9c5e1c2b66d9e83150b18e61e534d"
+    }
+  ],
+  "observations": [
+    "All listed contact sheets and four aggregate plots were actually viewed, not inferred from file existence.",
+    "Original lowest road-IoU panels include road-empty tiny-FP negatives; supplemental road panels require >=5000 GT road pixels.",
+    "Car/truck high-confidence confusion and bicycle/rider label ambiguity are visible; distant/truncated missed lamps remain.",
+    "GT and prediction masks differ at grass/road boundaries; high aggregate road IoU does not imply metric BEV correctness.",
+    "Speed curves expose oscillating stop/go and false stops. Fault/cancel curves end before separately verified cleanup speed zero.",
+    "Original vertical/horizontal straight maps collapsed due equal-aspect tiny extent; v2 expands both limits in meters. Old plots retained.",
+    "Desktop and 375px mobile actual screenshots reviewed; mobile has no horizontal overflow but text is small. Real 200% zoom not verified.",
+    "16:9 focused WebM was actually decoded/playing in browser, 1280x720 duration13.4s; recorded5Hz simulation playback, not live inference."
+  ],
+  "original_catalog_preserved": true
+}

@@ -1,0 +1,113 @@
+{
+  "status": "pending_actual_visual_review",
+  "cases": [
+    {
+      "run_id": "phase10-drive-bicycle-probe-v1-001",
+      "frame": 70102,
+      "camera": "right",
+      "RGB": "frames/00070102/right.png",
+      "road_iou": 0.0,
+      "detection_FP": 0,
+      "detection_FN": 0,
+      "sample_path": "artifacts\\runs\\phase10-drive-bicycle-probe-v1-001\\audit\\00070102",
+      "file": "accuracy-00.jpg",
+      "selection": "lowest road IoU / most FP / most FN, deterministic union"
+    },
+    {
+      "run_id": "phase10-drive-bicycle-probe-v1-001",
+      "frame": 70112,
+      "camera": "right",
+      "RGB": "frames/00070112/right.png",
+      "road_iou": 0.0,
+      "detection_FP": 0,
+      "detection_FN": 0,
+      "sample_path": "artifacts\\runs\\phase10-drive-bicycle-probe-v1-001\\audit\\00070112",
+      "file": "accuracy-01.jpg",
+      "selection": "lowest road IoU / most FP / most FN, deterministic union"
+    },
+    {
+      "run_id": "phase10-drive-bicycle-probe-v1-002",
+      "frame": 129488,
+      "camera": "right",
+      "RGB": "frames/00129488/right.png",
+      "road_iou": 0.0,
+      "detection_FP": 0,
+      "detection_FN": 0,
+      "sample_path": "artifacts\\runs\\phase10-drive-bicycle-probe-v1-002\\audit\\00129488",
+      "file": "accuracy-02.jpg",
+      "selection": "lowest road IoU / most FP / most FN, deterministic union"
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 71033,
+      "camera": "front_right",
+      "RGB": "frames/00071033/front_right.png",
+      "road_iou": 0.9698389006124865,
+      "detection_FP": 4,
+      "detection_FN": 1,
+      "sample_path": "artifacts\\runs\\phase10-drive-lead-probe-v1-001\\audit\\00071033",
+      "file": "accuracy-03.jpg",
+      "selection": "lowest road IoU / most FP / most FN, deterministic union"
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70883,
+      "camera": "front_right",
+      "RGB": "frames/00070883/front_right.png",
+      "road_iou": 0.9726080892608089,
+      "detection_FP": 3,
+      "detection_FN": 1,
+      "sample_path": "artifacts\\runs\\phase10-drive-lead-probe-v1-001\\audit\\00070883",
+      "file": "accuracy-04.jpg",
+      "selection": "lowest road IoU / most FP / most FN, deterministic union"
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70923,
+      "camera": "front_right",
+      "RGB": "frames/00070923/front_right.png",
+      "road_iou": 0.9545133800141128,
+      "detection_FP": 3,
+      "detection_FN": 1,
+      "sample_path": "artifacts\\runs\\phase10-drive-lead-probe-v1-001\\audit\\00070923",
+      "file": "accuracy-05.jpg",
+      "selection": "lowest road IoU / most FP / most FN, deterministic union"
+    },
+    {
+      "run_id": "phase10-drive-left-1-audit-v1-001",
+      "frame": 27773,
+      "camera": "rear",
+      "RGB": "frames/00027773/rear.png",
+      "road_iou": 0.9865050992772799,
+      "detection_FP": 0,
+      "detection_FN": 3,
+      "sample_path": "artifacts\\runs\\phase10-drive-left-1-audit-v1-001\\audit\\00027773",
+      "file": "accuracy-06.jpg",
+      "selection": "lowest road IoU / most FP / most FN, deterministic union"
+    },
+    {
+      "run_id": "phase10-drive-left-1-audit-v1-001",
+      "frame": 27923,
+      "camera": "front_left",
+      "RGB": "frames/00027923/front_left.png",
+      "road_iou": 0.9863342210867548,
+      "detection_FP": 1,
+      "detection_FN": 3,
+      "sample_path": "artifacts\\runs\\phase10-drive-left-1-audit-v1-001\\audit\\00027923",
+      "file": "accuracy-07.jpg",
+      "selection": "lowest road IoU / most FP / most FN, deterministic union"
+    },
+    {
+      "run_id": "phase10-drive-long-red-probe-v1-001",
+      "frame": 72113,
+      "camera": "front",
+      "RGB": "frames/00072113/front.png",
+      "road_iou": 0.9743357918946784,
+      "detection_FP": 0,
+      "detection_FN": 3,
+      "sample_path": "artifacts\\runs\\phase10-drive-long-red-probe-v1-001\\audit\\00072113",
+      "file": "accuracy-08.jpg",
+      "selection": "lowest road IoU / most FP / most FN, deterministic union"
+    }
+  ]
+}

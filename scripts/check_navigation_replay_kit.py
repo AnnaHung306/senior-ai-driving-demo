@@ -1,5 +1,6 @@
 """Check a relocated replay kit over its actual loopback HTTP service."""
 import hashlib
+import argparse
 import json
 import socket
 import subprocess
@@ -27,6 +28,11 @@ def request(path, body=None, expected=200):
 
 
 def main():
+    global KIT,BASE
+    parser=argparse.ArgumentParser();parser.add_argument('--kit',type=Path);parser.add_argument('--port',type=int,default=8769);parser.add_argument('--output',type=Path);args=parser.parse_args()
+    KIT=args.kit.resolve() if args.kit else KIT;BASE=f'http://127.0.0.1:{args.port}'
+    output=args.output or ROOT/'artifacts/reports/phase89-portable-smoke-final.json'
+    if output.exists():raise FileExistsError(output)
     with socket.socket() as s:
         assert s.connect_ex(('127.0.0.1', 2000)) != 0
     runs = request('/api/navigation/runs')
@@ -60,8 +66,8 @@ print(json.dumps({'module':module.__file__,'torch_imported':False,'carla_importe
     receipt = {'status': 'passed_relocated_CPU_replay_HTTP_and_manifest',
         'run_id': run_id, 'frames': 64, 'RGB_checked': 8, 'sample_frame': record['frame'],
         'CARLA_stopped': True, 'vehicle_start_rejected': True, 'manifest_files_checked': len(manifest['files']),
-        'import_proof': imports, 'port': 8769, 'formal_quality_passed': False}
-    (ROOT/'artifacts/reports/phase89-portable-smoke-final.json').write_text(
+        'import_proof': imports, 'port': args.port, 'formal_quality_passed': False}
+    output.write_text(
         json.dumps(receipt, indent=2)+'\n', encoding='utf8')
     print(receipt)
 

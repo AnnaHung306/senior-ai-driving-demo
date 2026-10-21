@@ -1,0 +1,8 @@
+{
+  "status": "passed_real_browser_close_3s_lease",
+  "run_id": "phase10-drive-web-20261021-111529-650328",
+  "time_close_to_report_ms": 4401.566162109375,
+  "cleanup_speed_mps": 0.0,
+  "stop_transport": "beacon delivery not separately observed; 3s watchdog guarantees fallback",
+  "max_recorded_speed_mps": 3.175736568402712
+}

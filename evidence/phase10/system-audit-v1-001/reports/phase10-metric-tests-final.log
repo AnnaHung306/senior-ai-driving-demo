@@ -1,0 +1,11 @@
+test_empty_class_not_perfect_score (test_phase10_metrics.AuditMetricsTests.test_empty_class_not_perfect_score) ... ok
+test_ignore_and_class_support_are_counted (test_phase10_metrics.AuditMetricsTests.test_ignore_and_class_support_are_counted) ... ok
+test_signal_render_instance_is_separate_from_actor_3D (test_phase10_metrics.AuditMetricsTests.test_signal_render_instance_is_separate_from_actor_3D) ... ok
+test_tight_visible_box_exclusive_and_not_amodal (test_phase10_metrics.AuditMetricsTests.test_tight_visible_box_exclusive_and_not_amodal) ... ok
+test_tiny_object_ignore_keeps_pixels (test_phase10_metrics.AuditMetricsTests.test_tiny_object_ignore_keeps_pixels) ... ok
+test_unbound_instance_is_unknown_not_negative (test_phase10_metrics.AuditMetricsTests.test_unbound_instance_is_unknown_not_negative) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.011s
+
+OK

@@ -15,3 +15,4 @@ evidence/**/*.bin binary
 configs/phase7_motion*.json -text
 # Frozen navigation criteria and pre-drive route catalog retain their bytes.
 configs/phase89*.json -text
+configs/phase10*.json -text

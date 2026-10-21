@@ -1,0 +1,158 @@
+{
+  "status": "numerical_evidence_boundary_probe",
+  "navigation_source_sha256": "1bb83e2a23964274165bb0c372f87c0a4976528e7ea33de4bb3178b7b8160a04",
+  "cases": [
+    {
+      "field": "timestamp",
+      "input": "NaN",
+      "exception": "Nonfinite image timestamp",
+      "safe_rejected_or_stopped": true
+    },
+    {
+      "field": "timestamp",
+      "input": "Infinity",
+      "exception": "Nonfinite image timestamp",
+      "safe_rejected_or_stopped": true
+    },
+    {
+      "field": "road_fraction",
+      "input": "NaN",
+      "exception": "Invalid road support fraction",
+      "safe_rejected_or_stopped": true
+    },
+    {
+      "field": "road_fraction",
+      "input": "Infinity",
+      "exception": "Invalid road support fraction",
+      "safe_rejected_or_stopped": true
+    },
+    {
+      "field": "cross_track",
+      "input": "NaN",
+      "exception": "Nonfinite or negative route evidence",
+      "safe_rejected_or_stopped": true
+    },
+    {
+      "field": "cross_track",
+      "input": "Infinity",
+      "exception": "Nonfinite or negative route evidence",
+      "safe_rejected_or_stopped": true
+    },
+    {
+      "field": "remaining",
+      "input": "NaN",
+      "exception": "Nonfinite or negative route evidence",
+      "safe_rejected_or_stopped": true
+    },
+    {
+      "field": "remaining",
+      "input": "Infinity",
+      "exception": "Nonfinite or negative route evidence",
+      "safe_rejected_or_stopped": true
+    },
+    {
+      "field": "goal_distance",
+      "input": "NaN",
+      "exception": "Nonfinite or negative route evidence",
+      "safe_rejected_or_stopped": true
+    },
+    {
+      "field": "goal_distance",
+      "input": "Infinity",
+      "exception": "Nonfinite or negative route evidence",
+      "safe_rejected_or_stopped": true
+    },
+    {
+      "field": "signal_score",
+      "input": "NaN",
+      "exception": "Invalid signal confidence",
+      "safe_rejected_or_stopped": true
+    },
+    {
+      "field": "signal_score",
+      "input": "Infinity",
+      "exception": "Invalid signal confidence",
+      "safe_rejected_or_stopped": true
+    }
+  ],
+  "unsafe_acceptances": 0,
+  "curved_path_counterexample": {
+    "path": [
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        1,
+        6
+      ]
+    ],
+    "obstacle": {
+      "center_ego_m": [
+        4,
+        2,
+        1
+      ],
+      "size_lwh_m": [
+        1,
+        1,
+        2
+      ]
+    },
+    "observed_plan": {
+      "state": "FOLLOW",
+      "target_speed_mps": 0.55,
+      "local_path_xy_m": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0
+        ],
+        [
+          4.0,
+          0.0
+        ],
+        [
+          4.0,
+          2.0
+        ],
+        [
+          3.0,
+          4.0
+        ],
+        [
+          1.0,
+          6.0
+        ]
+      ],
+      "reason": "predicted_clearance_time_headway",
+      "map_prior_used": true,
+      "actor_GT_used": false,
+      "selected_offset_m": 0.0,
+      "nearest_obstacle_m": 3.1
+    },
+    "object_center_exactly_on_polyline": true,
+    "limits": "Numeric supported-path-shape diagnostic, not a CARLA crash reproduction"
+  },
+  "actual_sensor_failure_reproduction": false,
+  "scope": "numeric malformed-provider robustness, not evidence of CARLA naturally producing NaN"
+}

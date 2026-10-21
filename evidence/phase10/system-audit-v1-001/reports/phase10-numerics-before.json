@@ -1,0 +1,93 @@
+{
+  "status": "numerical_evidence_boundary_probe",
+  "navigation_source_sha256": "053a088adfe7ea5eb61fca3f930e02a1a5e10d4ad5c5d1a5c84fbfcfc65c511e",
+  "cases": [
+    {
+      "field": "timestamp",
+      "input": "NaN",
+      "state": "CRUISE",
+      "target_speed_mps": 3.0,
+      "safe_rejected_or_stopped": false
+    },
+    {
+      "field": "timestamp",
+      "input": "Infinity",
+      "state": "FAILSAFE",
+      "target_speed_mps": 0.0,
+      "safe_rejected_or_stopped": true
+    },
+    {
+      "field": "road_fraction",
+      "input": "NaN",
+      "state": "CRUISE",
+      "target_speed_mps": 3.0,
+      "safe_rejected_or_stopped": false
+    },
+    {
+      "field": "road_fraction",
+      "input": "Infinity",
+      "state": "CRUISE",
+      "target_speed_mps": 3.0,
+      "safe_rejected_or_stopped": false
+    },
+    {
+      "field": "cross_track",
+      "input": "NaN",
+      "state": "CRUISE",
+      "target_speed_mps": 3.0,
+      "safe_rejected_or_stopped": false
+    },
+    {
+      "field": "cross_track",
+      "input": "Infinity",
+      "state": "FAILSAFE",
+      "target_speed_mps": 0.0,
+      "safe_rejected_or_stopped": true
+    },
+    {
+      "field": "remaining",
+      "input": "NaN",
+      "state": "CRUISE",
+      "target_speed_mps": 0.0,
+      "safe_rejected_or_stopped": true
+    },
+    {
+      "field": "remaining",
+      "input": "Infinity",
+      "state": "CRUISE",
+      "target_speed_mps": 3.0,
+      "safe_rejected_or_stopped": false
+    },
+    {
+      "field": "goal_distance",
+      "input": "NaN",
+      "state": "CRUISE",
+      "target_speed_mps": 3.0,
+      "safe_rejected_or_stopped": false
+    },
+    {
+      "field": "goal_distance",
+      "input": "Infinity",
+      "state": "CRUISE",
+      "target_speed_mps": 3.0,
+      "safe_rejected_or_stopped": false
+    },
+    {
+      "field": "signal_score",
+      "input": "NaN",
+      "state": "CRUISE",
+      "target_speed_mps": 3.0,
+      "safe_rejected_or_stopped": false
+    },
+    {
+      "field": "signal_score",
+      "input": "Infinity",
+      "state": "SIGNAL_STOP",
+      "target_speed_mps": 0.0,
+      "safe_rejected_or_stopped": true
+    }
+  ],
+  "unsafe_acceptances": 8,
+  "actual_sensor_failure_reproduction": false,
+  "scope": "numeric malformed-provider robustness, not evidence of CARLA naturally producing NaN"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "passed_actual_Win32_read_lock_and_bounded_atomic_retry",
+  "replacement": {
+    "attempts": 8,
+    "elapsed_s": 0.1559999999590218
+  },
+  "share_delete_was_disallowed": true,
+  "lock_release_s": 0.15,
+  "source_unchanged_during_test": true
+}

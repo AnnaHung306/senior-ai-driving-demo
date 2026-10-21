@@ -1,0 +1,260 @@
+{
+  "status": "passed_real_loopback_timing_and_RGB_bytes",
+  "run_id": "phase10-drive-pedestrian-probe-v1-001",
+  "frame": 69246,
+  "rows": [
+    {
+      "kind": "state",
+      "repeat": 0,
+      "response_bytes": 63971,
+      "request_through_read_ms": 4.162200028076768
+    },
+    {
+      "kind": "state",
+      "repeat": 1,
+      "response_bytes": 63971,
+      "request_through_read_ms": 3.7332000210881233
+    },
+    {
+      "kind": "state",
+      "repeat": 2,
+      "response_bytes": 63971,
+      "request_through_read_ms": 4.676799988374114
+    },
+    {
+      "kind": "state",
+      "repeat": 3,
+      "response_bytes": 63971,
+      "request_through_read_ms": 3.865599981509149
+    },
+    {
+      "kind": "state",
+      "repeat": 4,
+      "response_bytes": 63971,
+      "request_through_read_ms": 3.9514999953098595
+    },
+    {
+      "kind": "state",
+      "repeat": 5,
+      "response_bytes": 63971,
+      "request_through_read_ms": 3.4526000381447375
+    },
+    {
+      "kind": "state",
+      "repeat": 6,
+      "response_bytes": 63971,
+      "request_through_read_ms": 5.587299994658679
+    },
+    {
+      "kind": "state",
+      "repeat": 7,
+      "response_bytes": 63971,
+      "request_through_read_ms": 4.0760000119917095
+    },
+    {
+      "kind": "state",
+      "repeat": 8,
+      "response_bytes": 63971,
+      "request_through_read_ms": 3.6478000110946596
+    },
+    {
+      "kind": "state",
+      "repeat": 9,
+      "response_bytes": 63971,
+      "request_through_read_ms": 5.029499996453524
+    },
+    {
+      "kind": "state",
+      "repeat": 10,
+      "response_bytes": 63971,
+      "request_through_read_ms": 15.157699992414564
+    },
+    {
+      "kind": "state",
+      "repeat": 11,
+      "response_bytes": 63971,
+      "request_through_read_ms": 6.857000000309199
+    },
+    {
+      "kind": "state",
+      "repeat": 12,
+      "response_bytes": 63971,
+      "request_through_read_ms": 29.700999963097274
+    },
+    {
+      "kind": "state",
+      "repeat": 13,
+      "response_bytes": 63971,
+      "request_through_read_ms": 28.824999986682087
+    },
+    {
+      "kind": "state",
+      "repeat": 14,
+      "response_bytes": 63971,
+      "request_through_read_ms": 5.634400004055351
+    },
+    {
+      "kind": "state",
+      "repeat": 15,
+      "response_bytes": 63971,
+      "request_through_read_ms": 25.77710000332445
+    },
+    {
+      "kind": "state",
+      "repeat": 16,
+      "response_bytes": 63971,
+      "request_through_read_ms": 4.089800000656396
+    },
+    {
+      "kind": "state",
+      "repeat": 17,
+      "response_bytes": 63971,
+      "request_through_read_ms": 26.852099981624633
+    },
+    {
+      "kind": "state",
+      "repeat": 18,
+      "response_bytes": 63971,
+      "request_through_read_ms": 16.71979995444417
+    },
+    {
+      "kind": "state",
+      "repeat": 19,
+      "response_bytes": 63971,
+      "request_through_read_ms": 5.064999975729734
+    },
+    {
+      "kind": "RGB",
+      "repeat": 0,
+      "response_bytes": 416021,
+      "request_through_read_ms": 31.50059998733923
+    },
+    {
+      "kind": "RGB",
+      "repeat": 1,
+      "response_bytes": 416021,
+      "request_through_read_ms": 31.773499969858676
+    },
+    {
+      "kind": "RGB",
+      "repeat": 2,
+      "response_bytes": 416021,
+      "request_through_read_ms": 32.36900002229959
+    },
+    {
+      "kind": "RGB",
+      "repeat": 3,
+      "response_bytes": 416021,
+      "request_through_read_ms": 27.753000031225383
+    },
+    {
+      "kind": "RGB",
+      "repeat": 4,
+      "response_bytes": 416021,
+      "request_through_read_ms": 19.436799979303032
+    },
+    {
+      "kind": "RGB",
+      "repeat": 5,
+      "response_bytes": 416021,
+      "request_through_read_ms": 31.68119996553287
+    },
+    {
+      "kind": "RGB",
+      "repeat": 6,
+      "response_bytes": 416021,
+      "request_through_read_ms": 32.951800036244094
+    },
+    {
+      "kind": "RGB",
+      "repeat": 7,
+      "response_bytes": 416021,
+      "request_through_read_ms": 32.48450002865866
+    },
+    {
+      "kind": "RGB",
+      "repeat": 8,
+      "response_bytes": 416021,
+      "request_through_read_ms": 33.84910000022501
+    },
+    {
+      "kind": "RGB",
+      "repeat": 9,
+      "response_bytes": 416021,
+      "request_through_read_ms": 38.98730000946671
+    },
+    {
+      "kind": "RGB",
+      "repeat": 10,
+      "response_bytes": 416021,
+      "request_through_read_ms": 25.823400006629527
+    },
+    {
+      "kind": "RGB",
+      "repeat": 11,
+      "response_bytes": 416021,
+      "request_through_read_ms": 31.18749998975545
+    },
+    {
+      "kind": "RGB",
+      "repeat": 12,
+      "response_bytes": 416021,
+      "request_through_read_ms": 9.414499974809587
+    },
+    {
+      "kind": "RGB",
+      "repeat": 13,
+      "response_bytes": 416021,
+      "request_through_read_ms": 23.580599983688444
+    },
+    {
+      "kind": "RGB",
+      "repeat": 14,
+      "response_bytes": 416021,
+      "request_through_read_ms": 28.619199991226196
+    },
+    {
+      "kind": "RGB",
+      "repeat": 15,
+      "response_bytes": 416021,
+      "request_through_read_ms": 19.643599982373416
+    },
+    {
+      "kind": "RGB",
+      "repeat": 16,
+      "response_bytes": 416021,
+      "request_through_read_ms": 28.616100025828928
+    },
+    {
+      "kind": "RGB",
+      "repeat": 17,
+      "response_bytes": 416021,
+      "request_through_read_ms": 30.40859999600798
+    },
+    {
+      "kind": "RGB",
+      "repeat": 18,
+      "response_bytes": 416021,
+      "request_through_read_ms": 30.634399969130754
+    },
+    {
+      "kind": "RGB",
+      "repeat": 19,
+      "response_bytes": 416021,
+      "request_through_read_ms": 32.69790002377704
+    }
+  ],
+  "summary": {
+    "state": {
+      "response_bytes": 63971,
+      "p50_ms": 5.047249986091629,
+      "p95_ms": 28.868799985502847
+    },
+    "RGB": {
+      "response_bytes": 416021,
+      "p50_ms": 30.910949979443103,
+      "p95_ms": 34.1060100006871
+    }
+  },
+  "scope": "same host warm filesystem, CARLA/inference off, includes HTTP+serialization/read+PNG SHA, no public network or browser GPU time"
+}

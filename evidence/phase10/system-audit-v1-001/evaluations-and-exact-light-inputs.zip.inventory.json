@@ -1,0 +1,197 @@
+[
+  {
+    "path": "artifacts/runs/phase10-evaluation-final-v1-001/crop_ablation.json",
+    "bytes": 9402,
+    "sha256": "601d2d162356c1557cc1069f506685c817651b84fccbb78dc7429a9bf087ef1b"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-final-v1-001/examples.json",
+    "bytes": 1037410,
+    "sha256": "d4856df4d21125ae10c8f3ab29236620755a7bb51be9360f6b1f3949c36b9c9b"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-final-v1-001/forecast_samples.json",
+    "bytes": 7323,
+    "sha256": "b2401a1a4da9226e1ac4ecb3e3d8a8501463052cacd89f931ff3eb05deb46142"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-final-v1-001/matched_3D.json",
+    "bytes": 9471,
+    "sha256": "f066edb91f1583720723de503d74507342c031c12eeba1798df159bf39d0e5a6"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-final-v1-001/per_image.json",
+    "bytes": 3587116,
+    "sha256": "27adc26bd43661b5b928d7bad61259a8e924d01330dd1f8f365649510a0758e8"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-final-v1-001/report.json",
+    "bytes": 66758,
+    "sha256": "252da5b4e01e6b71485ae38d8ff7588a5b0e3e5d7177b891a0584a1791f58491"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-final-v1-001/timing.json",
+    "bytes": 1111986,
+    "sha256": "d85ad9e54cad1dfbdc5e48c46dcca620c0f28a05b727ef7a20fd0d6729022992"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-final-v1-001/velocity_samples.json",
+    "bytes": 4567,
+    "sha256": "22a33246fdcd52b171ed50339121bb84c16d36c83bf6bfcc8b6c888b1420412b"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-final-v1-002/crop_ablation.json",
+    "bytes": 9402,
+    "sha256": "601d2d162356c1557cc1069f506685c817651b84fccbb78dc7429a9bf087ef1b"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-final-v1-002/examples.json",
+    "bytes": 1037410,
+    "sha256": "d4856df4d21125ae10c8f3ab29236620755a7bb51be9360f6b1f3949c36b9c9b"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-final-v1-002/forecast_samples.json",
+    "bytes": 7323,
+    "sha256": "b2401a1a4da9226e1ac4ecb3e3d8a8501463052cacd89f931ff3eb05deb46142"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-final-v1-002/matched_3D.json",
+    "bytes": 9471,
+    "sha256": "f066edb91f1583720723de503d74507342c031c12eeba1798df159bf39d0e5a6"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-final-v1-002/per_image.json",
+    "bytes": 3587116,
+    "sha256": "27adc26bd43661b5b928d7bad61259a8e924d01330dd1f8f365649510a0758e8"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-final-v1-002/report.json",
+    "bytes": 69355,
+    "sha256": "d59e552a67211af817b1fe1bc0ed8dac8e05f2cf4be3e98c615a3cc2c7418f73"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-final-v1-002/timing.json",
+    "bytes": 1141621,
+    "sha256": "61830f8bfa7d722aec87b99276b540039b2c31800e63bd1ff762aba11f696cf1"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-final-v1-002/velocity_samples.json",
+    "bytes": 4567,
+    "sha256": "22a33246fdcd52b171ed50339121bb84c16d36c83bf6bfcc8b6c888b1420412b"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-preliminary-v1-001/crop_ablation.json",
+    "bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-preliminary-v1-001/examples.json",
+    "bytes": 102017,
+    "sha256": "280e7f34447c02636feab339961aaf38d42253e3a09c2d5c8ec297bad2f0d798"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-preliminary-v1-001/matched_3D.json",
+    "bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-preliminary-v1-001/per_image.json",
+    "bytes": 306675,
+    "sha256": "acba04cea48809b5532e4d2f50399f97ee9763e70b9c7d6281355d4f16f78c01"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-preliminary-v1-001/report.json",
+    "bytes": 36221,
+    "sha256": "3309544bae1b8f3380be19f61f9e5829c522736306edb61a7407eeecfdfd28e1"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-preliminary-v1-001/timing.json",
+    "bytes": 98250,
+    "sha256": "4f438145c8019dd25c9bb8ea45020d1ff45e996098a6ddb21aa263823681359d"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-six-routes-v1-001/crop_ablation.json",
+    "bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-six-routes-v1-001/examples.json",
+    "bytes": 717501,
+    "sha256": "1a08fb6a2848eb793e2aa17f135821efb96f9f8cfda8af1db567eb7c8ef58540"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-six-routes-v1-001/forecast_samples.json",
+    "bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-six-routes-v1-001/matched_3D.json",
+    "bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-six-routes-v1-001/per_image.json",
+    "bytes": 2571820,
+    "sha256": "02897cac83298344b90d9f2c48b66cc24ce88b23d0d2df2ba2da6ba067c78867"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-six-routes-v1-001/report.json",
+    "bytes": 42622,
+    "sha256": "44460a680301caa6e686683113a6f2c76c6c65cbb9ad3df4e99266ad5e064636"
+  },
+  {
+    "path": "artifacts/runs/phase10-evaluation-six-routes-v1-001/timing.json",
+    "bytes": 700785,
+    "sha256": "c0469104412d481a13487b64aad1e674fd945a689b7d8c99778ee1a990aa6d96"
+  },
+  {
+    "path": "artifacts/runs/phase10-fusion-benchmark-v1-001/contract.json",
+    "bytes": 530,
+    "sha256": "c6ea38a38362ba86499db26052a77a678eed7a7c35650f7e0e3efdf0a4a918f9"
+  },
+  {
+    "path": "artifacts/runs/phase10-fusion-benchmark-v1-001/report.json",
+    "bytes": 1744,
+    "sha256": "3ca2e94f68322d0f8728f6945565f8978b02cce704cde34d3b078fb3fac5f657"
+  },
+  {
+    "path": "artifacts/runs/phase10-light-evaluation-final-v1-001/head_inputs.npz",
+    "bytes": 3996907,
+    "sha256": "b2664d122702d370a9382155d37f9f2f1b79a2e8f0c0c353fe457a3f23135881"
+  },
+  {
+    "path": "artifacts/runs/phase10-light-evaluation-final-v1-001/report.json",
+    "bytes": 2276,
+    "sha256": "b81e77deb3610ba7f6faa7a4012f9294b65bbddff455615533a041a40e03fe73"
+  },
+  {
+    "path": "artifacts/runs/phase10-light-evaluation-final-v1-001/samples.json",
+    "bytes": 813460,
+    "sha256": "d36ad9437e513ba187e88a3e7003b082425f2be9da906c1c51a4db154940ca41"
+  },
+  {
+    "path": "artifacts/runs/phase10-light-evaluation-six-v1-001/report.json",
+    "bytes": 2181,
+    "sha256": "5d687def62cf62438705371d24158f49801040464ae6ab3aa13a7446def60985"
+  },
+  {
+    "path": "artifacts/runs/phase10-light-evaluation-six-v1-001/samples.json",
+    "bytes": 603406,
+    "sha256": "559e78298e9dcc6aa9da18898fcd33f17530906b43a0cc02cb84b61aa2e24817"
+  },
+  {
+    "path": "artifacts/runs/phase10-PNG-benchmark-v1-001/contract.json",
+    "bytes": 1429,
+    "sha256": "f06640beedefe4749807145339d63b5ac976a158d04336a127487f3c69e425f9"
+  },
+  {
+    "path": "artifacts/runs/phase10-PNG-benchmark-v1-001/report.json",
+    "bytes": 25679,
+    "sha256": "4b846fe492770e678d0eb9ef4c4ba50da75371b8f8303585491033bd6cbed9b6"
+  },
+  {
+    "path": "artifacts/runs/phase10-Windows-lock-v1-001/progress.json",
+    "bytes": 19,
+    "sha256": "98b3d2e19e5bd9df2c970bfaebcb86609e1f4554866af114e8a75e06bdacfc03"
+  }
+]

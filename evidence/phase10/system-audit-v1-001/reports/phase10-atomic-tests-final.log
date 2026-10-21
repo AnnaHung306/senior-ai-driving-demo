@@ -1,0 +1,8 @@
+test_nonfinite_cannot_replace_previous (test_navigation_atomic.NavigationAtomicTests.test_nonfinite_cannot_replace_previous) ... ok
+test_permanent_lock_bounded_and_original_preserved (test_navigation_atomic.NavigationAtomicTests.test_permanent_lock_bounded_and_original_preserved) ... ok
+test_transient_replace_preserves_old_complete_file (test_navigation_atomic.NavigationAtomicTests.test_transient_replace_preserves_old_complete_file) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.109s
+
+OK

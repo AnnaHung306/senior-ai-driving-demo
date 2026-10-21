@@ -1,0 +1,10 @@
+test_GT_paths_and_bad_new_run_prefix_rejected (test_phase10_service.Phase10ServiceTests.test_GT_paths_and_bad_new_run_prefix_rejected) ... ok
+test_immutable_RGB_survives_current_seek_and_rejects_tamper (test_phase10_service.Phase10ServiceTests.test_immutable_RGB_survives_current_seek_and_rejects_tamper) ... ok
+test_import_map_is_hash_bound_and_vendor_explicitly_served (test_phase10_service.Phase10ServiceTests.test_import_map_is_hash_bound_and_vendor_explicitly_served) ... ok
+test_read_state_renews_viewer_but_publish_does_not (test_phase10_service.Phase10ServiceTests.test_read_state_renews_viewer_but_publish_does_not) ... ok
+test_viewer_timeout_cancels_even_without_pagehide (test_phase10_service.Phase10ServiceTests.test_viewer_timeout_cancels_even_without_pagehide) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.727s
+
+OK

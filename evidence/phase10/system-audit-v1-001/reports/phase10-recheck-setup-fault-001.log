@@ -1,0 +1,2 @@
+{'status': 'expected_setup_fault_stopped_and_owned_sensors_cleaned', 'checks': {'arrived_stopped': False, 'collision_free': True, 'no_solid_lane_crossing': True, 'cross_track_within_1_5m': False, 'cleanup': True, 'cleanup_stopped': True, 'source_exact': True, 'no_errors': False}}
+INFO:  Found the required file in cache!  Carla/Maps/Nav/Town01.bin 

@@ -1,0 +1,15 @@
+test_RGB_requires_current_source (test_navigation_service.NavigationHTTPTests.test_RGB_requires_current_source) ... ok
+test_empty_stop_is_idempotent (test_navigation_service.NavigationHTTPTests.test_empty_stop_is_idempotent) ... ok
+test_forged_preview_and_bad_case_rejected (test_navigation_service.NavigationHTTPTests.test_forged_preview_and_bad_case_rejected) ... ok
+test_origin_and_content_type (test_navigation_service.NavigationHTTPTests.test_origin_and_content_type) ... ok
+test_path_injection_and_float_replay_index (test_navigation_service.NavigationHTTPTests.test_path_injection_and_float_replay_index) ... ok
+test_preview_token_current_route_and_single_worker_stop (test_navigation_service.NavigationHTTPTests.test_preview_token_current_route_and_single_worker_stop) ... ok
+test_replay_only_forbids_start_and_dynamic_route (test_navigation_service.NavigationHTTPTests.test_replay_only_forbids_start_and_dynamic_route) ... ok
+test_server_snapshot_revision_orders_worker_updates (test_navigation_service.NavigationHTTPTests.test_server_snapshot_revision_orders_worker_updates) ... ok
+test_static_allowlist_and_catalog (test_navigation_service.NavigationHTTPTests.test_static_allowlist_and_catalog) ... ok
+test_tampered_report_cannot_escape_record_folder (test_navigation_service.NavigationHTTPTests.test_tampered_report_cannot_escape_record_folder) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 5.354s
+
+OK

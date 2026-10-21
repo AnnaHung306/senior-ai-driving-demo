@@ -1,0 +1,1363 @@
+{
+  "status": "completed_class_agnostic_localization_and_class_confusion_supplement",
+  "class_order": [
+    "car",
+    "pedestrian",
+    "bicycle",
+    "motorcycle",
+    "truck",
+    "bus",
+    "traffic_light",
+    "temporary_obstacle",
+    "background_or_missing"
+  ],
+  "confusion_true_rows_pred_columns": [
+    [
+      0,
+      2,
+      6,
+      2,
+      44,
+      0,
+      0,
+      0,
+      23
+    ],
+    [
+      0,
+      21,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    [
+      0,
+      3,
+      7,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      226,
+      0,
+      1090
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      20,
+      109,
+      32,
+      18,
+      106,
+      38,
+      24,
+      21,
+      0
+    ]
+  ],
+  "GT_objects": 1428,
+  "class_agnostic_localized_IoU50": 313,
+  "wrong_class_localized": 59,
+  "ignored_unknown_foreground_predictions": 318,
+  "wrong_class_examples": [
+    {
+      "run_id": "phase10-drive-bicycle-probe-v1-001",
+      "frame": 70112,
+      "camera": "front",
+      "true_class": 3,
+      "predicted_class": 2,
+      "score": 0.6828956604003906,
+      "IoU": 0.8251473219373792,
+      "true_box": [
+        305,
+        185,
+        341,
+        285
+      ],
+      "predicted_box": [
+        302.6852722167969,
+        177.79263305664062,
+        339.5625305175781,
+        282.6905517578125
+      ]
+    },
+    {
+      "run_id": "phase10-drive-bicycle-probe-v1-001",
+      "frame": 70122,
+      "camera": "front",
+      "true_class": 3,
+      "predicted_class": 2,
+      "score": 0.8941896557807922,
+      "IoU": 0.8241744100556028,
+      "true_box": [
+        303,
+        185,
+        344,
+        304
+      ],
+      "predicted_box": [
+        299.58837890625,
+        171.9355926513672,
+        343.6705322265625,
+        303.75177001953125
+      ]
+    },
+    {
+      "run_id": "phase10-drive-bicycle-probe-v1-002",
+      "frame": 129508,
+      "camera": "front",
+      "true_class": 3,
+      "predicted_class": 2,
+      "score": 0.7821059226989746,
+      "IoU": 0.8241159147786001,
+      "true_box": [
+        302,
+        185,
+        344,
+        304
+      ],
+      "predicted_box": [
+        299.3904724121094,
+        171.37496948242188,
+        343.4279479980469,
+        305.6697692871094
+      ]
+    },
+    {
+      "run_id": "phase10-drive-blocker-probe-v1-002",
+      "frame": 128485,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.8058072328567505,
+      "IoU": 0.827014786936014,
+      "true_box": [
+        298,
+        185,
+        344,
+        226
+      ],
+      "predicted_box": [
+        296.0490417480469,
+        188.51768493652344,
+        346.9275207519531,
+        226.31398010253906
+      ]
+    },
+    {
+      "run_id": "phase10-drive-blocker-probe-v1-002",
+      "frame": 128495,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.8825626373291016,
+      "IoU": 0.8346441888985323,
+      "true_box": [
+        291,
+        185,
+        351,
+        240
+      ],
+      "predicted_box": [
+        287.454345703125,
+        183.1702880859375,
+        350.5185546875,
+        235.40090942382812
+      ]
+    },
+    {
+      "run_id": "phase10-drive-blocker-probe-v1-002",
+      "frame": 128495,
+      "camera": "front_right",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.7610748410224915,
+      "IoU": 0.8309282855608972,
+      "true_box": [
+        0,
+        200,
+        13,
+        261
+      ],
+      "predicted_box": [
+        0.4983634948730469,
+        199.2845916748047,
+        11.698135375976562,
+        262.8914489746094
+      ]
+    },
+    {
+      "run_id": "phase10-drive-blocker-probe-v1-002",
+      "frame": 128505,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9851969480514526,
+      "IoU": 0.9203983243334655,
+      "true_box": [
+        286,
+        186,
+        357,
+        250
+      ],
+      "predicted_box": [
+        285.018310546875,
+        185.26832580566406,
+        358.11737060546875,
+        252.8067169189453
+      ]
+    },
+    {
+      "run_id": "phase10-drive-blocker-probe-v1-002",
+      "frame": 128505,
+      "camera": "front_right",
+      "true_class": 1,
+      "predicted_class": 3,
+      "score": 0.5533494353294373,
+      "IoU": 0.5430640527335616,
+      "true_box": [
+        0,
+        202,
+        15,
+        272
+      ],
+      "predicted_box": [
+        1.077986717224121,
+        182.693115234375,
+        19.15093994140625,
+        277.8111572265625
+      ]
+    },
+    {
+      "run_id": "phase10-drive-blocker-probe-v1-002",
+      "frame": 128515,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9755287766456604,
+      "IoU": 0.9374671601138134,
+      "true_box": [
+        297,
+        186,
+        373,
+        255
+      ],
+      "predicted_box": [
+        295.91375732421875,
+        185.5382537841797,
+        374.36865234375,
+        256.8377685546875
+      ]
+    },
+    {
+      "run_id": "phase10-drive-blocker-probe-v1-002",
+      "frame": 128515,
+      "camera": "front_right",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9066394567489624,
+      "IoU": 0.9100487995413973,
+      "true_box": [
+        0,
+        188,
+        37,
+        275
+      ],
+      "predicted_box": [
+        0.0,
+        189.15895080566406,
+        38.52241134643555,
+        278.643798828125
+      ]
+    },
+    {
+      "run_id": "phase10-drive-blocker-probe-v1-002",
+      "frame": 128525,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9755633473396301,
+      "IoU": 0.9274478725578547,
+      "true_box": [
+        286,
+        186,
+        364,
+        257
+      ],
+      "predicted_box": [
+        284.8072509765625,
+        186.63681030273438,
+        364.7705078125,
+        260.0204772949219
+      ]
+    },
+    {
+      "run_id": "phase10-drive-blocker-probe-v1-002",
+      "frame": 128525,
+      "camera": "front_right",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.5721819400787354,
+      "IoU": 0.83800447986152,
+      "true_box": [
+        0,
+        196,
+        21,
+        281
+      ],
+      "predicted_box": [
+        0.0,
+        206.44998168945312,
+        20.26172637939453,
+        281.8642272949219
+      ]
+    },
+    {
+      "run_id": "phase10-drive-blocker-probe-v1-002",
+      "frame": 128535,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9647907018661499,
+      "IoU": 0.9341095325100769,
+      "true_box": [
+        277,
+        186,
+        359,
+        261
+      ],
+      "predicted_box": [
+        277.7543029785156,
+        189.02557373046875,
+        359.8184509277344,
+        260.4059143066406
+      ]
+    },
+    {
+      "run_id": "phase10-drive-blocker-probe-v1-002",
+      "frame": 128535,
+      "camera": "front_left",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.7634671330451965,
+      "IoU": 0.8518670486203117,
+      "true_box": [
+        623,
+        203,
+        640,
+        286
+      ],
+      "predicted_box": [
+        624.2053833007812,
+        207.89260864257812,
+        640.0,
+        283.9934997558594
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70863,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.7516279220581055,
+      "IoU": 0.7607068060960893,
+      "true_box": [
+        298,
+        186,
+        344,
+        226
+      ],
+      "predicted_box": [
+        295.8193664550781,
+        192.237548828125,
+        347.0177307128906,
+        226.50994873046875
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70863,
+      "camera": "front_right",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.5145462155342102,
+      "IoU": 0.5207561210702724,
+      "true_box": [
+        0,
+        198,
+        11,
+        243
+      ],
+      "predicted_box": [
+        0.2613208293914795,
+        199.547119140625,
+        6.507233619689941,
+        240.8179931640625
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70873,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.961201012134552,
+      "IoU": 0.9703365835869436,
+      "true_box": [
+        291,
+        185,
+        351,
+        240
+      ],
+      "predicted_box": [
+        290.8548278808594,
+        184.9461669921875,
+        350.7563171386719,
+        241.26641845703125
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70873,
+      "camera": "front_right",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.6791214346885681,
+      "IoU": 0.8188195615705605,
+      "true_box": [
+        0,
+        200,
+        13,
+        260
+      ],
+      "predicted_box": [
+        0.1263561248779297,
+        198.41978454589844,
+        11.81595230102539,
+        264.9700012207031
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70883,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9570924639701843,
+      "IoU": 0.8900924392064699,
+      "true_box": [
+        291,
+        185,
+        352,
+        241
+      ],
+      "predicted_box": [
+        288.7894592285156,
+        184.1875,
+        353.1878356933594,
+        243.7822265625
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70883,
+      "camera": "front_right",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.6926642656326294,
+      "IoU": 0.8248598142680592,
+      "true_box": [
+        0,
+        200,
+        13,
+        262
+      ],
+      "predicted_box": [
+        0.4068942070007324,
+        194.09011840820312,
+        12.985736846923828,
+        267.1785583496094
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70893,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9777458906173706,
+      "IoU": 0.930678931149556,
+      "true_box": [
+        285,
+        185,
+        357,
+        250
+      ],
+      "predicted_box": [
+        284.38397216796875,
+        185.63307189941406,
+        357.50421142578125,
+        253.1113739013672
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70903,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9803822040557861,
+      "IoU": 0.9217169598309795,
+      "true_box": [
+        284,
+        186,
+        359,
+        254
+      ],
+      "predicted_box": [
+        282.5854187011719,
+        186.99130249023438,
+        360.1052551269531,
+        256.3689270019531
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70903,
+      "camera": "front_right",
+      "true_class": 1,
+      "predicted_class": 3,
+      "score": 0.6943395733833313,
+      "IoU": 0.5240082636435516,
+      "true_box": [
+        0,
+        205,
+        14,
+        278
+      ],
+      "predicted_box": [
+        0.7943601608276367,
+        185.12435913085938,
+        18.729549407958984,
+        284.4653625488281
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70913,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9689072370529175,
+      "IoU": 0.9252001937259899,
+      "true_box": [
+        292,
+        186,
+        375,
+        262
+      ],
+      "predicted_box": [
+        292.6642150878906,
+        188.1759490966797,
+        377.2961730957031,
+        263.0902099609375
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70913,
+      "camera": "front_right",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.7649329900741577,
+      "IoU": 0.8479455949477047,
+      "true_box": [
+        0,
+        188,
+        35,
+        284
+      ],
+      "predicted_box": [
+        2.1697998046875,
+        183.4481964111328,
+        34.39519119262695,
+        288.39739990234375
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70923,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9562011957168579,
+      "IoU": 0.9455908357014973,
+      "true_box": [
+        285,
+        186,
+        370,
+        263
+      ],
+      "predicted_box": [
+        283.786865234375,
+        185.977783203125,
+        370.02471923828125,
+        266.239501953125
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70923,
+      "camera": "front_right",
+      "true_class": 1,
+      "predicted_class": 3,
+      "score": 0.8021020889282227,
+      "IoU": 0.66427399474096,
+      "true_box": [
+        0,
+        192,
+        25,
+        287
+      ],
+      "predicted_box": [
+        1.0043220520019531,
+        171.41189575195312,
+        28.58715057373047,
+        292.3672180175781
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70933,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9768640398979187,
+      "IoU": 0.9458845675609932,
+      "true_box": [
+        285,
+        186,
+        369,
+        263
+      ],
+      "predicted_box": [
+        284.0111999511719,
+        186.1837158203125,
+        369.4706115722656,
+        265.82733154296875
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70933,
+      "camera": "front_right",
+      "true_class": 1,
+      "predicted_class": 3,
+      "score": 0.8669949769973755,
+      "IoU": 0.6722049653802032,
+      "true_box": [
+        0,
+        192,
+        25,
+        287
+      ],
+      "predicted_box": [
+        1.0710525512695312,
+        172.18521118164062,
+        28.598342895507812,
+        291.3408203125
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70943,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9629441499710083,
+      "IoU": 0.9482405025385979,
+      "true_box": [
+        284,
+        186,
+        363,
+        259
+      ],
+      "predicted_box": [
+        283.4866943359375,
+        186.26365661621094,
+        364.46197509765625,
+        260.8419189453125
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70943,
+      "camera": "front_right",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.5643365979194641,
+      "IoU": 0.8476325514440359,
+      "true_box": [
+        0,
+        200,
+        19,
+        283
+      ],
+      "predicted_box": [
+        0.0,
+        208.7864990234375,
+        18.31015968322754,
+        281.79058837890625
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70953,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9672005772590637,
+      "IoU": 0.8766891661531382,
+      "true_box": [
+        283,
+        186,
+        356,
+        253
+      ],
+      "predicted_box": [
+        281.2342224121094,
+        187.12905883789062,
+        359.1582336425781,
+        256.45953369140625
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70953,
+      "camera": "front_left",
+      "true_class": 1,
+      "predicted_class": 4,
+      "score": 0.5526185631752014,
+      "IoU": 0.7526974782661529,
+      "true_box": [
+        626,
+        204,
+        640,
+        276
+      ],
+      "predicted_box": [
+        624.5025634765625,
+        197.49229431152344,
+        640.0,
+        283.905517578125
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70963,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9814956784248352,
+      "IoU": 0.8741346221107227,
+      "true_box": [
+        285,
+        185,
+        354,
+        248
+      ],
+      "predicted_box": [
+        282.8014221191406,
+        185.73329162597656,
+        355.8038024902344,
+        252.3672637939453
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70963,
+      "camera": "front_right",
+      "true_class": 1,
+      "predicted_class": 3,
+      "score": 0.5143043398857117,
+      "IoU": 0.515604215857329,
+      "true_box": [
+        0,
+        203,
+        10,
+        271
+      ],
+      "predicted_box": [
+        0.4818296432495117,
+        188.9306640625,
+        15.000397682189941,
+        273.13531494140625
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70963,
+      "camera": "front_left",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.8030656576156616,
+      "IoU": 0.8093406807850388,
+      "true_box": [
+        627,
+        203,
+        640,
+        271
+      ],
+      "predicted_box": [
+        627.91748046875,
+        207.17752075195312,
+        639.8226318359375,
+        267.2739562988281
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70973,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9705416560173035,
+      "IoU": 0.9257556893287011,
+      "true_box": [
+        294,
+        185,
+        358,
+        245
+      ],
+      "predicted_box": [
+        293.0319519042969,
+        184.1604766845703,
+        360.1044006347656,
+        246.0034942626953
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70973,
+      "camera": "front_right",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.6027389764785767,
+      "IoU": 0.9074468074015907,
+      "true_box": [
+        0,
+        190,
+        21,
+        265
+      ],
+      "predicted_box": [
+        0.0,
+        190.195068359375,
+        21.302780151367188,
+        271.265625
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70983,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9406774640083313,
+      "IoU": 0.825486716548365,
+      "true_box": [
+        288,
+        185,
+        350,
+        242
+      ],
+      "predicted_box": [
+        286.07305908203125,
+        187.23342895507812,
+        354.98858642578125,
+        244.91116333007812
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70983,
+      "camera": "front_left",
+      "true_class": 1,
+      "predicted_class": 4,
+      "score": 0.718262791633606,
+      "IoU": 0.8731839009624517,
+      "true_box": [
+        627,
+        202,
+        640,
+        263
+      ],
+      "predicted_box": [
+        627.9049072265625,
+        198.19149780273438,
+        640.0,
+        263.48699951171875
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70993,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.936538815498352,
+      "IoU": 0.8293599545787903,
+      "true_box": [
+        291,
+        185,
+        348,
+        237
+      ],
+      "predicted_box": [
+        288.34454345703125,
+        186.38844299316406,
+        351.00592041015625,
+        240.6367645263672
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 70993,
+      "camera": "front_right",
+      "true_class": 1,
+      "predicted_class": 2,
+      "score": 0.5106857419013977,
+      "IoU": 0.8404972647581889,
+      "true_box": [
+        0,
+        201,
+        9,
+        257
+      ],
+      "predicted_box": [
+        0.0,
+        199.07769775390625,
+        9.617330551147461,
+        261.42816162109375
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 71003,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9850372672080994,
+      "IoU": 0.8915822466647431,
+      "true_box": [
+        290,
+        185,
+        349,
+        238
+      ],
+      "predicted_box": [
+        288.49658203125,
+        186.04171752929688,
+        350.4168701171875,
+        240.57717895507812
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 71003,
+      "camera": "front_right",
+      "true_class": 1,
+      "predicted_class": 2,
+      "score": 0.578040599822998,
+      "IoU": 0.8912165633213196,
+      "true_box": [
+        0,
+        201,
+        9,
+        258
+      ],
+      "predicted_box": [
+        0.0,
+        199.06700134277344,
+        9.108442306518555,
+        262.2630615234375
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 71013,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9072843790054321,
+      "IoU": 0.864304429657424,
+      "true_box": [
+        290,
+        185,
+        349,
+        239
+      ],
+      "predicted_box": [
+        286.96917724609375,
+        185.97317504882812,
+        351.903076171875,
+        240.83438110351562
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 71013,
+      "camera": "front_left",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.52219557762146,
+      "IoU": 0.7785009387559418,
+      "true_box": [
+        628,
+        201,
+        640,
+        259
+      ],
+      "predicted_box": [
+        629.1539916992188,
+        201.47264099121094,
+        639.8609008789062,
+        252.0789031982422
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 71023,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9833682179450989,
+      "IoU": 0.8614137562152335,
+      "true_box": [
+        290,
+        185,
+        349,
+        239
+      ],
+      "predicted_box": [
+        286.3941650390625,
+        187.08340454101562,
+        350.698486328125,
+        240.46945190429688
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 71033,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9544729590415955,
+      "IoU": 0.8219331689247642,
+      "true_box": [
+        299,
+        185,
+        356,
+        237
+      ],
+      "predicted_box": [
+        295.89385986328125,
+        186.1326446533203,
+        359.62945556640625,
+        240.4668731689453
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 71033,
+      "camera": "front_right",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.6504186391830444,
+      "IoU": 0.9069157824196874,
+      "true_box": [
+        0,
+        187,
+        23,
+        256
+      ],
+      "predicted_box": [
+        0.3394002914428711,
+        188.77752685546875,
+        22.42223358154297,
+        253.9537353515625
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 71043,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.8976761698722839,
+      "IoU": 0.827333612030068,
+      "true_box": [
+        295,
+        184,
+        347,
+        232
+      ],
+      "predicted_box": [
+        291.3611145019531,
+        186.8145751953125,
+        349.3956604003906,
+        233.22933959960938
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 71043,
+      "camera": "front_right",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.8171200752258301,
+      "IoU": 0.7993063578948105,
+      "true_box": [
+        0,
+        198,
+        11,
+        250
+      ],
+      "predicted_box": [
+        0.08294105529785156,
+        197.00210571289062,
+        10.278972625732422,
+        243.638916015625
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 71053,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.94489586353302,
+      "IoU": 0.8394665608435975,
+      "true_box": [
+        290,
+        185,
+        347,
+        237
+      ],
+      "predicted_box": [
+        286.3798828125,
+        185.42080688476562,
+        350.11541748046875,
+        239.99404907226562
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 71053,
+      "camera": "front_left",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.7021961808204651,
+      "IoU": 0.8491604728471247,
+      "true_box": [
+        627,
+        199,
+        640,
+        256
+      ],
+      "predicted_box": [
+        628.0380249023438,
+        196.20709228515625,
+        639.7874145507812,
+        254.92572021484375
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 71063,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.969698965549469,
+      "IoU": 0.9117451999525651,
+      "true_box": [
+        285,
+        185,
+        351,
+        246
+      ],
+      "predicted_box": [
+        283.2450256347656,
+        185.58877563476562,
+        352.2959289550781,
+        248.35736083984375
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 71063,
+      "camera": "front_left",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.6336408853530884,
+      "IoU": 0.7737571227956902,
+      "true_box": [
+        626,
+        201,
+        640,
+        267
+      ],
+      "predicted_box": [
+        626.9026489257812,
+        205.64105224609375,
+        639.5602416992188,
+        262.12506103515625
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 71073,
+      "camera": "front",
+      "true_class": 1,
+      "predicted_class": 5,
+      "score": 0.9496597051620483,
+      "IoU": 0.8861999536616396,
+      "true_box": [
+        293,
+        185,
+        366,
+        251
+      ],
+      "predicted_box": [
+        290.6531066894531,
+        184.91432189941406,
+        366.9720153808594,
+        256.15087890625
+      ]
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "frame": 71073,
+      "camera": "front_right",
+      "true_class": 1,
+      "predicted_class": 3,
+      "score": 0.8226290941238403,
+      "IoU": 0.6420752639183945,
+      "true_box": [
+        0,
+        187,
+        27,
+        272
+      ],
+      "predicted_box": [
+        0.534149169921875,
+        170.70867919921875,
+        32.70471954345703,
+        278.2054443359375
+      ]
+    },
+    {
+      "run_id": "phase10-drive-long-red-probe-v1-001",
+      "frame": 71943,
+      "camera": "front",
+      "true_class": 7,
+      "predicted_class": 2,
+      "score": 0.6234440207481384,
+      "IoU": 0.662637332663358,
+      "true_box": [
+        380,
+        138,
+        389,
+        172
+      ],
+      "predicted_box": [
+        379.20196533203125,
+        135.93096923828125,
+        390.2852783203125,
+        177.59640502929688
+      ]
+    },
+    {
+      "run_id": "phase10-drive-long-red-probe-v1-001",
+      "frame": 72093,
+      "camera": "front_right",
+      "true_class": 7,
+      "predicted_class": 5,
+      "score": 0.8274304270744324,
+      "IoU": 0.793025537573418,
+      "true_box": [
+        73,
+        128,
+        86,
+        170
+      ],
+      "predicted_box": [
+        72.7656478881836,
+        128.4684600830078,
+        86.25911712646484,
+        162.8092803955078
+      ]
+    }
+  ],
+  "source_sha256": "27adc26bd43661b5b928d7bad61259a8e924d01330dd1f8f365649510a0758e8",
+  "tool_sha256": "c621746702def84521963be7b427a9bf1b33f763d9d5f139abf52609dda59a86",
+  "limits": "Greedy score-ordered class-agnostic IoU50 diagnostic; does not replace class-aware AP or certify ignored/static geometry."
+}

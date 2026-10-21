@@ -1,0 +1,14 @@
+{
+  "status": "passed_real_HTTP_worker_viewer_watchdog",
+  "run_id": "phase10-drive-web-20261021-111315-428962",
+  "no_GET_state_or_heartbeat_after_start": false,
+  "no_GET_or_heartbeat_after_loss": true,
+  "loss_triggered_after_verified_motion": true,
+  "waited_via_filesystem_only_after_loss": true,
+  "time_from_loss_to_stopped_report_s": 4.39100000000326,
+  "elapsed_wall_s": 18.57800000003772,
+  "max_recorded_speed_mps": 3.1443774050152906,
+  "cleanup_final_speed_mps": 0.0,
+  "records": 8,
+  "formal_quality_passed": false
+}

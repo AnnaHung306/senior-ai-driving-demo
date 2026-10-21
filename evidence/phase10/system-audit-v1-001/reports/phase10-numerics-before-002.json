@@ -1,0 +1,170 @@
+{
+  "status": "numerical_evidence_boundary_probe",
+  "navigation_source_sha256": "053a088adfe7ea5eb61fca3f930e02a1a5e10d4ad5c5d1a5c84fbfcfc65c511e",
+  "cases": [
+    {
+      "field": "timestamp",
+      "input": "NaN",
+      "state": "CRUISE",
+      "target_speed_mps": 3.0,
+      "safe_rejected_or_stopped": false
+    },
+    {
+      "field": "timestamp",
+      "input": "Infinity",
+      "state": "FAILSAFE",
+      "target_speed_mps": 0.0,
+      "safe_rejected_or_stopped": true
+    },
+    {
+      "field": "road_fraction",
+      "input": "NaN",
+      "state": "CRUISE",
+      "target_speed_mps": 3.0,
+      "safe_rejected_or_stopped": false
+    },
+    {
+      "field": "road_fraction",
+      "input": "Infinity",
+      "state": "CRUISE",
+      "target_speed_mps": 3.0,
+      "safe_rejected_or_stopped": false
+    },
+    {
+      "field": "cross_track",
+      "input": "NaN",
+      "state": "CRUISE",
+      "target_speed_mps": 3.0,
+      "safe_rejected_or_stopped": false
+    },
+    {
+      "field": "cross_track",
+      "input": "Infinity",
+      "state": "FAILSAFE",
+      "target_speed_mps": 0.0,
+      "safe_rejected_or_stopped": true
+    },
+    {
+      "field": "remaining",
+      "input": "NaN",
+      "state": "CRUISE",
+      "target_speed_mps": 0.0,
+      "safe_rejected_or_stopped": true
+    },
+    {
+      "field": "remaining",
+      "input": "Infinity",
+      "state": "CRUISE",
+      "target_speed_mps": 3.0,
+      "safe_rejected_or_stopped": false
+    },
+    {
+      "field": "goal_distance",
+      "input": "NaN",
+      "state": "CRUISE",
+      "target_speed_mps": 3.0,
+      "safe_rejected_or_stopped": false
+    },
+    {
+      "field": "goal_distance",
+      "input": "Infinity",
+      "state": "CRUISE",
+      "target_speed_mps": 3.0,
+      "safe_rejected_or_stopped": false
+    },
+    {
+      "field": "signal_score",
+      "input": "NaN",
+      "state": "CRUISE",
+      "target_speed_mps": 3.0,
+      "safe_rejected_or_stopped": false
+    },
+    {
+      "field": "signal_score",
+      "input": "Infinity",
+      "state": "SIGNAL_STOP",
+      "target_speed_mps": 0.0,
+      "safe_rejected_or_stopped": true
+    }
+  ],
+  "unsafe_acceptances": 8,
+  "curved_path_counterexample": {
+    "path": [
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        1,
+        6
+      ]
+    ],
+    "obstacle": {
+      "center_ego_m": [
+        4,
+        2,
+        1
+      ],
+      "size_lwh_m": [
+        1,
+        1,
+        2
+      ]
+    },
+    "observed_plan": {
+      "state": "CRUISE",
+      "target_speed_mps": 1.2547351472059962,
+      "local_path_xy_m": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0
+        ],
+        [
+          4.0,
+          0.0
+        ],
+        [
+          4.0,
+          2.0
+        ],
+        [
+          3.0,
+          4.0
+        ],
+        [
+          1.0,
+          6.0
+        ]
+      ],
+      "reason": "map_route_with_RGB_road_and_object_checks",
+      "map_prior_used": true,
+      "actor_GT_used": false,
+      "selected_offset_m": 0.0,
+      "nearest_obstacle_m": null
+    },
+    "object_center_exactly_on_polyline": true,
+    "limits": "Numeric supported-path-shape diagnostic, not a CARLA crash reproduction"
+  },
+  "actual_sensor_failure_reproduction": false,
+  "scope": "numeric malformed-provider robustness, not evidence of CARLA naturally producing NaN"
+}

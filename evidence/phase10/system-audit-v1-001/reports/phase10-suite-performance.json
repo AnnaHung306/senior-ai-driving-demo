@@ -1,0 +1,9 @@
+[
+  {
+    "run_id": "phase10-drive-straight-1-performance-v1-001",
+    "status": "arrived",
+    "passed": true,
+    "frames": 94,
+    "report_sha256": "f665d28495c956dc058a35e7bbfaff55fb739fcd177f7a8f4e43800f3f2226a2"
+  }
+]

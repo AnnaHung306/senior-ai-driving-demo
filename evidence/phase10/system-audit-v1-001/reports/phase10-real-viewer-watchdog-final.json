@@ -1,0 +1,11 @@
+{
+  "status": "passed_real_HTTP_worker_viewer_watchdog",
+  "run_id": "phase10-drive-web-20261021-110347-033318",
+  "no_GET_state_or_heartbeat_after_start": true,
+  "waited_via_filesystem_only": true,
+  "elapsed_wall_s": 14.469000000040978,
+  "max_recorded_speed_mps": 0.00495996466009003,
+  "cleanup_final_speed_mps": 0.0,
+  "records": 4,
+  "formal_quality_passed": false
+}

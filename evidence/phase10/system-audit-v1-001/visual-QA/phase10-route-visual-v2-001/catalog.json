@@ -1,0 +1,31 @@
+{
+  "status": "pending_actual_review",
+  "panels": [
+    "route-00.png",
+    "route-01.png",
+    "route-02.png",
+    "route-03.png",
+    "route-04.png",
+    "route-05.png",
+    "route-06.png",
+    "route-07.png",
+    "route-08.png",
+    "route-09.png",
+    "route-10.png",
+    "route-11.png",
+    "route-12.png",
+    "route-14.png",
+    "route-15.png",
+    "route-16.png",
+    "route-17.png",
+    "route-18.png",
+    "route-19.png",
+    "route-20.png",
+    "route-21.png",
+    "route-22.png",
+    "route-23.png"
+  ],
+  "all_attempts": 24,
+  "zero_frame_setup_fault_has_no_curve": true,
+  "reason_for_v2": "Original equal-aspect narrow straight routes collapsed map panel; expand equal metric limits."
+}

@@ -1,0 +1,48 @@
+{
+  "status": "completed_independent_signal_proxy_audit",
+  "counts": {
+    "SIGNAL_STOP_samples_without_nearby_map_stop_candidate": 100,
+    "resolved_ROI_samples": 101,
+    "unresolvable_RGB_ROI_instance": 72
+  },
+  "possible_association_examples": [],
+  "stop_waypoint_crossings": [
+    {
+      "run_id": "phase10-drive-left-1-audit-v1-001",
+      "frame": 27843,
+      "lamp_id": 42,
+      "stable_phase": null,
+      "map_stop_waypoint_proxy_not_painted_line": true
+    },
+    {
+      "run_id": "phase10-drive-long-red-probe-v1-001",
+      "frame": 72193,
+      "lamp_id": 49,
+      "stable_phase": "Green",
+      "map_stop_waypoint_proxy_not_painted_line": true
+    },
+    {
+      "run_id": "phase10-drive-right-1-audit-v1-001",
+      "frame": 29147,
+      "lamp_id": 25,
+      "stable_phase": "Green",
+      "map_stop_waypoint_proxy_not_painted_line": true
+    },
+    {
+      "run_id": "phase10-drive-right-2-audit-v1-001",
+      "frame": 30104,
+      "lamp_id": 40,
+      "stable_phase": "Green",
+      "map_stop_waypoint_proxy_not_painted_line": true
+    }
+  ],
+  "red_proxy_crossings": 0,
+  "not_certified_traffic_violation_detector": true,
+  "source_map_sha256": "8f3e33e3ae888825b1ade9f3a3a149d06aececa5c95fb9c1e2a16d42763171d1",
+  "tool_sha256": "a1e62c428306f827ece8cf53aa05fa0230dca7ce0d5cca3fd690be32792432fa",
+  "limits": [
+    "Stop waypoints and 2.2m front offset are a map proxy, not painted stop-line geometry or independent violation certification.",
+    "Lamp-ID association uses >=16 raw semantic pixels with >=80% dominant ID inside observed RGB ROI; other cases unresolved.",
+    "A possible other-direction association needs visual/context review; it is not asserted to be an actual red-light violation."
+  ]
+}

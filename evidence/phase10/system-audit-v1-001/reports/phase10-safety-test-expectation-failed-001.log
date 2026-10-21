@@ -1,0 +1,26 @@
+test_bad_shape_and_degenerate_path_rejected (test_phase10_safety.Phase10SafetyTests.test_bad_shape_and_degenerate_path_rejected) ... ok
+test_curved_vertical_and_nonmonotonic_x_project_exact (test_phase10_safety.Phase10SafetyTests.test_curved_vertical_and_nonmonotonic_x_project_exact) ... ok
+test_each_nonfinite_route_metric_rejected (test_phase10_safety.Phase10SafetyTests.test_each_nonfinite_route_metric_rejected) ... ok
+test_future_position_follows_turn_not_straight_x (test_phase10_safety.Phase10SafetyTests.test_future_position_follows_turn_not_straight_x) ... ok
+test_no_progress_guard_exempts_long_signal_wait_and_restarts_grace (test_phase10_safety.Phase10SafetyTests.test_no_progress_guard_exempts_long_signal_wait_and_restarts_grace) ... ok
+test_nonfinite_time_road_score_rejected (test_phase10_safety.Phase10SafetyTests.test_nonfinite_time_road_score_rejected) ... ok
+test_planner_rejects_nonfinite_provider_input (test_phase10_safety.Phase10SafetyTests.test_planner_rejects_nonfinite_provider_input) ... ok
+test_planner_stops_for_obstacle_on_nonmonotonic_path (test_phase10_safety.Phase10SafetyTests.test_planner_stops_for_obstacle_on_nonmonotonic_path) ... FAIL
+test_real_blocked_guard_still_stops (test_phase10_safety.Phase10SafetyTests.test_real_blocked_guard_still_stops) ... ok
+test_straight_projection_matches_longitudinal_distance (test_phase10_safety.Phase10SafetyTests.test_straight_projection_matches_longitudinal_distance) ... ok
+
+======================================================================
+FAIL: test_planner_stops_for_obstacle_on_nonmonotonic_path (test_phase10_safety.Phase10SafetyTests.test_planner_stops_for_obstacle_on_nonmonotonic_path)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\code\senior_AI\tests\test_phase10_safety.py", line 51, in test_planner_stops_for_obstacle_on_nonmonotonic_path
+    self.assertEqual(Planner(c).plan(self.route,self.ob,2,10.1,.2)['state'],'OBSTACLE_STOP')
+AssertionError: 'FOLLOW' != 'OBSTACLE_STOP'
+- FOLLOW
++ OBSTACLE_STOP
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.416s
+
+FAILED (failures=1)

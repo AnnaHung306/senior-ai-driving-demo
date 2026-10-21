@@ -1,0 +1,94 @@
+[
+  {
+    "probe": "performance",
+    "exit_code": 0,
+    "command": [
+      "C:\\code\\senior_AI\\.venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "scripts/run_phase10_suite.py",
+      "--route",
+      "phase10-straight-1",
+      "--no-GT"
+    ]
+  },
+  {
+    "probe": "blocker",
+    "exit_code": 0,
+    "command": [
+      "C:\\code\\senior_AI\\.venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "scripts/probe_phase89_traffic.py",
+      "--scenario",
+      "blocker",
+      "--audit",
+      "--output",
+      "artifacts/runs/phase10-drive-blocker-probe-v1-001"
+    ]
+  },
+  {
+    "probe": "pedestrian",
+    "exit_code": 0,
+    "command": [
+      "C:\\code\\senior_AI\\.venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "scripts/probe_phase89_traffic.py",
+      "--scenario",
+      "pedestrian",
+      "--audit",
+      "--output",
+      "artifacts/runs/phase10-drive-pedestrian-probe-v1-001"
+    ]
+  },
+  {
+    "probe": "bicycle",
+    "exit_code": 0,
+    "command": [
+      "C:\\code\\senior_AI\\.venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "scripts/probe_phase89_traffic.py",
+      "--scenario",
+      "blocker",
+      "--audit",
+      "--output",
+      "artifacts/runs/phase10-drive-bicycle-probe-v1-001",
+      "--asset",
+      "vehicle.diamondback.century"
+    ]
+  },
+  {
+    "probe": "lead",
+    "exit_code": 0,
+    "command": [
+      "C:\\code\\senior_AI\\.venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "scripts/probe_phase89_traffic.py",
+      "--scenario",
+      "lead_brake",
+      "--audit",
+      "--output",
+      "artifacts/runs/phase10-drive-lead-probe-v1-001"
+    ]
+  },
+  {
+    "probe": "long-red",
+    "exit_code": 0,
+    "command": [
+      "C:\\code\\senior_AI\\.venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "scripts/probe_phase89_traffic.py",
+      "--scenario",
+      "signal",
+      "--audit",
+      "--output",
+      "artifacts/runs/phase10-drive-long-red-probe-v1-001",
+      "--stop-hold-s",
+      "15"
+    ]
+  }
+]

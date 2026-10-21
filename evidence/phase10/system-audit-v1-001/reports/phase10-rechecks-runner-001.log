@@ -1,0 +1,5 @@
+{'case': 'blocker', 'exit_code': 0}
+{'case': 'bicycle', 'exit_code': 0}
+{'case': 'sensor-validity', 'exit_code': 0}
+{'case': 'camera-timeout', 'exit_code': 0}
+{'case': 'setup-fault', 'exit_code': 0}

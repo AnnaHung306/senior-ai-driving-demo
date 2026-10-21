@@ -2,6 +2,8 @@
 
 長期需求見 [PROJECT_SPEC.md](PROJECT_SPEC.md)，當前任務見 [CURRENT_TASK.md](CURRENT_TASK.md)。
 
+**2026-10-21：Phase10全面稽核與工程修復完成，正式品質仍未通過。** 保留24次嘗試、2194幀／17552張RGB；預先固定六條新路線僅2/6抵達。已修非有限數值、彎路障礙幾何、紅燈stall、Windows原子寫入鎖、感測器清理與網頁競態，322 Python／52 JS／27真HTTP及完整來源核對通過。道路2D IoU98.06%，但汽車錯判卡車、號誌漏檢與3D方框Recall@IoU.25僅3.92%仍是主要缺口；無GT循環p50約1.19秒，未達200ms即時預算。已附實際16:9錄製回放與更新的CPU可攜包，沒有新訓練。見[完整報告](PHASE10.md)、[24項問題與後續順序](PHASE10_ISSUES.md)、[證據與影片](evidence/phase10/system-audit-v1-001/README.md)。下列舊階段數值保留原測試範圍，最新可靠性結論以Phase10為準。
+
 **2026-10-21：Phase 8–9導航與真閉環工程研究版已完成。** 網頁可選Town01道路起終點、預覽路線、啟動八RGB→本機CUDA模型→規劃→控制，並看3D、八鏡頭與完成紀錄回放。五個最終具名直路／轉彎／紅綠燈／障礙車／橫穿行人案例抵達，碰撞與越線皆0；另從網頁自訂11m路線實際抵達，人工停止、WebGL中斷及真相機timeout均驗證煞停。295 Python、48 JS、23真HTTP、1123保存影格與411真browser影格核對完成；18次開發嘗試的失敗與中斷均保留。**目前依賴地圖與自車定位先驗，推論約1.2秒／循環、牆鐘慢8–9倍；研究品質與任意路線可靠性未通過。** 執行 `./Start-NavigationDemo.ps1 -StartSimulator`，開啟 `http://127.0.0.1:8768/`；純回放用 `-ReplayOnly`。詳見[部署與展示方式](DEPLOYMENT.md)、[Phase 8–9結果](PHASE89.md)及[封存證據](evidence/phase89/navigation-closed-loop-v1-001/README.md)。亦已準備不需GPU／CARLA的本機可攜回放ZIP。以下保留舊階段交付狀態；目的地導航與閉環進展以本節為準。
 
 **2026-10-20：Phase7動態展示工程研究版已完成。** `./Start-WorldViewer.ps1`預設開啟240組RGB推論的速度／方向、3秒軌跡、暫失與接近風險；另有四種明示非RGB AI的合成診斷。256 Python、40 JS、22 HTTP及真browser全240組／1091物件／889預測核對通過，render median60FPS、CPU套用p9544.4ms。原模型選擇validation速度向量MAE .290m/s、ADE1 .950m、FDE2 1.205m，2秒GT覆蓋61.22%（all-GT miss47.52%），ID switches2與舊版相同。**這是運動學研究展示；正式品質、未見路線、連續即時推論及控制仍未通過／未提供。** 見[Phase7結果與啟動方式](PHASE7.md)及[實測證據](evidence/phase7/causal-motion-v1-001/README.md)。以下保留各階段原交付狀態，速度／預測以本節為準。

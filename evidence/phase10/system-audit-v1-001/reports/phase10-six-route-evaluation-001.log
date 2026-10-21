@@ -1,0 +1,1 @@
+{'runs': 6, 'images': 2176, 'counts3D': {'GT': 0, 'predictions': 131, 'TP': 0, 'FP': 131, 'FN': 0, 'class_agnostic_TP': 0}, 'output': 'artifacts\\runs\\phase10-evaluation-six-routes-v1-001'}

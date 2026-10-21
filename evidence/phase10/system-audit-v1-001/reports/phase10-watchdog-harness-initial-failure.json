@@ -1,0 +1,9 @@
+{
+  "status": "test_harness_exception_after_start",
+  "origin": "transcribed actual tool error; not a fabricated raw log",
+  "error": "AttributeError: 'NoneType' object has no attribute 'get'",
+  "cause": "Starting job legitimately has latest=null; harness assumed a dictionary",
+  "correction": "Use (state.get('latest') or {}) before checking motion",
+  "product_controller_error": false,
+  "recovery": "No subsequent heartbeat; product watchdog owns cancellation; run remains in all-attempt inventory"
+}

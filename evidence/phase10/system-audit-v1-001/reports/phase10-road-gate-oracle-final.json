@@ -1,0 +1,286 @@
+{
+  "status": "completed_offline_same_geometry_road_evidence_diagnostic",
+  "samples": [
+    {
+      "run_id": "phase10-drive-left-1-audit-v1-001",
+      "frame": 27773,
+      "state": "CRUISE",
+      "actual_RGB_soft_road_fractions": {
+        "0.0": 0.7777777777777778,
+        "-0.45": 0.7777777777777778,
+        "0.45": 0.7777777777777778
+      },
+      "GT_semantic_oracle": {
+        "0.0": 0.7777777777777778,
+        "-0.45": 0.7777777777777778,
+        "0.45": 0.7777777777777778
+      },
+      "RGB_hard_segmentation": {
+        "0.0": 0.7777777777777778,
+        "-0.45": 0.7777777777777778,
+        "0.45": 0.7777777777777778
+      },
+      "original_route_status": "blocked_safe_stop"
+    },
+    {
+      "run_id": "phase10-drive-left-1-audit-v1-001",
+      "frame": 28263,
+      "state": "CRUISE",
+      "actual_RGB_soft_road_fractions": {
+        "0.0": 0.875,
+        "-0.45": 0.875,
+        "0.45": 0.875
+      },
+      "GT_semantic_oracle": {
+        "0.0": 0.875,
+        "-0.45": 0.875,
+        "0.45": 0.875
+      },
+      "RGB_hard_segmentation": {
+        "0.0": 0.875,
+        "-0.45": 0.875,
+        "0.45": 0.875
+      },
+      "original_route_status": "blocked_safe_stop"
+    },
+    {
+      "run_id": "phase10-drive-left-2-audit-v1-001",
+      "frame": 28341,
+      "state": "CRUISE",
+      "actual_RGB_soft_road_fractions": {
+        "0.0": 0.75,
+        "-0.45": 0.75,
+        "0.45": 0.75
+      },
+      "GT_semantic_oracle": {
+        "0.0": 0.75,
+        "-0.45": 0.75,
+        "0.45": 0.75
+      },
+      "RGB_hard_segmentation": {
+        "0.0": 0.75,
+        "-0.45": 0.75,
+        "0.45": 0.75
+      },
+      "original_route_status": "blocked_safe_stop"
+    },
+    {
+      "run_id": "phase10-drive-left-2-audit-v1-001",
+      "frame": 28911,
+      "state": "SIGNAL_STOP",
+      "actual_RGB_soft_road_fractions": {
+        "0.0": 0.7777777777777778,
+        "-0.45": 0.7777777777777778,
+        "0.45": 0.7777777777777778
+      },
+      "GT_semantic_oracle": {
+        "0.0": 0.7777777777777778,
+        "-0.45": 0.7777777777777778,
+        "0.45": 0.7777777777777778
+      },
+      "RGB_hard_segmentation": {
+        "0.0": 0.7777777777777778,
+        "-0.45": 0.7777777777777778,
+        "0.45": 0.7777777777777778
+      },
+      "original_route_status": "blocked_safe_stop"
+    },
+    {
+      "run_id": "phase10-drive-right-1-audit-v1-001",
+      "frame": 29001,
+      "state": "CRUISE",
+      "actual_RGB_soft_road_fractions": {
+        "0.0": 0.8888888888888888,
+        "-0.45": 0.8888888888888888,
+        "0.45": 0.8888888888888888
+      },
+      "GT_semantic_oracle": {
+        "0.0": 0.8888888888888888,
+        "-0.45": 0.8888888888888888,
+        "0.45": 0.8888888888888888
+      },
+      "RGB_hard_segmentation": {
+        "0.0": 0.8888888888888888,
+        "-0.45": 0.8888888888888888,
+        "0.45": 0.8888888888888888
+      },
+      "original_route_status": "simulation_timeout"
+    },
+    {
+      "run_id": "phase10-drive-right-1-audit-v1-001",
+      "frame": 29891,
+      "state": "SIGNAL_STOP",
+      "actual_RGB_soft_road_fractions": {
+        "0.0": 0.875,
+        "-0.45": 0.875,
+        "0.45": 0.875
+      },
+      "GT_semantic_oracle": {
+        "0.0": 0.875,
+        "-0.45": 0.875,
+        "0.45": 0.875
+      },
+      "RGB_hard_segmentation": {
+        "0.0": 0.875,
+        "-0.45": 0.875,
+        "0.45": 0.875
+      },
+      "original_route_status": "simulation_timeout"
+    },
+    {
+      "run_id": "phase10-drive-right-2-audit-v1-001",
+      "frame": 29978,
+      "state": "CRUISE",
+      "actual_RGB_soft_road_fractions": {
+        "0.0": 0.8888888888888888,
+        "-0.45": 0.8888888888888888,
+        "0.45": 0.8888888888888888
+      },
+      "GT_semantic_oracle": {
+        "0.0": 0.8888888888888888,
+        "-0.45": 0.8888888888888888,
+        "0.45": 0.8888888888888888
+      },
+      "RGB_hard_segmentation": {
+        "0.0": 0.8888888888888888,
+        "-0.45": 0.8888888888888888,
+        "0.45": 0.8888888888888888
+      },
+      "original_route_status": "blocked_safe_stop"
+    },
+    {
+      "run_id": "phase10-drive-right-2-audit-v1-001",
+      "frame": 30328,
+      "state": "FAILSAFE",
+      "actual_RGB_soft_road_fractions": {
+        "0.0": 0.4666666666666667,
+        "-0.45": 0.4666666666666667,
+        "0.45": 0.5333333333333333
+      },
+      "GT_semantic_oracle": {
+        "0.0": 0.4666666666666667,
+        "-0.45": 0.4666666666666667,
+        "0.45": 0.5333333333333333
+      },
+      "RGB_hard_segmentation": {
+        "0.0": 0.4666666666666667,
+        "-0.45": 0.4666666666666667,
+        "0.45": 0.5333333333333333
+      },
+      "original_route_status": "blocked_safe_stop"
+    },
+    {
+      "run_id": "phase10-drive-right-2-audit-v1-001",
+      "frame": 30208,
+      "state": "FAILSAFE",
+      "actual_RGB_soft_road_fractions": {
+        "0.0": 0.4666666666666667,
+        "-0.45": 0.4666666666666667,
+        "0.45": 0.5333333333333333
+      },
+      "GT_semantic_oracle": {
+        "0.0": 0.4666666666666667,
+        "-0.45": 0.4666666666666667,
+        "0.45": 0.5333333333333333
+      },
+      "RGB_hard_segmentation": {
+        "0.0": 0.4666666666666667,
+        "-0.45": 0.4666666666666667,
+        "0.45": 0.5333333333333333
+      },
+      "original_route_status": "blocked_safe_stop"
+    },
+    {
+      "run_id": "phase10-drive-straight-1-audit-v1-001",
+      "frame": 27244,
+      "state": "CRUISE",
+      "actual_RGB_soft_road_fractions": {
+        "0.0": 0.8888888888888888,
+        "-0.45": 0.8888888888888888,
+        "0.45": 0.8888888888888888
+      },
+      "GT_semantic_oracle": {
+        "0.0": 0.8888888888888888,
+        "-0.45": 0.8888888888888888,
+        "0.45": 0.8888888888888888
+      },
+      "RGB_hard_segmentation": {
+        "0.0": 0.8888888888888888,
+        "-0.45": 0.8888888888888888,
+        "0.45": 0.8888888888888888
+      },
+      "original_route_status": "arrived"
+    },
+    {
+      "run_id": "phase10-drive-straight-1-audit-v1-001",
+      "frame": 27424,
+      "state": "CRUISE",
+      "actual_RGB_soft_road_fractions": {
+        "0.0": 0.7777777777777778,
+        "-0.45": 0.7777777777777778,
+        "0.45": 0.7777777777777778
+      },
+      "GT_semantic_oracle": {
+        "0.0": 0.7777777777777778,
+        "-0.45": 0.7777777777777778,
+        "0.45": 0.7777777777777778
+      },
+      "RGB_hard_segmentation": {
+        "0.0": 0.7777777777777778,
+        "-0.45": 0.7777777777777778,
+        "0.45": 0.7777777777777778
+      },
+      "original_route_status": "arrived"
+    },
+    {
+      "run_id": "phase10-drive-straight-2-audit-v1-001",
+      "frame": 27508,
+      "state": "CRUISE",
+      "actual_RGB_soft_road_fractions": {
+        "0.0": 0.8888888888888888,
+        "-0.45": 0.8888888888888888,
+        "0.45": 0.8888888888888888
+      },
+      "GT_semantic_oracle": {
+        "0.0": 0.8888888888888888,
+        "-0.45": 0.8888888888888888,
+        "0.45": 0.8888888888888888
+      },
+      "RGB_hard_segmentation": {
+        "0.0": 0.8888888888888888,
+        "-0.45": 0.8888888888888888,
+        "0.45": 0.8888888888888888
+      },
+      "original_route_status": "arrived"
+    },
+    {
+      "run_id": "phase10-drive-straight-2-audit-v1-001",
+      "frame": 27688,
+      "state": "CRUISE",
+      "actual_RGB_soft_road_fractions": {
+        "0.0": 0.7777777777777778,
+        "-0.45": 0.7777777777777778,
+        "0.45": 0.7777777777777778
+      },
+      "GT_semantic_oracle": {
+        "0.0": 0.7777777777777778,
+        "-0.45": 0.7777777777777778,
+        "0.45": 0.7777777777777778
+      },
+      "RGB_hard_segmentation": {
+        "0.0": 0.7777777777777778,
+        "-0.45": 0.7777777777777778,
+        "0.45": 0.7777777777777778
+      },
+      "original_route_status": "arrived"
+    }
+  ],
+  "minimum_fraction_unchanged": 0.6,
+  "used_for_vehicle_control": false,
+  "limits": [
+    "GT labels and model hard labels projected under the SAME flat-ground geometry; this is not independent metric BEV/depth accuracy.",
+    "If even GT semantic support is low, inspect geometry/map/visibility sampling; hard-vs-soft gaps can implicate probability confidence gates.",
+    "First/last sampled GT bundle plus first sampled FAILSAFE in each of six fixed routes; no success/threshold tuning."
+  ],
+  "tool_sha256": "c4f7a45b64e79573ac9758987782093a735e13af8125494abf75a319a46f5a30"
+}

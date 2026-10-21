@@ -1,16 +1,19 @@
 """Build a local CPU-only replay kit with one genuine eight-RGB driving run."""
 from pathlib import Path
-import hashlib,json,shutil,zipfile
+import argparse,hashlib,json,re,shutil,zipfile
 ROOT=Path(__file__).resolve().parents[1]
 def sha(p):
     with p.open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
 def main():
-    out=ROOT/'artifacts/runs/phase89-portable-replay-v1-001';archive=ROOT/'artifacts/runs/phase89-portable-replay-v1-001.zip'
+    parser=argparse.ArgumentParser();parser.add_argument('--name',default='phase89-portable-replay-v1-001');args=parser.parse_args()
+    if not re.fullmatch(r'phase(?:89|10)-portable-replay-v[0-9]+-[0-9]+',args.name):raise ValueError('Invalid local kit version name')
+    phase='phase10' if args.name.startswith('phase10-') else 'phase89'
+    out=ROOT/'artifacts/runs'/args.name;archive=ROOT/'artifacts/runs'/(args.name+'.zip')
     if out.exists() or archive.exists():raise FileExistsError('New kit path required')
     out.mkdir(parents=True)
     def copy(p):
         target=out/p.relative_to(ROOT);target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(p,target)
-    for n in ['__init__.py','core.py','frames.py','navigation.py','navigation_io.py','navigation_lock.py','navigation_runtime.py','navigation_service.py']:copy(ROOT/'src/senior_ai'/n)
+    for n in ['__init__.py','core.py','frames.py','navigation.py','navigation_io.py','navigation_lock.py','navigation_safety.py','navigation_atomic.py','navigation_runtime.py','navigation_service.py']:copy(ROOT/'src/senior_ai'/n)
     for n in ['navigation.html','navigation.css','navigation.js','navigation-contract.js']:copy(ROOT/'web/world-viewer'/n)
     for p in (ROOT/'web/world-viewer/vendor').glob('*'):
         if p.is_file():copy(p)
@@ -39,5 +42,7 @@ Copy this entire folder or extract the ZIP before running; keep PNG/JSON paths i
              'archive':archive.relative_to(ROOT).as_posix(),'archive_sha256':sha(archive),'archive_bytes':archive.stat().st_size,
              'kit_files':len(manifest)+1,'GPU_or_CARLA_required':False,'Torch_import_required':False,'uploaded':False,
              'source_sha256':sha(Path(__file__))}
-    (ROOT/'artifacts/reports/phase89-portable-kit-final.json').write_text(json.dumps(receipt,indent=2)+'\n',encoding='utf8');print(receipt)
+    receipt_path=ROOT/f'artifacts/reports/{phase}-portable-kit-final.json'
+    if receipt_path.exists():raise FileExistsError(receipt_path)
+    receipt_path.write_text(json.dumps(receipt,indent=2)+'\n',encoding='utf8');print(receipt)
 if __name__=='__main__':main()

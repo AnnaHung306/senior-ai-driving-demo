@@ -1,0 +1,145 @@
+{
+  "status": "passed_real_loopback_replay_only_HTTP",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/navigation.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/navigation.css",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/navigation-contract.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/vendor/three.module.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/vendor/three.core.js",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/navigation/catalog",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/navigation/state",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/navigation/runs",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/PHASE89.md",
+      "status": 404,
+      "method": "GET"
+    },
+    {
+      "path": "/data/labels/a.json",
+      "status": 404,
+      "method": "GET"
+    },
+    {
+      "path": "/../configs/phase89_navigation_v1.json",
+      "status": 404,
+      "method": "GET"
+    },
+    {
+      "path": "/vendor/provenance.json",
+      "status": 404,
+      "method": "GET"
+    },
+    {
+      "path": "/api/navigation/state",
+      "status": 403,
+      "method": "GET"
+    },
+    {
+      "path": "/api/navigation/start",
+      "status": 403,
+      "method": "POST"
+    },
+    {
+      "path": "/api/navigation/start",
+      "status": 415,
+      "method": "POST"
+    },
+    {
+      "path": "/api/navigation/start",
+      "status": 413,
+      "method": "POST"
+    },
+    {
+      "path": "/api/navigation/start",
+      "status": 422,
+      "method": "POST"
+    },
+    {
+      "path": "/api/navigation/start",
+      "status": 409,
+      "method": "POST"
+    },
+    {
+      "path": "/api/navigation/preview",
+      "status": 409,
+      "method": "POST"
+    },
+    {
+      "path": "/api/navigation/preview",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "path": "/api/navigation/replay",
+      "status": 422,
+      "method": "POST"
+    },
+    {
+      "path": "/api/navigation/rgb?camera=front&frame=0",
+      "status": 422,
+      "method": "GET"
+    },
+    {
+      "path": "/api/navigation/rgb?camera=front&frame=0&run_id=../secret",
+      "status": 422,
+      "method": "GET"
+    },
+    {
+      "path": "/api/navigation/rgb?camera=front&camera=rear&frame=0",
+      "status": 422,
+      "method": "GET"
+    },
+    {
+      "path": "/artifacts/runs/phase10-drive-a/audit/00000001.json",
+      "status": 404,
+      "method": "GET"
+    },
+    {
+      "path": "/vendor/OrbitControls.js",
+      "status": 200,
+      "method": "GET"
+    }
+  ],
+  "CARLA_RPC_not_listening": true,
+  "replay_only_prevents_start": true,
+  "public_catalog_omits_training_GT_metadata": true,
+  "source_sha256": "2779fabef61321f7be54f70864536020e7e8740197f8fa6443b68436ef3c8f98",
+  "formal_quality_passed": false
+}

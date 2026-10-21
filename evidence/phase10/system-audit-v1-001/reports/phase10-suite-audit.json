@@ -1,0 +1,44 @@
+[
+  {
+    "run_id": "phase10-drive-straight-1-audit-v1-001",
+    "status": "arrived",
+    "passed": true,
+    "frames": 94,
+    "report_sha256": "22f65561fee76d5e20e272195bb17166190e516f66788c1239cb168528e7729d"
+  },
+  {
+    "run_id": "phase10-drive-straight-2-audit-v1-001",
+    "status": "arrived",
+    "passed": true,
+    "frames": 94,
+    "report_sha256": "4af8ab5d48dbd7ea9d50dedda4affe73a18ae6af5a3c79e2b5d68574d7671125"
+  },
+  {
+    "run_id": "phase10-drive-left-1-audit-v1-001",
+    "status": "blocked_safe_stop",
+    "passed": false,
+    "frames": 246,
+    "report_sha256": "11a723775a6a60c5febcc8b041beb9286ad3b15322ac70847e65953fb99dfe15"
+  },
+  {
+    "run_id": "phase10-drive-left-2-audit-v1-001",
+    "status": "blocked_safe_stop",
+    "passed": false,
+    "frames": 289,
+    "report_sha256": "2557ed249f7942625bb0da8c1120cbf7120b63af00ca28ea03ba585ff9c73f40"
+  },
+  {
+    "run_id": "phase10-drive-right-1-audit-v1-001",
+    "status": "simulation_timeout",
+    "passed": false,
+    "frames": 450,
+    "report_sha256": "80f197c11e96469c1a2a9b53c496f504a998e3b2b4aa91b5775b2e46cab3d128"
+  },
+  {
+    "run_id": "phase10-drive-right-2-audit-v1-001",
+    "status": "blocked_safe_stop",
+    "passed": false,
+    "frames": 176,
+    "report_sha256": "8803a83f4914963a165b2eaeffced9bde1b768ebffde872658ce157b05255646"
+  }
+]

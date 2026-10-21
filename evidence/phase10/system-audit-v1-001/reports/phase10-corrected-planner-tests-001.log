@@ -1,0 +1,29 @@
+test_adjacent_object_does_not_stop (test_navigation.NavigationTests.test_adjacent_object_does_not_stop) ... ok
+test_blocker_stops_following_and_crossing (test_navigation.NavigationTests.test_blocker_stops_following_and_crossing) ... ok
+test_brake_has_no_throttle (test_navigation.NavigationTests.test_brake_has_no_throttle) ... ok
+test_controller_follows_right_and_rate_limit (test_navigation.NavigationTests.test_controller_follows_right_and_rate_limit) ... ok
+test_cruise_uses_RGB_road (test_navigation.NavigationTests.test_cruise_uses_RGB_road) ... ok
+test_cursor_segment_projection_and_no_backward_progress (test_navigation.NavigationTests.test_cursor_segment_projection_and_no_backward_progress) ... ok
+test_curved_route_reduces_speed (test_navigation.NavigationTests.test_curved_route_reduces_speed) ... ok
+test_distant_lead_lowers_speed (test_navigation.NavigationTests.test_distant_lead_lowers_speed) ... ok
+test_goal_brake_then_arrive (test_navigation.NavigationTests.test_goal_brake_then_arrive) ... ok
+test_held_obstacle_remains_a_planning_constraint (test_navigation.NavigationTests.test_held_obstacle_remains_a_planning_constraint) ... ok
+test_large_deviation_stops (test_navigation.NavigationTests.test_large_deviation_stops) ... ok
+test_no_road_is_failsafe (test_navigation.NavigationTests.test_no_road_is_failsafe) ... ok
+test_nonfinite_objects_and_feedback_rejected (test_navigation.NavigationTests.test_nonfinite_objects_and_feedback_rejected) ... ok
+test_obstruction_is_named_when_RGB_road_unavailable (test_navigation.NavigationTests.test_obstruction_is_named_when_RGB_road_unavailable) ... ok
+test_red_requires_stable_green (test_navigation.NavigationTests.test_red_requires_stable_green) ... ok
+test_reversed_clock_rejected (test_navigation.NavigationTests.test_reversed_clock_rejected) ... ok
+test_route_validation (test_navigation.NavigationTests.test_route_validation) ... ok
+test_stale_missing_and_future (test_navigation.NavigationTests.test_stale_missing_and_future) ... ok
+test_synthetic_bicycle_straight_and_turn_closed_loop (test_navigation.NavigationTests.test_synthetic_bicycle_straight_and_turn_closed_loop) ... ok
+test_transform_right_hand_navigation (test_navigation.NavigationTests.test_transform_right_hand_navigation) ... ok
+test_unknown_offset_never_used (test_navigation.NavigationTests.test_unknown_offset_never_used) ... ok
+test_unknown_signal_holds_and_disappearance_not_green (test_navigation.NavigationTests.test_unknown_signal_holds_and_disappearance_not_green) ... ok
+test_unverified_lane_changes_are_rejected (test_navigation.NavigationTests.test_unverified_lane_changes_are_rejected) ... ok
+test_valid_same_lane_offset_clears_small_obstacle (test_navigation.NavigationTests.test_valid_same_lane_offset_clears_small_obstacle) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.460s
+
+OK

@@ -1,0 +1,540 @@
+{
+  "status": "completed_systematic_bounded_engineering_audit",
+  "created_utc": "2026-10-21T04:10:19.201920+00:00",
+  "baseline_commit": "f378cd1",
+  "formal_quality_passed": false,
+  "all_possible_bugs_proven_absent": false,
+  "attempts": 24,
+  "nonempty_runs": 23,
+  "saved_frames": 2194,
+  "timed_cycles": 2193,
+  "RGB_images": 17552,
+  "GT_and_predicted_semantic_images": 6288,
+  "original_preselected_routes": [
+    {
+      "run_id": "phase10-drive-left-1-audit-v1-001",
+      "status": "blocked_safe_stop",
+      "passed": false,
+      "frames": 246,
+      "wall_s": 419.2029999999795,
+      "sim_s": 49.2,
+      "checks": {
+        "arrived_stopped": false,
+        "collision_free": true,
+        "no_solid_lane_crossing": true,
+        "cross_track_within_1_5m": true,
+        "cleanup": true,
+        "cleanup_stopped": true,
+        "source_exact": true,
+        "no_errors": true
+      },
+      "distance_m": 50.55565454284171,
+      "events": {
+        "collisions": [],
+        "lane_invasions": []
+      },
+      "goal_distance_m": 5.582424220023533,
+      "max_cross_track_m": 0.7971014377465545,
+      "state_counts": {
+        "CRUISE": 105,
+        "SIGNAL_STOP": 141
+      },
+      "cleanup_speed_mps": 0.0,
+      "observer_enabled": true,
+      "startup": {
+        "wall_s_before_first_cycle": 1.5939999999827705,
+        "evaluation_observer_enabled": true
+      }
+    },
+    {
+      "run_id": "phase10-drive-left-2-audit-v1-001",
+      "status": "blocked_safe_stop",
+      "passed": false,
+      "frames": 289,
+      "wall_s": 492.35899999999674,
+      "sim_s": 57.800000000000004,
+      "checks": {
+        "arrived_stopped": false,
+        "collision_free": true,
+        "no_solid_lane_crossing": true,
+        "cross_track_within_1_5m": true,
+        "cleanup": true,
+        "cleanup_stopped": true,
+        "source_exact": true,
+        "no_errors": true
+      },
+      "distance_m": 88.85702981731194,
+      "events": {
+        "collisions": [],
+        "lane_invasions": []
+      },
+      "goal_distance_m": 32.49612968573729,
+      "max_cross_track_m": 0.6856165747462367,
+      "state_counts": {
+        "CRUISE": 114,
+        "YIELD_OFFSET": 4,
+        "SIGNAL_STOP": 171
+      },
+      "cleanup_speed_mps": 0.0,
+      "observer_enabled": true,
+      "startup": {
+        "wall_s_before_first_cycle": 1.702999999979511,
+        "evaluation_observer_enabled": true
+      }
+    },
+    {
+      "run_id": "phase10-drive-right-1-audit-v1-001",
+      "status": "simulation_timeout",
+      "passed": false,
+      "frames": 450,
+      "wall_s": 787.890000000014,
+      "sim_s": 90.0,
+      "checks": {
+        "arrived_stopped": false,
+        "collision_free": true,
+        "no_solid_lane_crossing": true,
+        "cross_track_within_1_5m": true,
+        "cleanup": true,
+        "cleanup_stopped": true,
+        "source_exact": true,
+        "no_errors": true
+      },
+      "distance_m": 66.11898024089962,
+      "events": {
+        "collisions": [],
+        "lane_invasions": []
+      },
+      "goal_distance_m": 24.994959508534198,
+      "max_cross_track_m": 0.276088228960425,
+      "state_counts": {
+        "CRUISE": 66,
+        "SIGNAL_STOP": 384
+      },
+      "cleanup_speed_mps": 0.0,
+      "observer_enabled": true,
+      "startup": {
+        "wall_s_before_first_cycle": 1.9060000000172295,
+        "evaluation_observer_enabled": true
+      }
+    },
+    {
+      "run_id": "phase10-drive-right-2-audit-v1-001",
+      "status": "blocked_safe_stop",
+      "passed": false,
+      "frames": 176,
+      "wall_s": 314.40600000001723,
+      "sim_s": 35.2,
+      "checks": {
+        "arrived_stopped": false,
+        "collision_free": true,
+        "no_solid_lane_crossing": true,
+        "cross_track_within_1_5m": true,
+        "cleanup": true,
+        "cleanup_stopped": true,
+        "source_exact": true,
+        "no_errors": true
+      },
+      "distance_m": 39.61286282012663,
+      "events": {
+        "collisions": [],
+        "lane_invasions": []
+      },
+      "goal_distance_m": 7.32047209864305,
+      "max_cross_track_m": 0.9160552213398507,
+      "state_counts": {
+        "CRUISE": 68,
+        "SIGNAL_STOP": 36,
+        "FOLLOW": 8,
+        "YIELD_OFFSET": 2,
+        "FAILSAFE": 62
+      },
+      "cleanup_speed_mps": 0.0,
+      "observer_enabled": true,
+      "startup": {
+        "wall_s_before_first_cycle": 1.797000000020489,
+        "evaluation_observer_enabled": true
+      }
+    },
+    {
+      "run_id": "phase10-drive-straight-1-audit-v1-001",
+      "status": "arrived",
+      "passed": true,
+      "frames": 94,
+      "wall_s": 162.9529999999795,
+      "sim_s": 18.8,
+      "checks": {
+        "arrived_stopped": true,
+        "collision_free": true,
+        "no_solid_lane_crossing": true,
+        "cross_track_within_1_5m": true,
+        "cleanup": true,
+        "cleanup_stopped": true,
+        "source_exact": true,
+        "no_errors": true
+      },
+      "distance_m": 53.999985365313655,
+      "events": {
+        "collisions": [],
+        "lane_invasions": []
+      },
+      "goal_distance_m": 1.8955093847599418,
+      "max_cross_track_m": 0.30339103211426177,
+      "state_counts": {
+        "CRUISE": 91,
+        "OBSTACLE_STOP": 1,
+        "GOAL_BRAKE": 1,
+        "ARRIVED": 1
+      },
+      "cleanup_speed_mps": 0.0,
+      "observer_enabled": true,
+      "startup": {
+        "wall_s_before_first_cycle": 3.625,
+        "evaluation_observer_enabled": true
+      }
+    },
+    {
+      "run_id": "phase10-drive-straight-2-audit-v1-001",
+      "status": "arrived",
+      "passed": true,
+      "frames": 94,
+      "wall_s": 158.1720000000205,
+      "sim_s": 18.8,
+      "checks": {
+        "arrived_stopped": true,
+        "collision_free": true,
+        "no_solid_lane_crossing": true,
+        "cross_track_within_1_5m": true,
+        "cleanup": true,
+        "cleanup_stopped": true,
+        "source_exact": true,
+        "no_errors": true
+      },
+      "distance_m": 54.00000031432137,
+      "events": {
+        "collisions": [],
+        "lane_invasions": []
+      },
+      "goal_distance_m": 1.6543275051704145,
+      "max_cross_track_m": 0.24885315448902248,
+      "state_counts": {
+        "CRUISE": 92,
+        "GOAL_BRAKE": 1,
+        "ARRIVED": 1
+      },
+      "cleanup_speed_mps": 0.0,
+      "observer_enabled": true,
+      "startup": {
+        "wall_s_before_first_cycle": 1.7030000000377186,
+        "evaluation_observer_enabled": true
+      }
+    }
+  ],
+  "original_route_completion": "2/6",
+  "controlled_final_cases_not_replacement_denominator": [
+    {
+      "run_id": "phase10-drive-bicycle-probe-v1-002",
+      "status": "arrived",
+      "passed": true,
+      "frames": 65,
+      "wall_s": 89.43799999996554,
+      "sim_s": 13.0,
+      "checks": {
+        "arrived_stopped": true,
+        "collision_free": true,
+        "no_solid_lane_crossing": true,
+        "cross_track_within_1_5m": true,
+        "cleanup": true,
+        "cleanup_stopped": true,
+        "source_exact": true,
+        "no_errors": true
+      },
+      "distance_m": 28.00000381913951,
+      "events": {
+        "collisions": [],
+        "lane_invasions": []
+      },
+      "goal_distance_m": 1.6314699978222151,
+      "max_cross_track_m": 0.0499086757589282,
+      "state_counts": {
+        "CRUISE": 34,
+        "FOLLOW": 23,
+        "OBSTACLE_STOP": 5,
+        "GOAL_BRAKE": 2,
+        "ARRIVED": 1
+      },
+      "cleanup_speed_mps": 0.0,
+      "observer_enabled": true,
+      "startup": {
+        "wall_s_before_first_cycle": 4.812999999965541,
+        "evaluation_observer_enabled": true
+      }
+    },
+    {
+      "run_id": "phase10-drive-blocker-probe-v1-002",
+      "status": "arrived",
+      "passed": true,
+      "frames": 76,
+      "wall_s": 103.96899999998277,
+      "sim_s": 15.200000000000001,
+      "checks": {
+        "arrived_stopped": true,
+        "collision_free": true,
+        "no_solid_lane_crossing": true,
+        "cross_track_within_1_5m": true,
+        "cleanup": true,
+        "cleanup_stopped": true,
+        "source_exact": true,
+        "no_errors": true
+      },
+      "distance_m": 28.00000381913951,
+      "events": {
+        "collisions": [],
+        "lane_invasions": []
+      },
+      "goal_distance_m": 1.543857998851544,
+      "max_cross_track_m": 0.0499086757589282,
+      "state_counts": {
+        "CRUISE": 40,
+        "FOLLOW": 16,
+        "YIELD_OFFSET": 13,
+        "OBSTACLE_STOP": 5,
+        "GOAL_BRAKE": 1,
+        "ARRIVED": 1
+      },
+      "cleanup_speed_mps": 0.0,
+      "observer_enabled": true,
+      "startup": {
+        "wall_s_before_first_cycle": 5.23499999998603,
+        "evaluation_observer_enabled": true
+      }
+    },
+    {
+      "run_id": "phase10-drive-lead-probe-v1-001",
+      "status": "arrived",
+      "passed": true,
+      "frames": 111,
+      "wall_s": 149.71900000004098,
+      "sim_s": 22.200000000000003,
+      "checks": {
+        "arrived_stopped": true,
+        "collision_free": true,
+        "no_solid_lane_crossing": true,
+        "cross_track_within_1_5m": true,
+        "cleanup": true,
+        "cleanup_stopped": true,
+        "source_exact": true,
+        "no_errors": true
+      },
+      "distance_m": 28.00000381913951,
+      "events": {
+        "collisions": [],
+        "lane_invasions": []
+      },
+      "goal_distance_m": 1.777997706599385,
+      "max_cross_track_m": 0.06995966808335553,
+      "state_counts": {
+        "CRUISE": 17,
+        "FOLLOW": 63,
+        "YIELD_OFFSET": 19,
+        "OBSTACLE_STOP": 9,
+        "GOAL_BRAKE": 2,
+        "ARRIVED": 1
+      },
+      "cleanup_speed_mps": 0.0,
+      "observer_enabled": true,
+      "startup": {
+        "wall_s_before_first_cycle": 4.969000000040978,
+        "evaluation_observer_enabled": true
+      }
+    },
+    {
+      "run_id": "phase10-drive-long-red-probe-v1-001",
+      "status": "arrived",
+      "passed": true,
+      "frames": 236,
+      "wall_s": 304.34399999998277,
+      "sim_s": 47.2,
+      "checks": {
+        "arrived_stopped": true,
+        "collision_free": true,
+        "no_solid_lane_crossing": true,
+        "cross_track_within_1_5m": true,
+        "cleanup": true,
+        "cleanup_stopped": true,
+        "source_exact": true,
+        "no_errors": true
+      },
+      "distance_m": 50.788235055881216,
+      "events": {
+        "collisions": [],
+        "lane_invasions": []
+      },
+      "goal_distance_m": 1.5622768912059903,
+      "max_cross_track_m": 0.7051094347830135,
+      "state_counts": {
+        "CRUISE": 115,
+        "SIGNAL_STOP": 118,
+        "GOAL_BRAKE": 2,
+        "ARRIVED": 1
+      },
+      "cleanup_speed_mps": 0.0,
+      "observer_enabled": true,
+      "startup": {
+        "wall_s_before_first_cycle": 4.797000000020489,
+        "evaluation_observer_enabled": true
+      }
+    },
+    {
+      "run_id": "phase10-drive-pedestrian-probe-v1-001",
+      "status": "arrived",
+      "passed": true,
+      "frames": 67,
+      "wall_s": 93.92200000002049,
+      "sim_s": 13.4,
+      "checks": {
+        "arrived_stopped": true,
+        "collision_free": true,
+        "no_solid_lane_crossing": true,
+        "cross_track_within_1_5m": true,
+        "cleanup": true,
+        "cleanup_stopped": true,
+        "source_exact": true,
+        "no_errors": true
+      },
+      "distance_m": 28.00000381913951,
+      "events": {
+        "collisions": [],
+        "lane_invasions": []
+      },
+      "goal_distance_m": 1.6856297765452768,
+      "max_cross_track_m": 0.07368985165563584,
+      "state_counts": {
+        "CRUISE": 41,
+        "FOLLOW": 19,
+        "YIELD_OFFSET": 3,
+        "OBSTACLE_STOP": 1,
+        "GOAL_BRAKE": 2,
+        "ARRIVED": 1
+      },
+      "cleanup_speed_mps": 0.0,
+      "observer_enabled": true,
+      "startup": {
+        "wall_s_before_first_cycle": 4.3439999999827705,
+        "evaluation_observer_enabled": true
+      }
+    }
+  ],
+  "models_unchanged": {
+    "segmentation": {
+      "path": "artifacts/runs/sunny-segmentation-v6-001/best.pt",
+      "sha256": "0a3fe3f66fb93be373f2e82218632a4f8cc277bf6067f48bb4683a71f1b2af30"
+    },
+    "detection": {
+      "path": "artifacts/runs/sunny-detection-v6-001/best.pt",
+      "sha256": "ba6d2f4269a7f3f95e4b92d7daff1f330f4203a4619e1f5902c752aa371f7155"
+    },
+    "phase": {
+      "path": "artifacts/runs/sunny-light-state-v1-004/best.pt",
+      "sha256": "f9836ef6474d74b607124cbb4887492105b3949f23d3c9065741d86c160b451e"
+    },
+    "cuboid": {
+      "path": "artifacts/runs/phase5-cuboid-v1-001/best.pt",
+      "sha256": "1ad8ccbf8e5409b476219b8ecaf0924922a756c19b845043b9cbeae99fd32f6f"
+    }
+  },
+  "runtime_example": {
+    "python": "3.12.14",
+    "torch": "2.10.0+cu128",
+    "CUDA": "12.8",
+    "carla": "0.9.16"
+  },
+  "earlier_contracts_without_explicit_cuboid_entry": [
+    "phase10-drive-left-1-audit-v1-001",
+    "phase10-drive-left-2-audit-v1-001",
+    "phase10-drive-right-1-audit-v1-001",
+    "phase10-drive-right-2-audit-v1-001",
+    "phase10-drive-setup-fault-v1-001",
+    "phase10-drive-straight-1-audit-v1-001",
+    "phase10-drive-straight-2-audit-v1-001"
+  ],
+  "earlier_cuboid_binding": "Literal expected SHA in contemporaneously frozen live_perception.py; later contracts also list cuboid explicitly. Setup-fault exits before model loading.",
+  "source_coverage_version_counts": {
+    "full_loaded_dependency_closure": 17,
+    "legacy_main_adapter_snapshot": 7
+  },
+  "old_tracked_phase0_through89_evidence_changed": false,
+  "development_lockbox_scored": false,
+  "training_or_new_packages": false,
+  "RGB_bytes_local": 6000625990,
+  "GT_and_predicted_PNG_bytes_local": 58992917,
+  "browser_renderer_geometry_min": 1,
+  "browser_renderer_geometry_max": 12,
+  "browser_renderer_geometry_final": 1,
+  "browser_renderer_texture_max": 0,
+  "resource_leak_soak_passed": false,
+  "completeness_matrix": [
+    {
+      "area": "fixed_new_routes",
+      "result": "2/6 arrived; all six preserved",
+      "coverage_gap": "same-town assets, no heldout claim"
+    },
+    {
+      "area": "2D_accuracy",
+      "result": "3144 visible GT/pred mask images; AP50:95/class/size/confusion/score analysis",
+      "coverage_gap": "no GT for bus/motorcycle/temporary obstacle; visible-mask protocol differs old validation"
+    },
+    {
+      "area": "3D_and_forecast",
+      "result": "51 dynamic GT; strict and ignore-aware; learned/prior paired33; CV/persistence paired14 at2s",
+      "coverage_gap": "sparse tracking, low future coverage, no full MOT/occupancy-depth GT"
+    },
+    {
+      "area": "signal_state",
+      "result": "1084 phase-bracketed samples, exact CPU head inputs; ROI association diagnostic",
+      "coverage_gap": "234 excluded; association and actual violation certification unresolved"
+    },
+    {
+      "area": "performance",
+      "result": "2193 timed cycles; 257 noGT; paired cache and PNG; loopback timing",
+      "coverage_gap": "one old applied-control record missing timing before instrumentation repair; no public-network or per-kernel GPU trace"
+    },
+    {
+      "area": "UI",
+      "result": "67 final frames,83 objects,64 Float32 forecasts; eight RGB; desktop/mobile; actual drag/play/seek",
+      "coverage_gap": "real200% zoom not verified; small text and RAF long frames remain"
+    },
+    {
+      "area": "faults_lifecycle",
+      "result": "real sensor.stop, validity, setup exception, WebGL loss, close/watchdog, lock contention",
+      "coverage_gap": "no intentional live solid-line crossing; finite tested cases not all failures"
+    },
+    {
+      "area": "resources_storage",
+      "result": "30 shared-device samples; per-frame renderer resources and actual artifact sizes",
+      "coverage_gap": "no sustained soak or per-model memory isolation"
+    },
+    {
+      "area": "delivery",
+      "result": "CPU replay ZIP609 manifestfiles/512RGB; focused real13.4s WebM",
+      "coverage_gap": "no external/public deployment; raw RGB and weights local ignored"
+    },
+    {
+      "area": "regression_provenance",
+      "result": "322 Python,52 JS,27 HTTP,2194 actual Three frames; frozen source/weights checks",
+      "coverage_gap": "engineering correctness is not formal model quality"
+    }
+  ],
+  "authoritative_evaluation": "artifacts/runs/phase10-evaluation-final-v1-002",
+  "authoritative_evaluation_sha256": "d59e552a67211af817b1fe1bc0ed8dac8e05f2cf4be3e98c615a3cc2c7418f73",
+  "input_manifest_sha256": "d0a6a9b68bf426796153386378dc65fb75ec21c6286e3eabfed51312664056dc",
+  "issues_document_sha256": "7bbed025644a96c9fecf2840d65922dcd3edcdfb5498e3a6327ec2273161d6a8",
+  "limits": [
+    "Fresh same-town audit routes, not old development/lockbox or heldout assets.",
+    "GT observer overhead is separated; semantic per-image accuracy does not establish BEV depth/occupancy accuracy.",
+    "Visible-box minimum16px/side4 diagnostic; no depth-based projection-support gate, not directly comparable to old dataset policy.",
+    "Dynamic GT actor visibility requires raw ID and capture snapshot. Traffic-light rendered instance masks only support 2D, not signal-state labels.",
+    "Static environment cars/trucks can have semantic masks without CARLA vehicle actors. Strict actor-only unmatched counts are not all certified false positives; ignore-aware supplemental counts retain these unassessed sources.",
+    "Sampled tracking switches are not full-rate MOT; FDE conditional coverage/right-censoring explicit, no all-GT success claim.",
+    "No-support classes, no matched dynamics, no future coverage remain unmeasured, never perfect."
+  ]
+}

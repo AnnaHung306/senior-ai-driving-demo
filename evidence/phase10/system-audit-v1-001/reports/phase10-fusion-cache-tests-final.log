@@ -1,0 +1,8 @@
+test_all_fusion_arrays_equal_across_different_surface_masks (test_road_fusion_cache.FusionCacheTests.test_all_fusion_arrays_equal_across_different_surface_masks) ... ok
+test_camera_set_change_requires_new_cache (test_road_fusion_cache.FusionCacheTests.test_camera_set_change_requires_new_cache) ... ok
+test_new_rig_projections_do_not_reuse_old_maps (test_road_fusion_cache.FusionCacheTests.test_new_rig_projections_do_not_reuse_old_maps) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.409s
+
+OK

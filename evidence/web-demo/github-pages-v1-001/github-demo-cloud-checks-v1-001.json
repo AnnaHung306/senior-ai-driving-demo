@@ -1,0 +1,25 @@
+{
+  "runs": [
+    {
+      "name": "pages build and deployment",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "f0579eca30cb6545aeb6804bd4004dfb4e66134f",
+      "html_url": "https://github.com/AnnaHung306/senior-ai-driving-demo/actions/runs/39559876097"
+    },
+    {
+      "name": "Static demo checks",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "f0579eca30cb6545aeb6804bd4004dfb4e66134f",
+      "html_url": "https://github.com/AnnaHung306/senior-ai-driving-demo/actions/runs/39559840320"
+    },
+    {
+      "name": "Static demo checks",
+      "status": "completed",
+      "conclusion": "failure",
+      "head_sha": "65b97b5bccd50a639263933aefa3ec6ed530d349",
+      "html_url": "https://github.com/AnnaHung306/senior-ai-driving-demo/actions/runs/39559692253"
+    }
+  ]
+}

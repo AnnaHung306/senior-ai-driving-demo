@@ -15,8 +15,13 @@ RUN_ID = 'phase10-drive-pedestrian-probe-v1-001'
 
 
 def sha(path):
+    # hashlib.file_digest is unavailable on Python 3.10, which is sufficient
+    # for maintaining the static demonstration without the training runtime.
+    digest = hashlib.sha256()
     with path.open('rb') as stream:
-        return hashlib.file_digest(stream, 'sha256').hexdigest()
+        for chunk in iter(lambda: stream.read(1024 * 1024), b''):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def read(path):

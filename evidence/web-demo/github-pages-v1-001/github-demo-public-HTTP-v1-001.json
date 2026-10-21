@@ -1,0 +1,160 @@
+{
+  "status": "passed_actual_static_deployment",
+  "url": "https://annahung306.github.io/senior-ai-driving-demo/",
+  "checks": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 9469,
+      "content_type": "text/html",
+      "sha256": "e56fd1dc5d87bec77956500363f078afcd7e4ed2d78230366626a7f52202e14d",
+      "exact": true
+    },
+    {
+      "path": "app.js",
+      "status": 200,
+      "bytes": 12760,
+      "content_type": "application/javascript",
+      "sha256": "60fcfb2454259298ee99eec5cf9548a0b1988ac7aa025e4d8e41a47eaaa16167",
+      "exact": true
+    },
+    {
+      "path": "replay.js",
+      "status": 200,
+      "bytes": 3389,
+      "content_type": "application/javascript",
+      "sha256": "d40bb6852226f1ea05d01efe19c924ab74f49d431a3f8bc2a2f7e122268ee8bf",
+      "exact": true
+    },
+    {
+      "path": "record-contract.js",
+      "status": 200,
+      "bytes": 2742,
+      "content_type": "application/javascript",
+      "sha256": "9ae4f498a783f8f1c304b70b55b279a094516f65786105ce6aabc61daa954469",
+      "exact": true
+    },
+    {
+      "path": "style.css",
+      "status": 200,
+      "bytes": 11537,
+      "content_type": "text/css",
+      "sha256": "625704467dd69a2142abf53c49d2fc98bcc9c1d3c3695a8977eefd592a7e8775",
+      "exact": true
+    },
+    {
+      "path": "vendor/three.module.js",
+      "status": 200,
+      "bytes": 603113,
+      "content_type": "application/javascript",
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+      "exact": true
+    },
+    {
+      "path": "vendor/three.core.js",
+      "status": 200,
+      "bytes": 1403455,
+      "content_type": "application/javascript",
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+      "exact": true
+    },
+    {
+      "path": "vendor/OrbitControls.js",
+      "status": 200,
+      "bytes": 38703,
+      "content_type": "application/javascript",
+      "sha256": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c",
+      "exact": true
+    },
+    {
+      "path": "data/route.json",
+      "status": 200,
+      "bytes": 4226737,
+      "content_type": "application/json",
+      "sha256": "5202c8990fd9364308d3c0482a3f40f6571ef3e01bf44ae2a4da3a8528c510df",
+      "exact": true
+    },
+    {
+      "path": "manifest.json",
+      "status": 200,
+      "bytes": 69795,
+      "content_type": "application/json",
+      "sha256": "9f548ea9a10ce621bddbaad33370d4ae0a1e57af8c4ac1ee8567a1bbcf23d8da",
+      "exact": true
+    },
+    {
+      "path": "media/driving-replay.webm",
+      "status": 200,
+      "bytes": 2483330,
+      "content_type": "video/webm",
+      "sha256": "62dfbf5faaba2d8e44ac6e5d2e49d910463993fe7d5cec3bedb79c9446f32982",
+      "exact": true
+    },
+    {
+      "path": "images/69246/front.jpg",
+      "status": 200,
+      "bytes": 35443,
+      "content_type": "image/jpeg",
+      "sha256": "73bfea9823af9753b6bd4d58a3caaa37d41f980ece7ddee7902a65910e33b0c2",
+      "exact": true
+    },
+    {
+      "path": "images/69246/front_right.jpg",
+      "status": 200,
+      "bytes": 30130,
+      "content_type": "image/jpeg",
+      "sha256": "ae6a4d7d9a39acf24ea1f104bc6c45eb321fa7283bb5515a160b1e71cc8964c0",
+      "exact": true
+    },
+    {
+      "path": "images/69246/right.jpg",
+      "status": 200,
+      "bytes": 52616,
+      "content_type": "image/jpeg",
+      "sha256": "0d63bfd9bc6dd1d0013b02d7effe88d834ce18f821e2d50c51d2d65edcfffd13",
+      "exact": true
+    },
+    {
+      "path": "images/69246/rear_right.jpg",
+      "status": 200,
+      "bytes": 59336,
+      "content_type": "image/jpeg",
+      "sha256": "f086f18a832db176388905ba0c4216c23caab6b35abb6382ae4e90fb7a994eaa",
+      "exact": true
+    },
+    {
+      "path": "images/69246/rear.jpg",
+      "status": 200,
+      "bytes": 38715,
+      "content_type": "image/jpeg",
+      "sha256": "9d6149de3cc512fb7ea57a7cd2df255bf4c83ed49d08c87a331707d19243ae31",
+      "exact": true
+    },
+    {
+      "path": "images/69246/rear_left.jpg",
+      "status": 200,
+      "bytes": 40012,
+      "content_type": "image/jpeg",
+      "sha256": "5c78de0af54954c3b9753502defa34e3b968355854da30e6928d9c7a515f276c",
+      "exact": true
+    },
+    {
+      "path": "images/69246/left.jpg",
+      "status": 200,
+      "bytes": 41150,
+      "content_type": "image/jpeg",
+      "sha256": "e6cc4fa4bc51eaa7884763cad9ec7b5db37b7be45a2561aebba446675381e976",
+      "exact": true
+    },
+    {
+      "path": "images/69246/front_left.jpg",
+      "status": 200,
+      "bytes": 36912,
+      "content_type": "image/jpeg",
+      "sha256": "3c1195736c19092b68befd37ed56c93686ea62eb4f8bd284fe369e3b4c4e8d86",
+      "exact": true
+    }
+  ],
+  "site_manifest_sha256": "9f548ea9a10ce621bddbaad33370d4ae0a1e57af8c4ac1ee8567a1bbcf23d8da",
+  "limits": "HTTP bytes/MIME check; browser rendering and interaction have separate receipts."
+}

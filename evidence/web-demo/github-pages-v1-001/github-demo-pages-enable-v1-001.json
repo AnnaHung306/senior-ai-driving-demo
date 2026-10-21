@@ -1,0 +1,29 @@
+{
+  "sampled_utc": "2026-10-21T07:07:56.770657+00:00",
+  "operation": "pages",
+  "repository": "https://github.com/AnnaHung306/senior-ai-driving-demo",
+  "created": false,
+  "private": false,
+  "default_branch": "main",
+  "credential_disclosed": false,
+  "pages_http_status": 201,
+  "pages": {
+    "html_url": "https://annahung306.github.io/senior-ai-driving-demo/",
+    "status": null,
+    "source": {
+      "branch": "main",
+      "path": "/docs"
+    },
+    "build_type": "legacy",
+    "https_enforced": true
+  },
+  "latest_build_http_status": 404,
+  "latest_build": {
+    "status": null,
+    "commit": null,
+    "duration": null,
+    "created_at": null,
+    "updated_at": null,
+    "error": null
+  }
+}

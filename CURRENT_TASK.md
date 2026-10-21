@@ -1,3 +1,13 @@
+## 2026-10-21 GitHub專案與公開網頁展示已部署
+
+使用者接受一段路線可展示即成功，授權放GitHub及部署網頁、補完整說明／註解。新公開repository：**https://github.com/AnnaHung306/senior-ai-driving-demo**；網站：**https://annahung306.github.io/senior-ai-driving-demo/**。現有AnnaHung306.github.io與lane-nav未修改。使用既有Git Credential Manager登入，未安裝gh、未顯示／保存token；本地分支已命名main並設定origin/main上游。
+
+新`docs/`純靜態網站已包含成功的Phase10行人避讓28m案67幀／536JPEG及原record數值、三維道路／物件／預測、八鏡頭切換、同幀SHA、逐幀／seek／0.5/1/2倍、Orbit旋轉／reset、地圖先驗、影片及手機排版。約30.34MB；公開網站不運行模型／CARLA，也不接受新駕駛任務。從乾淨Git HEAD匯出、沒有原始artifacts仍通過全部553檔案／67幀／536圖檢查及7個Node回放測試；不需pip/npm。root README已改成展示優先並保留歷史進度，WEB_DEMO.md有完整啟動／Pages設定／更新／註解導覽／故障處理。
+
+公開Pages來源main/docs、HTTPS，GitHub「Static demo checks」與「pages build and deployment」已成功；19項公開HTTP bytes/MIME與local manifest exact，真公開browser已驗證八鏡頭與互動來源。地方browser另逐一核對全部67幀RGB／3D／決策，完整自然播放到ARRIVED、375client=scroll手機版、鍵盤單幀、真拖曳旋轉及WebM可播放。修正Windows .mjs MIME，改瀏覽器使用.js；修正舊data/ ignore漏掉docs/data/route.json，新增CI Git-index檢查；docs/** -text避免Windows checkout換行改壞SHA。初次不完整CI失敗保留，後續已通過，不覆寫原紀錄。
+
+本輪只做展示、來源封裝、文件及部署，四權重／CARLA／Phase3–10舊證據未改，不重啟訓練／driver／Wall／depth／舊lockbox。完整原研究程式／證據在GitHub；大型原始RGB與weights保持ignored，本機新閉環仍需這些依賴。公開固定回放自帶全部資產，不能將回放5Hz當即時推論。新展示證據在evidence/web-demo/github-pages-v1-001；Pages目前公開網址可直接分享。
+
 ## 2026-10-21 Phase10系統稽核與工程修復完成；正式品質未通過
 
 最新使用者要求Phase10查效能、畫面、正確率與完整性。已完成固定六條新路線、獨立八instance GT audit、受控障礙／橫穿／前車煞停／15秒紅燈、實體相機／WebGL／關頁／watchdog／setup fault及Windows鎖檔回歸；322 Python、52 JS、27真HTTP、2194幀來源／frozen planner-control exact與真Three通過。**所有CARLA、driver、director與本輪HTTP服務已停止，2000／8768–8771無listener，world async且actors0，測試tabs已關閉；沒有訓練或批次待續，不重啟舊jobs。**

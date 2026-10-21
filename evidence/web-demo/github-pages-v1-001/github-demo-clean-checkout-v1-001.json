@@ -1,0 +1,9 @@
+{
+  "status": "passed_Git_HEAD_export_without_original_data",
+  "commit": "f0579eca30cb6545aeb6804bd4004dfb4e66134f",
+  "path": "C:\\code\\senior_AI\\artifacts\\tmp\\static-demo-clean-checkout-v1-001",
+  "Python_extra_packages_required": false,
+  "tests_passed": 7,
+  "frames": 67,
+  "RGB_previews": 536
+}

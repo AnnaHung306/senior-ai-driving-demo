@@ -1,0 +1,146 @@
+{
+  "status": "sealed_public_demo_delivery",
+  "manifest_self_excluded": true,
+  "files": [
+    {
+      "path": "67-frames.json",
+      "bytes": 13833,
+      "sha256": "68423f54f9adfdd45f79ab37f6d2f89fadce51812e3b625d97f715381f4a889b"
+    },
+    {
+      "path": "deployed-site-manifest.json",
+      "bytes": 69795,
+      "sha256": "9f548ea9a10ce621bddbaad33370d4ae0a1e57af8c4ac1ee8567a1bbcf23d8da"
+    },
+    {
+      "path": "desktop-region.json",
+      "bytes": 86,
+      "sha256": "39d4dfae9e9210c7fee6d87f9de900659d12ff0271ad579eec95bda0859ac866"
+    },
+    {
+      "path": "desktop.jpg",
+      "bytes": 159237,
+      "sha256": "9d063bcff0fedbe1cbb6e9e7f1655ed735d400f51e672857ff5b6750e3e5dd12"
+    },
+    {
+      "path": "eight-cameras.json",
+      "bytes": 740,
+      "sha256": "031e6207954b42b079c062007f15999bac6a4ad8f4ae2ab5e825c0c6ad35f729"
+    },
+    {
+      "path": "github-demo-clean-checkout-v1-001.json",
+      "bytes": 315,
+      "sha256": "bbc6a9d6dc8e1d2745e1dfb9eedfeffdc5cbe86f8890120d5fa4c87562eb7e6c"
+    },
+    {
+      "path": "github-demo-cloud-checks-v1-001.json",
+      "bytes": 862,
+      "sha256": "e5bf5a9058b720fbfc3c3e8b88e22e986555d90202be82e0d55a61a07e32d1a7"
+    },
+    {
+      "path": "github-demo-create-v1-001.json",
+      "bytes": 263,
+      "sha256": "2c047bd71ff5b4fac1afd72ae1c638225f335d260cb837a7a1ff3dbcc30b8be3"
+    },
+    {
+      "path": "github-demo-pages-enable-v1-001.json",
+      "bytes": 734,
+      "sha256": "37e462cec527699853d62b058acca157668ffd8f7c76e335f3f81a4b32dd6828"
+    },
+    {
+      "path": "github-demo-pages-status-v1-001.json",
+      "bytes": 843,
+      "sha256": "2d15c9bd0ff39ac11ac0d480fcc413459394bfbbbf6718565701081c7626d6a6"
+    },
+    {
+      "path": "github-demo-public-file-check-v1-001.json",
+      "bytes": 208,
+      "sha256": "e252c80d8b5b9a0d89db75bf96d69cd027155072f90ce9f389fd93557922e86c"
+    },
+    {
+      "path": "github-demo-public-HTTP-v1-001.json",
+      "bytes": 4999,
+      "sha256": "e49359ae8836c36c86a2234eba18cd07805a641a86a2fefd657f338261c571a3"
+    },
+    {
+      "path": "github-demo-static-check-final.json",
+      "bytes": 205,
+      "sha256": "bf46077f207378b2a433c8f3f384f21d0244c06a26651cc3df924a717cbb6c36"
+    },
+    {
+      "path": "github-demo-teardown-final.json",
+      "bytes": 157,
+      "sha256": "bc38b4d53b6b7be1ec742e27aff6c0b3d2ffcd1f8b2253ddbc2f99a71c0eb296"
+    },
+    {
+      "path": "github-demo-tests-final.log",
+      "bytes": 657,
+      "sha256": "ed6754333362a073d9f430abc47ecbfdc254abbb15f66149687b137e991e9035"
+    },
+    {
+      "path": "local-video.json",
+      "bytes": 116,
+      "sha256": "aa1f5b9bf93cc37af968a3f5ef58fa430da421d6433c80a99501e058b8b76d96"
+    },
+    {
+      "path": "mobile-layout.json",
+      "bytes": 115,
+      "sha256": "55bb7cfaa7511c53e651e195eac737f830e85f60504b19a4d1abcaca3f505aa9"
+    },
+    {
+      "path": "mobile.jpg",
+      "bytes": 255527,
+      "sha256": "f6961baefcb8bdf2ba4c7b91b56c81c647eabc588d739d6e496b59be489044bc"
+    },
+    {
+      "path": "playback-end.json",
+      "bytes": 139,
+      "sha256": "1acecf2cb13cbdf9390e2122714d99a9bb3809f17d6fc7357c4535476543bdcf"
+    },
+    {
+      "path": "public-console.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "public-desktop.jpg",
+      "bytes": 159237,
+      "sha256": "9d063bcff0fedbe1cbb6e9e7f1655ed735d400f51e672857ff5b6750e3e5dd12"
+    },
+    {
+      "path": "public-eight-cameras.json",
+      "bytes": 740,
+      "sha256": "031e6207954b42b079c062007f15999bac6a4ad8f4ae2ab5e825c0c6ad35f729"
+    },
+    {
+      "path": "public-playback-end.json",
+      "bytes": 159,
+      "sha256": "8445b703846294dc8438c3fe0d0b5603a9405e160b6776f03aa0cb4398c3805e"
+    },
+    {
+      "path": "public-screenshot-provenance.json",
+      "bytes": 280,
+      "sha256": "683bc21630765c30062fdaa74163d034481c3d03cbde55dc9c661f043e65d4e8"
+    },
+    {
+      "path": "public-video.json",
+      "bytes": 116,
+      "sha256": "aa1f5b9bf93cc37af968a3f5ef58fa430da421d6433c80a99501e058b8b76d96"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2503,
+      "sha256": "32f6db5bcd03b01b6c02c36cec4e1db0fe1a5f741364812e3599e83c5fd3079e"
+    },
+    {
+      "path": "release-validation.json",
+      "bytes": 1739,
+      "sha256": "65bc25c657a84c3e51b9c12513b3a22630100bae6df7e063348a2c57f45bf7f3"
+    },
+    {
+      "path": "screenshot-provenance.json",
+      "bytes": 637,
+      "sha256": "9baab8bc5968c6b78d46321923bdbf91866862cde203c2348cdff66f4364df8c"
+    }
+  ]
+}

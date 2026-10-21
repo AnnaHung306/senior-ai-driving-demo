@@ -1,0 +1,42 @@
+{
+  "status": "deployed_and_verified",
+  "repository": "https://github.com/AnnaHung306/senior-ai-driving-demo",
+  "website": "https://annahung306.github.io/senior-ai-driving-demo/",
+  "deployment_source": {
+    "branch": "main",
+    "path": "/docs"
+  },
+  "site_code_deployed_commit": "f0579eca30cb6545aeb6804bd4004dfb4e66134f",
+  "site_files_in_manifest": 552,
+  "manifest_self_excluded": true,
+  "frames": 67,
+  "RGB_JPEG_previews": 536,
+  "original_record_numbers_unchanged": true,
+  "model_weights_unchanged": true,
+  "real_new_driving_run_started": false,
+  "read_only_replay_no_control_API": true,
+  "Python_static_checks": "passed",
+  "Node_contract_tests": 7,
+  "local_browser_frames_checked": 67,
+  "public_camera_views_checked": 8,
+  "public_playback_to_arrival": true,
+  "public_video_decoded_and_played": true,
+  "mobile_client_scroll_width": [
+    375,
+    375
+  ],
+  "public_HTTP_byte_MIME_checks": 19,
+  "cloud_CI_and_Pages": "success",
+  "public_console_errors_warnings": 0,
+  "source_export_without_original_artifacts": "passed",
+  "website_bytes": 30338677,
+  "site_manifest_SHA256": "9f548ea9a10ce621bddbaad33370d4ae0a1e57af8c4ac1ee8567a1bbcf23d8da",
+  "prior_phase10_evidence_modified": false,
+  "limits": [
+    "Fixed named successful simulator route, recorded results only.",
+    "JPEG previews are lossy; source PNG and original record SHA retained.",
+    "No guarantee for arbitrary navigation routes, real-time inference or formal driving quality.",
+    "Initial static-check CI on65b97b5 failed because generic data/ ignore excluded the public bundle; corrected f0579ec is verified.",
+    "Manifest is unsigned consistency evidence, not an authenticity signature."
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "status": "no_matching_live_credentials_in_release_files",
+  "checked_files": 3083,
+  "patterns": "GitHub token, AWS key ID, private key PEM; heuristic not a universal secret proof",
+  "hits": []
+}

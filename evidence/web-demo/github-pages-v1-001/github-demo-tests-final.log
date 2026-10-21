@@ -1,0 +1,15 @@
+✔ all 67 committed real records satisfy the replay and live geometry contracts (4.1023ms)
+✔ time lookup cannot reveal future frames and clamps at boundaries (0.2458ms)
+✔ a cross-frame RGB swap is rejected (28.5655ms)
+✔ GT contamination cannot enter the main model scene (39.9617ms)
+✔ duplicate simulation timestamps cannot enter playback (27.2672ms)
+✔ paths cannot escape the site or load an external endpoint (0.2236ms)
+✔ corrupt byte content or HTTP error stops replay instead of accepting stale data (36.8626ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 258.7999

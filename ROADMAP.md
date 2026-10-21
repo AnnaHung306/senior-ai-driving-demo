@@ -1,5 +1,7 @@
 # 路線圖
 
+2026-10-21新增[公開GitHub Pages展示](https://annahung306.github.io/senior-ai-driving-demo/)，依使用者接受的「一段路線可展示」目標交付成功行人避讓案例。完整網頁／GitHub／乾淨clone步驟見[WEB_DEMO.md](WEB_DEMO.md)；研究品質限制與原Phase10結論保持。
+
 依原規格推進，沒有刪除長期目標。2026-10-21完成Phase10系統稽核；分列工程、品質與即時整合狀態，不宣稱正式階段全部通過。Phase4–9列保留當時範圍，最新可靠性結論以Phase10及PHASE10_ISSUES.md為準。
 
 | 階段 | 最小任務與前置依賴 | 驗收依據 | 狀態 |

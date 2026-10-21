@@ -6,7 +6,7 @@
 
 59.2秒16:9無聲新影片已製作：真瀏覽器296幀截圖＋DOM字幕＋同幀JPEG號誌ROI，兩章完整順序，沒有跳過紅燈；5fps回放不是即時推論。11個Node測試、標準函式庫2925個靜態檔案（含manifest）、全部原始record／PNG核對、296新幀＋67原幀真browser操作、85次介面檢查、46本機HTTP通過；桌機／390px手機及影片實際播放通過，console空。修正載入中書籤競態、播放中切章晚到回應及末幀重播競態，單renderer與池化幾何維持。
 
-新證據：evidence/web-demo/multiscene-showcase-v1-001，README及WEB_DEMO已更新。本輪接續以新Git匯出／公開部署驗證收據及Git工作區狀態為準；不重啟任何舊訓練／driver。
+新證據：evidence/web-demo/multiscene-showcase-v1-001，README及WEB_DEMO已更新。乾淨Git匯出（不含artifacts）檢查與11 Node通過；公開部署707ba5e的Pages及CI成功，46公開HTTP exact、18公開browser狀態與影片實際播放至37秒通過。公開同網址三章可用。本輪8080測試HTTP與測試tab已關閉，只保留公開展示頁；沒有CARLA、訓練或driver待續，不重啟任何舊jobs。
 
 以下為舊歷史狀態。
 

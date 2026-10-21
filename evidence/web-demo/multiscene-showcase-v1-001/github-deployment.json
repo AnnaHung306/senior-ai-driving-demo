@@ -1,0 +1,76 @@
+{
+  "sampled_utc": "2026-10-21T08:04:59.372839+00:00",
+  "operation": "status",
+  "repository": "https://github.com/AnnaHung306/senior-ai-driving-demo",
+  "created": false,
+  "private": false,
+  "default_branch": "main",
+  "credential_disclosed": false,
+  "pages_http_status": 200,
+  "pages": {
+    "html_url": "https://annahung306.github.io/senior-ai-driving-demo/",
+    "status": "built",
+    "source": {
+      "branch": "main",
+      "path": "/docs"
+    },
+    "build_type": "legacy",
+    "https_enforced": true
+  },
+  "latest_build_http_status": 200,
+  "latest_build": {
+    "status": "built",
+    "commit": "707ba5e8cd7be25e83675c2619ac313d4c4b3348",
+    "duration": 76855,
+    "created_at": "2026-10-21T08:01:32Z",
+    "updated_at": "2026-10-21T08:02:48Z",
+    "error": {
+      "message": null
+    }
+  },
+  "actions_http_status": 200,
+  "actions": [
+    {
+      "name": "Static demo checks",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "707ba5e8cd7be25e83675c2619ac313d4c4b3348",
+      "html_url": "https://github.com/AnnaHung306/senior-ai-driving-demo/actions/runs/39566177442"
+    },
+    {
+      "name": "pages build and deployment",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "707ba5e8cd7be25e83675c2619ac313d4c4b3348",
+      "html_url": "https://github.com/AnnaHung306/senior-ai-driving-demo/actions/runs/39566177319"
+    },
+    {
+      "name": "pages build and deployment",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4ab72156af5c321291ec10468fde21fe1611e1d9",
+      "html_url": "https://github.com/AnnaHung306/senior-ai-driving-demo/actions/runs/39560893878"
+    },
+    {
+      "name": "pages build and deployment",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "f0579eca30cb6545aeb6804bd4004dfb4e66134f",
+      "html_url": "https://github.com/AnnaHung306/senior-ai-driving-demo/actions/runs/39559876097"
+    },
+    {
+      "name": "Static demo checks",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "f0579eca30cb6545aeb6804bd4004dfb4e66134f",
+      "html_url": "https://github.com/AnnaHung306/senior-ai-driving-demo/actions/runs/39559840320"
+    },
+    {
+      "name": "Static demo checks",
+      "status": "completed",
+      "conclusion": "failure",
+      "head_sha": "65b97b5bccd50a639263933aefa3ec6ed530d349",
+      "html_url": "https://github.com/AnnaHung306/senior-ai-driving-demo/actions/runs/39559692253"
+    }
+  ]
+}

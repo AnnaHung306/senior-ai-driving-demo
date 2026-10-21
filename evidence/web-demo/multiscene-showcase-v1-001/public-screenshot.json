@@ -1,0 +1,11 @@
+{
+  "screenshot_sha256": "96c84520c61e0f16f6d5fc9563015d75107399b5c045f5619ddb717f42758aae",
+  "crop": {
+    "height": 1189.25,
+    "width": 1180.800048828125,
+    "x": 42,
+    "y": 626
+  },
+  "source": "actual public GitHub Pages browser",
+  "frame": 166989
+}

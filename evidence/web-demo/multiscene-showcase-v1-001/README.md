@@ -29,4 +29,6 @@
 
 ![綠燈辨識與保留的起步延遲](video-green.jpg)
 
-實際公開Pages的HTTP與瀏覽器驗證在發布後追加；本資料夾與舊github-pages-v1-001分開，不覆寫舊證據。
+公開部署commit為 `707ba5e8cd7be25e83675c2619ac313d4c4b3348`，Pages及Static demo checks均成功（github-deployment.json）。46項公開HTTP內容／MIME與local manifest完全相符（public-http.json）；公開browser另18次狀態核對含八鏡頭、記憶、紅／綠燈、轉彎／抵達、原章及59.2秒影片實際播放至37秒，console無warn/error（public-browser.json）。公開截圖為public.jpg，來源原圖SHA及裁切位置在public-screenshot.json。
+
+本機8080測試服務及測試tab已關閉，只保留公開展示頁；無CARLA、訓練或driver待續。本資料夾與舊github-pages-v1-001分開，不覆寫舊證據。
